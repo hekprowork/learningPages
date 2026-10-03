@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0001: 星形 (Y) 與等效三角形 (Δ) 網路互換原理與推導</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="lesson-header">
+      <span class="lesson-badge">Lesson #0001 · 核心觀念精講</span>
+      <h1>星形 (Y) 與等效三角形 (Δ) 網路互換的原理與推導</h1>
+      <div class="lesson-meta">
+        <span><strong>學科領域：</strong>電路學 (Circuit Theory)</span>
+        <span><strong>建議時間：</strong>12 ~ 15 分鐘</span>
+        <span><strong>速查索引：</strong><a href="../reference/0001-wye-delta-reference.html">0001 速查手冊</a></span>
+      </div>
+    </header>
+
+    <!-- 導言與學習目標 -->
+    <section>
+      <h2>學習目標 (Learning Objectives)</h2>
+      <p>
+        在複雜電路分析（例如惠斯登電橋、三相電力系統或多端點網孔）中，我們常遇到<strong>既非純串聯也非純並聯</strong>的電阻組合。
+        此時，「星形（$\text{Y}$ 或 $\text{T}$ 型）」與「三角形（$\Delta$ 或 $\Pi$ 型）」的等效互換就是破局的關鍵利器。
+      </p>
+      <div class="callout tip">
+        <div class="callout-title">本課核心收穫</div>
+        <p>學完本課後，你將不再需要死背公式，而是能從<strong>「端點外特性等效」</strong>的第一原理出發，在 1 分鐘內清晰推導或心算驗證任意 $\text{Y}-\Delta$ 轉換！</p>
+      </div>
+    </section>
+
+    <!-- 什麼是等效？ -->
+    <section>
+      <h2>1. 核心物理概念：什麼是「外端等效 (Terminal Equivalence)」？</h2>
+      <p>
+        在電路學中，兩個電路網路被稱為<strong>「等效（Equivalent）」</strong>，定義為：
+        <em>「對於這組網路以外的外部電路而言，連入相同的端點時，所量測到的端電壓（Voltage）與端電流（Current）完全相同。」</em>
+      </p>
+      <p>
+        想像一個黑盒子，外面只露出 $a, b, c$ 三個接線端點。如果黑盒子內部裝的是星形 $\text{Y}$ 網路（包含 $R_1, R_2, R_3$），我們在外面測量任意兩端之間的等效阻抗；當把內部換成等效的三角形 $\Delta$ 網路（包含 $R_a, R_b, R_c$）時，外面的所有電壓、電流測量數據<strong>完全無法察覺內部結構的改變</strong>。
+      </p>
+
+      <div class="circuit-stage">
+        <svg viewBox="0 0 680 230" class="circuit-svg">
+          <!-- 背景黑盒子框線 -->
+          <rect x="20" y="15" width="280" height="190" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="4" rx="8"/>
+          <text x="35" y="38" font-size="12" fill="#94a3b8" font-family="sans-serif">等效黑盒子 1 (Y / T 網路)</text>
+
+          <rect x="380" y="15" width="280" height="190" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="4" rx="8"/>
+          <text x="395" y="38" font-size="12" fill="#94a3b8" font-family="sans-serif">等效黑盒子 2 (Δ / Π 網路)</text>
+
+          <!-- Y 網路 -->
+          <g transform="translate(40, 25)">
+            <!-- 頂點 a -->
+            <circle cx="120" cy="30" r="5" fill="#1e293b"/>
+            <text x="120" y="18" text-anchor="middle" font-size="14" font-weight="bold">a</text>
+            <!-- 頂點 b -->
+            <circle cx="40" cy="150" r="5" fill="#1e293b"/>
+            <text x="25" y="155" text-anchor="middle" font-size="14" font-weight="bold">b</text>
+            <!-- 頂點 c -->
+            <circle cx="200" cy="150" r="5" fill="#1e293b"/>
+            <text x="215" y="155" text-anchor="middle" font-size="14" font-weight="bold">c</text>
+            <!-- 中心點 n -->
+            <circle cx="120" cy="100" r="4" fill="#64748b"/>
+            <text x="135" y="102" font-size="11" fill="#64748b">n</text>
+            <!-- 支路 -->
+            <line x1="120" y1="30" x2="120" y2="100" stroke="#2563eb" stroke-width="2.5"/>
+            <rect x="105" y="50" width="30" height="24" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="3"/>
+            <text x="120" y="67" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">R₁</text>
+
+            <line x1="120" y1="100" x2="40" y2="150" stroke="#2563eb" stroke-width="2.5"/>
+            <rect x="65" y="112" width="30" height="24" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="3"/>
+            <text x="80" y="129" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">R₂</text>
+
+            <line x1="120" y1="100" x2="200" y2="150" stroke="#2563eb" stroke-width="2.5"/>
+            <rect x="145" y="112" width="30" height="24" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="3"/>
+            <text x="160" y="129" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">R₃</text>
+          </g>
+
+          <!-- 等效符號 -->
+          <g transform="translate(325, 105)">
+            <text x="15" y="6" text-anchor="middle" font-size="24" font-weight="bold" fill="#2563eb">≡</text>
+            <text x="15" y="25" text-anchor="middle" font-size="11" fill="#64748b" font-family="sans-serif">外端等效</text>
+          </g>
+
+          <!-- Δ 網路 -->
+          <g transform="translate(400, 25)">
+            <!-- 頂點 a -->
+            <circle cx="120" cy="30" r="5" fill="#1e293b"/>
+            <text x="120" y="18" text-anchor="middle" font-size="14" font-weight="bold">a</text>
+            <!-- 頂點 b -->
+            <circle cx="40" cy="150" r="5" fill="#1e293b"/>
+            <text x="25" y="155" text-anchor="middle" font-size="14" font-weight="bold">b</text>
+            <!-- 頂點 c -->
+            <circle cx="200" cy="150" r="5" fill="#1e293b"/>
+            <text x="215" y="155" text-anchor="middle" font-size="14" font-weight="bold">c</text>
+            <!-- 支路 -->
+            <line x1="120" y1="30" x2="40" y2="150" stroke="#dc2626" stroke-width="2.5"/>
+            <rect x="65" y="77" width="30" height="24" fill="#fff" stroke="#dc2626" stroke-width="1.5" rx="3"/>
+            <text x="80" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">Rc</text>
+
+            <line x1="120" y1="30" x2="200" y2="150" stroke="#dc2626" stroke-width="2.5"/>
+            <rect x="145" y="77" width="30" height="24" fill="#fff" stroke="#dc2626" stroke-width="1.5" rx="3"/>
+            <text x="160" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">Rb</text>
+
+            <line x1="40" y1="150" x2="200" y2="150" stroke="#dc2626" stroke-width="2.5"/>
+            <rect x="105" y="138" width="30" height="24" fill="#fff" stroke="#dc2626" stroke-width="1.5" rx="3"/>
+            <text x="120" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">Ra</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="callout important">
+        <div class="callout-title">標準命名記憶原則 (Alexander & Sadiku 課本慣例)</div>
+        <ul>
+          <li><strong>星形 $\text{Y}$ 網路：</strong> $R_1, R_2, R_3$ 的下標數字分別對應端點 $a, b, c$。</li>
+          <li><strong>三角形 $\Delta$ 網路：</strong> $R_a, R_b, R_c$ 的下標字母對應其<strong>「正對面的頂點」</strong>（即 $R_a$ 連在 $b-c$ 間、$R_b$ 連在 $a-c$ 間、$R_c$ 連在 $a-b$ 間）。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 數學推導第一步 -->
+    <section>
+      <h2>2. 嚴謹數學推導：由開路端阻抗建立方程組</h2>
+      <p>
+        為了求得六個電阻之間的換算關係，我們逐一<strong>將第三個端點開路（Open Circuit）</strong>，並令兩網路在其餘兩端點間的輸入電阻相等：
+      </p>
+
+      <h3>(1) 將端點 $c$ 開路，測量 $a-b$ 兩端的等效電阻 $R_{ab}$：</h3>
+      <ul>
+        <li><strong>在 $\text{Y}$ 網路中：</strong> 端點 $c$ 開路後，$R_3$ 無電流流過，路徑僅為 $R_1$ 與 $R_2$ 串聯：
+          $$R_{ab}(\text{Y}) = R_1 + R_2$$
+        </li>
+        <li><strong>在 $\Delta$ 網路中：</strong> 端點 $c$ 開路後，從 $a$ 到 $b$ 的路徑包含兩條並聯支路 —— 一條是單獨的 $R_c$，另一條是 $R_b$ 與 $R_a$ 串聯：
+          $$R_{ab}(\Delta) = R_c \parallel (R_a + R_b) = \frac{R_c (R_a + R_b)}{R_a + R_b + R_c}$$
+        </li>
+      </ul>
+      <p>令兩者相等，得到<strong>第一式</strong>：</p>
+      <div style="background: var(--bg-subtle); padding: 0.8rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+        $$R_1 + R_2 = \frac{R_c (R_a + R_b)}{R_a + R_b + R_c} = \frac{R_a R_c + R_b R_c}{R_a + R_b + R_c} \quad \text{--- (式 1)}$$
+      </div>
+
+      <h3>(2) 同理，將端點 $a$ 開路，測量 $b-c$ 兩端的等效電阻 $R_{bc}$：</h3>
+      <div style="background: var(--bg-subtle); padding: 0.8rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+        $$R_2 + R_3 = \frac{R_a (R_b + R_c)}{R_a + R_b + R_c} = \frac{R_a R_b + R_a R_c}{R_a + R_b + R_c} \quad \text{--- (式 2)}$$
+      </div>
+
+      <h3>(3) 同理，將端點 $b$ 開路，測量 $c-a$ 兩端的等效電阻 $R_{ca}$：</h3>
+      <div style="background: var(--bg-subtle); padding: 0.8rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+        $$R_3 + R_1 = \frac{R_b (R_c + R_a)}{R_a + R_b + R_c} = \frac{R_b R_c + R_a R_b}{R_a + R_b + R_c} \quad \text{--- (式 3)}$$
+      </div>
+    </section>
+
+    <!-- 求解 Δ to Y -->
+    <section>
+      <h2>3. 求解 $\Delta \to \text{Y}$ 轉換公式 (三角形轉星形)</h2>
+      <p>
+        我們有包含未知數 $R_1, R_2, R_3$ 的三元一次聯立方程組 (式 1, 式 2, 式 3)。我們可以用非常對稱優雅的代數消去法求解：
+      </p>
+      
+      <p><strong>步驟 A：</strong> 將 (式 1) 減去 (式 2)，消去共同項 $R_2$：</p>
+      <div style="background: var(--bg-subtle); padding: 0.8rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+        $$(R_1 + R_2) - (R_2 + R_3) = R_1 - R_3 = \frac{(R_a R_c + R_b R_c) - (R_a R_b + R_a R_c)}{R_a + R_b + R_c} = \frac{R_b R_c - R_a R_b}{R_a + R_b + R_c} \quad \text{--- (式 4)}$$
+      </div>
+
+      <p><strong>步驟 B：</strong> 將 (式 4) 與 (式 3) 相加，消去 $R_3$ 即可獨立解出 $R_1$：</p>
+      <div style="background: var(--bg-subtle); padding: 0.8rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+        $$(R_1 - R_3) + (R_3 + R_1) = 2 R_1 = \frac{(R_b R_c - R_a R_b) + (R_b R_c + R_a R_b)}{R_a + R_b + R_c} = \frac{2 R_b R_c}{R_a + R_b + R_c}$$
+        $$\implies R_1 = \frac{R_b R_c}{R_a + R_b + R_c}$$
+      </div>
+
+      <p><strong>步驟 C：</strong> 根據電路的輪換對稱性（Cyclic Symmetry），直接寫出 $R_2$ 與 $R_3$：</p>
+      
+      <div class="formula-card">
+        <h3 style="color: #2563eb; margin-top:0;">⚡ $\Delta \to \text{Y}$ 轉換核心公式</h3>
+        <div class="formula-grid">
+          <div class="formula-box">
+            <h4>代數表達式</h4>
+            $$R_1 = \frac{R_b R_c}{R_a + R_b + R_c}$$
+            $$R_2 = \frac{R_a R_c}{R_a + R_b + R_c}$$
+            $$R_3 = \frac{R_a R_b}{R_a + R_b + R_c}$$
+          </div>
+          <div class="formula-box" style="border-top-color: #059669; background: #ecfdf5;">
+            <h4 style="color: #065f46;">幾何直覺口訣</h4>
+            <p style="font-size: 1.1rem; font-weight: bold; color: #047857; margin-top: 0.5rem;">
+              $$R_{\text{star}} = \frac{\text{相鄰兩邊之積}}{\text{三邊之總和}}$$
+            </p>
+            <p style="font-size: 0.9rem; color: #065f46;">
+              例如 $R_1$ 連向節點 $a$，在 $\Delta$ 中夾住頂點 $a$ 的兩條相鄰邊就是 $R_b$ 與 $R_c$！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 求解 Y to Δ -->
+    <section>
+      <h2>4. 求解 $\text{Y} \to \Delta$ 轉換公式 (星形轉三角形)</h2>
+      <p>
+        若已知星形電阻 $R_1, R_2, R_3$，如何反求外圍的三角形電阻 $R_a, R_b, R_c$？
+        直接暴力代換十分繁瑣，這裡有一個<strong>極致優雅的代數技巧 ——「兩兩乘積求和」</strong>：
+      </p>
+
+      <p>我們將剛剛得到的 $R_1, R_2, R_3$ 兩兩相乘並加總：</p>
+      <div style="background: var(--bg-subtle); padding: 0.8rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+        $$R_1 R_2 + R_2 R_3 + R_3 R_1 = \frac{(R_b R_c)(R_a R_c) + (R_a R_c)(R_a R_b) + (R_a R_b)(R_b R_c)}{(R_a + R_b + R_c)^2}$$
+        $$= \frac{R_a R_b R_c^2 + R_a^2 R_b R_c + R_a R_b^2 R_c}{(R_a + R_b + R_c)^2} = \frac{R_a R_b R_c (R_c + R_a + R_b)}{(R_a + R_b + R_c)^2} = \frac{R_a R_b R_c}{R_a + R_b + R_c} \quad \text{--- (式 5)}$$
+      </div>
+
+      <p>觀察 (式 5) 的分子分母，只要將 (式 5) 除以 $R_1 = \frac{R_b R_c}{R_a + R_b + R_c}$，其中的 $R_b R_c$ 與分母將全部消去，奇蹟般地只剩下 $R_a$！</p>
+      
+      <div style="background: var(--bg-subtle); padding: 0.8rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+        $$\frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_1} = \frac{\frac{R_a R_b R_c}{R_a + R_b + R_c}}{\frac{R_b R_c}{R_a + R_b + R_c}} = R_a$$
+      </div>
+
+      <p>同理，除以 $R_2$ 得到 $R_b$，除以 $R_3$ 得到 $R_c$：</p>
+
+      <div class="formula-card">
+        <h3 style="color: #dc2626; margin-top:0;">⚡ $\text{Y} \to \Delta$ 轉換核心公式</h3>
+        <div class="formula-grid">
+          <div class="formula-box" style="border-top-color: #dc2626;">
+            <h4>代數表達式</h4>
+            $$R_a = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_1}$$
+            $$R_b = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_2}$$
+            $$R_c = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_3}$$
+          </div>
+          <div class="formula-box" style="border-top-color: #d97706; background: #fffbeb;">
+            <h4 style="color: #92400e;">幾何直覺口訣</h4>
+            <p style="font-size: 1.1rem; font-weight: bold; color: #b45309; margin-top: 0.5rem;">
+              $$R_{\Delta} = \frac{\text{兩兩相乘之總和}}{\text{正對面之電阻}}$$
+            </p>
+            <p style="font-size: 0.9rem; color: #92400e;">
+              例如求外圍底邊的 $R_a$，分子是三組乘積總和，分母就是頂部正對著它的 $R_1$！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 深入洞察：對稱性與電導對偶性 -->
+    <section>
+      <h2>5. 深度洞察：平衡對稱特例與電導對偶性 (Insights)</h2>
+
+      <h3>Insight 1：三相平衡/對稱電阻的 $3$ 倍規律</h3>
+      <p>
+        當三相電阻完全相等時（即 $R_1 = R_2 = R_3 = R_\text{Y}$，且 $R_a = R_b = R_c = R_\Delta$）：
+      </p>
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 1rem 1.5rem; border-radius: 8px;">
+        $$R_\Delta = \frac{R_\text{Y}^2 + R_\text{Y}^2 + R_\text{Y}^2}{R_\text{Y}} = \frac{3 R_\text{Y}^2}{R_\text{Y}} = 3 R_\text{Y}$$
+        $$R_\text{Y} = \frac{R_\Delta \cdot R_\Delta}{3 R_\Delta} = \frac{1}{3} R_\Delta$$
+      </div>
+      <p style="margin-top: 0.8rem;">
+        <strong>為什麼三角形電阻恰好是星形的 3 倍？</strong><br>
+        物理直覺：在星形中，電流從端點 $a$ 走到 $b$ 必須穿過兩支串聯臂（阻抗 $2 R_\text{Y}$）；在三角形中，電流同時走直接跨接支路與外圍串聯支路並聯（$R_\Delta \parallel 2 R_\Delta = \frac{2}{3} R_\Delta$）。令 $2 R_\text{Y} = \frac{2}{3} R_\Delta$，立即得到 $R_\Delta = 3 R_\text{Y}$！
+      </p>
+
+      <h3>Insight 2：電導 (Conductance $G$) 的對偶完美對稱性</h3>
+      <p>
+        若改以電導 $G = 1/R$ 表示，$\text{Y} \to \Delta$ 的轉換公式會呈現驚人的對稱性：
+      </p>
+      <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 1rem 1.5rem; border-radius: 0 8px 8px 0;">
+        $$G_a = \frac{G_2 G_3}{G_1 + G_2 + G_3}, \quad G_b = \frac{G_1 G_3}{G_1 + G_2 + G_3}, \quad G_c = \frac{G_1 G_2}{G_1 + G_2 + G_3}$$
+        <p style="margin-bottom:0; font-size: 0.95rem; color: #065f46;">
+          <strong>驚人發現：</strong> 用電導看 $\text{Y} \to \Delta$，其數學形式與用電阻看 $\Delta \to \text{Y}$ <strong>一模一樣</strong>（相鄰乘積除以總和）！這正是電路理論中「阻抗-導納對偶性（Duality）」的完美體現。
+        </p>
+      </div>
+    </section>
+
+    <!-- 互動式實驗區 -->
+    <section>
+      <h2>6. 互動實驗室：即時等效驗證模擬器 (Interactive Playground)</h2>
+      <p>拖動或輸入下方數值，即時觀察星形與三角形參數的換算，並即時驗證黑盒子外測量阻抗 $R_{ab}, R_{bc}, R_{ca}$ 的 $100\%$ 等效一致性：</p>
+
+      <div class="interactive-calc">
+        <div class="calc-header">
+          <h3>🎛️ 雙向即時等效試算器</h3>
+        </div>
+
+        <div class="calc-grid">
+          <!-- 三角形輸入 -->
+          <div class="calc-panel">
+            <h4 style="color: #dc2626; margin-bottom: 1rem;">三角形網路參數 ($\Delta$)</h4>
+            <div class="input-row">
+              <label><span>$R_a$ (對面為 $a$, 跨接 $b-c$):</span> <span id="lbl-ra">25 Ω</span></label>
+              <input type="range" id="slider-ra" min="1" max="100" value="25" step="1" oninput="updateFromDelta()">
+            </div>
+            <div class="input-row">
+              <label><span>$R_b$ (對面為 $b$, 跨接 $a-c$):</span> <span id="lbl-rb">10 Ω</span></label>
+              <input type="range" id="slider-rb" min="1" max="100" value="10" step="1" oninput="updateFromDelta()">
+            </div>
+            <div class="input-row">
+              <label><span>$R_c$ (對面為 $c$, 跨接 $a-b$):</span> <span id="lbl-rc">15 Ω</span></label>
+              <input type="range" id="slider-rc" min="1" max="100" value="15" step="1" oninput="updateFromDelta()">
+            </div>
+
+            <div class="calc-results">
+              <div class="result-item">
+                <span>外端阻抗 $R_{ab}(\Delta)$:</span>
+                <span class="val" id="res-delta-rab">-- Ω</span>
+              </div>
+              <div class="result-item">
+                <span>外端阻抗 $R_{bc}(\Delta)$:</span>
+                <span class="val" id="res-delta-rbc">-- Ω</span>
+              </div>
+              <div class="result-item">
+                <span>外端阻抗 $R_{ca}(\Delta)$:</span>
+                <span class="val" id="res-delta-rca">-- Ω</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 星形計算結果 -->
+          <div class="calc-panel" style="background: #eff6ff; border: 1px solid #bfdbfe;">
+            <h4 style="color: #2563eb; margin-bottom: 1rem;">換算後星形等效參數 ($\text{Y}$)</h4>
+            <div class="calc-results" style="margin-top:0;">
+              <div class="result-item">
+                <span>$R_1 = \frac{R_b R_c}{\Sigma R}$ (連至端點 $a$):</span>
+                <span class="val" id="res-y-r1">-- Ω</span>
+              </div>
+              <div class="result-item">
+                <span>$R_2 = \frac{R_a R_c}{\Sigma R}$ (連至端點 $b$):</span>
+                <span class="val" id="res-y-r2">-- Ω</span>
+              </div>
+              <div class="result-item">
+                <span>$R_3 = \frac{R_a R_b}{\Sigma R}$ (連至端點 $c$):</span>
+                <span class="val" id="res-y-r3">-- Ω</span>
+              </div>
+            </div>
+
+            <h5 style="margin-top: 1.25rem; margin-bottom: 0.5rem; font-family: sans-serif; color: #1e3a8a;">驗證星形外端阻抗：</h5>
+            <div class="calc-results">
+              <div class="result-item">
+                <span>$R_{ab}(\text{Y}) = R_1 + R_2$:</span>
+                <span class="val" id="res-y-rab">-- Ω</span>
+              </div>
+              <div class="result-item">
+                <span>$R_{bc}(\text{Y}) = R_2 + R_3$:</span>
+                <span class="val" id="res-y-rbc">-- Ω</span>
+              </div>
+              <div class="result-item">
+                <span>$R_{ca}(\text{Y}) = R_3 + R_1$:</span>
+                <span class="val" id="res-y-rca">-- Ω</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 實戰應用：電橋電路解析 -->
+    <section>
+      <h2>7. 實戰經典範例：非平衡電橋網路化簡 (Bridge Circuit)</h2>
+      <p>
+        考慮課堂經典習題（Example 2.15）：一個由 5 個電阻構成的非平衡電橋，直接串並聯無法化簡。
+      </p>
+      
+      <div class="callout tip">
+        <div class="callout-title">標準化簡三部曲</div>
+        <ol style="margin-left: 1.25rem; line-height: 1.8;">
+          <li><strong>圈出三角形：</strong> 將電路上半部的網孔視為一個由端點 $a, b, c$ 圍成的 $\Delta$ 網路。</li>
+          <li><strong>代入口訣換成星形：</strong> 利用「相鄰相乘除以總和」算出等效星形的三支臂 $R_1, R_2, R_3$。</li>
+          <li><strong>直接串並聯：</strong> 轉換後，中央星點 $n$ 向下分出兩條獨立的支路，分別與電路下半部的兩顆電阻串聯，再並聯求總阻抗，秒殺全題！</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 檢索練習與小測驗 -->
+    <section class="quiz-section">
+      <h2 style="margin-top:0; border:none;">🧠 知識儲存強度強化：即時反思小測驗 (Self-Check Quiz)</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">
+        透過主動檢索提取（Retrieval Practice），將工作記憶轉化為大腦的長期儲存強度：
+      </p>
+
+      <!-- Quiz 1 -->
+      <div class="quiz-card" id="q1">
+        <div class="quiz-question">1. 在推導 $\Delta \to \text{Y}$ 轉換時，建立第一條方程式的基本物理操作是什麼？</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkQuiz(1, 0, false)">將端點 a 與端點 b 短路測量輸入電流</button>
+          <button class="quiz-opt" onclick="checkQuiz(1, 1, true)">將端點 c 保持開路並令兩端 Rab 相等</button>
+          <button class="quiz-opt" onclick="checkQuiz(1, 2, false)">將三個端點同時短路至共同接地節點</button>
+          <button class="quiz-opt" onclick="checkQuiz(1, 3, false)">在三端點同時施加相同頻率交流訊號</button>
+        </div>
+        <div class="quiz-feedback" id="fb1"></div>
+      </div>
+
+      <!-- Quiz 2 -->
+      <div class="quiz-card" id="q2">
+        <div class="quiz-question">2. 若已知三角形網路三邊電阻皆為 $30\,\Omega$，其等效星形網路的各臂電阻值為何？</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkQuiz(2, 0, false)">等效星形網路的三個分支電阻皆為 90 歐姆</button>
+          <button class="quiz-opt" onclick="checkQuiz(2, 1, false)">等效星形網路的三個分支電阻皆為 45 歐姆</button>
+          <button class="quiz-opt" onclick="checkQuiz(2, 2, true)">等效星形網路的三個分支電阻皆為 10 歐姆</button>
+          <button class="quiz-opt" onclick="checkQuiz(2, 3, false)">等效星形網路的三個分支電阻皆為 15 歐姆</button>
+        </div>
+        <div class="quiz-feedback" id="fb2"></div>
+      </div>
+
+      <!-- Quiz 3 -->
+      <div class="quiz-card" id="q3">
+        <div class="quiz-question">3. 由星形轉三角形 ($\text{Y} \to \Delta$) 求外圍電阻 $R_a$ 時，正確的口訣與算式結構為何？</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkQuiz(3, 0, false)">將三個電阻相加後直接除以正對面頂點電阻</button>
+          <button class="quiz-opt" onclick="checkQuiz(3, 1, true)">將兩兩相乘之和作為分子並除以對面電阻 R1</button>
+          <button class="quiz-opt" onclick="checkQuiz(3, 2, false)">將相鄰兩邊之乘積作為分子並除以三邊之總和</button>
+          <button class="quiz-opt" onclick="checkQuiz(3, 3, false)">將三個電導之倒數相加後再乘以兩兩之乘積</button>
+        </div>
+        <div class="quiz-feedback" id="fb3"></div>
+      </div>
+    </section>
+
+    <!-- 課後推薦與問答引導 -->
+    <footer class="lesson-footer">
+      <div class="teacher-prompt">
+        <h4 style="margin-bottom: 0.5rem; color: #1e293b;">💡 學習遇到疑問？</h4>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem;">
+          我是你的專屬電路學導師。如果在公式推導、代數消去步驟或特定電橋題目的套用上有任何疑惑，請隨時在對話框中向我提問！
+        </p>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">
+          推薦權威延伸閱讀：<strong>Alexander & Sadiku《Fundamentals of Electric Circuits》Section 2.7 (Star-Delta Transformations)</strong>
+        </div>
+      </div>
+
+      <div class="footer-nav" style="margin-top: 2rem;">
+        <a href="../reference/0001-wye-delta-reference.html" class="nav-link-btn">📖 打開速查表 (Reference 0001)</a>
+        <a href="../Chapter2_Examples_Practice.html" class="nav-link-btn">📝 前往第 2 章綜合演練題庫</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function updateFromDelta() {
+      const ra = parseFloat(document.getElementById('slider-ra').value);
+      const rb = parseFloat(document.getElementById('slider-rb').value);
+      const rc = parseFloat(document.getElementById('slider-rc').value);
+
+      document.getElementById('lbl-ra').textContent = ra + ' Ω';
+      document.getElementById('lbl-rb').textContent = rb + ' Ω';
+      document.getElementById('lbl-rc').textContent = rc + ' Ω';
+
+      const sum = ra + rb + rc;
+      const r1 = (rb * rc) / sum;
+      const r2 = (ra * rc) / sum;
+      const r3 = (ra * rb) / sum;
+
+      // Delta Rab = Rc || (Ra + Rb)
+      const deltaRab = (rc * (ra + rb)) / sum;
+      const deltaRbc = (ra * (rb + rc)) / sum;
+      const deltaRca = (rb * (rc + ra)) / sum;
+
+      // Y Rab = R1 + R2
+      const yRab = r1 + r2;
+      const yRbc = r2 + r3;
+      const yRca = r3 + r1;
+
+      document.getElementById('res-delta-rab').textContent = deltaRab.toFixed(2) + ' Ω';
+      document.getElementById('res-delta-rbc').textContent = deltaRbc.toFixed(2) + ' Ω';
+      document.getElementById('res-delta-rca').textContent = deltaRca.toFixed(2) + ' Ω';
+
+      document.getElementById('res-y-r1').textContent = r1.toFixed(2) + ' Ω';
+      document.getElementById('res-y-r2').textContent = r2.toFixed(2) + ' Ω';
+      document.getElementById('res-y-r3').textContent = r3.toFixed(2) + ' Ω';
+
+      document.getElementById('res-y-rab').textContent = yRab.toFixed(2) + ' Ω';
+      document.getElementById('res-y-rbc').textContent = yRbc.toFixed(2) + ' Ω';
+      document.getElementById('res-y-rca').textContent = yRca.toFixed(2) + ' Ω';
+    }
+
+    const quizExplanations = [
+      "",
+      "正確！將端點 c 開路時，Y 網路呈現 R1+R2 串聯，Δ 網路呈現 Rc 與 (Ra+Rb) 並聯，兩者相等即為第一條等效方程式。",
+      "正確！對稱平衡網路下，RY = RΔ / 3 = 30 / 3 = 10 Ω。三角形電阻是星形的 3 倍。",
+      "正確！Y → Δ 的口訣是「兩兩相乘之和 ÷ 正對面電阻」，分子為 R1R2 + R2R3 + R3R1，分母為對應頂點之電阻 R1。"
+    ];
+
+    function checkQuiz(qNum, optIdx, isCorrect) {
+      const qCard = document.getElementById('q' + qNum);
+      const buttons = qCard.querySelectorAll('.quiz-opt');
+      const fb = document.getElementById('fb' + qNum);
+
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === optIdx) {
+          btn.className = isCorrect ? 'quiz-opt correct' : 'quiz-opt wrong';
+        }
+      });
+
+      if (isCorrect) {
+        fb.className = 'quiz-feedback show-correct';
+        fb.innerHTML = '<strong>🎯 完全正確！</strong> ' + quizExplanations[qNum];
+      } else {
+        fb.className = 'quiz-feedback show-wrong';
+        fb.innerHTML = '<strong>❌ 觀念偏差了：</strong> ' + quizExplanations[qNum];
+      }
+    }
+
+    // 初始執行一次試算
+    window.addEventListener('DOMContentLoaded', updateFromDelta);
+  </script>
+</body>
+</html>

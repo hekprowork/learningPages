@@ -23,7 +23,22 @@ docs/
 │   ├── chapter1/               # 結晶學與材料基礎
 │   ├── chapter2/               # 觀念筆記與公式推導
 │   └── chapter3/               # 核心公式速查表
-└── <new-subject>/              # [未來科目] 例如 circuits, comp-arch, electromagnetics
+├── electronics/                # [科目] 電子學 (Electronics)
+│   ├── AGENTS.md               # 科目專屬規則
+│   ├── index.md                # 訊號與放大器基礎
+│   ├── chapter1/ ~ chapter3/   # 課程、觀念筆記與速查表
+│   └── assets/, learning-records/, lessons/, reference/
+├── circuits/                   # [科目] 電路學 (Circuits)
+│   ├── AGENTS.md               # 科目專屬規則
+│   ├── index.md                # 電路分析與網路等效
+│   ├── chapter1/ ~ chapter3/   # 課程、觀念筆記與速查表
+│   └── assets/, practice/, learning-records/, lessons/, reference/
+├── engineering-math/           # [科目] 工程數學 (Engineering Math)
+│   ├── AGENTS.md               # 科目專屬規則
+│   ├── index.md                # 常微分方程與實戰解法
+│   ├── chapter1/ ~ chapter3/   # 課程、觀念筆記與速查表
+│   └── assets/, practice/, learning-records/, lessons/, reference/
+└── <new-subject>/              # [未來科目] 例如 comp-arch, electromagnetics
 ```
 
 ---

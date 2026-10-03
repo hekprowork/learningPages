@@ -1,0 +1,548 @@
+/* Hallmark · genre: editorial · theme: Newsprint · macrostructure: Long Document */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+/* Hallmark · typography: Newsreader (Roman Display/Headings) + Inter (Body/UI) + JetBrains Mono (Code/Math) */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --color-paper: oklch(0.985 0.005 85);
+  --color-paper-2: oklch(0.96 0.008 85);
+  --color-paper-3: oklch(0.92 0.012 85);
+  --color-ink: oklch(0.18 0.02 60);
+  --color-ink-muted: oklch(0.42 0.02 60);
+  --color-ink-faint: oklch(0.68 0.01 60);
+  
+  /* Editorial Terracotta / Crimson accent */
+  --color-accent: oklch(0.48 0.18 32);
+  --color-accent-hover: oklch(0.42 0.20 32);
+  --color-accent-subtle: oklch(0.94 0.03 32);
+  --color-accent-contrast: oklch(0.99 0 0);
+  
+  --color-border: oklch(0.88 0.01 85);
+  --color-border-strong: oklch(0.75 0.015 85);
+  --color-focus: oklch(0.55 0.20 240);
+  
+  --color-success: oklch(0.52 0.16 145);
+  --color-success-bg: oklch(0.95 0.04 145);
+  --color-error: oklch(0.52 0.22 25);
+  --color-error-bg: oklch(0.95 0.05 25);
+  --color-info-bg: oklch(0.95 0.03 230);
+  
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: clip;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-style: normal; /* Hallmark strictly forbids italic headers */
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  letter-spacing: -0.015em;
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-ink);
+}
+
+p.lead {
+  font-size: 1.18rem;
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+a:hover, a.is-hover {
+  color: var(--color-accent-hover);
+}
+
+code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: var(--color-paper-2);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+/* Layout Containers */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-16);
+}
+
+.tufte-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .tufte-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: var(--space-12);
+  }
+}
+
+/* Header & Metadata */
+.lesson-header {
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-8);
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.lesson-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent);
+  border: 1px solid oklch(0.85 0.05 32);
+}
+
+/* Marginalia / Sidenotes */
+.sidenote {
+  background-color: var(--color-paper-2);
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 0.9rem;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-6);
+}
+
+.sidenote-title {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+/* Cards & Formula Displays */
+.card {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.formula-card {
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+
+.formula-card .formula-caption {
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+}
+
+/* Circuit Diagrams / SVGs */
+.circuit-figure {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+
+.circuit-figure svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.circuit-figure figcaption {
+  font-size: 0.88rem;
+  color: var(--color-ink-muted);
+  margin-top: var(--space-3);
+}
+
+/* Tables */
+.table-wrapper {
+  overflow-x: auto;
+  margin: var(--space-6) 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-paper-2);
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-border-strong);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: var(--color-paper-2);
+}
+
+/* Interactive Interactive Calculator Widget */
+.interactive-calc {
+  background-color: var(--color-paper-2);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+.calc-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-ink-muted);
+}
+
+.input-field {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input-field:focus, .input-field.is-focus {
+  outline: none;
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 3px oklch(0.55 0.20 240 / 0.2);
+}
+
+.calc-results {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--color-paper);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.result-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-label {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+}
+
+.result-val {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+}
+
+/* Quiz Section */
+.quiz-container {
+  margin: var(--space-12) 0;
+  border-top: 2px solid var(--color-ink);
+  padding-top: var(--space-8);
+}
+
+.quiz-card {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.quiz-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  color: var(--color-ink);
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-paper-2);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  user-select: none;
+}
+
+.quiz-option:hover, .quiz-option.is-hover {
+  background-color: var(--color-paper-3);
+  border-color: var(--color-ink-muted);
+}
+
+.quiz-option:focus-visible, .quiz-option.is-focus {
+  outline: 2px solid var(--color-focus);
+}
+
+.quiz-option:active, .quiz-option.is-active {
+  transform: scale(0.99);
+}
+
+.quiz-option.is-correct {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success);
+  color: oklch(0.3 0.12 145);
+  font-weight: 600;
+}
+
+.quiz-option.is-wrong {
+  background-color: var(--color-error-bg);
+  border-color: var(--color-error);
+  color: oklch(0.3 0.15 25);
+}
+
+.quiz-feedback {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  display: none;
+}
+
+.quiz-feedback.show-feedback {
+  display: block;
+}
+
+.feedback-correct {
+  background-color: var(--color-success-bg);
+  border: 1px solid var(--color-success);
+  color: oklch(0.25 0.12 145);
+}
+
+.feedback-wrong {
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  color: oklch(0.25 0.15 25);
+}
+
+/* Step-by-step Example Accordion / Disclosure */
+details.example-box {
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+details.example-box summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+details.example-box summary:hover {
+  color: var(--color-accent);
+}
+
+details.example-box[open] summary {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.btn-primary:hover, .btn-primary.is-hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-paper-2);
+  color: var(--color-ink);
+  border-color: var(--color-border-strong);
+}
+
+.btn-secondary:hover, .btn-secondary.is-hover {
+  background-color: var(--color-paper-3);
+}
+
+/* Footer & Navigation links */
+.lesson-footer {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.primary-source-card {
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}

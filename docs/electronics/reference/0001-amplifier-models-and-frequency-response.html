@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>電子學第 1 章速查表：放大器模型與頻率響應 (Reference 0001)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" 
+          onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="page-container">
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span>Reference Material #0001</span>
+        <span class="badge">Cheat Sheet</span>
+        <span>Sedra &amp; Smith Chapter 1</span>
+      </div>
+      <h1>放大器模型、增益計算與頻率響應速查手冊</h1>
+      <p class="lead">彙整電子學第 1 章核心公式、四種受控源等效電路、分貝換算與單時間常數 (STC) 電路特性。</p>
+    </header>
+
+    <main>
+      <!-- Section 1: 四種放大器模型 -->
+      <section>
+        <h2>1. 四大基本放大器模型比較 (The Four Amplifier Types)</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>放大器類型 (Type)</th>
+                <th>輸入/輸出訊號</th>
+                <th>開路/短路增益定義</th>
+                <th>理想輸入電阻 $R_i$</th>
+                <th>理想輸出電阻 $R_o$</th>
+                <th>等效受控源形式</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>電壓放大器 (Voltage Amp)</strong></td>
+                <td>輸入 $v_i$ / 輸出 $v_o$</td>
+                <td>$A_{vo} = \left.\frac{v_o}{v_i}\right|_{i_o=0}$ (V/V)</td>
+                <td>$R_i = \infty$</td>
+                <td>$R_o = 0$</td>
+                <td>壓控電壓源 (VCVS): $A_{vo} v_i$</td>
+              </tr>
+              <tr>
+                <td><strong>電流放大器 (Current Amp)</strong></td>
+                <td>輸入 $i_i$ / 輸出 $i_o$</td>
+                <td>$A_{is} = \left.\frac{i_o}{i_i}\right|_{v_o=0}$ (A/A)</td>
+                <td>$R_i = 0$</td>
+                <td>$R_o = \infty$</td>
+                <td>流控電流源 (CCCS): $A_{is} i_i$</td>
+              </tr>
+              <tr>
+                <td><strong>轉導放大器 (Transconductance)</strong></td>
+                <td>輸入 $v_i$ / 輸出 $i_o$</td>
+                <td>$G_m = \left.\frac{i_o}{v_i}\right|_{v_o=0}$ (A/V 或 S)</td>
+                <td>$R_i = \infty$</td>
+                <td>$R_o = \infty$</td>
+                <td>壓控電流源 (VCCS): $G_m v_i$</td>
+              </tr>
+              <tr>
+                <td><strong>轉阻放大器 (Transresistance)</strong></td>
+                <td>輸入 $i_i$ / 輸出 $v_o$</td>
+                <td>$R_m = \left.\frac{v_o}{i_i}\right|_{i_o=0}$ (V/A 或 $\Omega$)</td>
+                <td>$R_i = 0$</td>
+                <td>$R_o = 0$</td>
+                <td>流控電壓源 (CCVS): $R_m i_i$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="sidenote">
+          <div class="sidenote-title">參數互換關係 (Relationships)</div>
+          $$A_{vo} = G_m R_o = \frac{R_m}{R_i} = A_{is} \frac{R_o}{R_i}$$
+        </div>
+      </section>
+
+      <!-- Section 2: 負載效應與增益計算 -->
+      <section>
+        <h2>2. 負載效應與總體增益計算 (Loading Effects &amp; Overall Gain)</h2>
+        <div class="formula-card">
+          $$v_i = v_s \left( \frac{R_i}{R_s + R_i} \right) \quad \text{(源端分壓)}$$
+          $$v_o = A_{vo} v_i \left( \frac{R_L}{R_o + R_L} \right) \quad \text{(負載分壓)}$$
+          $$G_v \equiv \frac{v_o}{v_s} = \left( \frac{R_i}{R_s + R_i} \right) A_{vo} \left( \frac{R_L}{R_o + R_L} \right) \quad \text{(總體電壓增益)}$$
+          <div class="formula-caption">電壓放大器在考慮訊號源內阻 $R_s$ 與負載 $R_L$ 時之電壓增益公式</div>
+        </div>
+
+        <div class="card">
+          <h3>多級串接放大器 (Cascaded Amplifiers)</h3>
+          <p>當 $n$ 個放大級串接時，每一級的輸入電阻即為前一級的負載電阻（$R_{L,k} = R_{i,k+1}$）：</p>
+          $$A_v = \frac{v_o}{v_{i1}} = A_{v1} \cdot A_{v2} \dots A_{vn}$$
+          $$A_p = \frac{P_L}{P_I} = A_v \cdot A_i = A_v^2 \left( \frac{R_{i1}}{R_L} \right)$$
+        </div>
+      </section>
+
+      <!-- Section 3: 分貝與功率平衡 -->
+      <section>
+        <h2>3. 分貝 (dB) 換算與直流電源功率守恆</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>物理量</th>
+                <th>線性比例 (Linear Ratio)</th>
+                <th>分貝表示法 (Decibels)</th>
+                <th>備註</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>電壓增益 (Voltage Gain)</td>
+                <td>$A_v = v_o / v_i$</td>
+                <td>$\text{Gain (dB)} = 20 \log_{10} |A_v|$</td>
+                <td>$20\text{ dB} = 10\times$；$40\text{ dB} = 100\times$；$6\text{ dB} \approx 2\times$</td>
+              </tr>
+              <tr>
+                <td>電流增益 (Current Gain)</td>
+                <td>$A_i = i_o / i_i$</td>
+                <td>$\text{Gain (dB)} = 20 \log_{10} |A_i|$</td>
+                <td>同電壓增益以 $20\log$ 計算</td>
+              </tr>
+              <tr>
+                <td>功率增益 (Power Gain)</td>
+                <td>$A_p = P_L / P_i$</td>
+                <td>$\text{Gain (dB)} = 10 \log_{10} A_p$</td>
+                <td>$10\text{ dB} = 10\times$；$3\text{ dB} \approx 2\times$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="formula-card">
+          $$P_{DC} = V_{CC} I_{CC} + V_{EE} I_{EE}$$
+          $$P_{DC} + P_i = P_L + P_{\text{dissipated}} \implies P_{DC} \approx P_L + P_{\text{dissipated}} \quad (\text{因 } P_i \ll P_L)$$
+          $$\text{放大器功率轉換效率 } \eta = \frac{P_L}{P_{DC}} \times 100\%$$
+          <div class="formula-caption">直流供電與功率守恆關係式</div>
+        </div>
+      </section>
+
+      <!-- Section 4: 單時間常數 (STC) 頻率響應 -->
+      <section>
+        <h2>4. 單時間常數 (STC) 網路頻率響應速查</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>特性</th>
+                <th>低通網路 (Low-Pass, LP)</th>
+                <th>高通網路 (High-Pass, HP)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>轉移函數 $T(s)$</strong></td>
+                <td>$$T(s) = \frac{K}{1 + s/\omega_0}$$</td>
+                <td>$$T(s) = \frac{K}{1 + \omega_0/s}$$</td>
+              </tr>
+              <tr>
+                <td><strong>頻率響應 $T(j\omega)$</strong></td>
+                <td>$$T(j\omega) = \frac{K}{1 + j(\omega/\omega_0)}$$</td>
+                <td>$$T(j\omega) = \frac{K}{1 - j(\omega_0/\omega)}$$</td>
+              </tr>
+              <tr>
+                <td><strong>3-dB 截止頻率 $\omega_0$</strong></td>
+                <td>$$\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$$</td>
+                <td>$$\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$$</td>
+              </tr>
+              <tr>
+                <td><strong>在 $\omega = \omega_0$ 處振幅</strong></td>
+                <td>$$|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$$</td>
+                <td>$$|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$$</td>
+              </tr>
+              <tr>
+                <td><strong>在 $\omega = \omega_0$ 處相位</strong></td>
+                <td>$$\angle T(j\omega_0) = -45^\circ$$</td>
+                <td>$$\angle T(j\omega_0) = +45^\circ$$</td>
+              </tr>
+              <tr>
+                <td><strong>波德圖漸近線斜率</strong></td>
+                <td>高頻區 ($\omega \gg \omega_0$)：$-20\text{ dB/decade}$ ($-6\text{ dB/octave}$)</td>
+                <td>低頻區 ($\omega \ll \omega_0$)：$+20\text{ dB/decade}$ ($+6\text{ dB/octave}$)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5: 符號慣例 -->
+      <section>
+        <h2>5. Sedra &amp; Smith 符號與命名慣例 (Symbol Conventions)</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>物理意義</th>
+                <th>文字與下標形式</th>
+                <th>範例</th>
+                <th>說明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>總瞬時量 (Total Instantaneous)</strong></td>
+                <td>小寫字母 + 大寫下標</td>
+                <td>$v_A(t), i_C(t)$</td>
+                <td>包含直流偏壓與交流訊號：$v_A = V_A + v_a$</td>
+              </tr>
+              <tr>
+                <td><strong>直流偏壓值 (DC Component)</strong></td>
+                <td>大寫字母 + 大寫下標</td>
+                <td>$V_A, I_C, V_{CC}$</td>
+                <td>無訊號時的工作點靜態電壓/電流</td>
+              </tr>
+              <tr>
+                <td><strong>交流訊號量 (AC / Signal Component)</strong></td>
+                <td>小寫字母 + 小寫下標</td>
+                <td>$v_a(t), i_c(t)$</td>
+                <td>隨時間變化的微小擾動量</td>
+              </tr>
+              <tr>
+                <td><strong>訊號振幅/相量 (Phasor / Amplitude)</strong></td>
+                <td>大寫字母 + 小寫下標</td>
+                <td>$V_a, I_c$</td>
+                <td>弦波訊號之峰值或複數相量振幅</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lesson-footer">
+      <div class="footer-nav">
+        <a href="../lessons/0001-signals-and-amplifiers.html" class="btn btn-primary">← 回到 Lesson 1 互動教學單元</a>
+        <a href="javascript:window.print()" class="btn btn-secondary">列印 / 匯出此速查表 (Print/PDF)</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

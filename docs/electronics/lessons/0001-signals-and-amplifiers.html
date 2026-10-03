@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0001: 訊號、放大器模型與頻率響應 (Signals, Amplifiers &amp; Frequency Response)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- KaTeX for beautiful math equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" 
+          onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <!-- Reusable Interactive Scripts -->
+  <script defer src="../assets/quiz.js"></script>
+</head>
+<body>
+  <div class="page-container">
+    <!-- Header -->
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span>Lesson #0001</span>
+        <span class="badge">Chapter 1</span>
+        <span>Sedra &amp; Smith Microelectronic Circuits</span>
+      </div>
+      <h1>訊號、放大器模型與頻率響應精要</h1>
+      <p class="lead">從微小感測訊號的等效電路出發，掌握電子學的核心支柱：受控源放大器模型、級聯負載效應與單時間常數 (STC) 頻率響應分析。</p>
+    </header>
+
+    <div class="tufte-layout">
+      <!-- Main Content Column -->
+      <main class="main-column">
+        
+        <!-- Section 1 -->
+        <section id="sec-signals">
+          <h2>1. 訊號源模型與負載效應 (Signals &amp; Transducers)</h2>
+          <p>在真實物理世界中，資訊通常先由**轉換器 (Transducers)**（如麥克風、光電二極體、熱敏電阻）將非電氣物理量轉化為電氣訊號。任何線性訊號源皆可用兩種標準電路等效：</p>
+
+          <div class="circuit-figure">
+            <svg viewBox="0 0 600 160" width="100%" height="160" xmlns="http://www.w3.org/2000/svg">
+              <!-- Thévenin Source -->
+              <g transform="translate(40, 20)">
+                <circle cx="30" cy="60" r="20" fill="none" stroke="var(--color-ink)" stroke-width="2"/>
+                <text x="30" y="65" font-family="var(--font-mono)" font-size="14" text-anchor="middle">~</text>
+                <text x="30" y="100" font-family="var(--font-mono)" font-size="13" text-anchor="middle" fill="var(--color-ink)">vs(t)</text>
+                
+                <line x1="30" y1="40" x2="30" y2="20" stroke="var(--color-ink)" stroke-width="2"/>
+                <line x1="30" y1="20" x2="80" y2="20" stroke="var(--color-ink)" stroke-width="2"/>
+                
+                <!-- Resistor Rs -->
+                <rect x="80" y="12" width="40" height="16" fill="var(--color-paper-2)" stroke="var(--color-ink)" stroke-width="2"/>
+                <text x="100" y="5" font-family="var(--font-mono)" font-size="12" text-anchor="middle">Rs</text>
+                
+                <line x1="120" y1="20" x2="160" y2="20" stroke="var(--color-ink)" stroke-width="2"/>
+                <line x1="30" y1="80" x2="30" y2="120" stroke="var(--color-ink)" stroke-width="2"/>
+                <line x1="30" y1="120" x2="160" y2="120" stroke="var(--color-ink)" stroke-width="2"/>
+                
+                <circle cx="160" cy="20" r="3" fill="var(--color-ink)"/>
+                <circle cx="160" cy="120" r="3" fill="var(--color-ink)"/>
+                <text x="175" y="75" font-family="var(--font-display)" font-size="14" font-weight="600" fill="var(--color-accent)">戴維寧等效</text>
+              </g>
+
+              <!-- Divider -->
+              <line x1="300" y1="10" x2="300" y2="150" stroke="var(--color-border)" stroke-width="2" stroke-dasharray="4 4"/>
+
+              <!-- Norton Source -->
+              <g transform="translate(340, 20)">
+                <circle cx="40" cy="70" r="20" fill="none" stroke="var(--color-ink)" stroke-width="2"/>
+                <path d="M 40 80 L 40 60 M 35 68 L 40 60 L 45 68" stroke="var(--color-ink)" stroke-width="2" fill="none"/>
+                <text x="40" y="110" font-family="var(--font-mono)" font-size="13" text-anchor="middle">is(t)</text>
+
+                <line x1="40" y1="50" x2="40" y2="20" stroke="var(--color-ink)" stroke-width="2"/>
+                <line x1="40" y1="20" x2="120" y2="20" stroke="var(--color-ink)" stroke-width="2"/>
+                
+                <!-- Parallel Resistor Rs -->
+                <line x1="120" y1="20" x2="120" y2="48" stroke="var(--color-ink)" stroke-width="2"/>
+                <rect x="112" y="48" width="16" height="40" fill="var(--color-paper-2)" stroke="var(--color-ink)" stroke-width="2"/>
+                <text x="145" y="72" font-family="var(--font-mono)" font-size="12">Rs</text>
+                <line x1="120" y1="88" x2="120" y2="120" stroke="var(--color-ink)" stroke-width="2"/>
+                
+                <line x1="40" y1="90" x2="40" y2="120" stroke="var(--color-ink)" stroke-width="2"/>
+                <line x1="40" y1="120" x2="180" y2="120" stroke="var(--color-ink)" stroke-width="2"/>
+                <line x1="120" y1="20" x2="180" y2="20" stroke="var(--color-ink)" stroke-width="2"/>
+
+                <circle cx="180" cy="20" r="3" fill="var(--color-ink)"/>
+                <circle cx="180" cy="120" r="3" fill="var(--color-ink)"/>
+                <text x="195" y="75" font-family="var(--font-display)" font-size="14" font-weight="600" fill="var(--color-accent)">諾頓等效</text>
+              </g>
+            </svg>
+            <figcaption>圖 1.1：訊號源的兩種基本等效形式（$v_s = R_s i_s$）</figcaption>
+          </div>
+
+          <p>當訊號源接上負載電阻 $R_L$ 時，由於源端內阻 $R_s$ 的存在，實際跨在負載上的電壓為：</p>
+          <div class="formula-card">
+            $$v_L = v_s \left( \frac{R_L}{R_s + R_L} \right)$$
+            <div class="formula-caption">負載分壓定理：欲使 $v_L \approx v_s$，必須滿足 $R_L \gg R_s$</div>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="sec-amplifiers">
+          <h2>2. 放大器的核心增益與功率關係</h2>
+          <p>訊號經過放大器處理時，我們關注三種核心增益（Gain）以及訊號的線性度：</p>
+          <ul>
+            <li><strong>電壓增益 (Voltage Gain)</strong>：$A_v \equiv \frac{v_o}{v_i}$，以分貝表示為 $20\log_{10}|A_v|\text{ dB}$。</li>
+            <li><strong>電流增益 (Current Gain)</strong>：$A_i \equiv \frac{i_o}{i_i}$，以分貝表示為 $20\log_{10}|A_i|\text{ dB}$。</li>
+            <li><strong>功率增益 (Power Gain)</strong>：$A_p \equiv \frac{P_L}{P_I} = \frac{v_o i_o}{v_i i_i} = A_v A_i$，以分貝表示為 $10\log_{10} A_p\text{ dB}$。</li>
+          </ul>
+
+          <p>放大器輸出給負載的功率 $P_L$ 往往遠大於輸入訊號功率 $P_i$。多出來的能量並非憑空產生，而是由外部**直流電源供應器 (DC Power Supplies)** 提供：</p>
+          <div class="formula-card">
+            $$P_{DC} = V_{CC} I_{CC} + V_{EE} I_{EE}$$
+            $$P_{DC} + P_i = P_L + P_{\text{dissipated}} \implies \text{效率 } \eta = \frac{P_L}{P_{DC}} \times 100\%$$
+            <div class="formula-caption">能量守恆：直流電能轉換為訊號功率與內部熱損耗功率</div>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="sec-circuit-models">
+          <h2>3. 四大基本放大器模型與二埠網路</h2>
+          <p>根據輸入訊號與輸出受控源的類型，電子學將放大器抽象化為四種二埠 (Two-Port) 模型：</p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>放大器類型</th>
+                  <th>增益參數</th>
+                  <th>開路/短路條件</th>
+                  <th>理想輸入電阻 $R_i$</th>
+                  <th>理想輸出電阻 $R_o$</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>電壓放大器 (Voltage)</strong></td>
+                  <td>$A_{vo} = v_o / v_i$ (V/V)</td>
+                  <td>開路 ($i_o = 0$)</td>
+                  <td>$\infty$ (不抽訊號源電流)</td>
+                  <td>$0$ (負載變動不影響輸出電壓)</td>
+                </tr>
+                <tr>
+                  <td><strong>電流放大器 (Current)</strong></td>
+                  <td>$A_{is} = i_o / i_i$ (A/A)</td>
+                  <td>短路 ($v_o = 0$)</td>
+                  <td>$0$ (完全吸納訊號源電流)</td>
+                  <td>$\infty$ (負載變動不影響輸出電流)</td>
+                </tr>
+                <tr>
+                  <td><strong>轉導放大器 (Transconductance)</strong></td>
+                  <td>$G_m = i_o / v_i$ (A/V)</td>
+                  <td>短路 ($v_o = 0$)</td>
+                  <td>$\infty$</td>
+                  <td>$\infty$</td>
+                </tr>
+                <tr>
+                  <td><strong>轉阻放大器 (Transresistance)</strong></td>
+                  <td>$R_m = v_o / i_i$ (V/A)</td>
+                  <td>開路 ($i_o = 0$)</td>
+                  <td>$0$</td>
+                  <td>$0$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Interactive Calculator -->
+          <div class="interactive-calc" id="amp-calculator">
+            <div class="calc-title">⚡ 互動實驗室：單級電壓放大器負載效應計算器</div>
+            <p style="font-size: 0.9rem; color: var(--color-ink-muted);">調整輸入阻抗與負載，即時觀察源端分壓損失、負載分壓損失與整體電壓增益 $G_v$：</p>
+            
+            <div class="calc-grid">
+              <div class="input-group">
+                <label for="calc-vs">訊號源電壓 $v_s$ (mV)</label>
+                <input type="number" id="calc-vs" class="input-field" value="10" step="1">
+              </div>
+              <div class="input-group">
+                <label for="calc-rs">訊號源內阻 $R_s$ ($\text{k}\Omega$)</label>
+                <input type="number" id="calc-rs" class="input-field" value="20" step="1">
+              </div>
+              <div class="input-group">
+                <label for="calc-ri">放大器輸入電阻 $R_i$ ($\text{k}\Omega$)</label>
+                <input type="number" id="calc-ri" class="input-field" value="100" step="10">
+              </div>
+              <div class="input-group">
+                <label for="calc-avo">開路增益 $A_{vo}$ (V/V)</label>
+                <input type="number" id="calc-avo" class="input-field" value="50" step="5">
+              </div>
+              <div class="input-group">
+                <label for="calc-ro">放大器輸出電阻 $R_o$ ($\text{k}\Omega$)</label>
+                <input type="number" id="calc-ro" class="input-field" value="2" step="0.5">
+              </div>
+              <div class="input-group">
+                <label for="calc-rl">負載電阻 $R_L$ ($\text{k}\Omega$)</label>
+                <input type="number" id="calc-rl" class="input-field" value="8" step="1">
+              </div>
+            </div>
+
+            <div class="calc-results">
+              <div class="result-stat">
+                <span class="result-label">實際輸入 $v_i$</span>
+                <span class="result-val" id="res-vi">8.33 mV</span>
+              </div>
+              <div class="result-stat">
+                <span class="result-label">負載輸出 $v_o$</span>
+                <span class="result-val" id="res-vo">333.33 mV</span>
+              </div>
+              <div class="result-stat">
+                <span class="result-label">負載電壓增益 $A_v$</span>
+                <span class="result-val" id="res-av">40.00 V/V</span>
+              </div>
+              <div class="result-stat">
+                <span class="result-label">總體增益 $G_v (v_o/v_s)$</span>
+                <span class="result-val" id="res-gv">33.33 V/V (30.46 dB)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="sec-cascaded">
+          <h2>4. 多級串接放大器分析 (Cascaded Amplifiers)</h2>
+          <p>單一放大級往往難以同時達到高輸入電阻、高增益與低輸出電阻。工程實務上常將多級放大器**串接 (Cascade)**：</p>
+          
+          <details class="example-box">
+            <summary>精選課本經典範例 (Example 1.3 深度拆解)</summary>
+            <div style="margin-top: var(--space-4);">
+              <p><strong>題目情境：</strong> 一個三級放大器連接訊號源（$v_s = 1\text{ mV}, R_s = 100\text{ k}\Omega$）與負載 $R_L = 100\ \Omega$。各級參數如下：</p>
+              <ul>
+                <li>第 1 級（電壓輸入級）：$R_{i1} = 1\text{ M}\Omega,\ A_{vo1} = 10\text{ V/V},\ R_{o1} = 1\text{ k}\Omega$</li>
+                <li>第 2 級（中間增益級）：$R_{i2} = 10\text{ k}\Omega,\ A_{vo2} = 100\text{ V/V},\ R_{o2} = 1\text{ k}\Omega$</li>
+                <li>第 3 級（功率輸出級）：$R_{i3} = 10\text{ k}\Omega,\ A_{vo3} = 1\text{ V/V},\ R_{o3} = 10\ \Omega$</li>
+              </ul>
+
+              <h4 style="margin-top: var(--space-4);">計算步驟解析：</h4>
+              <ol style="margin-left: var(--space-6); line-height: 1.8;">
+                <li><strong>源端分壓：</strong> $v_{i1} = v_s \frac{R_{i1}}{R_s + R_{i1}} = 1\text{ mV} \times \frac{1000}{100 + 1000} = 0.909\text{ mV}$</li>
+                <li><strong>第 1 級增益（以第 2 級 $R_{i2}$ 為負載）：</strong> $v_{i2} = A_{vo1} v_{i1} \frac{R_{i2}}{R_{o1} + R_{i2}} = 10 \times 0.909 \times \frac{10}{1 + 10} = 8.26\text{ mV} \implies A_{v1} = 9.09\text{ V/V}$</li>
+                <li><strong>第 2 級增益（以第 3 級 $R_{i3}$ 為負載）：</strong> $v_{i3} = A_{vo2} v_{i2} \frac{R_{i3}}{R_{o2} + R_{i3}} = 100 \times 8.26 \times \frac{10}{1 + 10} = 751\text{ mV} \implies A_{v2} = 90.9\text{ V/V}$</li>
+                <li><strong>第 3 級增益（以實際負載 $R_L$ 為負載）：</strong> $v_o = A_{vo3} v_{i3} \frac{R_L}{R_{o3} + R_L} = 1 \times 751 \times \frac{100}{10 + 100} = 683\text{ mV} \implies A_{v3} = 0.909\text{ V/V}$</li>
+                <li><strong>總體電壓增益：</strong> $G_v = \frac{v_o}{v_s} = 0.909 \times 9.09 \times 90.9 \times 0.909 \approx 683\text{ V/V} = 56.7\text{ dB}$</li>
+              </ol>
+            </div>
+          </details>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="sec-frequency-response">
+          <h2>5. 放大器頻率響應與單時間常數 (STC) 電路</h2>
+          <p>由於電晶體內部存在寄生電容，外圍亦有耦合電容，放大器的增益是頻率 $\omega$ 的函數：$T(\omega) = |T(\omega)|e^{j\phi(\omega)}$。</p>
+          <p>電子學中大量的高頻衰減與低頻衰減電路皆可簡化為**單時間常數 (STC) 網路**：</p>
+
+          <div class="card">
+            <h3>低通 (Low-Pass) vs 高通 (High-Pass) STC 核心對比</h3>
+            $$T_{LP}(s) = \frac{K}{1 + s/\omega_0} \qquad T_{HP}(s) = \frac{K}{1 + \omega_0/s}$$
+            <p>其中 3-dB 截止頻率 $\omega_0 = \frac{1}{\tau} = \frac{1}{RC}$。在 $\omega = \omega_0$ 處：</p>
+            <ul>
+              <li>增益振幅恰好下降至最大值的 $\frac{1}{\sqrt{2}}$（即下降 $3\text{ dB}$）。</li>
+              <li>低通網路產生 $-45^\circ$ 相位落後；高通網路產生 $+45^\circ$ 相位超前。</li>
+              <li>進入滾降區後，每經過 10 倍頻率（Decade），增益衰減 $20\text{ dB}$。</li>
+            </ul>
+          </div>
+
+          <!-- Interactive STC Calculator -->
+          <div class="interactive-calc" id="stc-calculator">
+            <div class="calc-title">📈 互動工具：STC 截止頻率與時間常數計算器</div>
+            <div class="calc-grid">
+              <div class="input-group">
+                <label for="stc-r">電阻 $R$ ($\text{k}\Omega$)</label>
+                <input type="number" id="stc-r" class="input-field" value="10" step="1">
+              </div>
+              <div class="input-group">
+                <label for="stc-c">電容 $C$ ($\text{pF}$)</label>
+                <input type="number" id="stc-c" class="input-field" value="15.9" step="1">
+              </div>
+              <div class="input-group">
+                <label for="stc-type">網路類型</label>
+                <select id="stc-type" class="input-field">
+                  <option value="lp">低通網路 (Low-Pass)</option>
+                  <option value="hp">高通網路 (High-Pass)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="calc-results">
+              <div class="result-stat">
+                <span class="result-label">時間常數 $\tau = RC$</span>
+                <span class="result-val" id="stc-tau">0.159 μs</span>
+              </div>
+              <div class="result-stat">
+                <span class="result-label">角截止頻率 $\omega_0$</span>
+                <span class="result-val" id="stc-w0">6.29 krad/s</span>
+              </div>
+              <div class="result-stat">
+                <span class="result-label">3-dB 截止頻率 $f_0$</span>
+                <span class="result-val" id="stc-f0">1.00 MHz</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Quizzes -->
+        <section class="quiz-container" id="sec-quizzes">
+          <h2>6. 即時隨堂概念檢測 (Interactive Checkpoints)</h2>
+          <p>透過以下三道具挑戰性的情境題目，檢驗你對第一章核心阻抗與頻率概念的掌握程度：</p>
+
+          <!-- Quiz 1 -->
+          <div class="quiz-card" data-correct="2" data-explanation="電壓放大器輸出端為戴維寧等效，輸出電阻 Ro 必須趨近於 0，負載變動時才不會分走輸出電壓；輸入端為開路等效，Ri 必須趨近於無窮大，才不會對信號源造成負載分壓損失。">
+            <div class="quiz-question">Q1. 為了使電壓放大器在連接任意訊號源與負載時，皆能達到最大的電壓傳遞效率，其理想的輸入電阻 $R_i$ 與輸出電阻 $R_o$ 應為？</div>
+            <div class="quiz-options">
+              <div class="quiz-option" tabindex="0">A. $R_i = 0,\ R_o = 0$</div>
+              <div class="quiz-option" tabindex="0">B. $R_i = 0,\ R_o = \infty$</div>
+              <div class="quiz-option" tabindex="0">C. $R_i = \infty,\ R_o = 0$</div>
+              <div class="quiz-option" tabindex="0">D. $R_i = \infty,\ R_o = \infty$</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- Quiz 2 -->
+          <div class="quiz-card" data-correct="1" data-explanation="電壓增益 Gain(dB) = 20 log10(100) = 40 dB；電流增益 Gain(dB) = 20 log10(1000) = 60 dB；功率增益 Ap = Av * Ai = 100,000，故 Gain(dB) = 10 log10(100,000) = 50 dB（注意功率增益係數為 10）。">
+            <div class="quiz-question">Q2. 若某放大器的電壓增益為 $100\text{ V/V}$，電流增益為 $1000\text{ A/A}$，則其功率增益 $A_p$ 以分貝 (dB) 表示應為多少？</div>
+            <div class="quiz-options">
+              <div class="quiz-option" tabindex="0">A. 100 dB</div>
+              <div class="quiz-option" tabindex="0">B. 50 dB</div>
+              <div class="quiz-option" tabindex="0">C. 60 dB</div>
+              <div class="quiz-option" tabindex="0">D. 25 dB</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+
+          <!-- Quiz 3 -->
+          <div class="quiz-card" data-correct="0" data-explanation="低通 STC 網路的高頻漸近線斜率為 -20 dB/decade。頻率從 100 kHz (10^5 Hz) 上升到 10 MHz (10^7 Hz) 跨越了 2 個 Decades (10^2 倍)，因此增益下降 2 * 20 dB = 40 dB。60 dB - 40 dB = 20 dB。">
+            <div class="quiz-question">Q3. 一低通放大器具有單一極點，3-dB 截止頻率為 $100\text{ kHz}$，直流增益為 $60\text{ dB}$。在頻率 $f = 10\text{ MHz}$ 處，其增益大小約為？</div>
+            <div class="quiz-options">
+              <div class="quiz-option" tabindex="0">A. 約 20 dB</div>
+              <div class="quiz-option" tabindex="0">B. 約 40 dB</div>
+              <div class="quiz-option" tabindex="0">C. 約 0 dB</div>
+              <div class="quiz-option" tabindex="0">D. 約 -20 dB</div>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Marginalia / Sidebar Column -->
+      <aside class="side-column">
+        <div class="sidenote">
+          <div class="sidenote-title">關鍵直覺 (Key Insight)</div>
+          <p><strong>戴維寧與諾頓的工程選型：</strong></p>
+          <p>當訊號源內阻極高時（如壓電感測器），視為電流源（諾頓）更為直觀；當內阻極低時（如電源穩壓器），視為電壓源（戴維寧）。</p>
+        </div>
+
+        <div class="sidenote">
+          <div class="sidenote-title">負載效應本質</div>
+          <p>電子學中最常見的錯誤是「忽略後級輸入電阻對前級的下拉效應」。計算多級增益時，必須由後往前依序求取實際等效負載。</p>
+        </div>
+
+        <div class="sidenote">
+          <div class="sidenote-title">分貝 (dB) 記憶法</div>
+          <p>電壓／電流比值（$20\log$）：</p>
+          <ul style="padding-left: 1rem; font-family: var(--font-mono); font-size: 0.85rem;">
+            <li>$\times 2 \approx +6\text{ dB}$</li>
+            <li>$\times 10 = +20\text{ dB}$</li>
+            <li>$\times 100 = +40\text{ dB}$</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top: var(--space-8);">
+          <h4 style="font-family: var(--font-display); margin-bottom: var(--space-2);">速查資源連結</h4>
+          <p style="font-size: 0.88rem; color: var(--color-ink-muted);">需要完整的四種模型參數推導與符號速查表？</p>
+          <a href="../reference/0001-amplifier-models-and-frequency-response.html" class="btn btn-secondary" style="width: 100%; font-size: 0.85rem;">開啟 Chapter 1 速查手冊 →</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer & Next Steps -->
+    <footer class="lesson-footer">
+      <div class="primary-source-card">
+        <h3>推薦一手權威研讀文獻 (Primary Source)</h3>
+        <p>請參閱教科書 <strong>《Microelectronic Circuits》第 1 章 (Section 1.4 ~ 1.6)</strong>，特別是 Example 1.3 的多級串接計算與 Section 1.6.4 的單時間常數電路表。</p>
+        <p style="font-size: 0.9rem; color: var(--color-ink-muted); margin-top: var(--space-2);">
+          💡 <strong>隨時向 AI 導師提問：</strong> 若對受控源模型轉換、Bode 圖高低頻漸近線繪製或課本習題有任何疑問，請直接在對話中提問！
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-ink-muted);">學習紀錄已同步更新至 <code>./learning-records/0001-*.md</code></span>
+        <a href="../reference/0001-amplifier-models-and-frequency-response.html" class="btn btn-primary">進入下一個參考文檔 →</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

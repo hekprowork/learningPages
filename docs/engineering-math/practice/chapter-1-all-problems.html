@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第一章 一階常微分方程式 全章題庫對照表（題目與解答）</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- KaTeX for high precision math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+    /* Hallmark · theme: editorial-paper · genre: split-problem-solution-matrix */
+
+    .page-header {
+      margin-bottom: var(--space-6);
+      border-bottom: 2px solid var(--color-ink);
+      padding-bottom: var(--space-4);
+    }
+
+    .control-panel {
+      background: var(--color-paper);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4) var(--space-5);
+      margin-bottom: var(--space-6);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      position: sticky;
+      top: var(--space-2);
+      z-index: 20;
+      box-shadow: var(--shadow-card);
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 200px;
+      padding: var(--space-2) var(--space-3);
+      font-size: 0.95rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background: var(--color-paper-2);
+      color: var(--color-ink);
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--color-focus);
+      background: #fff;
+    }
+
+    .section-nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+    }
+
+    .nav-pill {
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-paper);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .nav-pill:hover {
+      background: var(--color-paper-3);
+      border-color: var(--color-border-strong);
+    }
+
+    /* Section Headers */
+    .chapter-section {
+      margin-top: var(--space-12);
+      margin-bottom: var(--space-8);
+    }
+
+    .section-banner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: var(--space-2);
+      border-bottom: 2px solid var(--color-border-strong);
+      margin-bottom: var(--space-4);
+    }
+
+    .section-banner h2 {
+      margin: 0;
+      border: none;
+      padding: 0;
+      font-size: 1.4rem;
+    }
+
+    .section-count {
+      font-size: 0.875rem;
+      color: var(--color-ink-muted);
+      font-weight: 600;
+    }
+
+    /* Split Problem-Solution Grid Table */
+    .qa-table {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
+    }
+
+    .qa-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      background: var(--color-paper);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      transition: border-color 0.15s ease;
+    }
+
+    .qa-row:hover {
+      border-color: var(--color-border-strong);
+    }
+
+    .qa-left {
+      padding: var(--space-5);
+      border-right: 1px solid var(--color-border);
+      background: var(--color-paper);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .qa-right {
+      padding: var(--space-5);
+      background: var(--color-paper-2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .q-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-3);
+    }
+
+    .q-id {
+      font-family: var(--font-mono);
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      background: var(--color-accent-soft);
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+    }
+
+    .q-math {
+      font-size: 1.05rem;
+      margin: var(--space-2) 0 var(--space-4);
+      line-height: 1.6;
+    }
+
+    .ans-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-ink-muted);
+      margin-bottom: var(--space-2);
+    }
+
+    .ans-math {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: var(--space-3);
+      padding: var(--space-2) var(--space-3);
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      overflow-x: auto;
+    }
+
+    .ans-detail {
+      font-size: 0.875rem;
+      color: var(--color-ink-muted);
+      line-height: 1.5;
+      padding-top: var(--space-2);
+      border-top: 1px dashed var(--color-border);
+    }
+
+    /* Mask mode for self-practice */
+    body.practice-mode .qa-right {
+      filter: blur(8px);
+      user-select: none;
+      transition: filter 0.2s ease;
+    }
+
+    body.practice-mode .qa-right:hover {
+      filter: blur(0);
+    }
+
+    @media (max-width: 768px) {
+      .qa-row {
+        grid-template-columns: 1fr;
+      }
+      .qa-left {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+      }
+    }
+
+    @media print {
+      .control-panel, .section-nav-pills, .no-print { display: none !important; }
+      .qa-row { break-inside: avoid; margin-bottom: 1rem; border: 1px solid #333; }
+      .qa-right { background: #fff; filter: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="max-width: 1080px;">
+
+    <!-- Breadcrumb & Top Bar -->
+    <div class="lesson-meta no-print">
+      <span class="badge badge-accent">全章題庫對照</span>
+      <span class="badge">工數（上） 第一章</span>
+      <span>共 56 題完整收錄</span>
+      <a href="../practice/chapter-1-workbook.html" style="margin-left: auto;">🎯 核心精選互動練習</a>
+      <a href="../lessons/0001-integrating-factor-method.html">📖 積分因子教學</a>
+    </div>
+
+    <div class="page-header">
+      <h1>第一章 一階微分方程式：全章題目與解答對照表</h1>
+      <p style="color: var(--color-ink-muted); font-size: 1.05rem;">
+        左側為題目（含初始條件），右側為對應之通解、特解與精要步驟。收錄講義 1.1～1.4 與歷屆考題全部 56 道題目。
+      </p>
+    </div>
+
+    <!-- Sticky Control Panel -->
+    <div class="control-panel no-print">
+      <input type="text" id="search-box" class="search-input" placeholder="🔍 搜尋題目關鍵字 (例如: sin, IVP, e^x)..." onkeyup="filterQuestions()">
+      <button class="btn btn-secondary" onclick="togglePracticeMode()" id="mode-btn">👁️ 開啟遮蔽測驗模式</button>
+      <button class="btn btn-secondary" onclick="window.print()">🖨️ 列印考題解答對照卷</button>
+    </div>
+
+    <!-- Fast Section Navigation Pills -->
+    <div class="section-nav-pills no-print">
+      <a href="#sec-1-1" class="nav-pill">1.1 基本觀念與 IVP (2 題)</a>
+      <a href="#sec-1-2" class="nav-pill">1.2 可分離變數方程式 (14 題)</a>
+      <a href="#sec-1-3" class="nav-pill">1.3 一階線性微分方程式 (20 題)</a>
+      <a href="#sec-1-4" class="nav-pill">1.4 正合微分方程式 (12 題)</a>
+      <a href="#sec-exams" class="nav-pill">歷屆考古精選 (8 題)</a>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- Section 1.1 -->
+    <!-- ========================================== -->
+    <section class="chapter-section" id="sec-1-1">
+      <div class="section-banner">
+        <h2>1.1 基本觀念與初值問題 (Basic Concepts & IVP)</h2>
+        <span class="section-count">2 題</span>
+      </div>
+
+      <div class="qa-table">
+        <!-- 1.1 Ex 1 -->
+        <div class="qa-row" data-search="y' + 2xy = 0 y(0)=1">
+          <div class="qa-left">
+            <div class="q-meta">
+              <span class="q-id">1.1 範例 1</span>
+              <span class="badge">初值問題 (IVP)</span>
+            </div>
+            <div class="q-math">
+              給定 $y' + 2xy = 0$，試求其一般解，以及滿足初始條件 $y(0) = 1$ 的特解。
+            </div>
+            <div style="font-size: 0.8rem; color: var(--color-ink-faint);">題型：可分離變數 / 一階線性</div>
+          </div>
+          <div class="qa-right">
+            <div>
+              <div class="ans-label">解答與步驟</div>
+              <div class="ans-math">
+                一般解：$y = Ce^{-x^2}$<br>
+                特解：$y = e^{-x^2}$
+              </div>
+            </div>
+            <div class="ans-detail">
+              <strong>步驟：</strong> $\frac{dy}{y} = -2x\,dx \implies \ln|y| = -x^2 + C_1 \implies y = Ce^{-x^2}$。代入 $y(0)=1 \implies C=1$。
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.1 Ex 2 -->
+        <div class="qa-row" data-search="y' + 2y = 0 y(0)=-7">
+          <div class="qa-left">
+            <div class="q-meta">
+              <span class="q-id">1.1 範例 2</span>
+              <span class="badge">初值問題 (IVP)</span>
+            </div>
+            <div class="q-math">
+              求解初值問題：<br>
+              $$y' + 2y = 0, \quad y(0) = -7$$
+            </div>
+            <div style="font-size: 0.8rem; color: var(--color-ink-faint);">題型：一階常係數齊次 ODE</div>
+          </div>
+          <div class="qa-right">
+            <div>
+              <div class="ans-label">解答與步驟</div>
+              <div class="ans-math">
+                $$y(x) = -7e^{-2x}$$
+              </div>
+            </div>
+            <div class="ans-detail">
+              <strong>步驟：</strong> $\frac{dy}{y} = -2\,dx \implies \ln|y| = -2x + c \implies y = Ce^{-2x}$。代入 $y(0) = -7 \implies C = -7$。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- Section 1.2 -->
+    <!-- ========================================== -->
+    <section class="chapter-section" id="sec-1-2">
+      <div class="section-banner">
+        <h2>1.2 可分離變數微分方程式 (Separable Equations)</h2>
+        <span class="section-count">14 題</span>
+      </div>
+
+      <div class="qa-table">
+        <!-- 1.2 Q1 -->
+        <div class="qa-row" data-search="3y' = 4x/y^2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 1</span><span class="badge">Separable</span></div>
+            <div class="q-math">$$3y' = \frac{4x}{y^2}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y^3 = 2x^2 + k$$</div></div>
+            <div class="ans-detail">交叉相乘：$3y^2\,dy = 4x\,dx \implies \int 3y^2\,dy = \int 4x\,dx \implies y^3 = 2x^2 + k$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q2 -->
+        <div class="qa-row" data-search="y + xy' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 2</span><span class="badge">Separable</span></div>
+            <div class="q-math">$$y + xy' = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$xy = k$$</div></div>
+            <div class="ans-detail">$\frac{dy}{y} = -\frac{dx}{x} \implies \ln|y| + \ln|x| = C \implies xy = k$（或湊微分 $d(xy)=0$）。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q3 -->
+        <div class="qa-row" data-search="e^(x+y) y' = 3x">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 3</span><span class="badge">Separable</span></div>
+            <div class="q-math">$$e^{x+y}y' = 3x$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$e^y = -3e^{-x}(x+1) + C$$</div></div>
+            <div class="ans-detail">$e^y\,dy = 3xe^{-x}\,dx$。分部積分右端：$\int 3xe^{-x}\,dx = -3xe^{-x} - 3e^{-x} + C$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q4 -->
+        <div class="qa-row" data-search="xy' + y = y^2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 4</span><span class="badge">Separable</span></div>
+            <div class="q-math">$$xy' + y = y^2$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{1}{1 - Ax} \quad (\text{含奇異解 } y=0)$$</div></div>
+            <div class="ans-detail">$x\frac{dy}{dx} = y(y-1) \implies \frac{dy}{y(y-1)} = \frac{dx}{x} \implies \ln\left|\frac{y-1}{y}\right| = \ln|x| + c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q5 -->
+        <div class="qa-row" data-search="y' = (x+1)^2 - 2y / 2y">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 5</span><span class="badge">Separable 判別</span></div>
+            <div class="q-math">$$y' = \frac{(x+1)^2 - 2y}{2y}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math"><strong>不可分離變數 (Not Separable)</strong></div></div>
+            <div class="ans-detail">右側為 $\frac{(x+1)^2}{2y} - 1$，無法拆寫為 $f(x)g(y)$ 乘積形式。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q6 -->
+        <div class="qa-row" data-search="x sin(y) y' = cos(y)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 6</span><span class="badge">Separable</span></div>
+            <div class="q-math">$$x\sin(y)y' = \cos(y)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\sec(y) = Ax$$</div></div>
+            <div class="ans-detail">$\tan(y)\,dy = \frac{dx}{x} \implies \ln|\sec(y)| = \ln|x| + C \implies \sec(y) = Ax$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q7 -->
+        <div class="qa-row" data-search="x/y y' = (2y^2+1)/(x+1)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 7</span><span class="badge">Separable</span></div>
+            <div class="q-math">$$\frac{x}{y}y' = \frac{2y^2 + 1}{x+1}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\frac{y^2}{y^2+1} = A\left(\frac{x}{x+1}\right)^2$$</div></div>
+            <div class="ans-detail">$\frac{y}{2y^2+1}\,dy = \frac{dx}{x(x+1)} = \left(\frac{1}{x} - \frac{1}{x+1}\right)dx$ 兩邊分別積分。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q8 -->
+        <div class="qa-row" data-search="y + y' = e^x - sin(y)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 8</span><span class="badge">Separable 判別</span></div>
+            <div class="q-math">$$y + y' = e^x - \sin(y)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math"><strong>不可分離變數 (Not Separable)</strong></div></div>
+            <div class="ans-detail">$y' = e^x - y - \sin(y)$，存在 $x$ 與 $y$ 之相加混合項，無法分離。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q9 -->
+        <div class="qa-row" data-search="cos(x+y)+sin(x-y) y' = cos(2x)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 9</span><span class="badge">Separable / 三角和差</span></div>
+            <div class="q-math">$$[\cos(x+y) + \sin(x-y)]y' = \cos(2x)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\cos(y) + \sin(y) = \cos(x) + \sin(x) + C$$</div></div>
+            <div class="ans-detail">利用積化和差展開後可分離為 $(\cos y + \sin y)\,dy = (\cos x + \sin x)\,dx$ 兩端積分。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q10 -->
+        <div class="qa-row" data-search="xy^2 y' = y+1 y(3e^2)=2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 10</span><span class="badge">Separable + IVP</span></div>
+            <div class="q-math">$$xy^2 y' = y + 1, \quad y(3e^2) = 2$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\frac{y^2}{2} - y + \ln(y+1) = \ln(x) - 2$$</div></div>
+            <div class="ans-detail">$\frac{y^2}{y+1}\,dy = \frac{dx}{x} \implies \int \left(y - 1 + \frac{1}{y+1}\right)dy = \ln x + C$。代入初值求 $C$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q11 -->
+        <div class="qa-row" data-search="y' = 3x^2 y y(2)=1">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 11</span><span class="badge">Separable + IVP</span></div>
+            <div class="q-math">$$y' = 3x^2 y, \quad y(2) = 1$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\ln(y) = x^3 - 8 \implies y(x) = e^{x^3 - 8}$$</div></div>
+            <div class="ans-detail">$\frac{dy}{y} = 3x^2\,dx \implies \ln|y| = x^3 + C$。代入 $x=2, y=1 \implies 0 = 8 + C \implies C = -8$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q12 -->
+        <div class="qa-row" data-search="ln(y^x) y' = 3x^2 y y(2)=e^3">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 12</span><span class="badge">Separable + IVP</span></div>
+            <div class="q-math">$$\ln(y^x)y' = 3x^2 y, \quad y(2) = e^3$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$(\ln y)^2 = 3x^2 - 3$$</div></div>
+            <div class="ans-detail">$\ln(y^x) = x\ln y$。式子化為 $x\ln y\,y' = 3x^2 y \implies \frac{\ln y}{y}\,dy = 3x\,dx \implies \frac{1}{2}(\ln y)^2 = \frac{3}{2}x^2 + C$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q13 -->
+        <div class="qa-row" data-search="2yy' = e^(x-y^2) y(4)=-2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 13</span><span class="badge">Separable + IVP</span></div>
+            <div class="q-math">$$2yy' = e^{x-y^2}, \quad y(4) = -2$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$e^{y^2} = e^x \implies y(x) = -\sqrt{x}$$</div></div>
+            <div class="ans-detail">$2y e^{y^2}\,dy = e^x\,dx \implies e^{y^2} = e^x + C$。代入 $x=4, y=-2 \implies e^4 = e^4 + C \implies C=0$。</div>
+          </div>
+        </div>
+
+        <!-- 1.2 Q14 -->
+        <div class="qa-row" data-search="yy' = 2x sec(3y) y(2/3)=pi/3">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.2 題 14</span><span class="badge">Separable + IVP</span></div>
+            <div class="q-math">$$yy' = 2x\sec(3y), \quad y(2/3) = \pi/3$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$3y\sin(3y) + \cos(3y) = 9x^2 - 5$$</div></div>
+            <div class="ans-detail">$y\cos(3y)\,dy = 2x\,dx$。左邊分部積分：$\frac{y}{3}\sin(3y) + \frac{1}{9}\cos(3y) = x^2 + C$。同乘 9 並代入初值。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- Section 1.3 -->
+    <!-- ========================================== -->
+    <section class="chapter-section" id="sec-1-3">
+      <div class="section-banner">
+        <h2>1.3 一階線性微分方程式 (First-Order Linear ODEs)</h2>
+        <span class="section-count">20 題</span>
+      </div>
+
+      <div class="qa-table">
+        <!-- 1.3 Q1 -->
+        <div class="qa-row" data-search="y' - 3/x y = 2x^2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 1</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' - \frac{3}{x}y = 2x^2$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = cx^3 + 2x^3\ln(x)$$</div></div>
+            <div class="ans-detail">積分因子 $I = e^{\int -3/x dx} = x^{-3}$。$\frac{d}{dx}(x^{-3}y) = 2x^{-1} \implies x^{-3}y = 2\ln x + c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q2 -->
+        <div class="qa-row" data-search="y' - y = sinh(x)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 2</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' - y = \sinh(x)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = ce^x + \frac{1}{4}e^{-x} + \frac{1}{2}xe^x$$</div></div>
+            <div class="ans-detail">$\sinh x = \frac{e^x - e^{-x}}{2}$，$I(x) = e^{-x}$。$\frac{d}{dx}(e^{-x}y) = \frac{1 - e^{-2x}}{2}$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q3 -->
+        <div class="qa-row" data-search="y' + 2y = x">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 3</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' + 2y = x$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = ce^{-2x} + \frac{1}{2}x - \frac{1}{4}$$</div></div>
+            <div class="ans-detail">$I = e^{2x}$。$e^{2x}y = \int xe^{2x}dx = \frac{1}{2}xe^{2x} - \frac{1}{4}e^{2x} + c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q4 -->
+        <div class="qa-row" data-search="sin(2x)y' + 2y sin^2(x) = 2sin(x)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 4</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$\sin(2x)y' + 2y\sin^2(x) = 2\sin(x)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \sin(x) + C\cos(x)$$</div></div>
+            <div class="ans-detail">除以 $\sin(2x) = 2\sin x \cos x \implies y' + \tan(x)y = \sec(x)$。$I = \sec x \implies \frac{d}{dx}(y\sec x) = \sec^2 x$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q5 -->
+        <div class="qa-row" data-search="y' - 2y = -8x^2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 5</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' - 2y = -8x^2$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = 4x^2 + 4x + 2 + ce^{2x}$$</div></div>
+            <div class="ans-detail">$I = e^{-2x}$。$\int -8x^2 e^{-2x}dx$ 連續兩次分部積分得 $(4x^2+4x+2)e^{-2x} + c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q6 -->
+        <div class="qa-row" data-search="(x^2-x-2)y' + 3xy = x^2-4x+4">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 6</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$(x^2 - x - 2)y' + 3xy = x^2 - 4x + 4$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{(x-2)^2}{4(x-1)} + \frac{c}{(x+1)(x-2)^4}$$</div></div>
+            <div class="ans-detail">部分分式求積分因子 $I(x) = (x+1)(x-2)^4$ 後全式求解。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q7 -->
+        <div class="qa-row" data-search="y' + y = (x-1)/x^2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 7</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' + y = \frac{x-1}{x^2}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = e^{-x}\int \left(\frac{x-1}{x^2}\right)e^x dx + ce^{-x}$$</div></div>
+            <div class="ans-detail">$I = e^x \implies e^x y = \int \left(\frac{1}{x} - \frac{1}{x^2}\right)e^x dx = \frac{e^x}{x} + c \implies y = \frac{1}{x} + ce^{-x}$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q8 -->
+        <div class="qa-row" data-search="y' + sec(x)y = cos(x)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 8</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' + \sec(x)y = \cos(x)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{x\cos(x) - \cos^2(x)}{1 + \sin(x)} + \frac{c\cos(x)}{1 + \sin(x)}$$</div></div>
+            <div class="ans-detail">$I = \sec x + \tan x$。代入線性通解積分公式推導。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q9 -->
+        <div class="qa-row" data-search="y' + 1/x y = x^2 + 2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 9</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' + \frac{1}{x}y = x^2 + 2$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{1}{4}x^3 + x + \frac{c}{x}$$</div></div>
+            <div class="ans-detail">$I = x \implies \frac{d}{dx}(xy) = x^3 + 2x \implies xy = \frac{1}{4}x^4 + x^2 + c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q10 -->
+        <div class="qa-row" data-search="2y' + 3y = e^(2x)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 10</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$2y' + 3y = e^{2x}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{1}{7}e^{2x} + ce^{-3x/2}$$</div></div>
+            <div class="ans-detail">$y' + \frac{3}{2}y = \frac{1}{2}e^{2x} \implies I = e^{3x/2}$。$\int \frac{1}{2}e^{7x/2}dx = \frac{1}{7}e^{7x/2} + c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q11 -->
+        <div class="qa-row" data-search="y' + 1/x y = 3e^(-x^2)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 11</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$y' + \frac{1}{x}y = 3e^{-x^2}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = -\frac{3}{2x}e^{-x^2} + \frac{c}{x}$$</div></div>
+            <div class="ans-detail">$I = x \implies xy = \int 3xe^{-x^2}dx = -\frac{3}{2}e^{-x^2} + c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q12 -->
+        <div class="qa-row" data-search="xy' + 2/x y = 4">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 12</span><span class="badge">Linear ODE</span></div>
+            <div class="q-math">$$xy' + \frac{2}{x}y = 4 \implies y' + \frac{2}{x^2}y = \frac{4}{x}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{4}{3}x + cx^{-2}$$</div></div>
+            <div class="ans-detail">標準線性解法求解。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q13 -->
+        <div class="qa-row" data-search="y' + 1/(x-2) y = 3x y(3)=4">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 13</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$y' + \frac{1}{x-2}y = 3x, \quad y(3) = 4$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = x^2 - x - 2$$</div></div>
+            <div class="ans-detail">$I = x-2 \implies (x-2)y = \int (3x^2 - 6x)dx = x^3 - 3x^2 + c$。$y(3)=4 \implies c=4$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q14 -->
+        <div class="qa-row" data-search="y' + 3y = 5e^(2x)-6 y(0)=2">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 14</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$y' + 3y = 5e^{2x} - 6, \quad y(0) = 2$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = e^{2x} - 2 + 3e^{-3x}$$</div></div>
+            <div class="ans-detail">$I = e^{3x} \implies e^{3x}y = e^{5x} - 2e^{3x} + c$。$y(0)=2 \implies 2 = 1 - 2 + c \implies c = 3$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q15 -->
+        <div class="qa-row" data-search="y' + 2/(x+1) y = 3 y(0)=5">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 15</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$y' + \frac{2}{x+1}y = 3, \quad y(0) = 5$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = x + 1 + \frac{4}{(x+1)^2}$$</div></div>
+            <div class="ans-detail">$I = (x+1)^2 \implies (x+1)^2 y = (x+1)^3 + c$。$y(0)=5 \implies 5 = 1 + c \implies c = 4$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q16 -->
+        <div class="qa-row" data-search="(x^2-2x)y' + (x^2-5x+4)y = (x^4-2x^3)e^(-x)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 16</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$(x^2 - 2x)y' + (x^2 - 5x + 4)y = (x^4 - 2x^3)e^{-x}, \quad y(3) = 18e^{-3}$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = x^2(x-2)\ln(x-2)e^{-x} + 2x^2\ln(x-2)e^{-x}$$</div></div>
+            <div class="ans-detail">同除以 $x(x-2)$ 後標準求解。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q17 -->
+        <div class="qa-row" data-search="y' - y = 2e^(4x) y(0)=-3">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 17</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$y' - y = 2e^{4x}, \quad y(0) = -3$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{2}{3}e^{4x} - \frac{11}{3}e^x$$</div></div>
+            <div class="ans-detail">$I = e^{-x} \implies e^{-x}y = \frac{2}{3}e^{3x} + c \implies y = \frac{2}{3}e^{4x} + ce^x$。$y(0)=-3 \implies c = -11/3$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q18 -->
+        <div class="qa-row" data-search="y' + 5y/9x = 3x^3+x y(-1)=4">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 18</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$y' + \frac{5y}{9x} = 3x^3 + x, \quad y(-1) = 4$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{27}{41}x^4 + \frac{9}{23}x^2 - \frac{2782}{943}x^{-5/9}$$</div></div>
+            <div class="ans-detail">$I(x) = x^{5/9}$。分項積分後代入 $y(-1)=4$ 確定常數。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q19 -->
+        <div class="qa-row" data-search="y' + 4/x y = 2 y(1)=-4">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 19</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$y' + \frac{4}{x}y = 2, \quad y(1) = -4$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{2}{5}x - \frac{22}{5}x^{-4}$$</div></div>
+            <div class="ans-detail">$I = x^4 \implies x^4 y = \int 2x^4 dx = \frac{2}{5}x^5 + c$。$y(1)=-4 \implies -4 = 2/5 + c \implies c = -22/5$。</div>
+          </div>
+        </div>
+
+        <!-- 1.3 Q20 -->
+        <div class="qa-row" data-search="y' - 4y = x + sin(x) y(0)=3">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.3 題 20</span><span class="badge">Linear + IVP</span></div>
+            <div class="q-math">$$y' - 4y = x + \sin(x), \quad y(0) = 3$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = -\frac{1}{4}x - \frac{1}{16} - \frac{4}{17}\sin x - \frac{1}{17}\cos x + \frac{849}{272}e^{4x}$$</div></div>
+            <div class="ans-detail">$I = e^{-4x}$。利用未定係數法或分部積分求特積分後代入初值。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- Section 1.4 -->
+    <!-- ========================================== -->
+    <section class="chapter-section" id="sec-1-4">
+      <div class="section-banner">
+        <h2>1.4 正合微分方程式 (Exact Differential Equations)</h2>
+        <span class="section-count">12 題</span>
+      </div>
+
+      <div class="qa-table">
+        <!-- 1.4 Q1 -->
+        <div class="qa-row" data-search="2y^2 + ye^(xy) + (4xy + xe^(xy) + 2y)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 1</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$(2y^2 + ye^{xy})\,dx + (4xy + xe^{xy} + 2y)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$2xy^2 + e^{xy} + y^2 = c$$</div></div>
+            <div class="ans-detail">$M_y = 4y + e^{xy} + xye^{xy} = N_x$（正合）。$\phi = \int (2y^2+ye^{xy})dx = 2xy^2 + e^{xy} + g(y) \implies g(y)=y^2$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q2 -->
+        <div class="qa-row" data-search="4xy + 2x + (2x^2 + 3y^2)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 2</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$(4xy + 2x)\,dx + (2x^2 + 3y^2)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$2x^2 y + x^2 + y^3 = c$$</div></div>
+            <div class="ans-detail">$M_y = 4x = N_x$（正合）。$\phi = \int (4xy+2x)dx = 2x^2 y + x^2 + g(y) \implies g'(y) = 3y^2 \implies g(y) = y^3$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q3 -->
+        <div class="qa-row" data-search="4xy + 2x^2 y + (2x^2 + 3y^2)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 3</span><span class="badge">正合檢驗</span></div>
+            <div class="q-math">$$(4xy + 2x^2 y)\,dx + (2x^2 + 3y^2)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math"><strong>非正合方程式 (Not Exact)</strong></div></div>
+            <div class="ans-detail">$M_y = 4x + 2x^2 \neq N_x = 4x$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q4 -->
+        <div class="qa-row" data-search="2cos(x+y) - 2x sin(x+y) - 2x sin(x+y)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 4</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$[2\cos(x+y) - 2x\sin(x+y)]dx - [2x\sin(x+y)]dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$2x\cos(x+y) = c$$</div></div>
+            <div class="ans-detail">$M_y = -2\sin(x+y) - 2x\cos(x+y) = N_x$（正合）。$d[2x\cos(x+y)] = 0$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q5 -->
+        <div class="qa-row" data-search="1/x + y + (3y^2 + x)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 5</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$\left(\frac{1}{x} + y\right)dx + (3y^2 + x)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\ln|x| + xy + y^3 = c$$</div></div>
+            <div class="ans-detail">$M_y = 1 = N_x$。$\phi = \int (1/x + y)dx = \ln|x| + xy + g(y) \implies g'(y) = 3y^2 \implies g(y) = y^3$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q6 -->
+        <div class="qa-row" data-search="e^x sin(y^2) + xe^x sin(y^2) + (2xye^x sin(y^2) + e^y)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 6</span><span class="badge">正合檢驗</span></div>
+            <div class="q-math">$$[e^x\sin(y^2) + xe^x\sin(y^2)]dx + [2xye^x\sin(y^2) + e^y]dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math"><strong>非正合方程式 (Not Exact)</strong></div></div>
+            <div class="ans-detail">$M_y = 2ye^x\cos(y^2)(1+x) \neq N_x = 2ye^x\sin(y^2)(1+x)$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q7 -->
+        <div class="qa-row" data-search="sinh(x)sinh(y) + cosh(x)cosh(y)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 7</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$\sinh(x)\sinh(y)\,dx + \cosh(x)\cosh(y)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\cosh(x)\sinh(y) = c$$</div></div>
+            <div class="ans-detail">$M_y = \sinh x \cosh y = N_x$。$\phi = \int \sinh x \sinh y dx = \cosh x \sinh y = c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q8 -->
+        <div class="qa-row" data-search="4y^4 + 3cos(x) + (16y^3x - 3cos(y))y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 8</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$(4y^4 + 3\cos x)\,dx + (16y^3 x - 3\cos y)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$4xy^4 + 3\sin(x) - 3\sin(y) = c$$</div></div>
+            <div class="ans-detail">$M_y = 16y^3 = N_x$。$\phi = \int (4y^4 + 3\cos x)dx = 4xy^4 + 3\sin x + g(y) \implies g(y) = -3\sin y$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q9 -->
+        <div class="qa-row" data-search="yx^(y-1) + x^y ln(x)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 9</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$y x^{y-1}\,dx + x^y\ln(x)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$x^y = c$$</div></div>
+            <div class="ans-detail">直接觀察全微分：$d(x^y) = yx^{y-1}dx + x^y\ln x\,dy = 0 \implies x^y = c$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q10 -->
+        <div class="qa-row" data-search="(2x^3+2xy^2-y)/(x^2+y^2) + x/(x^2+y^2) y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 10</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$\left(\frac{2x^3 + 2xy^2 - y}{x^2 + y^2}\right)dx + \left(\frac{x}{x^2 + y^2}\right)dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$x^2 + \arctan\left(\frac{x}{y}\right) = c \quad \left(\text{或 } x^2 - \arctan\left(\frac{y}{x}\right) = c'\right)$$</div></div>
+            <div class="ans-detail">拆為 $2x\,dx + \frac{x\,dy - y\,dx}{x^2+y^2} = d(x^2) + d(\arctan(y/x)) = 0$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q11 -->
+        <div class="qa-row" data-search="y + e^x + xy' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 11</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$(y + e^x)\,dx + x\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$xy + e^x = c$$</div></div>
+            <div class="ans-detail">$M_y = 1 = N_x$。湊微分：$(y\,dx + x\,dy) + e^x\,dx = d(xy + e^x) = 0$。</div>
+          </div>
+        </div>
+
+        <!-- 1.4 Q12 -->
+        <div class="qa-row" data-search="6x - ye^(xy) + (e^y - xe^(xy))y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">1.4 題 12</span><span class="badge">Exact ODE</span></div>
+            <div class="q-math">$$(6x - ye^{xy})\,dx + (e^y - xe^{xy})\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$3x^2 - e^{xy} + e^y = c$$</div></div>
+            <div class="ans-detail">$6x\,dx - (ye^{xy}dx + xe^{xy}dy) + e^y\,dy = d(3x^2 - e^{xy} + e^y) = 0$。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- Past Exams -->
+    <!-- ========================================== -->
+    <section class="chapter-section" id="sec-exams">
+      <div class="section-banner">
+        <h2>歷屆期中考古精選 (Past Exams 95 & 96)</h2>
+        <span class="section-count">8 題</span>
+      </div>
+
+      <div class="qa-table">
+        <!-- Exam 95-1 -->
+        <div class="qa-row" data-search="4xy + 6y^2 + (2x^2 + 6xy)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">95 考題 1</span><span class="badge">積分因子法</span></div>
+            <div class="q-math">$$(4xy + 6y^2)\,dx + (2x^2 + 6xy)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$x^4 y^2 + 2x^3 y^3 = c$$</div></div>
+            <div class="ans-detail">$\frac{M_y - N_x}{N} = \frac{(4x+12y) - (4x+6y)}{2x(x+3y)} = \frac{6y}{2x(x+3y)}$ 不純，求待定係數 $\mu = x^2 y$ 轉正合。</div>
+          </div>
+        </div>
+
+        <!-- Exam 95-2 -->
+        <div class="qa-row" data-search="xy' + 4y = 2x y(1)=-4">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">95 考題 2</span><span class="badge">一階線性 IVP</span></div>
+            <div class="q-math">$$xy' + 4y = 2x, \quad y(1) = -4$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y = \frac{2}{5}x - \frac{22}{5}x^{-4}$$</div></div>
+            <div class="ans-detail">$y' + \frac{4}{x}y = 2 \implies I(x) = x^4$。$x^4 y = \frac{2}{5}x^5 + C$。$y(1)=-4 \implies C = -22/5$。</div>
+          </div>
+        </div>
+
+        <!-- Exam 95-3 -->
+        <div class="qa-row" data-search="x sin(y) y' = cos(y)">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">95 考題 3</span><span class="badge">可分離變數</span></div>
+            <div class="q-math">$$x\sin(y)y' = \cos(y)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\sec(y) = Ax$$</div></div>
+            <div class="ans-detail">$\tan y\,dy = \frac{dx}{x} \implies \ln|\sec y| = \ln|x| + c \implies \sec y = Ax$。</div>
+          </div>
+        </div>
+
+        <!-- Exam 96-1 -->
+        <div class="qa-row" data-search="e^x y' = y^2 y(2)=5">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">96 考題 1</span><span class="badge">可分離變數 IVP</span></div>
+            <div class="q-math">$$e^x y' = y^2, \quad y(2) = 5$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y(x) = \frac{1}{\frac{1}{5} - e^{-2} + e^{-x}}$$</div></div>
+            <div class="ans-detail">$y^{-2}\,dy = e^{-x}\,dx \implies -y^{-1} = -e^{-x} + C \implies \frac{1}{y} = e^{-x} + C'$。代入 $x=2, y=5$。</div>
+          </div>
+        </div>
+
+        <!-- Exam 96-2 -->
+        <div class="qa-row" data-search="y' - 2y = -8x">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">96 考題 2</span><span class="badge">一階線性</span></div>
+            <div class="q-math">$$y' - 2y = -8x$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$y(x) = 4x + 2 + ce^{2x}$$</div></div>
+            <div class="ans-detail">$I = e^{-2x} \implies e^{-2x}y = \int -8xe^{-2x}dx = 4xe^{-2x} + 2e^{-2x} + c$。</div>
+          </div>
+        </div>
+
+        <!-- Exam 96-3 -->
+        <div class="qa-row" data-search="2xy^3 + 2 + (3x^2 y^2 + 8e^(4y))y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">96 考題 3</span><span class="badge">正合方程式</span></div>
+            <div class="q-math">$$(2xy^3 + 2)\,dx + (3x^2 y^2 + 8e^{4y})\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$x^2 y^3 + 2x + 2e^{4y} = c$$</div></div>
+            <div class="ans-detail">$M_y = 6xy^2 = N_x$。$\phi = \int (2xy^3+2)dx = x^2 y^3 + 2x + g(y) \implies g'(y) = 8e^{4y} \implies g(y) = 2e^{4y}$。</div>
+          </div>
+        </div>
+
+        <!-- Exam 96-4 -->
+        <div class="qa-row" data-search="1/x + y + (3y^2 + x)y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">96 考題 4</span><span class="badge">正合方程式</span></div>
+            <div class="q-math">$$\left(\frac{1}{x} + y\right)dx + (3y^2 + x)\,dy = 0$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\ln|x| + xy + y^3 = c$$</div></div>
+            <div class="ans-detail">$M_y = 1 = N_x$。通解為 $\ln|x| + xy + y^3 = c$。</div>
+          </div>
+        </div>
+
+        <!-- Exam 96-5 -->
+        <div class="qa-row" data-search="x - xy - y' = 0">
+          <div class="qa-left">
+            <div class="q-meta"><span class="q-id">96 考題 5</span><span class="badge">可分離變數</span></div>
+            <div class="q-math">$$x - xy - y' = 0 \implies y' = x(1-y)$$</div>
+          </div>
+          <div class="qa-right">
+            <div><div class="ans-label">解答</div><div class="ans-math">$$\frac{1}{2}x^2 + \ln|1-y| = c \quad \left(\text{或 } y = 1 - Ae^{-x^2/2}\right)$$</div></div>
+            <div class="ans-detail">$\frac{dy}{1-y} = x\,dx \implies -\ln|1-y| = \frac{1}{2}x^2 + C \implies 1-y = Ae^{-x^2/2}$。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Search Filter
+    function filterQuestions() {
+      const q = document.getElementById('search-box').value.toLowerCase().trim();
+      const rows = document.querySelectorAll('.qa-row');
+      rows.forEach(row => {
+        const text = (row.dataset.search + ' ' + row.innerText).toLowerCase();
+        if (!q || text.includes(q)) {
+          row.style.display = 'grid';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    // Toggle Practice Mask Mode
+    let practiceMode = false;
+    function togglePracticeMode() {
+      practiceMode = !practiceMode;
+      const btn = document.getElementById('mode-btn');
+      if (practiceMode) {
+        document.body.classList.add('practice-mode');
+        btn.innerText = '🔒 關閉遮蔽測驗模式（目前已遮蔽右側解答）';
+        btn.style.background = 'var(--color-accent-soft)';
+        btn.style.color = 'var(--color-accent)';
+      } else {
+        document.body.classList.remove('practice-mode');
+        btn.innerText = '👁️ 開啟遮蔽測驗模式';
+        btn.style.background = 'var(--color-paper-2)';
+        btn.style.color = 'var(--color-ink)';
+      }
+    }
+  </script>
+</body>
+</html>

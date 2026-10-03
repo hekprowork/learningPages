@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0001: 積分因子法（非正合轉正合方程式）</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- KaTeX for clean math typesetting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Meta Navigation -->
+    <div class="lesson-meta">
+      <span class="badge badge-accent">Lesson 0001</span>
+      <span class="badge">工程數學 · 一階 ODE</span>
+      <span>預估耗時：12 分鐘</span>
+      <a href="../reference/integrating-factors-cheatsheet.html" style="margin-left: auto; font-size: 0.875rem;">📖 開啟速查卡 (Cheatsheet)</a>
+    </div>
+
+    <!-- Title & Mission Connection -->
+    <h1>積分因子法：非正合轉正合的核心機制與實戰</h1>
+    <p class="lead" style="font-size: 1.15rem; color: var(--color-ink-muted); margin-bottom: var(--space-6);">
+      當遇到無法分離變數、且非正合（$\frac{\partial M}{\partial y} \neq \frac{\partial N}{\partial x}$）的一階微分方程時，如何乘上神秘的「魔法乘數」$\mu(x,y)$，將死局化為全微分正合方程式？
+    </p>
+
+    <!-- Core Principle Section -->
+    <h2>一、 核心原理：積分因子是怎麼來的？</h2>
+    <div class="card">
+      <p>給定一階微分方程：</p>
+      <div class="formula-box">
+        $$M(x, y)\,dx + N(x, y)\,dy = 0$$
+      </div>
+      <p>若 $\frac{\partial M}{\partial y} \neq \frac{\partial N}{\partial x}$（非正合），我們希望找到一個非零函數 $\mu(x, y)$，兩邊同乘後滿足正合條件：</p>
+      <div class="formula-box">
+        $$\frac{\partial (\mu M)}{\partial y} = \frac{\partial (\mu N)}{\partial x}$$
+      </div>
+      <p>展開偏微分乘積法則：</p>
+      <div class="formula-box">
+        $$\mu \frac{\partial M}{\partial y} + M \frac{\partial \mu}{\partial y} = \mu \frac{\partial N}{\partial x} + N \frac{\partial \mu}{\partial x} \quad\implies\quad \mu \left( \frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} \right) = N \frac{\partial \mu}{\partial x} - M \frac{\partial \mu}{\partial y}$$
+      </div>
+      <p>一般情況下解 $\mu(x,y)$ 屬於二元偏微分方程式（比原題目更難）。因此，工程數學中重點聚焦在<strong>單變數情況</strong>！</p>
+    </div>
+
+    <!-- Two Standard Cases -->
+    <h2>二、 兩大標準判別式與公式</h2>
+    
+    <div class="step-container">
+      <!-- Case 1 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-title">
+            <span class="step-number">1</span>
+            <span>情形一：$\mu$ 僅為 $x$ 的函數 $\mu(x)$</span>
+          </div>
+        </div>
+        <div class="step-content">
+          <p>此時 $\frac{\partial \mu}{\partial y} = 0$，式子簡化為：</p>
+          <div class="formula-box">
+            $$\frac{1}{N} \left( \frac{\partial M}{\partial y} - \frac{\partial N}{\partial x} \right) = f(x) \quad\implies\quad \mu(x) = e^{\int f(x)\,dx}$$
+          </div>
+          <div class="callout tip">
+            💡 <strong>記憶防呆口訣</strong>：分母是 $N$（右邊項），分子順序為「左偏減右偏」($M_y - N_x$)，消去後必須<strong>只剩 $x$</strong>！
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-title">
+            <span class="step-number">2</span>
+            <span>情形二：$\mu$ 僅為 $y$ 的函數 $\mu(y)$</span>
+          </div>
+        </div>
+        <div class="step-content">
+          <p>此時 $\frac{\partial \mu}{\partial x} = 0$，式子簡化為：</p>
+          <div class="formula-box">
+            $$\frac{1}{M} \left( \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} \right) = g(y) \quad\implies\quad \mu(y) = e^{\int g(y)\,dy}$$
+          </div>
+          <div class="callout tip">
+            💡 <strong>記憶防呆口訣</strong>：分母換成 $M$（左邊項），分子順序反轉為「右偏減左偏」($N_x - M_y$)，消去後必須<strong>只剩 $y$</strong>！
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step by Step Worked Example -->
+    <h2>三、 經典範例逐步拆解</h2>
+    <div class="card highlight">
+      <h3>例題：求解 $(3xy + y^2)\,dx + (x^2 + xy)\,dy = 0$</h3>
+      
+      <div class="step-container" style="margin-top: var(--space-4);">
+        <div class="step-card">
+          <strong>步驟 1：正合性檢驗</strong>
+          <p>設 $M = 3xy + y^2$，$N = x^2 + xy$。</p>
+          <p>$\frac{\partial M}{\partial y} = 3x + 2y$，$\frac{\partial N}{\partial x} = 2x + y$。</p>
+          <p>因 $\frac{\partial M}{\partial y} \neq \frac{\partial N}{\partial x}$，方程式非正合！相減得：$M_y - N_x = (3x+2y) - (2x+y) = x + y$。</p>
+        </div>
+
+        <div class="step-card">
+          <strong>步驟 2：測試積分因子判別式</strong>
+          <p>測試情形一（除以 $N$）：</p>
+          <div class="formula-box">
+            $$\frac{M_y - N_x}{N} = \frac{x + y}{x^2 + xy} = \frac{x + y}{x(x + y)} = \frac{1}{x} = f(x)$$
+          </div>
+          <p>剛好只剩下 $x$！求積分因子：</p>
+          <div class="formula-box">
+            $$\mu(x) = e^{\int \frac{1}{x}\,dx} = e^{\ln|x|} = x$$
+          </div>
+        </div>
+
+        <div class="step-card">
+          <strong>步驟 3：全式同乘 $\mu(x) = x$ 並求解勢函數</strong>
+          <p>原式同乘 $x$ 得：</p>
+          <div class="formula-box">
+            $$(3x^2 y + x y^2)\,dx + (x^3 + x^2 y)\,dy = 0$$
+          </div>
+          <p>檢驗新正合性：$\frac{\partial}{\partial y}(3x^2y+xy^2) = 3x^2+2xy = \frac{\partial}{\partial x}(x^3+x^2y)$（正合！）。</p>
+          <p>對 $dx$ 項積分求勢函數 $\phi(x,y)$：</p>
+          <div class="formula-box">
+            $$\phi(x, y) = \int (3x^2 y + x y^2)\,dx = x^3 y + \frac{1}{2}x^2 y^2 + h(y)$$
+          </div>
+          <p>對 $y$ 偏微對照 $dy$ 項：$\frac{\partial \phi}{\partial y} = x^3 + x^2 y + h'(y) = x^3 + x^2 y \implies h'(y) = 0 \implies h(y) = C_1$。</p>
+          <p><strong>最終通解：</strong></p>
+          <div class="formula-box" style="background: var(--color-success-bg); border-color: var(--color-success-border); font-weight: bold;">
+            $$x^3 y + \frac{1}{2} x^2 y^2 = C$$
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Retrieval Practice -->
+    <h2>四、 實戰自我檢核 (Retrieval Practice)</h2>
+    <p>透過即時測驗鞏固大腦提取強度，測試您對判別式分母與方向的判斷直覺：</p>
+
+    <!-- Quiz 1 -->
+    <div class="quiz-box" id="quiz-1">
+      <div class="quiz-question">Q1. 方程式 $(2y)\,dx + (x)\,dy = 0$ 中，$M_y = 2$，$N_x = 1$。若要尋找單變數積分因子，應該使用哪一個判別式？</div>
+      <div class="quiz-options">
+        <button class="option-btn" onclick="checkQuiz(1, 0)">A. 計算 $\frac{N_x - M_y}{M}$，得到純 $y$ 的函數 $g(y)$</button>
+        <button class="option-btn" onclick="checkQuiz(1, 1)">B. 計算 $\frac{M_y - N_x}{N}$，得到純 $x$ 的函數 $f(x)$</button>
+        <button class="option-btn" onclick="checkQuiz(1, 2)">C. 本題無法用單變數積分因子求解</button>
+      </div>
+      <div class="quiz-feedback" id="feedback-1"></div>
+    </div>
+
+    <!-- Quiz 2 -->
+    <div class="quiz-box" id="quiz-2">
+      <div class="quiz-question">Q2. 若算得 $\frac{1}{M}\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right) = -\frac{2}{y}$，則對應的積分因子 $\mu(y)$ 為何？</div>
+      <div class="quiz-options">
+        <button class="option-btn" onclick="checkQuiz(2, 0)">A. $\mu(y) = y^2$</button>
+        <button class="option-btn" onclick="checkQuiz(2, 1)">B. $\mu(y) = -2\ln|y|$</button>
+        <button class="option-btn" onclick="checkQuiz(2, 2)">C. $\mu(y) = \frac{1}{y^2}$</button>
+      </div>
+      <div class="quiz-feedback" id="feedback-2"></div>
+    </div>
+
+    <!-- Summary & Primary Resources -->
+    <h2>五、 學習資源與後續建議</h2>
+    <div class="card">
+      <ul>
+        <li><strong>主要參考教材</strong>：<a href="../工程數學（上）電子檔第一章.pdf">工程數學（上）第一章講義 (PDF)</a> 第 1.5 節。</li>
+        <li><strong>課後題庫演練</strong>：<a href="../101工數%20題目解答%20第一章.pdf">101工數 題目解答 第一章 (PDF)</a> 考古題解析。</li>
+        <li><strong>隨時提問</strong>：若在特定題目遇到交叉項無法消去或特殊分組湊微分疑問，可隨時在對話中貼出題目討論！</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Interactive Quiz Script -->
+  <script>
+    const quizData = {
+      1: {
+        correctIndex: 1,
+        explanation: "正確！$\\frac{M_y - N_x}{N} = \\frac{2 - 1}{x} = \\frac{1}{x}$，為純 $x$ 函數，故積分因子為 $\\mu(x) = e^{\\int (1/x)dx} = x$。（同乘 $x$ 後即為 $2xy\\,dx + x^2\\,dy = d(x^2 y) = 0$）。"
+      },
+      2: {
+        correctIndex: 2,
+        explanation: "正確！$\\mu(y) = e^{\\int -\\frac{2}{y}dy} = e^{-2\\ln|y|} = e^{\\ln(y^{-2})} = y^{-2} = \\frac{1}{y^2}$。"
+      }
+    };
+
+    function checkQuiz(quizId, selectedIndex) {
+      const q = quizData[quizId];
+      const quizBox = document.getElementById(`quiz-${quizId}`);
+      const buttons = quizBox.querySelectorAll('.option-btn');
+      const feedback = document.getElementById(`feedback-${quizId}`);
+
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === q.correctIndex) {
+          btn.classList.add('is-correct');
+        } else if (idx === selectedIndex) {
+          btn.classList.add('is-incorrect');
+        }
+      });
+
+      if (selectedIndex === q.correctIndex) {
+        feedback.className = 'quiz-feedback show-correct';
+        feedback.innerHTML = `<strong>✓ 答對了！</strong> ` + q.explanation;
+      } else {
+        feedback.className = 'quiz-feedback show-error';
+        feedback.innerHTML = `<strong>✗ 再想一下：</strong> ` + q.explanation;
+      }
+
+      if (window.renderMathInElement) {
+        renderMathInElement(feedback, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});
+      }
+    }
+  </script>
+</body>
+</html>

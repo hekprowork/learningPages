@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第一章 一階常微分方程式 核心題庫互動練習</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <!-- KaTeX for high precision math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+    /* Hallmark · theme: editorial-paper · genre: interactive-workbook */
+
+    .progress-bar-container {
+      background: var(--color-paper);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4) var(--space-5);
+      margin-bottom: var(--space-6);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      box-shadow: var(--shadow-subtle);
+      position: sticky;
+      top: var(--space-2);
+      z-index: 10;
+    }
+
+    .progress-stats {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-ink);
+    }
+
+    .progress-track {
+      flex: 1;
+      min-width: 160px;
+      height: 8px;
+      background: var(--color-paper-3);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--color-accent);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* Filter Bar */
+    .filter-scroll {
+      display: flex;
+      gap: var(--space-2);
+      overflow-x: auto;
+      padding-bottom: var(--space-3);
+      margin-bottom: var(--space-6);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      background: var(--color-paper);
+      color: var(--color-ink-muted);
+      font-size: 0.825rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      background: var(--color-paper-3);
+      color: var(--color-ink);
+    }
+
+    .filter-btn.is-active {
+      background: var(--color-ink);
+      color: var(--color-paper);
+      border-color: var(--color-ink);
+    }
+
+    /* Problem Card */
+    .problem-card {
+      background: var(--color-paper);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      margin-bottom: var(--space-6);
+      box-shadow: var(--shadow-subtle);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .problem-card.is-mastered {
+      border-left: 4px solid var(--color-success);
+    }
+
+    .problem-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-2);
+      border-bottom: 1px solid var(--color-paper-3);
+    }
+
+    .problem-title {
+      font-size: 1.15rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+    }
+
+    .problem-content {
+      font-size: 1.05rem;
+      margin: var(--space-4) 0;
+      line-height: 1.6;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+      padding-top: var(--space-3);
+      border-top: 1px dashed var(--color-border);
+    }
+
+    .btn-secondary {
+      background: var(--color-paper-2);
+      color: var(--color-ink);
+      border: 1px solid var(--color-border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-paper-3);
+      color: var(--color-ink);
+    }
+
+    .reveal-box {
+      display: none;
+      margin-top: var(--space-4);
+      padding: var(--space-4);
+      background: var(--color-paper-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+    }
+
+    .reveal-box.is-open {
+      display: block;
+    }
+
+    .hint-box {
+      background: var(--color-accent-soft);
+      border-color: var(--color-accent-border);
+      color: var(--color-ink);
+    }
+
+    .solution-box {
+      background: var(--color-paper);
+      border-left: 3px solid var(--color-accent);
+    }
+
+    .solution-step {
+      margin-bottom: var(--space-3);
+      padding-bottom: var(--space-2);
+      border-bottom: 1px dotted var(--color-border);
+    }
+
+    .solution-step:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    @media print {
+      .progress-bar-container, .filter-scroll, .action-row, .no-print { display: none !important; }
+      .reveal-box { display: block !important; }
+      .problem-card { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Top Navigation -->
+    <div class="lesson-meta no-print">
+      <span class="badge badge-accent">Practice Workbook</span>
+      <span class="badge">工數（上） 第一章精選</span>
+      <a href="../lessons/0001-integrating-factor-method.html">← 返回 Lesson 0001 課程</a>
+      <a href="../reference/integrating-factors-cheatsheet.html">📖 積分因子速查卡</a>
+    </div>
+
+    <!-- Header -->
+    <h1>第一章 一階常微分方程式 核心題庫練習</h1>
+    <p style="color: var(--color-ink-muted); margin-bottom: var(--space-6);">
+      精選歷屆工數考古題與講義題型，覆蓋 8 大核心解題策略。請先嘗試在紙上推導，隨後可點擊「提示」或「完整詳解」進行比對，並標記掌握進度。
+    </p>
+
+    <!-- Progress Tracker Sticky Header -->
+    <div class="progress-bar-container no-print">
+      <div class="progress-stats" id="progress-text">已掌握：0 / 8 題 (0%)</div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <button class="filter-btn" onclick="resetProgress()">重置紀錄</button>
+      <button class="filter-btn" onclick="window.print()">🖨️ 列印考卷</button>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-scroll no-print">
+      <button class="filter-btn is-active" onclick="filterCategory('all', this)">全部題型 (8)</button>
+      <button class="filter-btn" onclick="filterCategory('separable', this)">可分離變數</button>
+      <button class="filter-btn" onclick="filterCategory('homogeneous', this)">齊次代換</button>
+      <button class="filter-btn" onclick="filterCategory('linear', this)">一階線性</button>
+      <button class="filter-btn" onclick="filterCategory('bernoulli', this)">白努利</button>
+      <button class="filter-btn" onclick="filterCategory('exact', this)">正合方程</button>
+      <button class="filter-btn" onclick="filterCategory('integrating-factor', this)">非正合積分因子</button>
+      <button class="filter-btn" onclick="filterCategory('grouping', this)">分組湊微分</button>
+      <button class="filter-btn" onclick="filterCategory('application', this)">工程電路應用</button>
+    </div>
+
+    <!-- Problem List -->
+    <div id="problem-list">
+
+      <!-- Problem 1: Separable -->
+      <div class="problem-card" data-id="1" data-category="separable">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.1 可分離變數型方程式</div>
+          <span class="badge">Separable ODE</span>
+        </div>
+        <div class="problem-content">
+          <p>求解一階常微分方程式：</p>
+          <div class="formula-box">
+            $$\frac{dy}{dx} = \frac{x^2}{1-y^2}$$
+          </div>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-1')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-1')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-1" onclick="toggleMastered(1)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-1">
+          <strong>解題思路：</strong> 觀察式子右側可拆解為 $x$ 與 $y$ 的純分式乘積。交叉相乘將所有含 $y$ 項移至 $dy$ 側、含 $x$ 項移至 $dx$ 側，直接兩端積分。
+        </div>
+        <div class="reveal-box solution-box" id="sol-1">
+          <div class="solution-step">
+            <strong>步驟 1：交叉相乘分離變數</strong><br>
+            $$(1-y^2)\,dy = x^2\,dx$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：兩端直接積分</strong><br>
+            $$\int (1-y^2)\,dy = \int x^2\,dx \implies y - \frac{1}{3}y^3 = \frac{1}{3}x^3 + C'$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：整理移項與常數簡化</strong><br>
+            同乘 3 得：<strong>$$x^3 + y^3 - 3y = C$$</strong>（其中 $C = -3C'$）
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 2: Homogeneous -->
+      <div class="problem-card" data-id="2" data-category="homogeneous">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.2 齊次代換型方程式</div>
+          <span class="badge">Homogeneous ODE</span>
+        </div>
+        <div class="problem-content">
+          <p>求解微分方程式：</p>
+          <div class="formula-box">
+            $$(x^2 + y^2)\,dx + 2xy\,dy = 0$$
+          </div>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-2')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-2')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-2" onclick="toggleMastered(2)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-2">
+          <strong>解題思路：</strong> 檢驗各項次方皆為 2 次齊次式。令 $y = ux \implies dy = u\,dx + x\,du$，代入後消去 $x^2$ 化為可分離變數方程式。
+        </div>
+        <div class="reveal-box solution-box" id="sol-2">
+          <div class="solution-step">
+            <strong>步驟 1：變數代換</strong><br>
+            令 $y = ux$ 則 $dy = u\,dx + x\,du$。代入原式：
+            $$(x^2 + u^2 x^2)\,dx + 2x(ux)(u\,dx + x\,du) = 0$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：提出 $x^2$ 並化簡</strong><br>
+            $$x^2\left[(1 + u^2)\,dx + 2u(u\,dx + x\,du)\right] = 0 \implies (1 + 3u^2)\,dx + 2ux\,du = 0$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：分離變數並積分</strong><br>
+            $$\frac{dx}{x} + \frac{2u}{1 + 3u^2}\,du = 0 \implies \ln|x| + \frac{1}{3}\ln(1 + 3u^2) = \ln|C_1| \implies x^3(1 + 3u^2) = C$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 4：代回 $u = \frac{y}{x}$</strong><br>
+            $$x^3\left(1 + 3\frac{y^2}{x^2}\right) = C \implies \mathbf{x^3 + 3xy^2 = C}$$
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 3: Linear ODE -->
+      <div class="problem-card" data-id="3" data-category="linear">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.3 一階線性微分方程式</div>
+          <span class="badge">Linear ODE</span>
+        </div>
+        <div class="problem-content">
+          <p>求解一階線性微分方程式：</p>
+          <div class="formula-box">
+            $$\frac{dy}{dx} + \frac{2}{x}y = x^3$$
+          </div>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-3')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-3')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-3" onclick="toggleMastered(3)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-3">
+          <strong>解題思路：</strong> 標準一階線性型 $\frac{dy}{dx} + P(x)y = Q(x)$。先求積分因子 $I(x) = e^{\int P(x)\,dx}$，同乘後利用 $\frac{d}{dx}[I(x)y] = I(x)Q(x)$ 求解。
+        </div>
+        <div class="reveal-box solution-box" id="sol-3">
+          <div class="solution-step">
+            <strong>步驟 1：求積分因子</strong><br>
+            $$P(x) = \frac{2}{x} \implies I(x) = e^{\int \frac{2}{x}\,dx} = e^{2\ln|x|} = x^2$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：兩邊同乘 $x^2$ 並積分</strong><br>
+            $$x^2 \frac{dy}{dx} + 2xy = x^5 \implies \frac{d}{dx}(x^2 y) = x^5$$
+            $$x^2 y = \int x^5\,dx = \frac{1}{6}x^6 + C$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：求解 $y(x)$</strong><br>
+            $$\mathbf{y(x) = \frac{1}{6}x^4 + \frac{C}{x^2}}$$
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 4: Bernoulli -->
+      <div class="problem-card" data-id="4" data-category="bernoulli">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.4 白努利方程式 (Bernoulli ODE)</div>
+          <span class="badge">Bernoulli</span>
+        </div>
+        <div class="problem-content">
+          <p>求解非線性方程式：</p>
+          <div class="formula-box">
+            $$\frac{dy}{dx} + \frac{1}{x}y = x y^2$$
+          </div>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-4')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-4')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-4" onclick="toggleMastered(4)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-4">
+          <strong>解題思路：</strong> 此為 $y'=P(x)y+Q(x)y^n$ 型態（$n=2$）。兩邊同除以 $y^2$，令 $z = y^{1-n} = y^{-1}$ 降次轉化為線性 ODE。
+        </div>
+        <div class="reveal-box solution-box" id="sol-4">
+          <div class="solution-step">
+            <strong>步驟 1：同除以 $y^2$ 並做代換</strong><br>
+            $$y^{-2}\frac{dy}{dx} + \frac{1}{x}y^{-1} = x$$
+            令 $z = y^{-1} \implies \frac{dz}{dx} = -y^{-2}\frac{dy}{dx}$，代入得：
+            $$-\frac{dz}{dx} + \frac{1}{x}z = x \implies \frac{dz}{dx} - \frac{1}{x}z = -x$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：求 $z(x)$ 的積分因子與通解</strong><br>
+            $$I(x) = e^{\int -\frac{1}{x}\,dx} = \frac{1}{x} \implies \frac{d}{dx}\left(\frac{z}{x}\right) = \frac{1}{x}(-x) = -1$$
+            $$\frac{z}{x} = -x + C \implies z = -x^2 + Cx$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：代回 $y = z^{-1}$</strong><br>
+            $$\mathbf{y = \frac{1}{Cx - x^2}}$$
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 5: Exact ODE -->
+      <div class="problem-card" data-id="5" data-category="exact">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.5 正合微分方程式</div>
+          <span class="badge">Exact ODE</span>
+        </div>
+        <div class="problem-content">
+          <p>求解方程式：</p>
+          <div class="formula-box">
+            $$(2x + y)\,dx + (x + 3y^2)\,dy = 0$$
+          </div>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-5')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-5')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-5" onclick="toggleMastered(5)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-5">
+          <strong>解題思路：</strong> 檢驗 $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$ 是否成立。成立即為正合，對 $M$ 積分求勢函數 $\phi(x,y)$。
+        </div>
+        <div class="reveal-box solution-box" id="sol-5">
+          <div class="solution-step">
+            <strong>步驟 1：正合性檢驗 (Euler Test)</strong><br>
+            $M = 2x + y \implies \frac{\partial M}{\partial y} = 1$<br>
+            $N = x + 3y^2 \implies \frac{\partial N}{\partial x} = 1$<br>
+            $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} = 1$（確認為正合！）
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：積分求勢函數 $\phi(x,y)$</strong><br>
+            $$\phi(x,y) = \int (2x+y)\,dx = x^2 + xy + g(y)$$
+            $$\frac{\partial \phi}{\partial y} = x + g'(y) = x + 3y^2 \implies g'(y) = 3y^2 \implies g(y) = y^3$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：通解表示</strong><br>
+            $$\mathbf{x^2 + xy + y^3 = C}$$
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 6: Integrating Factor -->
+      <div class="problem-card" data-id="6" data-category="integrating-factor">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.6 非正合積分因子法</div>
+          <span class="badge">Integrating Factor</span>
+        </div>
+        <div class="problem-content">
+          <p>求解非正合方程式：</p>
+          <div class="formula-box">
+            $$(2x^2 + y)\,dx + (x^2 y - x)\,dy = 0$$
+          </div>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-6')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-6')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-6" onclick="toggleMastered(6)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-6">
+          <strong>解題思路：</strong> $M_y = 1$，$N_x = 2xy - 1$。測試判別式 $\frac{M_y - N_x}{N}$ 是否僅含 $x$，求出積分因子 $\mu(x) = e^{\int f(x)\,dx}$。
+        </div>
+        <div class="reveal-box solution-box" id="sol-6">
+          <div class="solution-step">
+            <strong>步驟 1：計算差值與判別式</strong><br>
+            $$M_y - N_x = 1 - (2xy - 1) = 2(1 - xy)$$
+            $$\frac{M_y - N_x}{N} = \frac{2(1 - xy)}{x(xy - 1)} = -\frac{2}{x} = f(x)$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：計算積分因子</strong><br>
+            $$\mu(x) = e^{\int -\frac{2}{x}\,dx} = e^{-2\ln|x|} = \frac{1}{x^2}$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：同乘 $\mu(x)$ 並積分</strong><br>
+            $$\left(2 + \frac{y}{x^2}\right)\,dx + \left(y - \frac{1}{x}\right)\,dy = 0$$
+            $$\phi(x,y) = \int \left(2 + \frac{y}{x^2}\right)\,dx = 2x - \frac{y}{x} + h(y)$$
+            $$\frac{\partial \phi}{\partial y} = -\frac{1}{x} + h'(y) = y - \frac{1}{x} \implies h'(y) = y \implies h(y) = \frac{1}{2}y^2$$
+            通解：<strong>$$2x - \frac{y}{x} + \frac{1}{2}y^2 = C$$</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 7: Grouping -->
+      <div class="problem-card" data-id="7" data-category="grouping">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.7 分組湊微分法</div>
+          <span class="badge">Grouping Method</span>
+        </div>
+        <div class="problem-content">
+          <p>求解方程式：</p>
+          <div class="formula-box">
+            $$(x + y)\,dx + (y - x)\,dy = 0$$
+          </div>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-7')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-7')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-7" onclick="toggleMastered(7)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-7">
+          <strong>解題思路：</strong> 展開重新組合成 $(x\,dx + y\,dy) + (y\,dx - x\,dy) = 0$。觀察其對應 $\frac{1}{2}d(x^2+y^2)$ 與反三角全微分形態。
+        </div>
+        <div class="reveal-box solution-box" id="sol-7">
+          <div class="solution-step">
+            <strong>步驟 1：分組重構</strong><br>
+            $$(x\,dx + y\,dy) + (y\,dx - x\,dy) = 0$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：同除以 $x^2 + y^2$</strong><br>
+            $$\frac{x\,dx + y\,dy}{x^2 + y^2} + \frac{y\,dx - x\,dy}{x^2 + y^2} = 0$$
+            $$\frac{1}{2} \frac{d(x^2 + y^2)}{x^2 + y^2} - d\left(\arctan\frac{x}{y}\right) = 0$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：直接積分得解</strong><br>
+            $$\mathbf{\frac{1}{2}\ln(x^2 + y^2) - \arctan\left(\frac{x}{y}\right) = C}$$
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem 8: Application -->
+      <div class="problem-card" data-id="8" data-category="application">
+        <div class="problem-header">
+          <div class="problem-title">Ex 1.8 工程電路應用（$RL$ 串聯電路）</div>
+          <span class="badge">Circuit Application</span>
+        </div>
+        <div class="problem-content">
+          <p>考慮一串聯 $RL$ 電路，電阻 $R = 10\ \Omega$，電感 $L = 2\ \text{H}$，外加直流電源 $E = 50\ \text{V}$。在 $t = 0$ 時開關閉合（初始電流 $i(0) = 0$）。求電路中的電流 $i(t)$。</p>
+        </div>
+        <div class="action-row no-print">
+          <button class="btn btn-secondary" onclick="toggleBox('hint-8')">💡 提示思路</button>
+          <button class="btn btn-secondary" onclick="toggleBox('sol-8')">🔍 逐步詳解</button>
+          <button class="btn btn-secondary" id="master-btn-8" onclick="toggleMastered(8)" style="margin-left: auto;">標記已掌握</button>
+        </div>
+        <div class="reveal-box hint-box" id="hint-8">
+          <strong>解題思路：</strong> 根據克希荷夫電壓定律 (KVL)：$L\frac{di}{dt} + Ri = E(t)$。帶入數值建立一階線性微分方程，利用初始條件 $i(0)=0$ 求解特解。
+        </div>
+        <div class="reveal-box solution-box" id="sol-8">
+          <div class="solution-step">
+            <strong>步驟 1：建立微分方程式</strong><br>
+            $$2\frac{di}{dt} + 10i = 50 \implies \frac{di}{dt} + 5i = 25$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 2：求通解</strong><br>
+            積分因子 $I(t) = e^{\int 5 dt} = e^{5t}$<br>
+            $$e^{5t}i = \int 25e^{5t}dt = 5e^{5t} + C \implies i(t) = 5 + C e^{-5t}$$
+          </div>
+          <div class="solution-step">
+            <strong>步驟 3：代入初值 $i(0) = 0$ 定出特解</strong><br>
+            $$0 = 5 + C \implies C = -5$$
+            $$\mathbf{i(t) = 5(1 - e^{-5t})\text{ A}}$$
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // State management via localStorage
+    const STORAGE_KEY = 'ch1_mastered_problems_v1';
+    let mastered = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+    function updateProgress() {
+      const total = 8;
+      const count = mastered.length;
+      const pct = Math.round((count / total) * 100);
+      document.getElementById('progress-text').innerText = `已掌握：${count} / ${total} 題 (${pct}%)`;
+      document.getElementById('progress-fill').style.width = `${pct}%`;
+
+      document.querySelectorAll('.problem-card').forEach(card => {
+        const id = parseInt(card.dataset.id);
+        const btn = document.getElementById(`master-btn-1` ? `master-btn-${id}` : null);
+        if (mastered.includes(id)) {
+          card.classList.add('is-mastered');
+          if (btn) btn.innerText = '✓ 已掌握';
+        } else {
+          card.classList.remove('is-mastered');
+          if (btn) btn.innerText = '標記已掌握';
+        }
+      });
+    }
+
+    function toggleMastered(id) {
+      if (mastered.includes(id)) {
+        mastered = mastered.filter(x => x !== id);
+      } else {
+        mastered.push(id);
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(mastered));
+      updateProgress();
+    }
+
+    function resetProgress() {
+      if (confirm('確定要重置所有題目的掌握進度嗎？')) {
+        mastered = [];
+        localStorage.removeItem(STORAGE_KEY);
+        updateProgress();
+      }
+    }
+
+    function toggleBox(boxId) {
+      const el = document.getElementById(boxId);
+      if (el) {
+        el.classList.toggle('is-open');
+        if (el.classList.contains('is-open') && window.renderMathInElement) {
+          renderMathInElement(el, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});
+        }
+      }
+    }
+
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      document.querySelectorAll('.problem-card').forEach(card => {
+        if (cat === 'all' || card.dataset.category === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Initial render
+    updateProgress();
+  </script>
+</body>
+</html>

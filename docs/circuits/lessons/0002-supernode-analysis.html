@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0002: 超節點分析法 (Supernode Analysis) 的原理與實戰破解</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="lesson-header">
+      <span class="lesson-badge">Lesson #0002 · 核心觀念精講</span>
+      <h1>超節點分析法 (Supernode Analysis) 的原理與推導</h1>
+      <div class="lesson-meta">
+        <span><strong>學科領域：</strong>電路學 (Circuit Theory) · 節點分析法</span>
+        <span><strong>建議時間：</strong>12 ~ 15 分鐘</span>
+        <span><strong>前置關聯：</strong><a href="./0001-wye-delta-transformation.html">Lesson 0001: Y-Δ 互換</a></span>
+        <span><strong>速查索引：</strong><a href="../reference/0002-supernode-reference.html">0002 超節點速查手冊</a></span>
+      </div>
+    </header>
+
+    <!-- 學習目標 -->
+    <section>
+      <h2>學習目標 (Learning Objectives)</h2>
+      <p>
+        在標準的<strong>節點電壓法 (Nodal Analysis)</strong> 中，我們習慣對每個非參考節點列寫 KCL，並利用歐姆定律 $i = \frac{v_1 - v_2}{R}$ 將各支路電流轉換為電壓未知數。
+      </p>
+      <p>
+        然而，當電路中出現<strong>「夾在兩個非參考節點之間的電壓源」</strong>時，標準作法會立刻遇到致命困難：<em>電壓源內部的電流大小是完全未知的，無法用歐姆定律表達！</em>
+      </p>
+      <div class="callout tip">
+        <div class="callout-title">本課核心收穫</div>
+        <p>
+          學完本課後，你將深刻理解<strong>「超節點（Supernode）」</strong>的物理本質（廣義高斯面 / 電荷守恆封閉面包絡），並掌握<strong>「超節點 KCL + 電壓源拘束方程式」</strong>雙核心解題策略，從容破解任意包含獨立與相依電壓源的複雜節點電路！
+        </p>
+      </div>
+    </section>
+
+    <!-- 為什麼需要超節點？第一原理剖析 -->
+    <section>
+      <h2>1. 第一原理：為什麼標準節點法會「卡住」？</h2>
+      <p>
+        我們先回到物理最底層思考：電壓源的本質是<strong>「固定兩端電位差」</strong>，但它<strong>「對流過自身的電流大小完全不做限制」</strong>。
+      </p>
+      
+      <div class="callout warning">
+        <div class="callout-title">困境剖析：未知的電壓源電流 $i_v$</div>
+        <p>
+          假設節點 1 與節點 2 之間跨接了一個獨立電壓源 $V_s$。若我們嘗試對節點 1 列 KCL：
+          $$\sum i_{\text{out}} = \frac{v_1 - 0}{R_1} + \frac{v_1 - v_3}{R_2} + i_v = 0$$
+          這裡的 $i_v$ 是一個<strong>全新的未知數</strong>，而且因為理想電壓源的內阻為 $0\ \Omega$，我們<strong>無法透過歐姆定律</strong>把 $i_v$ 寫成 $\frac{\Delta v}{0}$（分母為零無意義）。
+          <br><br>
+          如果我們為每個電壓源多設一個電流未知數 $i_v$，方程式數量將暴增，失去節點電壓法簡潔的優勢。
+        </p>
+      </div>
+
+      <p>
+        <strong>天才的破局點（The Breakthrough Idea）：</strong><br>
+        既然電壓源內部的電流 $i_v$ 很麻煩，那我們能不能<strong>「把它包起來，不去看它」</strong>？
+      </p>
+    </section>
+
+    <!-- 超節點的幾何與物理構造 -->
+    <section>
+      <h2>2. 什麼是「超節點 (Supernode)」？</h2>
+      <p>
+        根據克希荷夫電流定律 (KCL) 的廣義形式：<strong>流入任何閉合曲面（Closed Surface）的總電流必等於流出該曲面的總電流。</strong>
+      </p>
+      <p>
+        我們將<strong>「電壓源本身」</strong>以及<strong>「與它直接並聯的任何元件」</strong>用一個虛擬的封閉紅色邊界圈起來，視為一個單一的廣義節點——這就是<strong>超節點 (Supernode)</strong>！
+      </p>
+
+      <!-- SVG 示意圖 -->
+      <div class="circuit-stage">
+        <svg viewBox="0 0 680 320" class="circuit-svg">
+          <!-- 背景參考底線 -->
+          <line x1="50" y1="270" x2="630" y2="270" stroke="#1e293b" stroke-width="2.5"/>
+          <!-- 接地符號 -->
+          <g transform="translate(340, 270)">
+            <line x1="0" y1="0" x2="0" y2="15" stroke="#1e293b" stroke-width="2"/>
+            <line x1="-15" y1="15" x2="15" y2="15" stroke="#1e293b" stroke-width="2"/>
+            <line x1="-10" y1="20" x2="10" y2="20" stroke="#1e293b" stroke-width="2"/>
+            <line x1="-5" y1="25" x2="5" y2="25" stroke="#1e293b" stroke-width="2"/>
+            <text x="25" y="20" font-size="12" fill="#64748b" font-family="sans-serif">接地參考點 (0 V)</text>
+          </g>
+
+          <!-- 節點 1 垂直支路 (2A 電流源, 2Ω 電阻) -->
+          <line x1="120" y1="130" x2="120" y2="270" stroke="#2563eb" stroke-width="2"/>
+          <circle cx="120" cy="200" r="18" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+          <path d="M 120 210 L 120 190 M 115 195 L 120 190 L 125 195" fill="none" stroke="#2563eb" stroke-width="2"/>
+          <text x="80" y="205" font-size="13" font-weight="bold" fill="#2563eb">2 A</text>
+
+          <line x1="220" y1="130" x2="220" y2="270" stroke="#2563eb" stroke-width="2"/>
+          <rect x="206" y="180" width="28" height="40" fill="#fff" stroke="#2563eb" stroke-width="2" rx="3"/>
+          <text x="250" y="205" font-size="13" font-weight="bold" fill="#2563eb">2 Ω</text>
+
+          <!-- 節點 2 垂直支路 (4Ω 電阻, 7A 電流源) -->
+          <line x1="460" y1="130" x2="460" y2="270" stroke="#2563eb" stroke-width="2"/>
+          <rect x="446" y="180" width="28" height="40" fill="#fff" stroke="#2563eb" stroke-width="2" rx="3"/>
+          <text x="490" y="205" font-size="13" font-weight="bold" fill="#2563eb">4 Ω</text>
+
+          <line x1="560" y1="130" x2="560" y2="270" stroke="#2563eb" stroke-width="2"/>
+          <circle cx="560" cy="200" r="18" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+          <path d="M 560 190 L 560 210 M 555 205 L 560 210 L 565 205" fill="none" stroke="#2563eb" stroke-width="2"/>
+          <text x="590" y="205" font-size="13" font-weight="bold" fill="#2563eb">7 A</text>
+
+          <!-- 頂部 10Ω 電阻 -->
+          <line x1="220" y1="130" x2="220" y2="50" stroke="#2563eb" stroke-width="2"/>
+          <line x1="220" y1="50" x2="460" y2="50" stroke="#2563eb" stroke-width="2"/>
+          <line x1="460" y1="50" x2="460" y2="130" stroke="#2563eb" stroke-width="2"/>
+          <rect x="325" y="38" width="40" height="24" fill="#fff" stroke="#2563eb" stroke-width="2" rx="3"/>
+          <text x="345" y="55" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">10 Ω</text>
+
+          <!-- 中間 2V 電壓源支路 (連接節點 1 與 2) -->
+          <line x1="120" y1="130" x2="560" y2="130" stroke="#2563eb" stroke-width="2"/>
+          <circle cx="340" cy="130" r="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+          <text x="330" y="134" font-size="14" font-weight="bold" fill="#d97706">−</text>
+          <text x="346" y="134" font-size="14" font-weight="bold" fill="#d97706">+</text>
+          <text x="340" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#d97706">2 V</text>
+
+          <!-- 超節點紅色虛線框 (Supernode 邊界) -->
+          <rect x="180" y="20" width="320" height="135" fill="rgba(239, 68, 68, 0.06)" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6" rx="16"/>
+          <text x="195" y="42" font-size="12" font-weight="bold" fill="#dc2626">超節點 (Supernode 1-2 邊界)</text>
+
+          <!-- 節點 1 圓點與標籤 -->
+          <circle cx="220" cy="130" r="6" fill="#1e293b"/>
+          <text x="200" y="125" font-size="15" font-weight="bold" fill="#1e293b">v₁</text>
+
+          <!-- 節點 2 圓點與標籤 -->
+          <circle cx="460" cy="130" r="6" fill="#1e293b"/>
+          <text x="475" y="125" font-size="15" font-weight="bold" fill="#1e293b">v₂</text>
+
+          <!-- 跨越邊界的電流標記箭頭 -->
+          <g transform="translate(120, 130)">
+            <path d="M 0 -10 L 0 -30" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="callout important">
+        <div class="callout-title">超節點的兩大核心特性</div>
+        <ul style="padding-left: 1.25rem; margin-top: 0.5rem;">
+          <li><strong>特性 1（內部電流隱形）：</strong> 電壓源內部的未知電流 $i_v$ 屬於超節點「內部閉環」，在列寫廣義 KCL 時<strong>完全不會出現</strong>！</li>
+          <li><strong>特性 2（並聯元件合併）：</strong> 任何與該電壓源並聯的元件（例如上圖中頂部的 $10\ \Omega$ 電阻），因為兩端都在同一個超節點內，其分流也屬於內部電流，<strong>一併被包絡吸收</strong>！</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 超節點解題黃金方程式 -->
+    <section>
+      <h2>3. 解題核心：超節點的「兩道黃金方程式」</h2>
+      <p>
+        原本節點 1 與節點 2 需要 2 條獨立的 KCL 方程式。現在合併成超節點後，我們只有 1 條超節點 KCL，少了一條方程式怎麼辦？
+      </p>
+      <p>
+        答案是：<strong>電壓源本身的電位差提供了另一條「拘束方程式」！</strong>
+      </p>
+
+      <div class="formula-box">
+        <div class="formula-title">超節點解題雙核心定律</div>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem; text-align: left; margin-top: 0.5rem;">
+          <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; border-left: 4px solid #2563eb;">
+            <strong>① 廣義 KCL 方程式 (Supernode KCL)：</strong>
+            <p style="margin: 0.25rem 0 0 0; color: #334155;">
+              將超節點邊界視為一個整體，計算所有<strong>「穿透邊界流入/流出」</strong>的支路電流總和：
+              $$\sum i_{\text{流入超節點}} = \sum i_{\text{流出超節點}}$$
+            </p>
+          </div>
+
+          <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; border-left: 4px solid #d97706;">
+            <strong>② 電壓源拘束方程式 (Constraint Equation)：</strong>
+            <p style="margin: 0.25rem 0 0 0; color: #334155;">
+              直接由電壓源正負極與端電壓定義列出兩節點電位關係：
+              $$v_{\text{正極端}} - v_{\text{負極端}} = V_s \quad (\text{或 } \alpha v_x)$$
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 實戰演練：Example 3.3 完整推導 -->
+    <section>
+      <h2>4. 實戰拆解：Example 3.3 逐行分析</h2>
+      <p>
+        讓我們直接以剛剛示意圖中的經典電路（課本 Example 3.3）進行手把手完整推導：
+      </p>
+
+      <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+        <h3 style="color: #0f172a; font-size: 1.25rem; margin-bottom: 1rem;">步驟 1：列寫電壓源拘束方程式</h3>
+        <p>觀察 $2\text{ V}$ 電壓源，正極連接在節點 2，負極連接在節點 1：</p>
+        $$v_2 - v_1 = 2 \implies v_2 = v_1 + 2 \quad \cdots (1)$$
+
+        <h3 style="color: #0f172a; font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 1rem;">步驟 2：對超節點 1-2 列寫廣義 KCL</h3>
+        <p>觀察所有穿過紅色虛線框的外部支路電流：</p>
+        <ul>
+          <li>左側：$2\text{ A}$ 電流源<strong>流入</strong>超節點</li>
+          <li>下方節點 1：流經 $2\ \Omega$ 電阻<strong>流出</strong>到接地（$\frac{v_1 - 0}{2}$）</li>
+          <li>下方節點 2：流經 $4\ \Omega$ 電阻<strong>流出</strong>到接地（$\frac{v_2 - 0}{4}$）</li>
+          <li>右側：$7\text{ A}$ 電流源<strong>流出</strong>超節點</li>
+        </ul>
+        <p>列寫流入 = 流出：</p>
+        $$2 = \frac{v_1}{2} + \frac{v_2}{4} + 7$$
+        <p>移項並同乘以 4：</p>
+        $$\frac{v_1}{2} + \frac{v_2}{4} = 2 - 7 = -5 \implies 2v_1 + v_2 = -20 \quad \cdots (2)$$
+
+        <h3 style="color: #0f172a; font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 1rem;">步驟 3：聯立求解</h3>
+        <p>將式 $(1)$ $v_2 = v_1 + 2$ 代入式 $(2)$：</p>
+        $$2v_1 + (v_1 + 2) = -20 \implies 3v_1 = -22 \implies v_1 = -\frac{22}{3}\text{ V} \approx -7.333\text{ V}$$
+        <p>代回計算 $v_2$：</p>
+        $$v_2 = -\frac{22}{3} + 2 = -\frac{16}{3}\text{ V} \approx -5.333\text{ V}$$
+      </div>
+    </section>
+
+    <!-- 互動演練：超節點即時數值模擬器 -->
+    <section>
+      <h2>5. 互動實驗室：超節點參數即時演算</h2>
+      <p>
+        透過調整下方的獨立電壓源電壓 $V_s$ 與兩側電流源數值，直觀觀察節點電壓 $v_1, v_2$ 如何即時響應拘束方程式與 KCL 的制約：
+      </p>
+
+      <div class="interactive-tool">
+        <div class="tool-title">⚡ 超節點 (Supernode) 即時電位計算器</div>
+        
+        <div class="tool-controls">
+          <div class="control-group">
+            <label>左側流入電流源 $I_1$ (A)</label>
+            <input type="range" id="param-i1" min="-10" max="10" value="2" step="1">
+            <span class="value-display" id="val-i1">2 A</span>
+          </div>
+
+          <div class="control-group">
+            <label>超節點電壓源 $V_s$ (V)</label>
+            <input type="range" id="param-vs" min="-20" max="20" value="2" step="1">
+            <span class="value-display" id="val-vs">2 V</span>
+          </div>
+
+          <div class="control-group">
+            <label>右側流出電流源 $I_2$ (A)</label>
+            <input type="range" id="param-i2" min="-10" max="10" value="7" step="1">
+            <span class="value-display" id="val-i2">7 A</span>
+          </div>
+        </div>
+
+        <div class="tool-results">
+          <div class="result-card">
+            <div class="result-label">節點 1 電位 v₁</div>
+            <div class="result-val" id="res-v1">-7.33 V</div>
+            <div class="result-sub" id="res-v1-sub">(-22/3 V)</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label">節點 2 電位 v₂</div>
+            <div class="result-val" id="res-v2">-5.33 V</div>
+            <div class="result-sub" id="res-v2-sub">(-16/3 V)</div>
+          </div>
+          <div class="result-card">
+            <div class="result-label">電位差 v₂ - v₁</div>
+            <div class="result-val" id="res-diff">2.00 V</div>
+            <div class="result-sub">恆等於 Vs 拘束條件</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 概念檢索小測驗 (Retrieval Practice) -->
+    <section>
+      <h2>6. 觀念檢索挑戰 (Concept Check)</h2>
+      <p>藉由自我提取練習（Retrieval Practice），建立大腦中的長期儲存強度（Storage Strength）：</p>
+
+      <div class="quiz-container" id="quiz-1">
+        <div class="quiz-question">
+          <strong>問題 1：在節點分析中，為什麼兩非參考節點間的電壓源不能直接對個別節點列寫傳統 KCL？</strong>
+        </div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkAnswer(1, 0, this)">因為電壓源內部的電流大小完全未知，無法用歐姆定律表達。</button>
+          <button class="quiz-opt" onclick="checkAnswer(1, 1, this)">因為電壓源的電阻值無限大，會導致節點間電流完全斷路。</button>
+          <button class="quiz-opt" onclick="checkAnswer(1, 2, this)">因為克希荷夫電流定律在含有電壓源的電路中會直接失效。</button>
+        </div>
+        <div class="quiz-feedback" id="fb-1"></div>
+      </div>
+
+      <div class="quiz-container" id="quiz-2">
+        <div class="quiz-question">
+          <strong>問題 2：一個包含 $N$ 個非參考節點與 $k$ 個跨接在非參考節點間電壓源的電路，在超節點法中需要列幾條方程式？</strong>
+        </div>
+        <div class="quiz-options">
+          <button class="quiz-opt" onclick="checkAnswer(2, 0, this)">共有 (N-k) 條超節點 KCL 與 k 條電壓源拘束式，總共 N 條。</button>
+          <button class="quiz-opt" onclick="checkAnswer(2, 1, this)">共有 N 條超節點 KCL 與 (N-k) 條電壓源拘束式，共 2N-k 條。</button>
+          <button class="quiz-opt" onclick="checkAnswer(2, 2, this)">共有 k 條超節點 KCL 與 (N-k) 條電壓源拘束式，總共 N 條。</button>
+        </div>
+        <div class="quiz-feedback" id="fb-2"></div>
+      </div>
+    </section>
+
+    <!-- 課堂小結與延伸提問 -->
+    <section>
+      <h2>學習總結與後續提問</h2>
+      <div class="callout tip">
+        <div class="callout-title">超節點解題口訣</div>
+        <p>
+          <strong>「遇電壓源畫紅圈，圈外邊界列 KCL；圈內正負看清楚，電位差等電壓源！」</strong>
+        </p>
+      </div>
+      <p style="margin-top: 1.5rem;">
+        若對本課推導、相依源超節點處理（如 Example 3.4）或矩陣列式有任何疑問，歡迎隨時向 AI 導師提出追問！
+      </p>
+    </section>
+  </div>
+
+  <script>
+    // 即時計算器邏輯
+    function updateSupernodeSim() {
+      const i1 = parseFloat(document.getElementById('param-i1').value);
+      const vs = parseFloat(document.getElementById('param-vs').value);
+      const i2 = parseFloat(document.getElementById('param-i2').value);
+
+      document.getElementById('val-i1').textContent = i1 + ' A';
+      document.getElementById('val-vs').textContent = vs + ' V';
+      document.getElementById('val-i2').textContent = i2 + ' A';
+
+      // 電路公式:
+      // v2 - v1 = Vs => v2 = v1 + Vs
+      // I1 = v1/2 + v2/4 + I2 => I1 - I2 = v1/2 + (v1+Vs)/4 = (3v1 + Vs)/4
+      // 4(I1 - I2) - Vs = 3v1 => v1 = (4(I1 - I2) - Vs) / 3
+      const v1 = (4 * (i1 - i2) - vs) / 3;
+      const v2 = v1 + vs;
+
+      document.getElementById('res-v1').textContent = v1.toFixed(2) + ' V';
+      document.getElementById('res-v2').textContent = v2.toFixed(2) + ' V';
+      document.getElementById('res-diff').textContent = (v2 - v1).toFixed(2) + ' V';
+    }
+
+    document.getElementById('param-i1').addEventListener('input', updateSupernodeSim);
+    document.getElementById('param-vs').addEventListener('input', updateSupernodeSim);
+    document.getElementById('param-i2').addEventListener('input', updateSupernodeSim);
+    updateSupernodeSim();
+
+    // 測驗邏輯
+    const answers = {
+      1: { correct: 0, explanation: "理想電壓源內阻為 0，其電流不受歐姆定律約束，是獨立未知數。因此需將其包絡為超節點以避開內部電流。" },
+      2: { correct: 0, explanation: "每個跨接電壓源合併 2 個節點（減少 1 條獨立 KCL），但同時提供 1 條電壓拘束式，故 (N-k) + k = N 條方程式，剛好求解 N 個未知節點電壓！" }
+    };
+
+    function checkAnswer(qId, selectedIdx, btn) {
+      const container = document.getElementById('quiz-' + qId);
+      const feedback = document.getElementById('fb-' + qId);
+      const options = container.querySelectorAll('.quiz-opt');
+      
+      options.forEach((opt, idx) => {
+        opt.disabled = true;
+        if (idx === answers[qId].correct) {
+          opt.classList.add('correct');
+        } else if (idx === selectedIdx) {
+          opt.classList.add('wrong');
+        }
+      });
+
+      if (selectedIdx === answers[qId].correct) {
+        feedback.className = 'quiz-feedback correct show';
+        feedback.innerHTML = '<strong>答對了！🎉</strong> ' + answers[qId].explanation;
+      } else {
+        feedback.className = 'quiz-feedback wrong show';
+        feedback.innerHTML = '<strong>需要再想想喔！💡</strong> ' + answers[qId].explanation;
+      }
+    }
+  </script>
+</body>
+</html>

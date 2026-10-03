@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>速查表：超節點分析法 (Supernode Analysis) | Reference 0002</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @media print {
+      body { padding: 0.5in; font-size: 10pt; }
+      .no-print { display: none; }
+      .container { max-width: 100%; }
+      .ref-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+    .ref-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .ref-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .ref-card h3 {
+      margin-top: 0;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.4rem;
+    }
+    .mnemonic-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    table.compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+    table.compact-table th, table.compact-table td {
+      border: 1px solid var(--border-color);
+      padding: 0.5rem;
+      text-align: left;
+    }
+    table.compact-table th {
+      background: var(--bg-subtle);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="lesson-header">
+      <span class="lesson-badge">Reference #0002</span>
+      <h1>超節點分析法 (Supernode Analysis) 核心速查手冊</h1>
+      <div class="lesson-meta">
+        <span><strong>學科：</strong>電路學 (Electric Circuits)</span>
+        <span><strong>適用章節：</strong>Chapter 3 / 節點電壓法 (Nodal Analysis)</span>
+        <span><strong>對應課程：</strong><a href="../lessons/0002-supernode-analysis.html">Lesson 0002 原理精講</a></span>
+      </div>
+    </header>
+
+    <!-- 電壓源分類與處理決策樹 -->
+    <section>
+      <h2>1. 電壓源處理決策流程 (Decision Workflow)</h2>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th>電壓源位置</th>
+            <th>電路特徵</th>
+            <th>標準處理手法</th>
+            <th>方程式貢獻</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>接在接地端與非參考節點間</strong></td>
+            <td>電壓源一端直接接地 ($0\text{ V}$)</td>
+            <td><strong>直接定值 (Trivial)</strong><br>該節點電壓直接等於電壓源值：$v_k = V_s$</td>
+            <td>直接消去 1 個未知數，無需列寫 KCL。</td>
+          </tr>
+          <tr>
+            <td><strong>接在兩非參考節點之間</strong></td>
+            <td>電壓源兩端皆浮動（未接地）</td>
+            <td><strong>超節點 (Supernode)</strong><br>將電壓源包絡為廣義節點列寫 KCL，並補上一條電壓拘束式</td>
+            <td>1 條超節點 KCL + 1 條電壓拘束式：<br>$v_{\text{pos}} - v_{\text{neg}} = V_s$</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 超節點 4 步標準解題演算法 -->
+    <section>
+      <h2>2. 超節點 4 步標準解題演算法 (Standard 4-Step Algorithm)</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <span class="mnemonic-badge">STEP 1 · 識別包絡</span>
+          <h3 style="font-size: 1.15rem;">框出超節點邊界</h3>
+          <p style="font-size: 0.95rem; color: #334155;">
+            將所有夾在非參考節點間的電壓源（及其並聯元件）畫上虛線框，標定內部節點電壓（如 $v_1, v_2$）。
+          </p>
+        </div>
+
+        <div class="ref-card">
+          <span class="mnemonic-badge">STEP 2 · 拘束列式</span>
+          <h3 style="font-size: 1.15rem;">寫出電壓拘束式</h3>
+          <p style="font-size: 0.95rem; color: #334155;">
+            觀察電壓源正負極性，列出：
+            $$v_{\text{正極}} - v_{\text{負極}} = V_s \quad (\text{或 } \alpha v_x)$$
+            若為相依源，需將控制量 $v_x, i_x$ 轉換為節點電壓。
+          </p>
+        </div>
+
+        <div class="ref-card">
+          <span class="mnemonic-badge">STEP 3 · 廣義 KCL</span>
+          <h3 style="font-size: 1.15rem;">列寫超節點 KCL</h3>
+          <p style="font-size: 0.95rem; color: #334155;">
+            計算所有穿透虛線邊界流入/流出的支路電流：
+            $$\sum i_{\text{流入邊界}} = \sum i_{\text{流出邊界}}$$
+            內部支路電流完全不列入！
+          </p>
+        </div>
+
+        <div class="ref-card">
+          <span class="mnemonic-badge">STEP 4 · 聯立求解</span>
+          <h3 style="font-size: 1.15rem;">矩陣或代入消去</h3>
+          <p style="font-size: 0.95rem; color: #334155;">
+            將拘束式代入 KCL 消除變數，或組成標準矩陣方程式 $[A][v] = [b]$ 透過克拉瑪法則 (Cramer's Rule) 求解。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 常見易錯盲點 Check-list -->
+    <section>
+      <h2>3. 易錯盲點自我檢查清單 (Pitfalls & Sanity Checks)</h2>
+      <div class="callout warning">
+        <div class="callout-title">四大常見失分地雷</div>
+        <ol style="padding-left: 1.25rem; font-size: 0.95rem; line-height: 1.7;">
+          <li><strong>把電壓源內部電阻重複計算：</strong> 與電壓源並聯的電阻屬於超節點內部，在列寫超節點 KCL 時<strong>絕對不能</strong>重複寫入（例如 Example 3.3 頂部的 $10\ \Omega$ 電阻）！</li>
+          <li><strong>電壓源正負極性減反：</strong> 拘束式一定是<strong>「正極端電位 − 負極端電位 = 電源值」</strong>。若正極接在節點 2、負極接在節點 1，則是 $v_2 - v_1 = V_s$，切勿寫成 $v_1 - v_2$。</li>
+          <li><strong>漏列未包絡的一般節點 KCL：</strong> 若電路中還有其他未與電壓源相連的一般節點，別忘了它們依然需要各自列寫一條標準 KCL。</li>
+          <li><strong>相依源控制變數未替換：</strong> 若電壓源為相依源（如 $3v_x$ 或 $\beta i_x$），必須在列式前先找出 $v_x = v_a - v_b$ 或 $i_x = \frac{v_a - v_b}{R}$，將控制量徹底用節點電壓替換。</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 速查公式卡 -->
+    <section>
+      <h2>4. 經典題型方程式速記對照</h2>
+      <table class="compact-table">
+        <thead>
+          <tr>
+            <th>題型</th>
+            <th>電路結構特徵</th>
+            <th>拘束方程式 (Constraint)</th>
+            <th>超節點 KCL 方程式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Example 3.3</strong></td>
+            <td>獨立電壓源 $2\text{ V}$ 跨接於節點 1 與 2</td>
+            <td>$v_2 - v_1 = 2$</td>
+            <td>$\frac{v_1}{2} + \frac{v_2}{4} + 7 = 2$</td>
+          </tr>
+          <tr>
+            <td><strong>Example 3.4</strong></td>
+            <td>獨立源 $20\text{ V}$ (節點 1-2) + 相依源 $3v_x$ (節點 3-4)</td>
+            <td>$v_1 - v_2 = 20$<br>$v_3 - v_4 = 3(v_1 - v_4)$</td>
+            <td>Supernode 1-2 KCL +<br>Supernode 3-4 KCL</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

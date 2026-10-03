@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reference: 積分因子與正合法速查卡 (Cheatsheet)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <style>
+    @media print {
+      body { background: #fff; }
+      .container { max-width: 100%; padding: 0; }
+      .no-print { display: none; }
+    }
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-4) 0;
+      font-size: 0.95rem;
+    }
+    .ref-table th, .ref-table td {
+      border: 1px solid var(--color-border);
+      padding: var(--space-3) var(--space-4);
+      text-align: left;
+    }
+    .ref-table th {
+      background: var(--color-paper-3);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lesson-meta no-print">
+      <span class="badge badge-accent">Reference Doc</span>
+      <span class="badge">速查參考卡</span>
+      <a href="../lessons/0001-integrating-factor-method.html">← 返回 Lesson 0001 課程</a>
+      <button class="btn no-print" style="margin-left: auto; padding: var(--space-1) var(--space-3); font-size: 0.85rem;" onclick="window.print()">🖨️ 列印 / 存為 PDF</button>
+    </div>
+
+    <h1>一階 ODE 積分因子與正合法速查卡</h1>
+    <p style="color: var(--color-ink-muted);">標準微分形式：$M(x, y)\,dx + N(x, y)\,dy = 0$</p>
+
+    <h2>一、 正合性判定 (Euler Test)</h2>
+    <div class="formula-box">
+      $$\text{若 } \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \implies \text{正合 (Exact)} \implies \text{存在 } \phi(x,y) \text{ 使得 } d\phi = M\,dx + N\,dy = 0$$
+    </div>
+
+    <h2>二、 單變數積分因子速查表</h2>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>型態</th>
+          <th>檢驗條件 / 判別式</th>
+          <th>積分因子 $\mu$ 公式</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>純 $x$ 函數 $\mu(x)$</strong></td>
+          <td>$\frac{1}{N}\left(\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}\right) = f(x)$</td>
+          <td>$$\mu(x) = e^{\int f(x)\,dx}$$</td>
+        </tr>
+        <tr>
+          <td><strong>純 $y$ 函數 $\mu(y)$</strong></td>
+          <td>$\frac{1}{M}\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right) = g(y)$</td>
+          <td>$$\mu(y) = e^{\int g(y)\,dy}$$</td>
+        </tr>
+        <tr>
+          <td><strong>積函數 $\mu(xy)$</strong></td>
+          <td>$\frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}}{x N - y M} = h(u) \quad (u = xy)$</td>
+          <td>$$\mu(u) = e^{\int h(u)\,du}$$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>三、 高頻常見微分分組 (湊微分速解表)</h2>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>微分原形</th>
+          <th>展開式</th>
+          <th>常用積分因子 / 乘數</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$d(xy)$</td>
+          <td>$x\,dy + y\,dx$</td>
+          <td>無 (直接正合)</td>
+        </tr>
+        <tr>
+          <td>$d\left(\frac{y}{x}\right)$</td>
+          <td>$\frac{x\,dy - y\,dx}{x^2}$</td>
+          <td>乘 $\frac{1}{x^2}$</td>
+        </tr>
+        <tr>
+          <td>$d\left(\frac{x}{y}\right)$</td>
+          <td>$\frac{y\,dx - x\,dy}{y^2}$</td>
+          <td>乘 $\frac{1}{y^2}$</td>
+        </tr>
+        <tr>
+          <td>$d\left(\arctan\frac{y}{x}\right)$</td>
+          <td>$\frac{x\,dy - y\,dx}{x^2 + y^2}$</td>
+          <td>乘 $\frac{1}{x^2 + y^2}$</td>
+        </tr>
+        <tr>
+          <td>$d\left(\frac{1}{2}\ln(x^2+y^2)\right)$</td>
+          <td>$\frac{x\,dx + y\,dy}{x^2 + y^2}$</td>
+          <td>乘 $\frac{1}{x^2 + y^2}$</td>
+        </tr>
+        <tr>
+          <td>$d(\ln(xy))$</td>
+          <td>$\frac{dx}{x} + \frac{dy}{y} = \frac{y\,dx + x\,dy}{xy}$</td>
+          <td>乘 $\frac{1}{xy}$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>四、 待定係數型積分因子 $\mu = x^m y^n$</h2>
+    <div class="card">
+      <p>當方程式型如 $x^\alpha y^\beta (p y\,dx + q x\,dy) + x^\gamma y^\delta (r y\,dx + s x\,dy) = 0$ 時：</p>
+      <ol style="margin-left: var(--space-5); line-height: 1.8;">
+        <li>假設積分因子為 $\mu(x, y) = x^m y^n$。</li>
+        <li>全式乘上 $\mu$ 後令 $\frac{\partial (\mu M)}{\partial y} = \frac{\partial (\mu N)}{\partial x}$。</li>
+        <li>比較各項 $x$ 與 $y$ 的次方係數，聯立解出 $m$ 與 $n$。</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
