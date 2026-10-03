@@ -1,0 +1,403 @@
+Chapter 1 First-order Differential Equation
+Differential Equation 簡稱為 D.E.
+D.E. 方程式中，含因變數與導數項
+Ex.  EMBED Equation.3  
+但有時候，自變數有 x, t 或 2 個以上……
+因此，依自變數之數目，分類如下：
+Ordinary D.E. (O.D.E.)常微分方程式
+Ex.  EMBED Equation.3   x 是單一自變數。
+Partial D.E. (P.D.E.)
+Ex.  EMBED Equation.3   x,t 皆是y(x,t)之自變數。
+D.E. 之基本觀念
+1.Order: D.E.中最高階導項之次數。Ex. EMBED Equation.3  , order=2
+2.Degree:D.E. 最高階導數項之冪次。Ex.  EMBED Equation.3  
+3.linear: D.E.不含以下狀況
+  a.因變數自乘  Ex.  EMBED Equation.3  
+  b.因變數導數自乘 Ex.  EMBED Equation.3  
+  c.因變數及其導數互乘 Ex.  EMBED Equation.3  
+4.Nonlinear
+  含以上a,b,c 皆屬於Nonlinear D.E.
+
+一階 D.E. 初步觀念
+General solution
+Particular solution
+一階D.E.  EMBED Equation.3  
+設  EMBED Equation.3  滿足 EMBED Equation.3  ,
+               則 EMBED Equation.3  就是  EMBED Equation.3  之 solution
+Ex.  EMBED Equation.3  
+ EMBED Equation.3    EMBED Equation.3  代入 EMBED Equation.3  
+General solution:  EMBED Equation.3  
+Particular solution: k=1   EMBED Equation.3  
+                k=-1   EMBED Equation.3  
+
+1.1.2 Implicitly and Explicitly
+Implicitly Defined solution:
+ EMBED Equation.3      EMBED Equation.3  
+
+Explicitly Defined solution:
+ EMBED Equation.3      EMBED Equation.3  
+
+Integral curve
+
+Example:
+ EMBED Equation.3     EMBED Equation.3  
+將所有 k 值代入，做成的曲線圖如下：
+
+Example: 
+
+
+
+
+Example: 
+
+
+1.1.4 The initial value problem   求解
+ EMBED Equation.3  
+Ex.  EMBED Equation.3  
+The general solution:  EMBED Equation.3  
+ EMBED Equation.3    k=-7e
+  EMBED Equation.3  
+
+Separate Equation (可分離)
+可寫成  EMBED Equation.3   就是可分離的形式
+  EMBED Equation.3     EMBED Equation.3  
+                        EMBED Equation.3  
+                       即可求出general solution
+Ex.  EMBED Equation.3  
+  EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+
+Ex.  EMBED Equation.3  
+ 如上， EMBED Equation.3  
+          將  EMBED Equation.3   代入 求 k
+          EMBED Equation.3  ,  EMBED Equation.3  
+          ∴  EMBED Equation.3  
+
+一階 Linear D.E.
+       EMBED Equation.3  
+<sol> 兩邊乘於  EMBED Equation.3   （Integration factor 積分因子）
+        EMBED Equation.3  
+        EMBED Equation.3  
+        EMBED Equation.3  
+        EMBED Equation.3  
+Ex.  EMBED Equation.3  , 其中 EMBED Equation.3  
+<sol> 積分因子= EMBED Equation.3   取 EMBED Equation.3   即可
+       EMBED Equation.3   EMBED Equation.3  
+       EMBED Equation.3  ,       EMBED Equation.3  
+      因為， 
+ EMBED Equation.3  
+        EMBED Equation.3  
+               ∴ EMBED Equation.3  
+               ∴ EMBED Equation.3  
+                       =  EMBED Equation.3  
+                   EMBED Equation.3   EMBED Equation.3  
+Ex.  EMBED Equation.3  
+<sol>
+ EMBED Equation.3  
+ ∴ EMBED Equation.3      EMBED Equation.3  
+Exact D.E.  (正合)
+      EMBED Equation.3  
+           [or  EMBED Equation.3  ]
+<sol> 設 EMBED Equation.3  
+       EMBED Equation.3  
+       找出  EMBED Equation.3  
+          即可求出 EMBED Equation.3  
+[注意事項]：很多同學，求出  EMBED Equation.3  ，但解沒有寫成 EMBED Equation.3  ，這都是只會套公式，不知道求解的過程，這是非常嚴重的問題。
+
+Ex.  EMBED Equation.3  
+<sol>
+      EMBED Equation.3  
+      EMBED Equation.3  
+ EMBED Equation.3  
+       EMBED Equation.3      ∴ EMBED Equation.3  
+
+甚麼情況可以求出 potential function?
+     EMBED Equation.3  
+     EMBED Equation.3       當 EMBED Equation.3  時，  EMBED Equation.3  
+    ∴ EMBED Equation.3      稱為正合 （exact）
+
+Ex.  EMBED Equation.3  
+        EMBED Equation.3           EMBED Equation.3  
+<sol> 
+     先確定是否為正合？
+      EMBED Equation.3  
+      EMBED Equation.3  
+     ∴  EMBED Equation.3  ，所以正合，必然存在 EMBED Equation.3   為其解。
+        且滿足如下：
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+
+Ex.  EMBED Equation.3  
+      EMBED Equation.3          EMBED Equation.3  
+<sol>
+     先確認是否正合？
+      EMBED Equation.3  
+      EMBED Equation.3  
+     ∴  EMBED Equation.3  ，所以正合，必然存在 EMBED Equation.3   為其解。
+        且滿足如下：
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+
+Ex.  EMBED Equation.3     
+     EMBED Equation.3         EMBED Equation.3  
+<sol>
+      EMBED Equation.3  
+      EMBED Equation.3  
+     ∴  EMBED Equation.3  ，所以沒有正合，不存在 EMBED Equation.3   的解。
+
+Ex.  EMBED Equation.3     
+<sol> 
+       EMBED Equation.3  
+        EMBED Equation.3          EMBED Equation.3  
+       EMBED Equation.3  
+      EMBED Equation.3  
+     ∴  EMBED Equation.3  ，所以正合，存在 EMBED Equation.3   的解。
+       EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+         EMBED Equation.3  
+
+如果  EMBED Equation.3   非正合怎麼辦？
+假如  EMBED Equation.3   非正合，
+是否可以找到 EMBED Equation.3  使得
+ EMBED Equation.3  
+ EMBED Equation.3         EMBED Equation.3  
+        ↓
+變成正合了  找  EMBED Equation.3  吧！
+
+ EMBED Equation.3  
+
+<case 1>  EMBED Equation.3      EMBED Equation.3  only y variable
+ EMBED Equation.3  
+
+ EMBED Equation.3  
+假如  EMBED Equation.3   是 EMBED Equation.3  的函數
+<兩邊積分>
+ EMBED Equation.3  
+  EMBED Equation.3  
+ EMBED Equation.3  
+<case 2>  EMBED Equation.3      EMBED Equation.3  only x variable
+ EMBED Equation.3  
+
+ EMBED Equation.3  
+假如  EMBED Equation.3   是 EMBED Equation.3  的函數
+<兩邊積分>
+ EMBED Equation.3  
+  EMBED Equation.3  
+ EMBED Equation.3  
+
+Integrating Factor
+    Ex.  EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+測試 case1 and case2
+ EMBED Equation.3  ?     EMBED Equation.3  
+ EMBED Equation.3        EMBED Equation.3  
+
+<高興>!! 至少符合 case1
+ EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+∴  EMBED Equation.3   為 exact
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+
+Ex.  EMBED Equation.3  
+<sol>
+      EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+
+所以符合 case 2
+∴  EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+
+<case 3>
+        EMBED Equation.3  
+       假設  EMBED Equation.3  
+         EMBED Equation.3  
+         ∴   EMBED Equation.3  
+           EMBED Equation.3  
+           If  EMBED Equation.3    那麼 EMBED Equation.3  就可以求出。
+            EMBED Equation.3  
+             EMBED Equation.3  
+Ex.  EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+測試 case 3
+ EMBED Equation.3      
+     
+ EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+∴  EMBED Equation.3   為 exact
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+<case 4>
+      EMBED Equation.3  
+       假設  EMBED Equation.3  
+         EMBED Equation.3  
+         ∴   EMBED Equation.3  
+           EMBED Equation.3  
+           If  EMBED Equation.3    那麼 EMBED Equation.3  就可以求出。
+            EMBED Equation.3  
+             EMBED Equation.3  
+Ex.  EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+測試 case 4
+ EMBED Equation.3      
+     
+ EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+∴  EMBED Equation.3   為 exact
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3     EMBED Equation.3  
+
+公式背誦法:  EMBED Equation.3  
+               假設 EMBED Equation.3   EMBED Equation.3  
+Case 1:  EMBED Equation.3  = EMBED Equation.3    If  EMBED Equation.3     EMBED Equation.3  
+Case 2:  EMBED Equation.3  = EMBED Equation.3    If  EMBED Equation.3     EMBED Equation.3  
+Case 3:  EMBED Equation.3   EMBED Equation.3   
+If  EMBED Equation.3    
+  EMBED Equation.3  
+Case 4:  EMBED Equation.3  
+         EMBED Equation.3   EMBED Equation.3  
+	
+Ex.  EMBED Equation.3  
+ EMBED Equation.3   EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+測試 case1 and case2
+ EMBED Equation.3    
+     
+符合 case1
+ EMBED Equation.3  
+ EMBED Equation.3      EMBED Equation.3  
+∴  EMBED Equation.3   為 exact
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+<另解>
+     EMBED Equation.3     可分離
+<sol>
+     EMBED Equation.3  
+      EMBED Equation.3  
+
+Ex.  EMBED Equation.3  
+<sol> 解一階 D.E. 首先必須先想到是否可分離？
+      驗證： EMBED Equation.3    所以可分離！
+       EMBED Equation.3      EMBED Equation.3  
+        EMBED Equation.3  
+
+※  EMBED Equation.3      EMBED Equation.3  
+    EMBED Equation.3  ,  EMBED Equation.3  
+    EMBED Equation.3  
+     EMBED Equation.3  
+      EMBED Equation.3  
+    ∴ EMBED Equation.3    It is exact! 但不要自討苦吃！
+※ EMBED Equation.3      EMBED Equation.3  
+   EMBED Equation.3  ,  EMBED Equation.3  
+   EMBED Equation.3  
+   EMBED Equation.3  
+   EMBED Equation.3  
+Homogeneous D.E. (Change of variable)
+    EMBED Equation.3       EMBED Equation.3  
+
+Ex.  EMBED Equation.3   
+<sol>  EMBED Equation.3     EMBED Equation.3  ,  EMBED Equation.3  
+       EMBED Equation.3  
+       EMBED Equation.3  
+       EMBED Equation.3  
+       EMBED Equation.3  
+The Bernoulli equation (change of variable)
+    EMBED Equation.3      EMBED Equation.3  
+Ex.  EMBED Equation.3  
+<sol>
+      EMBED Equation.3  
+      EMBED Equation.3  
+      EMBED Equation.3  
+      EMBED Equation.3  
+The Riccati Equation
+    EMBED Equation.3  
+     EMBED Equation.3    (s(x) 為原程式的一解，變成z 的自變數
+Ex.  EMBED Equation.3  
+<sol>
+    觀察法   EMBED Equation.3   為其一解
+    設  EMBED Equation.3  
+     EMBED Equation.3  
+     EMBED Equation.3  
+       EMBED Equation.3  
+      EMBED Equation.3      EMBED Equation.3  
+     EMBED Equation.3  
+     EMBED Equation.3  
+     EMBED Equation.3  
+     EMBED Equation.3  
+Application: Electrical circuit
+Ex. By Kirchhoff’s voltage law:
+
+
+ EMBED Equation.3   (壓降= EMBED Equation.3  )
+  EMBED Equation.3  
+ the linear equation
+  EMBED Equation.3  
+  EMBED Equation.3  
+  EMBED Equation.3  
+  EMBED Equation.3  
+ EMBED Equation.3  
+  EMBED Equation.3  
+Ex.
+
+By Kirchhoff’s voltage law:
+ EMBED Equation.3   (壓降= EMBED Equation.3  )
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3  
+ EMBED Equation.3     EMBED Equation.3  
+ EMBED Equation.3  
+∵  EMBED Equation.3      EMBED Equation.3     ∴  EMBED Equation.3  
+∴  EMBED Equation.3  
+ EMBED Equation.3       EMBED Equation.3  
+
+
+
+
+
+
+
+
+PAGE  
+
+
+PAGE  28
+
+
+
+i(t)
+
+q(t)
+
+
+

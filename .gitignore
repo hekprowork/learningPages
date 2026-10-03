@@ -8,6 +8,14 @@ docs/.vitepress/cache/
 *.doc
 *.docx
 sspd-eee-swapnil.pdf
+題目與解答
+**/題目與解答
+ocr_out/
+**/ocr_out/
+page_*.png
+**/page_*.png
+*.png
+!docs/**/assets/**
 .env*
 .temp/
 .cache/

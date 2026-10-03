@@ -1,0 +1,242 @@
+[
+  {
+    "page": 1,
+    "image_count": 1,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 1 Basic Concepts Fundamentals of  Electric Circuits Chapter 1"
+  },
+  {
+    "page": 2,
+    "image_count": 1,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 2 1.1  Introduction  1.2  Systems of Units  1.3 Charge and Current  1.4 Voltage  1.5  Power and Energy   1.6  Circuit Elements"
+  },
+  {
+    "page": 3,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 3 Figure 1.1 A simple electric circuit.  A simple electric circuit is shown in Fig. 1.1. It consists of three basic elements: a battery, a lamp, "
+  },
+  {
+    "page": 4,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 4 A complicated real circuit is displayed in Fig. 1.2, representing the schematic diagram for a radio receiver. Although it seems complicated, th"
+  },
+  {
+    "page": 5,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 5 Electronic components： Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written "
+  },
+  {
+    "page": 6,
+    "image_count": 1,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 6 Key takeaways of active and passive components： Active components are electronic devices that actively control the flow of electrical signals "
+  },
+  {
+    "page": 7,
+    "image_count": 1,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 7 Our goal in this text is to learn various analytical techniques for describing the behavior of a circuit like this. The major concern is the a"
+  },
+  {
+    "page": 8,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 8 As electrical engineers, we must deal with measurable quantities. Our measurements, however, must be communicated in a standard language that v"
+  },
+  {
+    "page": 9,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 9 One great advantage of the SI unit is that it uses prefixes based on the power of 10 to relate larger and smaller units to the basic unit. Tab"
+  },
+  {
+    "page": 10,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 10 https://www.idrc.com.tw/big5_ver/menu/define4.htm"
+  },
+  {
+    "page": 11,
+    "image_count": 1,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 11 Scientific Notation Frequently numbers that occur in physics1 and other sciences are either very large or very small. For example, the speed "
+  },
+  {
+    "page": 12,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 12 Each atom consists of electrons, protons and neutrons. The charge e on an electron is -1.602 × 10−19 C (coulomb), while a proton carries a po"
+  },
+  {
+    "page": 13,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 13 Figure 1.3 Electric current due to flow of electronic charge in a conductor. Electric charge is mobile => it can transfer from one place to an"
+  },
+  {
+    "page": 14,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 14 Although we now know that current in metallic conductors is due to negatively charged electrons, we will follow the universally accepted conve"
+  },
+  {
+    "page": 15,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 15 It can always flow in the same direction, where it does not reverse direction, in which case we have direct current (dc). If the current flow"
+  },
+  {
+    "page": 16,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 16 Figure 1.4 Two common types of current: (a) direct current (dc), (b) alternating current (ac). Figure 1.4 depicts two common examples of dc (c"
+  },
+  {
+    "page": 17,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 17 How much charge is represented by 4,600 electrons? Solution: Each electron has −1.602 × 10−19 C. Hence 4,600 electrons will have −1.602 × 10−19"
+  },
+  {
+    "page": 18,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 18 The total charge entering a terminal is given by q = 5t sin 4πt mC. Calculate the current at t = 0.5 s. Solution:"
+  },
+  {
+    "page": 19,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 19 Determine the total charge entering a terminal between t = 1 s and t = 2 s if the  current passing the terminal is i = (3t2 − t) A. Solution:"
+  },
+  {
+    "page": 20,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 20"
+  },
+  {
+    "page": 21,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 21 The voltage vab between two points a and b in an electric circuit is the energy (or work) needed to move a unit charge from b to a; mathematic"
+  },
+  {
+    "page": 22,
+    "image_count": 5,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 22 Figure 1.6 Polarity of voltage vab. 1 volt = 1 joule/coulomb = 1 newton-meter/coulomb Figure 1.6 shows the voltage across an element (represen"
+  },
+  {
+    "page": 23,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 23 Figure 1.7 Two equivalent representations of  the same voltage vab: (a) Point a is  9 V above point b; (b) point b is −9  V above point a.  In"
+  },
+  {
+    "page": 24,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 24 We write this relationship as where p is power in watts (W), w is energy in joules (J), and t is time in seconds (s). From Eqs. (1.1), (1.3), "
+  },
+  {
+    "page": 25,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 25 The voltage polarity and current direction must conform with those shown in Fig. 1.8(a) in order for the power to have a positive sign. This "
+  },
+  {
+    "page": 26,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 26 The element in both circuits of Fig. 1.9 has an absorbing power of +12 W because a positive current enters the positive terminal in both cases"
+  },
+  {
+    "page": 27,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 27 In Fig. 1.10, the element is supplying power of +12 W because a positive current enters the negative terminal. Of course, an absorbing power o"
+  },
+  {
+    "page": 28,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 28 In fact, the law of conservation of energy must be obeyed in any electric circuit. For this reason, the algebraic sum of power in a circuit, "
+  },
+  {
+    "page": 29,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 29 From Eq. (1.6), the energy absorbed or supplied by an element from time t0 to time t is The electric power utility companies measure energy in"
+  },
+  {
+    "page": 30,
+    "image_count": 5,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 30 An energy source forces a constant current of 2 A for 10 s to flow through a light bulb. If 2.3 kJ is given off in the form of light and heat e"
+  },
+  {
+    "page": 31,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 31 Find the power delivered to an element at t = 3 ms if the current entering its positive terminal is i = 5 cos 60π t A and the voltage is: (a) v"
+  },
+  {
+    "page": 32,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 32 Solution: i = 5 cos 60π t A and the voltage is: (a) v = 3i, (b) v = 3 di ∕dt."
+  },
+  {
+    "page": 33,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 33 Solution2: (𝑎) 𝑣= 3𝑖= 15 cos 6 0𝜋𝑡 𝑝= 𝑣𝑖= (15 cos 6 0𝜋𝑡)(5 cos 6 0𝜋𝑡) = 75 cos2 6 0𝜋𝑡W 𝑝(3 ms) = 75 cos2( 60𝜋× 3 × 10−3) = 75 cos2 0 . 18𝜋= 53."
+  },
+  {
+    "page": 34,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 34 How much energy does a 100-W electric bulb consume in two hours? Solution: 1Wh=3,600 J"
+  },
+  {
+    "page": 35,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 35"
+  },
+  {
+    "page": 36,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 36 There are two types of elements found in electric circuits: passive elements and active elements. An active element is capable of generating e"
+  },
+  {
+    "page": 37,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 37 Figure 1.11 shows the symbols for independent voltage sources. Notice that both symbols in Fig. 1.11(a) and (b) can be used to represent a dc "
+  },
+  {
+    "page": 38,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 38 The symbol for an independent current source is displayed in Fig. 1.12, where the arrow indicates the direction of current i. Figure 1.12 Symb"
+  },
+  {
+    "page": 39,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 39 Dependent sources are usually designated by diamond-shaped symbols, as shown in Fig. 1.13. Figure 1.13 Symbols for: (a) dependent  voltage sou"
+  },
+  {
+    "page": 40,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 40 An example of a current-controlled voltage source is shown on the right- hand side of Fig. 1.14, where the voltage 10i of the voltage source d"
+  },
+  {
+    "page": 41,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 41 Dependent sources are useful in modeling elements such as transistors, operational amplifiers, and integrated circuits. An example of a curre"
+  },
+  {
+    "page": 42,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 42 Calculate the power supplied or absorbed by each element in Fig. 1.15. Figure 1.15"
+  },
+  {
+    "page": 43,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 43 Solution: We apply the sign convention for power shown in Figs. 1.8 and 1.9. For p1,  the 5-A current is out of the positive terminal (or into "
+  },
+  {
+    "page": 44,
+    "image_count": 3,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 44 Solution: For p4, we should note that the voltage is 8 V (positive at the top), the same as the voltage for p3 since both the passive element a"
+  },
+  {
+    "page": 45,
+    "image_count": 4,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 45 Calculate the power supplied or absorbed by each element in Fig. 1.15. Solution: Figure 1.15"
+  },
+  {
+    "page": 46,
+    "image_count": 2,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 46"
+  },
+  {
+    "page": 47,
+    "image_count": 0,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 47 H.W. => Chapter1 Problems # 6 , 7 , 14 , 18 , 20 , 31"
+  },
+  {
+    "page": 48,
+    "image_count": 1,
+    "text_snippet": "Copyright ©  2021 McGraw-Hill Education. All rights reserved. No reproduction or distribution without the prior written consent of McGraw-Hill Education. 48 H.W. => Chapter1 Problems # 6 , 7 , 14 , 18 , 20 , 31 P14： q=13.65mC，P=171.71mW P18： p1 = 30(-10) = -300 W p2 = 10(10) = 100 W p3 = 20(14) = 28"
+  }
+]
