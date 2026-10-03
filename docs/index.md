@@ -4,30 +4,42 @@ layout: home
 hero:
   name: "跨學科學習知識庫"
   text: "現代化工程與科學數位講義平台"
-  tagline: "集中託管固態物理、電子工程與計算機科學等多科目，具備 3D 互動視覺化與嚴謹數學推導"
+  tagline: "集中託管固態物理、電子學、電路學與工程數學等多科目，具備互動視覺化與嚴謹數學推導"
   actions:
     - theme: brand
-      text: ⚛️ 探索固態電子導論
+      text: ⚛️ 固態電子導論
       link: /solid-state/
     - theme: alt
-      text: 📚 查看所有科目
-      link: /solid-state/
+      text: ⚡ 電子學
+      link: /electronics/
+    - theme: alt
+      text: 🔌 電路學
+      link: /circuits/
+    - theme: alt
+      text: 📐 工程數學
+      link: /engineering-math/
 
 features:
   - icon: ⚛️
     title: 固態電子導論
-    details: 結晶學幾何、鑽石晶格與原子密度推導、CZ 提拉長晶、偏析效應與現代矽晶圓工藝，內建 3D 互動晶格模擬。
+    details: 結晶學幾何、鑽石結構與原子密度推導、CZ 提拉長晶、偏析效應與現代矽晶圓工藝，內建 3D 互動晶格模擬。
     link: /solid-state/
     linkText: 進入科目
   - icon: ⚡
-    title: 電子學與電路分析
-    details: 涵蓋二極體、BJT、MOSFET 小訊號模型、頻率響應分析、運算放大器與負回授電路設計。（籌備中 / Coming Soon）
-  - icon: 💻
-    title: 計算機組織與結構
-    details: RISC-V 指令集架構、管線化 (Pipelining) 危害處理、快取記憶體階層架構與虛擬記憶體技術。（籌備中 / Coming Soon）
-  - icon: 📡
-    title: 電磁學與波動理論
-    details: 馬克士威方程式推導、平面電磁波傳播、傳輸線阻抗匹配與史密斯圖工程應用。（籌備中 / Coming Soon）
+    title: 電子學 (Microelectronic Circuits)
+    details: 訊號源等效模型、四大二埠受控源放大器組態、多級串接負載效應計算與單時間常數 (STC) 頻率響應波德圖。
+    link: /electronics/
+    linkText: 進入科目
+  - icon: 🔌
+    title: 電路學 (Electric Circuit Theory)
+    details: 星形-三角形 (Y-Δ) 外端等效互換第一原理推導、平衡對稱與電導對偶性、超節點浮動電壓源分析與拘束方程式。
+    link: /circuits/
+    linkText: 進入科目
+  - icon: 📐
+    title: 工程數學 (Engineering Mathematics)
+    details: 一階非正合 ODE Euler 正合檢驗、單變數積分因子生成原理、常見微分分組湊微分速算法與全微分勢函數構造。
+    link: /engineering-math/
+    linkText: 進入科目
 ---
 
 <div class="portal-container">
@@ -36,12 +48,12 @@ features:
 
 本知識庫採用模組化多科目集中託管架構，每一學科擁有獨立的目錄命名空間、章節編排與側邊欄配置。
 
-| 科目名稱 | 路由前綴 | 狀態 | 核心特色 |
+| 科目名稱 | 路由前綴 | 狀態 | 核心特色與內容 |
 | :--- | :--- | :--- | :--- |
-| **⚛️ 固態電子導論** | `/solid-state/` | 🟢 已上線 (Active) | 3D WebGL 晶格視覺化、長晶製程、KaTeX 嚴密推導 |
-| **⚡ 電子學與電路分析** | `/circuits/` *(規劃中)* | 🟡 籌備中 | SPICE 電路動態波形模擬、頻率響應波德圖 |
-| **💻 計算機組織與結構** | `/comp-arch/` *(規劃中)* | 🟡 籌備中 | RISC-V 視覺化指令管線、快取命中模擬器 |
-| **📡 電磁學與傳輸線** | `/electromagnetics/` *(規劃中)* | 🟡 籌備中 | 3D 電磁場向量場渲染、互動史密斯圖 |
+| **⚛️ 固態電子導論** | [`/solid-state/`](/solid-state/) | 🟢 已上線 (Active) | 3D WebGL 晶格視覺化、長晶製程、KaTeX 嚴密推導 |
+| **⚡ 電子學** | [`/electronics/`](/electronics/) | 🟢 已上線 (Active) | 二埠等效模型、多級串接負載效應、STC 頻率響應 |
+| **🔌 電路學** | [`/circuits/`](/circuits/) | 🟢 已上線 (Active) | Y-Δ 外端等效推導、超節點高斯面包絡、電導對偶性 |
+| **📐 工程數學** | [`/engineering-math/`](/engineering-math/) | 🟢 已上線 (Active) | 一階 ODE 積分因子法、Euler 正合判定、湊微分速算 |
 
 </div>
 

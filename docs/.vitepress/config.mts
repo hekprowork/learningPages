@@ -18,7 +18,10 @@ export default defineConfig({
       {
         text: '📚 選擇科目',
         items: [
-          { text: '⚛️ 固態電子導論 (Solid-State)', link: '/solid-state/' }
+          { text: '⚛️ 固態電子導論 (Solid-State)', link: '/solid-state/' },
+          { text: '⚡ 電子學 (Electronics)', link: '/electronics/' },
+          { text: '🔌 電路學 (Circuits)', link: '/circuits/' },
+          { text: '📐 工程數學 (Engineering Math)', link: '/engineering-math/' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/hekprowork/learningPages' }
@@ -50,6 +53,79 @@ export default defineConfig({
             { text: '001: 密勒指數快速速查表', link: '/solid-state/chapter3/001-miller-indices-cheatsheet' },
             { text: '002: 鑽石與閃鋅礦結構幾何速查表', link: '/solid-state/chapter3/002-diamond-lattice-cheatsheet' },
             { text: '003: 塊狀晶體生長與晶圓製程速查表', link: '/solid-state/chapter3/003-bulk-crystal-growth-cheatsheet' }
+          ]
+        }
+      ],
+      '/electronics/': [
+        {
+          text: 'Chapter 1: 訊號與放大器基礎 (Signals & Amplifiers)',
+          collapsed: false,
+          items: [
+            { text: '0001: 訊號、放大器模型與頻率響應', link: '/electronics/chapter1/0001-signals-and-amplifiers' }
+          ]
+        },
+        {
+          text: 'Chapter 2: 觀念筆記與電路推導 (Learning Records)',
+          collapsed: false,
+          items: [
+            { text: '0001: 訊號模型與四大放大器等效電路核心思維', link: '/electronics/chapter2/0001-signals-and-amplifiers-foundations' }
+          ]
+        },
+        {
+          text: 'Chapter 3: 核心公式速查表 (Reference Cheatsheets)',
+          collapsed: false,
+          items: [
+            { text: '001: 放大器模型、增益計算與頻率響應速查手冊', link: '/electronics/chapter3/001-amplifier-models-and-frequency-response' }
+          ]
+        }
+      ],
+      '/circuits/': [
+        {
+          text: 'Chapter 1: 電路分析與網路等效 (Circuit Analysis & Equivalences)',
+          collapsed: false,
+          items: [
+            { text: '0001: 星形 (Y) 與等效三角形 (Δ) 網路互換原理與推導', link: '/circuits/chapter1/0001-wye-delta-transformation' },
+            { text: '0002: 超節點分析法 (Supernode Analysis) 的原理與實戰破解', link: '/circuits/chapter1/0002-supernode-analysis' }
+          ]
+        },
+        {
+          text: 'Chapter 2: 觀念筆記與定理推導 (Learning Records)',
+          collapsed: false,
+          items: [
+            { text: '0001: 星形與三角形網路等效互換原理與幾何對偶', link: '/circuits/chapter2/0001-wye-delta-transformation-principle' },
+            { text: '0002: 開路測試在三端網路等效推導中的數學與物理合法性', link: '/circuits/chapter2/0002-open-circuit-terminal-equivalence-validity' },
+            { text: '0003: 超節點分析法的物理包絡原理與拘束方程式架構', link: '/circuits/chapter2/0003-supernode-nodal-analysis-principle' }
+          ]
+        },
+        {
+          text: 'Chapter 3: 核心公式速查表 (Reference Cheatsheets)',
+          collapsed: false,
+          items: [
+            { text: '001: 星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊', link: '/circuits/chapter3/001-wye-delta-reference' },
+            { text: '002: 超節點分析法 (Supernode Analysis) 核心速查手冊', link: '/circuits/chapter3/002-supernode-reference' }
+          ]
+        }
+      ],
+      '/engineering-math/': [
+        {
+          text: 'Chapter 1: 常微分方程與實戰解法 (Ordinary Differential Equations)',
+          collapsed: false,
+          items: [
+            { text: '0001: 積分因子法（非正合轉正合方程式）', link: '/engineering-math/chapter1/0001-integrating-factor-method' }
+          ]
+        },
+        {
+          text: 'Chapter 2: 觀念筆記與公式推導 (Learning Records)',
+          collapsed: false,
+          items: [
+            { text: '0001: 建立積分因子法學習基線與核心架構', link: '/engineering-math/chapter2/0001-integrating-factors' }
+          ]
+        },
+        {
+          text: 'Chapter 3: 核心公式速查表 (Reference Cheatsheets)',
+          collapsed: false,
+          items: [
+            { text: '001: 一階 ODE 積分因子與正合法速查卡', link: '/engineering-math/chapter3/001-integrating-factors-cheatsheet' }
           ]
         }
       ]
