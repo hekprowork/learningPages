@@ -1,6 +1,4 @@
 import { defineConfig } from 'vitepress'
-// @ts-ignore
-import markdownItKatex from 'markdown-it-katex'
 
 export default defineConfig({
   title: '固態電子導論',
@@ -11,9 +9,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#3b82f6' }]
   ],
   markdown: {
-    config: (md) => {
-      md.use(markdownItKatex)
-    }
+    math: true
   },
   themeConfig: {
     siteTitle: '固態電子導論',

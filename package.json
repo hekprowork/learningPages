@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@types/katex": "^0.16.7",
-    "@types/three": "^0.174.0"
+    "@types/three": "^0.174.0",
+    "markdown-it-mathjax3": "^4.3.2"
   }
 }
