@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鑽石與閃鋅礦結構幾何速查表 (Diamond & Zincblende Reference)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="lesson-tag">Reference Document #002</span>
+      <h1>鑽石晶格 (Diamond Lattice) 與矽密度推導速查表</h1>
+      <p class="subtitle">半導體核心幾何常數、原子密度計算與最近鄰距離推導總整理</p>
+    </header>
+
+    <h2>一、 鑽石結構幾何關鍵常數 (矽 \(\text{Si}\) 範例)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>物理量名稱</th>
+          <th>符號 / 理論公式</th>
+          <th>矽 (\(\text{Si}\)) 數值與單位</th>
+          <th>物理意義說明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>晶格常數 (Lattice Constant)</td>
+          <td>\(a\)</td>
+          <td>\(5.43\text{ \AA} = 5.43 \times 10^{-8}\text{ cm}\)</td>
+          <td>傳統立方晶胞的單邊長度</td>
+        </tr>
+        <tr>
+          <td>晶胞內原子總數 (Atoms/Cell)</td>
+          <td>\(N_{\text{cell}} = 4 (\text{FCC}) + 4 (\text{內插}) = 8\)</td>
+          <td><strong>8 個原子 / 晶胞</strong></td>
+          <td>1 個鑽石晶胞包含 8 個完整的矽原子</td>
+        </tr>
+        <tr>
+          <td>原子體密度 (Volume Density)</td>
+          <td>\(\rho_V = \frac{8}{a^3}\)</td>
+          <td>\(\mathbf{5.0 \times 10^{22}\text{ atoms/cm}^3}\)</td>
+          <td>固態半導體最常用的體原子濃度基準常數</td>
+        </tr>
+        <tr>
+          <td>最近鄰原子距離 (Nearest Neighbor)</td>
+          <td>\(d_{\text{NN}} = \frac{\sqrt{3}}{4}a\)</td>
+          <td>\(2.35\text{ \AA}\)</td>
+          <td>共價鍵長度（體對角線長度的四分之一）</td>
+        </tr>
+        <tr>
+          <td>配位數 (Coordination Number)</td>
+          <td>\(Z = 4\)</td>
+          <td>\(4\)</td>
+          <td>每個原子被 4 個最近鄰原子以四面體共價鍵包圍</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>二、 矽三大晶面之「面原子密度」(\(\text{atoms/cm}^2\)) 總結</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>晶面 \((hkl)\)</th>
+          <th>面截面等效原子數計算</th>
+          <th>面密度理論公式</th>
+          <th>矽之數值 (\(\text{atoms/cm}^2\))</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>(100) 面</strong></td>
+          <td>4 角落 (\(\frac{1}{4} \times 4\)) + 1 面心 (\(1\)) = <strong>2 個</strong></td>
+          <td>\(\frac{2}{a^2}\)</td>
+          <td>\(6.78 \times 10^{14}\)</td>
+        </tr>
+        <tr>
+          <td><strong>(110) 面</strong></td>
+          <td>4 角落 (\(\frac{1}{4} \times 4\)) + 2 面心 (\(\frac{1}{2} \times 2\)) + 2 內部原子 (\(2\)) = <strong>4 個</strong></td>
+          <td>\(\frac{4}{\sqrt{2}a^2} = \frac{2\sqrt{2}}{a^2}\)</td>
+          <td>\(9.59 \times 10^{14}\)</td>
+        </tr>
+        <tr>
+          <td><strong>(111) 面</strong></td>
+          <td>等邊三角形截面等效包含 <strong>2 個原子</strong>（密排面）</td>
+          <td>\(\frac{4}{\sqrt{3}a^2}\)</td>
+          <td>\(\mathbf{1.56 \times 10^{15}}\)（密度最高）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <p>💡 <strong>製程重要直覺</strong>：\((111)\) 面原子面密度最高，鍵結最密，因此化學蝕刻速率最慢；\((100)\) 面表面懸鍵態較少，常用於現代 MOSFET 通道表面。</p>
+    </div>
+
+    <footer>
+      <div>來源：<a href="file:///Users/hekote/Documents/固態電子導論/sspd-eee-swapnil.pdf">sspd-eee-swapnil.pdf (Chapter 1.2)</a></div>
+      <div>回課堂：<a href="../lessons/0002-diamond-lattice-density.html">Lesson 0002: 鑽石結構與密度推導</a></div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0002: 鑽石晶格結構與矽原子密度推導 (含 3D 互動模擬器)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="../assets/crystal-viewer.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="lesson-tag">Lesson 0002</span>
+      <h1>鑽石結構 (Diamond Lattice) 與原子密度推導</h1>
+      <p class="subtitle">結合 3D 互動晶格模擬器：從微觀四面體鍵結到矽的體密度與面密度精確計算</p>
+    </header>
+
+    <h2>🎮 3D 互動晶格模擬器 (3D Interactive Visualizer)</h2>
+    <p>拖曳滑鼠以 360° 旋轉視角，滾輪縮放；使用上方控制列切換結構與 <code>(100)</code>、<code>(110)</code>、<code>(111)</code> 晶面切面：</p>
+    
+    <div id="crystal-3d-app" style="width: 100%; height: 520px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12); margin: 24px 0;"></div>
+
+    <h2>🎯 本單元學習目標</h2>
+    <ul>
+      <li>掌握鑽石結構的構成：<strong>「兩個相互穿插的 FCC 晶格，沿體對角線平移 \(\frac{a}{4}(\hat{x}+\hat{y}+\hat{z})\)」</strong>。</li>
+      <li>親手推導晶胞內原子數（8 個）、最近鄰鍵長（\(\frac{\sqrt{3}}{4}a\)）與矽原子體密度（\(5 \times 10^{22}\text{ cm}^{-3}\)）。</li>
+      <li>推導並比較 \((100)\)、\((110)\)、\((111)\) 晶面的原子面密度。</li>
+    </ul>
+
+    <h2>一、 鑽石晶格是怎麼構成的？</h2>
+    <div class="card">
+      <p>鑽石結構並非單純的 FCC，而是：</p>
+      <div class="callout">
+        <p><strong>鑽石結構 = FCC 晶格 + 包含 2 個原子的基底 (Basis)</strong><br>
+        基底原子相對座標：一個在 \((0,0,0)\)（青色），另一個在體對角線的四分之一處 \(\left(\frac{1}{4}, \frac{1}{4}, \frac{1}{4}\right)a\)（金色）。</p>
+      </div>
+      <p>在上方 3D 模擬器中切換 <strong>「鑽石結構 (Si)」</strong>，即可清晰看見：</p>
+      <ul>
+        <li><strong>第一套 FCC 晶格</strong>：8 個頂點 + 6 個面心（共 4 個等效原子）。</li>
+        <li><strong>第二套穿插原子</strong>：完全落在晶胞內部的 4 個四面體空隙中心（共 4 個原子）。</li>
+        <li>若兩套穿插原子<strong>不同</strong>（例如一套為 \(\text{Ga}\)，另一套為 \(\text{As}\)）\(\to\) 稱為<strong>閃鋅礦結構 (Zincblende)</strong>（請在 3D 控制面板中切換體驗）。</li>
+      </ul>
+    </div>
+
+    <h2>二、 核心推導 1：晶胞原子數與矽原子體密度</h2>
+    <div class="card">
+      <h3>1. 晶胞內的總原子數計算：</h3>
+      <ul>
+        <li>第一套 FCC 晶格提供：\(8 \text{ (角落)} \times \frac{1}{8} + 6 \text{ (面心)} \times \frac{1}{2} = \mathbf{4 \text{ 個}}\)</li>
+        <li>第二套穿插原子（完全落在晶胞內部）：\(\mathbf{4 \text{ 個}}\)</li>
+        <li><strong>每個傳統晶胞包含總原子數</strong>：\(4 + 4 = \mathbf{8 \text{ 個原子}}\)</li>
+      </ul>
+
+      <h3>2. 矽原子體密度 (\(\rho_V\)) 數值推導：</h3>
+      <p>已知矽的晶格常數 \(a = 5.43\text{ \AA} = 5.43 \times 10^{-8}\text{ cm}\)：</p>
+      $$\rho_V = \frac{\text{原子數}}{\text{晶胞體積}} = \frac{8}{a^3} = \frac{8}{(5.43 \times 10^{-8}\text{ cm})^3} \approx \mathbf{5.0 \times 10^{22} \text{ atoms/cm}^3}$$
+      <p><em>(這是固態電子學整本書最重要、出現最頻繁的基礎常數！)</em></p>
+    </div>
+
+    <h2>三、 核心推導 2：最近鄰鍵長 (Bond Length)</h2>
+    <div class="card">
+      <p>原點 \((0,0,0)\) 的原子與位於 \(\left(\frac{a}{4}, \frac{a}{4}, \frac{a}{4}\right)\) 的內部原子形成共價鍵。其空間距離為：</p>
+      $$d_{\text{NN}} = \sqrt{\left(\frac{a}{4}\right)^2 + \left(\frac{a}{4}\right)^2 + \left(\frac{a}{4}\right)^2} = \sqrt{\frac{3a^2}{16}} = \frac{\sqrt{3}}{4}a$$
+      <p>代入矽之 \(a = 5.43\text{ \AA}\)：\(d_{\text{NN}} \approx \frac{1.732 \times 5.43}{4} \approx \mathbf{2.35\text{ \AA}}\)。</p>
+    </div>
+
+    <h2>四、 核心推導 3：三大晶面原子「面密度」計算</h2>
+    <div class="card">
+      <p>面密度 \(\rho_A = \frac{\text{截面內的等效原子數}}{\text{截面幾何面積}}\)（可在 3D 模擬器中開啟晶面切面輔助觀察）：</p>
+      <ul>
+        <li><strong>(100) 晶面</strong>：
+          <ul>
+            <li>截面為邊長 \(a\) 的正方形，面積 \(A = a^2\)。</li>
+            <li>包含 4 個角落（各貢獻 \(\frac{1}{4}\)）+ 1 個面心（貢獻 \(1\)）= <strong>2 個原子</strong>。</li>
+            <li>面密度：\(\rho_{A(100)} = \frac{2}{a^2} = \frac{2}{(5.43 \times 10^{-8})^2} = \mathbf{6.78 \times 10^{14}\text{ atoms/cm}^2}\)。</li>
+          </ul>
+        </li>
+        <li><strong>(111) 晶面</strong>：
+          <ul>
+            <li>截面為邊長 \(\sqrt{2}a\) 的等邊三角形，面積 \(A = \frac{\sqrt{3}}{2}a^2\)。</li>
+            <li>等效包含 2 個原子，面密度為：\(\rho_{A(111)} = \frac{4}{\sqrt{3}a^2} = \mathbf{1.56 \times 10^{15}\text{ atoms/cm}^2}\)（<strong>原子最密排面</strong>）。</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h2>⚔️ 隨堂實戰測驗 (Interactive Quizzes)</h2>
+
+    <!-- Quiz 1 -->
+    <div class="quiz-box" id="quiz1">
+      <div class="quiz-title">問題 1：一個鑽石晶格結構的傳統立方晶胞 (Conventional Unit Cell) 內部總共含有幾個原子？</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 0, false)">A. 含有 4 個原子</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 1, false)">B. 含有 6 個原子</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 2, true)">C. 含有 8 個原子</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 3, false)">D. 含有 12 個原子</button>
+      </div>
+      <div class="quiz-feedback" id="quiz1-fb"></div>
+    </div>
+
+    <!-- Quiz 2 -->
+    <div class="quiz-box" id="quiz2">
+      <div class="quiz-title">問題 2：鑽石結構中，任一矽原子與其「最近鄰原子 (Nearest Neighbor)」之間的空間距離公式為何？</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 0, false)">A. 距離為 (√2 / 2) a</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 1, true)">B. 距離為 (√3 / 4) a</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 2, false)">C. 距離為 (√3 / 2) a</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 3, false)">D. 距離為 (1 / 4) a</button>
+      </div>
+      <div class="quiz-feedback" id="quiz2-fb"></div>
+    </div>
+
+    <footer>
+      <div>參考資料：<a href="file:///Users/hekote/Documents/固態電子導論/sspd-eee-swapnil.pdf">sspd-eee-swapnil.pdf (Chapter 1.2)</a> ｜ <a href="../reference/002-diamond-lattice-cheatsheet.html">鑽石結構速查表</a></div>
+      <div>有任何疑問請直接於對話中向 Agent 提問！</div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new CrystalViewer('crystal-3d-app', { defaultStructure: 'diamond' });
+    });
+
+    function checkAnswer(quizId, optionIndex, isCorrect) {
+      const box = document.getElementById(quizId);
+      const buttons = box.querySelectorAll('.quiz-option');
+      const feedback = document.getElementById(quizId + '-fb');
+      
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === optionIndex) {
+          btn.classList.add(isCorrect ? 'correct' : 'wrong');
+        }
+      });
+
+      feedback.style.display = 'block';
+      if (isCorrect) {
+        feedback.style.background = 'var(--success-bg)';
+        feedback.style.color = '#065f46';
+        feedback.style.border = '1px solid var(--success-color)';
+        if (quizId === 'quiz1') {
+          feedback.innerHTML = '<strong>✅ 完全正確！</strong><br>鑽石晶胞 = FCC 的 4 個原子 + 內部 4 個穿插原子 = 8 個原子。';
+        } else {
+          feedback.innerHTML = '<strong>✅ 完全正確！</strong><br>從 (0,0,0) 到 (a/4, a/4, a/4) 的距離為 \\(\\sqrt{3(a/4)^2} = \\frac{\\sqrt{3}}{4}a\\)。';
+        }
+        if (window.MathJax) MathJax.typesetPromise();
+      } else {
+        feedback.style.background = 'var(--error-bg)';
+        feedback.style.color = '#991b1b';
+        feedback.style.border = '1px solid var(--error-color)';
+        feedback.innerHTML = '<strong>❌ 再想想看！</strong> 回憶一下 FCC 的原子數加上體對角線 1/4 處內插的 4 個原子。';
+      }
+    }
+  </script>
+</body>
+</html>

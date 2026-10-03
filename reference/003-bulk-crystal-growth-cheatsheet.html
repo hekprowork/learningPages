@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>003. 塊狀晶體生長與晶圓製程核心速查表 (Bulk Crystal Growth Cheat Sheet)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    @media print {
+      body { font-size: 11pt; }
+      .container { padding: 0; max-width: 100%; }
+      .no-print { display: none; }
+    }
+    .ref-header {
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    .formula-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid var(--primary-color);
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ref-header">
+      <div style="font-size: 0.85rem; color: var(--primary-color); font-weight: 700; text-transform: uppercase;">Reference Cheat Sheet 003</div>
+      <h1 style="font-size: 1.8rem; margin: 4px 0 8px 0;">塊狀晶體生長與晶圓製備核心速查表</h1>
+      <div style="color: var(--text-muted); font-size: 0.95rem;">涵蓋原料提純化學式、三大長晶技術 (CZ / LEC / FZ)、偏析係數 \(k_d\) 與 Example 1–4 標準計算 SOP</div>
+    </div>
+
+    <!-- Section 1: Chemical Reactions -->
+    <h3>一、 矽原料提純核心化學反應式 (Chemical Reactions)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>階段</th>
+          <th>反應溫度</th>
+          <th>化學反應方程式</th>
+          <th>特點與純度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. 冶金級矽 (MGS)</strong></td>
+          <td>\(\sim 1800^\circ\text{C}\) (電弧爐)</td>
+          <td>$$\text{SiO}_2 + 2\text{C} \rightarrow \text{Si} + 2\text{CO}\uparrow$$</td>
+          <td>純度 98~99%，多晶，含大量金屬雜質</td>
+        </tr>
+        <tr>
+          <td><strong>2. 三氯氫矽生成</strong></td>
+          <td>\(\sim 300^\circ\text{C}\)</td>
+          <td>$$\text{Si} + 3\text{HCl} \rightarrow \text{SiHCl}_3 + \text{H}_2\uparrow$$</td>
+          <td>\(\text{SiHCl}_3\) 沸點僅 \(32^\circ\text{C}\)，極易透過<strong>分餾</strong>純化</td>
+        </tr>
+        <tr>
+          <td><strong>3. 電子級矽 (EGS)</strong></td>
+          <td>\(\sim 1100^\circ\text{C}\) (西門子法)</td>
+          <td>$$2\text{SiHCl}_3 + 2\text{H}_2 \rightarrow 2\text{Si} + 6\text{HCl}\uparrow$$</td>
+          <td>純度達 \(99.9999999\%\) (9N~11N，雜質 \(< 1\text{ ppb}\))</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 2: Crystal Growth Comparison -->
+    <h3>二、 三大塊狀單晶長晶技術比較 (Crystal Growth Methods)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>長晶方法</th>
+          <th>原理與關鍵特徵</th>
+          <th>主要適用材料</th>
+          <th>優勢與限制</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>柴氏長晶法 (CZ)</strong></td>
+          <td>石英坩堝熔融 EGS (\(1412^\circ\text{C}\))，浸入晶種緩慢提拉並雙向旋轉</td>
+          <td>單晶矽 (Si)、鍺 (Ge)</td>
+          <td>晶棒直徑大 (300 mm)、產能高；石英坩堝會溶入微量氧與碳</td>
+        </tr>
+        <tr>
+          <td><strong>液封柴氏法 (LEC)</strong></td>
+          <td>熔湯表面覆蓋黏稠之 \(\text{B}_2\text{O}_3\) 液封層，配合數十 atm 高壓惰性氣體</td>
+          <td>化合物半導體 (GaAs, InP)</td>
+          <td>有效抑制高溫下 V 族元素 (As, P) 劇烈揮發，維持化學計量比</td>
+        </tr>
+        <tr>
+          <td><strong>浮動帶區法 (FZ)</strong></td>
+          <td>高頻 RF 線圈局部熔融多晶棒，熔融區在表面張力下懸浮並向下移動</td>
+          <td>高純度單晶矽 (Si)</td>
+          <td><strong>無坩堝接觸</strong>，氧/碳極低，電阻率極高；直徑難以做大 (成本高)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 3: Segregation & Normal Freezing -->
+    <h3>三、 偏析效應與摻雜計算 (Segregation & Doping)</h3>
+    <div class="formula-box">
+      <strong>1. 分佈 / 偏析係數定義：</strong>
+      $$k_d = \frac{C_S}{C_L} \quad (\text{平衡時固相雜質濃度 } C_S \text{ 與液相濃度 } C_L \text{ 之比})$$
+    </div>
+
+    <div class="formula-box">
+      <strong>2. 常規凝固方程式 (Normal Freezing Equation)：</strong>
+      $$C_S(g) = k_d C_0 (1 - g)^{k_d - 1}$$
+      <em>(\(C_0\): 初始熔湯均勻濃度；\(g\): 已結晶固化之質量比例 \(0 \le g < 1\))</em>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>摻雜元素</th>
+          <th>導電型態</th>
+          <th>矽中平衡偏析係數 \(k_d\)</th>
+          <th>晶棒軸向分佈特性</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>硼 (B)</strong></td>
+          <td>p-type (III 族)</td>
+          <td>\(0.80\)</td>
+          <td>最均勻，頭尾濃度差異小</td>
+        </tr>
+        <tr>
+          <td><strong>磷 (P)</strong></td>
+          <td>n-type (V 族)</td>
+          <td>\(0.35\)</td>
+          <td>中度偏析，尾端濃度漸增</td>
+        </tr>
+        <tr>
+          <td><strong>砷 (As)</strong></td>
+          <td>n-type (V 族)</td>
+          <td>\(0.30\)</td>
+          <td>標準 CZ 摻雜元素</td>
+        </tr>
+        <tr>
+          <td><strong>銻 (Sb)</strong></td>
+          <td>n-type (V 族)</td>
+          <td>\(0.023\)</td>
+          <td>極度富集於熔湯中，晶棒尾部劇烈陡升</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 4: Example 1-4 Calculation SOP -->
+    <h3>四、 課本 Example 1–4 摻雜劑添加量標準解題 SOP</h3>
+    <div class="formula-box" style="background: #eff6ff; border-left-color: #2563eb;">
+      <strong>標準題目：</strong> 求在質量為 \(M_{\text{Si}}\) 的矽熔湯中，欲達成剛開始生長之固相摻雜濃度 \(C_S\)，需添加之摻雜劑質量 \(m_{\text{dopant}}\)：
+      <ol style="margin-bottom: 0; padding-left: 20px;">
+        <li>求熔湯初始濃度：\(C_L = \frac{C_S}{k_d}\)</li>
+        <li>求矽熔湯體積：\(V_{\text{Si}} = \frac{M_{\text{Si}}}{\rho_{\text{Si}}} \quad (\rho_{\text{Si}} = 2.33\text{ g/cm}^3)\)</li>
+        <li>求雜質總原子數：\(N = C_L \times V_{\text{Si}}\)</li>
+        <li>換算莫耳質量：\(m_{\text{dopant}} = \frac{N}{N_A} \times \text{Atomic Weight} \quad (N_A = 6.022 \times 10^{23}\text{ mol}^{-1})\)</li>
+      </ol>
+    </div>
+
+    <!-- Section 5: Ingot to Wafer Processing -->
+    <h3>五、 晶圓製造關鍵工序 (Wafer Fabrication Pipeline)</h3>
+    <ol>
+      <li><strong>外圓滾磨 (Cylinder Grinding)</strong>：磨成標準直徑 (200 mm / 300 mm)，並研磨 \(\{110\}\) 定位槽 (Notch) 或平邊 (Flat)。</li>
+      <li><strong>線鋸切片 (Wire Sawing)</strong>：多線鑽石鋸切割為約 \(775\ \mu\text{m}\) 生晶圓。</li>
+      <li><strong>倒角與雙面研磨 (Edge Profiling & Lapping)</strong>：消除切割微裂紋，防止邊緣碎裂。</li>
+      <li><strong>化學機械研磨 (CMP)</strong>：鹼性水溶液 (\(\text{NaOH}\)) 化學水解軟化 + 奈米級 \(\text{SiO}_2\) 膠體機械拋光，達成表面粗糙度 \(< 0.1\text{ nm}\) 鏡面。</li>
+    </ol>
+
+    <div class="no-print" style="margin-top: 30px; text-align: center;">
+      <a href="../lessons/0003-bulk-crystal-growth.html" class="btn">← 返回 Lesson 0003 課堂</a> ｜ 
+      <button onclick="window.print()" class="btn btn-secondary">🖨️ 列印此速查表</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0003: 塊狀晶體生長與矽晶圓製備 (CZ 長晶法、摻雜偏析與晶圓加工)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .sim-container {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .sim-tabs {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    .tab-btn {
+      padding: 8px 16px;
+      background: #f1f5f9;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #475569;
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--primary-color);
+      color: #ffffff;
+      border-color: var(--primary-color);
+    }
+    .sim-panel {
+      display: none;
+    }
+    .sim-panel.active {
+      display: block;
+    }
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 12px 0;
+    }
+    .slider-row label {
+      min-width: 140px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .slider-row input[type="range"] {
+      flex-grow: 1;
+    }
+    .step-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px;
+      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      margin-bottom: 12px;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .math-highlight {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 16px 0;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .badge-blue { background: #dbeafe; color: #1e40af; }
+    .badge-amber { background: #fef3c7; color: #92400e; }
+    .badge-green { background: #dcfce7; color: #166534; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="lesson-tag">Lesson 0003</span>
+      <h1>塊狀晶體生長與矽晶圓製備</h1>
+      <p class="subtitle">從沙子（石英）到鏡面矽晶圓：柴氏長晶法 (CZ)、偏析效應 (Segregation) 與晶圓加工全解析</p>
+    </header>
+
+    <!-- Navigation Breadcrumbs -->
+    <div style="margin-bottom: 24px; font-size: 0.95rem;">
+      <a href="../index.html">← 返回課程總覽</a> ｜ 
+      <a href="../reference/003-bulk-crystal-growth-cheatsheet.html" target="_blank">📑 開啟本單元精要速查表</a>
+    </div>
+
+    <!-- Interactive Visualizer -->
+    <h2>🎮 互動實驗室：柴氏長晶與偏析效應可視化</h2>
+    <div class="sim-container">
+      <div class="sim-tabs">
+        <button class="tab-btn active" onclick="switchTab('tab-cz')">柴氏提拉法 (CZ/LEC) 動態模擬</button>
+        <button class="tab-btn" onclick="switchTab('tab-seg')">摻雜偏析分佈曲線模擬器</button>
+        <button class="tab-btn" onclick="switchTab('tab-flow')">晶棒到晶圓加工流程</button>
+      </div>
+
+      <!-- Tab 1: CZ Pulling Visualizer -->
+      <div id="tab-cz" class="sim-panel active">
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 320px; background: #0f172a; border-radius: 8px; padding: 10px; display: flex; justify-content: center;">
+            <svg id="cz-svg" width="340" height="380" viewBox="0 0 340 380">
+              <!-- Background / Chamber -->
+              <rect x="20" y="20" width="300" height="340" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+              <!-- RF Heater coils -->
+              <rect x="35" y="200" width="16" height="120" rx="4" fill="#ef4444" opacity="0.8"/>
+              <rect x="289" y="200" width="16" height="120" rx="4" fill="#ef4444" opacity="0.8"/>
+              <text x="170" y="360" text-anchor="middle" fill="#94a3b8" font-size="12">石墨加熱器 / 射頻感應線圈 (1412°C)</text>
+
+              <!-- Crucible (Quartz lined graphite) -->
+              <path d="M 65 210 L 65 300 Q 170 340 275 300 L 275 210 Z" fill="#475569" stroke="#94a3b8" stroke-width="2"/>
+              <!-- Molten Si Melt -->
+              <path id="melt-path" d="M 70 225 Q 170 235 270 225 L 270 295 Q 170 330 70 295 Z" fill="#f97316" opacity="0.9"/>
+              
+              <!-- LEC Liquid Encapsulant Layer (B2O3) -->
+              <path id="lec-layer" d="M 70 215 L 70 225 Q 170 235 270 225 L 270 215 Q 170 220 70 215 Z" fill="#38bdf8" opacity="0" />
+              <text id="lec-text" x="170" y="222" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" display="none">B₂O₃ 液封層 (LEC 模式)</text>
+
+              <!-- Pulling Rod -->
+              <line x1="170" y1="20" x2="170" y2="100" stroke="#cbd5e1" stroke-width="4" id="pull-rod"/>
+              
+              <!-- Seed Crystal -->
+              <rect x="164" y="95" width="12" height="18" fill="#a855f7" stroke="#ffffff" stroke-width="1" id="seed-crystal"/>
+
+              <!-- Growing Single Crystal Ingot -->
+              <g id="ingot-group">
+                <!-- Neck -->
+                <polygon points="166,113 174,113 172,130 168,130" fill="#94a3b8"/>
+                <!-- Crown & Body -->
+                <path id="ingot-body" d="M 168 130 L 140 160 L 140 215 Q 170 230 200 215 L 200 160 L 172 130 Z" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+              </g>
+
+              <!-- Rotation Arrows -->
+              <path d="M 140 60 Q 170 48 200 60" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+              <text x="170" y="45" text-anchor="middle" fill="#38bdf8" font-size="11">提拉與旋轉 ω₁</text>
+
+              <path d="M 130 335 Q 170 345 210 335" fill="none" stroke="#facc15" stroke-width="2"/>
+              <text x="170" y="325" text-anchor="middle" fill="#facc15" font-size="11">坩堝反向旋轉 ω₂</text>
+            </svg>
+          </div>
+          
+          <div style="flex: 1; min-width: 300px;">
+            <h3>長晶參數控制</h3>
+            <div class="slider-row">
+              <label>生長/提拉進度：</label>
+              <input type="range" id="growth-slider" min="0" max="100" value="50" oninput="updateCZSim()">
+              <span id="growth-val" style="font-family: monospace; font-weight: bold;">50%</span>
+            </div>
+            
+            <div style="margin: 16px 0;">
+              <label style="font-weight: 600; display: block; margin-bottom: 8px;">半導體材料模式：</label>
+              <label style="margin-right: 16px; cursor: pointer;">
+                <input type="radio" name="cz-mode" value="si" checked onchange="toggleLEC(false)"> <strong>標準柴氏法 (Si 元素半導體)</strong>
+              </label><br>
+              <label style="cursor: pointer; margin-top: 6px; display: inline-block;">
+                <input type="radio" name="cz-mode" value="gaas" onchange="toggleLEC(true)"> <strong>液封柴氏法 LEC (GaAs 化合物半導體)</strong>
+              </label>
+            </div>
+
+            <div class="callout" style="font-size: 0.92rem; margin-top: 16px;">
+              <div id="cz-status-desc">
+                <strong>當前狀態：</strong> 矽液於 1412°C 熔融，以 ⟨100⟩ 或 ⟨111⟩ 晶種接觸液面，緩慢提拉旋轉形成直徑達 300 mm (12 吋) 的大單晶錠 (Ingot)。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Segregation Simulator -->
+      <div id="tab-seg" class="sim-panel">
+        <h3>雜質偏析分佈曲線 \(C_S(g) = k_d C_0 (1-g)^{k_d - 1}\)</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          當單晶自熔湯凝固時，固相雜質濃度 \(C_S\) 與液相濃度 \(C_L\) 的比值為分佈係數 \(k_d = C_S/C_L\)。當 \(k_d < 1\) 時，熔湯逐漸富集雜質，晶棒尾端雜質濃度顯著上升。
+        </p>
+
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px;">
+          <div style="flex: 1; min-width: 320px;">
+            <canvas id="seg-canvas" width="400" height="260" style="background:#ffffff; border:1px solid var(--border-color); border-radius:8px; width:100%; height:auto;"></canvas>
+          </div>
+          <div style="flex: 1; min-width: 280px;">
+            <label style="font-weight: 600; display: block; margin-bottom: 8px;">選擇摻雜元素 (Dopant)：</label>
+            <select id="dopant-select" onchange="updateSegSim()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid var(--border-color); font-size: 1rem; margin-bottom: 16px;">
+              <option value="0.3" data-name="砷 (As)" data-weight="74.9">砷 As (kd = 0.3, n-type)</option>
+              <option value="0.8" data-name="硼 (B)" data-weight="10.8">硼 B (kd = 0.8, p-type)</option>
+              <option value="0.35" data-name="磷 (P)" data-weight="31.0">磷 P (kd = 0.35, n-type)</option>
+              <option value="0.023" data-name="銻 (Sb)" data-weight="121.8">銻 Sb (kd = 0.023, n-type - 強烈偏析)</option>
+            </select>
+
+            <div class="card" style="margin: 0; padding: 16px; font-size: 0.92rem;">
+              <div><strong>初始熔湯摻雜濃度 \(C_0\)：</strong> \(1.0 \times 10^{15}\text{ cm}^{-3}\)</div>
+              <div><strong>分佈係數 \(k_d\)：</strong> <span id="kd-val" style="color:var(--primary-color); font-weight:bold;">0.30</span></div>
+              <div style="margin-top: 8px;"><strong>晶棒頭部固相濃度 (\(g=0\))：</strong><br> \(C_S(0) = k_d C_0 = \) <span id="cs0-val" style="font-weight:bold; color:#059669;">3.00 × 10¹⁴ cm⁻³</span></div>
+              <div style="margin-top: 6px;"><strong>晶棒尾部固相濃度 (\(g=0.9\))：</strong><br> \(C_S(0.9) = \) <span id="cs9-val" style="font-weight:bold; color:#dc2626;">1.50 × 10¹⁵ cm⁻³</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Wafer Processing Flow -->
+      <div id="tab-flow" class="sim-panel">
+        <h3>從矽單晶錠 (Ingot) 到積體電路晶圓 (Wafer)</h3>
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div>
+            <strong style="font-size: 1.1rem; color: #111827;">晶棒修整與滾圓 (Ingot Trimming & Cylinder Grinding)</strong>
+            <p style="margin: 4px 0 0 0; color: var(--text-muted);">切除頭尾錐形端，透過外圓研磨機將單晶錠精準研磨為標準直徑（如 200 mm 或 300 mm）。並研磨定位槽 (Notch) 或定位平面 (Flat) 以指示 \(\{110\}\) 劈裂面晶向。</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div>
+            <strong style="font-size: 1.1rem; color: #111827;">線鋸切割 (Wire Sawing)</strong>
+            <p style="margin: 4px 0 0 0; color: var(--text-muted);">使用高速往復運轉之鑽石線鋸 (Diamond Wire Saw) 同步將整根晶棒切片成約 \(775\ \mu\text{m}\) 厚度的薄片晶圓（切縫損失 Kerf Loss 降至最低）。</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div>
+            <strong style="font-size: 1.1rem; color: #111827;">雙面研磨與邊緣倒角 (Lapping & Edge Profiling)</strong>
+            <p style="margin: 4px 0 0 0; color: var(--text-muted);">去除線鋸切割留下的微裂紋與表面損傷層；對晶圓邊緣進行圓弧倒角修整，避免後續製程搬運時碎裂或產生微粒污染。</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div>
+            <strong style="font-size: 1.1rem; color: #111827;">化學機械研磨 (Chemical-Mechanical Polishing, CMP)</strong>
+            <p style="margin: 4px 0 0 0; color: var(--text-muted);">在鹼性 \(\text{NaOH}\) 懸浮液中使用奈米級 \(\text{SiO}_2\) 微粒磨料，結合化學水解軟化與機械平坦化拋光，使晶圓正表面達到極致的原子級鏡面平整度 (Roughness &lt; 0.1 nm)。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson Content -->
+    <h2>🎯 本單元核心學習目標</h2>
+    <ul>
+      <li>掌握矽原料提純路徑：<strong>砂石 \(\text{SiO}_2 \to\) 冶金級矽 (MGS) \(\to\) 電子級矽 (EGS)</strong> 及其關鍵化學反應式。</li>
+      <li>精通<strong>柴氏長晶法 (Czochralski, CZ)</strong> 與針對化合物半導體的<strong>液封柴氏法 (Liquid-Encapsulated Czochralski, LEC)</strong>。</li>
+      <li>推導<strong>偏析/分佈係數 (\(k_d = C_S/C_L\))</strong>，理解常規凝固 (Normal Freezing) 下晶棒摻雜濃度的空間漸變。</li>
+      <li>熟練解答課本經典例題 <strong>Example 1–4</strong>（精確計算摻雜劑 As 所需添加之質量）。</li>
+      <li>了解晶圓加工切片與<strong>化學機械研磨 (CMP)</strong> 之作用機制。</li>
+    </ul>
+
+    <!-- Section 1: Starting Materials -->
+    <h2>一、 原料提純：從沙子到電子級矽 (EGS)</h2>
+    <div class="card">
+      <p>半導體元件對純度的要求極為苛刻（雜質含量低於百億分之一，即 \(< 1\text{ ppb} \approx 5 \times 10^{13}\text{ cm}^{-3}\)）。提純分成兩大階段：</p>
+      
+      <h3>1. 冶金級矽 (Metallurgical Grade Silicon, MGS)</h3>
+      <p>以高純石英砂 (\(\text{SiO}_2\)) 與焦炭 (C) 在電弧爐中進行高溫 (\(\sim 1800^\circ\text{C}\)) 還原反應：</p>
+      $$\text{SiO}_2 + 2\text{C} \xrightarrow{\sim 1800^\circ\text{C}} \text{Si} + 2\text{CO}\uparrow \quad (\text{Eq. 1–3})$$
+      <p><em>產物純度僅約 98%~99%，含有大量金屬雜質（Fe, Al, B 等），屬於多晶，無法直接用於半導體元件。</em></p>
+
+      <h3>2. 電子級矽 (Electronic Grade Silicon, EGS) — 西門子製程 (Siemens Process)</h3>
+      <p>為徹底去除雜質，將 MGS 與乾燥氯化氫 (\(\text{HCl}\)) 在約 \(300^\circ\text{C}\) 反應，轉化為易揮發液體<strong>三氯氫矽 (\(\text{SiHCl}_3\)，沸點 \(32^\circ\text{C}\))</strong>：</p>
+      $$\text{Si} + 3\text{HCl} \xrightarrow{\sim 300^\circ\text{C}} \text{SiHCl}_3 + \text{H}_2\uparrow \quad (\text{Eq. 1–4})$$
+      <p>利用沸點差異進行<strong>多道分餾 (Fractional Distillation)</strong>，將沸點相近之金屬氯化物（如 \(\text{FeCl}_3\)）完全分離；最後在純氫氣流中於高溫還原沉積出極高純度之多晶 EGS：</p>
+      $$2\text{SiHCl}_3 + 2\text{H}_2 \xrightarrow{\sim 1100^\circ\text{C}} 2\text{Si} + 6\text{HCl}\uparrow \quad (\text{Eq. 1–5})$$
+    </div>
+
+    <!-- Section 2: Single Crystal Ingot Growth -->
+    <h2>二、 單晶晶棒生長 (Single-Crystal Ingot Growth)</h2>
+    <div class="card">
+      <h3>1. 柴氏長晶法 (Czochralski Method, CZ 法)</h3>
+      <p>目前超過 90% 的積體電路單晶矽晶圓皆由 CZ 法製造：</p>
+      <ul>
+        <li><strong>熔融</strong>：高純 EGS 放入石英 (\(\text{SiO}_2\)) 內襯之石墨坩堝中，加熱至矽熔點 (\(1412^\circ\text{C}\))。</li>
+        <li><strong>晶種導入 (Seeding)</strong>：將具有特定晶向（通常為 \(\langle 100\rangle\) 或 \(\langle 111\rangle\)）的單晶晶種浸入熔湯表面。</li>
+        <li><strong>縮頸 (Neck Growth / Dash Technique)</strong>：先快速拉長縮小直徑至 2~4 mm，使晶種接觸產生的差排 (Dislocations) 藉由表面逸出消除。</li>
+        <li><strong>放肩 (Crown) 與等徑生長 (Body)</strong>：降溫擴大直徑至目標尺寸（如 300 mm），維持穩定提拉速度（約數 mm/min）與雙向反轉，凝固出巨大的單晶圓柱矽錠。</li>
+      </ul>
+
+      <h3>2. 化合物半導體之液封柴氏法 (LEC 法)</h3>
+      <div class="callout">
+        <p><strong>為什麼化合物半導體 (GaAs, InP) 不能用傳統 CZ 法？</strong><br>
+        在高溫熔點（如 GaAs 之 \(1238^\circ\text{C}\)）下，V 族元素（As 或 P）具有極高的飽和蒸氣壓，極易劇烈揮發逸出，破壞化學計量比 (Stoichiometry)。</p>
+      </div>
+      <p><strong>LEC 解決方案：</strong> 在熔湯上方覆蓋一層約 1 cm 厚、高密度且在高溫下呈黏稠液態的<strong>三氧化二硼 (\(\text{B}_2\text{O}_3\))</strong>，並在爐內充入數十個大氣壓的惰性氣體（如 \(\text{Ar}\) 或 \(\text{N}_2\)），形成嚴密的液相物理封印，成功抑制 As 蒸發。</p>
+    </div>
+
+    <!-- Section 3: Segregation Coefficient & Doping -->
+    <h2>三、 摻雜與分佈/偏析係數 (Doping & Segregation Coefficient)</h2>
+    <div class="card">
+      <p>在 CZ 提拉長晶時，常在熔湯中主動加入微量雜質（如 As, P, B）以調整電阻率。在固液交界面達成熱力學平衡時，<strong>固相雜質濃度 \(C_S\)</strong> 與<strong>液相雜質濃度 \(C_L\)</strong> 之比值定義為：</p>
+      
+      <div class="math-highlight">
+        $$\mathbf{k_d = \frac{C_S}{C_L}} \quad (\text{分佈係數 / 偏析係數, Distribution/Segregation Coefficient})$$
+      </div>
+
+      <p>常見摻雜元素在矽中的平衡分佈係數 \(k_0\)：</p>
+      <table>
+        <thead>
+          <tr>
+            <th>元素</th>
+            <th>類型</th>
+            <th>分佈係數 \(k_d\)</th>
+            <th>物理行為</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>硼 (B)</strong></td>
+            <td>p-type (III 族)</td>
+            <td><strong>0.80</strong></td>
+            <td>偏析程度低，整根晶棒濃度相對均勻</td>
+          </tr>
+          <tr>
+            <td><strong>磷 (P)</strong></td>
+            <td>n-type (V 族)</td>
+            <td><strong>0.35</strong></td>
+            <td>中度偏析，晶棒後端濃度逐漸增高</td>
+          </tr>
+          <tr>
+            <td><strong>砷 (As)</strong></td>
+            <td>n-type (V 族)</td>
+            <td><strong>0.30</strong></td>
+            <td>常規 CZ 摻雜元素，晶棒後端富集</td>
+          </tr>
+          <tr>
+            <td><strong>銻 (Sb)</strong></td>
+            <td>n-type (V 族)</td>
+            <td><strong>0.023</strong></td>
+            <td>劇烈偏析，絕大部分留在熔湯中</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>常規凝固方程式 (Normal Freezing Equation)：</h3>
+      <p>設初始熔湯濃度為 \(C_0\)，當已固化比例為 \(g = M_{\text{solid}} / M_{\text{total}}\) 時，固相濃度為：</p>
+      $$C_S(g) = k_d C_0 (1 - g)^{k_d - 1}$$
+      <p><em>因為 \(k_d < 1\)，\((k_d - 1) < 0\)，隨著 \(g \to 1\)（晶棒生長尾聲），\((1-g)^{k_d - 1}\) 迅速放大，導致晶棒尾端的摻雜濃度顯著高於頭部。</em></p>
+    </div>
+
+    <!-- Section 4: Example 1-4 Step-by-Step Derivation -->
+    <h2>四、 課本經典例題 Example 1–4 深度推導</h2>
+    <div class="card">
+      <div class="callout" style="background: #eff6ff; border-color: #2563eb;">
+        <p><strong>【課本 Example 1–4 原題】</strong><br>
+        在 CZ 長晶爐中，有 \(1\text{ kg}\) 矽熔湯。欲使剛開始結晶之固相具有 \(C_S = 10^{15}\text{ atoms/cm}^3\) 的 As 摻雜濃度，已知 As 在 Si 中的 \(k_d = 0.3\)，As 原子量為 \(74.9\text{ g/mol}\)，矽密度為 \(2.33\text{ g/cm}^3\)。請問初始熔湯中需添加多少質量的砷 (As)？</p>
+      </div>
+
+      <h3>推導 SOP 四步驟：</h3>
+      <ol>
+        <li>
+          <strong>求初始熔湯所需之雜質體積濃度 \(C_L\)：</strong>
+          $$C_L = \frac{C_S}{k_d} = \frac{10^{15}\text{ cm}^{-3}}{0.3} \approx 3.33 \times 10^{15}\text{ atoms/cm}^3$$
+        </li>
+        <li>
+          <strong>求 \(1\text{ kg}\) 矽熔湯之總體積 \(V_{\text{Si}}\)：</strong>
+          $$V_{\text{Si}} = \frac{\text{質量}}{\text{密度}} = \frac{1000\text{ g}}{2.33\text{ g/cm}^3} \approx 429.2\text{ cm}^3$$
+        </li>
+        <li>
+          <strong>計算熔湯中需含之 As 總原子數 \(N_{\text{As}}\)：</strong>
+          $$N_{\text{As}} = C_L \times V_{\text{Si}} = (3.333 \times 10^{15}\text{ atoms/cm}^3) \times (429.2\text{ cm}^3) \approx 1.43 \times 10^{18}\text{ atoms}$$
+        </li>
+        <li>
+          <strong>透過莫耳數與原子量換算所需質量 \(m_{\text{As}}\)：</strong>
+          $$m_{\text{As}} = \frac{N_{\text{As}}}{N_A} \times M_{\text{As}} = \frac{1.43 \times 10^{18}\text{ atoms}}{6.022 \times 10^{23}\text{ atoms/mol}} \times 74.9\text{ g/mol}$$
+          $$\mathbf{m_{\text{As}} \approx 1.8 \times 10^{-4}\text{ g} = 0.18\text{ mg}}$$
+        </li>
+      </ol>
+      <p style="color: #059669; font-weight: 600;">結論：在一公斤的矽熔湯中，僅需投入不到 0.2 毫克的砷微粒，即可精準達成百億分之一等級的精準半導體摻雜！</p>
+    </div>
+
+    <!-- Section 5: Wafer Processing & CMP -->
+    <h2>五、 晶圓成型加工與 CMP 奈米級平坦化</h2>
+    <div class="card">
+      <p>生長完成的巨型單晶錠必須經過一系列高精密機械與化學加工：</p>
+      <ul>
+        <li><strong>晶向標記</strong>：在圓柱晶棒外緣磨出<strong>定位平邊 (Flat)</strong>（通常用於 200 mm 以下晶圓）或<strong>定位槽 (Notch)</strong>（用於 300 mm 晶圓），精準對齊 \(\{110\}\) 面，方便曝光機晶圓對位與後續沿解理面切割。</li>
+        <li><strong>化學機械研磨 (Chemical-Mechanical Polishing, CMP)</strong>：
+          <ul>
+            <li><strong>化學反應</strong>：弱鹼性研磨液 (\(\text{NaOH}\) 或 \(\text{KOH}\) 水溶液) 軟化矽表面生成薄水合氧化層。</li>
+            <li><strong>機械摩擦</strong>：奈米級膠體石英 (\(\text{SiO}_2\) 微粒) 在旋轉拋光墊下平坦切除凸起處，提供無應力、原子級平整的鏡面 (Mirror-like finish)。</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Interactive Quizzes -->
+    <h2>⚔️ 隨堂實戰測驗 (Interactive Quizzes)</h2>
+
+    <!-- Quiz 1 -->
+    <div class="quiz-box" id="quiz1">
+      <div class="quiz-title">問題 1：在利用液封柴氏法 (LEC) 生長 GaAs 等化合物半導體單晶時，覆蓋於熔湯表面的黏稠液封材料為何？</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 0, true)">A. 熔融之三氧化二硼 (B2O3)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 1, false)">B. 高純度之二氧化矽 (SiO2)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 2, false)">C. 液態石墨碳化矽 (SiC)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 3, false)">D. 濃稠之氯化鈉水溶液 (NaCl)</button>
+      </div>
+      <div class="quiz-feedback" id="quiz1-fb"></div>
+    </div>
+
+    <!-- Quiz 2 -->
+    <div class="quiz-box" id="quiz2">
+      <div class="quiz-title">問題 2：已知雜質在矽中的分佈係數 kd &lt; 1（如 As 的 kd = 0.3）。在柴氏法長晶過程中，晶棒從頭部生長到尾部時，其摻雜濃度分佈趨勢為何？</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 0, false)">A. 頭部濃度最高，尾部逐漸遞減</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 1, true)">B. 頭部濃度較低，尾部顯著富集</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 2, false)">C. 全程濃度恆定，完全均勻分佈</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 3, false)">D. 呈現週期震盪，高低交替變化</button>
+      </div>
+      <div class="quiz-feedback" id="quiz2-fb"></div>
+    </div>
+
+    <!-- Quiz 3 -->
+    <div class="quiz-box" id="quiz3">
+      <div class="quiz-title">問題 3：在西門子法 (Siemens Process) 中，將冶金級矽 (MGS) 轉化為電子級矽 (EGS) 時所使用的關鍵易揮發中介化學液體為何？</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer('quiz3', 0, false)">A. 四氟化矽氣體 (SiF4)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz3', 1, false)">B. 二氧化矽膠體 (SiO2)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz3', 2, true)">C. 三氯氫矽液體 (SiHCl3)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz3', 3, false)">D. 碳化矽固體結晶 (SiC)</button>
+      </div>
+      <div class="quiz-feedback" id="quiz3-fb"></div>
+    </div>
+
+    <footer>
+      <div>參考資料：<a href="file:///Users/hekote/Documents/固態電子導論/sspd-eee-swapnil.pdf">sspd-eee-swapnil.pdf (Chapter 1.3)</a> ｜ <a href="../reference/003-bulk-crystal-growth-cheatsheet.html">塊狀晶體生長速查表</a></div>
+      <div>有任何疑問請直接於對話中向 Agent 提問！</div>
+    </footer>
+  </div>
+
+  <script>
+    // Tab switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.sim-panel').forEach(p => p.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+      if (tabId === 'tab-seg') {
+        drawSegregationPlot();
+      }
+    }
+
+    // CZ Simulation
+    function updateCZSim() {
+      const val = document.getElementById('growth-slider').value;
+      document.getElementById('growth-val').innerText = val + '%';
+      
+      const ingotBody = document.getElementById('ingot-body');
+      const pullRod = document.getElementById('pull-rod');
+      const seedCrystal = document.getElementById('seed-crystal');
+      
+      // Pull rod moves up, ingot body elongates
+      const length = 140 + (val * 0.75);
+      const rodY = 20 - (val * 0.4);
+      const seedY = 95 - (val * 0.4);
+      
+      pullRod.setAttribute('y1', rodY);
+      pullRod.setAttribute('y2', seedY);
+      seedCrystal.setAttribute('y', seedY);
+      
+      const bodyBottom = 160 + (val * 0.55);
+      ingotBody.setAttribute('d', `M 168 130 L 140 160 L 140 ${bodyBottom} Q 170 ${bodyBottom + 12} 200 ${bodyBottom} L 200 160 L 172 130 Z`);
+    }
+
+    function toggleLEC(isLEC) {
+      const lecLayer = document.getElementById('lec-layer');
+      const lecText = document.getElementById('lec-text');
+      const desc = document.getElementById('cz-status-desc');
+      
+      if (isLEC) {
+        lecLayer.setAttribute('opacity', '0.75');
+        lecText.style.display = 'block';
+        desc.innerHTML = '<strong>液封柴氏法 (LEC)：</strong> 熔融 GaAs 表面覆蓋高溫黏稠之 <strong>B₂O₃ 液封層</strong>，配合高壓惰性氣體，防止高揮發性 As 元素在高溫蒸發！';
+      } else {
+        lecLayer.setAttribute('opacity', '0');
+        lecText.style.display = 'none';
+        desc.innerHTML = '<strong>標準柴氏法 (CZ)：</strong> 矽液於 1412°C 熔融，以 ⟨100⟩ 或 ⟨111⟩ 晶種接觸液面，緩慢提拉旋轉形成直徑達 300 mm (12 吋) 的大單晶錠。';
+      }
+    }
+
+    // Segregation Canvas Plotting
+    function updateSegSim() {
+      const select = document.getElementById('dopant-select');
+      const kd = parseFloat(select.value);
+      const opt = select.options[select.selectedIndex];
+      const name = opt.getAttribute('data-name');
+      
+      document.getElementById('kd-val').innerText = kd.toFixed(3);
+      
+      const c0 = 1.0e15;
+      const cs0 = kd * c0;
+      const cs9 = kd * c0 * Math.pow(1 - 0.9, kd - 1);
+      
+      document.getElementById('cs0-val').innerText = (cs0 / 1e14).toFixed(2) + ' × 10¹⁴ cm⁻³';
+      document.getElementById('cs9-val').innerText = (cs9 / 1e15).toFixed(2) + ' × 10¹⁵ cm⁻³';
+      
+      drawSegregationPlot();
+    }
+
+    function drawSegregationPlot() {
+      const canvas = document.getElementById('seg-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const kd = parseFloat(document.getElementById('dopant-select').value);
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      const padL = 55, padR = 25, padT = 25, padB = 40;
+      const w = canvas.width - padL - padR;
+      const h = canvas.height - padT - padB;
+      
+      // Axes
+      ctx.strokeStyle = '#94a3b8';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(padL, padT);
+      ctx.lineTo(padL, padT + h);
+      ctx.lineTo(padL + w, padT + h);
+      ctx.stroke();
+      
+      // Axis labels
+      ctx.fillStyle = '#475569';
+      ctx.font = '12px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('固化結晶比例 g (0: 頭部 → 0.9: 尾部)', padL + w/2, padT + h + 32);
+      
+      ctx.save();
+      ctx.translate(15, padT + h/2);
+      ctx.rotate(-Math.PI / 2);
+      ctx.fillText('相對固相濃度 Cs / C₀', 0, 0);
+      ctx.restore();
+      
+      // Grid lines
+      ctx.strokeStyle = '#f1f5f9';
+      ctx.lineWidth = 1;
+      for (let g = 0.2; g <= 0.8; g += 0.2) {
+        const x = padL + g * w;
+        ctx.beginPath();
+        ctx.moveTo(x, padT);
+        ctx.lineTo(x, padT + h);
+        ctx.stroke();
+        ctx.fillText(g.toFixed(1), x, padT + h + 16);
+      }
+      
+      // Max Y scale
+      const maxY = (kd <= 0.05) ? 0.3 : 2.5;
+      
+      // Draw Curve
+      ctx.strokeStyle = '#2563eb';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      for (let i = 0; i <= 90; i++) {
+        const g = i / 100;
+        const relC = kd * Math.pow(1 - g, kd - 1);
+        const x = padL + (g / 0.9) * w;
+        const y = padT + h - Math.min(relC / maxY, 1.0) * h;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+      
+      // Highlight initial point
+      const y0 = padT + h - (kd / maxY) * h;
+      ctx.fillStyle = '#059669';
+      ctx.beginPath();
+      ctx.arc(padL, y0, 5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillText(`Cs(0) = ${kd} C₀`, padL + 45, y0 - 8);
+    }
+
+    // Quiz Check
+    function checkAnswer(quizId, optionIndex, isCorrect) {
+      const box = document.getElementById(quizId);
+      const buttons = box.querySelectorAll('.quiz-option');
+      const feedback = document.getElementById(quizId + '-fb');
+      
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === optionIndex) {
+          btn.classList.add(isCorrect ? 'correct' : 'wrong');
+        }
+      });
+
+      feedback.style.display = 'block';
+      if (isCorrect) {
+        feedback.style.background = 'var(--success-bg)';
+        feedback.style.color = '#065f46';
+        feedback.style.border = '1px solid var(--success-color)';
+        if (quizId === 'quiz1') {
+          feedback.innerHTML = '<strong>✅ 完全正確！</strong><br>液封柴氏法 (LEC) 使用熔融的氧化硼 \\(\\text{B}_2\\text{O}_3\\) 作為高黏度液相封印層，防止 As 或 P 等揮發。';
+        } else if (quizId === 'quiz2') {
+          feedback.innerHTML = '<strong>✅ 完全正確！</strong><br>因為 \\(k_d < 1\\)，固相對雜質產生排斥作用，使得雜質在剩餘熔湯中累積富集，故晶棒尾部濃度顯著升高。';
+        } else {
+          feedback.innerHTML = '<strong>✅ 完全正確！</strong><br>三氯氫矽 (\\(\\text{SiHCl}_3\\)) 沸點僅 32°C，能輕易透過分餾與金屬氯化物分離，為西門子提純製程之核心。';
+        }
+        if (window.MathJax) MathJax.typesetPromise();
+      } else {
+        feedback.style.background = 'var(--error-bg)';
+        feedback.style.color = '#991b1b';
+        feedback.style.border = '1px solid var(--error-color)';
+        feedback.innerHTML = '<strong>❌ 再想想看！</strong> 回顧課文中的關鍵化學反應式與偏析效應推導。';
+      }
+    }
+
+    window.addEventListener('load', () => {
+      drawSegregationPlot();
+    });
+  </script>
+</body>
+</html>

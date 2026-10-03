@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>密勒指數快速速查表 (Miller Indices Reference)</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="lesson-tag">Reference Document #001</span>
+      <h1>密勒指數 (Miller Indices) 與晶格幾何速查表</h1>
+      <p class="subtitle">固態電子學必備晶面、晶向與幾何關係壓縮綱要</p>
+    </header>
+
+    <h2>一、 括號符號語義 (Notation Summary)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>符號</th>
+          <th>英文名稱</th>
+          <th>物理意義</th>
+          <th>立方晶格範例與包含項目</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="bracket-badge">[h k l]</span></td>
+          <td>Direction</td>
+          <td>特定的晶格方向（向量）</td>
+          <td>\([100]\)：沿 \(x\) 軸正向的單位向量</td>
+        </tr>
+        <tr>
+          <td><span class="bracket-badge">&lang;h k l&rang;</span></td>
+          <td>Family of Directions</td>
+          <td>晶體對稱性下等效的所有晶向集合</td>
+          <td>\(\langle 100 \rangle = [100], [\bar{1}00], [010], [0\bar{1}0], [001], [00\bar{1}]\)</td>
+        </tr>
+        <tr>
+          <td><span class="bracket-badge">(h k l)</span></td>
+          <td>Plane</td>
+          <td>一組特定的平行晶格平面</td>
+          <td>\((110)\)：截距為 \(1, 1, \infty\) 的平面</td>
+        </tr>
+        <tr>
+          <td><span class="bracket-badge">{h k l}</span></td>
+          <td>Family of Planes</td>
+          <td>晶體對稱性下等效的所有晶面集合</td>
+          <td>\(\{100\} = (100), (\bar{1}00), (010), (0\bar{1}0), (001), (00\bar{1})\)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <p>💡 記憶口訣：<strong>方方向（[ ] 代表方向）、圓面（( ) 代表平面）；尖家族（&lang; &rang; 方向家族）、花家族（{ } 面家族）。</strong> 負值標記在數字上方，如 \(\bar{1}\) 讀作 "bar 1"。</p>
+    </div>
+
+    <h2>二、 晶面指數 \((hkl)\) 標準求法 SOP</h2>
+    <div class="card">
+      <ol>
+        <li><strong>定原點</strong>：選定座標軸。若平面恰好通過原點，平移原點至相鄰晶格點。</li>
+        <li><strong>求截距 (Intercepts)</strong>：找出平面與 \(x, y, z\) 軸的截距，以晶格常數 \(a, b, c\) 為單位。平行軸之截距為 \(\infty\)。</li>
+        <li><strong>取倒數 (Reciprocals)</strong>：將三軸截距取倒數，\(\frac{1}{\infty} \to 0\)。</li>
+        <li><strong>化互質整數 (Reduce)</strong>：通分並同乘以最小公倍數，化為互質整數組 \((hkl)\)。</li>
+      </ol>
+    </div>
+
+    <h2>三、 立方晶格三大幾何公式</h2>
+    <div class="card">
+      <p><strong>1. 晶面法向量定理</strong>：在立方系統中，晶面 \((hkl)\) 的垂直法向量，恰好就是同名晶向 \([hkl]\)。</p>
+      <p><strong>2. 晶面間距公式 (Interplanar Spacing)</strong>：</p>
+      $$d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}$$
+      <p><strong>3. 兩晶向夾角公式 (Angle between Directions)</strong>：晶向 \([h_1 k_1 l_1]\) 與 \([h_2 k_2 l_2]\) 之夾角 \(\theta\)：</p>
+      $$\cos\theta = \frac{h_1 h_2 + k_1 k_2 + l_1 l_2}{\sqrt{h_1^2 + k_1^2 + l_1^2}\sqrt{h_2^2 + k_2^2 + l_2^2}}$$
+    </div>
+
+    <footer>
+      <div>來源：<a href="file:///Users/hekote/Documents/固態電子導論/sspd-eee-swapnil.pdf">sspd-eee-swapnil.pdf (Chapter 1)</a></div>
+      <div>回課堂：<a href="../lessons/0001-miller-indices.html">Lesson 0001: 密勒指數精要</a></div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 晶體結構可視化演示 (Crystal Viewer Demo)</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #090d16;
+            color: #f1f5f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #60a5fa;
+        }
+        p {
+            color: #94a3b8;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            max-width: 700px;
+        }
+        #viewer-container {
+            width: 100%;
+            max-width: 900px;
+            height: 550px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>固態電子導論 - 3D 晶體結構互動檢視器</h1>
+    <p>支援面心立方 (FCC)、鑽石結構 (Diamond)、閃鋅礦結構 (Zincblende) 與高亮晶面 (100, 110, 111) 切面切換。支援滑鼠旋轉、縮放與平移。</p>
+    
+    <div id="viewer-container"></div>
+
+    <!-- Include CrystalViewer component -->
+    <script src="crystal-viewer.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const viewer = new CrystalViewer('viewer-container', {
+                defaultStructure: 'diamond',
+                autoRotate: false,
+                showBonds: true,
+                gridSize: 2
+            });
+        });
+    </script>
+</body>
+</html>

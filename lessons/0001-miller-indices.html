@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0001: 密勒指數與晶格幾何</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="lesson-tag">Lesson 0001</span>
+      <h1>密勒指數 (Miller Indices) 與晶格幾何</h1>
+      <p class="subtitle">掌握半導體晶體幾何空間的通用語言</p>
+    </header>
+
+    <h2>🎯 本單元目標</h2>
+    <p>讀完本課並完成隨堂互動測驗後，你將能夠：</p>
+    <ul>
+      <li>無誤辨析 <code>[hkl]</code>、<code>&lang;hkl&rang;</code>、<code>(hkl)</code> 與 <code>{hkl}</code> 四種符號的物理意涵。</li>
+      <li>按照標準 4 步驟，從截距反推晶面密勒指數 \((hkl)\)。</li>
+      <li>利用面間距公式 \(d_{hkl} = \frac{a}{\sqrt{h^2+k^2+l^2}}\) 快速比較不同晶面的原子排列密度與間距。</li>
+    </ul>
+
+    <h2>一、 符號系統：四種括號的嚴格界定</h2>
+    <p>在固態物理中，不同括號具有完全不同的物理定義：</p>
+    <table>
+      <thead>
+        <tr>
+          <th>符號語法</th>
+          <th>物理意義</th>
+          <th>直觀範例</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="bracket-badge">[h k l]</span></td>
+          <td><strong>特定晶向向量</strong></td>
+          <td>\([100]\) 表示沿 \(x\) 軸方向的向量。</td>
+        </tr>
+        <tr>
+          <td><span class="bracket-badge">&lang;h k l&rang;</span></td>
+          <td><strong>等效晶向家族</strong></td>
+          <td>\(\langle 100 \rangle\) 包含 \([100], [\bar{1}00], [010], [0\bar{1}0], [001], [00\bar{1}]\)。</td>
+        </tr>
+        <tr>
+          <td><span class="bracket-badge">(h k l)</span></td>
+          <td><strong>特定晶面</strong></td>
+          <td>\((100)\) 與 \(x\) 軸交於 \(1\)，平行 \(y, z\) 軸。</td>
+        </tr>
+        <tr>
+          <td><span class="bracket-badge">{h k l}</span></td>
+          <td><strong>等效晶面家族</strong></td>
+          <td>\(\{100\}\) 包含立方體 6 個外表面對應的所有面。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>二、 晶面指數 \((hkl)\) 的四步標準求法</h2>
+    <div class="card">
+      <h3>經典範例剖析：</h3>
+      <p>假設某晶面與座標軸的截距為：\(x = 1a\)，\(y = 2a\)，且與 \(z\) 軸平行（截距為 \(\infty\)）。</p>
+      <ol>
+        <li><strong>寫出截距</strong>：\((1, 2, \infty)\)</li>
+        <li><strong>取倒數</strong>：\(\left(\frac{1}{1}, \frac{1}{2}, \frac{1}{\infty}\right) = (1, \frac{1}{2}, 0)\)</li>
+        <li><strong>通分化為最簡整數比</strong>：同乘以 \(2\) \(\to\) \((2, 1, 0)\)</li>
+        <li><strong>加圓括號標記</strong>：此晶面即為 \(\mathbf{(210)}\) 面。</li>
+      </ol>
+    </div>
+
+    <h2>三、 立方晶格的面間距幾何定理</h2>
+    <p>相鄰兩組平行 \((hkl)\) 平面之間的垂直距離 \(d_{hkl}\) 為：</p>
+    <div class="callout">
+      $$d_{hkl} = \frac{a}{\sqrt{h^2 + k^2 + l^2}}$$
+    </div>
+    <p><strong>💡 物理推論</strong>：指數平方和 \(h^2+k^2+l^2\) 越大，晶面間距 \(d\) 就越小，代表該晶面排列越密集（如 \((111)\) 的間距小於 \((100)\)）。</p>
+
+    <h2>⚔️ 互動隨堂測驗 (Interactive Quizzes)</h2>
+
+    <!-- Quiz 1 -->
+    <div class="quiz-box" id="quiz1">
+      <div class="quiz-title">問題 1：某晶面與 \(x\) 軸相交於 \(1a\)、與 \(y\) 軸相交於 \(3a\)、與 \(z\) 軸平行，其密勒指數為？</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 0, false)">A. 晶面為 (130)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 1, true)">B. 晶面為 (310)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 2, false)">C. 晶面為 (131)</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz1', 3, false)">D. 晶面為 (313)</button>
+      </div>
+      <div class="quiz-feedback" id="quiz1-fb"></div>
+    </div>
+
+    <!-- Quiz 2 -->
+    <div class="quiz-box" id="quiz2">
+      <div class="quiz-title">問題 2：邊長為 \(a\) 的立方晶格中，\((100)\) 面間距 \(d_{100}\) 與 \((111)\) 面間距 \(d_{111}\) 比較為何？</div>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 0, true)">A. 間距 d100 > d111</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 1, false)">B. 間距 d100 < d111</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 2, false)">C. 間距兩者數值完全相同</button>
+        <button class="quiz-option" onclick="checkAnswer('quiz2', 3, false)">D. 條件不足無法直接比較</button>
+      </div>
+      <div class="quiz-feedback" id="quiz2-fb"></div>
+    </div>
+
+    <footer>
+      <div>參考資料：<a href="file:///Users/hekote/Documents/固態電子導論/sspd-eee-swapnil.pdf">sspd-eee-swapnil.pdf</a> ｜ <a href="../reference/001-miller-indices-cheatsheet.html">密勒指數速查表</a></div>
+      <div>有任何疑問請直接於對話中向 Agent 提問！</div>
+    </footer>
+  </div>
+
+  <script>
+    function checkAnswer(quizId, optionIndex, isCorrect) {
+      const box = document.getElementById(quizId);
+      const buttons = box.querySelectorAll('.quiz-option');
+      const feedback = document.getElementById(quizId + '-fb');
+      
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === optionIndex) {
+          btn.classList.add(isCorrect ? 'correct' : 'wrong');
+        }
+      });
+
+      feedback.style.display = 'block';
+      if (isCorrect) {
+        feedback.style.background = 'var(--success-bg)';
+        feedback.style.color = '#065f46';
+        feedback.style.border = '1px solid var(--success-color)';
+        if (quizId === 'quiz1') {
+          feedback.innerHTML = '<strong>✅ 答對了！</strong><br>截距為 (1, 3, ∞) → 取倒數為 (1/1, 1/3, 0) → 同乘以 3 化為最簡整數比為 (3, 1, 0)。';
+        } else {
+          feedback.innerHTML = '<strong>✅ 答對了！</strong><br>\\(d_{100} = \\frac{a}{\\sqrt{1}} = a\\)，而 \\(d_{111} = \\frac{a}{\\sqrt{1+1+1}} = \\frac{a}{\\sqrt{3}} \\approx 0.577a\\)，因此 \\(d_{100} > d_{111}\\)。';
+        }
+        if (window.MathJax) MathJax.typesetPromise();
+      } else {
+        feedback.style.background = 'var(--error-bg)';
+        feedback.style.color = '#991b1b';
+        feedback.style.border = '1px solid var(--error-color)';
+        feedback.innerHTML = '<strong>❌ 再試著推敲一下！</strong> 請留意取倒數與通分的計算流程，或查看公式中的分母大小。';
+      }
+    }
+  </script>
+</body>
+</html>
