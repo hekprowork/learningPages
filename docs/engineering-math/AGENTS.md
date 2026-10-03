@@ -26,3 +26,12 @@ This file defines the domain rules and conventions for the **工程數學 (Engin
 
 ### 3. 路由與超連結規範
 - 模組內部所有超連結必須使用絕對路徑 `/engineering-math/...`，禁止使用相對路徑逃逸或無前綴的路徑。
+
+
+## 核心專案規範
+
+### Rule: 禁止使用非黑白 ICON (Monochrome Icon Only)
+- 嚴禁使用彩色 Emoji 或非黑白圖標。全站一律採用純黑白/單色 (Black & White / Monochrome) 圖標或純文字標籤，確保排版簡約專業一致。
+
+### Rule: PDF 檔案為最高優先資料來源 (PDF-First as Primary Source)
+- 撰寫、補充與推導所有課程講義、筆記、例題與速查表時，必須以本地課本/教材之原始 PDF 檔案為最優先、最高權威的第一手資料來源（Primary Source of Truth）。

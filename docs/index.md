@@ -7,35 +7,35 @@ hero:
   tagline: "集中託管固態物理、電子學、電路學與工程數學等多科目，具備互動視覺化與嚴謹數學推導"
   actions:
     - theme: brand
-      text: ⚛️ 固態電子導論
+      text: Solid-State 固態電子導論
       link: /solid-state/
     - theme: alt
-      text: ⚡ 電子學
+      text: Electronics 電子學
       link: /electronics/
     - theme: alt
-      text: 🔌 電路學
+      text: Circuits 電路學
       link: /circuits/
     - theme: alt
-      text: 📐 工程數學
+      text: Math 工程數學
       link: /engineering-math/
 
 features:
-  - icon: ⚛️
+  - icon: Solid-State
     title: 固態電子導論
     details: 結晶學幾何、鑽石結構與原子密度推導、CZ 提拉長晶、偏析效應與現代矽晶圓工藝，內建 3D 互動晶格模擬。
     link: /solid-state/
     linkText: 進入科目
-  - icon: ⚡
+  - icon: Electronics
     title: 電子學 (Microelectronic Circuits)
     details: 訊號源等效模型、四大二埠受控源放大器組態、多級串接負載效應計算與單時間常數 (STC) 頻率響應波德圖。
     link: /electronics/
     linkText: 進入科目
-  - icon: 🔌
+  - icon: Circuits
     title: 電路學 (Electric Circuit Theory)
     details: 星形-三角形 (Y-Δ) 外端等效互換第一原理推導、平衡對稱與電導對偶性、超節點浮動電壓源分析與拘束方程式。
     link: /circuits/
     linkText: 進入科目
-  - icon: 📐
+  - icon: Math
     title: 工程數學 (Engineering Mathematics)
     details: 一階非正合 ODE Euler 正合檢驗、單變數積分因子生成原理、常見微分分組湊微分速算法與全微分勢函數構造。
     link: /engineering-math/
@@ -50,10 +50,10 @@ features:
 
 | 科目名稱 | 路由前綴 | 狀態 | 核心特色與內容 |
 | :--- | :--- | :--- | :--- |
-| **⚛️ 固態電子導論** | [`/solid-state/`](/solid-state/) | 🟢 已上線 (Active) | 3D WebGL 晶格視覺化、長晶製程、KaTeX 嚴密推導 |
-| **⚡ 電子學** | [`/electronics/`](/electronics/) | 🟢 已上線 (Active) | 二埠等效模型、多級串接負載效應、STC 頻率響應 |
-| **🔌 電路學** | [`/circuits/`](/circuits/) | 🟢 已上線 (Active) | Y-Δ 外端等效推導、超節點高斯面包絡、電導對偶性 |
-| **📐 工程數學** | [`/engineering-math/`](/engineering-math/) | 🟢 已上線 (Active) | 一階 ODE 積分因子法、Euler 正合判定、湊微分速算 |
+| **Solid-State 固態電子導論** | [`/solid-state/`](/solid-state/) | Status 已上線 (Active) | 3D WebGL 晶格視覺化、長晶製程、KaTeX 嚴密推導 |
+| **Electronics 電子學** | [`/electronics/`](/electronics/) | Status 已上線 (Active) | 二埠等效模型、多級串接負載效應、STC 頻率響應 |
+| **Circuits 電路學** | [`/circuits/`](/circuits/) | Status 已上線 (Active) | Y-Δ 外端等效推導、超節點高斯面包絡、電導對偶性 |
+| **Math 工程數學** | [`/engineering-math/`](/engineering-math/) | Status 已上線 (Active) | 一階 ODE 積分因子法、Euler 正合判定、湊微分速算 |
 
 </div>
 

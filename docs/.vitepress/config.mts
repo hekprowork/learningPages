@@ -12,16 +12,16 @@ export default defineConfig({
     math: true
   },
   themeConfig: {
-    siteTitle: '📚 學習筆記庫',
+    siteTitle: 'Library 學習筆記庫',
     nav: [
       { text: '首頁', link: '/' },
       {
-        text: '📚 選擇科目',
+        text: 'Library 選擇科目',
         items: [
-          { text: '⚛️ 固態電子導論 (Solid-State)', link: '/solid-state/' },
-          { text: '⚡ 電子學 (Electronics)', link: '/electronics/' },
-          { text: '🔌 電路學 (Circuits)', link: '/circuits/' },
-          { text: '📐 工程數學 (Engineering Math)', link: '/engineering-math/' }
+          { text: 'Solid-State 固態電子導論 (Solid-State)', link: '/solid-state/' },
+          { text: 'Electronics 電子學 (Electronics)', link: '/electronics/' },
+          { text: 'Circuits 電路學 (Circuits)', link: '/circuits/' },
+          { text: 'Math 工程數學 (Engineering Math)', link: '/engineering-math/' }
         ]
       },
       { text: 'GitHub', link: 'https://github.com/hekprowork/learningPages' }
