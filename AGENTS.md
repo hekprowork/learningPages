@@ -4,7 +4,7 @@ Welcome to the **固態電子導論** project! This repository contains course m
 
 ---
 
-## 🚨 4 Core Project Rules
+## 🚨 5 Core Project Rules
 
 ### 1. Secret Token Protection
 - **Never** commit API keys, personal access tokens, credentials, or `.env` secrets into the repository.
@@ -21,6 +21,10 @@ Welcome to the **固態電子導論** project! This repository contains course m
 ### 4. 3D Canvas (`<CrystalViewer />`) Component Usage
 - Interactive crystal lattice and semiconductor device visualizations are powered by Three.js wrapped in Vue components (e.g., `<CrystalViewer />`).
 - Ensure all 3D components safely handle client-side mounting (`if (typeof window !== 'undefined')`) to prevent SSR window/canvas errors during VitePress builds.
+
+### 5. KaTeX 數學公式自主檢查與語法規範 (Autonomous KaTeX Syntax Validation)
+- In-line math syntax `$...$` and block math `$$...$$` validation.
+- Autonomous error checking during build (ensuring no unescaped `$` in regular prose, no broken LaTeX environments).
 
 ---
 
