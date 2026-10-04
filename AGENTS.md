@@ -130,3 +130,26 @@ docs/
 - **Framework**: VitePress (`docs/` directory)
 - **Base URL**: `base: '/learningPages/'`（對應 GitHub Pages 倉庫路徑）
 - **CI/CD**: GitHub Actions workflow 在每次 push 至 `main` 分支時自動建置並部署至 GitHub Pages。
+
+### 📤 提交與推送 SOP（防止漏 `git add`）
+
+> 本機 build 會讀到未追蹤檔案，因此「本機 build 通過 ≠ CI 通過」。必須依序完成以下三道檢查。
+
+1. **按目錄加入，禁止逐檔列名**：
+   ```bash
+   git add -A docs/
+   git status --porcelain   # 必須無輸出才可 push
+   ```
+2. **以乾淨副本模擬 CI 建置**（僅含已 commit 內容）：
+   ```bash
+   rm -rf /tmp/lp-check && git worktree add /tmp/lp-check HEAD \
+     && (cd /tmp/lp-check && npm ci && npx vitepress build docs); \
+     git worktree remove --force /tmp/lp-check
+   ```
+3. **推送後驗證 CI 與線上網址**：
+   ```bash
+   gh run watch --exit-status $(gh run list --limit 1 --json databaseId -q '.[0].databaseId')
+   curl -s -o /dev/null -w "%{http_code}\n" https://hekprowork.github.io/learningPages/<新頁面路徑>.html   # 須為 200
+   ```
+- `.git/hooks/pre-push` 會自動阻擋 `docs/` 下有未追蹤 `.md` 的推送。
+- 委派子代理推送時，Prompt 須明確要求執行上述三步並回報 CI 結果與 HTTP 狀態碼。
