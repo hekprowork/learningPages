@@ -106,12 +106,12 @@ export default defineConfig({
           ]
         },
         {
-          text: '⚡ 互動式題庫練習系統 (Interactive Practice Workbooks)',
+          text: '互動式題庫練習系統 (Interactive Practice Workbooks)',
           collapsed: false,
           items: [
-            { text: 'Chapter 1: 互動式範例與練習題庫', link: '/circuits/Chapter1_Examples_Practice.html', target: '_self' },
-            { text: 'Chapter 2: 互動式範例與練習題庫', link: '/circuits/Chapter2_Examples_Practice.html', target: '_self' },
-            { text: 'Chapter 3: 互動式範例與練習題庫', link: '/circuits/Chapter3_Examples_Practice.html', target: '_self' }
+            { text: 'Chapter 1: 互動式範例與練習題庫', link: '/circuits/practice/0001-chapter1-examples' },
+            { text: 'Chapter 2: 互動式範例與練習題庫', link: '/circuits/practice/0002-chapter2-examples' },
+            { text: 'Chapter 3: 互動式範例與練習題庫', link: '/circuits/practice/0003-chapter3-examples' }
           ]
         }
       ],

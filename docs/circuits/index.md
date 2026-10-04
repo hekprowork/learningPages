@@ -22,11 +22,11 @@
 - [001: 星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊 (Wye-Delta Reference)](/circuits/chapter3/001-wye-delta-reference)
 - [002: 超節點分析法 (Supernode Analysis) 核心速查手冊 (Supernode Reference)](/circuits/chapter3/002-supernode-reference)
 
-### ⚡ [互動式題庫練習系統 (Interactive Practice Workbooks)](/circuits/Chapter1_Examples_Practice.html){target="_self"}
+### [互動式題庫練習系統 (Interactive Practice Workbooks)](/circuits/practice/0001-chapter1-examples)
 *搭載 Hallmark 互動設計、KaTeX 數學公式與詳細圖解之各章題庫與範例練習。*
-- [Chapter 1: Basic Concepts 互動題庫](/circuits/Chapter1_Examples_Practice.html){target="_self"}
-- [Chapter 2: Basic Laws 互動題庫](/circuits/Chapter2_Examples_Practice.html){target="_self"}
-- [Chapter 3: Nodal & Mesh Analysis 互動題庫](/circuits/Chapter3_Examples_Practice.html){target="_self"}
+- [Chapter 1: Basic Concepts 互動題庫](/circuits/practice/0001-chapter1-examples)
+- [Chapter 2: Basic Laws 互動題庫](/circuits/practice/0002-chapter2-examples)
+- [Chapter 3: Nodal & Mesh Analysis 互動題庫](/circuits/practice/0003-chapter3-examples)
 
 ---
 

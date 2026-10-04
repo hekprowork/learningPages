@@ -35,3 +35,18 @@
 
 ### 4. 路由與超連結規範
 - 模組內部所有超連結必須使用絕對路徑 `/circuits/...`。
+
+### 5. 頁面產生流程 (Page Generation)
+
+所有頁面一律是 `.md` + 主題 Vue 元件；不產出獨立 `.html`（不會被 VitePress 部署）。
+
+| 使用者說 | 產出 | 流程 |
+|---|---|---|
+| **例題網頁**（例題、Example、Practice Problem、題庫） | `practice/000x-chapterN-examples.md`，每題一張 `<PracticeCard>` | 讀取並遵循 `extract-course-problems` skill（`~/.gemini/config/skills/extract-course-problems/SKILL.md`） |
+| **教學網頁**（教學、講義、觀念、lesson） | `chapter1/000x-<topic>.md` | 下列步驟 |
+
+教學網頁步驟：
+1. 以課本 PDF 為來源，依序寫：直覺動機 → 定義 → 推導 → 1–2 個示範例題 → 常見錯誤。
+2. 抽象或可調參數的觀念（分壓、Y-Δ、暫態）用 Vue 互動元件嵌入，放 `docs/.vitepress/theme/components/`，DOM/canvas 存取只寫在 `onMounted`。
+3. 同步新增 `chapter3/` 速查卡條目與 sidebar、`index.md` 連結。
+4. 完成條件與例題網頁相同：`rm -rf docs/.vitepress/dist && npx vitepress build docs` 通過，推送後線上網址可開啟才算完成。
