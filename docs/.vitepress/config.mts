@@ -11,7 +11,6 @@ export default defineConfig({
   markdown: {
     math: true
   },
-  ignoreDeadLinks: true,
   themeConfig: {
     siteTitle: 'Library 學習筆記庫',
     nav: [
