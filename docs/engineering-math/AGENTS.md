@@ -1,6 +1,6 @@
 # 工程數學 (Engineering Mathematics) - Subject Guidelines
 
-This file defines the domain rules and conventions for the **工程數學 (Engineering Mathematics)** subject module within the Multi-Subject monorepo.
+> **Context Pointer**: 請參閱根目錄 AGENTS.md 以了解全域核心規範（Monorepo 架構、純黑白圖標原則、PDF 優先來源、多媒體嵌入規範與建置驗證指令）。
 
 ---
 
@@ -19,19 +19,18 @@ This file defines the domain rules and conventions for the **工程數學 (Engin
   - `chapter3/`: 核心公式速查表 (Reference Cheatsheets)
 - 檔案命名必須遵循：`000x-name.md`（例如 `0001-integrating-factor-method.md`），以保證側邊欄與文件序列的一致性。
 
-### 2. KaTeX 數學公式嚴格驗證
+### 2. 符號標準與公式推導排版規範 (Notation & Derivation Standards)
+- **微分算子與符號**：使用標準數學符號（如 $y', y'', \frac{dy}{dx}, \nabla, \mathcal{L}\{f(t)\}$）。
+- **核心主題公式標準**：
+  - 常微分方程（ODE）：分離變數法、齊次/非齊次線性 ODE、參數變異法、高階常係數 ODE。
+  - 線性代數：矩陣運算、行列式、特徵值與特徵向量、對角化。
+  - 拉普拉斯轉換與偏微分方程式（PDE）：初值問題求解、分離變數法解熱傳方程式與波動方程式。
+- **排版要求**：複雜運算過程與多行公式推導一律使用 `$$\begin{aligned} ... \end{aligned}$$` 進行對齊與排版。
+
+### 3. KaTeX 數學公式驗證與建置檢查
 - 行內公式使用 `$...$`，區塊公式使用 `$$...$$`。
-- 文本中嚴格禁止出現未轉義的孤立 `$` 符號（應使用 `\$` 或 backticks \`$\`）。
-- 每次更動必須通過 `npx vitepress build docs` 確保無 KaTeX 語法錯誤。
+- 文本中避免未轉義的孤立 `$` 符號（應使用 `\$` 或 backticks \`$\`）。
+- 每次更動後必須執行 `npx vitepress build docs` 確保無 KaTeX 語法與建置錯誤。
 
-### 3. 路由與超連結規範
-- 模組內部所有超連結必須使用絕對路徑 `/engineering-math/...`，禁止使用相對路徑逃逸或無前綴的路徑。
-
-
-## 核心專案規範
-
-### Rule: 禁止使用非黑白 ICON (Monochrome Icon Only)
-- 嚴禁使用彩色 Emoji 或非黑白圖標。全站一律採用純黑白/單色 (Black & White / Monochrome) 圖標或純文字標籤，確保排版簡約專業一致。
-
-### Rule: PDF 檔案為最高優先資料來源 (PDF-First as Primary Source)
-- 撰寫、補充與推導所有課程講義、筆記、例題與速查表時，必須以本地課本/教材之原始 PDF 檔案為最優先、最高權威的第一手資料來源（Primary Source of Truth）。
+### 4. 路由與超連結規範
+- 模組內部所有超連結必須使用絕對路徑 `/engineering-math/...`。

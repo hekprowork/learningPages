@@ -43,34 +43,42 @@ docs/
 
 ---
 
-## 核心專案規範
-### Rule: 禁止使用非黑白 ICON (Monochrome Icon Only)
-- 嚴禁使用彩色 Emoji 或非黑白圖標。全站一律採用純黑白/單色 (Black & White / Monochrome) 圖標或純文字標籤，確保排版簡約專業一致。
+## 核心專案規範 (Core Project Principles)
 
-### Rule: PDF 檔案為最高優先資料來源 (PDF-First as Primary Source)
-- 撰寫、補充與推導所有課程講義、筆記、例題與速查表時，必須以本地課本/教材之原始 PDF 檔案為最優先、最高權威的第一手資料來源（Primary Source of Truth）。
- (Core Project Rules)
+### 1. 純黑白單色圖標原則 (Monochrome Icon Design)
+- 採用純黑白與單色（Black & White / Monochrome）圖標或純文字標籤，確保全站視覺排版簡約專業且風格一致。
 
-### 1. Secret Token Protection
-- **Never** commit API keys, personal access tokens, credentials, or `.env` secrets into the repository.
-- Always use environment variables or local mock fallbacks for sensitive configurations.
+### 2. PDF 優先資料來源原則 (PDF-First as Primary Source of Truth)
+- 撰寫、補充與推導所有課程講義、筆記、例題與速查表時，優先採用本地課本與教材之原始 PDF 檔案作為最高權威的第一手資料來源。
 
-### 2. Large PDF & `.gitignore` Management
-- **Never** commit large binary files such as large textbooks or course PDFs (e.g., `*.pdf`) directly into Git.
-- Ensure `.gitignore` properly excludes build outputs, dependency directories, environment files, and local PDF files.
+### 3. 高質量多媒體嵌入規範 (Strategic Video Embedding)
+- **嵌入時機**：當遇到高度抽象、動態物理過程、3D 空間幾何或實驗量測時，適時嵌入高質量的教學或動畫影片以降低認知負荷。
+- **排版與語法規範**：
+  - 統一使用 16:9 響應式容器包覆 `iframe`，並優先採用無追蹤網址 `https://www.youtube-nocookie.com/embed/<VIDEO_ID>`。
+  - 影片前後須附帶簡要導讀與重點時間標籤（Timestamps），作為文字說明的延伸與視覺強化。
+  - 標準嵌入語法：
+    ```html
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 1.5rem 0; border-radius: 8px;">
+      <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="影片說明" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    ```
 
-### 3. 多科目路徑命名空間與章節命名規範
-- 每個科目必須有自己的獨立目錄：`docs/<subject-slug>/`。
-- 章節檔案必須遵循嚴格編號命名慣例：`000x-name.md`（例如 `0001-miller-indices.md`）。
-- 內部超連結一律使用帶有科目路徑前綴的絕對路徑（如 `/solid-state/chapter1/0001-miller-indices`）。
+### 4. 資訊安全與版本控制防護 (Secret Token & Ignore Management)
+- 嚴禁將 API 金鑰、個人存取權杖、認證憑證或 `.env` 機密檔案提交至版本控制庫中。
+- 確實設定 `.gitignore` 以排除建置產物、依賴目錄、環境設定檔與機密 PDF 檔案。
 
-### 4. 互動元件安全掛載 (Interactive Components & SSR Safety)
-- 互動式 3D 模擬元件（如 Three.js `<CrystalViewer />`）或其他 DOM 依賴元件必須確保 client-side 渲染安全性（使用 `if (typeof window !== 'undefined')` 或 Vue `onMounted` 生命週期），以防止 VitePress build 時發生 SSR 錯誤。
+### 5. 多科目路徑命名空間與章節命名規範 (Path & Chapter Naming)
+- 每個科目維持獨立目錄：`docs/<subject-slug>/`。
+- 章節檔案遵循嚴格編號命名慣例：`000x-name.md`（例如 `0001-miller-indices.md`）。
+- 內部超連結統一使用帶有科目路徑前綴的絕對路徑（如 `/solid-state/chapter1/0001-miller-indices`）。
 
-### 5. KaTeX 數學公式自主檢查 (Autonomous KaTeX Syntax Validation)
+### 6. 互動元件安全掛載原則 (SSR Safety for Interactive Components)
+- 互動式 3D 模擬元件（如 Three.js `<CrystalViewer />`）或其他 DOM 依賴元件確保 client-side 渲染安全性（透過 `if (typeof window !== 'undefined')` 或 Vue `onMounted` 生命週期），以防止 VitePress build 時發生 SSR 錯誤。
+
+### 7. KaTeX 數學公式自主檢查與驗證 (KaTeX Validation & Build Check)
 - 行內公式使用 `$...$`，區塊公式使用 `$$...$$`。
-- 自主驗證 LaTeX 語法，禁止在一般文字中出現未轉義的孤立 `$` 符號。
-- 任何變更均須通過 `npx vitepress build docs` 檢查。
+- 自主驗證 LaTeX 語法，避免未轉義的孤立 `$` 符號。
+- **驗收檢查指令**：每次變更後必須執行 `npx vitepress build docs` 進行自動化建置與語法驗證。
 
 ---
 

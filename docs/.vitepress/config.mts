@@ -11,6 +11,7 @@ export default defineConfig({
   markdown: {
     math: true
   },
+  ignoreDeadLinks: true,
   themeConfig: {
     siteTitle: 'Library 學習筆記庫',
     nav: [
@@ -103,6 +104,15 @@ export default defineConfig({
           items: [
             { text: '001: 星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊', link: '/circuits/chapter3/001-wye-delta-reference' },
             { text: '002: 超節點分析法 (Supernode Analysis) 核心速查手冊', link: '/circuits/chapter3/002-supernode-reference' }
+          ]
+        },
+        {
+          text: '⚡ 互動式題庫練習系統 (Interactive Practice Workbooks)',
+          collapsed: false,
+          items: [
+            { text: 'Chapter 1: 互動式範例與練習題庫', link: '/circuits/Chapter1_Examples_Practice.html' },
+            { text: 'Chapter 2: 互動式範例與練習題庫', link: '/circuits/Chapter2_Examples_Practice.html' },
+            { text: 'Chapter 3: 互動式範例與練習題庫', link: '/circuits/Chapter3_Examples_Practice.html' }
           ]
         }
       ],
