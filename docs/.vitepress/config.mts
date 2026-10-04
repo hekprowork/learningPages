@@ -85,7 +85,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '0001: 星形 (Y) 與等效三角形 (Δ) 網路互換原理與推導', link: '/circuits/chapter1/0001-wye-delta-transformation' },
-            { text: '0002: 超節點分析法 (Supernode Analysis) 的原理與實戰破解', link: '/circuits/chapter1/0002-supernode-analysis' }
+            { text: '0002: 超節點分析法 (Supernode Analysis) 的原理與實戰破解', link: '/circuits/chapter1/0002-supernode-analysis' },
+            { text: '0003: 網孔分析法 (Mesh Analysis) 與超網孔的原理與實戰破解', link: '/circuits/chapter1/0003-mesh-analysis' }
           ]
         },
         {
@@ -94,7 +95,8 @@ export default defineConfig({
           items: [
             { text: '0001: 星形與三角形網路等效互換原理與幾何對偶', link: '/circuits/chapter2/0001-wye-delta-transformation-principle' },
             { text: '0002: 開路測試在三端網路等效推導中的數學與物理合法性', link: '/circuits/chapter2/0002-open-circuit-terminal-equivalence-validity' },
-            { text: '0003: 超節點分析法的物理包絡原理與拘束方程式架構', link: '/circuits/chapter2/0003-supernode-nodal-analysis-principle' }
+            { text: '0003: 超節點分析法的物理包絡原理與拘束方程式架構', link: '/circuits/chapter2/0003-supernode-nodal-analysis-principle' },
+            { text: '0004: 網孔電流法的平面拓撲本質與超網孔迴路獨立性推導', link: '/circuits/chapter2/0004-mesh-supermesh-principle' }
           ]
         },
         {
@@ -102,7 +104,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '001: 星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊', link: '/circuits/chapter3/001-wye-delta-reference' },
-            { text: '002: 超節點分析法 (Supernode Analysis) 核心速查手冊', link: '/circuits/chapter3/002-supernode-reference' }
+            { text: '002: 超節點分析法 (Supernode Analysis) 核心速查手冊', link: '/circuits/chapter3/002-supernode-reference' },
+            { text: '003: 網孔分析法 (Mesh Analysis) 與超網孔核心速查手冊', link: '/circuits/chapter3/003-mesh-reference' }
           ]
         },
         {
