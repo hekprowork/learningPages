@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .card { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1.5; rx: 12px; }
+      .title { font-family: system-ui, -apple-system, sans-serif; font-size: 17px; font-weight: 700; fill: #0f172a; text-anchor: middle; }
+      .subtitle { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 500; fill: #64748b; text-anchor: middle; }
+      .node-text { font-family: system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 700; fill: #1e293b; }
+      .res-label { font-family: 'Times New Roman', serif; font-size: 17px; font-weight: 700; font-style: italic; }
+      .res-label-wye { fill: #0284c7; }
+      .res-label-delta { fill: #d97706; }
+      .wire-wye { stroke: #0284c7; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-delta { stroke: #d97706; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-overlay-wye { stroke: #0284c7; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-overlay-delta { stroke: #d97706; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 4,4; }
+      .node-dot { fill: #0f172a; stroke: #ffffff; stroke-width: 2; }
+      .neutral-dot { fill: #0284c7; stroke: #ffffff; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Panel 1: Wye Network -->
+  <rect x="15" y="15" width="280" height="370" class="card" />
+  <text x="155" y="48" class="title">星形網路 (Y / T)</text>
+  <text x="155" y="72" class="subtitle">三臂連接中央中性點 n</text>
+
+  <polyline points="155.0,110.0 155.0,130.0 147.0,136.7 163.0,150.0 147.0,163.3 163.0,176.7 147.0,190.0 163.0,203.3 155.0,210.0 155.0,230.0" class="wire-wye" />
+  <polyline points="75.0,310.0 89.1,295.9 99.1,297.2 96.4,277.3 116.3,280.0 113.7,260.0 133.6,262.7 130.9,242.8 140.9,244.1 155.0,230.0" class="wire-wye" />
+  <polyline points="235.0,310.0 220.9,295.9 222.2,285.9 202.3,288.6 205.0,268.7 185.0,271.3 187.7,251.4 167.8,254.1 169.1,244.1 155.0,230.0" class="wire-wye" />
+  
+  <!-- Nodes -->
+  <circle cx="155" cy="110" r="5" class="node-dot" />
+  <circle cx="75" cy="310" r="5" class="node-dot" />
+  <circle cx="235" cy="310" r="5" class="node-dot" />
+  <circle cx="155" cy="230" r="4" class="neutral-dot" />
+  
+  <text x="155" y="98" class="node-text" text-anchor="middle">a</text>
+  <text x="61" y="316" class="node-text" text-anchor="end">b</text>
+  <text x="249" y="316" class="node-text" text-anchor="start">c</text>
+  <text x="167" y="235" class="node-text" fill="#0284c7" font-size="13">n</text>
+  
+  <text x="175" y="170" class="res-label res-label-wye">R₁</text>
+  <text x="95" y="260" class="res-label res-label-wye">R₂</text>
+  <text x="205" y="260" class="res-label res-label-wye">R₃</text>
+  
+  <text x="155" y="360" class="subtitle" font-weight="600" fill="#0284c7">R₁, R₂, R₃ 連向外端 a, b, c</text>
+
+  <!-- Panel 2: Delta Network -->
+  <rect x="320" y="15" width="280" height="370" class="card" />
+  <text x="460" y="48" class="title">三角形網路 (Δ / Π)</text>
+  <text x="460" y="72" class="subtitle">三邊連於端點，下標對應正對頂點</text>
+
+  <polyline points="460.0,110.0 450.7,133.2 438.2,143.0 442.8,174.6 417.7,194.2 422.3,225.8 397.2,245.4 401.8,277.0 389.3,286.8 380.0,310.0" class="wire-delta" />
+  <polyline points="460.0,110.0 469.3,133.2 467.0,149.0 492.1,168.6 487.5,200.2 512.5,219.8 507.9,251.4 533.0,271.0 530.7,286.8 540.0,310.0" class="wire-delta" />
+  <polyline points="380.0,310.0 405.0,310.0 414.2,318.0 432.5,302.0 450.8,318.0 469.2,302.0 487.5,318.0 505.8,302.0 515.0,310.0 540.0,310.0" class="wire-delta" />
+  
+  <!-- Nodes -->
+  <circle cx="460" cy="110" r="5" class="node-dot" />
+  <circle cx="380" cy="310" r="5" class="node-dot" />
+  <circle cx="540" cy="310" r="5" class="node-dot" />
+  
+  <text x="460" y="98" class="node-text" text-anchor="middle">a</text>
+  <text x="366" y="316" class="node-text" text-anchor="end">b</text>
+  <text x="554" y="316" class="node-text" text-anchor="start">c</text>
+  
+  <text x="400" y="200" class="res-label res-label-delta">R_c</text>
+  <text x="515" y="200" class="res-label res-label-delta">R_b</text>
+  <text x="460" y="338" class="res-label res-label-delta" text-anchor="middle">R_a</text>
+  
+  <text x="460" y="360" class="subtitle" font-weight="600" fill="#d97706">R_a 正對 a；R_b 正對 b；R_c 正對 c</text>
+
+  <!-- Panel 3: Superimposed Overlay -->
+  <rect x="625" y="15" width="280" height="370" class="card" />
+  <text x="765" y="48" class="title">等效疊合對照圖 (Overlay)</text>
+  <text x="765" y="72" class="subtitle">外圍 Δ 與 內部 Y 的幾何相對關係</text>
+
+  <!-- Delta Outer (Dashed) -->
+  <polyline points="765.0,110.0 755.7,133.2 743.2,143.0 747.8,174.6 722.7,194.2 727.3,225.8 702.2,245.4 706.8,277.0 694.3,286.8 685.0,310.0" class="wire-overlay-delta" />
+  <polyline points="765.0,110.0 774.3,133.2 772.0,149.0 797.1,168.6 792.5,200.2 817.5,219.8 812.9,251.4 838.0,271.0 835.7,286.8 845.0,310.0" class="wire-overlay-delta" />
+  <polyline points="685.0,310.0 710.0,310.0 719.2,318.0 737.5,302.0 755.8,318.0 774.2,302.0 792.5,318.0 810.8,302.0 820.0,310.0 845.0,310.0" class="wire-overlay-delta" />
+  
+  <!-- Wye Inner (Solid) -->
+  <polyline points="765.0,110.0 765.0,130.0 758.0,136.7 772.0,150.0 758.0,163.3 772.0,176.7 758.0,190.0 772.0,203.3 765.0,210.0 765.0,230.0" class="wire-overlay-wye" />
+  <polyline points="685.0,310.0 699.1,295.9 708.4,296.5 707.1,278.0 725.6,279.3 724.4,260.7 742.9,262.0 741.6,243.5 750.9,244.1 765.0,230.0" class="wire-overlay-wye" />
+  <polyline points="845.0,310.0 830.9,295.9 831.5,286.6 813.0,287.9 814.3,269.4 795.7,270.6 797.0,252.1 778.5,253.4 779.1,244.1 765.0,230.0" class="wire-overlay-wye" />
+  
+  <!-- Nodes -->
+  <circle cx="765" cy="110" r="5" class="node-dot" />
+  <circle cx="685" cy="310" r="5" class="node-dot" />
+  <circle cx="845" cy="310" r="5" class="node-dot" />
+  <circle cx="765" cy="230" r="4" class="neutral-dot" />
+  
+  <text x="765" y="98" class="node-text" text-anchor="middle">a</text>
+  <text x="671" y="316" class="node-text" text-anchor="end">b</text>
+  <text x="859" y="316" class="node-text" text-anchor="start">c</text>
+  
+  <!-- Labels -->
+  <text x="780" y="170" class="res-label res-label-wye" font-size="14">R₁</text>
+  <text x="715" y="250" class="res-label res-label-wye" font-size="14">R₂</text>
+  <text x="805" y="250" class="res-label res-label-wye" font-size="14">R₃</text>
+  
+  <text x="705" y="195" class="res-label res-label-delta" font-size="14">R_c</text>
+  <text x="820" y="195" class="res-label res-label-delta" font-size="14">R_b</text>
+  <text x="765" y="338" class="res-label res-label-delta" font-size="14" text-anchor="middle">R_a</text>
+  
+  <text x="765" y="360" class="subtitle" font-weight="600" fill="#475569">端點 a, b, c 外端電壓電流完全等效</text>
+</svg>

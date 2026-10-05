@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="100%" height="100%">
+  <defs>
+    <style>
+      .card { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1.5; rx: 12px; }
+      .title { font-family: system-ui, -apple-system, sans-serif; font-size: 17px; font-weight: 700; fill: #0f172a; text-anchor: middle; }
+      .subtitle { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 500; fill: #64748b; text-anchor: middle; }
+      .formula-box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 8px; }
+      .node-text { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #1e293b; }
+      .res-label { font-family: 'Times New Roman', serif; font-size: 16px; font-weight: 700; font-style: italic; }
+      .wire-normal { stroke: #cbd5e1; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-hl-delta { stroke: #d97706; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-hl-wye { stroke: #0284c7; stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-dash { stroke: #94a3b8; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 4,4; }
+      .arrow { stroke: #ef4444; stroke-width: 2; fill: none; stroke-dasharray: 3,3; marker-end: url(#arrowhead); }
+      .node-dot { fill: #0f172a; stroke: #ffffff; stroke-width: 2; }
+      .node-hl { fill: #ef4444; stroke: #ffffff; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#ef4444" />
+    </marker>
+  </defs>
+
+  <!-- Left Card: Delta to Wye -->
+  <rect x="15" y="15" width="415" height="350" class="card" />
+  <text x="222" y="45" class="title">1. Δ → Y 幾何口訣直覺</text>
+  <text x="222" y="68" class="subtitle">「相鄰兩邊之積 ÷ 三邊總和」</text>
+
+  <!-- Delta Lines (Rc and Rb highlighted) -->
+  <polyline points="222.0,100.0 212.6,117.6 200.4,123.4 204.4,150.1 180.0,161.7 184.0,188.3 159.6,199.9 163.6,226.6 151.4,232.4 142.0,250.0" class="wire-hl-delta" />
+  <polyline points="222.0,100.0 231.4,117.6 229.5,131.0 253.8,142.6 249.8,169.2 274.2,180.8 270.2,207.4 294.5,219.0 292.6,232.4 302.0,250.0" class="wire-hl-delta" />
+  <polyline points="142.0,250.0 162.0,250.0 172.0,257.0 192.0,243.0 212.0,257.0 232.0,243.0 252.0,257.0 272.0,243.0 282.0,250.0 302.0,250.0" class="wire-normal" />
+  
+  <!-- Wye Lines (R1 highlighted) -->
+  <polyline points="222.0,100.0 222.0,115.0 214.0,120.0 230.0,130.0 214.0,140.0 230.0,150.0 214.0,160.0 230.0,170.0 222.0,175.0 222.0,190.0" class="wire-hl-wye" />
+  <polyline points="142.0,250.0 154.0,241.0 162.3,242.3 164.4,225.7 180.9,228.3 183.1,211.7 199.6,214.3 201.7,197.7 210.0,199.0 222.0,190.0" class="wire-dash" />
+  <polyline points="302.0,250.0 290.0,241.0 288.9,232.7 272.4,235.3 270.3,218.7 253.7,221.3 251.6,204.7 235.1,207.3 234.0,199.0 222.0,190.0" class="wire-dash" />
+  
+  <!-- Nodes -->
+  <circle cx="222" cy="100" r="6" class="node-hl" />
+  <circle cx="142" cy="250" r="4" class="node-dot" />
+  <circle cx="302" cy="250" r="4" class="node-dot" />
+  <circle cx="222" cy="190" r="4" class="node-hl" fill="#0284c7" />
+  
+  <text x="222" y="90" class="node-text" fill="#ef4444" text-anchor="middle">節點 a</text>
+  <text x="132" y="254" class="node-text" text-anchor="end">b</text>
+  <text x="312" y="254" class="node-text" text-anchor="start">c</text>
+  
+  <text x="160" y="165" class="res-label" fill="#d97706">R_c (相鄰)</text>
+  <text x="245" y="165" class="res-label" fill="#d97706">R_b (相鄰)</text>
+  <text x="240" y="135" class="res-label" fill="#0284c7">R₁</text>
+  <text x="222" y="270" class="res-label" fill="#94a3b8" text-anchor="middle">R_a</text>
+  
+  <!-- Formula Card -->
+  <rect x="50" y="295" width="345" height="52" class="formula-box" />
+  <text x="222" y="327" font-family="'Times New Roman', serif" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    R₁ = (R_b · R_c) / (R_a + R_b + R_c)
+  </text>
+
+  <!-- Right Card: Wye to Delta -->
+  <rect x="450" y="15" width="415" height="350" class="card" />
+  <text x="657" y="45" class="title">2. Y → Δ 幾何口訣直覺</text>
+  <text x="657" y="68" class="subtitle">「兩兩相乘之和 ÷ 正對面電阻」</text>
+
+  <!-- Delta Lines (Ra highlighted) -->
+  <polyline points="657.0,100.0 647.6,117.6 637.2,124.4 637.6,149.1 616.8,162.6 617.2,187.4 596.4,200.9 596.8,225.6 586.4,232.4 577.0,250.0" class="wire-dash" />
+  <polyline points="657.0,100.0 666.4,117.6 666.2,130.0 687.0,143.5 686.6,168.3 707.4,181.7 707.0,206.5 727.8,220.0 727.6,232.4 737.0,250.0" class="wire-dash" />
+  <polyline points="577.0,250.0 597.0,250.0 607.0,258.0 627.0,242.0 647.0,258.0 667.0,242.0 687.0,258.0 707.0,242.0 717.0,250.0 737.0,250.0" class="wire-hl-delta" />
+  
+  <!-- Wye Lines (R1 opposite highlighted) -->
+  <polyline points="657.0,100.0 657.0,115.0 649.0,120.0 665.0,130.0 649.0,140.0 665.0,150.0 649.0,160.0 665.0,170.0 657.0,175.0 657.0,190.0" class="wire-hl-wye" />
+  <polyline points="577.0,250.0 589.0,241.0 597.9,243.1 598.8,224.9 616.5,229.1 617.5,210.9 635.2,215.1 636.1,196.9 645.0,199.0 657.0,190.0" class="wire-wye" />
+  <polyline points="737.0,250.0 725.0,241.0 724.5,231.9 706.8,236.1 705.9,217.9 688.1,222.1 687.2,203.9 669.5,208.1 669.0,199.0 657.0,190.0" class="wire-wye" />
+  
+  <!-- Arrow from Ra pointing to opposite R1 -->
+  <path d="M 657,240 L 657,145" class="arrow" />
+  <text x="665" y="175" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">正對面</text>
+  
+  <!-- Nodes -->
+  <circle cx="657" cy="100" r="4" class="node-dot" />
+  <circle cx="577" cy="250" r="4" class="node-dot" />
+  <circle cx="737" cy="250" r="4" class="node-dot" />
+  <circle cx="657" cy="190" r="4" class="node-dot" fill="#0284c7" />
+  
+  <text x="657" y="90" class="node-text" text-anchor="middle">a</text>
+  <text x="567" y="254" class="node-text" text-anchor="end">b</text>
+  <text x="747" y="254" class="node-text" text-anchor="start">c</text>
+  
+  <text x="675" y="135" class="res-label" fill="#0284c7">R₁ (正對面)</text>
+  <text x="600" y="215" class="res-label" fill="#0284c7" font-size="14">R₂</text>
+  <text x="705" y="215" class="res-label" fill="#0284c7" font-size="14">R₃</text>
+  <text x="657" y="275" class="res-label" fill="#d97706" text-anchor="middle">R_a (求此邊)</text>
+  
+  <!-- Formula Card -->
+  <rect x="485" y="295" width="345" height="52" class="formula-box" />
+  <text x="657" y="327" font-family="'Times New Roman', serif" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    R_a = (R₁R₂ + R₂R₃ + R₃R₁) / R₁
+  </text>
+</svg>

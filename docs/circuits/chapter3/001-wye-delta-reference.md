@@ -4,6 +4,8 @@
 
 ## 一、 網路拓撲與標準命名慣例 (Topology & Conventions)
 
+![星形與三角形網路拓撲與標準命名對照圖](../assets/images/wye_delta_topologies.svg)
+
 ### 1. 星形網路 (Y / T Network)
 - 三個外露端點標記為 $a, b, c$，中央連接中性點 $n$。
 - 分支電阻下標對應連向的端點：$R_1$（接 $a$）、$R_2$（接 $b$）、$R_3$（接 $c$）。
@@ -18,6 +20,8 @@
 ---
 
 ## 二、 互換公式與極速解題口訣
+
+![雙向轉換幾何記憶法直覺圖解](../assets/images/wye_delta_conversion_intuition.svg)
 
 ### 1. $\Delta \to \text{Y}$ (三角形轉星形)
 求星形內部分支電阻 $R_1, R_2, R_3$：
@@ -56,6 +60,16 @@ $$R_c = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_3}$$
 
 ## 四、 經典電橋網路 (Bridge Circuit) 標準解題 3 步驟
 
+![非平衡電橋網路化簡 3 步驟圖解](../assets/images/bridge_circuit_wye_delta.svg)
+
 1. **識別阻礙**：檢查電橋對角乘積是否平衡（$R_1 R_4 \stackrel{?}{=} R_2 R_3$）。若不平衡且中間有跨接檢流計/電阻，無法直接以串並聯解析。
 2. **局部轉換**：將上方三角形網孔 $\Delta$ 換成等效星形 $\text{Y}$（或將下方 $\Delta$ 轉換）。
 3. **串並聯秒殺**：轉換後，中性點向下分出兩條獨立支路，電路退化為標準**「兩組串聯再並聯，最後加上頂部電阻」**結構，直接求出總阻抗。
+
+---
+
+## 五、 相關學習資源
+
+- [0001: 星形 (Y) 與等效三角形 (Δ) 網路互換原理與推導 (Lesson)](/circuits/chapter1/0001-wye-delta-transformation)
+- [0001: 星形與三角形網路等效互換原理與幾何對偶 (Learning Record)](/circuits/chapter2/0001-wye-delta-transformation-principle)
+- [0002: 開路測試在三端網路等效推導中的數學與物理合法性 (Learning Record)](/circuits/chapter2/0002-open-circuit-terminal-equivalence-validity)

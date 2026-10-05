@@ -21,6 +21,7 @@
 ### 📝 [互動式題庫練習系統 (Interactive Practice Workbooks)](/electronics/practice/0001-chapter1-examples)
 *搭載 Hallmark 互動設計、KaTeX 數學公式與詳細圖解之各章題庫與範例練習。*
 - [Chapter 1: 訊號與放大器基礎 互動題庫](/electronics/practice/0001-chapter1-examples)
+- [Chapter 2: 運算放大器 互動題庫](/electronics/practice/0002-chapter2-examples)
 
 ---
 
