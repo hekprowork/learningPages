@@ -87,6 +87,8 @@ description: 電子學第一章 訊號與放大器基礎 (Signals and Amplifiers
 2. 試求兩種形式在輸出端短路（wired together）時流經短路導線之電流 $i_{sc}$ 各為何？
 3. 為了使兩種電路在外端完全等效，其參數 $v_s(t)$、$i_s(t)$ 與 $R_s$ 之間必須滿足何種代數關係？
 
+![Figure 1.1 Two alternative representations of a signal source](../assets/images/fig_1_1_signal_sources.png)
+
 > **求解目標**：外端等效性 (Terminal Equivalence) 驗證與雙向轉換拘束式。
 
 <template #solution>
@@ -135,6 +137,8 @@ description: 電子學第一章 訊號與放大器基礎 (Signals and Amplifiers
 某一感測訊號源經儀器量測，其開路端電壓為 $10\text{ mV}$，而短路輸出電流為 $10\ \mu\text{A}$。
 
 試問該訊號源的輸出內阻 $R_s$ 為多少歐姆（$\Omega$）？
+
+![Figure 1.1 Two alternative representations of a signal source](../assets/images/fig_1_1_signal_sources.png)
 
 > **求解目標**：求訊號源內阻 $R_s$。
 
@@ -305,6 +309,8 @@ $$R_s = 1\text{ k}\Omega$$
 1. 傳送至負載電阻的平均訊號功率 $P_L$
 2. 該放大器的直流功率轉換效率 $\eta$
 
+![Amplifier DC Power Supplies](../assets/images/ex_1_2_circuit.png)
+
 > **求解目標**：峰對峰弦波訊號功率換算與單電源功率轉換效率。
 
 <template #solution>
@@ -428,6 +434,8 @@ $$R_s = 1\text{ k}\Omega$$
 1. 試計算此時系統的整體電壓增益 $G_v = \frac{v_L}{v_s}$ 為多少 $\text{V/V}$？
 2. 增益相較於原三級電路（$743.6\text{ V/V}$）衰減了幾倍？這說明了緩衝級具有何種關鍵工程價值？
 
+![Example 1.3 Three-Stage Cascaded Amplifier](../assets/images/ex_1_3_circuit.png)
+
 > **求解目標**：重負載（小阻抗 $R_L$）直接掛載於高輸出阻抗放大級時之嚴重負載效應。
 
 <template #solution>
@@ -470,6 +478,8 @@ $$R_s = 1\text{ k}\Omega$$
 2. 第二級輸入端電壓 $v_{i2}$
 3. 第三級輸入端電壓 $v_{i3}$
 4. 負載端輸出電壓 $v_L$
+
+![Example 1.3 Three-Stage Cascaded Amplifier](../assets/images/ex_1_3_circuit.png)
 
 > **求解目標**：多級放大器之訊號逐級推進與動態範圍評估。
 
@@ -592,6 +602,8 @@ $$
 \frac{i_L}{i_s} = A_{is} \left( \frac{R_s}{R_s + R_i} \right) \left( \frac{R_o}{R_o + R_L} \right)
 $$
 
+![Table 1.1 The Four Amplifier Types](../assets/images/table_1_1_four_amplifier_types.png)
+
 > **求解目標**：電流放大器之輸入分流衰減與輸出分流負載效應之雙重衰減公式推導。
 
 <template #solution>
@@ -637,6 +649,8 @@ $$\frac{i_L}{i_s} = A_{is} \left( \frac{R_s}{R_s + R_i} \right) \left( \frac{R_o
 $$
 \frac{v_L}{v_s} = G_m \left( \frac{R_i}{R_s + R_i} \right) (R_o \parallel R_L)
 $$
+
+![Table 1.1 The Four Amplifier Types](../assets/images/table_1_1_four_amplifier_types.png)
 
 > **求解目標**：轉導受控源電壓轉換與輸出並聯等效負載推導。
 
@@ -797,6 +811,8 @@ $$\frac{v_L}{v_s} = G_m \left( \frac{R_i}{R_s + R_i} \right) (R_o \parallel R_L)
 2. $f = 10\text{ kHz}$
 3. $f = 100\text{ kHz}$
 4. $f = 1\text{ MHz}$
+
+![Low-Pass STC Frequency Response Bode Plot](../assets/images/ex_1_5_bode.png)
 
 > **求解目標**：波德圖漸近線高頻滾降法則（$-20\text{ dB/decade}$）之快速估算與精確驗證。
 
