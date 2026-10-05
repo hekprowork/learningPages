@@ -1272,128 +1272,197 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 (c) $v_1(t) = -36e^{-2t}\text{ V}$, $v_2(t) = -7.2e^{-2t}\text{ V}$, $v(t) = -28.8e^{-2t}\text{ V}$ (註：依據教材正負號與量綱)
 
 </PracticeCard>
-# Chapter 6 Part 3B: Op-Amp Applications (Integrators, Differentiators, and Analog Computers)
 
-<PracticeCard id="ch6-ex13" title="Example 6.13: Summing Integrator Analysis">
+# Chapter 6 Part 3B: 運算放大器應用 (Integrators, Differentiators, and Analog Computers)
 
-### 題目敘述
-如果 \(v_1 = 10 \cos 2t	ext{ mV}\) 且 \(v_2 = 0.5t	ext{ mV}\)，求圖 [Figure 6.36](../assets/images/ch6-ex13_figure_6.36.png) 運算放大器電路中的輸出電壓 \(v_o\)。假設跨越電容器之初始電壓為零。
+<PracticeCard id="ch6-ex13" title="Example 6.13: 加法積分器輸出電壓計算 (Summing Integrator Analysis)" source="Example 6.13 · Page 237" topic="加法積分器 (Summing Integrator)">
+
+如果  = 10 \cos(2t)\text{ mV}$ 且  = 0.5t\text{ mV}$，求圖 6.36 運算放大器電路中的輸出電壓 $。假設跨越電容器之初始電壓為零。
 
 ![Figure 6.36](../assets/images/ch6-ex13_figure_6.36.png)
 
-### 解析與計算
+> **求解目標：計算加法積分器在時變與多訊號輸入下的輸出電壓 (t)*
+
+<template #solution>
+
+#### 逐步解析：
+
 此電路為一個加法積分器 (Summing Integrator)，其輸出電壓通式為：
-9026v_o = -rac{1}{R_1 C} \int_{0}^{t} v_1 d	au - rac{1}{R_2 C} \int_{0}^{t} v_2 d	au9026
+19942v_o(t) = -\frac{1}{R_1 C} \int_{0}^{t} v_1(\tau)\,d\tau - \frac{1}{R_2 C} \int_{0}^{t} v_2(\tau)\,d\tau19942
 
-代入已知參數 \(R_1 = 3	ext{ M}\Omega\), \(R_2 = 100	ext{ k}\Omega\), \(C = 2	ext{ \mu F}\)：
-9026v_o = -rac{1}{3 	imes 10^6 	imes 2 	imes 10^{-6}} \int_{0}^{t} 10 \cos(2	au) d	au - rac{1}{100 	imes 10^3 	imes 2 	imes 10^{-6}} \int_{0}^{t} 0.5	au d	au9026
+代入已知參數  = 3\text{ M}\Omega$,  = 100\text{ k}\Omega$,  = 2\ \mu\text{F}$：
+19942v_o(t) = -\frac{1}{3 \times 10^6 \times 2 \times 10^{-6}} \int_{0}^{t} 10 \cos(2\tau)\,d\tau - \frac{1}{100 \times 10^3 \times 2 \times 10^{-6}} \int_{0}^{t} 0.5\tau\,d\tau19942
 
-9026v_o = -rac{1}{6} \left[ rac{10}{2} \sin 2t 
-ight] - rac{1}{0.2} \left[ rac{0.5 t^2}{2} 
-ight]9026
+19942v_o(t) = -\frac{1}{6} \left[ \frac{10}{2} \sin(2t) \right] - \frac{1}{0.2} \left[ \frac{0.5 t^2}{2} \right]19942
 
-9026v_o = -0.833 \sin 2t - 1.25 t^2 	ext{ mV}9026
+19942v_o(t) = -0.833 \sin(2t) - 1.25 t^2\text{ mV}19942
+
+::: tip 標準答案
+19942v_o(t) = -0.833 \sin(2t) - 1.25 t^2\text{ mV}19942
+:::
+
+</template>
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr13" title="Practice Problem 6.13: Integrator Response">
+<PracticeCard id="ch6-pr13" title="Practice Problem 6.13: 理想積分器階躍響應分析 (Integrator Response)" source="Practice Problem 6.13 · Page 237" topic="積分器響應 (Integrator Step Response)">
 
-### 題目敘述
-圖 [Figure 6.35(b)](../assets/images/ch6-ex13_figure_6.35.png) 中的積分器具有 \(R = 100	ext{ k}\Omega\)、\(C = 20	ext{ \mu F}\)。當在 \(t = 0\) 時施加一直流電壓 \(2.5	ext{ mV}\)，求其輸出電壓。假設運算放大器最初已歸零 (nulled)。
+圖 6.35(b) 中的積分器具有  = 100\text{ k}\Omega$、 = 20\ \mu\text{F}$。當在  = 0$ 時施加一直流電壓 .5\text{ mV}$，求其輸出電壓。假設運算放大器最初已歸零 (nulled)。
 
 ![Figure 6.35(b)](../assets/images/ch6-ex13_figure_6.35.png)
 
-### 解析與計算
+> **求解目標：求直流階躍輸入下積分器隨時間線性變化的輸出電壓 (t)*
+
+<template #solution>
+
+#### 逐步解析：
+
 根據積分器輸出公式：
-9026v_o = -rac{1}{RC} \int_{0}^{t} v_i d	au9026
+19942v_o(t) = -\frac{1}{RC} \int_{0}^{t} v_i(\tau)\,d\tau19942
 
-代入 \(R = 100	ext{ k}\Omega = 10^5	ext{ \Omega}\)、\(C = 20	ext{ \mu F} = 20 	imes 10^{-6}	ext{ F}\)、\(v_i = 2.5	ext{ mV}\)：
-9026RC = 10^5 	imes 20 	imes 10^{-6} = 2	ext{ s}9026
+代入已知參數  = 100\text{ k}\Omega = 10^5\ \Omega$、 = 20\ \mu\text{F} = 20 \times 10^{-6}\text{ F}$、 = 2.5\text{ mV}$：
+19942RC = 10^5 \times 20 \times 10^{-6} = 2\text{ s}19942
 
-9026v_o = -rac{1}{2} \int_{0}^{t} 2.5 	imes 10^{-3} d	au = -rac{2.5 	imes 10^{-3}}{2} t = -1.25t 	ext{ mV}9026
+19942v_o(t) = -\frac{1}{2} \int_{0}^{t} 2.5 \times 10^{-3}\,d\tau = -\frac{2.5 \times 10^{-3}}{2} t = -1.25t\text{ mV}19942
+
+::: tip 標準答案
+19942v_o(t) = -1.25t\text{ mV}19942
+:::
+
+</template>
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex14" title="Example 6.14: Differentiator Output Sketch">
+<PracticeCard id="ch6-ex14" title="Example 6.14: 微分器輸出波形繪製 (Differentiator Output Sketch)" source="Example 6.14 · Page 239" topic="微分器波形 (Differentiator Output Waveform)">
 
-### 題目敘述
-繪製圖 [Figure 6.38(a)](../assets/images/ch6-ex14_figure_6.38.png) 電路在給定輸入電壓 [Figure 6.38(b)](../assets/images/ch6-ex14_figure_6.38.png) 下的輸出電壓波形。設 \(v_o = 0\) 於 \(t = 0\)。
+繪製圖 6.38(a) 電路在給定輸入電壓（圖 6.38(b)）下的輸出電壓波形。設 (0) = 0$。
 
 ![Figure 6.38(a) and (b)](../assets/images/ch6-ex14_figure_6.38.png)
 
 ![Figure 6.39](../assets/images/ch6-ex14_figure_6.39.png)
 
-### 解析與計算
-此為一微分器，其時間常數為：
-9026RC = 5 	imes 10^3 	imes 0.2 	imes 10^{-6} = 10^{-3}	ext{ s} = 1	ext{ ms}9026
+> **求解目標：針對三角波輸入訊號，繪製微分器產生的方波輸出電壓波形**
 
-在 \(0 < t < 4	ext{ ms\) 區間內，輸入電壓可表示為：
-9026v_i = egin{cases} 2000t, & 0 < t < 2	ext{ ms} \ 8 - 2000t, & 2 < t < 4	ext{ ms} \end{cases}9026
+<template #solution>
 
-利用微分器輸出關係式 \(v_o = -RC rac{dv_i}{dt}\)：
-9026v_o = egin{cases} -2	ext{ V}, & 0 < t < 2	ext{ ms} \ 2	ext{ V}, & 2 < t < 4	ext{ ms} \end{cases}9026
+#### 逐步解析：
 
-此波形如 [Figure 6.39](../assets/images/ch6-ex14_figure_6.39.png) 所示。
+此為一理想微分器，其時間常數為：
+19942RC = 5 \times 10^3 \times 0.2 \times 10^{-6} = 10^{-3}\text{ s} = 1\text{ ms}19942
+
+在 zsh < t < 4\text{ ms}$ 區間內，三角波輸入電壓可表示為分段線性函數：
+19942v_i(t) = \begin{cases} 2000t\text{ V}, & 0 < t < 2\text{ ms} \\ 8 - 2000t\text{ V}, & 2 < t < 4\text{ ms} \end{cases}19942
+
+利用微分器輸出關係式 (t) = -RC \frac{dv_i}{dt}$：
+- 當 zsh < t < 2\text{ ms}$：斜率為 0\text{ V/s}$，故  = -(10^{-3})(2000) = -2\text{ V}$。
+- 當  < t < 4\text{ ms}$：斜率為 569X2000\text{ V/s}$，故  = -(10^{-3})(-2000) = +2\text{ V}$。
+
+19942v_o(t) = \begin{cases} -2\text{ V}, & 0 < t < 2\text{ ms} \\ 2\text{ V}, & 2 < t < 4\text{ ms} \end{cases}19942
+
+此輸出波形即為如圖 6.39 所示之對稱方波。
+
+::: tip 標準答案
+19942v_o(t) = \begin{cases} -2\text{ V}, & 0 < t < 2\text{ ms} \\ 2\text{ V}, & 2 < t < 4\text{ ms} \end{cases}19942
+*(波形如圖 6.39 所示)*
+:::
+
+</template>
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr14" title="Practice Problem 6.14: Differentiator Response">
+<PracticeCard id="ch6-pr14" title="Practice Problem 6.14: 微分器斜坡輸入響應 (Differentiator Response)" source="Practice Problem 6.14 · Page 239" topic="微分器斜坡響應 (Differentiator Ramp Response)">
 
-### 題目敘述
-圖 [Figure 6.37](../assets/images/ch6-pr14_figure_6.37.png) 中的微分器具有 \(R = 100	ext{ k}\Omega\) 與 \(C = 0.1	ext{ \mu F}\)。給定 \(v_i = 1.25t	ext{ V}\)，求輸出電壓 \(v_o\)。
+圖 6.37 中的微分器具有  = 100\text{ k}\Omega$ 與  = 0.1\ \mu\text{F}$。給定斜坡輸入 (t) = 1.25t\text{ V}$，求輸出電壓 $。
 
 ![Figure 6.37](../assets/images/ch6-pr14_figure_6.37.png)
 
-### 解析與計算
-微分器輸出公式為：
-9026v_o = -RC rac{dv_i}{dt}9026
+> **求解目標：求斜坡輸入下微分器的穩態輸出電壓 *
 
-代入數值 \(R = 100	ext{ k}\Omega = 10^5	ext{ \Omega}\)、\(C = 0.1	ext{ \mu F} = 10^{-7}	ext{ F}\)、\(v_i = 1.25t\)：
-9026RC = 10^5 	imes 10^{-7} = 0.01	ext{ s}9026
+<template #solution>
 
-9026rac{dv_i}{dt} = 1.25	ext{ V/s}9026
+#### 逐步解析：
 
-9026v_o = -0.01 	imes 1.25 = -0.0125	ext{ V} = -12.5	ext{ mV}9026
+微分器輸出通式為：
+19942v_o(t) = -RC \frac{dv_i}{dt}19942
+
+代入電路元件參數  = 100\text{ k}\Omega = 10^5\ \Omega$、 = 0.1\ \mu\text{F} = 10^{-7}\text{ F}$：
+19942RC = 10^5 \times 10^{-7} = 0.01\text{ s}19942
+
+計算輸入斜坡電壓之時域導數：
+19942\frac{dv_i}{dt} = \frac{d}{dt}(1.25t) = 1.25\text{ V/s}19942
+
+代回輸出公式計算輸出電壓：
+19942v_o(t) = -0.01 \times 1.25 = -0.0125\text{ V} = -12.5\text{ mV}19942
+
+::: tip 標準答案
+19942v_o = -12.5\text{ mV}19942
+:::
+
+</template>
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex15" title="Example 6.15: Analog Computer Circuit Design">
+<PracticeCard id="ch6-ex15" title="Example 6.15: 類比計算機電路合成 (Analog Computer Circuit Design)" source="Example 6.15 · Page 242" topic="類比計算機 (Analog Computer)">
 
-### 題目敘述
-設計一個類比計算機電路以求解下列微分方程式：
-9026rac{d^2 v_o}{dt^2} + 2rac{dv_o}{dt} + v_o = 10 \sin 4t, \quad t > 09026
-給定初始條件 \(v_o(0) = -4	ext{ V}\)、\(v_o'(0) = 1	ext{ V/s}\)。
+設計一個類比計算機電路以求解下列二階微分方程式：
+19942\frac{d^2 v_o}{dt^2} + 2\frac{dv_o}{dt} + v_o = 10 \sin(4t), \quad t > 019942
+給定初始條件 (0) = -4\text{ V}$、'(0) = 1\text{ V/s}$。
 
 ![Figure 6.40](../assets/images/ch6-ex15_figure_6.40.png)
 
-### 解析與計算
-1. **最高階導數求解**：
-   9026rac{d^2 v_o}{dt^2} = 10 \sin 4t - 2rac{dv_o}{dt} - v_o9026
+> **求解目標：利用加法器、反相器與積分器設計求解二階微分方程式之類比電路**
 
-2. **連續積分實現**：
-   - 透過加法積分器與反相器串接，將各項權重相加並進行兩次積分。
-   - 選擇 \(RC = 1	ext{ s}\)，並在對應積分電容器並聯初始條件電壓源（分別為 \(1	ext{ V}\) 與 \(-4	ext{ V}\)）。
-   - 最終組合電路如 [Figure 6.40](../assets/images/ch6-ex15_figure_6.40.png) 所示。
+<template #solution>
+
+#### 逐步解析：
+
+1. **分離最高階導數**：
+   將原微分方程式之最高階導數項移至等號左側：
+   19942\frac{d^2 v_o}{dt^2} = 10 \sin(4t) - 2\frac{dv_o}{dt} - v_o19942
+
+2. **連續積分拓樸實現**：
+   - 使用加法積分器（Summing Integrator）將輸入訊號 \sin(4t)$、一階導數反相項與輸出反相項按比例加總並執行第一次積分，輸出 569X\frac{dv_o}{dt}$。
+   - 串接第二個積分器以產生 0(t)$。
+   - 選取時間常數標準值  = 1\text{ s}$（例如  = 1\text{ M}\Omega, C = 1\ \mu\text{F}$）。
+   - 透過在積分電容器兩端預充初始直流電壓源分別注入初始條件 '(0) = 1\text{ V/s}$ 與 (0) = -4\text{ V}$。
+   - 完整電路架構如圖 6.40 所示。
+
+::: tip 標準電路
+電路拓樸與參數設定如圖 6.40 所示。
+:::
+
+</template>
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr15" title="Practice Problem 6.15: Analog Computer Synthesis">
+<PracticeCard id="ch6-pr15" title="Practice Problem 6.15: 二階類比計算機電路設計 (Analog Computer Synthesis)" source="Practice Problem 6.15 · Page 242" topic="類比計算機合成 (Analog Computer Synthesis)">
 
-### 題目敘述
-設計一個類比計算機電路以求解下列微分方程式：
-9026rac{d^2 v_o}{dt^2} + 3rac{dv_o}{dt} + 2v_o = 4 \cos 10t, \quad t > 09026
-給定初始條件 \(v_o(0) = 2	ext{ V}\)、\(v_o'(0) = 0\)。
+設計一個類比計算機電路以求解下列二階微分方程式：
+19942\frac{d^2 v_o}{dt^2} + 3\frac{dv_o}{dt} + 2v_o = 4 \cos(10t), \quad t > 019942
+給定初始條件 (0) = 2\text{ V}$、'(0) = 0$。
 
 ![Figure 6.41](../assets/images/ch6-pr15_figure_6.41.png)
 
-### 解析與計算
-1. **分離最高階導數**：
-   9026rac{d^2 v_o}{dt^2} = 4 \cos 10t - 3rac{dv_o}{dt} - 2v_o9026
+> **求解目標：合成求解二階阻尼振盪微分方程之類比運算放大器電路**
 
-2. **電路拓樸設計**：
-   - 使用加法積分器實現上述等式之各項加總與積分。
-   - 設定時間常數 \(RC = 1	ext{ s}\)。
-   - 初始條件 \(v_o(0) = 2	ext{ V}\) 透過合適的直流電源與開關設定於對應積分器中。
-   - 電路架構參見 [Figure 6.41](../assets/images/ch6-pr15_figure_6.41.png)。
+<template #solution>
+
+#### 逐步解析：
+
+1. **分離最高階導數**：
+   19942\frac{d^2 v_o}{dt^2} = 4 \cos(10t) - 3\frac{dv_o}{dt} - 2v_o19942
+
+2. **電路拓樸設計與參數配置**：
+   - 採用兩級積分器級聯架構，第一級加法積分器權重分別為輸入項係數 $、一階項係數 $、零階項係數 $。
+   - 標準化積分時間常數取  = 1\text{ s}$。
+   - 於第二級輸出端電容跨接 \text{ V}$ 直流初始偏壓以滿足初始條件 (0) = 2\text{ V}$；第一級電容初期跨壓設定為 zsh\text{ V}$（因 '(0) = 0$）。
+   - 完整電路架構詳見圖 6.41。
+
+::: tip 標準電路
+電路拓樸與參數設定如圖 6.41 所示。
+:::
+
+</template>
 
 </PracticeCard>
+

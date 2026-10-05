@@ -289,8 +289,8 @@ $$v_1 = -7.333\text{ V}\ \left(-\frac{22}{3}\text{ V}\right), \quad v_2 = -5.333
    $$
 
 ::: tip 標準答案
-$$v_1 = 26.67\text{ V}\ (\frac{80}{3}\text{ V}),\quad v_2 = 6.67\text{ V}\ (\frac{20}{3}\text{ V})$
-$v_3 = 173.33\text{ V}\ (\frac{520}{3}\text{ V}),\quad v_4 = -46.67\text{ V}\ (-\frac{140}{3}\text{ V})$$
+$$v_1 = 26.67\text{ V}\ \left(\frac{80}{3}\text{ V}\right),\quad v_2 = 6.67\text{ V}\ \left(\frac{20}{3}\text{ V}\right)$$
+$$v_3 = 173.33\text{ V}\ \left(\frac{520}{3}\text{ V}\right),\quad v_4 = -46.67\text{ V}\ \left(-\frac{140}{3}\text{ V}\right)$$
 :::
 
 </template>
@@ -622,6 +622,8 @@ $$\begin{bmatrix} 0.3 & -0.2 & 0 & 0 \\ -0.2 & 1.325 & -0.125 & -1 \\ 0 & -0.125
 - Problem #49
 - Problem #57
 
+<template #solution>
+
 **投影片附錄參考數值驗算：**
 
 - **Problem 10:** $I_o = -4\text{ A}$
@@ -629,4 +631,5 @@ $$\begin{bmatrix} 0.3 & -0.2 & 0 & 0 \\ -0.2 & 1.325 & -0.125 & -1 \\ 0 & -0.125
 - **Problem 22:** $V_1 = -10.91\text{ V}, V_2 = -100.37\text{ V}$
 - **Problem 44:** $I_o = -26\text{ A}$
 
+</template>
 </PracticeCard>
