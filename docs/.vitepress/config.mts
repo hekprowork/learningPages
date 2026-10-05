@@ -77,6 +77,13 @@ export default defineConfig({
           items: [
             { text: '001: 放大器模型、增益計算與頻率響應速查手冊', link: '/electronics/chapter3/001-amplifier-models-and-frequency-response' }
           ]
+        },
+        {
+          text: '互動式題庫練習系統 (Interactive Practice Workbooks)',
+          collapsed: false,
+          items: [
+            { text: 'Chapter 1: 互動式範例與練習題庫', link: '/electronics/practice/0001-chapter1-examples' }
+          ]
         }
       ],
       '/circuits/': [

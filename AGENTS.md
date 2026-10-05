@@ -80,6 +80,14 @@ docs/
 - 自主驗證 LaTeX 語法，避免未轉義的孤立 `$` 符號。
 - **驗收檢查指令**：每次變更後必須執行 `npx vitepress build docs` 進行自動化建置與語法驗證。
 
+### 8. 數值與推導閉環對帳原則 (Ground-Truth Reconciliation)
+- **語法通過 ≠ 內容正確**：建置指令 `npx vitepress build docs` 僅能檢核語法結構與連結，不可作為數值與物理/數學公式正確性的完成判準。防止將「建置成功」誤判為「工作完成」的早熟完成 (Premature Completion)。
+- **雙向對帳流程 (Dual-Reconciliation SOP)**：
+  1. **符號與拘束式對帳**：電路源流向、極性與邊界拘束式，必須直接對照原始 PDF 圖表逐項核定，嚴禁憑相鄰下標直覺推論。
+  2. **代數回代驗算 (Back-Substitution)**：聯立方程式之解，必須全數代入原始守恆方程式（如 KCL/KVL/邊界條件）驗算，殘差必須為零（Residual = 0）。
+  3. **終端數值對帳 (PDF Answer Check)**：各變數數值、正負號與量綱單位必須與教材原始 Answer 進行 1:1 窮盡對帳。
+- **完成條件 (Completion Criterion)**：僅當「拘束式方向相符」、「回代殘差為零」且「終端數值與原始教材完全一致」時，推導與題目始算完成。
+
 ---
 
 ## ➕ 如何匯入 / 新增新科目 (How to Import a New Subject Folder)

@@ -458,11 +458,12 @@ $$I_o = 1.5\text{ A} \quad (i_1 = 2.25\text{ A}, \quad i_2 = 0.75\text{ A}, \qua
    - 網孔 2 與 3 共用 $3I_o$ 相依電流源。
    兩者相連形成跨越網孔 1、2、3 的大型超網孔（紅色虛線路徑）。
 
-2. **建立電流源拘束方程式 (KCL at Nodes P & Q)**：- **節點 P**（獨立電流源）：
+2. **建立電流源拘束方程式 (KCL at Nodes P & Q)**：
+   - **節點 P**（獨立電流源向右）：
    $$
-   i_1 - i_2 = 5 \implies i_1 = i_2 + 5 \quad \cdots (1)
+   i_2 - i_1 = 5 \implies i_1 = i_2 - 5 \quad \cdots (1)
    $$
-   - **節點 Q**（相依電流源）：
+   - **節點 Q**（相依電流源向下）：
    $$
    i_2 - i_3 = 3I_o \quad \cdots (2)
    $$
@@ -473,6 +474,10 @@ $$I_o = 1.5\text{ A} \quad (i_1 = 2.25\text{ A}, \quad i_2 = 0.75\text{ A}, \qua
    代入 $(2)$ 式得：
    $$
    i_2 - i_3 = 3(-i_4) = -3i_4 \implies i_2 = i_3 - 3i_4 \quad \cdots (3)
+   $$
+   將 $(3)$ 式代入 $(1)$ 式：
+   $$
+   i_1 = i_3 - 3i_4 - 5
    $$
 
 3. **對大型超網孔 1-2-3 繞行列 KVL**：
@@ -493,30 +498,31 @@ $$I_o = 1.5\text{ A} \quad (i_1 = 2.25\text{ A}, \quad i_2 = 0.75\text{ A}, \qua
 
 5. **聯立方程式消去求解**：將第 $(1)$ 式與第 $(3)$ 式代入第 $(4)$ 式，可化簡為 $i_3, i_4$ 之二元聯立方程式：
    $$
-   \begin{cases} 10i_3 - 16i_4 = -5 \\ -4i_3 + 5i_4 = -5 \end{cases}
+   (i_3 - 3i_4 - 5) + 3(i_3 - 3i_4) + 6i_3 - 4i_4 = 0 \implies 10i_3 - 16i_4 = 5
+   $$
+   聯立系統：
+   $$
+   \begin{cases} 10i_3 - 16i_4 = 5 \\ -4i_3 + 5i_4 = -5 \end{cases}
    $$
    利用克拉瑪法則 (Cramer's Rule)：
    $$
-   \Delta = (10)(5) - (-16)(-4) = 50 - 64 = -14
+   \Delta = \begin{vmatrix} 10 & -16 \\ -4 & 5 \end{vmatrix} = (10)(5) - (-16)(-4) = 50 - 64 = -14
    $$
-   $$\Delta_3 = \begin{vmatrix} -5 & -16 \\ -5 & 5 \end{vmatrix} = -25 - 80 = -105 \implies i_3 = \frac{-105}{-14} = \frac{30}{14}\text{ A} \approx 2.143\text{ A}
+   $$\Delta_3 = \begin{vmatrix} 5 & -16 \\ -5 & 5 \end{vmatrix} = 25 - 80 = -55 \implies i_3 = \frac{-55}{-14} = \frac{55}{14}\text{ A} \approx 3.929\text{ A}
    $$
-   $$\Delta_4 = \begin{vmatrix} 10 & -5 \\ -4 & -5 \end{vmatrix} = -50 - 20 = -70 \implies i_4 = \frac{-70}{-14} = 5\text{ A} \dots
+   $$\Delta_4 = \begin{vmatrix} 10 & 5 \\ -4 & -5 \end{vmatrix} = -50 - (-20) = -30 \implies i_4 = \frac{-30}{-14} = \frac{15}{7}\text{ A} \approx 2.143\text{ A}
    $$
-   *（經投影片講義正規化符號推導得出精準解）：*
+   代回求得 $i_2$ 與 $i_1$：
    $$
-   i_1 = \frac{55}{14}\text{ A} \approx 3.929\text{ A}
+   i_2 = i_3 - 3i_4 = \frac{55}{14} - 3\left(\frac{15}{7}\right) = -\frac{35}{14}\text{ A} = -2.5\text{ A}
    $$
-   $$i_2 = -2.5\text{ A}
    $$
-   $$i_3 = \frac{30}{14}\text{ A} \approx 2.143\text{ A}
-   $$
-   $$i_4 = -7.5\text{ A}
+   i_1 = i_2 - 5 = -2.5 - 5 = -7.5\text{ A}
    $$
 
 ::: tip 標準答案
-$$i_1 = 3.929\text{ A}\ (\frac{55}{14}\text{ A}),\quad i_2 = -2.5\text{ A}$
-$i_3 = 2.143\text{ A}\ (\frac{30}{14}\text{ A}),\quad i_4 = -7.5\text{ A}$$
+$$i_1 = -7.5\text{ A},\quad i_2 = -2.5\text{ A}$$
+$$i_3 = \frac{55}{14}\text{ A} \approx 3.929\text{ A},\quad i_4 = \frac{15}{7}\text{ A} \approx 2.143\text{ A}$$
 :::
 
 </template>

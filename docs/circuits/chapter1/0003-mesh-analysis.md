@@ -229,14 +229,16 @@ $$\text{超網孔 KVL 數量 } (M - k) + \text{電流源拘束式數量 } k = M 
    - 將兩電流源支路移除，網孔 1、2、3 合併成一個大型超網孔（如紅色虛線所示）。
 
 2. **建立電流源拘束方程式 (Constraint Equations)**：
-   - **獨立電流源 $5\text{ A}$**（向上流動）：
-     $$i_1 - i_2 = 5 \implies i_1 = i_2 + 5 \quad \cdots (1)$$
-   - **相依電流源 $3I_o$**（向上流動）：
+   - **獨立電流源 $5\text{ A}$**（向右流動，節點 P 之 KCL）：
+     $$i_2 - i_1 = 5 \implies i_1 = i_2 - 5 \quad \cdots (1)$$
+   - **相依電流源 $3I_o$**（向下流動，節點 Q 之 KCL）：
      $$i_2 - i_3 = 3I_o \quad \cdots (2)$$
    - 觀察控制電流 $I_o$：流經最右側 $2\ \Omega$ 支路（向上流動），與順時針網孔電流 $i_4$ 反向：
      $$I_o = -i_4$$
      代入 $(2)$ 式得：
      $$i_2 - i_3 = 3(-i_4) = -3i_4 \implies i_2 = i_3 - 3i_4 \quad \cdots (3)$$
+     代回 $(1)$ 式可得：
+     $$i_1 = i_3 - 3i_4 - 5$$
 
 3. **對大型超網孔 1-2-3 繞行列 KVL**：
    沿著外圍輪廓順時針繞行：
@@ -249,11 +251,14 @@ $$\text{超網孔 KVL 數量 } (M - k) + \text{電流源拘束式數量 } k = M 
 
 5. **聯立消去求解**：
    將 $(1)$ 式與 $(3)$ 式代入 $(4)$ 式，得到僅含 $i_3, i_4$ 的二元聯立方程：
-   $$\begin{cases} 10i_3 - 16i_4 = -5 \\ -4i_3 + 5i_4 = -5 \end{cases}$$
+   $$(i_3 - 3i_4 - 5) + 3(i_3 - 3i_4) + 6i_3 - 4i_4 = 0 \implies 10i_3 - 16i_4 = 5 \quad \cdots (6)$$
+   聯立 $(5)$ 式與 $(6)$ 式：
+   $$\begin{cases} 10i_3 - 16i_4 = 5 \\ -4i_3 + 5i_4 = -5 \end{cases}$$
    解得：
-   $$i_3 = 2.143\text{ A}\ \left(\frac{15}{7}\text{ A}\right), \quad i_4 = -0.714\text{ A}\ \left(-\frac{5}{7}\text{ A}\right)$$
+   $$i_4 = \frac{15}{7}\text{ A} \approx 2.143\text{ A}, \quad i_3 = \frac{55}{14}\text{ A} \approx 3.929\text{ A}$$
    代回 $(3)$ 式與 $(1)$ 式：
-   $$i_2 = -2.5\text{ A}, \quad i_1 = 2.5\text{ A} \dots$$
+   $$i_2 = i_3 - 3i_4 = \frac{55}{14} - 3\left(\frac{15}{7}\right) = -2.5\text{ A}$$
+   $$i_1 = i_2 - 5 = -2.5 - 5 = -7.5\text{ A}$$
    *(精準解析詳見題庫 Chapter 3 Practice Problem)*
 
 ---

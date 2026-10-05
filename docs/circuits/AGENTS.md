@@ -49,4 +49,26 @@
 1. 以課本 PDF 為來源，依序寫：直覺動機 → 定義 → 推導 → 1–2 個示範例題 → 常見錯誤。
 2. 抽象或可調參數的觀念（分壓、Y-Δ、暫態）用 Vue 互動元件嵌入，放 `docs/.vitepress/theme/components/`，DOM/canvas 存取只寫在 `onMounted`。
 3. 同步新增 `chapter3/` 速查卡條目與 sidebar、`index.md` 連結。
-4. 完成條件與例題網頁相同：`rm -rf docs/.vitepress/dist && npx vitepress build docs` 通過，推送後線上網址可開啟才算完成。
+4. 完成條件：
+   - **語意層（對帳）**：通過第 6 節「數值與方程式對帳查核」（拘束式方向核對、回代驗算、與課本標準答案 1:1 吻合）。
+   - **語法層（建置）**：`rm -rf docs/.vitepress/dist && npx vitepress build docs` 通過，推送後線上網址 HTTP 200 可正常瀏覽。
+
+---
+
+### 6. 數值與方程式對帳查核 (Ground-Truth Reconciliation SOP)
+
+為杜絕方向性筆誤（如電流源拘束式方向倒置）與數值偏差，推導與解題必須執行**閉環對帳 (Closed-Loop Reconciliation)**：
+
+1. **支路方向與拘束式對帳**：
+   - 檢視電流源 / 受控源之箭頭與參考極性標示。
+   - 若為兩相鄰網孔共用支路，依各網孔電流之環行方向，明確判定同向與反向分量：
+     $$i_{\text{同向}} - i_{\text{反向}} = I_{\text{source}}$$
+   - 嚴禁憑相鄰下標大小（如直覺套用 $i_1 - i_2$）推斷，必以支路實際流向為唯一依據。
+
+2. **代數推導與回代驗算 (Algebraic Legwork)**：
+   - 矩陣行列式（如克拉瑪法則 $\Delta, \Delta_k$）或消去法保留完整展開算式。
+   - 求出各未知數後，執行回代檢驗：全數代入未參與消去之原始 KVL / KCL 方程式，等式兩端殘差必須為零（Residual = 0）。
+
+3. **教材答案對帳 (PDF Answer Check)**：
+   - 終端數值、正負號與量綱單位必須與教材原始 PDF 之標準解答進行 1:1 逐項對帳。
+   - **完成判準 (Completion Criterion)**：拘束式流向驗證成立、回代殘差為零，且數值與教材 Answer 完全一致；任一項不符即屬未完成，嚴禁強行改寫答案欄位。

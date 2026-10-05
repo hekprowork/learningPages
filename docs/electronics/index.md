@@ -18,6 +18,10 @@
 *考試、複習與電路設計必備之高密度速查卡。*
 - [001: 放大器模型、增益計算與頻率響應速查手冊 (Amplifier Models Cheatsheet)](/electronics/chapter3/001-amplifier-models-and-frequency-response)
 
+### 📝 [互動式題庫練習系統 (Interactive Practice Workbooks)](/electronics/practice/0001-chapter1-examples)
+*搭載 Hallmark 互動設計、KaTeX 數學公式與詳細圖解之各章題庫與範例練習。*
+- [Chapter 1: 訊號與放大器基礎 互動題庫](/electronics/practice/0001-chapter1-examples)
+
 ---
 
 ## 💡 特色亮點
