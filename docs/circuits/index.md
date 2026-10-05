@@ -30,6 +30,8 @@
 - [Chapter 1: Basic Concepts 互動題庫](/circuits/practice/0001-chapter1-examples)
 - [Chapter 2: Basic Laws 互動題庫](/circuits/practice/0002-chapter2-examples)
 - [Chapter 3: Nodal & Mesh Analysis 互動題庫](/circuits/practice/0003-chapter3-examples)
+- [Chapter 4: Circuit Theorems 互動題庫](/circuits/practice/0004-chapter4-examples)
+- [Chapter 5: Operational Amplifiers 互動題庫](/circuits/practice/0005-chapter5-examples)
 
 ---
 
