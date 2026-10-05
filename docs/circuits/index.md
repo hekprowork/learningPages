@@ -32,6 +32,7 @@
 - [Chapter 3: Nodal & Mesh Analysis 互動題庫](/circuits/practice/0003-chapter3-examples)
 - [Chapter 4: Circuit Theorems 互動題庫](/circuits/practice/0004-chapter4-examples)
 - [Chapter 5: Operational Amplifiers 互動題庫](/circuits/practice/0005-chapter5-examples)
+- [Chapter 6: Capacitors and Inductors 互動題庫](/circuits/practice/0006-chapter6-examples)
 
 ---
 
