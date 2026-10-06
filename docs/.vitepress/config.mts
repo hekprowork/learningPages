@@ -151,6 +151,14 @@ export default defineConfig({
           items: [
             { text: '001: 一階 ODE 積分因子與正合法速查卡', link: '/engineering-math/chapter3/001-integrating-factors-cheatsheet' }
           ]
+        },
+        {
+          text: '互動式題庫練習系統 (Interactive Practice Workbooks)',
+          collapsed: false,
+          items: [
+            { text: 'Chapter 1: 互動式範例與精選題庫 (一階 ODE)', link: '/engineering-math/practice/0001-chapter1-examples' },
+            { text: 'Chapter 2: 互動式範例與精選題庫 (二階與高階 ODE)', link: '/engineering-math/practice/0002-chapter2-examples' }
+          ]
         }
       ]
     },

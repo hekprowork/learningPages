@@ -19,6 +19,11 @@
 *考試、複習與工程推導必備之高密度速查卡。*
 - [001: 一階 ODE 積分因子與正合法速查卡 (Integrating Factors Cheatsheet)](/engineering-math/chapter3/001-integrating-factors-cheatsheet)
 
+### 📌 互動式題庫練習系統 (Interactive Practice Workbooks)
+*符合自包含與逐步解析規範之高互動演練題庫。*
+- [Chapter 1: 互動式範例與精選題庫 (一階 ODE)](/engineering-math/practice/0001-chapter1-examples)
+- [Chapter 2: 互動式範例與精選題庫 (二階與高階 ODE)](/engineering-math/practice/0002-chapter2-examples)
+
 ---
 
 ## 💡 特色亮點
