@@ -9,6 +9,7 @@
 ### 📌 [Chapter 1: 常微分方程與實戰解法 (Ordinary Differential Equations)](/engineering-math/chapter1/0001-integrating-factor-method)
 *深入探索一階與高階常微分方程式的解析解法、正合判定與積分因子求解技術。*
 - [0001: 積分因子法（非正合轉正合方程式）(Integrating Factor Method)](/engineering-math/chapter1/0001-integrating-factor-method)
+- [0002: 常微分方程解的本質與分類（通解、特解、奇異解與存在唯一性）(Types of Solutions & Uniqueness)](/engineering-math/chapter1/0002-types-of-solutions)
 
 ### 📌 [Chapter 2: 觀念筆記與公式推導 (Learning Records)](/engineering-math/chapter2/0001-integrating-factors)
 *深入探討微分算子、勢函數構造、積分因子生成原理與微分解題洞察。*

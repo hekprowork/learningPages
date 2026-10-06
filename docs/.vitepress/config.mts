@@ -134,7 +134,8 @@ export default defineConfig({
           text: 'Chapter 1: 常微分方程與實戰解法 (Ordinary Differential Equations)',
           collapsed: false,
           items: [
-            { text: '0001: 積分因子法（非正合轉正合方程式）', link: '/engineering-math/chapter1/0001-integrating-factor-method' }
+            { text: '0001: 積分因子法（非正合轉正合方程式）', link: '/engineering-math/chapter1/0001-integrating-factor-method' },
+            { text: '0002: 常微分方程解的本質與分類（通解、特解、奇異解與存在唯一性）', link: '/engineering-math/chapter1/0002-types-of-solutions' }
           ]
         },
         {
