@@ -6,23 +6,17 @@
 
 ## 🧭 課程結構與導航 (Curriculum Overview)
 
-### 📌 [Chapter 1: 常微分方程與實戰解法 (Ordinary Differential Equations)](/engineering-math/chapter1/0001-integrating-factor-method)
-*深入探索一階與高階常微分方程式的解析解法、正合判定與積分因子求解技術。*
+### 📌 Chapter 1: 一階常微分方程式 (First-Order ODEs)
+*深入探索一階常微分方程式的解析解法、存在唯一性定理、正合判定、積分因子求解技術與全章互動題庫。*
 - [0001: 積分因子法（非正合轉正合方程式）(Integrating Factor Method)](/engineering-math/chapter1/0001-integrating-factor-method)
 - [0002: 常微分方程解的本質與分類（通解、特解、奇異解與存在唯一性）(Types of Solutions & Uniqueness)](/engineering-math/chapter1/0002-types-of-solutions)
+- [觀念推導: 建立積分因子法學習基線與幾何架構 (Integrating Factors Baseline)](/engineering-math/chapter2/0001-integrating-factors)
+- [核心速查: 一階 ODE 積分因子與正合法速查卡 (Integrating Factors Cheatsheet)](/engineering-math/chapter3/001-integrating-factors-cheatsheet)
+- [實戰題庫: Chapter 1 互動式範例與精選題庫 (56 題)](/engineering-math/practice/0001-chapter1-examples)
 
-### 📌 [Chapter 2: 觀念筆記與公式推導 (Learning Records)](/engineering-math/chapter2/0001-integrating-factors)
-*深入探討微分算子、勢函數構造、積分因子生成原理與微分解題洞察。*
-- [0001: 建立積分因子法學習基線與核心架構 (Integrating Factors Baseline)](/engineering-math/chapter2/0001-integrating-factors)
-
-### 📌 [Chapter 3: 核心公式速查表 (Reference Cheatsheets)](/engineering-math/chapter3/001-integrating-factors-cheatsheet)
-*考試、複習與工程推導必備之高密度速查卡。*
-- [001: 一階 ODE 積分因子與正合法速查卡 (Integrating Factors Cheatsheet)](/engineering-math/chapter3/001-integrating-factors-cheatsheet)
-
-### 📌 互動式題庫練習系統 (Interactive Practice Workbooks)
-*符合自包含與逐步解析規範之高互動演練題庫。*
-- [Chapter 1: 互動式範例與精選題庫 (一階 ODE)](/engineering-math/practice/0001-chapter1-examples)
-- [Chapter 2: 互動式範例與精選題庫 (二階與高階 ODE)](/engineering-math/practice/0002-chapter2-examples)
+### 📌 Chapter 2: 二階與高階常微分方程式 (Second-Order & Higher ODEs)
+*深入探討二階常係數齊次線性 ODE、待定係數法、微分運算子、參數變異法、柯西－尤拉方程、降階法與全章精選題庫。*
+- [實戰題庫: Chapter 2 互動式範例與精選題庫 (15 題)](/engineering-math/practice/0002-chapter2-examples)
 
 ---
 

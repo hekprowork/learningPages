@@ -131,33 +131,21 @@ export default defineConfig({
       ],
       '/engineering-math/': [
         {
-          text: 'Chapter 1: 常微分方程與實戰解法 (Ordinary Differential Equations)',
+          text: 'Chapter 1: 一階常微分方程式 (First-Order ODEs)',
           collapsed: false,
           items: [
             { text: '0001: 積分因子法（非正合轉正合方程式）', link: '/engineering-math/chapter1/0001-integrating-factor-method' },
-            { text: '0002: 常微分方程解的本質與分類（通解、特解、奇異解與存在唯一性）', link: '/engineering-math/chapter1/0002-types-of-solutions' }
+            { text: '0002: 常微分方程解的本質與分類（通解、特解、奇異解與存在唯一性）', link: '/engineering-math/chapter1/0002-types-of-solutions' },
+            { text: '觀念推導: 積分因子法學習基線與幾何架構', link: '/engineering-math/chapter2/0001-integrating-factors' },
+            { text: '核心速查: 一階 ODE 積分因子與正合法速查卡', link: '/engineering-math/chapter3/001-integrating-factors-cheatsheet' },
+            { text: '實戰題庫: Chapter 1 互動式範例與精選題庫 (56 題)', link: '/engineering-math/practice/0001-chapter1-examples' }
           ]
         },
         {
-          text: 'Chapter 2: 觀念筆記與公式推導 (Learning Records)',
+          text: 'Chapter 2: 二階與高階常微分方程式 (Second-Order & Higher ODEs)',
           collapsed: false,
           items: [
-            { text: '0001: 建立積分因子法學習基線與核心架構', link: '/engineering-math/chapter2/0001-integrating-factors' }
-          ]
-        },
-        {
-          text: 'Chapter 3: 核心公式速查表 (Reference Cheatsheets)',
-          collapsed: false,
-          items: [
-            { text: '001: 一階 ODE 積分因子與正合法速查卡', link: '/engineering-math/chapter3/001-integrating-factors-cheatsheet' }
-          ]
-        },
-        {
-          text: '互動式題庫練習系統 (Interactive Practice Workbooks)',
-          collapsed: false,
-          items: [
-            { text: 'Chapter 1: 互動式範例與精選題庫 (一階 ODE)', link: '/engineering-math/practice/0001-chapter1-examples' },
-            { text: 'Chapter 2: 互動式範例與精選題庫 (二階與高階 ODE)', link: '/engineering-math/practice/0002-chapter2-examples' }
+            { text: '實戰題庫: Chapter 2 互動式範例與精選題庫 (15 題)', link: '/engineering-math/practice/0002-chapter2-examples' }
           ]
         }
       ]
