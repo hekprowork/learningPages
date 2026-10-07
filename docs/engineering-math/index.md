@@ -7,9 +7,15 @@
 ## 🧭 課程結構與導航 (Curriculum Overview)
 
 ### 📌 Chapter 1: 一階常微分方程式 (First-Order ODEs)
-*深入探索一階常微分方程式的解析解法、存在唯一性定理、正合判定、積分因子求解技術與全章互動題庫。*
-- [0001: 積分因子法（非正合轉正合方程式）(Integrating Factor Method)](/engineering-math/chapter1/0001-integrating-factor-method)
-- [0002: 常微分方程解的本質與分類（通解、特解、奇異解與存在唯一性）(Types of Solutions & Uniqueness)](/engineering-math/chapter1/0002-types-of-solutions)
+*深入探索一階常微分方程式的解析解法、存在唯一性定理、可分離變數、一階線性、正合判定、積分因子求解技術、特殊非線性代換降階、電路學暫態工程建模與全章互動題庫。*
+- [0001: 一階常微分方程基本概念與分類 (Basic Concepts & Terminology)](/engineering-math/chapter1/0001-ode-fundamentals)
+- [0002: 解的本質、初值問題與存在唯一性 (Types of Solutions & Initial Value Problems)](/engineering-math/chapter1/0002-types-of-solutions)
+- [0003: 可分離變數方程式 (Separable Differential Equations)](/engineering-math/chapter1/0003-separable-equations)
+- [0004: 一階線性常微分方程式 (First-Order Linear Differential Equations)](/engineering-math/chapter1/0004-first-order-linear-odes)
+- [0005: 正合微分方程式與位勢函數 (Exact Differential Equations & Potential Function)](/engineering-math/chapter1/0005-exact-differential-equations)
+- [0006: 積分因子法（非正合轉正合方程式）(Integrating Factor Methods)](/engineering-math/chapter1/0006-integrating-factor-methods)
+- [0007: 特殊一階非線性 ODE（齊次、白努利與黎卡提）(Special Nonlinear ODEs)](/engineering-math/chapter1/0007-nonlinear-odes-bernoulli-riccati)
+- [0008: 一階 ODE 工程應用：RL 與 RC 電路暫態分析 (Engineering Applications: Circuits)](/engineering-math/chapter1/0008-engineering-applications-circuits)
 - [觀念推導: 建立積分因子法學習基線與幾何架構 (Integrating Factors Baseline)](/engineering-math/chapter2/0001-integrating-factors)
 - [核心速查: 一階 ODE 積分因子與正合法速查卡 (Integrating Factors Cheatsheet)](/engineering-math/chapter3/001-integrating-factors-cheatsheet)
 - [實戰題庫: Chapter 1 互動式範例與精選題庫 (56 題)](/engineering-math/practice/0001-chapter1-examples)

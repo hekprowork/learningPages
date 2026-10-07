@@ -134,8 +134,14 @@ export default defineConfig({
           text: 'Chapter 1: 一階常微分方程式 (First-Order ODEs)',
           collapsed: false,
           items: [
-            { text: '0001: 積分因子法（非正合轉正合方程式）', link: '/engineering-math/chapter1/0001-integrating-factor-method' },
-            { text: '0002: 常微分方程解的本質與分類（通解、特解、奇異解與存在唯一性）', link: '/engineering-math/chapter1/0002-types-of-solutions' },
+            { text: '0001: 一階常微分方程基本概念與分類', link: '/engineering-math/chapter1/0001-ode-fundamentals' },
+            { text: '0002: 解的本質、初值問題與存在唯一性', link: '/engineering-math/chapter1/0002-types-of-solutions' },
+            { text: '0003: 可分離變數方程式 (Separable ODEs)', link: '/engineering-math/chapter1/0003-separable-equations' },
+            { text: '0004: 一階線性常微分方程式 (Linear ODEs)', link: '/engineering-math/chapter1/0004-first-order-linear-odes' },
+            { text: '0005: 正合微分方程式與位勢函數 (Exact ODEs)', link: '/engineering-math/chapter1/0005-exact-differential-equations' },
+            { text: '0006: 積分因子法（非正合轉正合方程式）', link: '/engineering-math/chapter1/0006-integrating-factor-methods' },
+            { text: '0007: 特殊非線性 ODE（齊次、白努利與黎卡提）', link: '/engineering-math/chapter1/0007-nonlinear-odes-bernoulli-riccati' },
+            { text: '0008: 工程應用：RL 與 RC 電路暫態分析', link: '/engineering-math/chapter1/0008-engineering-applications-circuits' },
             { text: '觀念推導: 積分因子法學習基線與幾何架構', link: '/engineering-math/chapter2/0001-integrating-factors' },
             { text: '核心速查: 一階 ODE 積分因子與正合法速查卡', link: '/engineering-math/chapter3/001-integrating-factors-cheatsheet' },
             { text: '實戰題庫: Chapter 1 互動式範例與精選題庫 (56 題)', link: '/engineering-math/practice/0001-chapter1-examples' }
