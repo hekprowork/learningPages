@@ -35,7 +35,7 @@ description: 工程數學第一章 一階常微分方程式 (First-Order ODEs) �
 ::: tip 標準答案
 一般解：$y = Ce^{-x^2}$
 
-                特解：$y = e^{-x^2}$
+特解：$y = e^{-x^2}$
 :::
 
 </template>
@@ -47,7 +47,7 @@ description: 工程數學第一章 一階常微分方程式 (First-Order ODEs) �
 
 求解初值問題：
 
-              $$y' + 2y = 0, \quad y(0) = -7$$
+$$y' + 2y = 0, \quad y(0) = -7$$
 
 > **求解目標**：求微分方程式之通解或滿足初始條件之特解。
 

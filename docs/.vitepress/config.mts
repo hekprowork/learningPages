@@ -151,6 +151,15 @@ export default defineConfig({
           text: 'Chapter 2: 二階與高階常微分方程式 (Second-Order & Higher ODEs)',
           collapsed: false,
           items: [
+            { text: '0001: 二階線性 ODE 基本概念、存在唯一性與疊加原理', link: '/engineering-math/second-order/0001-second-order-ode-concepts' },
+            { text: '0002: 線性獨立、朗斯基行列式與齊次通解結構', link: '/engineering-math/second-order/0002-linear-independence-wronskian' },
+            { text: '0003: 二階常係數齊次線性 ODE 與特徵方程式', link: '/engineering-math/second-order/0003-homogeneous-constant-coefficients' },
+            { text: '0004: 高階常係數齊次線性 ODE (特徵根四大分類)', link: '/engineering-math/second-order/0004-higher-order-linear-odes' },
+            { text: '0005: 待定係數法與共振修正規則 (Method of Undetermined Coefficients)', link: '/engineering-math/second-order/0005-undetermined-coefficients' },
+            { text: '0006: 微分運算子法與逆運算子快速求特解 (Differential Operator Method)', link: '/engineering-math/second-order/0006-differential-operators' },
+            { text: '0007: 參數變異法 (Variation of Parameters)', link: '/engineering-math/second-order/0007-variation-of-parameters' },
+            { text: '0008: 柯西－尤拉方程式 (Euler-Cauchy Equations)', link: '/engineering-math/second-order/0008-euler-cauchy-equations' },
+            { text: '0009: 降階法求第二個線性獨立解 (Reduction of Order)', link: '/engineering-math/second-order/0009-reduction-of-order' },
             { text: '實戰題庫: Chapter 2 互動式範例與精選題庫 (15 題)', link: '/engineering-math/practice/0002-chapter2-examples' }
           ]
         }
