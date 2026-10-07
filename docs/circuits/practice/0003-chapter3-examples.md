@@ -82,8 +82,8 @@ description: 電路學第三章 節點與網孔分析法 (Methods of Analysis) �
    $$
 
 ::: tip 標準答案
-$$v_1 = 13.333\text{ V}\ (\frac{40}{3}\text{ V}),\ v_2 = 20\text{ V}$
-$i_1 = 5\text{ A},\ i_2 = -1.667\text{ A},\ i_3 = 6.667\text{ A},\ i_4 = 10\text{ A},\ i_5 = 3.333\text{ A}$$
+$$v_1 = 13.333\text{ V}\ \left(\frac{40}{3}\text{ V}\right),\quad v_2 = 20\text{ V}$$
+$$i_1 = 5\text{ A},\quad i_2 = -1.667\text{ A},\quad i_3 = 6.667\text{ A},\quad i_4 = 10\text{ A},\quad i_5 = 3.333\text{ A}$$
 :::
 
 </template>

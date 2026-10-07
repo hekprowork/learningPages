@@ -75,10 +75,19 @@ docs/
 ### 6. 互動元件安全掛載原則 (SSR Safety for Interactive Components)
 - 互動式 3D 模擬元件（如 Three.js `<CrystalViewer />`）或其他 DOM 依賴元件確保 client-side 渲染安全性（透過 `if (typeof window !== 'undefined')` 或 Vue `onMounted` 生命週期），以防止 VitePress build 時發生 SSR 錯誤。
 
-### 7. KaTeX 數學公式自主檢查與驗證 (KaTeX Validation & Build Check)
-- 行內公式使用 `$...$`，區塊公式使用 `$$...$$`。
-- 自主驗證 LaTeX 語法，避免未轉義的孤立 `$` 符號。
-- **驗收檢查指令**：每次變更後必須執行 `npx vitepress build docs` 進行自動化建置與語法驗證。
+### 7. KaTeX 數學公式自主檢查與驗證 (KaTeX Validation & Automated Check)
+- **語法排版標準**：行內公式使用 `$...$`，區塊公式使用 `$$...$$`；文本中避免未轉義的孤立 `$` 符號（應使用 `\$` 或 backticks \`$\`）。
+- **VitePress 靜默盲區警示**：`npx vitepress build docs` 遇到 LaTeX 語法錯誤（如未轉義字元、未閉合括號）預設僅於 HTML 渲染錯誤節點，建置退出碼仍為 0，**絕不可單獨作為公式語法正確之判準**。
+- **強制自主驗證指令 (Fail-Fast KaTeX Check)**：
+  在任何變更驗收階段或執行 build 之前，**必須強制執行專案 KaTeX 自動化語法解析器**：
+  ```bash
+  npm run check:katex
+  ```
+  該指令使用底層 `katex` 引擎對所有 Markdown 的行內與區塊公式進行語法檢驗。若有任何 LaTeX 解析錯誤，將精準輸出檔案名稱、錯誤行號與原因並中斷流程。
+- **雙重驗收門檻 (Dual Verification Gates)**：
+  1. `npm run check:katex` 必須回傳退出碼 0（無任何 KaTeX 語法解析錯誤）。
+  2. `npx vitepress build docs` 必須回傳退出碼 0（無任何 SSR 渲染或 broken links 錯誤）。
+  僅當上述兩道檢查全數通過時，始得視為語法驗證完成。
 
 ### 8. 數值與推導閉環對帳原則 (Ground-Truth Reconciliation)
 - **語法通過 ≠ 內容正確**：建置指令 `npx vitepress build docs` 僅能檢核語法結構與連結，不可作為數值與物理/數學公式正確性的完成判準。防止將「建置成功」誤判為「工作完成」的早熟完成 (Premature Completion)。
@@ -138,7 +147,8 @@ docs/
    - 在首頁 features 或科目看板表格中登錄該科目的狀態與卡片連結。
 
 6. **驗證與發布**：
-   - 執行 `npx vitepress build docs` 確保無 broken links、SSR 錯誤與 KaTeX 語法問題。
+   - 執行 `npm run check:katex` 確保無任何 KaTeX 語法解析錯誤。
+   - 執行 `npx vitepress build docs` 確保無 broken links 與 SSR 錯誤。
 
 ---
 
@@ -156,10 +166,10 @@ docs/
    git add -A docs/
    git status --porcelain   # 必須無輸出才可 push
    ```
-2. **以乾淨副本模擬 CI 建置**（僅含已 commit 內容）：
+2. **以乾淨副本模擬 CI 建置**（僅含已 commit 內容，且嚴格執行 KaTeX 語法與 VitePress 雙重驗證）：
    ```bash
    rm -rf /tmp/lp-check && git worktree add /tmp/lp-check HEAD \
-     && (cd /tmp/lp-check && npm ci && npx vitepress build docs); \
+     && (cd /tmp/lp-check && npm ci && npm run check:katex && npx vitepress build docs); \
      git worktree remove --force /tmp/lp-check
    ```
 3. **推送後驗證 CI 與線上網址**：

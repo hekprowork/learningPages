@@ -660,7 +660,7 @@ $$
    - 選定輸入端電阻：$R_1 = R_3 = 20\text{ k}\Omega$
    - 計算回授與接地電阻：
      $$
-     R_2 = R_4 = 7.5 \times R_1 = 7.5 \times 20\text{ k}\Omega = 150\text{ k}\Omega$
+     R_2 = R_4 = 7.5 \times R_1 = 7.5 \times 20\text{ k}\Omega = 150\text{ k}\Omega
      $$
 
 ::: tip 標準答案
