@@ -14,10 +14,16 @@
 ## 規範守則 (Subject Rules)
 
 ### 1. 章節命名與結構 (Chapter Conventions)
-- 章節目錄結構：
-  - `chapter1/`: 電路分析與網路等效 (Circuit Analysis & Equivalences)
-  - `chapter2/`: 觀念筆記與定理推導 (Concept Notes & Derivations)
-  - `chapter3/`: 核心公式速查表 (Reference Cheatsheets)
+- 章節目錄結構（對應課程 pptx 與原文書章節）：
+  - `chapter1/`: Chapter 1 基本概念 (Basic Concepts)
+  - `chapter2/`: Chapter 2 基本定律 (Basic Laws)
+  - `chapter3/`: Chapter 3 分析方法 (Methods of Analysis)
+  - `chapter4/`: Chapter 4 電路定理 (Circuit Theorems)
+  - `chapter5/`: Chapter 5 運算放大器 (Operational Amplifiers)
+  - `chapter6/`: Chapter 6 電容與電感 (Capacitors and Inductors)
+  - `learning-records/`: 觀念筆記與定理推導 (Concept Notes & Derivations)
+  - `reference/`: 核心公式速查表 (Reference Cheatsheets)
+  - `practice/`: 互動式題庫練習系統 (Interactive Practice Workbooks)
 - 檔案命名必須遵循：`000x-name.md`（例如 `0001-wye-delta-transformation.md`），以保證側邊欄與文件序列的一致性。
 
 ### 2. 符號與命名慣例 (Notation Standards)
@@ -43,12 +49,12 @@
 | 使用者說 | 產出 | 流程 |
 |---|---|---|
 | **例題網頁**（例題、Example、Practice Problem、題庫） | `practice/000x-chapterN-examples.md`，每題一張 `<PracticeCard>` | 讀取並遵循 `extract-course-problems` skill（`~/.gemini/config/skills/extract-course-problems/SKILL.md`） |
-| **教學網頁**（教學、講義、觀念、lesson） | `chapter1/000x-<topic>.md` | 下列步驟 |
+| **教學網頁**（教學、講義、觀念、lesson） | `chapterX/000x-<topic>.md` (對應課本章節) | 下列步驟 |
 
 教學網頁步驟：
 1. 以課本 PDF 為來源，依序寫：直覺動機 → 定義 → 推導 → 1–2 個示範例題 → 常見錯誤。
 2. 抽象或可調參數的觀念（分壓、Y-Δ、暫態）用 Vue 互動元件嵌入，放 `docs/.vitepress/theme/components/`，DOM/canvas 存取只寫在 `onMounted`。
-3. 同步新增 `chapter3/` 速查卡條目與 sidebar、`index.md` 連結。
+3. 同步新增 `reference/` 速查卡條目與 sidebar、`index.md` 連結。
 4. 完成條件：
    - **語意層（對帳）**：通過第 6 節「數值與方程式對帳查核」（拘束式方向核對、回代驗算、與課本標準答案 1:1 吻合）。
    - **語法層（建置）**：`rm -rf docs/.vitepress/dist && npx vitepress build docs` 通過，推送後線上網址 HTTP 200 可正常瀏覽。

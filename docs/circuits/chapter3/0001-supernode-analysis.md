@@ -128,5 +128,5 @@ $$v_2 = -\frac{22}{3} + 2 = -\frac{16}{3}\text{ V} \approx -5.333\text{ V}$$
 
 ## 七、 相關學習資源
 
-- [0003: 超節點分析法的物理包絡原理與拘束方程式架構 (Learning Record)](/circuits/chapter2/0003-supernode-nodal-analysis-principle)
-- [002: 超節點分析法 (Supernode Analysis) 核心速查手冊 (Reference Cheatsheet)](/circuits/chapter3/002-supernode-reference)
+- [0003: 超節點分析法的物理包絡原理與拘束方程式架構 (Learning Record)](/circuits/learning-records/0003-supernode-nodal-analysis-principle)
+- [002: 超節點分析法 (Supernode Analysis) 核心速查手冊 (Reference Cheatsheet)](/circuits/reference/002-supernode-reference)

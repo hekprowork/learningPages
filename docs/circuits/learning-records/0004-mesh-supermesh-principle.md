@@ -133,6 +133,6 @@ $$P = \mathbf{i}_b^T \mathbf{R}_b \mathbf{i}_b = (\mathbf{C}^T \mathbf{i}_m)^T \
 
 ## 七、 相關學習資源
 
-- [Lesson 0003: 網孔分析法與超網孔的原理與實戰破解 (Tutorial Page)](/circuits/chapter1/0003-mesh-analysis)
-- [003: 網孔分析法與超網孔核心速查手冊 (Reference Cheatsheet)](/circuits/chapter3/003-mesh-reference)
-- [0003: 超節點分析法的物理包絡原理與拘束方程式架構 (Duality Learning Record)](/circuits/chapter2/0003-supernode-nodal-analysis-principle)
+- [Lesson 0003: 網孔分析法與超網孔的原理與實戰破解 (Tutorial Page)](/circuits/chapter3/0002-mesh-analysis)
+- [003: 網孔分析法與超網孔核心速查手冊 (Reference Cheatsheet)](/circuits/reference/003-mesh-reference)
+- [0003: 超節點分析法的物理包絡原理與拘束方程式架構 (Duality Learning Record)](/circuits/learning-records/0003-supernode-nodal-analysis-principle)

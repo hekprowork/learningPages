@@ -358,6 +358,6 @@ $$\begin{bmatrix} R_{11} & R_{12} & \dots & R_{1M} \\ R_{21} & R_{22} & \dots & 
 
 ## 十、 相關學習資源
 
-- [0004: 網孔電流法的平面拓撲本質與超網孔迴路獨立性推導 (Learning Record)](/circuits/chapter2/0004-mesh-supermesh-principle)
-- [003: 網孔分析法 (Mesh Analysis) 與超網孔核心速查手冊 (Reference Cheatsheet)](/circuits/chapter3/003-mesh-reference)
+- [0004: 網孔電流法的平面拓撲本質與超網孔迴路獨立性推導 (Learning Record)](/circuits/learning-records/0004-mesh-supermesh-principle)
+- [003: 網孔分析法 (Mesh Analysis) 與超網孔核心速查手冊 (Reference Cheatsheet)](/circuits/reference/003-mesh-reference)
 - [Chapter 3: Nodal & Mesh Analysis 互動題庫與範例詳解 (Interactive Practice)](/circuits/practice/0003-chapter3-examples)

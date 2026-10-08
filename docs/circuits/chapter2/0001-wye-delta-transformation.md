@@ -156,6 +156,6 @@ $$R_\text{Y} = \frac{1}{3} R_\Delta = \frac{30\ \Omega}{3} = 10\ \Omega$$
 
 ## 八、 相關學習資源
 
-- [0001: 星形與三角形網路等效互換原理與幾何對偶 (Learning Record)](/circuits/chapter2/0001-wye-delta-transformation-principle)
-- [0002: 開路測試在三端網路等效推導中的數學與物理合法性 (Learning Record)](/circuits/chapter2/0002-open-circuit-terminal-equivalence-validity)
-- [001: 星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊 (Reference Cheatsheet)](/circuits/chapter3/001-wye-delta-reference)
+- [0001: 星形與三角形網路等效互換原理與幾何對偶 (Learning Record)](/circuits/learning-records/0001-wye-delta-transformation-principle)
+- [0002: 開路測試在三端網路等效推導中的數學與物理合法性 (Learning Record)](/circuits/learning-records/0002-open-circuit-terminal-equivalence-validity)
+- [001: 星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊 (Reference Cheatsheet)](/circuits/reference/001-wye-delta-reference)
