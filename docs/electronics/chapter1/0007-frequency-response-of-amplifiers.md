@@ -38,10 +38,10 @@ $$ T(s) = \frac{V_o(s)}{V_i(s)} $$
 
 | 參數 | 低通 (LP) | 高通 (HP) |
 | :--- | :--- | :--- |
-| **傳遞函數 $T(s)$** | $$ \frac{K}{1 + (s/\omega_0)} $$ | $$ \frac{Ks}{s + \omega_0} $$ |
-| **頻率響應 $T(j\omega)$** | $$ \frac{K}{1 + j(\omega/\omega_0)} $$ | $$ \frac{K}{1 - j(\omega_0/\omega)} $$ |
-| **大小響應 $\|T(j\omega)\|$** | $$ \frac{\|K\|}{\sqrt{1 + (\omega/\omega_0)^2}} $$ | $$ \frac{\|K\|}{\sqrt{1 + (\omega_0/\omega)^2}} $$ |
-| **相位響應 $\angle T(j\omega)$** | $$ -\tan^{-1}\left(\frac{\omega}{\omega_0}\right) $$ | $$ \tan^{-1}\left(\frac{\omega_0}{\omega}\right) $$ |
+| **傳遞函數 $T(s)$** | $ \frac{K}{1 + (s/\omega_0)} $ | $ \frac{Ks}{s + \omega_0} $ |
+| **頻率響應 $T(j\omega)$** | $ \frac{K}{1 + j(\omega/\omega_0)} $ | $ \frac{K}{1 - j(\omega_0/\omega)} $ |
+| **大小響應 $\|T(j\omega)\|$** | $ \frac{\|K\|}{\sqrt{1 + (\omega/\omega_0)^2}} $ | $ \frac{\|K\|}{\sqrt{1 + (\omega_0/\omega)^2}} $ |
+| **相位響應 $\angle T(j\omega)$** | $ -\tan^{-1}\left(\frac{\omega}{\omega_0}\right) $ | $ \tan^{-1}\left(\frac{\omega_0}{\omega}\right) $ |
 | **在 $\omega = 0$ 時的傳輸率** | $K$ | $0$ |
 | **在 $\omega = \infty$ 時的傳輸率** | $0$ | $K$ |
 

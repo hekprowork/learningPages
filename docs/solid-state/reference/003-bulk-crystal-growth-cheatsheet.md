@@ -6,9 +6,9 @@
 
 | 階段 | 反應溫度 | 化學反應方程式 | 特點與純度 |
 | :--- | :--- | :--- | :--- |
-| **1. 冶金級矽 (MGS)** | $\sim 1800^\circ\text{C}$ (電弧爐) | $$\text{SiO}_2 + 2\text{C} \rightarrow \text{Si} + 2\text{CO}\uparrow$$ | 純度 98~99%，多晶，含大量金屬雜質 |
-| **2. 三氯氫矽生成** | $\sim 300^\circ\text{C}$ | $$\text{Si} + 3\text{HCl} \rightarrow \text{SiHCl}_3 + \text{H}_2\uparrow$$ | $\text{SiHCl}_3$ 沸點僅 $32^\circ\text{C}$，極易透過**分餾**純化 |
-| **3. 電子級矽 (EGS)** | $\sim 1100^\circ\text{C}$ (西門子法) | $$2\text{SiHCl}_3 + 2\text{H}_2 \rightarrow 2\text{Si} + 6\text{HCl}\uparrow$$ | 純度達 $99.9999999\%$ (9N~11N，雜質 $< 1\text{ ppb}$) |
+| **1. 冶金級矽 (MGS)** | $\sim 1800^\circ\text{C}$ (電弧爐) | $\text{SiO}_2 + 2\text{C} \rightarrow \text{Si} + 2\text{CO}\uparrow$ | 純度 98~99%，多晶，含大量金屬雜質 |
+| **2. 三氯氫矽生成** | $\sim 300^\circ\text{C}$ | $\text{Si} + 3\text{HCl} \rightarrow \text{SiHCl}_3 + \text{H}_2\uparrow$ | $\text{SiHCl}_3$ 沸點僅 $32^\circ\text{C}$，極易透過**分餾**純化 |
+| **3. 電子級矽 (EGS)** | $\sim 1100^\circ\text{C}$ (西門子法) | $2\text{SiHCl}_3 + 2\text{H}_2 \rightarrow 2\text{Si} + 6\text{HCl}\uparrow$ | 純度達 $99.9999999\%$ (9N~11N，雜質 $< 1\text{ ppb}$) |
 
 ---
 

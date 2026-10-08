@@ -27,10 +27,29 @@ function checkFile(filePath) {
   while ((match = displayRegex.exec(noCode)) !== null) {
     const math = match[1].trim();
     if (!math) continue;
+
+    const lineNo = content.slice(0, match.index).split('\n').length;
+    
+    // 取得 $$ 所在的那一行文字
+    const currentLineStart = content.lastIndexOf('\n', match.index);
+    const actualLineStart = currentLineStart === -1 ? 0 : currentLineStart + 1;
+    const currentLineEnd = content.indexOf('\n', match.index);
+    const currentLine = content.slice(actualLineStart, currentLineEnd === -1 ? content.length : currentLineEnd);
+
+    // 判斷是否位於 Markdown 表格列中（特徵為該行以 | 開頭）
+    if (/^\s*\|/.test(currentLine)) {
+      errors.push({ 
+        type: 'table-block-math', 
+        line: lineNo, 
+        err: '偵測到在 Markdown 表格內使用區塊公式 $$...$$。這會導致 VitePress 表格渲染破裂，請全面改用行內公式 $...$（若需放大字體可於內部加上 \\displaystyle）。', 
+        math: '$$' + math.slice(0, 30).replace(/\n/g, ' ') + '...$$' 
+      });
+      continue;
+    }
+
     try {
       katex.renderToString(math, { displayMode: true, throwOnError: true, strict: 'ignore' });
     } catch (err) {
-      const lineNo = content.slice(0, match.index).split('\n').length;
       errors.push({ type: 'display', line: lineNo, err: err.message, math });
     }
   }

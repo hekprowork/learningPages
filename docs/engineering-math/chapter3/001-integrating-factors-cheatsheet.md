@@ -16,9 +16,9 @@ $$d\phi = \frac{\partial \phi}{\partial x}\,dx + \frac{\partial \phi}{\partial y
 
 | 型態 | 檢驗條件 / 判別式 | 積分因子 $\mu$ 公式 | 記憶口訣 |
 | :--- | :--- | :--- | :--- |
-| **純 $x$ 函數 $\mu(x)$** | $\frac{1}{N}\left(\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}\right) = f(x)$ | $$\mu(x) = e^{\int f(x)\,dx}$$ | 除以右項 $N$，分子左偏減右偏 ($M_y - N_x$)，消去後純為 $x$ |
-| **純 $y$ 函數 $\mu(y)$** | $\frac{1}{M}\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right) = g(y)$ | $$\mu(y) = e^{\int g(y)\,dy}$$ | 除以左項 $M$，分子右偏減左偏 ($N_x - M_y$)，消去後純為 $y$ |
-| **乘積函數 $\mu(u), u=xy$** | $\frac{M_y - N_x}{xN - yM} = h(u)$ | $$\mu(u) = e^{\int h(u)\,du}$$ | 交叉項組合判定，若僅為 $u = xy$ 函數即可套用 |
+| **純 $x$ 函數 $\mu(x)$** | $\frac{1}{N}\left(\frac{\partial M}{\partial y} - \frac{\partial N}{\partial x}\right) = f(x)$ | $\mu(x) = e^{\int f(x)\,dx}$ | 除以右項 $N$，分子左偏減右偏 ($M_y - N_x$)，消去後純為 $x$ |
+| **純 $y$ 函數 $\mu(y)$** | $\frac{1}{M}\left(\frac{\partial N}{\partial x} - \frac{\partial M}{\partial y}\right) = g(y)$ | $\mu(y) = e^{\int g(y)\,dy}$ | 除以左項 $M$，分子右偏減左偏 ($N_x - M_y$)，消去後純為 $y$ |
+| **乘積函數 $\mu(u), u=xy$** | $\frac{M_y - N_x}{xN - yM} = h(u)$ | $\mu(u) = e^{\int h(u)\,du}$ | 交叉項組合判定，若僅為 $u = xy$ 函數即可套用 |
 
 ---
 

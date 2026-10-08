@@ -53,8 +53,8 @@ $$R_c = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_3}$$
 
 | 情境 / 視角 | 星形 (Y) 參數 | 三角形 (Δ) 參數 | 等效換算關係 |
 | :--- | :--- | :--- | :--- |
-| **平衡對稱電阻 (Symmetric)** | $R_1 = R_2 = R_3 = R_\text{Y}$ | $R_a = R_b = R_c = R_\Delta$ | $$R_\Delta = 3 R_\text{Y} \iff R_\text{Y} = \frac{1}{3} R_\Delta$$<br>*(口訣：三角形電阻是星形的 3 倍)* |
-| **電導觀點對偶 (Conductance $G=1/R$)** | $G_1, G_2, G_3$ | $G_a, G_b, G_c$ | $$G_a = \frac{G_2 G_3}{G_1 + G_2 + G_3}$$<br>*(Y→Δ 電導公式形式與 Δ→Y 電阻完全相同！)* |
+| **平衡對稱電阻 (Symmetric)** | $R_1 = R_2 = R_3 = R_\text{Y}$ | $R_a = R_b = R_c = R_\Delta$ | $R_\Delta = 3 R_\text{Y} \iff R_\text{Y} = \frac{1}{3} R_\Delta$<br>*(口訣：三角形電阻是星形的 3 倍)* |
+| **電導觀點對偶 (Conductance $G=1/R$)** | $G_1, G_2, G_3$ | $G_a, G_b, G_c$ | $G_a = \frac{G_2 G_3}{G_1 + G_2 + G_3}$<br>*(Y→Δ 電導公式形式與 Δ→Y 電阻完全相同！)* |
 
 ---
 

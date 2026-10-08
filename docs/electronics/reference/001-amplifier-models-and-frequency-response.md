@@ -53,11 +53,11 @@ $$\text{放大器效率 } \eta = \frac{P_L}{P_{DC}} \times 100\%$$
 
 | 特性項目 | 低通網路 (Low-Pass, LP) | 高通網路 (High-Pass, HP) |
 | :--- | :--- | :--- |
-| **轉移函數 $T(s)$** | $$T(s) = \frac{K}{1 + s/\omega_0}$$ | $$T(s) = \frac{K}{1 + \omega_0/s}$$ |
-| **頻率響應 $T(j\omega)$** | $$T(j\omega) = \frac{K}{1 + j(\omega/\omega_0)}$$ | $$T(j\omega) = \frac{K}{1 - j(\omega_0/\omega)}$$ |
-| **3-dB 截止頻率 $\omega_0$** | $$\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$$ | $$\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$$ |
-| **在 $\omega = \omega_0$ 處振幅** | $$|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$$ | $$|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$$ |
-| **在 $\omega = \omega_0$ 處相位** | $$\angle T(j\omega_0) = -45^\circ$$ | $$\angle T(j\omega_0) = +45^\circ$$ |
+| **轉移函數 $T(s)$** | $T(s) = \frac{K}{1 + s/\omega_0}$ | $T(s) = \frac{K}{1 + \omega_0/s}$ |
+| **頻率響應 $T(j\omega)$** | $T(j\omega) = \frac{K}{1 + j(\omega/\omega_0)}$ | $T(j\omega) = \frac{K}{1 - j(\omega_0/\omega)}$ |
+| **3-dB 截止頻率 $\omega_0$** | $\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$ | $\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$ |
+| **在 $\omega = \omega_0$ 處振幅** | $|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$ | $|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$ |
+| **在 $\omega = \omega_0$ 處相位** | $\angle T(j\omega_0) = -45^\circ$ | $\angle T(j\omega_0) = +45^\circ$ |
 | **波德圖漸近線斜率** | 高頻區 ($\omega \gg \omega_0$)：$-20\text{ dB/decade}$ ($-6\text{ dB/octave}$) | 低頻區 ($\omega \ll \omega_0$)：$+20\text{ dB/decade}$ ($+6\text{ dB/octave}$) |
 
 ---
