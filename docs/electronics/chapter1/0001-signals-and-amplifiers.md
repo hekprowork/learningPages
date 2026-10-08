@@ -158,5 +158,5 @@ $$60\text{ dB} - 40\text{ dB} = 20\text{ dB}$$
 
 ## 七、 相關學習資源
 
-- [0001: 建立訊號模型與四大放大器等效電路核心思維 (Learning Record)](/electronics/chapter2/0001-signals-and-amplifiers-foundations)
-- [001: 放大器模型、增益計算與頻率響應速查手冊 (Reference Cheatsheet)](/electronics/chapter3/001-amplifier-models-and-frequency-response)
+- [0001: 建立訊號模型與四大放大器等效電路核心思維 (Learning Record)](/electronics/learning-records/0001-signals-and-amplifiers-foundations)
+- [001: 放大器模型、增益計算與頻率響應速查手冊 (Reference Cheatsheet)](/electronics/reference/001-amplifier-models-and-frequency-response)

@@ -12,17 +12,17 @@
 - [0002: 鑽石結構與矽原子密度推導 (Diamond Lattice & Si Density)](/solid-state/chapter1/0002-diamond-lattice-density)
 - [0003: 塊狀晶體生長與矽晶圓製備 (Bulk Crystal Growth & Wafer Prep)](/solid-state/chapter1/0003-bulk-crystal-growth)
 
-### 📌 [Chapter 2: 觀念筆記與公式推導 (Learning Records)](/solid-state/chapter2/0001-bandgap-and-valence-electrons)
+### 📌 [觀念筆記與公式推導 (Learning Records)](/solid-state/learning-records/0001-bandgap-and-valence-electrons)
 *核心物理推導筆記、能帶理論與晶面間距幾何計算。*
-- [0001: 基礎半導體材料分類與價電子結構 (Semiconductor Classification)](/solid-state/chapter2/0001-bandgap-and-valence-electrons)
-- [0002: 密勒指數晶面求法與面間距幾何 (Interplanar Spacing)](/solid-state/chapter2/0002-interplanar-spacing-definition)
-- [0003: 塊狀晶體生長與偏析效應 (Segregation Coefficient & Scheil Equation)](/solid-state/chapter2/0003-bulk-crystal-growth)
+- [0001: 基礎半導體材料分類與價電子結構 (Semiconductor Classification)](/solid-state/learning-records/0001-bandgap-and-valence-electrons)
+- [0002: 密勒指數晶面求法與面間距幾何 (Interplanar Spacing)](/solid-state/learning-records/0002-interplanar-spacing-definition)
+- [0003: 塊狀晶體生長與偏析效應 (Segregation Coefficient & Scheil Equation)](/solid-state/learning-records/0003-bulk-crystal-growth)
 
-### 📌 [Chapter 3: 核心公式速查表 (Reference Cheatsheets)](/solid-state/chapter3/001-miller-indices-cheatsheet)
+### 📌 [核心公式速查表 (Reference Cheatsheets)](/solid-state/reference/001-miller-indices-cheatsheet)
 *考試、複習與研究必備之高密度速查卡。*
-- [001: 密勒指數快速速查表 (Miller Indices Cheatsheet)](/solid-state/chapter3/001-miller-indices-cheatsheet)
-- [002: 鑽石與閃鋅礦結構幾何速查表 (Diamond Lattice Cheatsheet)](/solid-state/chapter3/002-diamond-lattice-cheatsheet)
-- [003: 塊狀晶體生長與晶圓製程速查表 (Crystal Growth Cheatsheet)](/solid-state/chapter3/003-bulk-crystal-growth-cheatsheet)
+- [001: 密勒指數快速速查表 (Miller Indices Cheatsheet)](/solid-state/reference/001-miller-indices-cheatsheet)
+- [002: 鑽石與閃鋅礦結構幾何速查表 (Diamond Lattice Cheatsheet)](/solid-state/reference/002-diamond-lattice-cheatsheet)
+- [003: 塊狀晶體生長與晶圓製程速查表 (Crystal Growth Cheatsheet)](/solid-state/reference/003-bulk-crystal-growth-cheatsheet)
 
 ---
 

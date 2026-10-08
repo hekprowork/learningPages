@@ -16,8 +16,10 @@
 ### 1. 章節命名與結構 (Chapter Conventions)
 - 章節目錄結構：
   - `chapter1/`: 訊號與放大器基礎 (Signals & Amplifiers)
-  - `chapter2/`: 觀念筆記與電路推導 (Concept Notes & Derivations)
-  - `chapter3/`: 核心公式速查表 (Reference Cheatsheets)
+  - `chapter2/`: 運算放大器 (Operational Amplifiers)
+  - `learning-records/`: 觀念筆記與電路推導 (Concept Notes & Derivations)
+  - `reference/`: 核心公式速查表 (Reference Cheatsheets)
+  - `practice/`: 互動式範例與練習題庫 (Interactive Practice Workbooks)
 - 檔案命名必須遵循：`000x-name.md`（例如 `0001-signals-and-amplifiers.md`），以保證側邊欄與文件序列的一致性。
 
 ### 2. 微電子學變數命名與符號慣例 (Notation Standards)

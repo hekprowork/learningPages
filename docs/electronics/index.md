@@ -9,14 +9,20 @@
 ### 📌 [Chapter 1: 訊號與放大器基礎 (Signals & Amplifiers)](/electronics/chapter1/0001-signals-and-amplifiers)
 *深入探索微小感測訊號的二埠等效模型、受控源放大器分類、級聯負載效應與單時間常數頻率響應。*
 - [0001: 訊號、放大器模型與頻率響應精要 (Signals, Amplifiers & Frequency Response)](/electronics/chapter1/0001-signals-and-amplifiers)
+- [0002: 訊號 (Signals)](/electronics/chapter1/0002-signals)
+- [0003: 訊號的頻譜 (Frequency Spectrum of Signals)](/electronics/chapter1/0003-frequency-spectrum-of-signals)
+- [0004: 類比與數位訊號 (Analog and Digital Signals)](/electronics/chapter1/0004-analog-and-digital-signals)
+- [0005: 放大器 (Amplifiers)](/electronics/chapter1/0005-amplifiers)
+- [0006: 放大器的電路模型 (Circuit Models for Amplifiers)](/electronics/chapter1/0006-circuit-models-for-amplifiers)
+- [0007: 放大器的頻率響應 (Frequency Response of Amplifiers)](/electronics/chapter1/0007-frequency-response-of-amplifiers)
 
-### 📌 [Chapter 2: 觀念筆記與電路推導 (Learning Records)](/electronics/chapter2/0001-signals-and-amplifiers-foundations)
+### 📌 [觀念筆記與電路推導 (Learning Records)](/electronics/learning-records/0001-signals-and-amplifiers-foundations)
 *深入探討戴維寧/諾頓訊號源、二埠阻抗匹配極限、多級放大器負載效應推導與工作點物理意涵。*
-- [0001: 建立訊號模型與四大放大器等效電路核心思維 (Amplifier Models Foundations)](/electronics/chapter2/0001-signals-and-amplifiers-foundations)
+- [0001: 建立訊號模型與四大放大器等效電路核心思維 (Amplifier Models Foundations)](/electronics/learning-records/0001-signals-and-amplifiers-foundations)
 
-### 📌 [Chapter 3: 核心公式速查表 (Reference Cheatsheets)](/electronics/chapter3/001-amplifier-models-and-frequency-response)
+### 📌 [核心公式速查表 (Reference Cheatsheets)](/electronics/reference/001-amplifier-models-and-frequency-response)
 *考試、複習與電路設計必備之高密度速查卡。*
-- [001: 放大器模型、增益計算與頻率響應速查手冊 (Amplifier Models Cheatsheet)](/electronics/chapter3/001-amplifier-models-and-frequency-response)
+- [001: 放大器模型、增益計算與頻率響應速查手冊 (Amplifier Models Cheatsheet)](/electronics/reference/001-amplifier-models-and-frequency-response)
 
 ### 📝 [互動式題庫練習系統 (Interactive Practice Workbooks)](/electronics/practice/0001-chapter1-examples)
 *搭載 Hallmark 互動設計、KaTeX 數學公式與詳細圖解之各章題庫與範例練習。*

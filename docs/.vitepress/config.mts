@@ -38,21 +38,21 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Chapter 2: 觀念筆記與公式推導 (Learning Records)',
+          text: '觀念筆記與公式推導 (Learning Records)',
           collapsed: false,
           items: [
-            { text: '0001: 基礎半導體材料分類與價電子結構', link: '/solid-state/chapter2/0001-bandgap-and-valence-electrons' },
-            { text: '0002: 密勒指數晶面求法與面間距幾何', link: '/solid-state/chapter2/0002-interplanar-spacing-definition' },
-            { text: '0003: 塊狀晶體生長與偏析效應', link: '/solid-state/chapter2/0003-bulk-crystal-growth' }
+            { text: '0001: 基礎半導體材料分類與價電子結構', link: '/solid-state/learning-records/0001-bandgap-and-valence-electrons' },
+            { text: '0002: 密勒指數晶面求法與面間距幾何', link: '/solid-state/learning-records/0002-interplanar-spacing-definition' },
+            { text: '0003: 塊狀晶體生長與偏析效應', link: '/solid-state/learning-records/0003-bulk-crystal-growth' }
           ]
         },
         {
-          text: 'Chapter 3: 核心公式速查表 (Reference Cheatsheets)',
+          text: '核心公式速查表 (Reference Cheatsheets)',
           collapsed: false,
           items: [
-            { text: '001: 密勒指數快速速查表', link: '/solid-state/chapter3/001-miller-indices-cheatsheet' },
-            { text: '002: 鑽石與閃鋅礦結構幾何速查表', link: '/solid-state/chapter3/002-diamond-lattice-cheatsheet' },
-            { text: '003: 塊狀晶體生長與晶圓製程速查表', link: '/solid-state/chapter3/003-bulk-crystal-growth-cheatsheet' }
+            { text: '001: 密勒指數快速速查表', link: '/solid-state/reference/001-miller-indices-cheatsheet' },
+            { text: '002: 鑽石與閃鋅礦結構幾何速查表', link: '/solid-state/reference/002-diamond-lattice-cheatsheet' },
+            { text: '003: 塊狀晶體生長與晶圓製程速查表', link: '/solid-state/reference/003-bulk-crystal-growth-cheatsheet' }
           ]
         }
       ],
@@ -61,21 +61,27 @@ export default defineConfig({
           text: 'Chapter 1: 訊號與放大器基礎 (Signals & Amplifiers)',
           collapsed: false,
           items: [
-            { text: '0001: 訊號、放大器模型與頻率響應', link: '/electronics/chapter1/0001-signals-and-amplifiers' }
+            { text: '0001: 訊號、放大器模型與頻率響應 (Overview)', link: '/electronics/chapter1/0001-signals-and-amplifiers' },
+            { text: '0002: 訊號 (Signals)', link: '/electronics/chapter1/0002-signals' },
+            { text: '0003: 訊號的頻譜 (Frequency Spectrum of Signals)', link: '/electronics/chapter1/0003-frequency-spectrum-of-signals' },
+            { text: '0004: 類比與數位訊號 (Analog and Digital Signals)', link: '/electronics/chapter1/0004-analog-and-digital-signals' },
+            { text: '0005: 放大器 (Amplifiers)', link: '/electronics/chapter1/0005-amplifiers' },
+            { text: '0006: 放大器的電路模型 (Circuit Models for Amplifiers)', link: '/electronics/chapter1/0006-circuit-models-for-amplifiers' },
+            { text: '0007: 放大器的頻率響應 (Frequency Response of Amplifiers)', link: '/electronics/chapter1/0007-frequency-response-of-amplifiers' }
           ]
         },
         {
-          text: 'Chapter 2: 觀念筆記與電路推導 (Learning Records)',
+          text: '觀念筆記與電路推導 (Learning Records)',
           collapsed: false,
           items: [
-            { text: '0001: 訊號模型與四大放大器等效電路核心思維', link: '/electronics/chapter2/0001-signals-and-amplifiers-foundations' }
+            { text: '0001: 訊號模型與四大放大器等效電路核心思維', link: '/electronics/learning-records/0001-signals-and-amplifiers-foundations' }
           ]
         },
         {
-          text: 'Chapter 3: 核心公式速查表 (Reference Cheatsheets)',
+          text: '核心公式速查表 (Reference Cheatsheets)',
           collapsed: false,
           items: [
-            { text: '001: 放大器模型、增益計算與頻率響應速查手冊', link: '/electronics/chapter3/001-amplifier-models-and-frequency-response' }
+            { text: '001: 放大器模型、增益計算與頻率響應速查手冊', link: '/electronics/reference/001-amplifier-models-and-frequency-response' }
           ]
         },
         {
