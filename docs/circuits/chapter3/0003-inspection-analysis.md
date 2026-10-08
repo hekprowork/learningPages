@@ -4,7 +4,7 @@ title: Lesson 0004 觀察法分析
 
 # Lesson 0004: 觀察法分析 (Nodal and Mesh Analysis by Inspection) 的原理與實戰破解
 
-## 🎯 本單元目標
+##  本單元目標
 
 1. 理解如何跳過冗長的 KCL/KVL 方程式代數整理，**直接寫出**標準的矩陣方程式。
 2. 掌握**節點觀察法**與**網孔觀察法**的主對角項（自我元素）、非對角項（互連元素）以及等號右側常數向量的符號慣例。
@@ -22,7 +22,7 @@ title: Lesson 0004 觀察法分析
 
 對於複雜的電路，在步驟 1 與步驟 2 中，極易因為一個正負號的筆誤或漏掉一個電阻而導致全盤皆輸。**「觀察法」(By Inspection)** 則提供了一套嚴謹的視覺拓樸轉換法則，讓我們能夠直接從電路圖上的元件連接關係，填寫出最終的矩陣係數，完全省去代數展開的過程。
 
-> ⚠️ **教材重要提醒 (Alexander & Sadiku)**  
+> ️ **教材重要提醒 (Alexander & Sadiku)**  
 > 雖然觀察法非常快速，但**僅適用於不含相依源且電源種類單純（純獨立電流源或純獨立電壓源）的電路**。實務上，不推薦死背，而應理解其背後的對稱性與物理意義，以作為檢查方程式是否寫對的「對帳工具」。
 
 ---
@@ -33,7 +33,7 @@ title: Lesson 0004 觀察法分析
 
 $$ \mathbf{G} \mathbf{v} = \mathbf{i} $$
 
-::: tip 📌 矩陣 $\mathbf{G}$ 與向量 $\mathbf{i}$ 的建構法則
+::: tip  矩陣 $\mathbf{G}$ 與向量 $\mathbf{i}$ 的建構法則
 1. **對角項元素 ($G_{kk}$)**：**自我電導**。等於直接連接至節點 $k$ 的所有分支電導（$G = 1/R$）之總和。  
    *恆為正值。*
 2. **非對角項元素 ($G_{kj}$)**：**互電導**。等於直接連接在節點 $k$ 與節點 $j$ 之間的電導總和的**負值**。  
@@ -43,22 +43,22 @@ $$ \mathbf{G} \mathbf{v} = \mathbf{i} $$
    *符號慣例：**流入節點為正 (+)，流出節點為負 (-)**。*
 :::
 
-### 💡 深入探討：非對角項 (互電導) $G_{kj}$ 的物理意義與算法
+###  深入探討：非對角項 (互電導) $G_{kj}$ 的物理意義與算法
 
 在觀察法中，非對角項 $G_{kj}$ 是初學者最容易算錯或漏算的地方。
 **算法口訣**：「**找到節點 $k$ 與節點 $j$ 之間『所有直接相連』的電阻，將它們的電導加總後，再加上一個負號。**」
 
-#### 📝 概念例題：$G_{12}$ 的三種情境
+####  概念例題：$G_{12}$ 的三種情境
 假設我們正在寫矩陣方程式 $\mathbf{G}\mathbf{v} = \mathbf{i}$，現在要填寫第一列、第二行的元素 $G_{12}$（代表節點 1 與節點 2 之間的互電導）。
 
 - **情境 A（單一電阻）**：若節點 1 與節點 2 之間只有一個 $5\ \Omega$ 的電阻相連。
-  👉 **算法**：該電阻的電導為 $1/5 = 0.2\text{ S}$。加上負號，得到 **$G_{12} = -0.2$**。
+   **算法**：該電阻的電導為 $1/5 = 0.2\text{ S}$。加上負號，得到 **$G_{12} = -0.2$**。
 - **情境 B（多個電阻並聯連接）**：若節點 1 與節點 2 之間同時跨接了兩個電阻（例如 $10\ \Omega$ 與 $40\ \Omega$）。
-  👉 **算法**：這兩顆電阻提供的互電導為 $1/10 + 1/40 = 0.1 + 0.025 = 0.125\text{ S}$。加上負號，得到 **$G_{12} = -0.125$**。
+   **算法**：這兩顆電阻提供的互電導為 $1/10 + 1/40 = 0.1 + 0.025 = 0.125\text{ S}$。加上負號，得到 **$G_{12} = -0.125$**。
 - **情境 C（完全無直接相連）**：若節點 1 與節點 2 之間沒有任何直接相連的電阻（或者必須經過節點 3 才能到達）。
-  👉 **算法**：無直接連接視為斷路（電阻無限大，電導為 $0$）。加上負號，得到 **$G_{12} = 0$**。
+   **算法**：無直接連接視為斷路（電阻無限大，電導為 $0$）。加上負號，得到 **$G_{12} = 0$**。
 
-> ⚠️ **新手常見陷阱 (Common Pitfalls)**：
+> ️ **新手常見陷阱 (Common Pitfalls)**：
 > 1. **忘記負號**：非對角項必須是負的（或零）。這是因為在原始 KCL 展開時，流出節點 $k$ 往節點 $j$ 的電流項是 $(v_k - v_j) / R$。當整理矩陣時，$v_j$ 的係數自然就是 $-1/R$。
 > 2. **與接地 (Reference Node) 的連接**：連接在節點與「接地點 (GND)」之間的電阻，只會貢獻給主對角項（自我電導 $G_{kk}$），**絕對不會**出現在非對角項 $G_{kj}$ 中，因為接地不是獨立變數。
 
@@ -70,7 +70,7 @@ $$ \mathbf{G} \mathbf{v} = \mathbf{i} $$
 
 $$ \mathbf{R} \mathbf{i} = \mathbf{v} $$
 
-::: tip 📌 矩陣 $\mathbf{R}$ 與向量 $\mathbf{v}$ 的建構法則
+::: tip  矩陣 $\mathbf{R}$ 與向量 $\mathbf{v}$ 的建構法則
 1. **對角項元素 ($R_{kk}$)**：**自我電阻**。等於環繞網孔 $k$ 一圈的所有電阻之總和。  
    *恆為正值。*
 2. **非對角項元素 ($R_{kj}$)**：**互電阻**。等於網孔 $k$ 與網孔 $j$ 所**共用**的電阻總和的**負值**。  
@@ -98,7 +98,7 @@ $$ \mathbf{R} \mathbf{i} = \mathbf{v} $$
 
 ### 1. 節點觀察法實戰 (Example 3.8 & Practice 3.8)
 
-#### 📝 Example 3.8 
+####  Example 3.8 
 > Write the node-voltage matrix equations for the circuit in Fig. 3.27 by inspection.
 
 ![Example 3.8 Circuit](../assets/images/fig_3_27_nodal_inspection.png)
@@ -118,7 +118,7 @@ $$
 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \\ v_3 \\ v_4 \end{bmatrix} = \begin{bmatrix} 3 \\ -3 \\ 0 \\ 6 \end{bmatrix}
 $$
 
-#### 📝 Practice Problem 3.8
+####  Practice Problem 3.8
 > By inspection, obtain the node-voltage equations for the circuit in Fig. 3.28.
 
 ![Practice Problem 3.8 Circuit](../assets/images/fig_3_28_nodal_practice.png)
@@ -141,7 +141,7 @@ $$
 
 ### 2. 網孔觀察法實戰 (Example 3.9 & Practice 3.9)
 
-#### 📝 Example 3.9
+####  Example 3.9
 > By inspection, write the mesh-current equations for the circuit in Fig. 3.29.
 
 ![Example 3.9 Circuit](../assets/images/fig_3_29_mesh_inspection.png)
@@ -162,7 +162,7 @@ $$
 \end{bmatrix} \begin{bmatrix} i_1 \\ i_2 \\ i_3 \\ i_4 \\ i_5 \end{bmatrix} = \begin{bmatrix} 4 \\ 6 \\ -6 \\ 0 \\ -6 \end{bmatrix}
 $$
 
-#### 📝 Practice Problem 3.9
+####  Practice Problem 3.9
 
 ![Practice Problem 3.9 Circuit](../assets/images/fig_3_30_mesh_practice.png)
 
@@ -183,7 +183,7 @@ $$
 
 ## 六、 相依源與非理想電源的處理限制 (Limitations & Safeguards)
 
-::: warning ⚠️ 觀察法不是萬靈丹！何時會失效？
+::: warning ️ 觀察法不是萬靈丹！何時會失效？
 觀察法之所以能直接寫出漂亮的**對稱矩陣**，是因為電阻是雙向線性被動元件，而獨立源不依賴電路狀態。若遇到以下情況，請小心處理：
 
 1. **含有相依源 (Dependent Sources)**：

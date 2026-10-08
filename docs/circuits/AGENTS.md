@@ -4,7 +4,7 @@
 
 ---
 
-## 📚 模組定位與範圍 (Scope)
+##  模組定位與範圍 (Scope)
 - 本模組位於 `docs/circuits/`，專注於電阻網路等效化簡、星形-三角形轉換、節點與網孔分析法（超節點、超網孔）、運算放大器電路、一階/二階暫態響應、弦波穩態交流電路與三相平衡系統。
 - 遵循 Alexander & Sadiku《Fundamentals of Electric Circuits》經典教材之標準符號與節點命名慣例。
 - 所有講義與文檔均在 `/circuits/` 路由命名空間下運作。

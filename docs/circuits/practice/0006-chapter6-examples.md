@@ -1135,7 +1135,7 @@ part: "3A"
 title: "電路學 Chapter 6 Part 3A: 電感串並聯與響應分析"
 ---
 
-::: details 📚 本單元涵蓋題型與核心概念
+::: details  本單元涵蓋題型與核心概念
 - **Example 6.11**：混聯電感之等效電感計算（串聯與並聯化簡）
 - **Practice Problem 6.11**：電感梯形網路（Inductive Ladder Network）等效電感計算
 - **Example 6.12**：並聯電感分流與端電壓響應分析

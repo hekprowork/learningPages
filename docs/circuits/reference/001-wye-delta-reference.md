@@ -30,7 +30,7 @@ $$R_1 = \frac{R_b R_c}{R_a + R_b + R_c}$$
 $$R_2 = \frac{R_a R_c}{R_a + R_b + R_c}$$
 $$R_3 = \frac{R_a R_b}{R_a + R_b + R_c}$$
 
-::: tip 💡 $\Delta \to \text{Y}$ 口訣
+::: tip  $\Delta \to \text{Y}$ 口訣
 **「相鄰兩邊之積 ÷ 三邊總和」**  
 直覺定位：$R_1$ 接在節點 $a$，在 $\Delta$ 中夾住節點 $a$ 的相鄰兩邊就是 $R_b$ 與 $R_c$。
 :::
@@ -42,7 +42,7 @@ $$R_a = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_1}$$
 $$R_b = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_2}$$
 $$R_c = \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_3}$$
 
-::: tip 💡 $\text{Y} \to \Delta$ 口訣
+::: tip  $\text{Y} \to \Delta$ 口訣
 **「兩兩相乘之和 ÷ 正對面電阻」**  
 直覺定位：分子為輪換乘積總和 $\sum R_i R_j$；分母為正對面頂點連向中心之電阻。
 :::

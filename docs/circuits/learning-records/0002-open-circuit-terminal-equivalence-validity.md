@@ -2,7 +2,7 @@
 
 > 剖析推導中「假設端點開路」與線性非時變 (LTI) 唯一性定理之關聯
 
-## 🎯 學習紀錄核心重點
+##  學習紀錄核心重點
 
 初學者在學習 Y-Δ 互換時常產生疑惑：「推導時明明假設第三個端點開路（$i_c = 0$），那在實際電路中該端點接有負載或有電流流過時，這些公式依然成立嗎？」
 
@@ -48,7 +48,7 @@ $$\mathbf{v}_{\text{total}} = \mathbf{Z} \mathbf{i}_{\text{total}} = \mathbf{Z} 
 
 ---
 
-## 💡 概念啟示 (Implications)
+##  概念啟示 (Implications)
 
 - 建立了「線性系統特徵萃取」的通用工程方法論。
 - 奠定了後續雙埠網路（Two-Port Networks）四種參數矩陣（$\mathbf{Z}, \mathbf{Y}, \mathbf{h}, \mathbf{T}$）的測試與推導直覺。

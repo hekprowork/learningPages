@@ -736,9 +736,9 @@ $$R_{ab} = 40\ \Omega,\quad i = 6\text{ A}$$
 - Prob #8
 - Prob #11
 - Prob #15
-- Prob #22 🌟
+- Prob #22 
 - Prob #31
-- Prob #38 🌟
+- Prob #38 
 - Prob #47
 - Prob #55
 
