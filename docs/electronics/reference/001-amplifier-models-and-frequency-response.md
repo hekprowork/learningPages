@@ -6,10 +6,10 @@
 
 | 放大器類型 (Type) | 輸入/輸出訊號 | 開路/短路增益定義 | 理想輸入電阻 $R_i$ | 理想輸出電阻 $R_o$ | 等效受控源形式 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **電壓放大器 (Voltage Amp)** | 輸入 $v_i$ / 輸出 $v_o$ | $A_{vo} = \left.\frac{v_o}{v_i}\right\|_{i_o=0}$ (V/V) | $R_i = \infty$ | $R_o = 0$ | 壓控電壓源 (VCVS): $A_{vo} v_i$ |
-| **電流放大器 (Current Amp)** | 輸入 $i_i$ / 輸出 $i_o$ | $A_{is} = \left.\frac{i_o}{i_i}\right\|_{v_o=0}$ (A/A) | $R_i = 0$ | $R_o = \infty$ | 流控電流源 (CCCS): $A_{is} i_i$ |
-| **轉導放大器 (Transconductance)** | 輸入 $v_i$ / 輸出 $i_o$ | $G_m = \left.\frac{i_o}{v_i}\right\|_{v_o=0}$ (A/V 或 S) | $R_i = \infty$ | $R_o = \infty$ | 壓控電流源 (VCCS): $G_m v_i$ |
-| **轉阻放大器 (Transresistance)** | 輸入 $i_i$ / 輸出 $v_o$ | $R_m = \left.\frac{v_o}{i_i}\right\|_{i_o=0}$ (V/A 或 $\Omega$) | $R_i = 0$ | $R_o = 0$ | 流控電壓源 (CCVS): $R_m i_i$ |
+| **電壓放大器 (Voltage Amp)** | 輸入 $v_i$ / 輸出 $v_o$ | $A_{vo} = \left.\frac{v_o}{v_i}\right\vert_{i_o=0}$ (V/V) | $R_i = \infty$ | $R_o = 0$ | 壓控電壓源 (VCVS): $A_{vo} v_i$ |
+| **電流放大器 (Current Amp)** | 輸入 $i_i$ / 輸出 $i_o$ | $A_{is} = \left.\frac{i_o}{i_i}\right\vert_{v_o=0}$ (A/A) | $R_i = 0$ | $R_o = \infty$ | 流控電流源 (CCCS): $A_{is} i_i$ |
+| **轉導放大器 (Transconductance)** | 輸入 $v_i$ / 輸出 $i_o$ | $G_m = \left.\frac{i_o}{v_i}\right\vert_{v_o=0}$ (A/V 或 S) | $R_i = \infty$ | $R_o = \infty$ | 壓控電流源 (VCCS): $G_m v_i$ |
+| **轉阻放大器 (Transresistance)** | 輸入 $i_i$ / 輸出 $v_o$ | $R_m = \left.\frac{v_o}{i_i}\right\vert_{i_o=0}$ (V/A 或 $\Omega$) | $R_i = 0$ | $R_o = 0$ | 流控電壓源 (CCVS): $R_m i_i$ |
 
 ::: tip 參數等效互換關係式
 $$A_{vo} = G_m R_o = \frac{R_m}{R_i} = A_{is} \frac{R_o}{R_i}$$
@@ -38,8 +38,8 @@ $$A_p = \frac{P_L}{P_I} = A_v \cdot A_i = A_v^2 \left( \frac{R_{i1}}{R_L} \right
 
 | 物理量 | 線性比例 (Linear Ratio) | 分貝表示法 (Decibels) | 常用記憶倍率 |
 | :--- | :--- | :--- | :--- |
-| **電壓增益 (Voltage Gain)** | $A_v = v_o / v_i$ | $\text{Gain (dB)} = 20 \log_{10} |A_v|$ | $6\text{ dB} \approx 2\times$；$20\text{ dB} = 10\times$；$40\text{ dB} = 100\times$ |
-| **電流增益 (Current Gain)** | $A_i = i_o / i_i$ | $\text{Gain (dB)} = 20 \log_{10} |A_i|$ | 同電壓增益以 $20\log$ 計算 |
+| **電壓增益 (Voltage Gain)** | $A_v = v_o / v_i$ | $\text{Gain (dB)} = 20 \log_{10} \vert A_v\vert$ | $6\text{ dB} \approx 2\times$；$20\text{ dB} = 10\times$；$40\text{ dB} = 100\times$ |
+| **電流增益 (Current Gain)** | $A_i = i_o / i_i$ | $\text{Gain (dB)} = 20 \log_{10} \vert A_i\vert$ | 同電壓增益以 $20\log$ 計算 |
 | **功率增益 (Power Gain)** | $A_p = P_L / P_i$ | $\text{Gain (dB)} = 10 \log_{10} A_p$ | $3\text{ dB} \approx 2\times$；$10\text{ dB} = 10\times$；$20\text{ dB} = 100\times$ |
 
 ### 直流供電功率平衡方程式
@@ -56,7 +56,7 @@ $$\text{放大器效率 } \eta = \frac{P_L}{P_{DC}} \times 100\%$$
 | **轉移函數 $T(s)$** | $T(s) = \frac{K}{1 + s/\omega_0}$ | $T(s) = \frac{K}{1 + \omega_0/s}$ |
 | **頻率響應 $T(j\omega)$** | $T(j\omega) = \frac{K}{1 + j(\omega/\omega_0)}$ | $T(j\omega) = \frac{K}{1 - j(\omega_0/\omega)}$ |
 | **3-dB 截止頻率 $\omega_0$** | $\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$ | $\omega_0 = \frac{1}{\tau} = \frac{1}{RC} \quad (f_0 = \frac{1}{2\pi RC})$ |
-| **在 $\omega = \omega_0$ 處振幅** | $|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$ | $|T(j\omega_0)| = \frac{|K|}{\sqrt{2}} = |K| - 3\text{ dB}$ |
+| **在 $\omega = \omega_0$ 處振幅** | $\vert T(j\omega_0)\vert = \frac{\vert K\vert}{\sqrt{2}} = \vert K\vert - 3\text{ dB}$ | $\vert T(j\omega_0)\vert = \frac{\vert K\vert}{\sqrt{2}} = \vert K\vert - 3\text{ dB}$ |
 | **在 $\omega = \omega_0$ 處相位** | $\angle T(j\omega_0) = -45^\circ$ | $\angle T(j\omega_0) = +45^\circ$ |
 | **波德圖漸近線斜率** | 高頻區 ($\omega \gg \omega_0$)：$-20\text{ dB/decade}$ ($-6\text{ dB/octave}$) | 低頻區 ($\omega \ll \omega_0$)：$+20\text{ dB/decade}$ ($+6\text{ dB/octave}$) |
 

@@ -43,7 +43,7 @@ $$e^{\lambda_1 x}, e^{\lambda_2 x}, \dots, e^{\lambda_n x}$$
 $$y = c_1 e^{\lambda_1 x} + c_2 e^{\lambda_2 x} + \dots + c_n e^{\lambda_n x}$$
 
 ### Case 2: 多重實根（重數為 $k$ 之實根 $\lambda\））
-若實根 \(\lambda$ 的重數為 $k$，則它對應的 $k$ 個線性獨立基底解為：
+若實根 \(\lambda$的重數為$k$，則它對應的$k$ 個線性獨立基底解為：
 $$e^{\lambda x}, x e^{\lambda x}, x^2 e^{\lambda x}, \dots, x^{k-1} e^{\lambda x}$$
 
 ### Case 3: 單一對共軛複數根 ($\lambda = \alpha \pm i\beta$)
@@ -51,7 +51,7 @@ $$e^{\lambda x}, x e^{\lambda x}, x^2 e^{\lambda x}, \dots, x^{k-1} e^{\lambda x
 $$e^{\alpha x}\cos(\beta x), \quad e^{\alpha x}\sin(\beta x)$$
 
 ### Case 4: 多重共軛複數根（重數為 $k$ 之複數根 $\lambda = \alpha \pm i\beta\））
-若共軛複數根對 \(\alpha \pm i\beta$ 的重數為 $k$，則對應的 $2k$ 個線性獨立解為：
+若共軛複數根對 \(\alpha \pm i\beta$的重數為$k$，則對應的$2k$ 個線性獨立解為：
 $$e^{\alpha x}\cos\beta x, \; e^{\alpha x}\sin\beta x, \; x e^{\alpha x}\cos\beta x, \; x e^{\alpha x}\sin\beta x, \; \dots, \; x^{k-1}e^{\alpha x}\cos\beta x, \; x^{k-1}e^{\alpha x}\sin\beta x$$
 
 ---

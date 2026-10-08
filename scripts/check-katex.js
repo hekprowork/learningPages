@@ -14,9 +14,9 @@ import katex from 'katex';
 function checkFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   
-  // 屏蔽程式碼區塊（避免程式碼中的 $ 觸發誤判）
+  // 屏蔽程式碼區塊（避免程式碼中的 $ 觸發誤判），同時保留換行符號以確保行號計算正確
   const noCode = content
-    .replace(/```[\s\S]*?```/g, m => ' '.repeat(m.length))
+    .replace(/```[\s\S]*?```/g, m => m.replace(/[^\n]/g, ' '))
     .replace(/`[^`\n]+`/g, m => ' '.repeat(m.length));
 
   const errors = [];
@@ -54,16 +54,47 @@ function checkFile(filePath) {
     }
   }
 
-  // 2. 檢驗行內公式 $...$（排除已檢驗之 $$ 區塊與轉義之 \$）
-  const noDisplay = noCode.replace(/\$\$[\s\S]+?\$\$/g, m => ' '.repeat(m.length));
+  // 2. 檢驗行內公式 $...$（排除已檢驗之 $$ 區塊與轉義之 \$，保留換行符號）
+  const noDisplay = noCode.replace(/\$\$[\s\S]+?\$\$/g, m => m.replace(/[^\n]/g, ' '));
   const inlineRegex = /(^|[^\\])\$([^\$\n]+?)\$/g;
   while ((match = inlineRegex.exec(noDisplay)) !== null) {
-    const math = match[2].trim();
+    const rawMath = match[2];
+    const math = rawMath.trim();
     if (!math) continue;
+
+    const lineNo = noDisplay.slice(0, match.index).split('\n').length;
+    
+    // 取得所在的行文字
+    const currentLineStart = content.lastIndexOf('\n', match.index);
+    const actualLineStart = currentLineStart === -1 ? 0 : currentLineStart + 1;
+    const currentLineEnd = content.indexOf('\n', match.index);
+    const currentLine = content.slice(actualLineStart, currentLineEnd === -1 ? content.length : currentLineEnd);
+
+    // Rule 1: 行內公式前後不可有空白
+    if (/^\s|\s$/.test(rawMath)) {
+      errors.push({
+        type: 'inline-math-whitespace',
+        line: lineNo,
+        err: '行內公式 $...$ 內側首尾不可包含空白字元（例如 `$ 數學 $` 會失效，請緊密貼合改為 `$數學$`），否則 VitePress 無法正確解析。',
+        math: '$' + rawMath + '$'
+      });
+    }
+
+    // Rule 2: 表格內的行內公式不可使用 | 或 \|
+    if (/^\s*\|/.test(currentLine)) {
+      if (math.includes('|') || math.includes('\\|')) {
+        errors.push({
+          type: 'table-inline-pipe',
+          line: lineNo,
+          err: '在 Markdown 表格中的行內公式不可使用 `|` 或 `\\|` 作為絕對值符號，這會干擾表格結構。請全面改用 LaTeX 的 `\\vert`。',
+          math: '$' + math + '$'
+        });
+      }
+    }
+
     try {
       katex.renderToString(math, { displayMode: false, throwOnError: true, strict: 'ignore' });
     } catch (err) {
-      const lineNo = noDisplay.slice(0, match.index).split('\n').length;
       errors.push({ type: 'inline', line: lineNo, err: err.message, math });
     }
   }

@@ -70,10 +70,10 @@ $$\eta \equiv \frac{P_L}{P_{DC}} \times 100\%$$
 
 | 放大器類型 (Amplifier Type) | 增益參數與定義 | 測試條件 | 理想輸入電阻 $R_i$ | 理想輸出電阻 $R_o$ | 等效受控源形式 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **電壓放大器 (Voltage Amp)** | $A_{vo} \equiv \left.\frac{v_o}{v_i}\right\|_{i_o=0}$ (V/V) | 開路 ($i_o = 0$) | $\infty$ (不分走源電壓) | $0$ (負載變動不影響輸出) | 壓控電壓源 (VCVS): $A_{vo} v_i$ |
-| **電流放大器 (Current Amp)** | $A_{is} \equiv \left.\frac{i_o}{i_i}\right\|_{v_o=0}$ (A/A) | 短路 ($v_o = 0$) | $0$ (完全吸納訊號電流) | $\infty$ (負載變動不影響輸出) | 流控電流源 (CCCS): $A_{is} i_i$ |
-| **轉導放大器 (Transconductance Amp)** | $G_m \equiv \left.\frac{i_o}{v_i}\right\|_{v_o=0}$ (A/V 或 S) | 短路 ($v_o = 0$) | $\infty$ | $\infty$ | 壓控電流源 (VCCS): $G_m v_i$ |
-| **轉阻放大器 (Transresistance Amp)** | $R_m \equiv \left.\frac{v_o}{i_i}\right\|_{i_o=0}$ (V/A 或 $\Omega$) | 開路 ($i_o = 0$) | $0$ | $0$ | 流控電壓源 (CCVS): $R_m i_i$ |
+| **電壓放大器 (Voltage Amp)** | $A_{vo} \equiv \left.\frac{v_o}{v_i}\right\vert_{i_o=0}$ (V/V) | 開路 ($i_o = 0$) | $\infty$ (不分走源電壓) | $0$ (負載變動不影響輸出) | 壓控電壓源 (VCVS): $A_{vo} v_i$ |
+| **電流放大器 (Current Amp)** | $A_{is} \equiv \left.\frac{i_o}{i_i}\right\vert_{v_o=0}$ (A/A) | 短路 ($v_o = 0$) | $0$ (完全吸納訊號電流) | $\infty$ (負載變動不影響輸出) | 流控電流源 (CCCS): $A_{is} i_i$ |
+| **轉導放大器 (Transconductance Amp)** | $G_m \equiv \left.\frac{i_o}{v_i}\right\vert_{v_o=0}$ (A/V 或 S) | 短路 ($v_o = 0$) | $\infty$ | $\infty$ | 壓控電流源 (VCCS): $G_m v_i$ |
+| **轉阻放大器 (Transresistance Amp)** | $R_m \equiv \left.\frac{v_o}{i_i}\right\vert_{i_o=0}$ (V/A 或 $\Omega$) | 開路 ($i_o = 0$) | $0$ | $0$ | 流控電壓源 (CCVS): $R_m i_i$ |
 
 ### 參數間的等效互換關係
 $$A_{vo} = G_m R_o = \frac{R_m}{R_i} = A_{is} \frac{R_o}{R_i}$$

@@ -1277,7 +1277,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 <PracticeCard id="ch6-ex13" title="Example 6.13: 加法積分器輸出電壓計算 (Summing Integrator Analysis)" source="Example 6.13 · Page 237" topic="加法積分器 (Summing Integrator)">
 
-如果  = 10 \cos(2t)\text{ mV}$ 且  = 0.5t\text{ mV}$，求圖 6.36 運算放大器電路中的輸出電壓 $。假設跨越電容器之初始電壓為零。
+如果  = 10 \cos(2t)\text{ mV}$且  = 0.5t\text{ mV}$，求圖 6.36 運算放大器電路中的輸出電壓 $。假設跨越電容器之初始電壓為零。
 
 ![Figure 6.36](../assets/images/ch6-ex13_figure_6.36.png)
 
@@ -1307,7 +1307,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 <PracticeCard id="ch6-pr13" title="Practice Problem 6.13: 理想積分器階躍響應分析 (Integrator Response)" source="Practice Problem 6.13 · Page 237" topic="積分器響應 (Integrator Step Response)">
 
-圖 6.35(b) 中的積分器具有  = 100\text{ k}\Omega$、 = 20\ \mu\text{F}$。當在  = 0$ 時施加一直流電壓 .5\text{ mV}$，求其輸出電壓。假設運算放大器最初已歸零 (nulled)。
+圖 6.35(b) 中的積分器具有  = 100\text{ k}\Omega$、 = 20\ \mu\text{F}$。當在  = 0$時施加一直流電壓 .5\text{ mV}$，求其輸出電壓。假設運算放大器最初已歸零 (nulled)。
 
 ![Figure 6.35(b)](../assets/images/ch6-ex13_figure_6.35.png)
 
@@ -1372,7 +1372,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 <PracticeCard id="ch6-pr14" title="Practice Problem 6.14: 微分器斜坡輸入響應 (Differentiator Response)" source="Practice Problem 6.14 · Page 239" topic="微分器斜坡響應 (Differentiator Ramp Response)">
 
-圖 6.37 中的微分器具有  = 100\text{ k}\Omega$ 與  = 0.1\ \mu\text{F}$。給定斜坡輸入 (t) = 1.25t\text{ V}$，求輸出電壓 $。
+圖 6.37 中的微分器具有  = 100\text{ k}\Omega$與  = 0.1\ \mu\text{F}$。給定斜坡輸入 (t) = 1.25t\text{ V}$，求輸出電壓$。
 
 ![Figure 6.37](../assets/images/ch6-pr14_figure_6.37.png)
 
@@ -1424,7 +1424,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
    - 使用加法積分器（Summing Integrator）將輸入訊號 \sin(4t)$、一階導數反相項與輸出反相項按比例加總並執行第一次積分，輸出 569X\frac{dv_o}{dt}$。
    - 串接第二個積分器以產生 0(t)$。
    - 選取時間常數標準值  = 1\text{ s}$（例如  = 1\text{ M}\Omega, C = 1\ \mu\text{F}$）。
-   - 透過在積分電容器兩端預充初始直流電壓源分別注入初始條件 '(0) = 1\text{ V/s}$ 與 (0) = -4\text{ V}$。
+   - 透過在積分電容器兩端預充初始直流電壓源分別注入初始條件 '(0) = 1\text{ V/s}$與 (0) = -4\text{ V}$。
    - 完整電路架構如圖 6.40 所示。
 
 ::: tip 標準電路
@@ -1453,9 +1453,9 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
    19942\frac{d^2 v_o}{dt^2} = 4 \cos(10t) - 3\frac{dv_o}{dt} - 2v_o19942
 
 2. **電路拓樸設計與參數配置**：
-   - 採用兩級積分器級聯架構，第一級加法積分器權重分別為輸入項係數 $、一階項係數 $、零階項係數 $。
+   - 採用兩級積分器級聯架構，第一級加法積分器權重分別為輸入項係數 $、一階項係數$、零階項係數 $。
    - 標準化積分時間常數取  = 1\text{ s}$。
-   - 於第二級輸出端電容跨接 \text{ V}$ 直流初始偏壓以滿足初始條件 (0) = 2\text{ V}$；第一級電容初期跨壓設定為 zsh\text{ V}$（因 '(0) = 0$）。
+   - 於第二級輸出端電容跨接 \text{ V}$直流初始偏壓以滿足初始條件 (0) = 2\text{ V}$；第一級電容初期跨壓設定為 zsh\text{ V}$（因 '(0) = 0$）。
    - 完整電路架構詳見圖 6.41。
 
 ::: tip 標準電路
