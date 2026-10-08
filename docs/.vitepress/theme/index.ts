@@ -3,6 +3,7 @@ import type { App } from 'vue'
 import CrystalViewer from './components/CrystalViewer.vue'
 import PracticeCard from './components/PracticeCard.vue'
 import PracticeProgress from './components/PracticeProgress.vue'
+import InspectionMatrixSimulator from './components/InspectionMatrixSimulator.vue'
 import 'katex/dist/katex.min.css'
 
 export default {
@@ -11,5 +12,6 @@ export default {
     app.component('CrystalViewer', CrystalViewer)
     app.component('PracticeCard', PracticeCard)
     app.component('PracticeProgress', PracticeProgress)
+    app.component('InspectionMatrixSimulator', InspectionMatrixSimulator)
   }
 }

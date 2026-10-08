@@ -94,7 +94,8 @@ export default defineConfig({
           items: [
             { text: '0001: 星形 (Y) 與等效三角形 (Δ) 網路互換原理與推導', link: '/circuits/chapter1/0001-wye-delta-transformation' },
             { text: '0002: 超節點分析法 (Supernode Analysis) 的原理與實戰破解', link: '/circuits/chapter1/0002-supernode-analysis' },
-            { text: '0003: 網孔分析法 (Mesh Analysis) 與超網孔的原理與實戰破解', link: '/circuits/chapter1/0003-mesh-analysis' }
+            { text: '0003: 網孔分析法 (Mesh Analysis) 與超網孔的原理與實戰破解', link: '/circuits/chapter1/0003-mesh-analysis' },
+            { text: '0004: 觀察法分析 (Nodal and Mesh Analysis by Inspection) 的原理與實戰破解', link: '/circuits/chapter1/0004-inspection-analysis' }
           ]
         },
         {
@@ -113,7 +114,8 @@ export default defineConfig({
           items: [
             { text: '001: 星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊', link: '/circuits/chapter3/001-wye-delta-reference' },
             { text: '002: 超節點分析法 (Supernode Analysis) 核心速查手冊', link: '/circuits/chapter3/002-supernode-reference' },
-            { text: '003: 網孔分析法 (Mesh Analysis) 與超網孔核心速查手冊', link: '/circuits/chapter3/003-mesh-reference' }
+            { text: '003: 網孔分析法 (Mesh Analysis) 與超網孔核心速查手冊', link: '/circuits/chapter3/003-mesh-reference' },
+            { text: '004: 觀察法分析 (Inspection Analysis) 核心速查手冊', link: '/circuits/chapter3/004-inspection-reference' }
           ]
         },
         {
