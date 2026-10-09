@@ -35,9 +35,9 @@
 
 ### [互動式題庫練習系統 (Interactive Practice Workbooks)](/circuits/practice/0001-chapter1-examples)
 *搭載 Hallmark 互動設計、KaTeX 數學公式與詳細圖解之各章題庫與範例練習。*
-- [Chapter 1: Basic Concepts 互動題庫](/circuits/practice/0001-chapter1-examples)
+- [Chapter 1: Basic Concepts 互動題庫（19 題）](/circuits/practice/0001-chapter1-examples)
 - [Chapter 2: Basic Laws 互動題庫](/circuits/practice/0002-chapter2-examples)
-- [Chapter 3: Nodal & Mesh Analysis 互動題庫](/circuits/practice/0003-chapter3-examples)
+- [Chapter 3: Nodal & Mesh Analysis 互動題庫（26 題）](/circuits/practice/0003-chapter3-examples)
 - [Chapter 4: Circuit Theorems 互動題庫](/circuits/practice/0004-chapter4-examples)
 - [Chapter 5: Operational Amplifiers 互動題庫](/circuits/practice/0005-chapter5-examples)
 - [Chapter 6: Capacitors and Inductors 互動題庫](/circuits/practice/0006-chapter6-examples)

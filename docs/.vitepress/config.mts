@@ -134,9 +134,9 @@ export default defineConfig({
           text: '互動式題庫練習系統 (Interactive Practice Workbooks)',
           collapsed: false,
           items: [
-            { text: 'Chapter 1: 互動式範例與練習題庫', link: '/circuits/practice/0001-chapter1-examples' },
+            { text: 'Chapter 1: 互動式範例與練習題庫（19 題）', link: '/circuits/practice/0001-chapter1-examples' },
             { text: 'Chapter 2: 互動式範例與練習題庫', link: '/circuits/practice/0002-chapter2-examples' },
-            { text: 'Chapter 3: 互動式範例與練習題庫', link: '/circuits/practice/0003-chapter3-examples' },
+            { text: 'Chapter 3: 互動式範例與練習題庫（26 題）', link: '/circuits/practice/0003-chapter3-examples' },
             { text: 'Chapter 4: 互動式範例與練習題庫 (電路定理)', link: '/circuits/practice/0004-chapter4-examples' },
             { text: 'Chapter 5: 互動式範例與練習題庫 (運算放大器)', link: '/circuits/practice/0005-chapter5-examples' },
             { text: 'Chapter 6: 互動式範例與練習題庫 (電容與電感)', link: '/circuits/practice/0006-chapter6-examples' }

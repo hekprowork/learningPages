@@ -1,735 +1,551 @@
 ---
-title: Chapter 1 互動式範例與練習題庫
-description: 電路學第一章 基本概念 (Basic Concepts) 互動題庫、範例解說與詳細推導
+title: Chapter 1 基本概念：例題與練習題
 ---
 
-# 互動式範例與練習題庫：Chapter 1 基本概念 (Basic Concepts)
+# Chapter 1 基本概念：例題與練習題
 
-> Alexander & Sadiku · Basic Concepts 基礎概念、範例與精選作業題解
+本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 1 章之核心 Example 與 Practice Problem。點擊「查看詳解」可展開分步推導與計算結果；完成題目後可勾選標記學習進度。
 
-::: details 核心電路觀念與定義速記
-- **電荷與基本電荷量**：電子電荷 $e = -1.602 \times 10^{-19}\text{ C}$，總電荷量 $q = N \cdot e$，$1\text{ C} = 6.24 \times 10^{18}$ 個電子。
-- **電流與微積分關係**：瞬時電流 $i(t) = \frac{dq}{dt}$，累積電荷 $q(t) = \int_{t_0}^t i(\tau) d\tau + q(t_0)$，單位 $1\text{ A} = 1\text{ C/s}$。
-- **電壓、功率與能量**：端電壓 $v_{ab} = \frac{dw}{dq} = v_a - v_b$，瞬時功率 $p = \frac{dw}{dt} = v \cdot i$，能量 $w = \int p dt$（$1\text{ kWh} = 3.6\text{ MJ}$）。
-- **被動符號規範與功率平衡**：電流自正端流入為吸收功率（$p = +vi$），自負端流入為供應功率（$p = -vi$）；功率守恆定律 $\sum p = 0$。
-:::
+<PracticeProgress :total="19" prefix="ch1-" />
 
-<PracticeProgress :total="20" prefix="ch1-" />
+<PracticeCard id="ch1-ex1" title="Example 1.1：電子所代表的電荷" source="課本 p.14" topic="電荷">
 
-<PracticeCard id="ch1-ex-1-1" title="4,600 個電子的總電荷量計算" source="Example 1.1 · Slide P17" topic="電荷與電流">
+一個電子的電荷為 $-1.602\times10^{-19}\,\mathrm{C}$。求 $4{,}600$ 個電子所代表的總電荷。
 
-試問 4,600 個電子所代表的總電荷量為多少庫侖（C）？
-
-*How much charge is represented by 4,600 electrons?*
-
-> **求解目標：求總電荷量 $q$**
+![Figure 1.5](../assets/images/ch1-ex1_figure_1.5.png)
 
 <template #solution>
 
-#### 逐步解析：
+電子數與每個電子的電荷相乘：
 
-1. **基本電荷常數**：每個電子所帶之基本電荷量為 $e = -1.602 \times 10^{-19}\text{ C}$。
+$$
+q=(-1.602\times10^{-19}\,\mathrm{C/electron})(4{,}600\,\mathrm{electrons})
+=-7.369\times10^{-16}\,\mathrm{C}.
+$$
 
-2. **代入數量計算總電量**：
- 
-   $$
-   q = N \cdot e = 4600 \times (-1.602 \times 10^{-19}\text{ C}) = -7.3692 \times 10^{-16}\text{ C} = -0.7369\text{ fC}
-   $$
-
-::: tip 標準答案
-$$q = -7.3692 \times 10^{-16}\text{ C} = -0.7369\text{ fC}$$
-:::
+因此，總電荷為 $-7.369\times10^{-16}\,\mathrm{C}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-prac-1-1" title="600 萬個質子的總電荷量計算" source="Practice 1.1 · Slide P17 對應練習" topic="課堂 Practice">
+<PracticeCard id="ch1-pr1" title="Practice Problem 1.1：由電荷求電流" source="課本 p.14" topic="電流與電荷">
 
-試計算 600 萬（$6 \times 10^6$）個質子所代表的總電荷量。
+在 Example 1.2 的情境中，若進入端點的總電荷為
 
-*Calculate the amount of charge represented by six million protons.*
+$$
+q=(20-15t-10e^{-3t})\,\mathrm{mC},
+$$
 
-> **求解目標：求總電荷量 $q$**
+求 $t=1.0\,\mathrm{s}$ 時的電流。
+
+![Figure 1.5](../assets/images/ch1-pr1_figure_1.5.png)
 
 <template #solution>
 
-#### 逐步解析：
+由 $i=dq/dt$：
 
-1. **質子電荷量**：質子所帶電荷與電子大小相同但為正號，即 $+e = +1.602 \times 10^{-19}\text{ C}$。
+$$
+i(t)=\left(-15+30e^{-3t}\right)\,\mathrm{mA}.
+$$
 
-2. **計算總電荷量**：
- 
-   $$
-   q = (6 \times 10^6) \times (+1.602 \times 10^{-19}\text{ C}) = +9.612 \times 10^{-13}\text{ C} = +0.9612\text{ pC}
-   $$
+代入 $t=1.0\,\mathrm{s}$：
 
-::: tip 標準答案
-$$q = +9.612 \times 10^{-13}\text{ C} = +0.9612\text{ pC}$$
-:::
+$$
+i(1)=-15+30e^{-3}=-13.506\,\mathrm{mA}.
+$$
+
+負號表示實際電流方向與「進入端點」的參考方向相反。課本答案：$-13.506\,\mathrm{mA}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-ex-1-2" title="時變電荷求瞬時電流" source="Example 1.2 · Slide P18" topic="電荷與電流">
+<PracticeCard id="ch1-ex2" title="Example 1.2：由電荷函數求瞬時電流" source="課本 p.14" topic="電流與電荷">
 
-流入某端點的總電荷隨時間變化表示為 $q = 5t \sin(4\pi t)\text{ mC}$。試計算在 $t = 0.5\text{ s}$ 時流經該端點的瞬時電流 $i$。
+進入一端點的總電荷為
 
-*The total charge entering a terminal is given by $q = 5t \sin(4\pi t)\text{ mC}$. Calculate the current at $t = 0.5\text{ s}$.*
+$$
+q=5t\sin(4\pi t)\,\mathrm{mC}.
+$$
 
-> **求解目標：求瞬時電流 $i(0.5\text{ s})$**
+求 $t=0.5\,\mathrm{s}$ 時的電流。
+
+![Figure 1.5](../assets/images/ch1-ex2_figure_1.5.png)
 
 <template #solution>
 
-#### 逐步解析：
+以 $i=dq/dt$ 微分：
 
-1. **電流微分定義**：電流為電荷對時間之導函數，即 $i(t) = \frac{dq}{dt}$。
+$$
+i(t)=\frac{d}{dt}\left[5t\sin(4\pi t)\right]
+=5\sin(4\pi t)+20\pi t\cos(4\pi t)\quad\mathrm{mA}.
+$$
 
-2. **應用微積分乘法法則（Product Rule）**：
- 
-   $$
-   \frac{dq}{dt} = \frac{d}{dt}[5t] \cdot \sin(4\pi t) + 5t \cdot \frac{d}{dt}[\sin(4\pi t)]
-   $$
-   $$i(t) = 5\sin(4\pi t) + 5t(4\pi \cos(4\pi t)) = 5\sin(4\pi t) + 20\pi t \cos(4\pi t)\text{ mA}
-   $$
+在 $t=0.5\,\mathrm{s}$，$4\pi t=2\pi$，所以
 
-3. **代入時間 $t = 0.5\text{ s}$**：此時角度為 $4\pi(0.5) = 2\pi\text{ rad} = 360^\circ$，$\sin(2\pi) = 0$ 且 $\cos(2\pi) = 1$：
-   $$
-   i(0.5) = 5(0) + 20\pi(0.5)(1) = 10\pi\text{ mA} \approx 31.42\text{ mA}
-   $$
+$$
+i(0.5)=5\sin(2\pi)+10\pi\cos(2\pi)=31.42\,\mathrm{mA}.
+$$
 
-::: tip 標準答案
-$$i = 10\pi\text{ mA} \approx 31.42\text{ mA}$$
-:::
+因此電流為 $31.42\,\mathrm{mA}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-prac-1-2" title="指數衰減電荷求瞬時電流" source="Practice 1.2 · Slide P18 對應練習" topic="課堂 Practice">
+<PracticeCard id="ch1-pr2" title="Practice Problem 1.2：質子所代表的電荷" source="課本 p.14" topic="電荷">
 
-若流入某端點的電荷表示為 $q = (10 - 10e^{-2t})\text{ mC}$，試求在 $t = 0.5\text{ s}$ 時的電流值。
+求 $100$ 億個質子所代表的電荷量。
 
-*If in Example 1.2, $q = (10 - 10e^{-2t})\text{ mC}$, find the current at $t = 0.5\text{ s}$.*
-
-> **求解目標：求瞬時電流 $i(0.5\text{ s})$**
+![Figure 1.5](../assets/images/ch1-pr2_figure_1.5.png)
 
 <template #solution>
 
-#### 逐步解析：
+每個質子的電荷為 $+1.6021\times10^{-19}\,\mathrm{C}$，而 $100$ 億為 $10^{10}$；因此
 
-1. **微分求導**：
- 
-   $$
-   i = \frac{dq}{dt} = \frac{d}{dt}[10 - 10e^{-2t}] = 0 - 10(-2)e^{-2t} = 20e^{-2t}\text{ mA}
-   $$
+$$
+q=(10^{10})(1.6021\times10^{-19})
+=1.6021\times10^{-9}\,\mathrm{C}.
+$$
 
-2. **代入 $t = 0.5\text{ s}$ 計算**：
- 
-   $$
-   i(0.5) = 20e^{-2(0.5)} = 20e^{-1} = \frac{20}{e} \approx \frac{20}{2.71828} \approx 7.358\text{ mA}
-   $$
-
-::: tip 標準答案
-$$i = 20e^{-1}\text{ mA} \approx 7.358\text{ mA}$$
-:::
+課本答案：$1.6021\times10^{-9}\,\mathrm{C}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-ex-1-3" title="時變電流定積分求累積電荷量" source="Example 1.3 · Slide P19-P20" topic="電荷與電流">
+<PracticeCard id="ch1-ex3" title="Example 1.3：由電流求區間電荷" source="課本 p.14" topic="電流與電荷">
 
-通過某端點的電流為 $i = (3t^2 - t)\text{ A}$。試計算在 $t = 1\text{ s}$ 至 $t = 2\text{ s}$ 之間進入該端點的總電荷量 $Q$。
+若通過端點的電流為 $i=(3t^2-t)\,\mathrm{A}$，求從 $t=1\,\mathrm{s}$ 至 $t=2\,\mathrm{s}$ 進入端點的總電荷。
 
-*Determine the total charge entering a terminal between $t = 1\text{ s}$ and $t = 2\text{ s}$ if the current passing the terminal is $i = (3t^2 - t)\text{ A}$.*
-
-> **求解目標：求累積電荷量 $Q$**
+![Figure 1.5](../assets/images/ch1-ex3_figure_1.5.png)
 
 <template #solution>
 
-#### 逐步解析：
+總電荷為電流在指定時間區間的積分：
 
-1. **電荷積分定義**：累積電荷量為電流對時間之定積分：
-   $$
-   Q = \int_{t_1}^{t_2} i(t)\,dt
-   $$
+$$
+Q=\int_1^2(3t^2-t)\,dt
+=\left(t^3-\frac{t^2}{2}\right)\bigg|_1^2.
+$$
 
-2. **帶入多項式積分**：
- 
-   $$
-   Q = \int_{1}^{2} (3t^2 - t)\,dt = \left[ t^3 - \frac{t^2}{2} \right]_{1}^{2}
-   $$
+$$
+Q=(8-2)-\left(1-\frac12\right)=5.5\,\mathrm{C}.
+$$
 
-3. **代入上下限數值**：
- 
-   $$
-   Q = \left( 2^3 - \frac{2^2}{2} \right) - \left( 1^3 - \frac{1^2}{2} \right) = (8 - 2) - (1 - 0.5) = 6 - 0.5 = 5.5\text{ C}
-   $$
-
-::: tip 標準答案
-$$Q = 5.5\text{ C}$$
-:::
+因此進入端點的總電荷為 $5.5\,\mathrm{C}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-prac-1-3" title="分段電流函數之累積電荷計算" source="Practice 1.3 · Slide P20 對應練習" topic="課堂 Practice">
+<PracticeCard id="ch1-pr3" title="Practice Problem 1.3：分段電流的電荷" source="課本 p.15" topic="電流與電荷">
 
-流經某元件的電流為分段函數：當 $0 < t < 1\text{ s}$ 時 $i = 4\text{ A}$；當 $t > 1\text{ s}$ 時 $i = 4t^2\text{ A}$。試計算從 $t = 0$ 到 $t = 2\text{ s}$ 進入該元件的總電荷量。
+流入元件的電流為
 
-*The current flowing through an element is $i = 4\text{ A}$ for $0 < t < 1\text{ s}$ and $i = 4t^2\text{ A}$ for $t > 1\text{ s}$. Calculate the total charge entering from $t = 0$ to $t = 2\text{ s}$.*
+$$
+i(t)=
+\begin{cases}
+8\,\mathrm{A}, & 0<t<1,\\
+8t^2\,\mathrm{A}, & t>1.
+\end{cases}
+$$
 
-> **求解目標：求總累積電荷量 $Q$**
+求從 $t=0$ 至 $t=2\,\mathrm{s}$ 進入元件的電荷。
+
+![Figure 1.7](../assets/images/ch1-pr3_figure_1.7.png)
 
 <template #solution>
 
-#### 逐步解析：
+依分段定義積分：
 
-1. **拆分積分區間**：依函數分段點將積分拆為 $[0, 1]$ 與 $[1, 2]$ 兩段：
-   $$
-   Q = \int_{0}^{1} 4\,dt + \int_{1}^{2} 4t^2\,dt
-   $$
+$$
+Q=\int_0^1 8\,dt+\int_1^2 8t^2\,dt
+=8+\frac{8}{3}\left(2^3-1^3\right).
+$$
 
-2. **計算各段積分**：
- 
-   $$
-   \int_{0}^{1} 4\,dt = [4t]_0^1 = 4 - 0 = 4\text{ C}
-   $$
-   $$\int_{1}^{2} 4t^2\,dt = \left[ \frac{4t^3}{3} \right]_1^2 = \frac{4(2^3) - 4(1^3)}{3} = \frac{32 - 4}{3} = \frac{28}{3}\text{ C} \approx 9.333\text{ C}
-   $$
+$$
+Q=8+\frac{56}{3}=\frac{80}{3}\,\mathrm{C}=26.67\,\mathrm{C}.
+$$
 
-3. **加總求得總電荷**：
- 
-   $$
-   Q = 4 + \frac{28}{3} = \frac{40}{3}\text{ C} \approx 13.333\text{ C}
-   $$
-
-::: tip 標準答案
-$$Q = \frac{40}{3}\text{ C} \approx 13.333\text{ C}$$
-:::
+課本答案：$26.67\,\mathrm{C}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-ex-1-4" title="恆定電流與釋放能量求端電壓" source="Example 1.4 · Slide P30" topic="電壓、功率與能量">
+<PracticeCard id="ch1-ex4" title="Example 1.4：燈泡兩端的電壓降" source="課本 p.18" topic="電壓與能量">
 
-某能源以 $2\text{ A}$ 的恆定電流持續 $10\text{ s}$ 流過燈泡。若該燈泡以光和熱的形式釋放了 $2.3\text{ kJ}$ 的能量，試計算燈泡兩端的電壓降 $V$。
-
-*An energy source forces a constant current of 2 A for 10 s to flow through a lightbulb. If 2.3 kJ is given off in the form of light and heat energy, calculate the voltage drop across the bulb.*
-
-> **求解目標：求燈泡兩端電壓降 $V$**
+一能量源使 $2\,\mathrm{A}$ 的定電流流過燈泡 $10\,\mathrm{s}$。若以光與熱形式釋放 $2.4\,\mathrm{kJ}$ 能量，求燈泡兩端的電壓降。
 
 <template #solution>
 
-#### 逐步解析：
+先求通過的電荷：
 
-1. **計算流經之總電荷量**：
- 
-   $$
-   \Delta q = I \cdot \Delta t = 2\text{ A} \times 10\text{ s} = 20\text{ C}
-   $$
+$$
+\Delta q=i\Delta t=(2\,\mathrm{A})(10\,\mathrm{s})=20\,\mathrm{C}.
+$$
 
-2. **依電壓物理定義計算**：電壓代表單位電荷傳遞之能量（$V = \frac{\Delta w}{\Delta q}$）：
-   $$
-   V = \frac{w}{q} = \frac{2.3\text{ kJ}}{20\text{ C}} = \frac{2300\text{ J}}{20\text{ C}} = 115\text{ V}
-   $$
+電壓降為每單位電荷的能量：
 
-::: tip 標準答案
-$$V = 115\text{ V}$$
-:::
+$$
+v=\frac{\Delta w}{\Delta q}
+=\frac{2.4\times10^3\,\mathrm{J}}{20\,\mathrm{C}}
+=120\,\mathrm{V}.
+$$
+
+因此燈泡的電壓降為 $120\,\mathrm{V}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-prac-1-4" title="移動電荷做功求電位差 $v_{ab}$" source="Practice 1.4 · Slide P30 對應練習" topic="課堂 Practice">
+<PracticeCard id="ch1-pr4" title="Practice Problem 1.4：電荷符號與電壓" source="課本 p.18" topic="電壓與能量">
 
-將電荷 $q$ 由點 $b$ 移動至點 $a$ 需要消耗 $25\text{ J}$ 的能量。試求電位差 $v_{ab} = v_a - v_b$：(a) 若 $q = 5\text{ C}$；(b) 若 $q = -10\text{ C}$。
-
-*To move charge q from point b to point a, 25 J of energy is required. Find the voltage drop $v_{ab}$ if: (a) $q = 5\text{ C}$, (b) $q = -10\text{ C}$.*
-
-> **求解目標：求 (a) 與 (b) 之電位差 $v_{ab}$**
+將電荷 $q$ 由點 $b$ 移至點 $a$ 需 $100\,\mathrm{J}$。求電壓降 $v_{ab}$（$a$ 點相對於 $b$ 點為正），其中：(a) $q=5\,\mathrm{C}$；(b) $q=-10\,\mathrm{C}$。
 
 <template #solution>
 
-#### 逐步解析：
+由電壓定義 $v_{ab}=\Delta w/\Delta q$。
 
-1. **電位差與功的定義關係**：由點 $b$ 移動到點 $a$ 所需之功為 $w = q(v_a - v_b) = q v_{ab}$，因此 $v_{ab} = \frac{w}{q}$ 或若逆向克服電場則帶負號。
+對 (a)：
 
-2. **(a) 當 $q = 5\text{ C}$ 時**：
- 
-   $$
-   v_{ab} = -\frac{25\text{ J}}{5\text{ C}} = -5\text{ V}
-   $$
+$$
+v_{ab}=\frac{100\,\mathrm{J}}{5\,\mathrm{C}}=20\,\mathrm{V}.
+$$
 
-3. **(b) 當 $q = -10\text{ C}$ 時**：
- 
-   $$
-   v_{ab} = -\frac{25\text{ J}}{-10\text{ C}} = +2.5\text{ V}
-   $$
+對 (b)：
 
-::: tip 標準答案
-$$(a)\ v_{ab} = -5\text{ V},\quad (b)\ v_{ab} = +2.5\text{ V}$$
-:::
+$$
+v_{ab}=\frac{100\,\mathrm{J}}{-10\,\mathrm{C}}=-10\,\mathrm{V}.
+$$
+
+課本答案：(a) $20\,\mathrm{V}$；(b) $-10\,\mathrm{V}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-ex-1-5" title="交流正弦電流與微分關係之瞬時功率" source="Example 1.5 · Slide P31-P33" topic="電壓、功率與能量">
+<PracticeCard id="ch1-ex5" title="Example 1.5：元件吸收的功率" source="課本 p.18" topic="功率">
 
-電流 $i = 5\cos(60\pi t)\text{ A}$ 流入某元件，試求在 $t = 3\text{ ms}$ 時傳送給該元件的瞬時功率 $p$：(a) 當元件端電壓 $v = 3i$；(b) 當元件端電壓 $v = 3 \frac{di}{dt}$。
+在 $t=3\,\mathrm{ms}$，電流進入元件的正端，且
 
-*Find the power delivered to an element at $t = 3\text{ ms}$ by a current $i = 5\cos(60\pi t)	ext{ A}$ when: (a) $v = 3i$, (b) $v = 3 di/dt$.*
+$$
+i=5\cos(60\pi t)\,\mathrm{A}.
+$$
 
-> **求解目標：求 (a) 與 (b) 在 $t = 3\text{ ms}$ 的瞬時功率 $p$**
+求元件所吸收的功率：(a) $v=3i$；(b) $v=3\,di/dt$。
 
 <template #solution>
 
-#### 逐步解析：
+因電流進入正端，依被動符號約定 $p=vi$。
 
-1. **(a) 當 $v = 3i$ 時**：
- 
-   $$
-   v(t) = 3(5\cos(60\pi t)) = 15\cos(60\pi t)\text{ V}
-   $$
-   $$p(t) = v(t) \cdot i(t) = 75\cos^2(60\pi t)\text{ W}
-   $$
-   在 $t = 3\text{ ms} = 0.003\text{ s}$ 時，角度為 $60\pi(0.003) = 0.18\pi\text{ rad} = 32.4^\circ$：
-   $$
-   p(3\text{ ms}) = 75\cos^2(32.4^\circ) = 75(0.8443)^2 \approx 53.48\text{ W}
-   $$
+對 (a)，
 
-2. **(b) 當 $v = 3\frac{di}{dt}$ 時**：
- 
-   $$
-   \frac{di}{dt} = 5(-60\pi \sin(60\pi t)) = -300\pi \sin(60\pi t)\text{ A/s}
-   $$
-   $$v(t) = 3(-300\pi \sin(60\pi t)) = -900\pi \sin(60\pi t)\text{ V}
-   $$
-   $$p(t) = v(t) \cdot i(t) = -4500\pi \sin(60\pi t)\cos(60\pi t) = -2250\pi \sin(120\pi t)\text{ W}
-   $$
-   在 $t = 3\text{ ms}$ 時，角度為 $120\pi(0.003) = 0.36\pi\text{ rad} = 64.8^\circ$：
-   $$
-   p(3\text{ ms}) = -2250\pi \sin(64.8^\circ) \approx -2250 \times 3.14159 \times 0.9048 \approx -6396\text{ W} = -6.396\text{ kW}
-   $$
+$$
+p=3i^2=75\cos^2(60\pi t)\,\mathrm{W},
+$$
 
-::: tip 標準答案
-$$(a)\ p = 53.48\text{ W},\quad (b)\ p = -6.396\text{ kW}$$
-:::
+$$
+p(3\,\mathrm{ms})=75\cos^2(0.18\pi)=53.47\,\mathrm{W}.
+$$
+
+對 (b)，
+
+$$
+v=3\frac{di}{dt}=-900\pi\sin(60\pi t)\,\mathrm{V},
+$$
+
+$$
+p=vi=-4500\pi\sin(60\pi t)\cos(60\pi t)\,\mathrm{W},
+$$
+
+$$
+p(3\,\mathrm{ms})=-6.396\,\mathrm{kW}.
+$$
+
+因此答案為：(a) $53.47\,\mathrm{W}$；(b) $-6.396\,\mathrm{kW}$。負號表示元件在此時刻供應功率。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-prac-1-5" title="$t = 5\text{ ms}$ 時之瞬時功率計算" source="Practice 1.5 · Slide P33 對應練習" topic="課堂 Practice">
+<PracticeCard id="ch1-pr5" title="Practice Problem 1.5：含積分項的瞬時功率" source="課本 p.19" topic="功率">
 
-承 Example 1.5，若在 $t = 5\text{ ms}$ 時，求傳送至該元件的功率：(a) 當 $v = 3i$；(b) 當 $v = 3\frac{di}{dt}$。
+沿用 Example 1.5 的電流
 
-*Find the power delivered to the element at $t = 5\text{ ms}$ if current is $i = 5\cos(60\pi t)	ext{ A}$ and voltage is (a) $v = 3i$, (b) $v = 3 di/dt$.*
+$$
+i=5\cos(60\pi t)\,\mathrm{A}.
+$$
 
-> **求解目標：求 $t = 5\text{ ms}$ 時之功率 $p$**
+在 $t=5\,\mathrm{ms}$ 求元件吸收的功率；電壓分別為：(a) $v=6i\,\mathrm{V}$；(b) $v=\left(6+10\int_0^t i\,dt\right)\,\mathrm{V}$。
 
 <template #solution>
 
-#### 逐步解析：
+先在 $t=5\,\mathrm{ms}$ 求電流：
 
-1. **計算 $t = 5\text{ ms} = 0.005\text{ s}$ 之角度**：
- 
-   $$
-   \theta = 60\pi(0.005) = 0.3\pi\text{ rad} = 54^\circ
-   $$
+$$
+i=5\cos(60\pi\times0.005)=5\cos(0.3\pi)\,\mathrm{A}.
+$$
 
-2. **(a) 計算電阻性功率**：
- 
-   $$
-   p = 75\cos^2(54^\circ) = 75(0.5878)^2 \approx 25.91\text{ W}
-   $$
+對 (a)，以 $p=vi=6i^2$ 得課本答案：$51.82\,\mathrm{W}$。
 
-3. **(b) 計算電感性功率**：$2\theta = 108^\circ$，$\sin(108^\circ) = 0.9511$：
-   $$
-   p = -2250\pi \sin(108^\circ) = -2250 \times 3.14159 \times 0.9511 \approx -6722.3\text{ W} = -6.722\text{ kW}
-   $$
+對 (b)，積分項為
 
-::: tip 標準答案
-$$(a)\ p = 25.91\text{ W},\quad (b)\ p = -6.722\text{ kW}$$
-:::
+$$
+\int_0^t i\,dt=\frac{5}{60\pi}\sin(60\pi t),
+$$
+
+代入 $t=5\,\mathrm{ms}$ 後再以 $p=vi$ 計算。課本答案：$18.264\,\mathrm{W}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-ex-1-6" title="家用電器之電能與度數換算" source="Example 1.6 · Slide P34" topic="電壓、功率與能量">
+<PracticeCard id="ch1-ex6" title="Example 1.6：電燈的能量消耗" source="課本 p.20" topic="功率與能量">
 
-一只 $100\text{ W}$ 的電燈泡連續點亮 2 小時，總共消耗多少能量？分別以焦耳（J）與千瓦·小時（kWh，俗稱度數）表示。
+一個 $100\ \mathrm{W}$ 電燈泡連續使用 $2\ \mathrm{h}$，求它消耗的能量。
 
-*How much energy does a 100-W electric bulb consume in two hours?*
-
-> **求解目標：求消耗能量 $w$（J 與 kWh）**
+![Figure 1.11](../assets/images/ch1-ex6_figure_1.11.png)
 
 <template #solution>
 
-#### 逐步解析：
+由能量與功率的關係 $w=pt$：
 
-1. **能量與功率基本關係式**：$w = p \cdot t$。
+$$
+w=(100\ \mathrm{W})(2\ \mathrm{h})(60\ \mathrm{min/h})(60\ \mathrm{s/min})
+=720{,}000\ \mathrm{J}=720\ \mathrm{kJ}.
+$$
 
-2. **以焦耳（J）計算**：將時間換算為國際標準單位秒（$2\text{ h} = 2 \times 3600\text{ s} = 7200\text{ s}$）：
-   $$
-   w = 100\text{ W} \times 7200\text{ s} = 720,000\text{ J} = 720\text{ kJ}
-   $$
-
-3. **以千瓦·小時（kWh）計算**：
- 
-   $$
-   w = 100\text{ W} \times 2\text{ h} = 200\text{ Wh} = 0.2\text{ kWh}\text{（即 0.2 度電）}
-   $$
-
-::: tip 標準答案
-$$w = 720\text{ kJ} = 0.2\text{ kWh}$$
-:::
+以瓦時表示時，$w=(100\ \mathrm{W})(2\ \mathrm{h})=200\ \mathrm{Wh}$。兩種結果一致，因為 $200\ \mathrm{Wh}=720\ \mathrm{kJ}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-prac-1-6" title="60W 白熾燈連續點亮 10 小時之能耗" source="Practice 1.6 · Slide P34 對應練習" topic="課堂 Practice">
+<PracticeCard id="ch1-pr6" title="Practice Problem 1.6：電暖器的能量消耗" source="課本 p.20" topic="功率與能量">
 
-一只 $60\text{ W}$ 的白熾燈泡持續運作 10 小時，試問其消耗多少能量（以 kWh 與焦耳表示）？
-
-*A 60-W incandescent bulb is operated for 10 hours. How much energy in kWh and in joules does it consume?*
-
-> **求解目標：求能耗 $w$（kWh 與 J）**
+家用電暖器接在 $120\ \mathrm{V}$ 插座時汲取 $12\ \mathrm{A}$。若持續使用 $24\ \mathrm{h}$，求消耗的能量。
 
 <template #solution>
 
-#### 逐步解析：
+先求輸入功率：
 
-1. **計算 kWh（度數）**：
- 
-   $$
-   w = 60\text{ W} \times 10\text{ h} = 600\text{ Wh} = 0.6\text{ kWh}
-   $$
+$$
+p=vi=(120\ \mathrm{V})(12\ \mathrm{A})=1440\ \mathrm{W}=1.44\ \mathrm{kW}.
+$$
 
-2. **換算為焦耳（J）**：
- 
-   $$
-   0.6\text{ kWh} = 0.6 \times 3.6 \times 10^6\text{ J} = 2.16 \times 10^6\text{ J} = 2.16\text{ MJ}
-   $$
+因此
 
-::: tip 標準答案
-$$w = 0.6\text{ kWh} = 2.16\text{ MJ}$$
-:::
+$$
+w=pt=(1.44\ \mathrm{kW})(24\ \mathrm{h})=34.56\ \mathrm{kWh}.
+$$
+
+課本答案：$34.56\ \mathrm{kWh}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-ex-1-7" title="包含受控源 (CCVS) 之多源電路功率分析與守恆驗證" source="Example 1.7 · Slide P42-P45" topic="電路元件與相依源">
+<PracticeCard id="ch1-ex7" title="Example 1.7：元件供給或吸收的功率" source="課本 p.21" topic="被動符號約定">
 
-試計算圖 1.15 中各電路元件（$p_1$ 至 $p_4$）所供應或消耗的功率，並驗證整座電路之功率守恆。
+求圖中每一元件 $p_1$、$p_2$、$p_3$、$p_4$ 所供給或吸收的功率。
 
-*Calculate the power supplied or absorbed by each element in Fig. 1.15.*
-
-![Example 1.7 Circuit Diagram](../assets/images/ch1_fig_1_15.png)
-
-*原教材電路圖 · Figure 1.15 (Slide P42)*
-
-> **求解目標：求各元件功率 $p_1, p_2, p_3, p_4$ 並驗證 $\sum p = 0$**
+![Figure 1.15](../assets/images/ch1-ex7_figure_1.15.png)
 
 <template #solution>
 
-#### 逐步解析：
+依被動符號約定，電流流入正端時 $p=vi$ 為正（吸收）；流出正端時電流取負。
 
-1. **被動符號規範（Passive Sign Convention）**：電流自正標號端流入為吸收功率（$p = +vi$）；自負標號端流入（或自正端流出）為供應功率（$p = -vi$）。
+$$
+p_1=20(-5)=-100\ \mathrm{W},\qquad
+p_2=12(5)=60\ \mathrm{W},\qquad
+p_3=8(6)=48\ \mathrm{W}.
+$$
 
-2. **元件 1（$20\text{ V}$ 獨立電壓源）**：電流 $5\text{ A}$ 自負端流入（由正端流出）：
-   $$
-   p_1 = 20\text{ V} \times (-5\text{ A}) = -100\text{ W}\quad\text{（供應 100 W）}
-   $$
+對受控電流源，兩端電壓與 $p_3$ 相同，皆為 $8\ \mathrm{V}$；且 $I=5\ \mathrm{A}$，其電流由正端流出：
 
-3. **元件 2（$12\text{ V}$ 元件）**：電流 $5\text{ A}$ 自正端流入：
-   $$
-   p_2 = 12\text{ V} \times (+5\text{ A}) = +60\text{ W}\quad\text{（吸收 60 W）}
-   $$
+$$
+p_4=8(-0.2I)=8[-0.2(5)]=-8\ \mathrm{W}.
+$$
 
-4. **元件 3（$8\text{ V}$ 元件）**：電流 $6\text{ A}$ 自正端流入：
-   $$
-   p_3 = 8\text{ V} \times (+6\text{ A}) = +48\text{ W}\quad\text{（吸收 48 W）}
-   $$
-
-5. **元件 4（電流控制電壓源 CCVS，端電壓為 $8\text{ V}$，控制電流 $I = 5\text{ A}$）**：其受控電流為 $-0.2I = -0.2(5) = -1\text{ A}$ 自正端流入：
-   $$
-   p_4 = 8\text{ V} \times (-0.2 \times 5\text{ A}) = 8\text{ V} \times (-1\text{ A}) = -8\text{ W}\quad\text{（供應 8 W）}
-   $$
-
-6. **功率守恆定律驗證（Conservation of Power）**：
- 
-   $$
-   \sum p = p_1 + p_2 + p_3 + p_4 = -100 + 60 + 48 - 8 = 0\text{ W}
-   $$
-   總供應功率（$100 + 8 = 108\text{ W}$）精確等於總消耗功率（$60 + 48 = 108\text{ W}$）。
-
-::: tip 標準答案
-$$p_1 = -100\text{ W},\ p_2 = +60\text{ W},\ p_3 = +48\text{ W},\ p_4 = -8\text{ W},\quad \sum p = 0$$
-:::
+檢查：$-100+60+48-8=0$。因此 $p_1$ 與 $p_4$ 分別供給 $100\ \mathrm{W}$、$8\ \mathrm{W}$；$p_2$、$p_3$ 分別吸收 $60\ \mathrm{W}$、$48\ \mathrm{W}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-prac-1-7" title="相依源電路之各支路功率平衡計算" source="Practice 1.7 · Slide P45 對應練習" topic="課堂 Practice">
+<PracticeCard id="ch1-pr7" title="Practice Problem 1.7：各元件的功率" source="課本 p.22" topic="被動符號約定">
 
-針對包含相依源之電路網路，計算各元件之功率並驗證能量守恆定理 $\sum p = 0$。
+計算圖中電路各元件 $p_1$、$p_2$、$p_3$、$p_4$ 所吸收或供給的功率。
 
-*Compute the power absorbed or supplied by each element in the interconnected dependent circuit and verify $\sum p = 0$.*
-
-> **求解目標：求各元件之功率並確認功率守恆**
+![Figure 1.16](../assets/images/ch1-pr7_figure_1.16.png)
 
 <template #solution>
 
-#### 逐步解析：
+對每個元件依圖示極性與電流方向套用被動符號約定 $p=vi$；電流流入正端取正，流出正端取負。圖示給定 $I=25\ \mathrm{A}$，故受控源電流為
 
-1. **標定符號**：依被動符號規範檢視各元件端電壓極性與電流流向。
+$$
+0.12I=0.12(25)=3\ \mathrm{A}.
+$$
 
-2. **逐一計算各支路功率**：吸收為正（$+vi$），發電為負（$-vi$）。
+逐一代入各元件的標示電壓與對應帶符號電流，可得課本答案：
 
-3. **驗算代數和**：確認電路滿足 $\sum p_{\text{supplied}} = \sum p_{\text{absorbed}}$。
+$$
+p_1=-225\ \mathrm{W},\qquad p_2=90\ \mathrm{W},\qquad
+p_3=60\ \mathrm{W},\qquad p_4=75\ \mathrm{W}.
+$$
 
-::: tip 標準答案
-$$\sum p = 0\text{（總供應功率等於總吸收功率）}$$
-:::
+負號表示 $p_1$ 供給 $225\ \mathrm{W}$；其餘三個元件吸收功率。驗算為 $-225+90+60+75=0$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-hw-1-6" title="電熱爐消耗特定能量所需時間計算" source="Homework 1.6 · Slide P47 · Problem 1.6" topic="指定作業 (HW)">
+<PracticeCard id="ch1-ex8" title="Example 1.8：映像管電子束的加速電壓" source="課本 p.23" topic="電流與功率">
 
-某電爐發熱元件接至 $240\text{ V}$ 電源線時抽取 $15\text{ A}$ 電流。試問該電爐消耗 $180\text{ kJ}$ 能量需要多少時間？
+電視映像管的電子束每秒含有 $10^{15}$ 個電子。若要使電子束功率達到 $4\ \mathrm{W}$，求所需加速電壓 $V_o$。
 
-*A stove element draws 15 A when connected to a 240-V line. How long does it take to consume 180 kJ?*
-
-> **求解目標：求所需時間 $t$（秒）**
+![Figure 1.17](../assets/images/ch1-ex8_figure_1.17.png)
 
 <template #solution>
 
-#### 逐步解析：
+電子電荷為 $e=-1.6\times10^{-19}\ \mathrm{C}$，所以約定電流為
 
-1. **計算電熱爐之消耗電功率**：
- 
-   $$
-   P = V \cdot I = 240\text{ V} \times 15\text{ A} = 3600\text{ W} = 3.6\text{ kW}
-   $$
+$$
+i=e\frac{dn}{dt}=(-1.6\times10^{-19})(10^{15})
+=-1.6\times10^{-4}\ \mathrm{A}.
+$$
 
-2. **依能量與時間關係計算**：由於 $W = P \cdot t$，移項得：
-   $$
-   t = \frac{W}{P} = \frac{180\text{ kJ}}{3.6\text{ kW}} = \frac{180,000\text{ J}}{3600\text{ W}} = 50\text{ s}
-   $$
+負號表示約定電流方向與電子束方向相反。由功率關係 $p=V_oi$，取電流量值計算所需電壓大小：
 
-::: tip 標準答案
-$$t = 50\text{ s}$$
-:::
+$$
+V_o=\frac{p}{|i|}=\frac{4}{1.6\times10^{-4}}
+=25{,}000\ \mathrm{V}=25\ \mathrm{kV}.
+$$
+
+因此所需加速電壓為 $25\ \mathrm{kV}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-hw-1-7" title="時變電荷流入元件之瞬時功率與能量" source="Homework 1.7 · Slide P47 · Problem 1.7" topic="指定作業 (HW)">
+<PracticeCard id="ch1-pr8" title="Practice Problem 1.8：電子束的功率" source="課本 p.24" topic="電流與功率">
 
-流經某元件之電荷隨時間變化為 $q(t) = 5e^{-2t}\text{ C}$，且兩端電壓為 $v(t) = 10 \frac{dq}{dt}\text{ V}$。試求 $t = 0.5\text{ s}$ 時元件吸收之功率及 $t = 0 \to 1\text{ s}$ 消耗的總能量。
-
-*The charge flowing through an element is $q(t) = 5e^{-2t}	ext{ C}$ and the voltage is $v(t) = 10 dq/dt	ext{ V}$. Find power at $t=0.5	ext{ s}$ and energy from $t=0$ to $1	ext{ s}$.*
-
-> **求解目標：求功率 $p(0.5\text{ s})$ 與總能量 $W$**
+電視映像管電子束每秒含有 $10^{13}$ 個電子，並通過電位差 $25\ \mathrm{kV}$ 的極板。求電子束的功率。
 
 <template #solution>
 
-#### 逐步解析：
+先由電子通量求電流大小：
 
-1. **電流微分**：
- 
-   $$
-   i(t) = \frac{dq}{dt} = 5(-2)e^{-2t} = -10e^{-2t}\text{ A}
-   $$
+$$
+|i|=|e|\frac{dn}{dt}=(1.6\times10^{-19})(10^{13})
+=1.6\times10^{-6}\ \mathrm{A}.
+$$
 
-2. **電壓計算**：
- 
-   $$
-   v(t) = 10 \frac{dq}{dt} = 10(-10e^{-2t}) = -100e^{-2t}\text{ V}
-   $$
+再用 $p=V|i|$：
 
-3. **瞬時功率函數**：
- 
-   $$
-   p(t) = v(t) \cdot i(t) = (-100e^{-2t})(-10e^{-2t}) = 1000e^{-4t}\text{ W}
-   $$
-   在 $t = 0.5\text{ s}$ 時：
-   $$
-   p(0.5) = 1000e^{-4(0.5)} = 1000e^{-2} \approx \frac{1000}{7.389} \approx 135.34\text{ W}
-   $$
+$$
+p=(25\times10^3)(1.6\times10^{-6})
+=4.0\times10^{-2}\ \mathrm{W}=40\ \mathrm{mW}.
+$$
 
-4. **累積能量定積分**：
- 
-   $$
-   W = \int_{0}^{1} p(t)\,dt = \int_{0}^{1} 1000e^{-4t}\,dt = \left[ -250e^{-4t} \right]_0^1 = 250(1 - e^{-4}) \approx 250(1 - 0.0183) \approx 245.42\text{ J}
-   $$
-
-::: tip 標準答案
-$$p(0.5\text{ s}) = 135.34\text{ W},\quad W = 245.42\text{ J}$$
-:::
+課本答案：$40\ \mathrm{mW}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-hw-1-14" title="時變波形之累積電荷與瞬時功率計算" source="Homework 1.14 · Slide P48 · Problem 1.14" topic="指定作業 (HW)">
+<PracticeCard id="ch1-ex9" title="Example 1.9：分級電價的電費" source="課本 p.25" topic="能量計費">
 
-某元件兩端電壓為 $v(t) = 10\cos(2t)\text{ V}$，流經電流為 $i(t) = 20(1 - e^{-0.5t})\text{ mA}$。試求：(a) 在 $t = 1\text{ s}$ 時流入該元件的總電荷量；(b) 在 $t = 1\text{ s}$ 時該元件所消耗之功率。
-
-*The voltage across an element is $v(t) = 10\cos(2t)	ext{ V}$ and the current is $i(t) = 20(1 - e^{-0.5t})	ext{ mA}$. Find (a) total charge at $t=1	ext{ s}$, (b) power consumed at $t=1	ext{ s}$.*
-
-> **求解目標：求 (a) 總電荷 $q(1\text{ s})$；(b) 消耗功率 $P(1\text{ s})$**
+某住戶一月用電 $700\ \mathrm{kWh}$。住宅電價為：基本月費 \$12.00；前 $100\ \mathrm{kWh}$ 為每度 \$0.16；接續 $200\ \mathrm{kWh}$ 為每度 \$0.10；超過 $300\ \mathrm{kWh}$ 的部分為每度 \$0.06。求本月電費及平均每度電成本。
 
 <template #solution>
 
-#### 逐步解析：
+分段計費：
 
-1. **(a) 計算 $t = 0 \to 1\text{ s}$ 之累積電荷量**：
- 
-   $$
-   q(1) = \int_{0}^{1} 20(1 - e^{-0.5t})\,dt = 20 \left[ t - \frac{e^{-0.5t}}{-0.5} \right]_0^1 = 20 \left[ t + 2e^{-0.5t} \right]_0^1
-   $$
-   $$q(1) = 20 \left( (1 + 2e^{-0.5}) - (0 + 2) \right) = 20(1 + 2(0.6065) - 2) = 20(0.21306) \approx 13.65\text{ mC}
-   $$
+$$
+\begin{aligned}
+\text{基本月費} &= \$12.00,\\
+100(\$0.16/\mathrm{kWh}) &= \$16.00,\\
+200(\$0.10/\mathrm{kWh}) &= \$20.00,\\
+400(\$0.06/\mathrm{kWh}) &= \$24.00.
+\end{aligned}
+$$
 
-2. **(b) 計算 $t = 1\text{ s}$ 時的瞬時功率**：注意此處三角函數角度為 $2\text{ rad} \approx 114.59^\circ$：
-   $$
-   v(1) = 10\cos(2\text{ rad}) = 10(-0.4161) = -4.161\text{ V}
-   $$
-   $$i(1) = 20(1 - e^{-0.5}) = 20(1 - 0.6065) = 7.87\text{ mA}
-   $$
-   依講義標準答案與相角有效功率分析：
-   $$
-   P = 171.71\text{ mW}
-   $$
+總費用與平均成本為
 
-::: tip 標準答案
-$$q = 13.65\text{ mC},\quad P = 171.71\text{ mW}$$
-:::
+$$
+\text{總電費}=12+16+20+24=\$72.00,
+\qquad
+\frac{\$72.00}{700\ \mathrm{kWh}}=10.286\ \text{cents/kWh}.
+$$
+
+因此本月電費為 \$72.00，平均成本為 $10.286\ \text{cents/kWh}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-hw-1-18" title="五元件電路各支路功率與能量守恆驗證" source="Homework 1.18 · Slide P48 · Problem 1.18" topic="指定作業 (HW)">
+<PracticeCard id="ch1-pr9" title="Practice Problem 1.9：低用電量的平均電價" source="課本 p.25" topic="能量計費">
 
-試計算圖 1.29 中各個元件（$p_1$ 至 $p_5$）所吸收或供應的功率，並驗證整座電路總功率代數和為零。
-
-*Find the power absorbed or supplied by each element in Fig. 1.29 and verify conservation of power.*
-
-![Homework 1.18 Circuit Diagram](../assets/images/ch1_prob_1_18.svg)
-
-*習題電路圖 · Figure 1.29 (Slide P48)*
-
-> **求解目標：求 $p_1, p_2, p_3, p_4, p_5$ 並驗證 $\sum p = 0$**
+沿用 Example 1.9 的住宅分級電價。若七月全家外出度假，整月僅用電 $260\ \mathrm{kWh}$，求平均每度電成本。
 
 <template #solution>
 
-#### 逐步解析：
+用電量未超過 $300\ \mathrm{kWh}$，所以只有前兩級電價：
 
-1. **被動符號規範分析**：逐一標定 5 個元件的端電壓極性與電流方向：
+$$
+\text{總電費}=\$12.00+100(\$0.16)+160(\$0.10)
+=\$44.00.
+$$
 
-2. **元件 1（$30\text{ V}$ 電壓源）**：電流 $10\text{ A}$ 由負端流入（正端流出）：
-   $$
-   p_1 = 30\text{ V} \times (-10\text{ A}) = -300\text{ W}\quad\text{（供應 300 W）}
-   $$
+平均成本為
 
-3. **元件 2（$10\text{ V}$ 元件）**：電流 $10\text{ A}$ 由正端流入：
-   $$
-   p_2 = 10\text{ V} \times (+10\text{ A}) = +100\text{ W}\quad\text{（吸收 100 W）}
-   $$
+$$
+\frac{\$44.00}{260\ \mathrm{kWh}}
+=\$0.16923/\mathrm{kWh}
+=16.923\ \text{cents/kWh}.
+$$
 
-4. **元件 3（$20\text{ V}$ 元件）**：電流 $14\text{ A}$ 由正端流入：
-   $$
-   p_3 = 20\text{ V} \times (+14\text{ A}) = +280\text{ W}\quad\text{（吸收 280 W）}
-   $$
-
-5. **元件 4（$8\text{ V}$ 元件）**：電流 $4\text{ A}$ 由負端流入：
-   $$
-   p_4 = 8\text{ V} \times (-4\text{ A}) = -32\text{ W}\quad\text{（供應 32 W）}
-   $$
-
-6. **元件 5（$12\text{ V}$ 元件）**：電流 $4\text{ A}$ 由負端流入：
-   $$
-   p_5 = 12\text{ V} \times (-4\text{ A}) = -48\text{ W}\quad\text{（供應 48 W）}
-   $$
-
-7. **能量守恆驗算**：
- 
-   $$
-   \sum p = -300 + 100 + 280 - 32 - 48 = 0\text{ W}
-   $$
-   總供應功率 $300 + 32 + 48 = 380\text{ W}$ 精確等於總吸收功率 $100 + 280 = 380\text{ W}$。
-
-::: tip 標準答案
-$$p_1 = -300\text{ W},\ p_2 = +100\text{ W},\ p_3 = +280\text{ W},\ p_4 = -32\text{ W},\ p_5 = -48\text{ W},\quad \sum p = 0$$
-:::
+課本答案：$16.923\ \text{cents/kWh}$。
 
 </template>
+
 </PracticeCard>
 
-<PracticeCard id="ch1-hw-1-20" title="多支路互連網路之功率平衡與未知參數求解" source="Homework 1.20 · Slide P47 · Problem 1.20" topic="指定作業 (HW)">
+<PracticeCard id="ch1-ex10" title="Example 1.10：以節點分析求 $8\ \Omega$ 電阻電流" source="課本 p.27" topic="節點分析">
 
-針對五支路電路網路，已知各元件端電壓與部分電流，試求解未知支路電流與各元件吸收/供應之功率，並確認功率平衡。
+求圖中流過 $8\ \Omega$ 電阻的電流 $i_{8\Omega}$。題目確認 $3\ \mathrm{V}$ 電壓源的正端在下方，並以圖中的箭頭為 $i_{8\Omega}$ 正方向。
 
-*Find the missing branch quantities and calculate the power for each element in the interconnected network.*
+![Figure 1.19](../assets/images/ch1-ex10_figure_1.19.png)
 
-![Homework 1.20 Circuit Diagram](../assets/images/ch1_prob_1_20.svg)
-
-*習題電路圖 · Problem 1.20 Network*
-
-> **求解目標：求各支路功率並確認 $\sum p = 0$**
+![Figure 1.20](../assets/images/ch1-ex10_figure_1.20.png)
 
 <template #solution>
 
-#### 逐步解析：
+取下端導線為參考節點，未知節點電壓為 $v_1$。對該節點寫 KCL：
 
-1. **運用 KCL 求解未知支路電流**：對各節點列寫節點電流方程式 $\sum i_{\text{in}} = \sum i_{\text{out}}$，解出未知支路電流。
+$$
+\frac{v_1-5}{2}+\frac{v_1}{8}+\frac{v_1+3}{4}=0.
+$$
 
-2. **應用被動符號規範**：計算每一元件之瞬時功率 $p = \pm v i$。
+兩邊乘以 $8$ 後：
 
-3. **驗算代數和**：確認電路總供應功率等於總吸收功率。
+$$
+(4v_1-20)+v_1+(2v_1+6)=0
+\quad\Rightarrow\quad 7v_1=14,
+$$
 
-::: tip 標準答案
-$$\sum p = 0\text{（符合克希荷夫定律與功率守恆）}$$
-:::
+故 $v_1=2\ \mathrm{V}$，且
 
-</template>
-</PracticeCard>
+$$
+i_{8\Omega}=\frac{v_1}{8}=\frac{2}{8}=0.25\ \mathrm{A}.
+$$
 
-<PracticeCard id="ch1-hw-1-31" title="多迴路受控源電路未知電壓 $V_0$ 求解" source="Homework 1.31 · Slide P47 · Problem 1.31" topic="指定作業 (HW)">
-
-試由全電路之功率守恆定律 $\sum p = 0$，求解電路中受控源或指定元件之未知端電壓 $V_0$。
-
-*Find $V_0$ in the circuit using the principle of conservation of power.*
-
-![Homework 1.31 Circuit Diagram](../assets/images/ch1_prob_1_31.svg)
-
-*習題電路圖 · Problem 1.31 Multi-loop Circuit*
-
-> **求解目標：求解未知電壓 $V_0$**
-
-<template #solution>
-
-#### 逐步解析：
-
-1. **建立全電路功率平衡方程式**：依被動符號規範將電路中所有元件的功率列出：
-   $$
-   -30(6) + 6(12) + 3V_0 + 28 + 28(2) - 3(10) = 0
-   $$
-
-2. **展開各項常數計算**：
- 
-   $$
-   -180 + 72 + 3V_0 + 28 + 56 - 30 = 0
-   $$
-
-3. **合併同類項解方程式**：
- 
-   $$
-   -54 + 3V_0 = 0 \implies 3V_0 = 54 \implies V_0 = 18\text{ V}
-   $$
-
-::: tip 標準答案
-$$V_0 = 18\text{ V}$$
-:::
+驗算 KCL：$(-1.5)+0.25+1.25=0$；依圖示方向，電流向下流過 $8\ \Omega$ 電阻。
 
 </template>
+
 </PracticeCard>
