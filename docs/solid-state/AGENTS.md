@@ -15,7 +15,8 @@
 ### 1. 章節命名與結構 (Chapter Conventions)
 - 章節目錄結構：
   - `chapter1/`: 結晶學與材料基礎 (Crystallography & Materials)
-  - `learning-records/`: 觀念筆記與公式推導 (Concept Notes & Derivations)
+  - `chapter2/`: 原子與電子 (Atoms and Electrons)
+  - `learning-records/`: 學習進度與延伸紀錄 (Learning Records)
   - `reference/`: 核心公式速查表 (Reference Cheatsheets)
 - 檔案命名必須遵循：`000x-name.md`（例如 `0001-miller-indices.md`），以保證側邊欄與文件序列的一致性。
 

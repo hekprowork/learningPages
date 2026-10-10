@@ -12,8 +12,21 @@
 - [0002: 鑽石結構與矽原子密度推導 (Diamond Lattice & Si Density)](/solid-state/chapter1/0002-diamond-lattice-density)
 - [0003: 塊狀晶體生長與矽晶圓製備 (Bulk Crystal Growth & Wafer Prep)](/solid-state/chapter1/0003-bulk-crystal-growth)
 
-### 📌 [觀念筆記與公式推導 (Learning Records)](/solid-state/learning-records/0001-bandgap-and-valence-electrons)
-*核心物理推導筆記、能帶理論與晶面間距幾何計算。*
+### 📌 [Chapter 2: 原子與電子 (Atoms and Electrons)](/solid-state/chapter2/)
+*由光電效應與原子光譜建立量子化證據，再以薛丁格方程式、原子軌域與電子組態連接半導體材料。*
+- [0001: 物理模型與量子觀念的起點](/solid-state/chapter2/0001-physical-models)
+- [0002: 光電效應與光子的能量](/solid-state/chapter2/0002-photoelectric-effect)
+- [0003: 原子光譜與能階指紋](/solid-state/chapter2/0003-atomic-spectra)
+- [0004: 波耳氫原子模型](/solid-state/chapter2/0004-bohr-model)
+- [0005: 機率詮釋與不確定原理](/solid-state/chapter2/0005-probability-and-uncertainty)
+- [0006: 薛丁格波動方程式](/solid-state/chapter2/0006-schrodinger-equation)
+- [0007: 一維無限深位能井](/solid-state/chapter2/0007-potential-well)
+- [0008: 量子穿隧效應](/solid-state/chapter2/0008-quantum-tunneling)
+- [0009: 氫原子與四個量子數](/solid-state/chapter2/0009-hydrogen-atom)
+- [0010: 週期表、電子組態與半導體鍵結](/solid-state/chapter2/0010-periodic-table)
+
+### 📌 [學習紀錄與延伸筆記 (Learning Records)](/solid-state/learning-records/0001-bandgap-and-valence-electrons)
+*保留學習過程中的摘要、推導回顧與延伸觀察；完整教學內容請先閱讀 Chapter 2。*
 - [0001: 基礎半導體材料分類與價電子結構 (Semiconductor Classification)](/solid-state/learning-records/0001-bandgap-and-valence-electrons)
 - [0002: 密勒指數晶面求法與面間距幾何 (Interplanar Spacing)](/solid-state/learning-records/0002-interplanar-spacing-definition)
 - [0003: 塊狀晶體生長與偏析效應 (Segregation Coefficient & Scheil Equation)](/solid-state/learning-records/0003-bulk-crystal-growth)

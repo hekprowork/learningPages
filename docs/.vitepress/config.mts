@@ -38,8 +38,25 @@ export default defineConfig({
           ]
         },
         {
-          text: '觀念筆記與公式推導 (Learning Records)',
+          text: 'Chapter 2: 原子與電子 (Atoms and Electrons)',
           collapsed: false,
+          items: [
+            { text: '章節導讀與目錄', link: '/solid-state/chapter2/' },
+            { text: '0001: 物理模型與量子觀念的起點', link: '/solid-state/chapter2/0001-physical-models' },
+            { text: '0002: 光電效應與光子的能量', link: '/solid-state/chapter2/0002-photoelectric-effect' },
+            { text: '0003: 原子光譜與能階指紋', link: '/solid-state/chapter2/0003-atomic-spectra' },
+            { text: '0004: 波耳氫原子模型', link: '/solid-state/chapter2/0004-bohr-model' },
+            { text: '0005: 機率詮釋與不確定原理', link: '/solid-state/chapter2/0005-probability-and-uncertainty' },
+            { text: '0006: 薛丁格波動方程式', link: '/solid-state/chapter2/0006-schrodinger-equation' },
+            { text: '0007: 一維無限深位能井', link: '/solid-state/chapter2/0007-potential-well' },
+            { text: '0008: 量子穿隧效應', link: '/solid-state/chapter2/0008-quantum-tunneling' },
+            { text: '0009: 氫原子與四個量子數', link: '/solid-state/chapter2/0009-hydrogen-atom' },
+            { text: '0010: 週期表、電子組態與半導體鍵結', link: '/solid-state/chapter2/0010-periodic-table' }
+          ]
+        },
+        {
+          text: '學習紀錄與延伸筆記 (Learning Records)',
+          collapsed: true,
           items: [
             { text: '0001: 基礎半導體材料分類與價電子結構', link: '/solid-state/learning-records/0001-bandgap-and-valence-electrons' },
             { text: '0002: 密勒指數晶面求法與面間距幾何', link: '/solid-state/learning-records/0002-interplanar-spacing-definition' },
