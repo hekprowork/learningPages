@@ -15,7 +15,7 @@ description: 電路學第二章 基礎電路定律 (Basic Laws) 互動題庫、�
 :::
 
 <PracticeFilter prefix="ch2-" />
-<PracticeProgress :total="18" prefix="ch2-" />
+<PracticeProgress :total="34" prefix="ch2-" />
 
 <PracticeCard id="ch2-ex-2-1" type="example" title="電熨斗等效電阻計算" source="Example 2.1 · Slide P17" topic="歐姆定律與電導">
 
@@ -723,6 +723,720 @@ $$R_a = 140\ \Omega,\quad R_b = 70\ \Omega,\quad R_c = 35\ \Omega$$
 
 ::: tip 標準答案
 $$R_{ab} = 40\ \Omega,\quad i = 6\text{ A}$$
+:::
+
+</template>
+</PracticeCard>
+
+## 教材直接來源補齊
+
+<PracticeCard id="ch2-pr1" type="practice" title="Practice Problem 2.1" source="課本 p.40" topic="歐姆定律與電阻功率">
+
+電烤麵包機的核心元件是一個將電能轉換為熱能的電氣元件（電阻器）。一個電阻為 $15\ \Omega$、兩端電壓為 $120\ \mathrm{V}$ 的烤麵包機，所吸取的電流是多少？
+
+![Figure 2.8](../assets/images/ch2-pr1_figure_2.8.png)
+
+<template #solution>
+
+**教材答案：** $8\ \mathrm{A}$
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr2" type="practice" title="Practice Problem 2.2" source="課本 p.41" topic="歐姆定律與電阻功率">
+
+對於圖 2.9 所示的電路，計算電壓 $v$、導納 $G$ 與功率 $p$。
+
+![Figure 2.9](../assets/images/ch2-pr2_figure_2.9.png)
+
+<template #solution>
+
+**教材答案：** $v=30\ \mathrm{V}$、$G=100\ \mu\mathrm{S}$、$p=90\ \mathrm{mW}$
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr3" type="practice" title="Practice Problem 2.3" source="課本 p.41" topic="時變電壓與電阻功率">
+
+某電阻器接於電壓源 $v=15\cos t\ \mathrm{V}$ 時，吸收的瞬時功率為 $30\cos^2 t\ \mathrm{mW}$。求電流 $i$ 與電阻 $R$。
+
+![Figure 2.9](../assets/images/ch2-pr3_figure_2.9.png)
+
+<template #solution>
+
+**教材答案：** $i=2\cos t\ \mathrm{mA}$、$R=7.5\ \mathrm{k}\Omega$
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr4" type="practice" title="Practice Problem 2.4" source="課本 p.43" topic="節點、分支與串並聯">
+
+圖 2.14 所示的電路有多少個分支與節點？請辨識哪些元件串聯、哪些元件並聯。
+
+![Figure 2.14](../assets/images/ch2-pr4_figure_2.14.png)
+
+![Figure 2.15](../assets/images/ch2-pr4_figure_2.15.png)
+
+<template #solution>
+
+圖 2.15 顯示此電路有五個分支與三個節點。$1\ \Omega$ 與 $2\ \Omega$ 電阻並聯；$4\ \Omega$ 電阻與 $10\ \mathrm{V}$ 電壓源也並聯。沒有任何元件串聯。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr5" type="practice" title="Practice Problem 2.5" source="課本 p.47" topic="基爾霍夫電壓定律">
+
+求圖 2.22 電路中的電壓 $v_1$ 與 $v_2$。
+
+![Figure 2.22](../assets/images/ch2-pr5_figure_2.22.png)
+
+![Figure 2.23](../assets/images/ch2-pr5_figure_2.23.png)
+
+![Figure 2.24](../assets/images/ch2-pr5_figure_2.24.png)
+
+<template #solution>
+
+**教材答案：** $v_1=16\ \mathrm{V}$、$v_2=-8\ \mathrm{V}$
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr6" type="practice" title="Practice Problem 2.6" source="課本 p.47" topic="基爾霍夫電壓定律與受控電壓源">
+
+求圖 2.24 電路中的 $v_x$ 與 $v_o$。
+
+![Figure 2.24](../assets/images/ch2-pr6_figure_2.24.png)
+
+<template #solution>
+
+**教材答案：** $v_x=20\ \mathrm{V}$、$v_o=-10\ \mathrm{V}$
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr7" type="practice" title="練習題 2.7：受控電流源電路" source="課本 p.48" topic="KCL 與歐姆定律">
+
+如圖 2.26 所示，求 $v_o$ 與 $i_o$，並求出各支路的電流與電壓。
+
+![Figure 2.25](../assets/images/ch2-pr7_figure_2.25.png)
+
+![Figure 2.26](../assets/images/ch2-pr7_figure_2.26.png)
+
+![Figure 2.27](../assets/images/ch2-pr7_figure_2.27.png)
+
+<template #solution>
+
+圖中的各支路都跨接在同一對節點，因此 2-$\Omega$ 與 8-$\Omega$ 電阻的端電壓相同。依圖示參考方向，
+
+$$
+v_o=2i_o.
+$$
+
+在上方節點套用 KCL。9 A 電流源注入節點，而離開節點的電流包括 $i_o$、受控電流源的 $0.25i_o$，以及 8-$\Omega$ 電阻中的電流：
+
+$$
+9=i_o+0.25i_o+\frac{v_o}{8}.
+$$
+
+代入 $v_o=2i_o$，得
+
+$$
+9=i_o+\frac14i_o+\frac{2i_o}{8}
+=\frac32i_o,
+$$
+
+所以
+
+$$
+i_o=6\ \mathrm{A},
+\qquad
+v_o=2(6)=12\ \mathrm{V}.
+$$
+
+其他支路量為
+
+$$
+i_{0.25i_o}=0.25(6)=1.5\ \mathrm{A},
+\qquad
+i_{8\Omega}=\frac{v_o}{8}=1.5\ \mathrm{A}.
+$$
+
+驗算：離開上方節點的電流為 $6+1.5+1.5=9\ \mathrm{A}$，與 9 A 電流源注入的電流相等。
+
+**課本答案：** $i_o=6\ \mathrm{A}$，$v_o=12\ \mathrm{V}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr8" type="practice" title="練習題 2.8：含兩個電壓源的電阻電路" source="課本 p.49" topic="KCL、KVL 與歐姆定律">
+
+求圖 2.28 電路中的所有電流與電壓。
+
+![Figure 2.28](../assets/images/ch2-pr8_figure_2.28.png)
+
+![Figure 2.29](../assets/images/ch2-pr8_figure_2.29.png)
+
+<template #solution>
+
+令中間上方節點電壓為 $v_a$，下方導線為參考節點。依圖示極性，左側節點為 $10\ \mathrm{V}$，右側 6-V 電壓源的上端為 $-6\ \mathrm{V}$。由歐姆定律與圖示極性，
+
+$$
+i_1=\frac{10-v_a}{2},
+\qquad
+i_2=\frac{v_a}{8},
+\qquad
+i_3=\frac{v_a-(-6)}{4}.
+$$
+
+在節點 $a$ 套用 KCL：
+
+$$
+\frac{10-v_a}{2}=\frac{v_a}{8}+\frac{v_a+6}{4}.
+$$
+
+乘以 8 並整理：
+
+$$
+4(10-v_a)=v_a+2(v_a+6)
+\quad\Longrightarrow\quad
+v_a=4\ \mathrm{V}.
+$$
+
+因此
+
+$$
+\begin{aligned}
+v_1&=10-v_a=6\ \mathrm{V},
+&i_1&=\frac{v_1}{2}=3\ \mathrm{A},\\
+v_2&=v_a=4\ \mathrm{V},
+&i_2&=\frac{v_2}{8}=0.5\ \mathrm{A}=500\ \mathrm{mA},\\
+v_3&=v_a+6=10\ \mathrm{V},
+&i_3&=\frac{v_3}{4}=2.5\ \mathrm{A}.
+\end{aligned}
+$$
+
+驗算節點電流：
+
+$$
+i_1-i_2-i_3=3-0.5-2.5=0.
+$$
+
+**課本答案：** $v_1=6\ \mathrm{V}$、$v_2=4\ \mathrm{V}$、$v_3=10\ \mathrm{V}$、$i_1=3\ \mathrm{A}$、$i_2=500\ \mathrm{mA}$、$i_3=2.5\ \mathrm{A}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr9" type="practice" title="練習題 2.9：串並聯等效電阻" source="課本 p.53" topic="串聯與並聯電阻化簡">
+
+將圖 2.36 中的電阻組合化簡，求端點所見的等效電阻 $R_{\mathrm{eq}}$。
+
+![Figure 2.36](../assets/images/ch2-pr9_figure_2.36.png)
+
+<template #solution>
+
+先由最右側的串聯支路開始。右側支路的 4-$\Omega$、5-$\Omega$ 與 3-$\Omega$ 電阻串聯，因此
+
+$$
+R_{\mathrm{right}}=4+5+3=12\ \Omega.
+$$
+
+它與中間的 4-$\Omega$ 電阻並聯：
+
+$$
+R_{m}=4\parallel12
+=\frac{4\times12}{4+12}
+=3\ \Omega.
+$$
+
+再與上方的 3-$\Omega$ 電阻串聯，得到
+
+$$
+R_{b}=3+R_{m}=3+3=6\ \Omega.
+$$
+
+這個 6-$\Omega$ 支路與中央的 6-$\Omega$ 電阻並聯，所以內部網路等效為
+
+$$
+R_{i}=6\parallel6=3\ \Omega.
+$$
+
+最後再加上端點左側的 4-$\Omega$ 與 3-$\Omega$ 串聯電阻：
+
+$$
+R_{\mathrm{eq}}=4+R_{\text{i}}+3
+=4+3+3
+=10\ \Omega.
+$$
+
+**課本答案：** $R_{\mathrm{eq}}=10\ \Omega$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr10" type="practice" title="練習題 2.10：橋式電阻網路的等效電阻" source="課本 p.54" topic="串並聯電阻化簡">
+
+求圖 2.39 端點 $a$-$b$ 所見的等效電阻 $R_{ab}$。
+
+![Figure 2.38](../assets/images/ch2-pr10_figure_2.38.png)
+
+![Figure 2.39](../assets/images/ch2-pr10_figure_2.39.png)
+
+<template #solution>
+
+先化簡右上方的並聯電阻：
+
+$$
+20\parallel5=\frac{20\times5}{20+5}=4\ \Omega.
+$$
+
+此結果與 1-$\Omega$ 電阻串聯，再與斜向的 20-$\Omega$ 電阻並聯：
+
+$$
+\begin{aligned}
+R_1&=4+1=5\ \Omega,\\
+R_2&=5\parallel20
+=\frac{5\times20}{5+20}=4\ \Omega,\\
+R_3&=R_2+2=4+2=6\ \Omega.
+\end{aligned}
+$$
+
+另一條由中心節點連到 $b$ 的支路為 18-$\Omega$ 與 9-$\Omega$ 並聯：
+
+$$
+18\parallel9=\frac{18\times9}{18+9}=6\ \Omega.
+$$
+
+因此中心節點到 $b$ 的等效電阻為
+
+$$
+R_{\text{center}}=6\parallel6=3\ \Omega.
+$$
+
+最後與 $a$ 端的 16-$\Omega$ 電阻串聯：
+
+$$
+R_{ab}=16+3=19\ \Omega.
+$$
+
+**課本答案：** $R_{ab}=19\ \Omega$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr11" type="practice" title="練習題 2.11：等效電導" source="課本 p.55" topic="電導的串並聯化簡">
+
+求圖 2.41 電路的等效電導 $G_{\mathrm{eq}}$。
+
+![Figure 2.41](../assets/images/ch2-pr11_figure_2.41.png)
+
+<template #solution>
+
+先將兩組並聯電導相加：
+
+$$
+G_1=8+4=12\ \mathrm{S},
+\qquad
+G_2=2+4=6\ \mathrm{S}.
+$$
+
+兩組等效電導彼此串聯。串聯時應對電阻相加，換成電導表示為
+
+$$
+\frac{1}{G_{\mathrm{eq}}}
+=\frac{1}{G_1}+\frac{1}{G_2}
+=\frac{1}{12}+\frac{1}{6}
+=\frac14.
+$$
+
+所以
+
+$$
+G_{\mathrm{eq}}=4\ \mathrm{S}.
+$$
+
+**課本答案：** $G_{\mathrm{eq}}=4\ \mathrm{S}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr12" type="practice" title="練習題 2.12：並聯電阻與功率計算" source="課本 p.56" topic="並聯電阻、電流分配與功率">
+
+求圖 2.43 中的 $v_1$、$v_2$、$i_1$ 與 $i_2$，並計算 12-$\Omega$ 與 40-$\Omega$ 電阻所消耗的功率。
+
+![Figure 2.43](../assets/images/ch2-pr12_figure_2.43.png)
+
+![Figure 2.44](../assets/images/ch2-pr12_figure_2.44.png)
+
+<template #solution>
+
+圖中左側的 12-$\Omega$ 與 6-$\Omega$ 電阻並聯，右側的 10-$\Omega$ 與 40-$\Omega$ 電阻並聯。先求兩個並聯組合：
+
+$$
+R_L=12\parallel6
+=\frac{12\times6}{12+6}=4\ \Omega,
+$$
+
+$$
+R_R=10\parallel40
+=\frac{10\times40}{10+40}=8\ \Omega.
+$$
+
+兩個等效電阻串聯，因此總電阻與總電流為
+
+$$
+R_{\mathrm{eq}}=R_L+R_R=4+8=12\ \Omega,
+\qquad
+I=\frac{30}{12}=2.5\ \mathrm{A}.
+$$
+
+左側並聯組合的端電壓為
+
+$$
+v_1=I R_L=2.5(4)=10\ \mathrm{V}.
+$$
+
+右側並聯組合的端電壓為
+
+$$
+v_2=I R_R=2.5(8)=20\ \mathrm{V}.
+$$
+
+由歐姆定律求指定支路電流：
+
+$$
+i_1=\frac{v_1}{12}=\frac{10}{12}=0.8333\ \mathrm{A}=833.3\ \mathrm{mA},
+$$
+
+$$
+i_2=\frac{v_2}{40}=\frac{20}{40}=0.5\ \mathrm{A}=500\ \mathrm{mA}.
+$$
+
+兩個指定電阻的功率為
+
+$$
+p_1=v_1i_1=10\left(\frac{10}{12}\right)=8.333\ \mathrm{W},
+$$
+
+$$
+p_2=v_2i_2=20(0.5)=10\ \mathrm{W}.
+$$
+
+驗算左側總電流：
+
+$$
+\frac{10}{12}+\frac{10}{6}=2.5\ \mathrm{A},
+$$
+
+右側總電流亦為
+
+$$
+\frac{20}{10}+\frac{20}{40}=2.5\ \mathrm{A}.
+$$
+
+**課本答案：** $v_1=10\ \mathrm{V}$、$i_1=833.3\ \mathrm{mA}$、$p_1=8.333\ \mathrm{W}$、$v_2=20\ \mathrm{V}$、$i_2=500\ \mathrm{mA}$、$p_2=10\ \mathrm{W}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch2-pr13" type="practice" title="Practice Problem 2.13：並聯網路的電壓與功率" source="課本 p.57" topic="串並聯化簡與功率">
+
+在圖 2.45 的電路中，$30\text{ mA}$ 電流源與三條並聯支路相接：左支路為 $3\text{ k}\Omega$ 與 $1\text{ k}\Omega$ 串聯，中支路為 $5\text{ k}\Omega$，右支路為 $20\text{ k}\Omega$。電壓 $v_1$ 標示在 $3\text{ k}\Omega$ 電阻兩端，$v_2$ 標示在 $20\text{ k}\Omega$ 電阻兩端。求：
+
+1. $v_1$ 與 $v_2$。
+2. $3\text{ k}\Omega$ 與 $20\text{ k}\Omega$ 電阻所消耗的功率。
+3. 電流源所提供的功率。
+
+![Figure 2.45](../assets/images/ch2-pr13_figure_2.45.png)
+
+<template #solution>
+
+#### 逐步解析
+
+左支路的串聯等效電阻為
+
+$$
+R_L=3\text{ k}\Omega+1\text{ k}\Omega=4\text{ k}\Omega。
+$$
+
+三條支路皆跨接在電流源兩端，因此其端電壓相同。先以總電導求端電壓：
+
+$$
+G_{\text{eq}}=\frac{1}{4\text{ k}\Omega}+\frac{1}{5\text{ k}\Omega}+\frac{1}{20\text{ k}\Omega}
+=0.5\text{ mS},
+$$
+
+$$
+V=\frac{I_s}{G_{\text{eq}}}
+=\frac{30\text{ mA}}{0.5\text{ mS}}
+=60\text{ V}。
+$$
+
+左支路電流為
+
+$$
+I_L=\frac{60\text{ V}}{4\text{ k}\Omega}=15\text{ mA}。
+$$
+
+因此，$3\text{ k}\Omega$ 電阻上的電壓為
+
+$$
+v_1=I_L(3\text{ k}\Omega)=(15\text{ mA})(3\text{ k}\Omega)=45\text{ V}，
+$$
+
+而右側 $20\text{ k}\Omega$ 電阻直接跨接於並聯端點，所以
+
+$$
+v_2=60\text{ V}。
+$$
+
+$3\text{ k}\Omega$ 電阻的功率為
+
+$$
+P_{3\text{ k}\Omega}=I_L^2R=(15\text{ mA})^2(3\text{ k}\Omega)=675\text{ mW}。
+$$
+
+$20\text{ k}\Omega$ 電阻的電流為
+
+$$
+I_{20\text{ k}\Omega}=\frac{60\text{ V}}{20\text{ k}\Omega}=3\text{ mA},
+$$
+
+故其功率為
+
+$$
+P_{20\text{ k}\Omega}=v_2I_{20\text{ k}\Omega}=(60\text{ V})(3\text{ mA})=180\text{ mW}。
+$$
+
+電流源提供的功率為
+
+$$
+P_s=VI_s=(60\text{ V})(30\text{ mA})=1.8\text{ W}。
+$$
+
+功率對帳：其餘電阻的功率為 $1.8\text{ W}-0.675\text{ W}-0.180\text{ W}=0.945\text{ W}$，所以總吸收功率與電流源提供的 $1.8\text{ W}$ 相符。
+
+::: tip 標準答案
+
+$$v_1=45\text{ V},\quad v_2=60\text{ V},\quad P_{3\text{ k}\Omega}=675\text{ mW},\quad P_{20\text{ k}\Omega}=180\text{ mW},\quad P_s=1.8\text{ W}$$
+
+:::
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-ex16" type="example" title="Example 2.16：三顆燈泡的電流與等效電阻" source="課本 p.64" topic="照明系統與功率">
+
+三顆燈泡接在 $9\text{ V}$ 電池上：一顆額定功率為 $20\text{ W}$ 的燈泡單獨形成一條支路，另兩顆額定功率分別為 $15\text{ W}$ 與 $10\text{ W}$ 的燈泡串聯形成另一條支路。將每顆燈泡視為電阻，求：
+
+1. 電池提供的總電流。
+2. 流過每顆燈泡的電流。
+3. 每顆燈泡的等效電阻。
+
+![Figure 2.56](../assets/images/ch2-ex16_figure_2.56.png)
+
+<template #solution>
+
+#### 逐步解析
+
+三顆燈泡吸收的總功率為
+
+$$
+P=15\text{ W}+10\text{ W}+20\text{ W}=45\text{ W}。
+$$
+
+由 $P=VI$，電池提供的總電流為
+
+$$
+I=\frac{P}{V}=\frac{45\text{ W}}{9\text{ V}}=5\text{ A}。
+$$
+
+令 $R_1$ 表示 $20\text{ W}$ 燈泡，$R_2$ 表示 $15\text{ W}$ 燈泡，$R_3$ 表示 $10\text{ W}$ 燈泡。$R_1$ 與電池並聯，也與 $R_2$、$R_3$ 的串聯組合並聯，因此
+
+$$
+V_1=V_2+V_3=9\text{ V}。
+$$
+
+$R_1$ 中的電流為
+
+$$
+I_1=\frac{P_1}{V_1}=\frac{20\text{ W}}{9\text{ V}}=2.222\text{ A}。
+$$
+
+由 KCL，流過串聯組合 $R_2$、$R_3$ 的電流為
+
+$$
+I_2=I-I_1=5-2.222=2.778\text{ A}。
+$$
+
+由於 $R_2$ 與 $R_3$ 串聯，兩者電流相同，故 $I_3=I_2=2.778\text{ A}$。使用 $P=I^2R$ 計算各燈泡電阻：
+
+$$
+R_1=\frac{P_1}{I_1^2}=\frac{20}{(2.222)^2}=4.05\ \Omega,
+$$
+
+$$
+R_2=\frac{P_2}{I_2^2}=\frac{15}{(2.778)^2}=1.945\ \Omega,
+$$
+
+$$
+R_3=\frac{P_3}{I_3^2}=\frac{10}{(2.778)^2}=1.297\ \Omega。
+$$
+
+::: tip 標準答案
+
+$$I=5\text{ A},\quad I_1=2.222\text{ A},\quad I_2=I_3=2.778\text{ A}$$
+
+$$R_1=4.05\ \Omega,\quad R_2=1.945\ \Omega,\quad R_3=1.297\ \Omega$$
+
+:::
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-pr16" type="practice" title="Practice Problem 2.16：串聯與並聯燈泡的電流" source="課本 p.65" topic="照明系統與串並聯">
+
+有兩組燈泡：一組有 $10$ 顆相同燈泡並聯，另一組有 $10$ 顆相同燈泡串聯。兩種接法中，每顆燈泡皆須在額定功率 $40\text{ W}$ 下運作；並聯接法與串聯接法的電源電壓皆為 $120\text{ V}$。求兩種接法中每顆燈泡的電流。
+
+<template #solution>
+
+#### 逐步解析
+
+**並聯接法：** 每顆燈泡直接跨接於 $120\text{ V}$ 電源，因此每顆燈泡的電流為
+
+$$
+I_{\parallel}=\frac{P}{V}=\frac{40\text{ W}}{120\text{ V}}=0.333\text{ A}=333\text{ mA}。
+$$
+
+**串聯接法：** $10$ 顆相同燈泡分攤 $120\text{ V}$，所以每顆燈泡的電壓為
+
+$$
+V_{\text{lamp}}=\frac{120\text{ V}}{10}=12\text{ V}。
+$$
+
+串聯支路的電流相同，因此每顆燈泡的電流為
+
+$$
+I_{\text{series}}=\frac{P}{V_{\text{lamp}}}=\frac{40\text{ W}}{12\text{ V}}=3.33\text{ A}。
+$$
+
+::: tip 標準答案
+
+$$I_{\parallel}=333\text{ mA},\quad I_{\text{series}}=3.33\text{ A}$$
+
+:::
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-ex17" type="example" title="Example 2.17：多量程直流電壓表設計" source="課本 p.68" topic="直流電表設計">
+
+設計一個多量程直流電壓表，量程為：
+
+1. $0$–$1\text{ V}$。
+2. $0$–$5\text{ V}$。
+3. $0$–$50\text{ V}$。
+4. $0$–$100\text{ V}$。
+
+電表內部電阻為 $R_m=2\text{ k}\Omega$，滿刻度電流為 $I_{fs}=100\ \mu\text{A}$。求各量程所需的串聯倍增電阻 $R_1$、$R_2$、$R_3$、$R_4$。
+
+<template #solution>
+
+#### 逐步解析
+
+電壓表的倍增電阻與內部電阻串聯。滿刻度時，整體電阻兩端的電壓為 $V_{fs}$，所以
+
+$$
+V_{fs}=I_{fs}(R_n+R_m),
+$$
+
+整理得
+
+$$
+R_n=\frac{V_{fs}}{I_{fs}}-R_m。
+$$
+
+代入 $R_m=2\text{ k}\Omega$ 與 $I_{fs}=100\ \mu\text{A}$：
+
+$$
+R_1=\frac{1\text{ V}}{100\ \mu\text{A}}-2\text{ k}\Omega
+=10\text{ k}\Omega-2\text{ k}\Omega=8\text{ k}\Omega,
+$$
+
+$$
+R_2=\frac{5\text{ V}}{100\ \mu\text{A}}-2\text{ k}\Omega
+=50\text{ k}\Omega-2\text{ k}\Omega=48\text{ k}\Omega,
+$$
+
+$$
+R_3=\frac{50\text{ V}}{100\ \mu\text{A}}-2\text{ k}\Omega
+=500\text{ k}\Omega-2\text{ k}\Omega=498\text{ k}\Omega,
+$$
+
+$$
+R_4=\frac{100\text{ V}}{100\ \mu\text{A}}-2\text{ k}\Omega
+=1000\text{ k}\Omega-2\text{ k}\Omega=998\text{ k}\Omega。
+$$
+
+::: tip 標準答案
+
+$$R_1=8\text{ k}\Omega,\quad R_2=48\text{ k}\Omega,\quad R_3=498\text{ k}\Omega,\quad R_4=998\text{ k}\Omega$$
+
+:::
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-pr17" type="practice" title="Practice Problem 2.17：多量程直流電流表設計" source="課本 p.69" topic="直流電表設計">
+
+設計一個多量程直流電流表，量程為 $0$–$1\text{ A}$、$0$–$100\text{ mA}$ 與 $0$–$10\text{ mA}$。電表機芯的滿刻度電流為 $I_m=1\text{ mA}$，內部電阻為 $R_m=50\ \Omega$。求各量程所需的並聯分流電阻。
+
+<template #solution>
+
+#### 逐步解析
+
+在滿刻度時，總電流 $I_{fs}$ 分成流過電表機芯的 $I_m$ 與流過分流電阻的電流。由電流分配公式，分流電阻 $R_n$ 為
+
+$$
+R_n=\frac{I_m}{I_{fs}-I_m}R_m。
+$$
+
+**$0$–$1\text{ A}$ 量程：**
+
+$$
+R_1=\frac{1\text{ mA}}{1\text{ A}-1\text{ mA}}(50\ \Omega)
+=0.05005\ \Omega\approx50\text{ m}\Omega。
+$$
+
+**$0$–$100\text{ mA}$ 量程：**
+
+$$
+R_2=\frac{1\text{ mA}}{100\text{ mA}-1\text{ mA}}(50\ \Omega)
+=0.505\ \Omega=505\text{ m}\Omega。
+$$
+
+**$0$–$10\text{ mA}$ 量程：**
+
+$$
+R_3=\frac{1\text{ mA}}{10\text{ mA}-1\text{ mA}}(50\ \Omega)
+=5.556\ \Omega。
+$$
+
+::: tip 標準答案
+
+$$R_1\approx50\text{ m}\Omega,\quad R_2=505\text{ m}\Omega,\quad R_3=5.556\ \Omega$$
+
 :::
 
 </template>

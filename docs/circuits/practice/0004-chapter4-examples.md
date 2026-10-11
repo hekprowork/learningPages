@@ -31,7 +31,7 @@ description: 電路學第四章 電路定理 (Circuit Theorems) 互動題庫、�
 :::
 
 <PracticeFilter prefix="ch4-" />
-<PracticeProgress :total="13" prefix="ch4-" />
+<PracticeProgress :total="36" prefix="ch4-" />
 
 <PracticeCard id="ch4-ex-4-1" type="example" title="線性性質與比例常數關係分析" source="Example 4.1 · Slide P.7–9" topic="線性性質 (Linearity Property)">
 
@@ -755,6 +755,825 @@ $$R_N = 5\ \Omega,\quad I_N = 7\text{ A}$$
 $$R_L = R_{Th} = 9\ \Omega$$
 $$P_{\max} = 13.44\text{ W}\ \left(\frac{121}{9}\text{ W}\right)$$
 :::
+
+</template>
+</PracticeCard>
+
+## 教材直接來源補齊
+
+<PracticeCard id="ch4-pr1" type="practice" title="Practice Problem 4.1" source="課本 p.134" topic="線性性質 (Linearity Property)">
+
+在圖 4.3 的電路中，當電流源 $i_s=30\ \mathrm{A}$ 以及 $i_s=45\ \mathrm{A}$ 時，分別求輸出電壓 $v_o$。
+
+![Figure 4.3](../assets/images/ch4-pr1_figure_4.3.png)
+
+<template #solution>
+
+圖中 $4\ \Omega$ 支路與 $12\ \Omega+8\ \Omega=20\ \Omega$ 支路並聯。令上、下兩節點間電壓為 $v$，則
+
+$$
+i_s=\frac{v}{4}+\frac{v}{20}=\frac{3v}{10},
+\qquad
+v_o=\frac{8}{20}v=\frac{2}{5}v=\frac{4}{3}i_s.
+$$
+
+因此，當 $i_s=30\ \mathrm{A}$ 時，$v_o=40\ \mathrm{V}$；當 $i_s=45\ \mathrm{A}$ 時，$v_o=60\ \mathrm{V}$。
+
+回代檢查：第一種情況 $v=100\ \mathrm{V}$，故 $100/4+100/20=25+5=30\ \mathrm{A}$；第二種情況 $v=150\ \mathrm{V}$，故 $150/4+150/20=37.5+7.5=45\ \mathrm{A}$，兩者殘差皆為零。
+
+**課本答案：** $v_o=40\ \mathrm{V},\ 60\ \mathrm{V}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch4-pr2" type="practice" title="Practice Problem 4.2" source="課本 p.134" topic="線性性質 (Linearity Property)">
+
+假設 $v_o=1\ \mathrm{V}$，利用線性性質求圖 4.5 電路在 $40\ \mathrm{V}$ 電壓源作用下的實際 $v_o$。
+
+![Figure 4.5](../assets/images/ch4-pr2_figure_4.5.png)
+
+<template #solution>
+
+先令輸出為假設值 $v_o'=1\ \mathrm{V}$。流過 $8\ \Omega$ 與 $12\ \Omega$ 串聯支路的電流為
+
+$$
+i'=\frac{v_o'}{8\ \Omega}=\frac{1}{8}\ \mathrm{A}.
+$$
+
+因此，對應的輸入電壓為
+
+$$
+v_s'=v_o'+12\ \Omega\,i'
+    =1+12\left(\frac{1}{8}\right)
+    =\frac{5}{2}\ \mathrm{V}.
+$$
+
+實際電壓源為 $40\ \mathrm{V}$，線性比例因子為 $40/(5/2)=16$，所以
+
+$$
+v_o=16v_o'=16\ \mathrm{V}.
+$$
+
+回代檢查：當 $v_o=16\ \mathrm{V}$ 時，串聯支路電流為 $16/8=2\ \mathrm{A}$，$12\ \Omega$ 電阻壓降為 $24\ \mathrm{V}$，故輸入端電壓為 $16+24=40\ \mathrm{V}$，與電路條件一致。
+
+**課本答案：** $v_o=16\ \mathrm{V}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch4-pr3" type="practice" title="Practice Problem 4.3" source="課本 p.136" topic="重疊定理 (Superposition Theorem)">
+
+使用重疊定理，求圖 4.8 電路中的 $v_o$。
+
+![Figure 4.8](../assets/images/ch4-pr3_figure_4.8.png)
+
+<template #solution>
+
+令 $v_1$ 為 $12\ \mathrm{V}$ 電壓源單獨作用所造成的 $v_o$，令 $v_2$ 為 $5\ \mathrm{A}$ 電流源單獨作用所造成的 $v_o$。重疊定理要求另一個獨立源關閉，但相應的電阻網路保持不變。
+
+**只保留 $12\ \mathrm{V}$ 電壓源：** 將 $5\ \mathrm{A}$ 電流源開路。設中間上方節點電壓為 $u$，則
+
+$$
+\frac{v_1}{2}+\frac{v_1-u}{3}=0
+\quad\Longrightarrow\quad
+v_1=\frac{2}{5}u,
+$$
+
+$$
+\frac{u-v_1}{3}+\frac{u-12}{5}=0.
+$$
+
+解得 $u=6\ \mathrm{V}$，所以 $v_1=2.4\ \mathrm{V}$。
+
+**只保留 $5\ \mathrm{A}$ 電流源：** 將 $12\ \mathrm{V}$ 電壓源短路。此時
+
+$$
+\frac{v_2}{2}+\frac{v_2-u}{3}=0
+\quad\Longrightarrow\quad
+v_2=\frac{2}{5}u,
+$$
+
+$$
+\frac{u-v_2}{3}+\frac{u}{5}=5.
+$$
+
+解得 $u=12.5\ \mathrm{V}$，所以 $v_2=5\ \mathrm{V}$。代數相加得
+
+$$
+v_o=v_1+v_2=2.4+5=7.4\ \mathrm{V}.
+$$
+
+回代檢查：在總響應 $v_o=7.4\ \mathrm{V}$ 下，第一個節點方程給出中間節點 $u=18.5\ \mathrm{V}$；第二個節點的電流為 $(18.5-7.4)/3+(18.5-12)/5=3.7+1.3=5\ \mathrm{A}$，殘差為零。
+
+**課本答案：** $v_o=7.4\ \mathrm{V}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch4-pr4" type="practice" title="Practice Problem 4.4" source="課本 p.138" topic="重疊定理 (Superposition Theorem)">
+
+使用重疊定理，求圖 4.11 電路中的 $v_x$。
+
+![Figure 4.11](../assets/images/ch4-pr4_figure_4.11.png)
+
+<template #solution>
+
+相依電流源 $0.1v_x$ 在兩個子電路中都必須保留。
+
+**只保留 $25\ \mathrm{V}$ 電壓源：** 將 $5\ \mathrm{A}$ 電流源開路。由節點 $v_x$ 寫 KCL：
+
+$$
+\frac{v_x}{4}+\frac{v_x-25}{20}=0.1v_x
+\quad\Longrightarrow\quad
+4v_x=25,
+$$
+
+故 $v_{x1}=6.25\ \mathrm{V}$。
+
+**只保留 $5\ \mathrm{A}$ 電流源：** 將 $25\ \mathrm{V}$ 電壓源短路。此時
+
+$$
+\frac{v_x}{4}+\frac{v_x}{20}=5+0.1v_x
+\quad\Longrightarrow\quad
+4v_x=100,
+$$
+
+故 $v_{x2}=25\ \mathrm{V}$。代數相加得
+
+$$
+v_x=v_{x1}+v_{x2}=6.25+25=31.25\ \mathrm{V}.
+$$
+
+回代檢查：$4\ \Omega$ 電阻與 $20\ \Omega$ 電阻流出的電流分別為 $31.25/4=7.8125\ \mathrm{A}$ 與 $(31.25-25)/20=0.3125\ \mathrm{A}$；總流出為 $8.125\ \mathrm{A}$，而兩個電流源總流入為 $5+0.1(31.25)=8.125\ \mathrm{A}$，殘差為零。
+
+**課本答案：** $v_x=31.25\ \mathrm{V}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch4-pr5" type="practice" title="Practice Problem 4.5" source="課本 p.139" topic="重疊定理 (Superposition Theorem)">
+
+使用重疊定理，求圖 4.14 電路中的電流 $I$。
+
+![Figure 4.14](../assets/images/ch4-pr5_figure_4.14.png)
+
+<template #solution>
+
+令 $I$ 的參考方向為圖中向右，分別計算三個獨立源的貢獻。
+
+1. 只保留 $8\ \mathrm{V}$ 電壓源：將 $6\ \mathrm{V}$ 電壓源短路、$2\ \mathrm{A}$ 電流源開路。三個電阻串聯，因此
+
+$$
+I_1=\frac{8}{6+2+8}=0.5\ \mathrm{A}.
+$$
+
+2. 只保留 $6\ \mathrm{V}$ 電壓源：將 $8\ \mathrm{V}$ 電壓源短路、$2\ \mathrm{A}$ 電流源開路。電流實際由右向左流過 $8\ \Omega$ 電阻，故依圖中向右的參考方向
+
+$$
+I_2=-\frac{6}{8+2+6}=-0.375\ \mathrm{A}.
+$$
+
+3. 只保留 $2\ \mathrm{A}$ 電流源：兩個電壓源皆短路。電流在 $2\ \Omega$ 支路與 $6+8=14\ \Omega$ 回路間分流，向右流過 $8\ \Omega$ 的貢獻為
+
+$$
+I_3=2\left(\frac{2}{2+14}\right)=0.25\ \mathrm{A}.
+$$
+
+因此
+
+$$
+I=I_1+I_2+I_3=0.5-0.375+0.25=0.375\ \mathrm{A}=375\ \mathrm{mA}.
+$$
+
+回代檢查：右側 $6\ \mathrm{V}$ 節點上方電壓為 $6\ \mathrm{V}$，由 $I=0.375\ \mathrm{A}$ 得中間右節點電壓 $6+8(0.375)=9\ \mathrm{V}$；左側中間節點為 $5.75\ \mathrm{V}$。該節點 KCL 為
+
+$$
+\frac{5.75-8}{6}+\frac{5.75-9}{2}+2=0,
+$$
+
+殘差為零。
+
+**課本答案：** $I=375\ \mathrm{mA}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch4-pr6" type="practice" title="Practice Problem 4.6" source="課本 p.141" topic="電源轉換 (Source Transformation)">
+
+使用電源轉換，求圖 4.19 電路中的 $i_o$。
+
+![Figure 4.19](../assets/images/ch4-pr6_figure_4.19.png)
+
+<template #solution>
+
+先將左側 $5\ \mathrm{A}$ 電流源與 $6\ \Omega$、$3\ \Omega$ 電阻化簡。兩個電阻並聯為
+
+$$
+6\parallel3=2\ \Omega,
+$$
+
+所以 $5\ \mathrm{A}$ 與 $2\ \Omega$ 的諾頓等效，可轉為 $10\ \mathrm{V}$ 電壓源串聯 $2\ \Omega$。
+
+右側的 $1\ \Omega$ 與 $4\ \Omega$ 串聯為 $5\ \Omega$，再與 $7\ \Omega$ 並聯：
+
+$$
+5\parallel7=\frac{35}{12}\ \Omega.
+$$
+
+因此右側 $3\ \mathrm{A}$ 諾頓等效可轉為
+
+$$
+3\left(\frac{35}{12}\right)=\frac{35}{4}\ \mathrm{V}
+$$
+
+的戴維寧電壓源，串聯 $35/12\ \Omega$。令 $V_A$ 為 $5\ \mathrm{V}$ 電壓源左端電壓，令 $V_B$ 為右端電壓，因電壓源右端為正，
+
+$$
+V_B-V_A=5.
+$$
+
+對兩個等效支路寫 KCL：
+
+$$
+\frac{V_A-10}{2}+\frac{V_B-35/4}{35/12}=0.
+$$
+
+代入 $V_A=V_B-5$，得
+
+$$
+\frac{V_B-15}{2}+\frac{12}{35}\left(V_B-\frac{35}{4}\right)=0
+\quad\Longrightarrow\quad
+V_B=\frac{735}{59}\ \mathrm{V}.
+$$
+
+故
+
+$$
+i_o=\frac{V_B}{7}=\frac{105}{59}\ \mathrm{A}\approx1.78\ \mathrm{A}.
+$$
+
+回代原電路：$V_A=440/59\ \mathrm{V}$、$V_B=735/59\ \mathrm{V}$，且右側 $1\ \Omega+4\ \Omega$ 支路電流為 $V_B/5=147/59\ \mathrm{A}$。兩個節點的超節點 KCL 為
+
+$$
+\frac{V_A}{6}+\frac{V_A}{3}+\frac{V_B}{7}+\frac{V_B}{5}
+=\frac{220+220+105+147}{59}=8=5+3,
+$$
+
+並且 $V_B-V_A=5\ \mathrm{V}$，因此拘束式與 KCL 殘差皆為零。
+
+**課本答案：** $i_o=1.78\ \mathrm{A}$。
+
+</template>
+
+</PracticeCard>
+
+<PracticeCard id="ch4-pr7" type="practice" title="Practice Problem 4.7" source="課本 p.142" topic="電源轉換 (Source Transformation)">
+
+使用電源轉換法，求圖 4.22 電路中的 $i_x$。
+
+![Figure 4.20](../assets/images/ch4-pr7_figure_4.20.png)
+
+![Figure 4.21](../assets/images/ch4-pr7_figure_4.21.png)
+
+![Figure 4.22](../assets/images/ch4-pr7_figure_4.22.png)
+
+<template #solution>
+
+**課本答案：**
+
+$$
+i_x = 7.059\ \text{mA}
+$$
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr8" type="practice" title="Practice Problem 4.8" source="課本 p.146" topic="戴維寧定理 (Thevenin's Theorem)">
+
+使用戴維寧定理，求圖 4.30 中端點 $a-b$ 左側電路的等效電路，並求電流 $I$。
+
+![Figure 4.30](../assets/images/ch4-pr8_figure_4.30.png)
+
+![Figure 4.31](../assets/images/ch4-pr8_figure_4.31.png)
+
+![Figure 4.32](../assets/images/ch4-pr8_figure_4.32.png)
+
+<template #solution>
+
+**課本答案：**
+
+$$
+V_{\mathrm{Th}} = 6\ \text{V},\qquad R_{\mathrm{Th}} = 3\ \Omega,
+\qquad I = 1.5\ \text{A}
+$$
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr9" type="practice" title="Practice Problem 4.9" source="課本 p.147" topic="戴維寧定理 (Thevenin's Theorem)">
+
+求圖 4.34 中端點 $a-b$ 左側電路的戴維寧等效電路。
+
+![Figure 4.32](../assets/images/ch4-pr9_figure_4.32.png)
+
+![Figure 4.33](../assets/images/ch4-pr9_figure_4.33.png)
+
+![Figure 4.34](../assets/images/ch4-pr9_figure_4.34.png)
+
+![Figure 4.35](../assets/images/ch4-pr9_figure_4.35.png)
+
+<template #solution>
+
+**課本答案：**
+
+$$
+V_{\mathrm{Th}} = 5.333\ \text{V},\qquad
+R_{\mathrm{Th}} = 444.4\ \text{m}\Omega
+$$
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr10" type="practice" title="Practice Problem 4.10" source="課本 p.149" topic="戴維寧定理 (Thevenin's Theorem)">
+
+求圖 4.36 電路的戴維寧等效電路。
+
+![Figure 4.35](../assets/images/ch4-pr10_figure_4.35.png)
+
+![Figure 4.36](../assets/images/ch4-pr10_figure_4.36.png)
+
+![Figure 4.37](../assets/images/ch4-pr10_figure_4.37.png)
+
+<template #solution>
+
+**課本答案：**
+
+$$
+V_{\mathrm{Th}} = 0\ \text{V},\qquad R_{\mathrm{Th}} = -7.5\ \Omega
+$$
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr11" type="practice" title="Practice Problem 4.11" source="課本 p.151" topic="諾頓定理 (Norton's Theorem)">
+
+求圖 4.42 電路在端點 $a-b$ 的諾頓等效電路。
+
+![Figure 4.39](../assets/images/ch4-pr11_figure_4.39.png)
+
+![Figure 4.40](../assets/images/ch4-pr11_figure_4.40.png)
+
+![Figure 4.41](../assets/images/ch4-pr11_figure_4.41.png)
+
+![Figure 4.42](../assets/images/ch4-pr11_figure_4.42.png)
+
+<template #solution>
+
+**課本答案：**
+
+$$
+R_N = 3\ \Omega,\qquad I_N = 4.5\ \text{A}
+$$
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr12" type="practice" title="Practice Problem 4.12" source="課本 p.152" topic="諾頓定理 (Norton's Theorem)">
+
+求圖 4.45 電路在端點 $a-b$ 的諾頓等效電路。
+
+![Figure 4.45](../assets/images/ch4-pr12_figure_4.45.png)
+
+<template #solution>
+
+**課本答案：**
+
+$$
+R_N = 1\ \Omega,\qquad I_N = 10\ \text{A}
+$$
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr13" type="practice" title="Practice Problem 4.13" source="課本 p.156" topic="最大功率轉移定理 (Maximum Power Transfer)">
+
+在圖 4.52 中，求能從其餘電路取得最大功率的負載電阻 $R_L$，並計算最大功率。
+
+![Figure 4.52](../assets/images/ch4-pr13_figure_4.52.png)
+
+<template #solution>
+
+令左側 $2\ \Omega$ 電阻右端節點電壓為 $v_a$，則
+
+$$
+v_x=9-v_a,
+\qquad v_b=3v_x=3(9-v_a),
+$$
+
+其中 $v_b$ 是 $1\ \Omega$ 電阻上端、受控電壓源上端的節點電壓。
+
+**求戴維寧電壓：** 開路 $R_L$ 時，$4\ \Omega$ 電阻沒有電流，因此 $V_{\mathrm{Th}}=v_a$。對節點 $v_a$ 寫 KCL：
+
+$$
+\frac{v_a-9}{2}+(v_a-v_b)=0.
+$$
+
+代入 $v_b=27-3v_a$，得
+
+$$
+\frac{v_a-9}{2}+4v_a-27=0
+\quad\Longrightarrow\quad
+V_{\mathrm{Th}}=v_a=7\ \mathrm{V}.
+$$
+
+**求戴維寧電阻：** 將獨立 $9\ \mathrm{V}$ 電壓源短路，於負載端施加測試電壓 $v$。此時 $v_x=-v_a$、$v_b=-3v_a$，且
+
+$$
+\frac{v_a}{2}+(v_a-v_b)+\frac{v_a-v}{4}=0
+\quad\Longrightarrow\quad
+v_a=\frac{v}{19}.
+$$
+
+測試電流為
+
+$$
+i_t=\frac{v-v_a}{4}=\frac{9v}{38},
+\qquad
+R_{\mathrm{Th}}=\frac{v}{i_t}=\frac{38}{9}\ \Omega
+\approx4.222\ \Omega.
+$$
+
+最大功率轉移條件為 $R_L=R_{\mathrm{Th}}$，所以
+
+$$
+R_L=\frac{38}{9}\ \Omega\approx4.222\ \Omega,
+\qquad
+P_{\max}=\frac{V_{\mathrm{Th}}^2}{4R_L}
+=\frac{7^2}{4(38/9)}
+\approx2.901\ \mathrm{W}.
+$$
+
+**課本印刷答案：** $R_L=4.222\ \Omega$，$P_{\max}=2.901\ \mathrm{mW}$。
+
+**數值對帳註記：** 由圖中元件標示的 SI 單位與 $V_{\mathrm{Th}}=7\ \mathrm{V}$、$R_{\mathrm{Th}}=4.222\ \Omega$ 回代，$V^2/\Omega$ 的結果應為 $2.901\ \mathrm{W}$；因此 PDF 答案中的 `mW` 與電路數值不一致，疑為教材單位誤植。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-ex14" type="example" title="Example 4.14" source="課本 p.157" topic="以 PSpice 驗證戴維寧與諾頓定理 (PSpice Verification)">
+
+考慮圖 4.31 的電路（見例題 4.9），使用 PSpice 求其戴維寧等效電路與諾頓等效電路。
+
+![Figure 4.31](../assets/images/ch4-pr8_figure_4.31.png)
+
+![Figure 4.53](../assets/images/ch4-ex14_figure_4.53.png)
+
+![Figure 4.54](../assets/images/ch4-ex14_figure_4.54.png)
+
+<template #solution>
+
+在端點 $a-b$ 插入探測電流源 $I_2$，執行 DC Sweep，令 $I_2$ 由 $0$ 掃描至 $1\ \mathrm{A}$，步進為 $0.1\ \mathrm{A}$。由圖 4.53 的 $V(I_2)$ 直線得到
+
+$$
+V_{\mathrm{Th}}=\text{零電流截距}=20\ \mathrm{V},
+\qquad
+R_{\mathrm{Th}}=\text{斜率}
+=\frac{26-20}{1}=6\ \Omega.
+$$
+
+接著以探測電壓源 $V_1$ 取代探測電流源，令 $V_1$ 由 $0$ 掃描至 $1\ \mathrm{V}$，步進為 $0.1\ \mathrm{V}$。由圖 4.54 的 $I(V_1)$ 直線得到
+
+$$
+I_N=\text{零電壓截距}=3.335\ \mathrm{A},
+\qquad
+G_N=\text{斜率}
+=\frac{3.335-3.165}{1}=0.17\ \mathrm{S}.
+$$
+
+因此諾頓電阻為
+
+$$
+R_N=\frac{1}{G_N}\approx5.88\ \Omega,
+$$
+
+其近似值與戴維寧結果 $R_{\mathrm{Th}}=6\ \Omega$ 的差異來自圖形讀值與四捨五入；理想等效關係為 $R_N=R_{\mathrm{Th}}$。
+
+**課本答案：** $V_{\mathrm{Th}}=20\ \mathrm{V}$、$R_{\mathrm{Th}}=6\ \Omega$；$I_N=3.335\ \mathrm{A}$、$G_N=0.17\ \mathrm{S}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr14" type="practice" title="Practice Problem 4.14" source="課本 p.158" topic="以 PSpice 求戴維寧等效 (PSpice 與戴維寧定理)">
+
+以 PSpice 重做練習題 4.9，求端點 $a-b$ 的戴維寧等效電路。
+
+![Figure 4.32](../assets/images/ch4-pr9_figure_4.32.png)
+
+![Figure 4.33](../assets/images/ch4-pr9_figure_4.33.png)
+
+![Figure 4.34](../assets/images/ch4-pr9_figure_4.34.png)
+
+![Figure 4.35](../assets/images/ch4-pr9_figure_4.35.png)
+
+<template #solution>
+
+在端點 $a-b$ 接入探測電流源，使用 DC Sweep 掃描探測電流，並以端點電壓對探測電流的直線截距與斜率分別讀出戴維寧電壓與戴維寧電阻：
+
+$$
+V_{\mathrm{Th}}=5.333\ \mathrm{V},
+\qquad
+R_{\mathrm{Th}}=0.4444\ \Omega=444.4\ \mathrm{m}\Omega.
+$$
+
+**課本答案：** $V_{\mathrm{Th}}=5.333\ \mathrm{V}$，$R_{\mathrm{Th}}=444.4\ \mathrm{m}\Omega$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-ex15" type="example" title="Example 4.15" source="課本 p.158" topic="最大功率轉移的 PSpice 驗證 (Maximum Power Transfer)">
+
+參考圖 4.55 的電路，使用 PSpice 求傳送至 $R_L$ 的最大功率。
+
+![Figure 4.55](../assets/images/ch4-ex15_figure_4.55.png)
+
+![Figure 4.56](../assets/images/ch4-ex15_figure_4.56.png)
+
+![Figure 4.57](../assets/images/ch4-pr15_figure_4.57.png)
+
+<template #solution>
+
+將圖 4.55 的負載電阻設定為參數 $R_L$，在 PSpice 中以 Global Parameter 執行 DC Sweep，例如從 $100\ \Omega$ 掃描至 $5\ \mathrm{k}\Omega$。功率曲線可由負載端電壓與電流的乘積取得；由於 PSpice 的 $I(R_2)$ 參考方向與被動符號相反，可使用
+
+$$
+P_L=-V(R2:2)I(R2).
+$$
+
+對此電路也可直接寫出
+
+$$
+P_L(R_L)=\frac{1^2R_L}{(1\ \mathrm{k}\Omega+R_L)^2}.
+$$
+
+最大功率轉移發生於
+
+$$
+R_L=R_{\mathrm{Th}}=1\ \mathrm{k}\Omega,
+$$
+
+且
+
+$$
+P_{\max}=\frac{V_{\mathrm{Th}}^2}{4R_{\mathrm{Th}}}
+=\frac{1^2}{4(1\ \mathrm{k}\Omega)}
+=250\ \mu\mathrm{W}.
+$$
+
+**課本答案：** $R_L=1\ \mathrm{k}\Omega$ 時，$P_{\max}=250\ \mu\mathrm{W}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr15" type="practice" title="Practice Problem 4.15" source="課本 p.159" topic="最大功率轉移定理 (Maximum Power Transfer)">
+
+若將圖 4.55 中的 $1\ \mathrm{k}\Omega$ 電阻改為 $2\ \mathrm{k}\Omega$，求傳送至 $R_L$ 的最大功率。
+
+![Figure 4.55](../assets/images/ch4-pr15_figure_4.55.png)
+
+<template #solution>
+
+電源電壓為 $1\ \mathrm{V}$，串聯電阻改為 $2\ \mathrm{k}\Omega$，因此負載端看到的戴維寧參數為
+
+$$
+V_{\mathrm{Th}}=1\ \mathrm{V},
+\qquad
+R_{\mathrm{Th}}=2\ \mathrm{k}\Omega.
+$$
+
+最大功率轉移時 $R_L=R_{\mathrm{Th}}$，故
+
+$$
+P_{\max}=\frac{V_{\mathrm{Th}}^2}{4R_{\mathrm{Th}}}
+=\frac{1^2}{4(2\ \mathrm{k}\Omega)}
+=125\ \mu\mathrm{W}.
+$$
+
+**課本答案：** $P_{\max}=125\ \mu\mathrm{W}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-ex16" type="example" title="Example 4.16" source="課本 p.161" topic="實際電壓源與內阻 (Source Modeling)">
+
+某電壓源接上功率為 $2\ \mathrm{W}$ 的負載時，端電壓為 $12\ \mathrm{V}$；卸除負載後，端電壓升為 $12.4\ \mathrm{V}$。求：(a) 電源電壓 $v_s$ 與內阻 $R_s$；(b) 接上 $8\ \Omega$ 負載時的端電壓。
+
+![Figure 4.62](../assets/images/ch4-ex16_figure_4.62.png)
+
+<template #solution>
+
+把實際電壓源表示成戴維寧等效電路。卸除負載時沒有內阻壓降，因此
+
+$$
+v_s=v_{\mathrm{oc}}=12.4\ \mathrm{V}.
+$$
+
+在原負載下，負載電阻與電流為
+
+$$
+R_L=\frac{v_L^2}{p_L}=\frac{12^2}{2}=72\ \Omega,
+\qquad
+i_L=\frac{v_L}{R_L}=\frac{12}{72}=\frac{1}{6}\ \mathrm{A}.
+$$
+
+內阻上的壓降為 $12.4-12=0.4\ \mathrm{V}$，所以
+
+$$
+R_s=\frac{v_s-v_L}{i_L}
+=\frac{0.4}{1/6}=2.4\ \Omega.
+$$
+
+接上 $8\ \Omega$ 負載時，由分壓得到
+
+$$
+v_L=\frac{8}{8+2.4}(12.4)=9.538\ \mathrm{V}.
+$$
+
+**課本答案：** $v_s=12.4\ \mathrm{V}$、$R_s=2.4\ \Omega$；接上 $8\ \Omega$ 負載時 $v_L=9.538\ \mathrm{V}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr16" type="practice" title="Practice Problem 4.16" source="課本 p.161" topic="實際電壓源與內阻 (Source Modeling)">
+
+某放大器的開路端電壓為 $9\ \mathrm{V}$。接上 $20\ \Omega$ 喇叭後，電壓降為 $8\ \mathrm{V}$。若改接 $10\ \Omega$ 喇叭，求其端電壓。
+
+![Figure 4.61](../assets/images/ch4-pr16_figure_4.61.png)
+
+<template #solution>
+
+開路時沒有內阻壓降，因此電源的戴維寧電壓為
+
+$$
+V_{\mathrm{Th}}=V_{\mathrm{oc}}=9\ \mathrm{V}.
+$$
+
+接上 $20\ \Omega$ 喇叭時，負載電流為 $8/20=0.4\ \mathrm{A}$，內阻上的壓降為 $9-8=1\ \mathrm{V}$，故
+
+$$
+R_s=\frac{1}{0.4}=2.5\ \Omega.
+$$
+
+改接 $10\ \Omega$ 喇叭後，端電壓為
+
+$$
+v_L=\frac{R_L}{R_s+R_L}V_{\mathrm{Th}}
+=\frac{10}{2.5+10}(9)
+=7.2\ \mathrm{V}.
+$$
+
+**課本答案：** $v_L=7.2\ \mathrm{V}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-ex17" type="example" title="Example 4.17" source="課本 p.162" topic="惠斯登電橋與電阻量測 (Wheatstone Bridge)">
+
+在圖 4.63 中，$R_1=500\ \Omega$、$R_3=200\ \Omega$。調整 $R_2=125\ \Omega$ 後電橋平衡，求未知電阻 $R_x$。
+
+![Figure 4.63](../assets/images/ch4-ex18_figure_4.63.png)
+
+<template #solution>
+
+電橋平衡時，檢流計沒有電流，兩中點電壓相等。由惠斯登電橋平衡條件
+
+$$
+\frac{R_2}{R_1+R_2}=\frac{R_x}{R_3+R_x}
+\quad\Longrightarrow\quad
+R_x=\frac{R_3}{R_1}R_2.
+$$
+
+代入數值：
+
+$$
+R_x=\frac{200}{500}(125)=50\ \Omega.
+$$
+
+**課本答案：** $R_x=50\ \Omega$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr17" type="practice" title="Practice Problem 4.17" source="課本 p.163" topic="惠斯登電橋與電阻量測 (Wheatstone Bridge)">
+
+惠斯登電橋中 $R_1=R_3=1\ \mathrm{k}\Omega$。調整 $R_2$ 直到檢流計沒有電流；此時 $R_2=3.2\ \mathrm{k}\Omega$。求未知電阻的值。
+
+<template #solution>
+
+電橋平衡時
+
+$$
+R_x=\frac{R_3}{R_1}R_2.
+$$
+
+由於 $R_1=R_3$，所以 $R_x=R_2$。因此
+
+$$
+R_x=3.2\ \mathrm{k}\Omega.
+$$
+
+**課本答案：** $R_x=3.2\ \mathrm{k}\Omega$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-ex18" type="example" title="Example 4.18" source="課本 p.162" topic="不平衡惠斯登電橋與戴維寧等效 (Unbalanced Wheatstone Bridge)">
+
+圖 4.64 為不平衡電橋。若檢流計的電阻為 $40\ \Omega$，求流過檢流計的電流。
+
+![Figure 4.64](../assets/images/ch4-pr17_figure_4.64.png)
+
+![Figure 4.65](../assets/images/ch4-pr17_figure_4.65.png)
+
+<template #solution>
+
+先對檢流計端點 $a-b$ 求戴維寧等效。
+
+將獨立 $220\ \mathrm{V}$ 電壓源短路後，兩側電阻形成串聯的並聯組合，因此
+
+$$
+R_{\mathrm{Th}}
+=(3\ \mathrm{k}\Omega\parallel1\ \mathrm{k}\Omega)
++(400\ \Omega\parallel600\ \Omega)
+=750+240=990\ \Omega.
+$$
+
+開路求戴維寧電壓時，兩個分壓中點電壓為
+
+$$
+v_1=\frac{1\,000}{1\,000+3\,000}(220)=55\ \mathrm{V},
+\qquad
+v_2=\frac{600}{600+400}(220)=132\ \mathrm{V}.
+$$
+
+依圖示極性，
+
+$$
+V_{\mathrm{Th}}=v_1-v_2=55-132=-77\ \mathrm{V}.
+$$
+
+接回 $R_m=40\ \Omega$ 的檢流計後，若以 $a\to b$ 為正方向，
+
+$$
+I_G=\frac{V_{\mathrm{Th}}}{R_{\mathrm{Th}}+R_m}
+=\frac{-77}{990+40}
+=-74.76\ \mathrm{mA}.
+$$
+
+負號表示實際電流方向為由 $b$ 流向 $a$，大小為 $74.76\ \mathrm{mA}$。
+
+**課本答案：** $I_G=-74.76\ \mathrm{mA}$（方向由 $b$ 到 $a$）。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch4-pr18" type="practice" title="Practice Problem 4.18" source="課本 p.164" topic="不平衡惠斯登電橋 (Unbalanced Wheatstone Bridge)">
+
+求圖 4.66 惠斯登電橋中檢流計的電流；檢流計電阻為 $14\ \Omega$。
+
+![Figure 4.66](../assets/images/ch4-pr18_figure_4.66.png)
+
+<template #solution>
+
+先將 $16\ \mathrm{V}$ 電壓源短路，從檢流計端點看入的戴維寧電阻為
+
+$$
+R_{\mathrm{Th}}=(20\ \Omega\parallel30\ \Omega)
++(60\ \Omega\parallel40\ \Omega)
+=12+24=36\ \Omega.
+$$
+
+開路檢流計後，兩個分壓中點的電壓差大小為
+
+$$
+V_{\mathrm{Th}}
+=16\left(\frac{30}{20+30}-\frac{40}{60+40}\right)
+=16(0.6-0.4)=3.2\ \mathrm{V}.
+$$
+
+所以檢流計電流大小為
+
+$$
+|I_G|=\frac{|V_{\mathrm{Th}}|}{R_{\mathrm{Th}}+14\ \Omega}
+=\frac{3.2}{36+14}
+=0.064\ \mathrm{A}
+=64\ \mathrm{mA}.
+$$
+
+**課本答案：** $|I_G|=64\ \mathrm{mA}$。
 
 </template>
 </PracticeCard>

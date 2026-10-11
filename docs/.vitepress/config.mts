@@ -71,6 +71,13 @@ export default defineConfig({
             { text: '002: 鑽石與閃鋅礦結構幾何速查表', link: '/solid-state/reference/002-diamond-lattice-cheatsheet' },
             { text: '003: 塊狀晶體生長與晶圓製程速查表', link: '/solid-state/reference/003-bulk-crystal-growth-cheatsheet' }
           ]
+        },
+        {
+          text: '教材題庫 (Textbook Problems)',
+          collapsed: false,
+          items: [
+            { text: 'Chapter 1–2 Problems & Self Quiz（44 題）', link: '/solid-state/practice/0001-textbook-problems' }
+          ]
         }
       ],
       '/electronics/': [
@@ -106,7 +113,20 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Chapter 1: 互動式範例與練習題庫', link: '/electronics/practice/0001-chapter1-examples' },
-            { text: 'Chapter 2: 互動式範例與練習題庫', link: '/electronics/practice/0002-chapter2-examples' }
+            { text: 'Chapter 2: 互動式範例與練習題庫', link: '/electronics/practice/0002-chapter2-examples' },
+            { text: 'Chapter 1/2: 教材題卡完整盤點', link: '/electronics/practice/0003-textbook-missing' },
+            { text: 'Chapter 1 Problems 1.4–1.20（17 題）', link: '/electronics/practice/0004-chapter1-problems-1-4-1-20' },
+            { text: 'Chapter 1 Exercises 缺漏補齊（7 題）', link: '/electronics/practice/0005-chapter1-exercises-missing' },
+            { text: 'Chapter 2 缺漏題卡目前批次（21 題）', link: '/electronics/practice/0006-chapter2-missing-partial' },
+            { text: 'Chapter 2 Problems 2.61–2.80（20 題）', link: '/electronics/practice/0008-chapter2-problems-2-61-2-80' },
+            { text: 'Chapter 2 Problems 2.9–2.24（16 題）', link: '/electronics/practice/0009-chapter2-problems-2-9-2-24' },
+            { text: 'Chapter 2 Problems 2.25–2.60（36 題）', link: '/electronics/practice/0010-chapter2-problems-2-25-2-60' },
+            { text: 'Chapter 2 Problems 2.81–2.107（27 題）', link: '/electronics/practice/0011-chapter2-problems-2-81-2-107' },
+            { text: 'Chapter 2 Problems 2.108–2.127（20 題）', link: '/electronics/practice/0012-chapter2-problems-2-108-2-127' },
+            { text: 'Chapter 2 Exercises 2.23、2.28（2 題）', link: '/electronics/practice/0013-chapter2-exercises-2-23-2-28' },
+            { text: 'Chapter 1 Problems 1.43–1.65（23 題）', link: '/electronics/practice/0014-chapter1-problems-1-43-1-65' },
+            { text: 'Chapter 1 Problems 1.66–1.83（18 題）', link: '/electronics/practice/0015-chapter1-problems-1-66-1-83' },
+            { text: 'Chapter 1 Problems 1.21–1.42（22 題）', link: '/electronics/practice/0016-chapter1-problems-1-21-1-42' }
           ]
         }
       ],
@@ -151,11 +171,11 @@ export default defineConfig({
           text: '互動式題庫練習系統 (Interactive Practice Workbooks)',
           collapsed: false,
           items: [
-            { text: 'Chapter 1: 互動式範例與練習題庫（19 題）', link: '/circuits/practice/0001-chapter1-examples' },
-            { text: 'Chapter 2: 互動式範例與練習題庫', link: '/circuits/practice/0002-chapter2-examples' },
+            { text: 'Chapter 1: 互動式範例與練習題庫（20 題）', link: '/circuits/practice/0001-chapter1-examples' },
+            { text: 'Chapter 2: 互動式範例與練習題庫（34 題）', link: '/circuits/practice/0002-chapter2-examples' },
             { text: 'Chapter 3: 互動式範例與練習題庫（26 題）', link: '/circuits/practice/0003-chapter3-examples' },
-            { text: 'Chapter 4: 互動式範例與練習題庫 (電路定理)', link: '/circuits/practice/0004-chapter4-examples' },
-            { text: 'Chapter 5: 互動式範例與練習題庫 (運算放大器)', link: '/circuits/practice/0005-chapter5-examples' },
+            { text: 'Chapter 4: 互動式範例與練習題庫（36 題，電路定理）', link: '/circuits/practice/0004-chapter4-examples' },
+            { text: 'Chapter 5: 互動式範例與練習題庫（26 題，運算放大器）', link: '/circuits/practice/0005-chapter5-examples' },
             { text: 'Chapter 6: 互動式範例與練習題庫 (電容與電感)', link: '/circuits/practice/0006-chapter6-examples' }
           ]
         }
@@ -175,7 +195,8 @@ export default defineConfig({
             { text: '0008: 工程應用：RL 與 RC 電路暫態分析', link: '/engineering-math/chapter1/0008-engineering-applications-circuits' },
             { text: '觀念推導: 積分因子法學習基線與幾何架構', link: '/engineering-math/chapter2/0001-integrating-factors' },
             { text: '核心速查: 一階 ODE 積分因子與正合法速查卡', link: '/engineering-math/chapter3/001-integrating-factors-cheatsheet' },
-            { text: '實戰題庫: Chapter 1 互動式範例與精選題庫 (56 題)', link: '/engineering-math/practice/0001-chapter1-examples' }
+            { text: '實戰題庫: Chapter 1 互動式範例與精選題庫 (56 題)', link: '/engineering-math/practice/0001-chapter1-examples' },
+            { text: '教材補齊: Chapter 1–2（35 題）', link: '/engineering-math/practice/0003-textbook-examples' }
           ]
         },
         {
@@ -191,7 +212,8 @@ export default defineConfig({
             { text: '0007: 參數變異法 (Variation of Parameters)', link: '/engineering-math/second-order/0007-variation-of-parameters' },
             { text: '0008: 柯西－尤拉方程式 (Euler-Cauchy Equations)', link: '/engineering-math/second-order/0008-euler-cauchy-equations' },
             { text: '0009: 降階法求第二個線性獨立解 (Reduction of Order)', link: '/engineering-math/second-order/0009-reduction-of-order' },
-            { text: '實戰題庫: Chapter 2 互動式範例與精選題庫 (15 題)', link: '/engineering-math/practice/0002-chapter2-examples' }
+            { text: '實戰題庫: Chapter 2 互動式範例與精選題庫 (15 題)', link: '/engineering-math/practice/0002-chapter2-examples' },
+            { text: '教材補齊: Chapter 1–2（35 題）', link: '/engineering-math/practice/0003-textbook-examples' }
           ]
         }
       ]

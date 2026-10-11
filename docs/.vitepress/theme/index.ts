@@ -6,6 +6,7 @@ import PracticeFilter from './components/PracticeFilter.vue'
 import PracticeProgress from './components/PracticeProgress.vue'
 import InspectionMatrixSimulator from './components/InspectionMatrixSimulator.vue'
 import 'katex/dist/katex.min.css'
+import './subject-hub.css'
 
 export default {
   extends: DefaultTheme,

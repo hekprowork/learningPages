@@ -50,12 +50,14 @@ features:
 
 | 科目名稱 | 路由前綴 | 狀態 | 核心特色與內容 |
 | :--- | :--- | :--- | :--- |
-| **Solid-State 固態電子導論** | [`/solid-state/`](/solid-state/) | Status 已上線 (Active) | 3D WebGL 晶格視覺化、長晶製程、KaTeX 嚴密推導 |
-| **Electronics 電子學** | [`/electronics/`](/electronics/) | Status 已上線 (Active) | 二埠等效模型、多級串接負載效應、STC 頻率響應 |
-| **Circuits 電路學** | [`/circuits/`](/circuits/) | Status 已上線 (Active) | Y-Δ 外端等效推導、超節點高斯面包絡、電導對偶性 |
-| **Math 工程數學** | [`/engineering-math/`](/engineering-math/) | Status 已上線 (Active) | 一階 ODE 積分因子法、Euler 正合判定、湊微分速算 |
+| **Solid-State 固態電子導論** | [`/solid-state/`](/solid-state/) | Status 已上線；教材題卡 44 張 | 3D WebGL 晶格視覺化、長晶製程、Chapter 1–2 教材 Problems / Self Quiz |
+| **Electronics 電子學** | [`/electronics/`](/electronics/) | Status 已完成目前 Chapter 1–2 範圍；教材題卡 274 張 | 二埠等效模型、多級串接負載效應、STC 頻率響應；完整題號盤點見教材題庫頁 |
+| **Circuits 電路學** | [`/circuits/`](/circuits/) | Status 已上線；教材對帳範圍完成 | Y-Δ 外端等效推導、超節點高斯面包絡、電導對偶性 |
+| **Math 工程數學** | [`/engineering-math/`](/engineering-math/) | Status 已上線；正式教材例題 35 張 | 一階/二階 ODE 教材例題，並保留講義、題庫與歷屆試題來源標註 |
 
 </div>
+
+> 題目來源與教材覆蓋狀態請參閱：[教材題目對帳報告](/adr/0003-textbook-problem-coverage-audit)
 
 <style>
 .portal-container {

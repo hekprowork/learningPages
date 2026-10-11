@@ -25,7 +25,7 @@ description: 電路學第五章 運算放大器 (Operational Amplifiers) 互動�
 :::
 
 <PracticeFilter prefix="ch5-" />
-<PracticeProgress :total="20" prefix="ch5-" />
+<PracticeProgress :total="26" prefix="ch5-" />
 
 <PracticeCard id="ch5-ex-5-1" type="example" title="非理想運算放大器等效電路與閉迴路增益分析" source="Example 5.1 · Slide P.20–24" topic="實際運算放大器模型 (Nonideal Op Amp)">
 
@@ -981,6 +981,254 @@ $$v_o = 10\text{ V}$$
 $$(a)\ A_v = 41$$
 $$(b)\ v_o = 246\text{ mV} = 0.246\text{ V}$$
 :::
+
+</template>
+</PracticeCard>
+
+## 教材直接來源補齊
+
+<PracticeCard id="ch5-pr4" type="practice" title="Practice Problem 5.4" source="課本 p.187" topic="電流－電壓轉換器 (Transresistance Amplifier)">
+
+圖 5.15 展示兩種電流－電壓轉換器。證明：
+
+1. 對圖 5.15(a)，
+   $$
+   \frac{v_o}{i_s}=-R.
+   $$
+2. 對圖 5.15(b)，
+   $$
+   \frac{v_o}{i_s}
+   =-R_1\left(1+\frac{R_3}{R_1}+\frac{R_3}{R_2}\right).
+   $$
+
+![Figure 5.15](../assets/images/ch5-pr4_figure_5.15.png)
+
+<template #solution>
+
+理想運算放大器具有虛短路與零輸入電流，因此反相端為虛地，且電流源 $i_s$ 必須全部流經回授網路。
+
+對圖 5.15(a)，回授電阻 $R$ 兩端的電壓為 $0-v_o$，故
+
+$$
+i_s=\frac{0-v_o}{R}
+\quad\Longrightarrow\quad
+\frac{v_o}{i_s}=-R.
+$$
+
+對圖 5.15(b)，在虛地節點與上方回授節點分別套用 KCL，再以理想運算放大器的 $v_-=v_+=0$ 與 $i_-=i_+=0$ 消去中間節點電壓，可得
+
+$$
+v_o
+=-i_sR_1-i_sR_3-i_s\frac{R_1R_3}{R_2}
+=-i_sR_1\left(1+\frac{R_3}{R_1}+\frac{R_3}{R_2}\right).
+$$
+
+因此
+
+$$
+\boxed{\frac{v_o}{i_s}
+=-R_1\left(1+\frac{R_3}{R_1}+\frac{R_3}{R_2}\right)}.
+$$
+
+**課本答案：** 兩式均為證明題，結果如上。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-pr11" type="practice" title="Practice Problem 5.11" source="課本 p.199" topic="運算放大器的 PSpice 分析 (Op Amp Circuit Analysis with PSpice)">
+
+使用 PSpice 重作 Practice Problem 5.1，求閉迴路增益 $v_o/v_s$，以及當 $v_s=1\ \mathrm{V}$ 時的輸出電流 $i_o$。
+
+![Practice Problem 5.1 circuit](../assets/images/prac_5_1_circuit.png)
+
+<template #solution>
+
+使用教材中 741 運算放大器的非理想模型進行模擬，並量測電路的輸出電壓與輸出電流。PSpice 模擬結果為
+
+$$
+\frac{v_o}{v_s}=9.0027,
+\qquad
+i_o=650.2\ \mu\mathrm{A}
+$$
+
+因此，當 $v_s=1\ \mathrm{V}$ 時，閉迴路增益為 $9.0027$，輸出電流為 $650.2\ \mu\mathrm{A}$。
+
+**課本答案：** $v_o/v_s=9.0027$，$i_o=650.2\ \mu\mathrm{A}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-ex12" type="example" title="Example 5.12" source="課本 p.200" topic="數位類比轉換器 (Digital-to-Analog Converter)">
+
+在圖 5.36(b) 的運算放大器電路中，令 $R_f=10\ \mathrm{k}\Omega$、$R_1=10\ \mathrm{k}\Omega$、$R_2=20\ \mathrm{k}\Omega$、$R_3=40\ \mathrm{k}\Omega$、$R_4=80\ \mathrm{k}\Omega$。求二進位輸入 $[0000],[0001],[0010],\ldots,[1111]$ 所對應的類比輸出。
+
+![Figure 5.36](../assets/images/ch5-ex12_figure_5.36.png)
+
+<template #solution>
+
+這是一個反相加法器。由各輸入支路的電阻比可得
+
+$$
+-v_o
+=\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2
++\frac{R_f}{R_3}V_3+\frac{R_f}{R_4}V_4
+=V_1+0.5V_2+0.25V_3+0.125V_4.
+$$
+
+其中每一個位元輸入 $V_i$ 只能取 $0\ \mathrm{V}$ 或 $1\ \mathrm{V}$。因此表中的輸出幅值為 $-v_o$；實際輸出電壓 $v_o$ 帶有反相的負號。
+
+| 二進位輸入 $[V_1V_2V_3V_4]$ | 十進位值 | $-v_o$ (V) | $v_o$ (V) |
+|:---:|---:|---:|---:|
+| $[0000]$ | 0 | 0 | 0 |
+| $[0001]$ | 1 | 0.125 | $-0.125$ |
+| $[0010]$ | 2 | 0.25 | $-0.25$ |
+| $[0011]$ | 3 | 0.375 | $-0.375$ |
+| $[0100]$ | 4 | 0.5 | $-0.5$ |
+| $[0101]$ | 5 | 0.625 | $-0.625$ |
+| $[0110]$ | 6 | 0.75 | $-0.75$ |
+| $[0111]$ | 7 | 0.875 | $-0.875$ |
+| $[1000]$ | 8 | 1.0 | $-1.0$ |
+| $[1001]$ | 9 | 1.125 | $-1.125$ |
+| $[1010]$ | 10 | 1.25 | $-1.25$ |
+| $[1011]$ | 11 | 1.375 | $-1.375$ |
+| $[1100]$ | 12 | 1.5 | $-1.5$ |
+| $[1101]$ | 13 | 1.625 | $-1.625$ |
+| $[1110]$ | 14 | 1.75 | $-1.75$ |
+| $[1111]$ | 15 | 1.875 | $-1.875$ |
+
+例如，$[1111]$ 的輸出幅值為
+
+$$
+-v_o=1+0.5+0.25+0.125=1.875\ \mathrm{V}.
+$$
+
+**課本答案：** $[0000]$ 至 $[1111]$ 的 $-v_o$ 依序為 $0,0.125,0.25,0.375,0.5,0.625,0.75,0.875,1.0,1.125,1.25,1.375,1.5,1.625,1.75,1.875\ \mathrm{V}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-pr12" type="practice" title="Practice Problem 5.12" source="課本 p.201" topic="三位元數位類比轉換器 (Three-bit DAC)">
+
+三位元 DAC 如圖 5.37 所示。求：
+
+1. 當 $[V_1V_2V_3]=[010]$ 時的 $|v_o|$。
+2. 當 $[V_1V_2V_3]=[110]$ 時的 $|v_o|$。
+3. 若希望 $|v_o|=1.25\ \mathrm{V}$，應選擇哪一組 $[V_1V_2V_3]$？
+4. 若希望 $|v_o|=1.75\ \mathrm{V}$，應選擇哪一組 $[V_1V_2V_3]$？
+
+![Figure 5.37](../assets/images/ch5-pr12_figure_5.37.png)
+
+<template #solution>
+
+由圖中 $R_f=10\ \mathrm{k}\Omega$、$R_1=10\ \mathrm{k}\Omega$、$R_2=20\ \mathrm{k}\Omega$、$R_3=40\ \mathrm{k}\Omega$，反相加法器的輸出幅值為
+
+$$
+|v_o|=V_1+\frac{1}{2}V_2+\frac{1}{4}V_3,
+$$
+
+其中每個 $V_i$ 對應位元值 $0\ \mathrm{V}$ 或 $1\ \mathrm{V}$。
+
+1. 對 $[010]$，
+
+   $$
+   |v_o|=0+\frac{1}{2}(1)+\frac{1}{4}(0)=0.5\ \mathrm{V}.
+   $$
+
+2. 對 $[110]$，
+
+   $$
+   |v_o|=1+\frac{1}{2}(1)+\frac{1}{4}(0)=1.5\ \mathrm{V}.
+   $$
+
+3. 要得到 $1.25\ \mathrm{V}$，需要 $1+0.25$，所以
+
+   $$
+   [V_1V_2V_3]=[101].
+   $$
+
+4. 要得到 $1.75\ \mathrm{V}$，需要 $1+0.5+0.25$，所以
+
+   $$
+   [V_1V_2V_3]=[111].
+   $$
+
+由於這是反相電路，前兩小題的實際輸出電壓分別為 $v_o=-0.5\ \mathrm{V}$ 與 $v_o=-1.5\ \mathrm{V}$。
+
+**課本答案：** $0.5\ \mathrm{V}$、$1.5\ \mathrm{V}$、$[101]$、$[111]$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-ex13" type="example" title="Example 5.13" source="課本 p.203" topic="儀表放大器 (Instrumentation Amplifier)">
+
+在圖 5.38 中，令 $R=10\ \mathrm{k}\Omega$、$v_1=2.011\ \mathrm{V}$、$v_2=2.017\ \mathrm{V}$。若將外部增益設定電阻調整為 $R_G=500\ \Omega$，求：(a) 電壓增益；(b) 輸出電壓 $v_o$。
+
+![Figure 5.38](../assets/images/ch5-ex13_figure_5.38.png)
+
+<template #solution>
+
+儀表放大器的電壓增益為
+
+$$
+A_v=1+\frac{2R}{R_G}
+=1+\frac{2(10{,}000)}{500}
+=41.
+$$
+
+輸出電壓由差動輸入決定，因此
+
+$$
+\begin{aligned}
+v_o&=A_v(v_2-v_1)\\
+&=41(2.017-2.011)\\
+&=41(6\ \mathrm{mV})\\
+&=246\ \mathrm{mV}.
+\end{aligned}
+$$
+
+**課本答案：** (a) $A_v=41$；(b) $v_o=246\ \mathrm{mV}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-pr13" type="practice" title="Practice Problem 5.13" source="課本 p.203" topic="儀表放大器的增益設定 (Instrumentation Amplifier Gain Setting)">
+
+求圖 5.38 儀表放大器所需的外部增益設定電阻 $R_G$，使其在 $R=25\ \mathrm{k}\Omega$ 時產生 $A_v=142$ 的電壓增益。
+
+![Figure 5.38](../assets/images/ch5-pr13_figure_5.38.png)
+
+<template #solution>
+
+儀表放大器的增益關係式為
+
+$$
+A_v=1+\frac{2R}{R_G}.
+$$
+
+解出 $R_G$：
+
+$$
+R_G=\frac{2R}{A_v-1}
+=\frac{2(25\ \mathrm{k}\Omega)}{142-1}
+=\frac{50{,}000}{141}\ \Omega
+=354.6099\ldots\ \Omega.
+$$
+
+因此，外部增益設定電阻應選為
+
+$$
+R_G\approx354.6\ \Omega.
+$$
+
+回代檢查：使用未四捨五入的 $R_G=50{,}000/141\ \Omega$，有
+
+$$
+1+\frac{50{,}000}{50{,}000/141}=142,
+$$
+
+殘差為零。
+
+**課本答案：** $R_G=354.6\ \Omega$。
 
 </template>
 </PracticeCard>

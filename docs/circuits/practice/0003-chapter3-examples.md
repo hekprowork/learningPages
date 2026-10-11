@@ -561,7 +561,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex10" type="example" title="Example 3.10：以 PSpice 求節點電壓" source="課本 p.103–104" topic="PSpice 直流節點分析">
+<PracticeCard id="ch3-ex10" type="example" title="Example 3.10：以 PSpice 求節點電壓" source="課本 p.109" topic="PSpice 直流節點分析">
 
 使用 PSpice 求圖 3.31 電路的節點電壓。
 
@@ -581,7 +581,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr10" type="practice" title="Practice Problem 3.10：PSpice 節點電壓" source="課本 p.104" topic="PSpice 直流節點分析">
+<PracticeCard id="ch3-pr10" type="practice" title="Practice Problem 3.10：PSpice 節點電壓" source="課本 p.110" topic="PSpice 直流節點分析">
 
 對圖 3.33 的電路使用 PSpice，求節點電壓 $V_1$、$V_2$ 與 $V_3$。
 
@@ -602,7 +602,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex11" type="example" title="Example 3.11：以 PSpice 求受控源電路電流" source="課本 p.104–105" topic="PSpice 與受控電壓源">
+<PracticeCard id="ch3-ex11" type="example" title="Example 3.11：以 PSpice 求受控源電路電流" source="課本 p.110" topic="PSpice 與受控電壓源">
 
 在圖 3.34 的電路中，求電流 $i_1$、$i_2$ 與 $i_3$。
 
@@ -622,7 +622,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr11" type="practice" title="Practice Problem 3.11：PSpice 支路電流" source="課本 p.105" topic="PSpice 直流支路電流">
+<PracticeCard id="ch3-pr11" type="practice" title="Practice Problem 3.11：PSpice 支路電流" source="課本 p.111" topic="PSpice 直流支路電流">
 
 使用 PSpice，求圖 3.36 電路中的 $i_1$、$i_2$ 與 $i_3$。
 
@@ -639,7 +639,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex12" type="example" title="Example 3.12：BJT 主動模式偏壓" source="課本 p.108" topic="BJT 直流分析">
+<PracticeCard id="ch3-ex12" type="example" title="Example 3.12：BJT 主動模式偏壓" source="課本 p.114" topic="BJT 直流分析">
 
 求圖 3.41 電晶體電路中的 $I_B$、$I_C$ 與 $v_o$。假設電晶體工作於主動模式，且 $\beta=50$。
 
@@ -679,7 +679,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr12" type="practice" title="Practice Problem 3.12：BJT 輸出電壓與 VCE" source="課本 p.108" topic="BJT 直流分析">
+<PracticeCard id="ch3-pr12" type="practice" title="Practice Problem 3.12：BJT 輸出電壓與 VCE" source="課本 p.114" topic="BJT 直流分析">
 
 對圖 3.42 的電晶體電路，令 $\beta=100$、$V_{BE}=0.7\ \mathrm{V}$，求 $v_o$ 與 $V_{CE}$。
 
@@ -697,7 +697,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex13" type="example" title="Example 3.13：以網孔與節點法分析 BJT" source="課本 p.109–110" topic="BJT 網孔分析與節點分析">
+<PracticeCard id="ch3-ex13" type="example" title="Example 3.13：以網孔與節點法分析 BJT" source="課本 p.115" topic="BJT 網孔分析與節點分析">
 
 圖 3.43 的 BJT 電路中，$\beta=150$、$V_{BE}=0.7\ \mathrm{V}$。求輸出電壓 $v_o$。
 
@@ -743,7 +743,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr13" type="practice" title="Practice Problem 3.13：BJT 輸出電壓與電流" source="課本 p.110" topic="BJT 直流分析">
+<PracticeCard id="ch3-pr13" type="practice" title="Practice Problem 3.13：BJT 輸出電壓與電流" source="課本 p.116" topic="BJT 直流分析">
 
 圖 3.45 的電晶體電路具有 $\beta=80$ 與 $V_{BE}=0.7\ \mathrm{V}$。求 $v_o$ 與 $I_o$。
 

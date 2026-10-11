@@ -7,7 +7,7 @@ title: Chapter 1 基本概念：例題與練習題
 本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 1 章之核心 Example 與 Practice Problem。點擊「查看詳解」可展開分步推導與計算結果；完成題目後可勾選標記學習進度。
 
 <PracticeFilter prefix="ch1-" />
-<PracticeProgress :total="19" prefix="ch1-" />
+<PracticeProgress :total="20" prefix="ch1-" />
 
 <PracticeCard id="ch1-ex1" type="example" title="Example 1.1：電子所代表的電荷" source="課本 p.14" topic="電荷">
 
@@ -274,7 +274,7 @@ $$
 
 <PracticeCard id="ch1-pr5" type="practice" title="Practice Problem 1.5：含積分項的瞬時功率" source="課本 p.19" topic="功率">
 
-沿用 Example 1.5 的電流
+給定電流
 
 $$
 i=5\cos(60\pi t)\,\mathrm{A}.
@@ -491,7 +491,7 @@ $$
 
 <PracticeCard id="ch1-pr9" type="practice" title="Practice Problem 1.9：低用電量的平均電價" source="課本 p.25" topic="能量計費">
 
-沿用 Example 1.9 的住宅分級電價。若七月全家外出度假，整月僅用電 $260\ \mathrm{kWh}$，求平均每度電成本。
+住宅電價為基本月費 12.00 元；前 $100\ \mathrm{kWh}$ 為每度 0.16 元；接續 $200\ \mathrm{kWh}$ 為每度 0.10 元；超過 $300\ \mathrm{kWh}$ 的部分為每度 0.06 元。若七月全家外出度假，整月僅用電 $260\ \mathrm{kWh}$，求平均每度電成本。
 
 <template #solution>
 
@@ -546,6 +546,26 @@ i_{8\Omega}=\frac{v_1}{8}=\frac{2}{8}=0.25\ \mathrm{A}.
 $$
 
 驗算 KCL：$(-1.5)+0.25+1.25=0$；依圖示方向，電流向下流過 $8\ \Omega$ 電阻。
+
+</template>
+
+</PracticeCard>
+## 教材直接來源補齊
+
+<PracticeCard id="ch1-pr10" type="practice" title="Practice Problem 1.10：練習問題解決流程" source="課本 p.28" topic="問題解決流程">
+
+請將本章介紹的問題解決流程，套用到本章末較困難的題目。流程包括：
+
+1. 仔細界定問題。
+2. 列出你對問題所知的一切。
+3. 建立一組替代解法，並選擇最有可能成功的方法。
+4. 嘗試解決問題。
+5. 評估解答並檢查其正確性。
+6. 判斷問題是否已獲得滿意解決；若尚未解決，便回到第 3 步繼續進行。
+
+<template #solution>
+
+教材對 `Practice Problem 1.10` 僅提供上述開放式練習指示，沒有指定章末題號，也沒有提供唯一的數值標準答案。因此本題目前無法進行特定電路的代數回代驗算；待指定欲套用的章末題目後，再依該題教材答案核對。
 
 </template>
 
