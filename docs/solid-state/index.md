@@ -1,8 +1,6 @@
 <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 -->
 <!-- Hallmark · genre: editorial · macrostructure: Index-First Modular Curriculum Matrix · design-system: design.md · designed-as-app -->
-
 <div class="subject-hub">
-
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Solid-State Electronics // EE-PHYS-301</span>
@@ -28,7 +26,6 @@
     </div>
   </div>
 </header>
-
 <div class="hub-stats-grid">
   <div class="hub-stat-card">
     <span class="hub-stat-label">課程核心章節</span>
@@ -51,14 +48,12 @@
     <span class="hub-stat-sub">Problems & Self Quiz</span>
   </div>
 </div>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">01 / Curriculum Matrix</span>
     <h2 class="hub-section-title">課程結構與導航</h2>
     <p class="hub-section-desc">依授課單元、理論推導與速查卡分類之完整知識體系。</p>
   </div>
-
   <div class="hub-card-grid">
     <!-- Chapter 1 Card -->
     <div class="hub-card">
@@ -92,7 +87,6 @@
         <a class="hub-btn-link" href="/solid-state/chapter1/0001-miller-indices">進入章節 →</a>
       </div>
     </div>
-
     <!-- Chapter 2 Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -125,7 +119,6 @@
         <a class="hub-btn-link" href="/solid-state/chapter2/">進入章節目錄 →</a>
       </div>
     </div>
-
     <!-- Learning Records Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -158,7 +151,6 @@
         <a class="hub-btn-link" href="/solid-state/learning-records/0001-bandgap-and-valence-electrons">瀏覽觀念筆記 →</a>
       </div>
     </div>
-
     <!-- Cheatsheets Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -193,14 +185,12 @@
     </div>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Practice & Assessment</span>
     <h2 class="hub-section-title">互動式教材題庫</h2>
     <p class="hub-section-desc">全題目自包含與同屏顯式題卡系統，附有逐步推導詳解與自我檢測機制。</p>
   </div>
-
   <div class="hub-card" style="padding: 1.5rem 1.75rem;">
     <div class="hub-card-top">
       <div class="hub-card-badge-row">
@@ -219,14 +209,12 @@
     </div>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">03 / Engineering Highlights</span>
     <h2 class="hub-section-title">特色亮點與工程核心</h2>
     <p class="hub-section-desc">結合 3D 視覺化模擬、嚴謹第一原理數學推導與實務半導體製程工藝。</p>
   </div>
-
   <div class="hub-highlight-grid">
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[01] 互動模擬</span>
@@ -236,10 +224,9 @@
       </p>
       <ul class="hub-highlight-list">
         <li>即時渲染立方晶胞、FCC、鑽石與閃鋅礦 (Zinc Blende) 晶體結構。</li>
-        <li>動態剖切 $(100)$、$(110)$、$(111)$ 高對稱晶面與截面原子二維幾何排列。</li>
+        <li>動態剖切 <InlineMath tex="(100)" />、<InlineMath tex="(110)" />、<InlineMath tex="(111)" /> 高對稱晶面與截面原子二維幾何排列。</li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[02] 理論閉環</span>
       <h3 class="hub-highlight-title">第一原理數學推導 (First-Principles)</h3>
@@ -247,11 +234,10 @@
         所有幾何參數與物理常數皆具備清晰的閉環代數推導與物理依據：
       </p>
       <ul class="hub-highlight-list">
-        <li>原子充填率 (Packing Fraction) 與矽原子體密度 ($5.0 \times 10^{22}\text{ cm}^{-3}$) 精確解析。</li>
-        <li>雜質偏析方程式 $C_s = k_0 C_0 (1-f)^{k_0-1}$ 完整推導與極限行為邊界分析。</li>
+        <li>原子充填率 (Packing Fraction) 與矽原子體密度 (<InlineMath tex="5.0 \times 10^{22}\text{ cm}^{-3}" />) 精確解析。</li>
+        <li>雜質偏析方程式 <InlineMath tex="C_s = k_0 C_0 (1-f)^{k_0-1}" /> 完整推導與極限行為邊界分析。</li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[03] 實務工藝</span>
       <h3 class="hub-highlight-title">半導體材料製程 (Semiconductor Fab)</h3>
@@ -265,5 +251,4 @@
     </div>
   </div>
 </section>
-
 </div>

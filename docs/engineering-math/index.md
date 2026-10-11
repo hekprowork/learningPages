@@ -1,8 +1,6 @@
 <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 -->
 <!-- Hallmark · genre: editorial · macrostructure: Index-First Modular Curriculum Matrix · design-system: design.md · designed-as-app -->
-
 <div class="subject-hub">
-
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Engineering Mathematics // MATH-CORE-201</span>
@@ -28,7 +26,6 @@
     </div>
   </div>
 </header>
-
 <div class="hub-stats-grid">
   <div class="hub-stat-card">
     <span class="hub-stat-label">課程核心章節</span>
@@ -51,14 +48,12 @@
     <span class="hub-stat-sub">教材例題與精選題庫</span>
   </div>
 </div>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">01 / Curriculum Matrix</span>
     <h2 class="hub-section-title">課程結構與導航</h2>
     <p class="hub-section-desc">常微分方程式解析體系，由一階基礎建模延伸至高階線性算子法。</p>
   </div>
-
   <div class="hub-card-grid">
     <!-- Chapter 1 Card -->
     <div class="hub-card">
@@ -92,7 +87,6 @@
         <a class="hub-btn-link" href="/engineering-math/chapter1/0001-ode-fundamentals">進入 Chapter 1 講義 →</a>
       </div>
     </div>
-
     <!-- Chapter 2 Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -125,7 +119,6 @@
         <a class="hub-btn-link" href="/engineering-math/second-order/0001-second-order-ode-concepts">進入 Chapter 2 講義 →</a>
       </div>
     </div>
-
     <!-- Learning Records Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -150,7 +143,6 @@
         <a class="hub-btn-link" href="/engineering-math/chapter2/0001-integrating-factors">閱讀推導筆記 →</a>
       </div>
     </div>
-
     <!-- Cheatsheet Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -177,14 +169,12 @@
     </div>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
     <h2 class="hub-section-title">互動式題庫練習系統 (106 題)</h2>
     <p class="hub-section-desc">全題目自包含題卡與 KaTeX 嚴謹推導詳解，覆蓋課本例題、課堂練習與精選範例。</p>
   </div>
-
   <div class="hub-practice-table-wrap">
     <table class="hub-table">
       <thead>
@@ -218,14 +208,12 @@
     </table>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">03 / Engineering Highlights</span>
     <h2 class="hub-section-title">特色亮點與解題架構</h2>
     <p class="hub-section-desc">結合第一原理推導與工程快速解題技巧，提升解析熟練度。</p>
   </div>
-
   <div class="hub-highlight-grid">
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[01] 第一原理推導</span>
@@ -234,11 +222,10 @@
         嚴謹推導全微分正合條件與單變數積分因子判別式：
       </p>
       <ul class="hub-highlight-list">
-        <li>Euler 正合性檢驗 $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$ 與勢函數 $\phi(x,y)=C$ 的構造原理。</li>
-        <li>單變數積分因子判別式 $\mu(x) = \exp\left(\int \frac{M_y - N_x}{N}\,dx\right)$ 的生成推導。</li>
+        <li>Euler 正合性檢驗 <InlineMath tex="\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}" /> 與勢函數 <InlineMath tex="\phi(x,y)=C" /> 的構造原理。</li>
+        <li>單變數積分因子判別式 <InlineMath tex="\mu(x) = \exp\left(\int \frac{M_y - N_x}{N}\,dx\right)" /> 的生成推導。</li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[02] 湊微分口訣</span>
       <h3 class="hub-highlight-title">常用分組湊微分原形 (30 秒速解)</h3>
@@ -246,24 +233,22 @@
         熟練常見全微分原形，破局無須冗長繁複代換：
       </p>
       <ul class="hub-highlight-list">
-        <li>$x\,dy + y\,dx = d(xy)$</li>
-        <li>$\frac{x\,dy - y\,dx}{x^2} = d\left(\frac{y}{x}\right)$，$\frac{y\,dx - x\,dy}{y^2} = d\left(\frac{x}{y}\right)$</li>
-        <li>$\frac{x\,dy - y\,dx}{x^2 + y^2} = d\left(\arctan\frac{y}{x}\right)$</li>
+        <li><InlineMath tex="x\,dy + y\,dx = d(xy)" /></li>
+        <li><InlineMath tex="\frac{x\,dy - y\,dx}{x^2} = d\left(\frac{y}{x}\right)" />，<InlineMath tex="\frac{y\,dx - x\,dy}{y^2} = d\left(\frac{x}{y}\right)" /></li>
+        <li><InlineMath tex="\frac{x\,dy - y\,dx}{x^2 + y^2} = d\left(\arctan\frac{y}{x}\right)" /></li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[03] 逆運算子法</span>
       <h3 class="hub-highlight-title">微分算子法與共振特解</h3>
       <p class="hub-highlight-body">
-        利用多項式算子 $D = \frac{d}{dx}$ 與逆算子 $\frac{1}{P(D)}$ 快速求解特定非齊次項：
+        利用多項式算子 <InlineMath tex="D = \frac{d}{dx}" /> 與逆算子 <InlineMath tex="\frac{1}{P(D)}" /> 快速求解特定非齊次項：
       </p>
       <ul class="hub-highlight-list">
-        <li>指數位移定理：$\frac{1}{P(D)} [e^{ax} V(x)] = e^{ax} \frac{1}{P(D+a)} V(x)$</li>
+        <li>指數位移定理：<InlineMath tex="\frac{1}{P(D)} [e^{ax} V(x)] = e^{ax} \frac{1}{P(D+a)} V(x)" /></li>
         <li>共振項分母為零時，自動套用微分階數修正規則。</li>
       </ul>
     </div>
   </div>
 </section>
-
 </div>

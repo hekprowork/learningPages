@@ -1,8 +1,6 @@
 <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 -->
 <!-- Hallmark · genre: editorial · macrostructure: Index-First Modular Curriculum Matrix · design-system: design.md · designed-as-app -->
-
 <div class="subject-hub">
-
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Electric Circuit Theory // EE-CORE-102</span>
@@ -28,7 +26,6 @@
     </div>
   </div>
 </header>
-
 <div class="hub-stats-grid">
   <div class="hub-stat-card">
     <span class="hub-stat-label">課程核心章節</span>
@@ -51,14 +48,12 @@
     <span class="hub-stat-sub">全自包含圖表題卡系統</span>
   </div>
 </div>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">01 / Curriculum Matrix</span>
     <h2 class="hub-section-title">課程結構與導航</h2>
     <p class="hub-section-desc">涵蓋基礎電路定律、拓撲分析演算法、觀念推導筆記與速查卡。</p>
   </div>
-
   <div class="hub-card-grid">
     <!-- Chapter 2 Card -->
     <div class="hub-card">
@@ -84,7 +79,6 @@
         <a class="hub-btn-link" href="/circuits/chapter2/0001-wye-delta-transformation">進入 Chapter 2 講義 →</a>
       </div>
     </div>
-
     <!-- Chapter 3 Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -117,7 +111,6 @@
         <a class="hub-btn-link" href="/circuits/chapter3/0001-supernode-analysis">進入 Chapter 3 講義 →</a>
       </div>
     </div>
-
     <!-- Learning Records Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -154,7 +147,6 @@
         <a class="hub-btn-link" href="/circuits/learning-records/0001-wye-delta-transformation-principle">查閱觀念推導 →</a>
       </div>
     </div>
-
     <!-- Cheatsheets Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -193,14 +185,12 @@
     </div>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
     <h2 class="hub-section-title">互動式題庫練習系統 (142+ 題)</h2>
     <p class="hub-section-desc">搭載 Hallmark 狀態驅動題卡、KaTeX 數學公式與同屏顯式電路圖解之各章題庫與範例練習。</p>
   </div>
-
   <div class="hub-practice-table-wrap">
     <table class="hub-table">
       <thead>
@@ -252,14 +242,12 @@
     </table>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">03 / Engineering Highlights</span>
     <h2 class="hub-section-title">特色亮點與工程核心</h2>
     <p class="hub-section-desc">從第一原理掌握電路網絡的拓撲規律與矩陣分析。</p>
   </div>
-
   <div class="hub-highlight-grid">
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[01] 外端等效</span>
@@ -268,36 +256,33 @@
         從端點開路等效阻抗聯立消去推導出互換公式，徹底告別死記硬背：
       </p>
       <ul class="hub-highlight-list">
-        <li>$R_1 = \frac{R_b R_c}{\Sigma R_\Delta}$ 與 $R_a = \frac{\Sigma R_i R_j}{R_1}$</li>
-        <li>對稱三相網路 $R_\Delta = 3 R_\text{Y}$ 之物理成因剖析。</li>
+        <li><InlineMath tex="R_1 = \frac{R_b R_c}{\Sigma R_\Delta}" /> 與 <InlineMath tex="R_a = \frac{\Sigma R_i R_j}{R_1}" /></li>
+        <li>對稱三相網路 <InlineMath tex="R_\Delta = 3 R_\text{Y}" /> 之物理成因剖析。</li>
         <li>電導觀點下 Y-Δ 與阻抗觀點 Δ-Y 之完全對稱對偶形式。</li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[02] 包絡守恆</span>
       <h3 class="hub-highlight-title">超節點高斯包絡與拘束式 (Supernode)</h3>
       <p class="hub-highlight-body">
-        封閉面邊界電荷守恆避開電壓源未知電流 $i_v$：
+        封閉面邊界電荷守恆避開電壓源未知電流 <InlineMath tex="i_v" />：
       </p>
       <ul class="hub-highlight-list">
-        <li>搭配電壓拘束式 $v_{\text{pos}} - v_{\text{neg}} = V_s$ 構建封閉方程組。</li>
+        <li>搭配電壓拘束式 <InlineMath tex="v_{\text{pos}} - v_{\text{neg}} = V_s" /> 構建封閉方程組。</li>
         <li>方程式維度不變性保證，從根本避免奇異矩陣與欠定解。</li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[03] 圖論拓撲</span>
       <h3 class="hub-highlight-title">超網孔大迴路與歐拉拓撲 (Graph Topology)</h3>
       <p class="hub-highlight-body">
-        結合平面圖論歐拉公式 $M = B - N + 1$ 嚴格證明基本網孔獨立性：
+        結合平面圖論歐拉公式 <InlineMath tex="M = B - N + 1" /> 嚴格證明基本網孔獨立性：
       </p>
       <ul class="hub-highlight-list">
         <li>繞過共用電流源之大迴路 KVL 結合電流源拘束式，完美消去未知端電壓。</li>
-        <li>觀察法對稱導納矩陣 $[G] \mathbf{v} = \mathbf{i}$ 直接構建演算法。</li>
+        <li>觀察法對稱導納矩陣 <InlineMath tex="[G] \mathbf{v} = \mathbf{i}" /> 直接構建演算法。</li>
       </ul>
     </div>
   </div>
 </section>
-
 </div>

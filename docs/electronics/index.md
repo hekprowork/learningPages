@@ -1,8 +1,6 @@
 <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 -->
 <!-- Hallmark · genre: editorial · macrostructure: Index-First Modular Curriculum Matrix · design-system: design.md · designed-as-app -->
-
 <div class="subject-hub">
-
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Microelectronic Circuits // EE-CORE-201</span>
@@ -28,7 +26,6 @@
     </div>
   </div>
 </header>
-
 <div class="hub-stats-grid">
   <div class="hub-stat-card">
     <span class="hub-stat-label">課程核心章節</span>
@@ -51,14 +48,12 @@
     <span class="hub-stat-sub">Examples, Exercises, Problems</span>
   </div>
 </div>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">01 / Curriculum Matrix</span>
     <h2 class="hub-section-title">課程結構與導航</h2>
     <p class="hub-section-desc">涵蓋基礎理論、受控源二埠等效模型與核心公式速查手冊。</p>
   </div>
-
   <div class="hub-card-grid">
     <!-- Chapter 1 Card -->
     <div class="hub-card">
@@ -92,7 +87,6 @@
         <a class="hub-btn-link" href="/electronics/chapter1/0001-signals-and-amplifiers">進入 Chapter 1 講義 →</a>
       </div>
     </div>
-
     <!-- Learning Records Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -117,7 +111,6 @@
         <a class="hub-btn-link" href="/electronics/learning-records/0001-signals-and-amplifiers-foundations">閱讀理論推導 →</a>
       </div>
     </div>
-
     <!-- Cheatsheet Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -144,14 +137,12 @@
     </div>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
     <h2 class="hub-section-title">互動式題庫練習系統 (274 題)</h2>
     <p class="hub-section-desc">搭載 Hallmark 狀態驅動題卡、KaTeX 數學公式與同屏顯式電路圖解之各章題庫與範例練習。</p>
   </div>
-
   <div class="hub-practice-table-wrap">
     <table class="hub-table">
       <thead>
@@ -257,14 +248,12 @@
     </table>
   </div>
 </section>
-
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">03 / Engineering Highlights</span>
     <h2 class="hub-section-title">特色亮點與工程核心</h2>
     <p class="hub-section-desc">掌握微電子電路設計與解析的核心思維架構。</p>
   </div>
-
   <div class="hub-highlight-grid">
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[01] 二埠模型</span>
@@ -273,13 +262,12 @@
         釐清四類受控源之極限輸入/輸出阻抗條件與轉換關係：
       </p>
       <ul class="hub-highlight-list">
-        <li>電壓放大器 ($A_{vo}$): $R_i = \infty$, $R_o = 0$</li>
-        <li>電流放大器 ($A_{is}$): $R_i = 0$, $R_o = \infty$</li>
-        <li>轉導放大器 ($G_m$): $R_i = \infty$, $R_o = \infty$</li>
-        <li>轉阻放大器 ($R_m$): $R_i = 0$, $R_o = 0$</li>
+        <li>電壓放大器 (<InlineMath tex="A_{vo}" />): <InlineMath tex="R_i = \infty" />, <InlineMath tex="R_o = 0" /></li>
+        <li>電流放大器 (<InlineMath tex="A_{is}" />): <InlineMath tex="R_i = 0" />, <InlineMath tex="R_o = \infty" /></li>
+        <li>轉導放大器 (<InlineMath tex="G_m" />): <InlineMath tex="R_i = \infty" />, <InlineMath tex="R_o = \infty" /></li>
+        <li>轉阻放大器 (<InlineMath tex="R_m" />): <InlineMath tex="R_i = 0" />, <InlineMath tex="R_o = 0" /></li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[02] 級聯演算法</span>
       <h3 class="hub-highlight-title">多級級聯負載效應 (Loading Effects)</h3>
@@ -288,22 +276,20 @@
       </p>
       <ul class="hub-highlight-list">
         <li>建立「由後往前求負載阻抗、由前往後求節點增益」的標準解題 SOP。</li>
-        <li>精確解析整體電壓增益 $A_v = v_L / v_I$ 與訊號源增益 $A_{vs} = v_L / v_{sig}$ 之本質區別。</li>
+        <li>精確解析整體電壓增益 <InlineMath tex="A_v = v_L / v_I" /> 與訊號源增益 <InlineMath tex="A_{vs} = v_L / v_{sig}" /> 之本質區別。</li>
       </ul>
     </div>
-
     <div class="hub-highlight-card">
       <span class="hub-highlight-num">[03] 頻響分析</span>
       <h3 class="hub-highlight-title">STC 頻率響應與波德圖 (Bode Plot)</h3>
       <p class="hub-highlight-body">
-        低通與高通單時間常數網路之轉移函數 $T(s)$ 解析：
+        低通與高通單時間常數網路之轉移函數 <InlineMath tex="T(s)" /> 解析：
       </p>
       <ul class="hub-highlight-list">
-        <li>3-dB 截止頻率 $\omega_0 = 1/RC$、高低頻漸近線斜率（$-20\text{ dB/decade}$）。</li>
-        <li>轉折頻率處相位變化（$\pm 45^\circ$）與多極點級聯頻寬收縮效應。</li>
+        <li>3-dB 截止頻率 <InlineMath tex="\omega_0 = 1/RC" />、高低頻漸近線斜率（<InlineMath tex="-20\text{ dB/decade}" />）。</li>
+        <li>轉折頻率處相位變化（<InlineMath tex="\pm 45^\circ" />）與多極點級聯頻寬收縮效應。</li>
       </ul>
     </div>
   </div>
 </section>
-
 </div>
