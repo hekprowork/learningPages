@@ -14,11 +14,12 @@ description: 工程數學第一章 一階常微分方程式 (First-Order ODEs) �
 - **積分因子法 (Integrating Factors)**：若非正合且 $\frac{M_y - N_x}{N} = f(x)$，則 $\mu(x) = e^{\int f(x)\,dx}$；若 $\frac{N_x - M_y}{M} = g(y)$，則 $\mu(y) = e^{\int g(y)\,dy}$。
 :::
 
+<PracticeFilter prefix="math-ch1-" />
 <PracticeProgress :total="56" prefix="math-ch1-" />
 
 ## 1.1 基本觀念與初值問題 (Basic Concepts & IVP)
 
-<PracticeCard id="math-ch1-prob-1" title="1.1 範例 1 (初值問題 (IVP))" source="1.1 · 1.1 範例 1" topic="初值問題 (IVP)">
+<PracticeCard id="math-ch1-prob-1" type="example" title="1.1 範例 1 (初值問題 (IVP))" source="1.1 · 1.1 範例 1" topic="初值問題 (IVP)">
 
 **題目**：
 
@@ -41,7 +42,7 @@ description: 工程數學第一章 一階常微分方程式 (First-Order ODEs) �
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-2" title="1.1 範例 2 (初值問題 (IVP))" source="1.1 · 1.1 範例 2" topic="初值問題 (IVP)">
+<PracticeCard id="math-ch1-prob-2" type="example" title="1.1 範例 2 (初值問題 (IVP))" source="1.1 · 1.1 範例 2" topic="初值問題 (IVP)">
 
 **題目**：
 
@@ -66,7 +67,7 @@ $$y(x) = -7e^{-2x}$$
 
 ## 1.2 可分離變數微分方程式 (Separable Equations)
 
-<PracticeCard id="math-ch1-prob-3" title="1.2 題 1 (Separable)" source="1.2 · 1.2 題 1" topic="Separable">
+<PracticeCard id="math-ch1-prob-3" type="practice" title="1.2 題 1 (Separable)" source="1.2 · 1.2 題 1" topic="Separable">
 
 **題目**：
 
@@ -87,7 +88,7 @@ $$y^3 = 2x^2 + k$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-4" title="1.2 題 2 (Separable)" source="1.2 · 1.2 題 2" topic="Separable">
+<PracticeCard id="math-ch1-prob-4" type="practice" title="1.2 題 2 (Separable)" source="1.2 · 1.2 題 2" topic="Separable">
 
 **題目**：
 
@@ -108,7 +109,7 @@ $$xy = k$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-5" title="1.2 題 3 (Separable)" source="1.2 · 1.2 題 3" topic="Separable">
+<PracticeCard id="math-ch1-prob-5" type="practice" title="1.2 題 3 (Separable)" source="1.2 · 1.2 題 3" topic="Separable">
 
 **題目**：
 
@@ -129,7 +130,7 @@ $$e^y = -3e^{-x}(x+1) + C$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-6" title="1.2 題 4 (Separable)" source="1.2 · 1.2 題 4" topic="Separable">
+<PracticeCard id="math-ch1-prob-6" type="practice" title="1.2 題 4 (Separable)" source="1.2 · 1.2 題 4" topic="Separable">
 
 **題目**：
 
@@ -150,7 +151,7 @@ $$y = \frac{1}{1 - Ax} \quad (\text{含奇異解 } y=0)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-7" title="1.2 題 5 (Separable 判別)" source="1.2 · 1.2 題 5" topic="Separable 判別">
+<PracticeCard id="math-ch1-prob-7" type="practice" title="1.2 題 5 (Separable 判別)" source="1.2 · 1.2 題 5" topic="Separable 判別">
 
 **題目**：
 
@@ -171,7 +172,7 @@ $$y' = \frac{(x+1)^2 - 2y}{2y}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-8" title="1.2 題 6 (Separable)" source="1.2 · 1.2 題 6" topic="Separable">
+<PracticeCard id="math-ch1-prob-8" type="practice" title="1.2 題 6 (Separable)" source="1.2 · 1.2 題 6" topic="Separable">
 
 **題目**：
 
@@ -192,7 +193,7 @@ $$\sec(y) = Ax$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-9" title="1.2 題 7 (Separable)" source="1.2 · 1.2 題 7" topic="Separable">
+<PracticeCard id="math-ch1-prob-9" type="practice" title="1.2 題 7 (Separable)" source="1.2 · 1.2 題 7" topic="Separable">
 
 **題目**：
 
@@ -213,7 +214,7 @@ $$\frac{y^2}{y^2+1} = A\left(\frac{x}{x+1}\right)^2$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-10" title="1.2 題 8 (Separable 判別)" source="1.2 · 1.2 題 8" topic="Separable 判別">
+<PracticeCard id="math-ch1-prob-10" type="practice" title="1.2 題 8 (Separable 判別)" source="1.2 · 1.2 題 8" topic="Separable 判別">
 
 **題目**：
 
@@ -234,7 +235,7 @@ $y' = e^x - y - \sin(y)$，存在 $x$ 與 $y$ 之相加混合項，無法分離�
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-11" title="1.2 題 9 (Separable / 三角和差)" source="1.2 · 1.2 題 9" topic="Separable / 三角和差">
+<PracticeCard id="math-ch1-prob-11" type="practice" title="1.2 題 9 (Separable / 三角和差)" source="1.2 · 1.2 題 9" topic="Separable / 三角和差">
 
 **題目**：
 
@@ -255,7 +256,7 @@ $$\cos(y) + \sin(y) = \cos(x) + \sin(x) + C$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-12" title="1.2 題 10 (Separable + IVP)" source="1.2 · 1.2 題 10" topic="Separable + IVP">
+<PracticeCard id="math-ch1-prob-12" type="practice" title="1.2 題 10 (Separable + IVP)" source="1.2 · 1.2 題 10" topic="Separable + IVP">
 
 **題目**：
 
@@ -276,7 +277,7 @@ $$\frac{y^2}{2} - y + \ln(y+1) = \ln(x) - 2$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-13" title="1.2 題 11 (Separable + IVP)" source="1.2 · 1.2 題 11" topic="Separable + IVP">
+<PracticeCard id="math-ch1-prob-13" type="practice" title="1.2 題 11 (Separable + IVP)" source="1.2 · 1.2 題 11" topic="Separable + IVP">
 
 **題目**：
 
@@ -297,7 +298,7 @@ $$\ln(y) = x^3 - 8 \implies y(x) = e^{x^3 - 8}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-14" title="1.2 題 12 (Separable + IVP)" source="1.2 · 1.2 題 12" topic="Separable + IVP">
+<PracticeCard id="math-ch1-prob-14" type="practice" title="1.2 題 12 (Separable + IVP)" source="1.2 · 1.2 題 12" topic="Separable + IVP">
 
 **題目**：
 
@@ -318,7 +319,7 @@ $$(\ln y)^2 = 3x^2 - 3$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-15" title="1.2 題 13 (Separable + IVP)" source="1.2 · 1.2 題 13" topic="Separable + IVP">
+<PracticeCard id="math-ch1-prob-15" type="practice" title="1.2 題 13 (Separable + IVP)" source="1.2 · 1.2 題 13" topic="Separable + IVP">
 
 **題目**：
 
@@ -339,7 +340,7 @@ $$e^{y^2} = e^x \implies y(x) = -\sqrt{x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-16" title="1.2 題 14 (Separable + IVP)" source="1.2 · 1.2 題 14" topic="Separable + IVP">
+<PracticeCard id="math-ch1-prob-16" type="practice" title="1.2 題 14 (Separable + IVP)" source="1.2 · 1.2 題 14" topic="Separable + IVP">
 
 **題目**：
 
@@ -362,7 +363,7 @@ $$3y\sin(3y) + \cos(3y) = 9x^2 - 5$$
 
 ## 1.3 一階線性微分方程式 (First-Order Linear ODEs)
 
-<PracticeCard id="math-ch1-prob-17" title="1.3 題 1 (Linear ODE)" source="1.3 · 1.3 題 1" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-17" type="practice" title="1.3 題 1 (Linear ODE)" source="1.3 · 1.3 題 1" topic="Linear ODE">
 
 **題目**：
 
@@ -383,7 +384,7 @@ $$y = cx^3 + 2x^3\ln(x)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-18" title="1.3 題 2 (Linear ODE)" source="1.3 · 1.3 題 2" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-18" type="practice" title="1.3 題 2 (Linear ODE)" source="1.3 · 1.3 題 2" topic="Linear ODE">
 
 **題目**：
 
@@ -404,7 +405,7 @@ $$y = ce^x + \frac{1}{4}e^{-x} + \frac{1}{2}xe^x$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-19" title="1.3 題 3 (Linear ODE)" source="1.3 · 1.3 題 3" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-19" type="practice" title="1.3 題 3 (Linear ODE)" source="1.3 · 1.3 題 3" topic="Linear ODE">
 
 **題目**：
 
@@ -425,7 +426,7 @@ $$y = ce^{-2x} + \frac{1}{2}x - \frac{1}{4}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-20" title="1.3 題 4 (Linear ODE)" source="1.3 · 1.3 題 4" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-20" type="practice" title="1.3 題 4 (Linear ODE)" source="1.3 · 1.3 題 4" topic="Linear ODE">
 
 **題目**：
 
@@ -446,7 +447,7 @@ $$y = \sin(x) + C\cos(x)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-21" title="1.3 題 5 (Linear ODE)" source="1.3 · 1.3 題 5" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-21" type="practice" title="1.3 題 5 (Linear ODE)" source="1.3 · 1.3 題 5" topic="Linear ODE">
 
 **題目**：
 
@@ -467,7 +468,7 @@ $$y = 4x^2 + 4x + 2 + ce^{2x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-22" title="1.3 題 6 (Linear ODE)" source="1.3 · 1.3 題 6" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-22" type="practice" title="1.3 題 6 (Linear ODE)" source="1.3 · 1.3 題 6" topic="Linear ODE">
 
 **題目**：
 
@@ -488,7 +489,7 @@ $$y = \frac{(x-2)^2}{4(x-1)} + \frac{c}{(x+1)(x-2)^4}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-23" title="1.3 題 7 (Linear ODE)" source="1.3 · 1.3 題 7" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-23" type="practice" title="1.3 題 7 (Linear ODE)" source="1.3 · 1.3 題 7" topic="Linear ODE">
 
 **題目**：
 
@@ -509,7 +510,7 @@ $$y = e^{-x}\int \left(\frac{x-1}{x^2}\right)e^x dx + ce^{-x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-24" title="1.3 題 8 (Linear ODE)" source="1.3 · 1.3 題 8" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-24" type="practice" title="1.3 題 8 (Linear ODE)" source="1.3 · 1.3 題 8" topic="Linear ODE">
 
 **題目**：
 
@@ -530,7 +531,7 @@ $$y = \frac{x\cos(x) - \cos^2(x)}{1 + \sin(x)} + \frac{c\cos(x)}{1 + \sin(x)}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-25" title="1.3 題 9 (Linear ODE)" source="1.3 · 1.3 題 9" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-25" type="practice" title="1.3 題 9 (Linear ODE)" source="1.3 · 1.3 題 9" topic="Linear ODE">
 
 **題目**：
 
@@ -551,7 +552,7 @@ $$y = \frac{1}{4}x^3 + x + \frac{c}{x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-26" title="1.3 題 10 (Linear ODE)" source="1.3 · 1.3 題 10" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-26" type="practice" title="1.3 題 10 (Linear ODE)" source="1.3 · 1.3 題 10" topic="Linear ODE">
 
 **題目**：
 
@@ -572,7 +573,7 @@ $$y = \frac{1}{7}e^{2x} + ce^{-3x/2}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-27" title="1.3 題 11 (Linear ODE)" source="1.3 · 1.3 題 11" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-27" type="practice" title="1.3 題 11 (Linear ODE)" source="1.3 · 1.3 題 11" topic="Linear ODE">
 
 **題目**：
 
@@ -593,7 +594,7 @@ $$y = -\frac{3}{2x}e^{-x^2} + \frac{c}{x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-28" title="1.3 題 12 (Linear ODE)" source="1.3 · 1.3 題 12" topic="Linear ODE">
+<PracticeCard id="math-ch1-prob-28" type="practice" title="1.3 題 12 (Linear ODE)" source="1.3 · 1.3 題 12" topic="Linear ODE">
 
 **題目**：
 
@@ -614,7 +615,7 @@ $$y = \frac{4}{3}x + cx^{-2}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-29" title="1.3 題 13 (Linear + IVP)" source="1.3 · 1.3 題 13" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-29" type="practice" title="1.3 題 13 (Linear + IVP)" source="1.3 · 1.3 題 13" topic="Linear + IVP">
 
 **題目**：
 
@@ -635,7 +636,7 @@ $$y = x^2 - x - 2$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-30" title="1.3 題 14 (Linear + IVP)" source="1.3 · 1.3 題 14" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-30" type="practice" title="1.3 題 14 (Linear + IVP)" source="1.3 · 1.3 題 14" topic="Linear + IVP">
 
 **題目**：
 
@@ -656,7 +657,7 @@ $$y = e^{2x} - 2 + 3e^{-3x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-31" title="1.3 題 15 (Linear + IVP)" source="1.3 · 1.3 題 15" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-31" type="practice" title="1.3 題 15 (Linear + IVP)" source="1.3 · 1.3 題 15" topic="Linear + IVP">
 
 **題目**：
 
@@ -677,7 +678,7 @@ $$y = x + 1 + \frac{4}{(x+1)^2}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-32" title="1.3 題 16 (Linear + IVP)" source="1.3 · 1.3 題 16" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-32" type="practice" title="1.3 題 16 (Linear + IVP)" source="1.3 · 1.3 題 16" topic="Linear + IVP">
 
 **題目**：
 
@@ -698,7 +699,7 @@ $$y = x^2(x-2)\ln(x-2)e^{-x} + 2x^2\ln(x-2)e^{-x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-33" title="1.3 題 17 (Linear + IVP)" source="1.3 · 1.3 題 17" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-33" type="practice" title="1.3 題 17 (Linear + IVP)" source="1.3 · 1.3 題 17" topic="Linear + IVP">
 
 **題目**：
 
@@ -719,7 +720,7 @@ $$y = \frac{2}{3}e^{4x} - \frac{11}{3}e^x$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-34" title="1.3 題 18 (Linear + IVP)" source="1.3 · 1.3 題 18" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-34" type="practice" title="1.3 題 18 (Linear + IVP)" source="1.3 · 1.3 題 18" topic="Linear + IVP">
 
 **題目**：
 
@@ -740,7 +741,7 @@ $$y = \frac{27}{41}x^4 + \frac{9}{23}x^2 - \frac{2782}{943}x^{-5/9}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-35" title="1.3 題 19 (Linear + IVP)" source="1.3 · 1.3 題 19" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-35" type="practice" title="1.3 題 19 (Linear + IVP)" source="1.3 · 1.3 題 19" topic="Linear + IVP">
 
 **題目**：
 
@@ -761,7 +762,7 @@ $$y = \frac{2}{5}x - \frac{22}{5}x^{-4}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-36" title="1.3 題 20 (Linear + IVP)" source="1.3 · 1.3 題 20" topic="Linear + IVP">
+<PracticeCard id="math-ch1-prob-36" type="practice" title="1.3 題 20 (Linear + IVP)" source="1.3 · 1.3 題 20" topic="Linear + IVP">
 
 **題目**：
 
@@ -784,7 +785,7 @@ $$y = -\frac{1}{4}x - \frac{1}{16} - \frac{4}{17}\sin x - \frac{1}{17}\cos x + \
 
 ## 1.4 正合微分方程式 (Exact Differential Equations)
 
-<PracticeCard id="math-ch1-prob-37" title="1.4 題 1 (Exact ODE)" source="1.4 · 1.4 題 1" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-37" type="practice" title="1.4 題 1 (Exact ODE)" source="1.4 · 1.4 題 1" topic="Exact ODE">
 
 **題目**：
 
@@ -805,7 +806,7 @@ $$2xy^2 + e^{xy} + y^2 = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-38" title="1.4 題 2 (Exact ODE)" source="1.4 · 1.4 題 2" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-38" type="practice" title="1.4 題 2 (Exact ODE)" source="1.4 · 1.4 題 2" topic="Exact ODE">
 
 **題目**：
 
@@ -826,7 +827,7 @@ $$2x^2 y + x^2 + y^3 = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-39" title="1.4 題 3 (正合檢驗)" source="1.4 · 1.4 題 3" topic="正合檢驗">
+<PracticeCard id="math-ch1-prob-39" type="practice" title="1.4 題 3 (正合檢驗)" source="1.4 · 1.4 題 3" topic="正合檢驗">
 
 **題目**：
 
@@ -847,7 +848,7 @@ $M_y = 4x + 2x^2 \neq N_x = 4x$。
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-40" title="1.4 題 4 (Exact ODE)" source="1.4 · 1.4 題 4" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-40" type="practice" title="1.4 題 4 (Exact ODE)" source="1.4 · 1.4 題 4" topic="Exact ODE">
 
 **題目**：
 
@@ -868,7 +869,7 @@ $$2x\cos(x+y) = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-41" title="1.4 題 5 (Exact ODE)" source="1.4 · 1.4 題 5" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-41" type="practice" title="1.4 題 5 (Exact ODE)" source="1.4 · 1.4 題 5" topic="Exact ODE">
 
 **題目**：
 
@@ -889,7 +890,7 @@ $$\ln|x| + xy + y^3 = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-42" title="1.4 題 6 (正合檢驗)" source="1.4 · 1.4 題 6" topic="正合檢驗">
+<PracticeCard id="math-ch1-prob-42" type="practice" title="1.4 題 6 (正合檢驗)" source="1.4 · 1.4 題 6" topic="正合檢驗">
 
 **題目**：
 
@@ -910,7 +911,7 @@ $M_y = 2ye^x\cos(y^2)(1+x) \neq N_x = 2ye^x\sin(y^2)(1+x)$。
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-43" title="1.4 題 7 (Exact ODE)" source="1.4 · 1.4 題 7" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-43" type="practice" title="1.4 題 7 (Exact ODE)" source="1.4 · 1.4 題 7" topic="Exact ODE">
 
 **題目**：
 
@@ -931,7 +932,7 @@ $$\cosh(x)\sinh(y) = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-44" title="1.4 題 8 (Exact ODE)" source="1.4 · 1.4 題 8" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-44" type="practice" title="1.4 題 8 (Exact ODE)" source="1.4 · 1.4 題 8" topic="Exact ODE">
 
 **題目**：
 
@@ -952,7 +953,7 @@ $$4xy^4 + 3\sin(x) - 3\sin(y) = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-45" title="1.4 題 9 (Exact ODE)" source="1.4 · 1.4 題 9" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-45" type="practice" title="1.4 題 9 (Exact ODE)" source="1.4 · 1.4 題 9" topic="Exact ODE">
 
 **題目**：
 
@@ -973,7 +974,7 @@ $$x^y = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-46" title="1.4 題 10 (Exact ODE)" source="1.4 · 1.4 題 10" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-46" type="practice" title="1.4 題 10 (Exact ODE)" source="1.4 · 1.4 題 10" topic="Exact ODE">
 
 **題目**：
 
@@ -994,7 +995,7 @@ $$x^2 + \arctan\left(\frac{x}{y}\right) = c \quad \left(\text{或 } x^2 - \arcta
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-47" title="1.4 題 11 (Exact ODE)" source="1.4 · 1.4 題 11" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-47" type="practice" title="1.4 題 11 (Exact ODE)" source="1.4 · 1.4 題 11" topic="Exact ODE">
 
 **題目**：
 
@@ -1015,7 +1016,7 @@ $$xy + e^x = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-48" title="1.4 題 12 (Exact ODE)" source="1.4 · 1.4 題 12" topic="Exact ODE">
+<PracticeCard id="math-ch1-prob-48" type="practice" title="1.4 題 12 (Exact ODE)" source="1.4 · 1.4 題 12" topic="Exact ODE">
 
 **題目**：
 
@@ -1038,7 +1039,7 @@ $$3x^2 - e^{xy} + e^y = c$$
 
 ## 歷屆期中考古精選 (Past Exams 95 & 96)
 
-<PracticeCard id="math-ch1-prob-49" title="95 考題 1 (積分因子法)" source="歷屆期中考古精選 · 95 考題 1" topic="積分因子法">
+<PracticeCard id="math-ch1-prob-49" type="exam" title="95 考題 1 (積分因子法)" source="歷屆期中考古精選 · 95 考題 1" topic="積分因子法">
 
 **題目**：
 
@@ -1059,7 +1060,7 @@ $$x^4 y^2 + 2x^3 y^3 = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-50" title="95 考題 2 (一階線性 IVP)" source="歷屆期中考古精選 · 95 考題 2" topic="一階線性 IVP">
+<PracticeCard id="math-ch1-prob-50" type="exam" title="95 考題 2 (一階線性 IVP)" source="歷屆期中考古精選 · 95 考題 2" topic="一階線性 IVP">
 
 **題目**：
 
@@ -1080,7 +1081,7 @@ $$y = \frac{2}{5}x - \frac{22}{5}x^{-4}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-51" title="95 考題 3 (可分離變數)" source="歷屆期中考古精選 · 95 考題 3" topic="可分離變數">
+<PracticeCard id="math-ch1-prob-51" type="exam" title="95 考題 3 (可分離變數)" source="歷屆期中考古精選 · 95 考題 3" topic="可分離變數">
 
 **題目**：
 
@@ -1101,7 +1102,7 @@ $$\sec(y) = Ax$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-52" title="96 考題 1 (可分離變數 IVP)" source="歷屆期中考古精選 · 96 考題 1" topic="可分離變數 IVP">
+<PracticeCard id="math-ch1-prob-52" type="exam" title="96 考題 1 (可分離變數 IVP)" source="歷屆期中考古精選 · 96 考題 1" topic="可分離變數 IVP">
 
 **題目**：
 
@@ -1122,7 +1123,7 @@ $$y(x) = \frac{1}{\frac{1}{5} - e^{-2} + e^{-x}}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-53" title="96 考題 2 (一階線性)" source="歷屆期中考古精選 · 96 考題 2" topic="一階線性">
+<PracticeCard id="math-ch1-prob-53" type="exam" title="96 考題 2 (一階線性)" source="歷屆期中考古精選 · 96 考題 2" topic="一階線性">
 
 **題目**：
 
@@ -1143,7 +1144,7 @@ $$y(x) = 4x + 2 + ce^{2x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-54" title="96 考題 3 (正合方程式)" source="歷屆期中考古精選 · 96 考題 3" topic="正合方程式">
+<PracticeCard id="math-ch1-prob-54" type="exam" title="96 考題 3 (正合方程式)" source="歷屆期中考古精選 · 96 考題 3" topic="正合方程式">
 
 **題目**：
 
@@ -1164,7 +1165,7 @@ $$x^2 y^3 + 2x + 2e^{4y} = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-55" title="96 考題 4 (正合方程式)" source="歷屆期中考古精選 · 96 考題 4" topic="正合方程式">
+<PracticeCard id="math-ch1-prob-55" type="exam" title="96 考題 4 (正合方程式)" source="歷屆期中考古精選 · 96 考題 4" topic="正合方程式">
 
 **題目**：
 
@@ -1185,7 +1186,7 @@ $$\ln|x| + xy + y^3 = c$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-prob-56" title="96 考題 5 (可分離變數)" source="歷屆期中考古精選 · 96 考題 5" topic="可分離變數">
+<PracticeCard id="math-ch1-prob-56" type="exam" title="96 考題 5 (可分離變數)" source="歷屆期中考古精選 · 96 考題 5" topic="可分離變數">
 
 **題目**：
 

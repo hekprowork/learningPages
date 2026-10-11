@@ -30,9 +30,10 @@ description: 電子學第一章 訊號與放大器基礎 (Signals and Amplifiers
   - 頻率響應相角：$\phi(\omega) = -\tan^{-1}(\omega/\omega_0)$。
 :::
 
+<PracticeFilter prefix="elec-ch1-" />
 <PracticeProgress :total="14" prefix="elec-ch1-" />
 
-<PracticeCard id="elec-ch1-ex-1-1" title="訊號源等效電路與外接負載之分壓/分流效應" source="Example 1.1 · Textbook P36-P37" topic="訊號源模型">
+<PracticeCard id="elec-ch1-ex-1-1" type="example" title="訊號源等效電路與外接負載之分壓/分流效應" source="Example 1.1 · Textbook P36-P37" topic="訊號源模型">
 
 訊號源的輸出電阻（內阻）$R_s$ 雖然不可避免，但會限制訊號源將完整訊號能量傳送至負載的能力。考慮如圖 1.2 所示訊號源外接負載電阻 $R_L$ 的情況：
 
@@ -79,7 +80,7 @@ description: 電子學第一章 訊號與放大器基礎 (Signals and Amplifiers
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-1" title="訊號源開路電壓、短路電流與等效轉換條件" source="Exercise 1.1 · Textbook P37-P38" topic="訊號源模型">
+<PracticeCard id="elec-ch1-prac-1-1" type="exercise" title="訊號源開路電壓、短路電流與等效轉換條件" source="Exercise 1.1 · Textbook P37-P38" topic="訊號源模型">
 
 對於圖 1.1(a) 所示之戴維寧形式訊號源與圖 1.1(b) 所示之諾頓形式訊號源：
 
@@ -132,7 +133,7 @@ description: 電子學第一章 訊號與放大器基礎 (Signals and Amplifiers
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-2" title="實測開路電壓與短路電流求解訊號源內阻" source="Exercise 1.2 · Textbook P38" topic="訊號源模型">
+<PracticeCard id="elec-ch1-prac-1-2" type="exercise" title="實測開路電壓與短路電流求解訊號源內阻" source="Exercise 1.2 · Textbook P38" topic="訊號源模型">
 
 某一感測訊號源經儀器量測，其開路端電壓為 $10\text{ mV}$，而短路輸出電流為 $10\ \mu\text{A}$。
 
@@ -164,7 +165,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-ex-1-2" title="音訊放大器之增益、功率平衡與直流轉換效率計算" source="Example 1.2 · Textbook P49-P50" topic="放大器功率與效率">
+<PracticeCard id="elec-ch1-ex-1-2" type="example" title="音訊放大器之增益、功率平衡與直流轉換效率計算" source="Example 1.2 · Textbook P49-P50" topic="放大器功率與效率">
 
 考慮一個動圈式麥克風訊號源，其產生峰值為 $400\text{ mV}$ 的弦波電壓訊號，並向放大器輸入端注入峰值為 $10\ \mu\text{A}$ 的弦波電流。
 
@@ -256,7 +257,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-10" title="放大器電壓增益、電流增益與功率增益之分貝換算" source="Exercise 1.10 · Textbook P52" topic="放大器功率與效率">
+<PracticeCard id="elec-ch1-prac-1-10" type="exercise" title="放大器電壓增益、電流增益與功率增益之分貝換算" source="Exercise 1.10 · Textbook P52" topic="放大器功率與效率">
 
 某放大器的電壓增益為 $100\text{ V/V}$，電流增益為 $1000\text{ A/A}$。
 
@@ -301,7 +302,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-11" title="單電源供電放大器輸出弦波功率與效率計算" source="Exercise 1.11 · Textbook P52" topic="放大器功率與效率">
+<PracticeCard id="elec-ch1-prac-1-11" type="exercise" title="單電源供電放大器輸出弦波功率與效率計算" source="Exercise 1.11 · Textbook P52" topic="放大器功率與效率">
 
 某放大器由單一 $+15\text{ V}$ 直流電源供電，在 $1\text{ k}\Omega$ 的負載電阻上提供峰對峰值為 $12\text{ V}_{p-p}$ 的弦波輸出訊號。已知放大器工作時自 $+15\text{ V}$ 電源汲取 $8\text{ mA}$ 的平均直流電流。
 
@@ -343,7 +344,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-ex-1-3" title="三級級聯放大器分析與級間負載效應" source="Example 1.3 · Textbook P55-P57" topic="級聯放大器分析">
+<PracticeCard id="elec-ch1-ex-1-3" type="example" title="三級級聯放大器分析與級間負載效應" source="Example 1.3 · Textbook P55-P57" topic="級聯放大器分析">
 
 圖 1.17 描繪了一個由三級子電路串接而成的級聯放大器（Cascaded Amplifier）。該系統由內阻 $R_s = 100\text{ k}\Omega$ 的訊號源 $v_s$ 驅動，輸出端連接 $R_L = 100\ \Omega$ 的負載電阻。三級電路規格分別如下：
 - **第一級 (Stage 1)**：高輸入電阻 $R_{i1} = 1\text{ M}\Omega$，開路電壓增益 $A_{vo1} = 10\text{ V/V}$，輸出電阻 $R_{o1} = 1\text{ k}\Omega$。
@@ -427,7 +428,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-15" title="級聯放大器若移除緩衝級之增益劇烈劣化分析" source="Exercise 1.15 · Textbook P57" topic="級聯放大器分析">
+<PracticeCard id="elec-ch1-prac-1-15" type="exercise" title="級聯放大器若移除緩衝級之增益劇烈劣化分析" source="Exercise 1.15 · Textbook P57" topic="級聯放大器分析">
 
 在 Example 1.3 的三級級聯放大器中，若將第三級（緩衝級 Stage 3）完全移除，直接將負載電阻 $R_L = 100\ \Omega$ 連接至第二級放大器的輸出端。
 
@@ -469,7 +470,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-16" title="級聯放大器在具體輸入訊號下之各級節點電壓分佈" source="Exercise 1.16 · Textbook P57" topic="級聯放大器分析">
+<PracticeCard id="elec-ch1-prac-1-16" type="exercise" title="級聯放大器在具體輸入訊號下之各級節點電壓分佈" source="Exercise 1.16 · Textbook P57" topic="級聯放大器分析">
 
 針對 Example 1.3 所示的三級級聯放大電路，設輸入訊號源為 $v_s = 1\text{ mV}$。
 
@@ -525,7 +526,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-ex-1-4" title="雙極性接面電晶體 (BJT) 小訊號模型與共射極電壓增益" source="Example 1.4 · Textbook P60-P61" topic="電晶體小訊號模型">
+<PracticeCard id="elec-ch1-ex-1-4" type="example" title="雙極性接面電晶體 (BJT) 小訊號模型與共射極電壓增益" source="Example 1.4 · Textbook P60-P61" topic="電晶體小訊號模型">
 
 雙極性接面電晶體 (BJT) 在直流偏壓建立後，針對微小交流訊號可由圖 1.19(a) 所示的線性混合 $\pi$ (hybrid-$\pi$) 轉導模型等效。三個端點分別為基極 (Base, B)、射極 (Emitter, E) 與集極 (Collector, C)。核心為由基射極電壓 $v_{be}$ 控制的轉導受控電流源 $g_m v_{be}$、輸入電阻 $r_\pi$ 以及輸出電阻 $r_o$。
 
@@ -593,7 +594,7 @@ $$R_s = 1\text{ k}\Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-18" title="電流放大器模型之整體電流增益與負載效應推導" source="Exercise 1.18 · Textbook P61" topic="四大放大器模型">
+<PracticeCard id="elec-ch1-prac-1-18" type="exercise" title="電流放大器模型之整體電流增益與負載效應推導" source="Exercise 1.18 · Textbook P61" topic="四大放大器模型">
 
 考慮具有輸入電阻 $R_i$、短路電流增益 $A_{is}$ 以及輸出電阻 $R_o$ 的電流放大器模型。設輸入端由具有內阻 $R_s$ 的諾頓訊號電流源 $i_s$ 驅動，輸出端連接負載電阻 $R_L$。
 
@@ -641,7 +642,7 @@ $$\frac{i_L}{i_s} = A_{is} \left( \frac{R_s}{R_s + R_i} \right) \left( \frac{R_o
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-19" title="轉導放大器模型之整體電壓增益推導" source="Exercise 1.19 · Textbook P61" topic="四大放大器模型">
+<PracticeCard id="elec-ch1-prac-1-19" type="exercise" title="轉導放大器模型之整體電壓增益推導" source="Exercise 1.19 · Textbook P61" topic="四大放大器模型">
 
 考慮具有輸入電阻 $R_i$、短路轉導 $G_m$ 以及輸出電阻 $R_o$ 的轉導放大器（Transconductance Amplifier）模型。設輸入端由具有內阻 $R_s$ 的戴維寧電壓源 $v_s$ 驅動，輸出端連接負載電阻 $R_L$。
 
@@ -687,7 +688,7 @@ $$\frac{v_L}{v_s} = G_m \left( \frac{R_i}{R_s + R_i} \right) (R_o \parallel R_L)
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-ex-1-5" title="具輸入電容之放大器頻率響應、3-dB 截止頻率與暫態弦波輸出" source="Example 1.5 · Textbook P68-P71" topic="STC 頻率響應分析">
+<PracticeCard id="elec-ch1-ex-1-5" type="example" title="具輸入電容之放大器頻率響應、3-dB 截止頻率與暫態弦波輸出" source="Example 1.5 · Textbook P68-P71" topic="STC 頻率響應分析">
 
 圖 1.25 描繪了一個含有輸入寄生/等效電容 $C_i$ 的電壓放大器模型。放大器內部具有輸入電阻 $R_i$、開路增益係數 $\mu$ 以及輸出電阻 $R_o$。放大器由內阻為 $R_s$ 的電壓源 $V_s$ 供電，輸出端接負載電阻 $R_L$。
 
@@ -802,7 +803,7 @@ $$\frac{v_L}{v_s} = G_m \left( \frac{R_i}{R_s + R_i} \right) (R_o \parallel R_L)
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch1-prac-1-22" title="單時間常數 (STC) 低通放大器之跨頻率增益分貝計算" source="Exercise 1.22 · Textbook P73" topic="STC 頻率響應分析">
+<PracticeCard id="elec-ch1-prac-1-22" type="exercise" title="單時間常數 (STC) 低通放大器之跨頻率增益分貝計算" source="Exercise 1.22 · Textbook P73" topic="STC 頻率響應分析">
 
 某電壓放大器的頻率響應為單時間常數 (STC) 低通型態，其直流增益為 $60\text{ dB}$，3-dB 截止頻率為 $f_0 = 1000\text{ Hz}$。
 

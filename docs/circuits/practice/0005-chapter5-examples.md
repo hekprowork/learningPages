@@ -24,9 +24,10 @@ description: 電路學第五章 運算放大器 (Operational Amplifiers) 互動�
   - $v_o = \frac{R_2}{R_1} \left(1 + \frac{2R_3}{R_G}\right)(v_2 - v_1)$，具備極高共模拒斥比 (CMRR) 與可調單一電阻增益設定特性。
 :::
 
+<PracticeFilter prefix="ch5-" />
 <PracticeProgress :total="20" prefix="ch5-" />
 
-<PracticeCard id="ch5-ex-5-1" title="非理想運算放大器等效電路與閉迴路增益分析" source="Example 5.1 · Slide P.20–24" topic="實際運算放大器模型 (Nonideal Op Amp)">
+<PracticeCard id="ch5-ex-5-1" type="example" title="非理想運算放大器等效電路與閉迴路增益分析" source="Example 5.1 · Slide P.20–24" topic="實際運算放大器模型 (Nonideal Op Amp)">
 
 已知某 741 運算放大器之開路電壓增益 $A = 2 \times 10^5$、輸入電阻 $R_i = 2\text{ M}\Omega$、輸出電阻 $R_o = 50\ \Omega$。將此運算放大器應用於圖 5.6(a) 之反相放大電路中，輸入端電阻 $R_1 = 10\text{ k}\Omega$，回授電阻 $R_f = 20\text{ k}\Omega$。
 
@@ -113,7 +114,7 @@ $$\text{當 } v_s = 2\text{ V 時：} v_o = -3.99994\text{ V},\quad i = 0.19999\
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-1" title="非理想同相放大電路之閉迴路增益與輸出電流" source="Practice Problem 5.1 · Slide P.25" topic="實際運算放大器模型 (Nonideal Op Amp)">
+<PracticeCard id="ch5-prac-5-1" type="practice" title="非理想同相放大電路之閉迴路增益與輸出電流" source="Practice Problem 5.1 · Slide P.25" topic="實際運算放大器模型 (Nonideal Op Amp)">
 
 若將 Example 5.1 中的 741 運算放大器（$A = 2 \times 10^5, R_i = 2\text{ M}\Omega, R_o = 50\ \Omega$）應用於圖 5.7 所示之同相放大電路中，已知 $R_1 = 5\text{ k}\Omega, R_f = 40\text{ k}\Omega, R_L = 20\text{ k}\Omega$。
 1. 求閉迴路增益 $\frac{v_o}{v_s}$。
@@ -167,7 +168,7 @@ $$\text{當 } v_s = 1\text{ V 時：} i_o = 657\ \mu\text{A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-2" title="理想運算放大器模型分析與同相放大器增益" source="Example 5.2 · Slide P.30–31" topic="理想運算放大器 (Ideal Op Amp)">
+<PracticeCard id="ch5-ex-5-2" type="example" title="理想運算放大器模型分析與同相放大器增益" source="Example 5.2 · Slide P.30–31" topic="理想運算放大器 (Ideal Op Amp)">
 
 使用理想運算放大器模型 (Ideal Op Amp Model) 重新求解 Practice Problem 5.1（同相放大電路，圖 5.9），其中 $R_1 = 5\text{ k}\Omega, R_f = 40\text{ k}\Omega, R_L = 20\text{ k}\Omega$。求閉迴路增益 $\frac{v_o}{v_s}$ 以及當 $v_s = 1\text{ V}$ 時的輸出電流 $i_o$。
 
@@ -219,7 +220,7 @@ $$\text{當 } v_s = 1\text{ V 時：} v_o = 9\text{ V},\quad i_o = 0.65\text{ mA
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-2" title="理想反相運算放大器模型分析與電流求解" source="Practice Problem 5.2 · Slide P.32" topic="理想運算放大器 (Ideal Op Amp)">
+<PracticeCard id="ch5-prac-5-2" type="practice" title="理想反相運算放大器模型分析與電流求解" source="Practice Problem 5.2 · Slide P.32" topic="理想運算放大器 (Ideal Op Amp)">
 
 使用理想運算放大器模型重算 Example 5.1（反相放大器電路，圖 5.10），已知 $R_1 = 10\text{ k}\Omega, R_f = 20\text{ k}\Omega$。求閉迴路增益 $\frac{v_o}{v_s}$，並求當 $v_s = 2\text{ V}$ 時之回授電流 $i$。
 
@@ -259,7 +260,7 @@ $$\text{當 } v_s = 2\text{ V 時：} v_o = -4\text{ V},\quad i = 200\ \mu\text{
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-3" title="標準反相放大器輸出電壓與輸入電阻電流計算" source="Example 5.3 · Slide P.35–36" topic="反相放大器 (Inverting Amplifier)">
+<PracticeCard id="ch5-ex-5-3" type="example" title="標準反相放大器輸出電壓與輸入電阻電流計算" source="Example 5.3 · Slide P.35–36" topic="反相放大器 (Inverting Amplifier)">
 
 參考圖 5.12 所示之反相放大器電路，其中輸入電阻 $R_1 = 10\text{ k}\Omega$，回授電阻 $R_f = 25\text{ k}\Omega$。若輸入電壓 $v_i = 0.5\text{ V}$，求：
 1. 輸出電壓 $v_o$。
@@ -297,7 +298,7 @@ $$i = 50\ \mu\text{A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-3" title="高增益反相放大器之輸出與回授電流求解" source="Practice Problem 5.3 · Slide P.39" topic="反相放大器 (Inverting Amplifier)">
+<PracticeCard id="ch5-prac-5-3" type="practice" title="高增益反相放大器之輸出與回授電流求解" source="Practice Problem 5.3 · Slide P.39" topic="反相放大器 (Inverting Amplifier)">
 
 求圖 5.13 所示反相放大器電路的輸出電壓 $v_o$，以及流經回授電阻之電流。已知輸入電阻 $R_1 = 4\text{ k}\Omega$，回授電阻 $R_f = 280\text{ k}\Omega$，輸入訊號 $v_i = 45\text{ mV}$。
 
@@ -332,7 +333,7 @@ $$i_f = 11.25\ \mu\text{A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-4" title="非零偏置電位之反相放大器節點分析" source="Example 5.4 · Slide P.37–38" topic="反相放大器 (Inverting Amplifier)">
+<PracticeCard id="ch5-ex-5-4" type="example" title="非零偏置電位之反相放大器節點分析" source="Example 5.4 · Slide P.37–38" topic="反相放大器 (Inverting Amplifier)">
 
 求解圖 5.14 所示之運算放大器電路的輸出電壓 $v_o$。電路中反相輸入端透過 $R_1 = 20\text{ k}\Omega$ 連接至 $6\text{ V}$ 電壓源，回授電阻 $R_f = 40\text{ k}\Omega$，非反相輸入端連接至 $2\text{ V}$ 偏置電壓源。
 
@@ -380,7 +381,7 @@ $$v_o = -6\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-5" title="雙輸入放大電路之重疊定理與節點分析" source="Example 5.5 · Slide P.46–49" topic="同相/差動放大電路 (Noninverting & Superposition)">
+<PracticeCard id="ch5-ex-5-5" type="example" title="雙輸入放大電路之重疊定理與節點分析" source="Example 5.5 · Slide P.46–49" topic="同相/差動放大電路 (Noninverting & Superposition)">
 
 針對圖 5.19 所示之運算放大器電路，計算輸出電壓 $v_o$。電路中反相端透過 $R_1 = 4\text{ k}\Omega$ 接至 $6\text{ V}$ 電源，回授電阻 $R_f = 10\text{ k}\Omega$，非反相端直接接至 $4\text{ V}$ 電源。
 請分別使用：
@@ -441,7 +442,7 @@ $$v_o = -1\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-5" title="含前級分壓網路之同相放大器分析" source="Practice Problem 5.5 · Slide P.50" topic="同相放大電路 (Noninverting Amplifier)">
+<PracticeCard id="ch5-prac-5-5" type="practice" title="含前級分壓網路之同相放大器分析" source="Practice Problem 5.5 · Slide P.50" topic="同相放大電路 (Noninverting Amplifier)">
 
 計算圖 5.20 所示電路中的輸出電壓 $v_o$。電路中 $3\text{ V}$ 輸入源經由 $2\text{ k}\Omega$ 與 $8\text{ k}\Omega$ 之分壓網路連接至運算放大器非反相端，反相端接有 $R_1 = 2\text{ k}\Omega$ 與回授電阻 $R_f = 4\text{ k}\Omega$（以及 $5\text{ k}\Omega$ 負載）。
 
@@ -482,7 +483,7 @@ $$v_o = 7\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-6" title="多輸入加法運算放大器輸出電壓與總電流求解" source="Example 5.6 · Slide P.54–55" topic="加法放大器 (Summing Amplifier)">
+<PracticeCard id="ch5-ex-5-6" type="example" title="多輸入加法運算放大器輸出電壓與總電流求解" source="Example 5.6 · Slide P.54–55" topic="加法放大器 (Summing Amplifier)">
 
 計算圖 5.22 所示之運算放大器電路中的輸出電壓 $v_o$ 與輸出端電源總電流 $i_o$。已知三個輸入支路分別為：$v_1 = 2\text{ V}$ 經由 $R_1 = 5\text{ k}\Omega$，$v_2 = 1\text{ V}$ 經由 $R_2 = 2.5\text{ k}\Omega$；回授電阻 $R_f = 10\text{ k}\Omega$，輸出端接有負載電阻 $R_L = 2\text{ k}\Omega$。
 
@@ -526,7 +527,7 @@ $$i_o = -4.8\text{ mA}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-6" title="多輸入加法運算放大器與負載支路電流" source="Practice Problem 5.6 · Slide P.56" topic="加法放大器 (Summing Amplifier)">
+<PracticeCard id="ch5-prac-5-6" type="practice" title="多輸入加法運算放大器與負載支路電流" source="Practice Problem 5.6 · Slide P.56" topic="加法放大器 (Summing Amplifier)">
 
 求圖 5.23 所示運算放大器電路中的輸出電壓 $v_o$ 與電流 $i_o$。電路中包含三個輸入訊號：$2\text{ V}$ 經由 $10\text{ k}\Omega$、$1.5\text{ V}$ 經由 $20\text{ k}\Omega$、$-1.8\text{ V}$（或接地偏壓支路）經由 $6\text{ k}\Omega$；回授電阻 $R_f = 8\text{ k}\Omega$，負載電阻 $R_L = 4\text{ k}\Omega$。
 
@@ -560,7 +561,7 @@ $$i_o = -1.425\text{ mA}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-7" title="線性輸出關係運算放大器電路設計" source="Example 5.7 · Slide P.62–65" topic="差動放大器與電路設計 (Difference Amplifier Design)">
+<PracticeCard id="ch5-ex-5-7" type="example" title="線性輸出關係運算放大器電路設計" source="Example 5.7 · Slide P.62–65" topic="差動放大器與電路設計 (Difference Amplifier Design)">
 
 設計一個以 $v_1$ 與 $v_2$ 為輸入之運算放大器電路，使得輸出電壓滿足線性關係：
 $$
@@ -631,7 +632,7 @@ $$\textbf{Design 2 (Two Op Amps): } \text{Inverter: } R_{in}=10\text{ k}\Omega, 
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-7" title="定增益差動放大器之電阻參數設計" source="Practice Problem 5.7 · Slide P.70" topic="差動放大器 (Difference Amplifier)">
+<PracticeCard id="ch5-prac-5-7" type="practice" title="定增益差動放大器之電阻參數設計" source="Practice Problem 5.7 · Slide P.70" topic="差動放大器 (Difference Amplifier)">
 
 設計一個電壓增益為 $7.5$ 的平衡差動放大器 (Difference Amplifier)，使得輸出滿足以雙端差動訊號放大的關係：
 $$
@@ -670,7 +671,7 @@ $$\text{典型設計選值：} R_1 = R_3 = 20\text{ k}\Omega,\quad R_2 = R_4 = 1
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-8" title="三運算放大器儀表放大器之差動電壓增益推導" source="Example 5.8 · Slide P.66–69" topic="儀表放大器 (Instrumentation Amplifier)">
+<PracticeCard id="ch5-ex-5-8" type="example" title="三運算放大器儀表放大器之差動電壓增益推導" source="Example 5.8 · Slide P.66–69" topic="儀表放大器 (Instrumentation Amplifier)">
 
 儀表放大器 (Instrumentation Amplifier, IA，如圖 5.26 所示) 廣泛應用於工業製程控制與生醫微弱訊號量測。請證明其輸出電壓 $v_o$ 與輸入訊號 $v_1, v_2$ 滿足以下精確關係式：
 $$
@@ -728,7 +729,7 @@ $$\text{差動電壓增益 } A_d = \frac{R_2}{R_1}\left(1 + \frac{2R_3}{R_4}\rig
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-8" title="儀表放大器跨接電阻之電流求解" source="Practice Problem 5.8 · Slide P.70" topic="儀表放大器 (Instrumentation Amplifier)">
+<PracticeCard id="ch5-prac-5-8" type="practice" title="儀表放大器跨接電阻之電流求解" source="Practice Problem 5.8 · Slide P.70" topic="儀表放大器 (Instrumentation Amplifier)">
 
 求圖 5.27 所示儀表放大器電路中流經跨接電阻之電流 $i_o$。已知輸入電壓 $v_1 = 6.98\text{ V}, v_2 = 7.00\text{ V}$，電阻參數為 $R_3 = 20\text{ k}\Omega, R_4 = 20\text{ k}\Omega, R_1 = 40\text{ k}\Omega, R_2 = 40\text{ k}\Omega, R_L = 50\text{ k}\Omega$。
 
@@ -768,7 +769,7 @@ $$i_o = 800\text{ nA}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-9" title="兩級同相放大器級聯系統分析" source="Example 5.9 · Slide P.72–73" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
+<PracticeCard id="ch5-ex-5-9" type="example" title="兩級同相放大器級聯系統分析" source="Example 5.9 · Slide P.72–73" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
 
 求解圖 5.29 所示之兩級級聯運算放大器電路中的輸出電壓 $v_o$ 與輸出電流 $i_o$。已知輸入訊號 $v_i = 20\text{ mV}$；第一級同相放大器電阻為 $R_1 = 3\text{ k}\Omega, R_{f1} = 12\text{ k}\Omega$；第二級同相放大器電阻為 $R_2 = 4\text{ k}\Omega, R_{f2} = 10\text{ k}\Omega$。
 
@@ -811,7 +812,7 @@ $$i_o = 25\ \mu\text{A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-9" title="兩級級聯反相放大器輸出與電流計算" source="Practice Problem 5.9 · Slide P.76" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
+<PracticeCard id="ch5-prac-5-9" type="practice" title="兩級級聯反相放大器輸出與電流計算" source="Practice Problem 5.9 · Slide P.76" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
 
 求圖 5.30 所示兩級級聯運算放大器電路的輸出電壓 $v_o$ 與電流 $i_o$。已知第一級反相放大器輸入電壓為 $1.2\text{ V}$（$R_1 = 20\text{ k}\Omega, R_{f1} = 50\text{ k}\Omega$），第二級反相放大器電阻為 $R_2 = 100\text{ k}\Omega, R_{f2} = 200\text{ k}\Omega$。
 
@@ -850,7 +851,7 @@ $$i_o = 24\ \mu\text{A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-10" title="多級反相與加法放大器級聯系統分析" source="Example 5.10 · Slide P.74–75" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
+<PracticeCard id="ch5-ex-5-10" type="example" title="多級反相與加法放大器級聯系統分析" source="Example 5.10 · Slide P.74–75" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
 
 若輸入電壓分別為 $v_1 = 1\text{ V}$ 及 $v_2 = 2\text{ V}$，求圖 5.31 所示之級聯運算放大器電路的總輸出電壓 $v_o$。
 電路前級包含兩組獨立反相放大器：
@@ -900,7 +901,7 @@ $$v_o = \frac{26}{3}\text{ V} \approx 8.667\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-prac-5-10" title="雙輸入兩級級聯運算放大器輸出計算" source="Practice Problem 5.10 · Slide P.76" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
+<PracticeCard id="ch5-prac-5-10" type="practice" title="雙輸入兩級級聯運算放大器輸出計算" source="Practice Problem 5.10 · Slide P.76" topic="級聯放大電路 (Cascaded Op Amp Circuits)">
 
 若 $v_1 = 7\text{ V}$ 且 $v_2 = 3.1\text{ V}$，求圖 5.33 所示兩級級聯運算放大器電路的總輸出電壓 $v_o$。
 
@@ -932,7 +933,7 @@ $$v_o = 10\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-ex-5-11" title="儀表放大器增益設定與微弱差動訊號放大實戰" source="Example 5.11 (Ex 5.13) · Slide P.80" topic="實際工程應用 (Op Amp Applications)">
+<PracticeCard id="ch5-ex-5-11" type="example" title="儀表放大器增益設定與微弱差動訊號放大實戰" source="Example 5.11 (Ex 5.13) · Slide P.80" topic="實際工程應用 (Op Amp Applications)">
 
 在圖 5.38 所示之標準商用儀表放大器電路中，內部固定電阻均為 $R = 10\text{ k}\Omega$。已知兩端輸入電壓分別為 $v_1 = 2.011\text{ V}$ 與 $v_2 = 2.017\text{ V}$。若將外部增益微調電阻 $R_G$ 設定為 $500\ \Omega$，求：
 1. 此儀表放大器之差動電壓增益 (Voltage Gain) $A_v$。
@@ -984,7 +985,7 @@ $$(b)\ v_o = 246\text{ mV} = 0.246\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-hw-ch5" title="Chapter 5 課後作業題目清單與重點題庫索引" source="H.W. Index · Slide P.81" topic="第五章指定作業題庫索引" :hide-checkbox="true">
+<PracticeCard id="ch5-hw-ch5" type="homework" title="Chapter 5 課後作業題目清單與重點題庫索引" source="H.W. Index · Slide P.81" topic="第五章指定作業題庫索引" :hide-checkbox="true">
 
 Alexander & Sadiku 第五章 Operational Amplifiers 課後指定作業清單：
 

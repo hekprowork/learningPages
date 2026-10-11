@@ -6,9 +6,10 @@ title: Chapter 1 基本概念：例題與練習題
 
 本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 1 章之核心 Example 與 Practice Problem。點擊「查看詳解」可展開分步推導與計算結果；完成題目後可勾選標記學習進度。
 
+<PracticeFilter prefix="ch1-" />
 <PracticeProgress :total="19" prefix="ch1-" />
 
-<PracticeCard id="ch1-ex1" title="Example 1.1：電子所代表的電荷" source="課本 p.14" topic="電荷">
+<PracticeCard id="ch1-ex1" type="example" title="Example 1.1：電子所代表的電荷" source="課本 p.14" topic="電荷">
 
 一個電子的電荷為 $-1.602\times10^{-19}\,\mathrm{C}$。求 $4{,}600$ 個電子所代表的總電荷。
 
@@ -29,7 +30,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr1" title="Practice Problem 1.1：由電荷求電流" source="課本 p.14" topic="電流與電荷">
+<PracticeCard id="ch1-pr1" type="practice" title="Practice Problem 1.1：由電荷求電流" source="課本 p.14" topic="電流與電荷">
 
 在 Example 1.2 的情境中，若進入端點的總電荷為
 
@@ -61,7 +62,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex2" title="Example 1.2：由電荷函數求瞬時電流" source="課本 p.14" topic="電流與電荷">
+<PracticeCard id="ch1-ex2" type="example" title="Example 1.2：由電荷函數求瞬時電流" source="課本 p.14" topic="電流與電荷">
 
 進入一端點的總電荷為
 
@@ -94,7 +95,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr2" title="Practice Problem 1.2：質子所代表的電荷" source="課本 p.14" topic="電荷">
+<PracticeCard id="ch1-pr2" type="practice" title="Practice Problem 1.2：質子所代表的電荷" source="課本 p.14" topic="電荷">
 
 求 $100$ 億個質子所代表的電荷量。
 
@@ -115,7 +116,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex3" title="Example 1.3：由電流求區間電荷" source="課本 p.14" topic="電流與電荷">
+<PracticeCard id="ch1-ex3" type="example" title="Example 1.3：由電流求區間電荷" source="課本 p.14" topic="電流與電荷">
 
 若通過端點的電流為 $i=(3t^2-t)\,\mathrm{A}$，求從 $t=1\,\mathrm{s}$ 至 $t=2\,\mathrm{s}$ 進入端點的總電荷。
 
@@ -140,7 +141,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr3" title="Practice Problem 1.3：分段電流的電荷" source="課本 p.15" topic="電流與電荷">
+<PracticeCard id="ch1-pr3" type="practice" title="Practice Problem 1.3：分段電流的電荷" source="課本 p.15" topic="電流與電荷">
 
 流入元件的電流為
 
@@ -175,7 +176,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex4" title="Example 1.4：燈泡兩端的電壓降" source="課本 p.18" topic="電壓與能量">
+<PracticeCard id="ch1-ex4" type="example" title="Example 1.4：燈泡兩端的電壓降" source="課本 p.18" topic="電壓與能量">
 
 一能量源使 $2\,\mathrm{A}$ 的定電流流過燈泡 $10\,\mathrm{s}$。若以光與熱形式釋放 $2.4\,\mathrm{kJ}$ 能量，求燈泡兩端的電壓降。
 
@@ -201,7 +202,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr4" title="Practice Problem 1.4：電荷符號與電壓" source="課本 p.18" topic="電壓與能量">
+<PracticeCard id="ch1-pr4" type="practice" title="Practice Problem 1.4：電荷符號與電壓" source="課本 p.18" topic="電壓與能量">
 
 將電荷 $q$ 由點 $b$ 移至點 $a$ 需 $100\,\mathrm{J}$。求電壓降 $v_{ab}$（$a$ 點相對於 $b$ 點為正），其中：(a) $q=5\,\mathrm{C}$；(b) $q=-10\,\mathrm{C}$。
 
@@ -227,7 +228,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex5" title="Example 1.5：元件吸收的功率" source="課本 p.18" topic="功率">
+<PracticeCard id="ch1-ex5" type="example" title="Example 1.5：元件吸收的功率" source="課本 p.18" topic="功率">
 
 在 $t=3\,\mathrm{ms}$，電流進入元件的正端，且
 
@@ -271,7 +272,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr5" title="Practice Problem 1.5：含積分項的瞬時功率" source="課本 p.19" topic="功率">
+<PracticeCard id="ch1-pr5" type="practice" title="Practice Problem 1.5：含積分項的瞬時功率" source="課本 p.19" topic="功率">
 
 沿用 Example 1.5 的電流
 
@@ -303,7 +304,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex6" title="Example 1.6：電燈的能量消耗" source="課本 p.20" topic="功率與能量">
+<PracticeCard id="ch1-ex6" type="example" title="Example 1.6：電燈的能量消耗" source="課本 p.20" topic="功率與能量">
 
 一個 $100\ \mathrm{W}$ 電燈泡連續使用 $2\ \mathrm{h}$，求它消耗的能量。
 
@@ -324,7 +325,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr6" title="Practice Problem 1.6：電暖器的能量消耗" source="課本 p.20" topic="功率與能量">
+<PracticeCard id="ch1-pr6" type="practice" title="Practice Problem 1.6：電暖器的能量消耗" source="課本 p.20" topic="功率與能量">
 
 家用電暖器接在 $120\ \mathrm{V}$ 插座時汲取 $12\ \mathrm{A}$。若持續使用 $24\ \mathrm{h}$，求消耗的能量。
 
@@ -348,7 +349,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex7" title="Example 1.7：元件供給或吸收的功率" source="課本 p.21" topic="被動符號約定">
+<PracticeCard id="ch1-ex7" type="example" title="Example 1.7：元件供給或吸收的功率" source="課本 p.21" topic="被動符號約定">
 
 求圖中每一元件 $p_1$、$p_2$、$p_3$、$p_4$ 所供給或吸收的功率。
 
@@ -376,7 +377,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr7" title="Practice Problem 1.7：各元件的功率" source="課本 p.22" topic="被動符號約定">
+<PracticeCard id="ch1-pr7" type="practice" title="Practice Problem 1.7：各元件的功率" source="課本 p.22" topic="被動符號約定">
 
 計算圖中電路各元件 $p_1$、$p_2$、$p_3$、$p_4$ 所吸收或供給的功率。
 
@@ -403,7 +404,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex8" title="Example 1.8：映像管電子束的加速電壓" source="課本 p.23" topic="電流與功率">
+<PracticeCard id="ch1-ex8" type="example" title="Example 1.8：映像管電子束的加速電壓" source="課本 p.23" topic="電流與功率">
 
 電視映像管的電子束每秒含有 $10^{15}$ 個電子。若要使電子束功率達到 $4\ \mathrm{W}$，求所需加速電壓 $V_o$。
 
@@ -431,7 +432,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr8" title="Practice Problem 1.8：電子束的功率" source="課本 p.24" topic="電流與功率">
+<PracticeCard id="ch1-pr8" type="practice" title="Practice Problem 1.8：電子束的功率" source="課本 p.24" topic="電流與功率">
 
 電視映像管電子束每秒含有 $10^{13}$ 個電子，並通過電位差 $25\ \mathrm{kV}$ 的極板。求電子束的功率。
 
@@ -457,7 +458,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex9" title="Example 1.9：分級電價的電費" source="課本 p.25" topic="能量計費">
+<PracticeCard id="ch1-ex9" type="example" title="Example 1.9：分級電價的電費" source="課本 p.25" topic="能量計費">
 
 某住戶一月用電 $700\ \mathrm{kWh}$。住宅電價為：基本月費 \$12.00；前 $100\ \mathrm{kWh}$ 為每度 \$0.16；接續 $200\ \mathrm{kWh}$ 為每度 \$0.10；超過 $300\ \mathrm{kWh}$ 的部分為每度 \$0.06。求本月電費及平均每度電成本。
 
@@ -488,7 +489,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr9" title="Practice Problem 1.9：低用電量的平均電價" source="課本 p.25" topic="能量計費">
+<PracticeCard id="ch1-pr9" type="practice" title="Practice Problem 1.9：低用電量的平均電價" source="課本 p.25" topic="能量計費">
 
 沿用 Example 1.9 的住宅分級電價。若七月全家外出度假，整月僅用電 $260\ \mathrm{kWh}$，求平均每度電成本。
 
@@ -515,7 +516,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex10" title="Example 1.10：以節點分析求 $8\ \Omega$ 電阻電流" source="課本 p.27" topic="節點分析">
+<PracticeCard id="ch1-ex10" type="example" title="Example 1.10：以節點分析求 $8\ \Omega$ 電阻電流" source="課本 p.27" topic="節點分析">
 
 求圖中流過 $8\ \Omega$ 電阻的電流 $i_{8\Omega}$。題目確認 $3\ \mathrm{V}$ 電壓源的正端在下方，並以圖中的箭頭為 $i_{8\Omega}$ 正方向。
 

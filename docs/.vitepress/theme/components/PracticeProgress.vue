@@ -1,75 +1,177 @@
 <template>
   <div class="practice-progress-card">
     <div class="practice-progress-header">
-      <div class="practice-progress-stats">
-        <span class="practice-progress-label">練習進度</span>
-        <span class="practice-progress-count">{{ doneCount }} / {{ total }} 題 ({{ percent }}%)</span>
+      <div class="practice-progress-stats" aria-live="polite">
+        <span class="practice-progress-label">{{ currentLabel }}</span>
+        <span v-if="currentTotal > 0" class="practice-progress-count">
+          {{ currentDoneCount }} / {{ currentTotal }} 題 ({{ currentPercent }}%)
+        </span>
+        <span v-else class="practice-progress-count">本分類沒有可勾選題目</span>
+        <span class="practice-progress-all">
+          全部 All {{ allDoneCount }} / {{ allTotal }} 題 ({{ allPercent }}%)
+        </span>
       </div>
-      <button class="practice-progress-reset" type="button" @click="resetProgress">
-        重設進度
+      <button
+        class="practice-progress-reset"
+        type="button"
+        :disabled="currentTotal === 0"
+        @click="resetProgress"
+      >
+        {{ resetLabel }}
       </button>
     </div>
-    <div class="practice-progress-bar">
-      <div class="practice-progress-fill" :style="{ width: percent + '%' }"></div>
+    <div
+      class="practice-progress-bar"
+      role="progressbar"
+      :aria-valuenow="currentPercent"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      :aria-label="`${currentLabel}進度`"
+    >
+      <div class="practice-progress-fill" :style="{ width: currentPercent + '%' }"></div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+import {
+  isPracticeCardType,
+  isPracticeFilterType,
+  PRACTICE_FILTER_CHANGE_EVENT,
+  PRACTICE_TYPE_LABELS,
+  type PracticeFilterChangeDetail,
+  type PracticeFilterType
+} from './practice-filter'
 
 const props = defineProps<{
   total: number
   prefix: string
 }>()
 
-const doneCount = ref(0)
+const currentType = ref<PracticeFilterType>('all')
+const currentTotal = ref(props.total)
+const currentDoneCount = ref(0)
+const allTotal = ref(props.total)
+const allDoneCount = ref(0)
 
-const percent = computed(() => {
-  if (!props.total) return 0
-  return Math.min(100, Math.round((doneCount.value / props.total) * 100))
+const currentLabel = computed(() => {
+  const label = PRACTICE_TYPE_LABELS[currentType.value]
+  return `目前 ${label.zh} ${label.en}`
 })
 
-const countDone = (): number => {
-  if (typeof window === 'undefined') return 0
-  let count = 0
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i)
-    if (key && key.startsWith(props.prefix) && localStorage.getItem(key) === 'true') {
-      count++
-    }
-  }
-  return count
+const resetLabel = computed(() =>
+  currentType.value === 'all'
+    ? '重設全部進度'
+    : `重設${PRACTICE_TYPE_LABELS[currentType.value].zh}進度`
+)
+
+const currentPercent = computed(() => {
+  if (!currentTotal.value) return 0
+  return Math.min(100, Math.round((currentDoneCount.value / currentTotal.value) * 100))
+})
+
+const allPercent = computed(() => {
+  if (!allTotal.value) return 0
+  return Math.min(100, Math.round((allDoneCount.value / allTotal.value) * 100))
+})
+
+const getScope = (): HTMLElement | null => {
+  if (typeof document === 'undefined') return null
+  return document.querySelector('.vp-doc')
 }
 
-const onProgressUpdate = () => {
-  doneCount.value = countDone()
+const getCards = (): HTMLElement[] => {
+  const scope = getScope()
+  return scope
+    ? Array.from(scope.querySelectorAll<HTMLElement>('[data-practice-card]')).filter(
+        (card) => card.dataset.practiceTrackable !== 'false'
+      )
+    : []
+}
+
+const getUrlType = (): PracticeFilterType => {
+  if (typeof window === 'undefined') return 'all'
+  const rawType = new URL(window.location.href).searchParams.get('type')
+  return isPracticeFilterType(rawType) ? rawType : 'all'
+}
+
+const countDoneForCards = (cards: HTMLElement[]): number => {
+  if (typeof window === 'undefined') return 0
+  return cards.reduce((count, card) => {
+    const id = card.dataset.practiceId
+    return id && id.startsWith(props.prefix) && localStorage.getItem(id) === 'true'
+      ? count + 1
+      : count
+  }, 0)
+}
+
+const syncProgress = (detail?: PracticeFilterChangeDetail) => {
+  if (typeof window === 'undefined') return
+  const cards = getCards().filter((card) => {
+    const id = card.dataset.practiceId
+    return !!id && id.startsWith(props.prefix)
+  })
+  const type = detail && isPracticeFilterType(detail.type) ? detail.type : getUrlType()
+  const currentCards =
+    type === 'all'
+      ? cards
+      : cards.filter((card) => isPracticeCardType(card.dataset.practiceType) && card.dataset.practiceType === type)
+
+  currentType.value = type
+  allTotal.value = cards.length
+  allDoneCount.value = countDoneForCards(cards)
+  currentTotal.value = type === 'all' ? allTotal.value : currentCards.length
+  currentDoneCount.value = type === 'all' ? allDoneCount.value : countDoneForCards(currentCards)
+}
+
+const onProgressUpdate = () => syncProgress()
+
+const onFilterChange = (event: Event) => {
+  const custom = event as CustomEvent<PracticeFilterChangeDetail>
+  syncProgress(custom.detail)
 }
 
 onMounted(() => {
-  doneCount.value = countDone()
+  syncProgress()
   window.addEventListener('practice-progress', onProgressUpdate)
-  onUnmounted(() => {
-    window.removeEventListener('practice-progress', onProgressUpdate)
-  })
+  window.addEventListener(PRACTICE_FILTER_CHANGE_EVENT, onFilterChange)
+})
+
+onUnmounted(() => {
+  if (typeof window === 'undefined') return
+  window.removeEventListener('practice-progress', onProgressUpdate)
+  window.removeEventListener(PRACTICE_FILTER_CHANGE_EVENT, onFilterChange)
 })
 
 const resetProgress = () => {
   if (typeof window === 'undefined') return
-  if (!confirm('確定要重設本章練習進度嗎？')) return
+  const label = PRACTICE_TYPE_LABELS[currentType.value]
+  const confirmation =
+    currentType.value === 'all'
+      ? '確定要重設全部進度嗎？'
+      : `確定要重設「${label.zh} ${label.en}」的進度嗎？`
+  if (!window.confirm(confirmation)) return
 
-  const toRemove: string[] = []
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i)
-    if (key && key.startsWith(props.prefix)) {
-      toRemove.push(key)
-    }
-  }
-  toRemove.forEach((k) => localStorage.removeItem(k))
-  doneCount.value = 0
+  const cards = getCards().filter((card) => {
+    const id = card.dataset.practiceId
+    if (!id || !id.startsWith(props.prefix)) return false
+    return currentType.value === 'all' || card.dataset.practiceType === currentType.value
+  })
+  const keysToRemove =
+    currentType.value === 'all'
+      ? Array.from({ length: localStorage.length }, (_, index) => localStorage.key(index)).filter(
+          (key): key is string => !!key && key.startsWith(props.prefix)
+        )
+      : cards
+          .map((card) => card.dataset.practiceId)
+          .filter((key): key is string => !!key && key.startsWith(props.prefix))
+
+  keysToRemove.forEach((key) => localStorage.removeItem(key))
+  syncProgress()
   window.dispatchEvent(
     new CustomEvent('practice-progress', {
-      detail: { reset: true, prefix: props.prefix }
+      detail: { reset: true, prefix: props.prefix, type: currentType.value }
     })
   )
 }
@@ -97,6 +199,7 @@ const resetProgress = () => {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .practice-progress-label {
@@ -110,6 +213,12 @@ const resetProgress = () => {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
+}
+
+.practice-progress-all {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
 }
 
 .practice-progress-reset {
@@ -128,6 +237,11 @@ const resetProgress = () => {
   color: var(--vp-c-text-1);
   border-color: var(--vp-c-text-1);
   background-color: var(--vp-c-bg);
+}
+
+.practice-progress-reset:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .practice-progress-bar {

@@ -6,9 +6,10 @@ title: Chapter 3 分析方法：例題與練習題
 
 本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 3 章之核心 Example 與 Practice Problem。點擊「查看詳解」可展開分步推導與計算結果；完成題目後可勾選標記學習進度。
 
+<PracticeFilter prefix="ch3-" />
 <PracticeProgress :total="26" prefix="ch3-" />
 
-<PracticeCard id="ch3-ex1" title="例題 3.1：兩節點電壓法" source="課本 p.88" topic="節點分析">
+<PracticeCard id="ch3-ex1" type="example" title="例題 3.1：兩節點電壓法" source="課本 p.88" topic="節點分析">
 
 求圖 3.3(a) 電路的節點電壓 $v_1$ 與 $v_2$。
 
@@ -44,7 +45,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr1" title="練習題 3.1：兩節點電壓" source="課本 p.89" topic="節點分析">
+<PracticeCard id="ch3-pr1" type="practice" title="練習題 3.1：兩節點電壓" source="課本 p.89" topic="節點分析">
 
 求圖 3.4 電路的節點電壓 $v_1$ 與 $v_2$。
 
@@ -66,7 +67,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex2" title="例題 3.2：三節點與受控電流源" source="課本 p.90" topic="節點分析">
+<PracticeCard id="ch3-ex2" type="example" title="例題 3.2：三節點與受控電流源" source="課本 p.90" topic="節點分析">
 
 求圖 3.5(a) 三個非參考節點的電壓 $v_1$、$v_2$、$v_3$。
 
@@ -98,7 +99,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr2" title="練習題 3.2：受控源節點分析" source="課本 p.92" topic="節點分析">
+<PracticeCard id="ch3-pr2" type="practice" title="練習題 3.2：受控源節點分析" source="課本 p.92" topic="節點分析">
 
 求圖 3.6 三個非參考節點的電壓 $v_1$、$v_2$、$v_3$。
 
@@ -120,7 +121,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex3" title="例題 3.3：超節點" source="課本 p.94" topic="含電壓源的節點分析">
+<PracticeCard id="ch3-ex3" type="example" title="例題 3.3：超節點" source="課本 p.94" topic="含電壓源的節點分析">
 
 求圖 3.9 電路的節點電壓。
 
@@ -160,7 +161,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr3" title="練習題 3.3：含電壓源的節點分析" source="課本 p.94" topic="超節點">
+<PracticeCard id="ch3-pr3" type="practice" title="練習題 3.3：含電壓源的節點分析" source="課本 p.94" topic="超節點">
 
 求圖 3.11 電路的 $v$ 與 $i$。
 
@@ -182,7 +183,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex4" title="例題 3.4：雙超節點與受控電壓源" source="課本 p.95" topic="超節點">
+<PracticeCard id="ch3-ex4" type="example" title="例題 3.4：雙超節點與受控電壓源" source="課本 p.95" topic="超節點">
 
 求圖 3.12 電路的節點電壓。
 
@@ -220,7 +221,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr4" title="練習題 3.4：含受控電壓源的節點分析" source="課本 p.97" topic="節點分析">
+<PracticeCard id="ch3-pr4" type="practice" title="練習題 3.4：含受控電壓源的節點分析" source="課本 p.97" topic="節點分析">
 
 使用節點分析，求圖 3.14 電路的 $v_1$、$v_2$、$v_3$。
 
@@ -246,7 +247,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex5" title="例題 3.5：網孔分析求支路電流" source="課本 p.99" topic="網孔分析">
+<PracticeCard id="ch3-ex5" type="example" title="例題 3.5：網孔分析求支路電流" source="課本 p.99" topic="網孔分析">
 
 使用網孔分析，求圖 3.18 的支路電流 $I_1$、$I_2$、$I_3$。
 
@@ -286,7 +287,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr5" title="Practice Problem 3.5：兩網孔電流" source="課本 p.100" topic="網孔分析">
+<PracticeCard id="ch3-pr5" type="practice" title="Practice Problem 3.5：兩網孔電流" source="課本 p.100" topic="網孔分析">
 
 求圖 3.19 電路的網孔電流 $i_1$ 與 $i_2$。
 
@@ -308,7 +309,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex6" title="Example 3.6：含受控源的網孔分析" source="課本 p.100" topic="網孔分析、受控源">
+<PracticeCard id="ch3-ex6" type="example" title="Example 3.6：含受控源的網孔分析" source="課本 p.100" topic="網孔分析、受控源">
 
 以網孔分析求圖 3.20 中的電流 $I_o$。
 
@@ -351,7 +352,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr6" title="Practice Problem 3.6：受控源網孔電流" source="課本 p.102" topic="網孔分析、受控源">
+<PracticeCard id="ch3-pr6" type="practice" title="Practice Problem 3.6：受控源網孔電流" source="課本 p.102" topic="網孔分析、受控源">
 
 以網孔分析求圖 3.21 中的 $I_o$。
 
@@ -377,7 +378,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex7" title="Example 3.7：交疊超網孔" source="課本 p.103" topic="超網孔分析">
+<PracticeCard id="ch3-ex7" type="example" title="Example 3.7：交疊超網孔" source="課本 p.103" topic="超網孔分析">
 
 利用網孔分析求圖 3.24 的 $i_1$ 至 $i_4$。
 
@@ -414,7 +415,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr7" title="Practice Problem 3.7：網孔法求三個電流" source="課本 p.104" topic="網孔分析">
+<PracticeCard id="ch3-pr7" type="practice" title="Practice Problem 3.7：網孔法求三個電流" source="課本 p.104" topic="網孔分析">
 
 使用網孔分析求圖 3.25 的 $i_1$、$i_2$ 與 $i_3$。
 
@@ -442,7 +443,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex8" title="Example 3.8：由檢視法建立節點電壓矩陣" source="課本 p.106" topic="節點分析、檢視法">
+<PracticeCard id="ch3-ex8" type="example" title="Example 3.8：由檢視法建立節點電壓矩陣" source="課本 p.106" topic="節點分析、檢視法">
 
 以檢視法寫出圖 3.27 的節點電壓矩陣方程。
 
@@ -470,7 +471,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr8" title="Practice Problem 3.8：節點方程的檢視法" source="課本 p.107" topic="節點分析、檢視法">
+<PracticeCard id="ch3-pr8" type="practice" title="Practice Problem 3.8：節點方程的檢視法" source="課本 p.107" topic="節點分析、檢視法">
 
 以檢視法求出圖 3.28 的節點電壓方程。
 
@@ -500,7 +501,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex9" title="Example 3.9：由檢視法建立網孔電流矩陣" source="課本 p.107" topic="網孔分析、檢視法">
+<PracticeCard id="ch3-ex9" type="example" title="Example 3.9：由檢視法建立網孔電流矩陣" source="課本 p.107" topic="網孔分析、檢視法">
 
 以檢視法寫出圖 3.29 的網孔電流方程。
 
@@ -531,7 +532,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr9" title="Practice Problem 3.9：網孔方程的檢視法" source="課本 p.108" topic="網孔分析、檢視法">
+<PracticeCard id="ch3-pr9" type="practice" title="Practice Problem 3.9：網孔方程的檢視法" source="課本 p.108" topic="網孔分析、檢視法">
 
 以檢視法求出圖 3.30 的網孔電流方程。
 
@@ -560,7 +561,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex10" title="Example 3.10：以 PSpice 求節點電壓" source="課本 p.103–104" topic="PSpice 直流節點分析">
+<PracticeCard id="ch3-ex10" type="example" title="Example 3.10：以 PSpice 求節點電壓" source="課本 p.103–104" topic="PSpice 直流節點分析">
 
 使用 PSpice 求圖 3.31 電路的節點電壓。
 
@@ -580,7 +581,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr10" title="Practice Problem 3.10：PSpice 節點電壓" source="課本 p.104" topic="PSpice 直流節點分析">
+<PracticeCard id="ch3-pr10" type="practice" title="Practice Problem 3.10：PSpice 節點電壓" source="課本 p.104" topic="PSpice 直流節點分析">
 
 對圖 3.33 的電路使用 PSpice，求節點電壓 $V_1$、$V_2$ 與 $V_3$。
 
@@ -601,7 +602,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex11" title="Example 3.11：以 PSpice 求受控源電路電流" source="課本 p.104–105" topic="PSpice 與受控電壓源">
+<PracticeCard id="ch3-ex11" type="example" title="Example 3.11：以 PSpice 求受控源電路電流" source="課本 p.104–105" topic="PSpice 與受控電壓源">
 
 在圖 3.34 的電路中，求電流 $i_1$、$i_2$ 與 $i_3$。
 
@@ -621,7 +622,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr11" title="Practice Problem 3.11：PSpice 支路電流" source="課本 p.105" topic="PSpice 直流支路電流">
+<PracticeCard id="ch3-pr11" type="practice" title="Practice Problem 3.11：PSpice 支路電流" source="課本 p.105" topic="PSpice 直流支路電流">
 
 使用 PSpice，求圖 3.36 電路中的 $i_1$、$i_2$ 與 $i_3$。
 
@@ -638,7 +639,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex12" title="Example 3.12：BJT 主動模式偏壓" source="課本 p.108" topic="BJT 直流分析">
+<PracticeCard id="ch3-ex12" type="example" title="Example 3.12：BJT 主動模式偏壓" source="課本 p.108" topic="BJT 直流分析">
 
 求圖 3.41 電晶體電路中的 $I_B$、$I_C$ 與 $v_o$。假設電晶體工作於主動模式，且 $\beta=50$。
 
@@ -678,7 +679,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr12" title="Practice Problem 3.12：BJT 輸出電壓與 VCE" source="課本 p.108" topic="BJT 直流分析">
+<PracticeCard id="ch3-pr12" type="practice" title="Practice Problem 3.12：BJT 輸出電壓與 VCE" source="課本 p.108" topic="BJT 直流分析">
 
 對圖 3.42 的電晶體電路，令 $\beta=100$、$V_{BE}=0.7\ \mathrm{V}$，求 $v_o$ 與 $V_{CE}$。
 
@@ -696,7 +697,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-ex13" title="Example 3.13：以網孔與節點法分析 BJT" source="課本 p.109–110" topic="BJT 網孔分析與節點分析">
+<PracticeCard id="ch3-ex13" type="example" title="Example 3.13：以網孔與節點法分析 BJT" source="課本 p.109–110" topic="BJT 網孔分析與節點分析">
 
 圖 3.43 的 BJT 電路中，$\beta=150$、$V_{BE}=0.7\ \mathrm{V}$。求輸出電壓 $v_o$。
 
@@ -742,7 +743,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch3-pr13" title="Practice Problem 3.13：BJT 輸出電壓與電流" source="課本 p.110" topic="BJT 直流分析">
+<PracticeCard id="ch3-pr13" type="practice" title="Practice Problem 3.13：BJT 輸出電壓與電流" source="課本 p.110" topic="BJT 直流分析">
 
 圖 3.45 的電晶體電路具有 $\beta=80$ 與 $V_{BE}=0.7\ \mathrm{V}$。求 $v_o$ 與 $I_o$。
 

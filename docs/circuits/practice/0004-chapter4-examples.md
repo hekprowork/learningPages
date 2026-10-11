@@ -30,9 +30,10 @@ description: 電路學第四章 電路定理 (Circuit Theorems) 互動題庫、�
     $$P_{\max} = \frac{V_{Th}^2}{4R_{Th}} = \frac{I_N^2 R_N}{4}$$
 :::
 
+<PracticeFilter prefix="ch4-" />
 <PracticeProgress :total="13" prefix="ch4-" />
 
-<PracticeCard id="ch4-ex-4-1" title="線性性質與比例常數關係分析" source="Example 4.1 · Slide P.7–9" topic="線性性質 (Linearity Property)">
+<PracticeCard id="ch4-ex-4-1" type="example" title="線性性質與比例常數關係分析" source="Example 4.1 · Slide P.7–9" topic="線性性質 (Linearity Property)">
 
 針對圖 4.2 所示電路，當輸入電壓源分別為 $v_s = 12\text{ V}$ 與 $v_s = 24\text{ V}$ 時，求解流經受控源支路之電流 $I_o$。
 
@@ -102,7 +103,7 @@ $$\text{當 } v_s = 24\text{ V 時：} I_o = \frac{6}{19}\text{ A} \approx 0.316
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-2" title="梯型網路之假定輸出反向推導法" source="Example 4.2 · Slide P.10–13" topic="線性性質 (Linearity Property)">
+<PracticeCard id="ch4-ex-4-2" type="example" title="梯型網路之假定輸出反向推導法" source="Example 4.2 · Slide P.10–13" topic="線性性質 (Linearity Property)">
 
 在圖 4.4 所示之電阻網路中，已知實際總電流源為 $I_s = 15\text{ A}$。請先假設負載輸出電流為 $I_o = 1\text{ A}$，利用線性電路的比例性質反推求得實際之 $I_o$ 值。
 
@@ -164,7 +165,7 @@ $$I_o = 3\text{ A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-3" title="雙獨立源電路之重疊定理分析" source="Example 4.3 · Slide P.19–22" topic="重疊定理 (Superposition Theorem)">
+<PracticeCard id="ch4-ex-4-3" type="example" title="雙獨立源電路之重疊定理分析" source="Example 4.3 · Slide P.19–22" topic="重疊定理 (Superposition Theorem)">
 
 利用重疊定理求解圖 4.6 電路中跨於 $4\ \Omega$ 電阻之端電壓 $v$。電路中包含一個 $6\text{ V}$ 獨立電壓源與一個 $3\text{ A}$ 獨立電流源。
 
@@ -211,7 +212,7 @@ $$v = v_1 + v_2 = 10\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-4" title="包含受控電壓源之重疊定理精確求解" source="Example 4.4 · Slide P.23–29" topic="重疊定理 (Superposition Theorem)">
+<PracticeCard id="ch4-ex-4-4" type="example" title="包含受控電壓源之重疊定理精確求解" source="Example 4.4 · Slide P.23–29" topic="重疊定理 (Superposition Theorem)">
 
 利用重疊定理求解圖 4.9 所示電路中流經 $1\ \Omega$ 電阻之電流 $i_o$。電路中包含 $4\text{ A}$ 獨立電流源、$20\text{ V}$ 獨立電壓源以及 $5i_o$ 相依電壓源。
 
@@ -269,7 +270,7 @@ $$i_o = -\frac{8}{17}\text{ A} \approx -0.4706\text{ A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-5" title="三獨立源電路之重疊定理三階響應分析" source="Example 4.5 · Slide P.30–35" topic="重疊定理 (Superposition Theorem)">
+<PracticeCard id="ch4-ex-4-5" type="example" title="三獨立源電路之重疊定理三階響應分析" source="Example 4.5 · Slide P.30–35" topic="重疊定理 (Superposition Theorem)">
 
 針對圖 4.12 所示包含三個獨立電源之電路，利用重疊原理求解流經中央 $3\ \Omega$ 電阻之電流 $i$。
 
@@ -330,7 +331,7 @@ $$i = i_1 + i_2 + i_3 = 2\text{ A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-6" title="電源轉換定理之逐步簡化與節點電壓求解" source="Example 4.6 · Slide P.45–49" topic="電源轉換 (Source Transformation)">
+<PracticeCard id="ch4-ex-4-6" type="example" title="電源轉換定理之逐步簡化與節點電壓求解" source="Example 4.6 · Slide P.45–49" topic="電源轉換 (Source Transformation)">
 
 利用電源轉換定理 (Source Transformation) 逐步簡化圖 4.17 所示電路，求跨於 $8\ \Omega$ 電阻兩端之電壓 $v_o$。
 
@@ -378,7 +379,7 @@ $$v_o = 3.2\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-7" title="包含受控源之電源轉換定理分析" source="Example 4.7 · Slide P.50–54" topic="電源轉換 (Source Transformation)">
+<PracticeCard id="ch4-ex-4-7" type="example" title="包含受控源之電源轉換定理分析" source="Example 4.7 · Slide P.50–54" topic="電源轉換 (Source Transformation)">
 
 使用電源轉換定理求解圖 4.20 電路中的未知電壓 $v_x$。電路中包含 $0.25v_x$ 相依電流源與各獨立電源。
 
@@ -436,7 +437,7 @@ $$v_x = 7.5\text{ V}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-8" title="戴維寧等效電路與多負載電阻電流求解" source="Example 4.8 · Slide P.64–70" topic="戴維寧定理 (Thevenin's Theorem)">
+<PracticeCard id="ch4-ex-4-8" type="example" title="戴維寧等效電路與多負載電阻電流求解" source="Example 4.8 · Slide P.64–70" topic="戴維寧定理 (Thevenin's Theorem)">
 
 求圖 4.27 所示電路在端點 $a-b$ 左側之戴維寧等效電路（求 $R_{Th}$ 與 $V_{Th}$）。並利用該等效電路，分別計算當接上負載電阻 $R_L = 6\ \Omega, 16\ \Omega, 36\ \Omega$ 時流經負載之電流 $I_L$。
 
@@ -497,7 +498,7 @@ $$R_L = 36\ \Omega \implies I_L = 0.75\text{ A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-9" title="含受控源之戴維寧等效電路分析" source="Example 4.9 · Slide P.71–76" topic="戴維寧定理 (Thevenin's Theorem)">
+<PracticeCard id="ch4-ex-4-9" type="example" title="含受控源之戴維寧等效電路分析" source="Example 4.9 · Slide P.71–76" topic="戴維寧定理 (Thevenin's Theorem)">
 
 求圖 4.31 所示電路在端點 $a-b$ 處的戴維寧等效電路（包含受控電壓源 $2v_x$ 與 $5\text{ A}$ 獨立電流源）。
 
@@ -553,7 +554,7 @@ $$V_{Th} = 20\text{ V},\quad R_{Th} = 6\ \Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-10" title="無獨立源（純受控源）電路之測試源法與負電阻" source="Example 4.10 · Slide P.81–87" topic="戴維寧定理 (Thevenin's Theorem)">
+<PracticeCard id="ch4-ex-4-10" type="example" title="無獨立源（純受控源）電路之測試源法與負電阻" source="Example 4.10 · Slide P.81–87" topic="戴維寧定理 (Thevenin's Theorem)">
 
 求圖 4.35(a) 所示電路在端點 $a-b$ 處的戴維寧等效電路。電路僅由電阻與受控電流源 $2i_x$ 組成，無任何獨立電源。
 
@@ -608,7 +609,7 @@ $$V_{Th} = 0\text{ V},\quad R_{Th} = -4\ \Omega$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-11" title="諾頓等效電路標準求解法" source="Example 4.11 · Slide P.101–106" topic="諾頓定理 (Norton's Theorem)">
+<PracticeCard id="ch4-ex-4-11" type="example" title="諾頓等效電路標準求解法" source="Example 4.11 · Slide P.101–106" topic="諾頓定理 (Norton's Theorem)">
 
 求解圖 4.39 所示電路在端點 $a-b$ 處的諾頓等效電路（求諾頓等效電阻 $R_N$ 與短路電流 $I_N$）。
 
@@ -656,7 +657,7 @@ $$R_N = 4\ \Omega,\quad I_N = 1\text{ A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-12" title="包含受控源之諾頓等效電路分析" source="Example 4.12 · Slide P.107–110" topic="諾頓定理 (Norton's Theorem)">
+<PracticeCard id="ch4-ex-4-12" type="example" title="包含受控源之諾頓等效電路分析" source="Example 4.12 · Slide P.107–110" topic="諾頓定理 (Norton's Theorem)">
 
 利用諾頓定理求解圖 4.43 所示電路在端點 $a-b$ 處的諾頓等效電阻 $R_N$ 與短路電流 $I_N$。電路中包含 $2i_x$ 相依電流源。
 
@@ -707,7 +708,7 @@ $$R_N = 5\ \Omega,\quad I_N = 7\text{ A}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-ex-4-13" title="最大功率轉移定理與最佳負載電阻設計" source="Example 4.13 · Slide P.117–121" topic="最大功率轉移 (Maximum Power Transfer)">
+<PracticeCard id="ch4-ex-4-13" type="example" title="最大功率轉移定理與最佳負載電阻設計" source="Example 4.13 · Slide P.117–121" topic="最大功率轉移 (Maximum Power Transfer)">
 
 求圖 4.50 電路中能獲得最大功率轉移之最佳負載電阻值 $R_L$，並計算該負載所能吸收的最大功率 $P_{\max}$。
 
@@ -758,7 +759,7 @@ $$P_{\max} = 13.44\text{ W}\ \left(\frac{121}{9}\text{ W}\right)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch4-hw-ch4" title="Chapter 4 課後作業題目清單與重點題庫索引" source="H.W. Index · Slide P.123–124" topic="第四章指定作業題庫索引" :hide-checkbox="true">
+<PracticeCard id="ch4-hw-ch4" type="homework" title="Chapter 4 課後作業題目清單與重點題庫索引" source="H.W. Index · Slide P.123–124" topic="第四章指定作業題庫索引" :hide-checkbox="true">
 
 Alexander & Sadiku 第四章 Circuit Theorems 課後指定作業清單與重點答案：
 

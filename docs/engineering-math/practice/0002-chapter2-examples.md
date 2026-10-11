@@ -18,11 +18,12 @@ description: 工程數學第二章 二階與高階常微分方程式 (Second-Ord
 - **降階法 (Reduction of Order)**：已知齊次解 $y_1(x)$，設 $y_2 = u(x) y_1(x)$，代入原式即可降階為一階 ODE 求解 $u'(x)$。
 :::
 
+<PracticeFilter prefix="math-ch2-" />
 <PracticeProgress :total="15" prefix="math-ch2-" />
 
 ## 2.4 常係數齊次線性微分方程式 (Characteristic Equations)
 
-<PracticeCard id="math-ch2-prob-1" title="二階常係數齊次 ODE（相異實根）" source="題庫 2.4 (1)" topic="常係數齊次 ODE">
+<PracticeCard id="math-ch2-prob-1" type="practice" title="二階常係數齊次 ODE（相異實根）" source="題庫 2.4 (1)" topic="常係數齊次 ODE">
 
 **題目**：
 
@@ -54,7 +55,7 @@ $$y(x) = C_1 e^{-2x} + C_2 e^{3x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-2" title="二階常係數齊次 ODE（實數重根）" source="題庫 2.4 (3)" topic="常係數齊次 ODE">
+<PracticeCard id="math-ch2-prob-2" type="practice" title="二階常係數齊次 ODE（實數重根）" source="題庫 2.4 (3)" topic="常係數齊次 ODE">
 
 **題目**：
 
@@ -86,7 +87,7 @@ $$y(x) = e^{-3x}(C_1 + C_2 x)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-3" title="二階常係數齊次 ODE（共軛複數根）" source="題庫 2.4 (5)" topic="常係數齊次 ODE">
+<PracticeCard id="math-ch2-prob-3" type="practice" title="二階常係數齊次 ODE（共軛複數根）" source="題庫 2.4 (5)" topic="常係數齊次 ODE">
 
 **題目**：
 
@@ -117,7 +118,7 @@ $$y(x) = e^{-5x}[C_1 \cos(x) + C_2 \sin(x)]$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-4" title="二階常係數齊次 ODE（根號共軛複數根）" source="題庫 2.4 (7)" topic="常係數齊次 ODE">
+<PracticeCard id="math-ch2-prob-4" type="practice" title="二階常係數齊次 ODE（根號共軛複數根）" source="題庫 2.4 (7)" topic="常係數齊次 ODE">
 
 **題目**：
 
@@ -148,7 +149,7 @@ $$y(x) = e^{-\frac{3}{2}x}\left[ C_1 \cos\left(\frac{3\sqrt{7}}{2}x\right) + C_2
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-5" title="二階常係數齊次 ODE（重根情況）" source="題庫 2.4 (9)" topic="常係數齊次 ODE">
+<PracticeCard id="math-ch2-prob-5" type="practice" title="二階常係數齊次 ODE（重根情況）" source="題庫 2.4 (9)" topic="常係數齊次 ODE">
 
 **題目**：
 
@@ -180,7 +181,7 @@ $$y(x) = e^{7x}(C_1 + C_2 x)$$
 
 ## 2.6 待定係數法與非齊次方程 (Undetermined Coefficients)
 
-<PracticeCard id="math-ch2-prob-6" title="非齊次 ODE 待定係數法（多項式非齊次項）" source="題庫 2.6 (7)" topic="待定係數法">
+<PracticeCard id="math-ch2-prob-6" type="practice" title="非齊次 ODE 待定係數法（多項式非齊次項）" source="題庫 2.6 (7)" topic="待定係數法">
 
 **題目**：
 
@@ -220,7 +221,7 @@ $$y(x) = C_1 e^{2x} + C_2 e^{-x} - x^2 + x - 4$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-7" title="非齊次 ODE 待定係數法（指數非齊次項）" source="題庫 2.6 (8)" topic="待定係數法">
+<PracticeCard id="math-ch2-prob-7" type="practice" title="非齊次 ODE 待定係數法（指數非齊次項）" source="題庫 2.6 (8)" topic="待定係數法">
 
 **題目**：
 
@@ -256,7 +257,7 @@ $$y(x) = C_1 e^{3x} + C_2 e^{-2x} - 2e^{2x}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-8" title="非齊次 ODE 待定係數法（三角函數非齊次項）" source="題庫 2.6 (12)" topic="待定係數法">
+<PracticeCard id="math-ch2-prob-8" type="practice" title="非齊次 ODE 待定係數法（三角函數非齊次項）" source="題庫 2.6 (12)" topic="待定係數法">
 
 **題目**：
 
@@ -297,7 +298,7 @@ $$y(x) = e^{-3x}(C_1 + C_2 x) + \frac{1}{2}\sin(3x)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-9" title="非齊次 ODE 待定係數法（含零特徵根升冪與指數混合項）" source="題庫 2.6 (14)" topic="待定係數法">
+<PracticeCard id="math-ch2-prob-9" type="practice" title="非齊次 ODE 待定係數法（含零特徵根升冪與指數混合項）" source="題庫 2.6 (14)" topic="待定係數法">
 
 **題目**：
 
@@ -342,7 +343,7 @@ $$y(x) = C_1 + C_2 e^{4x} - \frac{2}{3}x^3 - \frac{1}{2}x^2 - \frac{1}{4}x - \fr
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-10" title="非齊次 ODE 待定係數法（多項式與指數乘積型）" source="題庫 2.6 (18)" topic="待定係數法">
+<PracticeCard id="math-ch2-prob-10" type="practice" title="非齊次 ODE 待定係數法（多項式與指數乘積型）" source="題庫 2.6 (18)" topic="待定係數法">
 
 **題目**：
 
@@ -388,7 +389,7 @@ $$y(x) = C_1 e^{3x} + C_2 e^{-2x} - 2x e^x - \frac{1}{3}e^x$$
 
 ## 課堂精選範例與進階解法 (Lectures & Advanced Methods)
 
-<PracticeCard id="math-ch2-prob-11" title="二階常係數共振現象（特解共振乘 $x$）" source="Slide P7-P8 精選範例" topic="待定係數共振型">
+<PracticeCard id="math-ch2-prob-11" type="example" title="二階常係數共振現象（特解共振乘 $x$）" source="Slide P7-P8 精選範例" topic="待定係數共振型">
 
 **題目**：
 
@@ -427,7 +428,7 @@ $$y(x) = C_1 e^x + C_2 e^{-3x} + 2x e^x$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-12" title="簡諧振動與外力共振（微分運算子極限推導）" source="Slide P9-P10 精選範例" topic="運算子共振型">
+<PracticeCard id="math-ch2-prob-12" type="example" title="簡諧振動與外力共振（微分運算子極限推導）" source="Slide P9-P10 精選範例" topic="運算子共振型">
 
 **題目**：
 
@@ -461,7 +462,7 @@ $$y(x) = C_1 \cos(3x) + C_2 \sin(3x) + \frac{1}{6}x\sin(3x)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-13" title="參數變異法 (Variation of Parameters)" source="Slide P11-P12 精選範例" topic="參數變異法">
+<PracticeCard id="math-ch2-prob-13" type="example" title="參數變異法 (Variation of Parameters)" source="Slide P11-P12 精選範例" topic="參數變異法">
 
 **題目**：
 
@@ -501,7 +502,7 @@ $$y(x) = C_1 \cos(2x) + C_2 \sin(2x) + \cos(x) - \frac{1}{2}\sin(2x)\ln|\sec(x) 
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-14" title="柯西－尤拉方程式 (Euler-Cauchy Equation)" source="Slide P12-P13 精選範例" topic="柯西－尤拉方程式">
+<PracticeCard id="math-ch2-prob-14" type="example" title="柯西－尤拉方程式 (Euler-Cauchy Equation)" source="Slide P12-P13 精選範例" topic="柯西－尤拉方程式">
 
 **題目**：
 
@@ -536,7 +537,7 @@ $$y(x) = x^3 (C_1 + C_2 \ln x)$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch2-prob-15" title="降階法求第二個線性獨立解 (Reduction of Order)" source="Slide P14-P15 精選範例" topic="降階法">
+<PracticeCard id="math-ch2-prob-15" type="example" title="降階法求第二個線性獨立解 (Reduction of Order)" source="Slide P14-P15 精選範例" topic="降階法">
 
 **題目**：
 

@@ -35,11 +35,12 @@ description: "電路學第六章 電容與電感 (Capacitors and Inductors) 互�
 
 :::
 
+<PracticeFilter prefix="ch6-" />
 <PracticeProgress :total="30" prefix="ch6-" />
 
 ---
 
-<PracticeCard id="ch6-ex1" title="電容器儲存電荷量與靜電能量計算" source="Example 6.1 · Page 224" topic="電容基本特性與儲能 (Capacitor Charge & Energy)">
+<PracticeCard id="ch6-ex1" type="example" title="電容器儲存電荷量與靜電能量計算" source="Example 6.1 · Page 224" topic="電容基本特性與儲能 (Capacitor Charge & Energy)">
 
 (a) 計算跨接 $20\text{ V}$ 電壓之 $3\text{ pF}$ 電容器所儲存的電荷量 $q$。
 
@@ -87,7 +88,7 @@ $$\text{(b) } w = 600\text{ pJ}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr1" title="電容器端電壓與儲能反求計算" source="Practice Problem 6.1 · Page 224" topic="電容基本特性與儲能 (Capacitor Charge & Energy)">
+<PracticeCard id="ch6-pr1" type="practice" title="電容器端電壓與儲能反求計算" source="Practice Problem 6.1 · Page 224" topic="電容基本特性與儲能 (Capacitor Charge & Energy)">
 
 若一個 $4.5\ \mu\text{F}$ 電容器其中一個極板上的電荷量為 $0.12\text{ mC}$，試求其兩端電壓 $v$ 為何？此時電容器儲存了多少能量 $w$？
 
@@ -129,7 +130,7 @@ $$v = \frac{80}{3}\text{ V} \approx 26.67\text{ V},\quad w = 1.6\text{ mJ}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex2" title="弦波電壓激勵下電容器電流響應" source="Example 6.2 · Page 224" topic="電容時域微分特性 (Capacitor v-i Relation)">
+<PracticeCard id="ch6-ex2" type="example" title="弦波電壓激勵下電容器電流響應" source="Example 6.2 · Page 224" topic="電容時域微分特性 (Capacitor v-i Relation)">
 
 某 $5\ \mu\text{F}$ 電容器兩端之端電壓為 $v(t) = 10\cos(6000t)\text{ V}$，試計算流經該電容器之電流 $i(t)$。
 
@@ -167,7 +168,7 @@ $$i(t) = -0.3\sin(6000t)\text{ A}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr2" title="正弦電壓源驅動下之電容電流推導" source="Practice Problem 6.2 · Page 225" topic="電容時域微分特性 (Capacitor v-i Relation)">
+<PracticeCard id="ch6-pr2" type="practice" title="正弦電壓源驅動下之電容電流推導" source="Practice Problem 6.2 · Page 225" topic="電容時域微分特性 (Capacitor v-i Relation)">
 
 若某 $10\ \mu\text{F}$ 電容器連接至電壓源 $v(t) = 75\sin(2000t)\text{ V}$，試求流經該電容器之電流 $i(t)$。
 
@@ -207,7 +208,7 @@ $$i(t) = 1.5\cos(2000t)\text{ A}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex3" title="指數衰減電流激勵下電容器電壓積分響應" source="Example 6.3 · Page 225" topic="電容時域積分特性 (Capacitor Integral Relation)">
+<PracticeCard id="ch6-ex3" type="example" title="指數衰減電流激勵下電容器電壓積分響應" source="Example 6.3 · Page 225" topic="電容時域積分特性 (Capacitor Integral Relation)">
 
 若流經某 $2\ \mu\text{F}$ 電容器之電流為 $i(t) = 6e^{-3000t}\text{ mA}$，且初始電壓為零（$v(0) = 0$），試求該電容器兩端之端電壓 $v(t)$。
 
@@ -250,7 +251,7 @@ $$v(t) = (1 - e^{-3000t})\text{ V}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr3" title="正弦交變電流激勵下指定時刻電容電壓計算" source="Practice Problem 6.3 · Page 225" topic="電容時域積分特性 (Capacitor Integral Relation)">
+<PracticeCard id="ch6-pr3" type="practice" title="正弦交變電流激勵下指定時刻電容電壓計算" source="Practice Problem 6.3 · Page 225" topic="電容時域積分特性 (Capacitor Integral Relation)">
 
 流經某 $100\ \mu\text{F}$ 電容器之電流為 $i(t) = 50\sin(120\pi t)\text{ mA}$。設初始電壓 $v(0) = 0\text{ V}$，試計算在 $t = 1\text{ ms}$ 與 $t = 5\text{ ms}$ 時該電容器兩端之端電壓。
 
@@ -308,7 +309,7 @@ $$v(1\text{ ms}) = 93.14\text{ mV},\quad v(5\text{ ms}) = 1.736\text{ V}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex4" title="分段折線電壓波形之電容電流推導與繪圖" source="Example 6.4 · Page 225" topic="電容波形分析 (Capacitor Waveform Derivative)">
+<PracticeCard id="ch6-ex4" type="example" title="分段折線電壓波形之電容電流推導與繪圖" source="Example 6.4 · Page 225" topic="電容波形分析 (Capacitor Waveform Derivative)">
 
 某 $200\ \mu\text{F}$ 電容器兩端之端電壓波形如圖 6.9 所示。試求流經該電容器之電流 $i(t)$ 並繪出其電流波形。
 
@@ -389,7 +390,7 @@ $$i(t) = \begin{cases}
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr4" title="給定電流波形求解特定時刻電容電壓" source="Practice Problem 6.4 · Page 226" topic="電容波形分析 (Capacitor Waveform Integral)">
+<PracticeCard id="ch6-pr4" type="practice" title="給定電流波形求解特定時刻電容電壓" source="Practice Problem 6.4 · Page 226" topic="電容波形分析 (Capacitor Waveform Integral)">
 
 一個初始未充電（$v(0) = 0$）的 $1\text{ mF}$ 電容器，其流經之電流波形如圖 6.11 所示。試計算在 $t = 2\text{ ms}$ 與 $t = 5\text{ ms}$ 時該電容器兩端之端電壓。
 
@@ -448,7 +449,7 @@ $$v(2\text{ ms}) = 100\text{ mV},\quad v(5\text{ ms}) = 400\text{ mV}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex5" title="直流穩態下電阻電容電路之端電壓與儲能分析" source="Example 6.5 · Page 226" topic="直流穩態電容等效 (DC Steady State Analysis)">
+<PracticeCard id="ch6-ex5" type="example" title="直流穩態下電阻電容電路之端電壓與儲能分析" source="Example 6.5 · Page 226" topic="直流穩態電容等效 (DC Steady State Analysis)">
 
 在直流 (dc) 穩態條件下，求圖 6.12(a) 中各電容器所儲存的靜電能量。
 
@@ -505,7 +506,7 @@ $$w_1 = 16\text{ mJ},\quad w_2 = 128\text{ mJ}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr5" title="橋接網絡直流穩態電容儲能計算" source="Practice Problem 6.5 · Page 226" topic="直流穩態電容等效 (DC Steady State Analysis)">
+<PracticeCard id="ch6-pr5" type="practice" title="橋接網絡直流穩態電容儲能計算" source="Practice Problem 6.5 · Page 226" topic="直流穩態電容等效 (DC Steady State Analysis)">
 
 在直流 (dc) 穩態條件下，試求圖 6.13 所示電路中各電容器所儲存的能量。
 
@@ -577,7 +578,7 @@ $$w_{20\mu\text{F}} = 20.25\text{ mJ},\quad w_{30\mu\text{F}} = 3.375\text{ mJ}$
 </template>
 
 </PracticeCard>
-<PracticeCard id="ch6-ex6" title="電容器串並聯網路之等效電容化簡" source="Example 6.6 · Page 228" topic="電容器串聯與並聯 (Series and Parallel Capacitors)">
+<PracticeCard id="ch6-ex6" type="example" title="電容器串並聯網路之等效電容化簡" source="Example 6.6 · Page 228" topic="電容器串聯與並聯 (Series and Parallel Capacitors)">
 
 求圖 6.16 電路中端點 $a$ 與 $b$ 之間所見的等效電容 $C_{eq}$。
 
@@ -621,7 +622,7 @@ $$C_{eq} = 20\ \mu\text{F}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr6" title="階梯型電容網路之等效電容求解" source="Practice Problem 6.6 · Page 229" topic="電容器串聯與並聯 (Series and Parallel Capacitors)">
+<PracticeCard id="ch6-pr6" type="practice" title="階梯型電容網路之等效電容求解" source="Practice Problem 6.6 · Page 229" topic="電容器串聯與並聯 (Series and Parallel Capacitors)">
 
 求圖 6.17 電路端點處所見的等效電容 $C_{eq}$。
 
@@ -671,7 +672,7 @@ $$C_{eq} = 40\ \mu\text{F}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex7" title="電容串並聯電路之各元件端電壓與電荷分佈分析" source="Example 6.7 · Page 229" topic="電容器串並聯與電壓分配 (Capacitor Voltage & Charge Distribution)">
+<PracticeCard id="ch6-ex7" type="example" title="電容串並聯電路之各元件端電壓與電荷分佈分析" source="Example 6.7 · Page 229" topic="電容器串並聯與電壓分配 (Capacitor Voltage & Charge Distribution)">
 
 針對圖 6.18 所示之電路，求跨接於各電容器兩端的端電壓 $v_1$、$v_2$ 與 $v_3$。
 
@@ -740,7 +741,7 @@ $$v_1 = 15\text{ V},\quad v_2 = 10\text{ V},\quad v_3 = 5\text{ V}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr7" title="階梯型電容網路各元件端電壓分佈計算" source="Practice Problem 6.7 · Page 229" topic="電容器串並聯與電壓分配 (Capacitor Voltage & Charge Distribution)">
+<PracticeCard id="ch6-pr7" type="practice" title="階梯型電容網路各元件端電壓分佈計算" source="Practice Problem 6.7 · Page 229" topic="電容器串並聯與電壓分配 (Capacitor Voltage & Charge Distribution)">
 
 求圖 6.20 電路中跨於各電容器兩端的電壓 $v_1$、$v_2$、$v_3$ 與 $v_4$。
 
@@ -808,7 +809,7 @@ $$v_1 = 45\text{ V},\quad v_2 = 45\text{ V},\quad v_3 = 15\text{ V},\quad v_4 = 
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex8" title="電感電流微分特性與磁場儲能計算" source="Example 6.8 · Page 232" topic="電感的時域特性與儲能 (Inductor v-i Relation & Stored Energy)">
+<PracticeCard id="ch6-ex8" type="example" title="電感電流微分特性與磁場儲能計算" source="Example 6.8 · Page 232" topic="電感的時域特性與儲能 (Inductor v-i Relation & Stored Energy)">
 
 流經 $0.1\text{ H}$ 電感之電流為 $i(t) = 10t e^{-5t}\text{ A}$。試求該電感兩端的端電壓 $v(t)$ 以及其所儲存的磁場能量 $w(t)$。
 
@@ -857,7 +858,7 @@ $$w(t) = 5t^2 e^{-10t}\text{ J}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr8" title="正弦交流電流激勵下電感電壓與儲能分析" source="Practice Problem 6.8 · Page 233" topic="電感的時域特性與儲能 (Inductor v-i Relation & Stored Energy)">
+<PracticeCard id="ch6-pr8" type="practice" title="正弦交流電流激勵下電感電壓與儲能分析" source="Practice Problem 6.8 · Page 233" topic="電感的時域特性與儲能 (Inductor v-i Relation & Stored Energy)">
 
 若流經 $1\text{ mH}$ 電感的電流為 $i(t) = 60\cos(100t)\text{ mA}$，試求該電感兩端的端電壓 $v(t)$ 以及其所儲存的磁場能量 $w(t)$。
 
@@ -902,7 +903,7 @@ $$w(t) = 1.8\cos^2(100t)\ \mu\text{J}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex9" title="電壓激勵下電感電流積分與儲能計算" source="Example 6.9 · Page 233" topic="電感的時域積分特性與儲能 (Inductor Integral Relation & Energy)">
+<PracticeCard id="ch6-ex9" type="example" title="電壓激勵下電感電流積分與儲能計算" source="Example 6.9 · Page 233" topic="電感的時域積分特性與儲能 (Inductor Integral Relation & Energy)">
 
 若跨於 $5\text{ H}$ 電感兩端的電壓為：
 $$
@@ -962,7 +963,7 @@ $$\text{在 } t = 5\text{ s 時：} w = 156.25\text{ kJ}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr9" title="線性電壓激勵下電感電流與儲能計算" source="Practice Problem 6.9 · Page 233" topic="電感的時域積分特性與初始條件 (Inductor Current with Initial Value)">
+<PracticeCard id="ch6-pr9" type="practice" title="線性電壓激勵下電感電流與儲能計算" source="Practice Problem 6.9 · Page 233" topic="電感的時域積分特性與初始條件 (Inductor Current with Initial Value)">
 
 某 $2\text{ H}$ 電感的端電壓為 $v(t) = 10(1 - t)\text{ V}$。假設初始電流 $i(0) = 2\text{ A}$，試求在 $t = 4\text{ s}$ 時流經該電感的電流 $i(4)$，以及在 $t = 4\text{ s}$ 時電感所儲存的能量 $w(4)$。
 
@@ -1012,7 +1013,7 @@ $$w(4) = 324\text{ J}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex10" title="直流條件下含電容與電感電路之穩態響應與儲能分析" source="Example 6.10 · Page 234" topic="直流穩態電路分析 (DC Steady State with L & C)">
+<PracticeCard id="ch6-ex10" type="example" title="直流條件下含電容與電感電路之穩態響應與儲能分析" source="Example 6.10 · Page 234" topic="直流穩態電路分析 (DC Steady State with L & C)">
 
 考慮圖 6.27(a) 所示之電路。在直流條件 (dc conditions) 下，求：
 
@@ -1072,7 +1073,7 @@ $$\text{(b) } w_C = 50\text{ J},\quad w_L = 4\text{ J}$$
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr10" title="直流激勵電路中電容與電感之穩態響應與儲存能量" source="Practice Problem 6.10 · Page 234" topic="直流穩態電路分析 (DC Steady State with L & C)">
+<PracticeCard id="ch6-pr10" type="practice" title="直流激勵電路中電容與電感之穩態響應與儲存能量" source="Practice Problem 6.10 · Page 234" topic="直流穩態電路分析 (DC Steady State with L & C)">
 
 在直流 (dc) 條件下，求圖 6.28 所示電路中之電容電壓 $v_C$、電感電流 $i_L$，以及電容器與電感器各自儲存的能量。
 
@@ -1144,7 +1145,7 @@ title: "電路學 Chapter 6 Part 3A: 電感串並聯與響應分析"
 
 ---
 
-<PracticeCard id="ch6-ex11" title="Example 6.11: Equivalent Inductance">
+<PracticeCard id="ch6-ex11" type="example" title="Example 6.11: Equivalent Inductance">
 
 ### 題目 (Problem)
 Find the equivalent inductance of the circuit shown in Fig. 6.31.
@@ -1176,7 +1177,7 @@ $$L_{\text{eq}} = 18\text{ H}$$
 
 ---
 
-<PracticeCard id="ch6-pr11" title="Practice Problem 6.11: Inductive Ladder Network">
+<PracticeCard id="ch6-pr11" type="practice" title="Practice Problem 6.11: Inductive Ladder Network">
 
 ### 題目 (Problem)
 Calculate the equivalent inductance for the inductive ladder network in Fig. 6.32.
@@ -1201,7 +1202,7 @@ $$L_{\text{eq}} = 25\text{ mH}$$
 
 ---
 
-<PracticeCard id="ch6-ex12" title="Example 6.12: Parallel Inductors Response">
+<PracticeCard id="ch6-ex12" type="example" title="Example 6.12: Parallel Inductors Response">
 
 ### 題目 (Problem)
 For the circuit in Fig. 6.33, $i(t) = 4(2 - e^{-10t})\text{ mA}$. If $i_2(0) = -1\text{ mA}$, find: 
@@ -1246,7 +1247,7 @@ For the circuit in Fig. 6.33, $i(t) = 4(2 - e^{-10t})\text{ mA}$. If $i_2(0) = -
 
 ---
 
-<PracticeCard id="ch6-pr12" title="Practice Problem 6.12: Dynamic Inductor Network">
+<PracticeCard id="ch6-pr12" type="practice" title="Practice Problem 6.12: Dynamic Inductor Network">
 
 ### 題目 (Problem)
 In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\text{ A}$, find: 
@@ -1275,7 +1276,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 # Chapter 6 Part 3B: 運算放大器應用 (Integrators, Differentiators, and Analog Computers)
 
-<PracticeCard id="ch6-ex13" title="Example 6.13: 加法積分器輸出電壓計算 (Summing Integrator Analysis)" source="Example 6.13 · Page 237" topic="加法積分器 (Summing Integrator)">
+<PracticeCard id="ch6-ex13" type="example" title="Example 6.13: 加法積分器輸出電壓計算 (Summing Integrator Analysis)" source="Example 6.13 · Page 237" topic="加法積分器 (Summing Integrator)">
 
 如果  = 10 \cos(2t)\text{ mV}$且  = 0.5t\text{ mV}$，求圖 6.36 運算放大器電路中的輸出電壓 $。假設跨越電容器之初始電壓為零。
 
@@ -1305,7 +1306,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr13" title="Practice Problem 6.13: 理想積分器階躍響應分析 (Integrator Response)" source="Practice Problem 6.13 · Page 237" topic="積分器響應 (Integrator Step Response)">
+<PracticeCard id="ch6-pr13" type="practice" title="Practice Problem 6.13: 理想積分器階躍響應分析 (Integrator Response)" source="Practice Problem 6.13 · Page 237" topic="積分器響應 (Integrator Step Response)">
 
 圖 6.35(b) 中的積分器具有  = 100\text{ k}\Omega$、 = 20\ \mu\text{F}$。當在  = 0$時施加一直流電壓 .5\text{ mV}$，求其輸出電壓。假設運算放大器最初已歸零 (nulled)。
 
@@ -1333,7 +1334,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex14" title="Example 6.14: 微分器輸出波形繪製 (Differentiator Output Sketch)" source="Example 6.14 · Page 239" topic="微分器波形 (Differentiator Output Waveform)">
+<PracticeCard id="ch6-ex14" type="example" title="Example 6.14: 微分器輸出波形繪製 (Differentiator Output Sketch)" source="Example 6.14 · Page 239" topic="微分器波形 (Differentiator Output Waveform)">
 
 繪製圖 6.38(a) 電路在給定輸入電壓（圖 6.38(b)）下的輸出電壓波形。設 (0) = 0$。
 
@@ -1370,7 +1371,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr14" title="Practice Problem 6.14: 微分器斜坡輸入響應 (Differentiator Response)" source="Practice Problem 6.14 · Page 239" topic="微分器斜坡響應 (Differentiator Ramp Response)">
+<PracticeCard id="ch6-pr14" type="practice" title="Practice Problem 6.14: 微分器斜坡輸入響應 (Differentiator Response)" source="Practice Problem 6.14 · Page 239" topic="微分器斜坡響應 (Differentiator Ramp Response)">
 
 圖 6.37 中的微分器具有  = 100\text{ k}\Omega$與  = 0.1\ \mu\text{F}$。給定斜坡輸入 (t) = 1.25t\text{ V}$，求輸出電壓$。
 
@@ -1402,7 +1403,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 </PracticeCard>
 
-<PracticeCard id="ch6-ex15" title="Example 6.15: 類比計算機電路合成 (Analog Computer Circuit Design)" source="Example 6.15 · Page 242" topic="類比計算機 (Analog Computer)">
+<PracticeCard id="ch6-ex15" type="example" title="Example 6.15: 類比計算機電路合成 (Analog Computer Circuit Design)" source="Example 6.15 · Page 242" topic="類比計算機 (Analog Computer)">
 
 設計一個類比計算機電路以求解下列二階微分方程式：
 19942\frac{d^2 v_o}{dt^2} + 2\frac{dv_o}{dt} + v_o = 10 \sin(4t), \quad t > 019942
@@ -1435,7 +1436,7 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 </PracticeCard>
 
-<PracticeCard id="ch6-pr15" title="Practice Problem 6.15: 二階類比計算機電路設計 (Analog Computer Synthesis)" source="Practice Problem 6.15 · Page 242" topic="類比計算機合成 (Analog Computer Synthesis)">
+<PracticeCard id="ch6-pr15" type="practice" title="Practice Problem 6.15: 二階類比計算機電路設計 (Analog Computer Synthesis)" source="Practice Problem 6.15 · Page 242" topic="類比計算機合成 (Analog Computer Synthesis)">
 
 設計一個類比計算機電路以求解下列二階微分方程式：
 19942\frac{d^2 v_o}{dt^2} + 3\frac{dv_o}{dt} + 2v_o = 4 \cos(10t), \quad t > 019942
@@ -1465,4 +1466,3 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 </template>
 
 </PracticeCard>
-

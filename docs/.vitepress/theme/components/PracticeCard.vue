@@ -1,7 +1,17 @@
 <template>
-  <div :id="'card-' + id" class="practice-card" :class="{ 'is-done': isDone }">
+  <div
+    :id="'card-' + id"
+    class="practice-card"
+    :class="{ 'is-done': isDone }"
+    data-practice-card
+    :data-practice-id="id"
+    :data-practice-type="cardType"
+    :data-practice-trackable="hideCheckbox ? 'false' : 'true'"
+    :data-practice-done="isDone ? 'true' : 'false'"
+  >
     <div class="practice-card-header">
       <div class="practice-card-meta">
+        <span class="practice-badge practice-badge--type">{{ typeLabel }}</span>
         <span v-if="source" class="practice-badge practice-badge--source">{{ source }}</span>
         <span v-if="topic" class="practice-badge practice-badge--topic">{{ topic }}</span>
       </div>
@@ -34,11 +44,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
+import {
+  isPracticeCardType,
+  PRACTICE_TYPE_LABELS,
+  type PracticeCardType
+} from './practice-filter'
 
 const props = withDefaults(
   defineProps<{
     id: string
+    type: PracticeCardType
     title?: string
     source?: string
     topic?: string
@@ -54,25 +70,43 @@ const props = withDefaults(
 
 const isDone = ref(false)
 
+// Every card must be explicitly classified in Markdown. Failing here makes a
+// typo visible during the VitePress build instead of silently misclassifying it.
+const cardType = computed<PracticeCardType>(() => {
+  if (!isPracticeCardType(props.type)) {
+    throw new Error(
+      `PracticeCard "${props.id}" has an invalid type "${String(props.type)}".`
+    )
+  }
+  return props.type
+})
+const typeLabel = computed(() => {
+  const label = PRACTICE_TYPE_LABELS[cardType.value]
+  return `${label.zh} ${label.en}`
+})
+
 const getStorageKey = () => props.id
 
+const handleProgress = (e: Event) => {
+  if (typeof window === 'undefined') return
+  const custom = e as CustomEvent<{ reset?: boolean; id?: string; done?: boolean }>
+  const key = getStorageKey()
+  if (custom.detail?.reset) {
+    isDone.value = localStorage.getItem(key) === 'true'
+  } else if (custom.detail?.id === props.id) {
+    isDone.value = !!custom.detail.done
+  }
+}
+
 onMounted(() => {
+  if (typeof window === 'undefined') return
   const key = getStorageKey()
   isDone.value = localStorage.getItem(key) === 'true'
-
-  const handleProgress = (e: Event) => {
-    const custom = e as CustomEvent
-    if (custom.detail?.reset) {
-      isDone.value = localStorage.getItem(key) === 'true'
-    } else if (custom.detail?.id === props.id) {
-      isDone.value = !!custom.detail.done
-    }
-  }
-
   window.addEventListener('practice-progress', handleProgress)
-  onUnmounted(() => {
-    window.removeEventListener('practice-progress', handleProgress)
-  })
+})
+
+onUnmounted(() => {
+  if (typeof window !== 'undefined') window.removeEventListener('practice-progress', handleProgress)
 })
 
 const onToggle = (e: Event) => {
@@ -96,6 +130,7 @@ const onToggle = (e: Event) => {
 
 <style scoped>
 .practice-card {
+  scroll-margin-top: calc(48px + 7rem);
   margin: 1.5rem 0;
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--vp-c-border);
@@ -103,6 +138,18 @@ const onToggle = (e: Event) => {
   background-color: var(--vp-c-bg);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  .practice-card {
+    scroll-margin-top: calc(var(--vp-nav-height) + 48px + 5rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .practice-card {
+    scroll-margin-top: calc(var(--vp-nav-height) + 5rem);
+  }
 }
 
 .practice-card.is-done {
@@ -140,6 +187,12 @@ const onToggle = (e: Event) => {
 .practice-badge--source {
   background-color: var(--vp-c-text-1);
   color: var(--vp-c-bg);
+}
+
+.practice-badge--type {
+  color: var(--vp-c-text-1);
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-text-1);
 }
 
 .practice-badge--topic {

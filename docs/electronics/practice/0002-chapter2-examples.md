@@ -35,9 +35,10 @@ description: 電子學第二章 運算放大器 (Operational Amplifiers) 課本�
   - 壓擺率 (Slew Rate)：$\text{SR} = \left.\frac{dv_O}{dt}\right|_{\max}$，全功率頻寬 $f_M = \frac{\text{SR}}{2\pi V_{omax}}$。
 :::
 
+<PracticeFilter prefix="elec-ch2-" />
 <PracticeProgress :total="20" prefix="elec-ch2-" />
 
-<PracticeCard id="elec-ch2-prac-2-1" title="運算放大器端點引腳數與多組封裝 (Single/Quad Op-Amp Pinout)" source="Exercise 2.1 · Textbook P60" topic="理想運算放大器基礎">
+<PracticeCard id="elec-ch2-prac-2-1" type="exercise" title="運算放大器端點引腳數與多組封裝 (Single/Quad Op-Amp Pinout)" source="Exercise 2.1 · Textbook P60" topic="理想運算放大器基礎">
 
 試由運算放大器之訊號端點與電源端點定義，回答下列問題：
 
@@ -83,7 +84,7 @@ description: 電子學第二章 運算放大器 (Operational Amplifiers) 課本�
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-1" title="有限開路增益對反相放大器增益誤差與虛擬接地之影響" source="Example 2.1 · Textbook P68" topic="反相放大器組態">
+<PracticeCard id="elec-ch2-ex-2-1" type="example" title="有限開路增益對反相放大器增益誤差與虛擬接地之影響" source="Example 2.1 · Textbook P68" topic="反相放大器組態">
 
 考慮如圖 2.5 所示之標準反相放大器組態，外接電阻 $R_1 = 1\text{ k}\Omega$，$R_2 = 100\text{ k}\Omega$，其理想閉迴路增益為 $-\frac{R_2}{R_1} = -100\text{ V/V}$：
 
@@ -166,7 +167,7 @@ description: 電子學第二章 運算放大器 (Operational Amplifiers) 課本�
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-2" title="高輸入阻抗與大增益反相放大器之 T 型回授網路設計" source="Example 2.2 · Textbook P69-P70" topic="T 型回授網路">
+<PracticeCard id="elec-ch2-ex-2-2" type="example" title="高輸入阻抗與大增益反相放大器之 T 型回授網路設計" source="Example 2.2 · Textbook P69-P70" topic="T 型回授網路">
 
 在傳統反相放大器中，欲同時達成高輸入電阻（如 $R_{in} = 1\text{ M}\Omega$）與大電壓增益（如 $G = -100\text{ V/V}$），需要高達 $100\text{ M}\Omega$ 的回授電阻，此在 IC 與 PCB 實作中極不切實際。圖 2.8 提出了具備 T 型電阻網路（$R_2, R_3, R_4$）的回授架構：
 
@@ -236,7 +237,7 @@ description: 電子學第二章 運算放大器 (Operational Amplifiers) 課本�
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-9" title="多訊號源重疊定理 (Superposition) 於運算放大器電路之分析" source="Exercise 2.9 · Textbook P77" topic="重疊定理與加法電路">
+<PracticeCard id="elec-ch2-prac-2-9" type="exercise" title="多訊號源重疊定理 (Superposition) 於運算放大器電路之分析" source="Exercise 2.9 · Textbook P77" topic="重疊定理與加法電路">
 
 考慮如圖 E2.9 所示之具雙輸入訊號源 $v_1$ 與 $v_2$ 的運算放大器電路。假設運算放大器為理想，試運用**重疊定理 (Superposition Principle)** 求出輸出電壓 $v_O$ 關於輸入訊號 $v_1$ 與 $v_2$ 的線性組合表示式。
 
@@ -278,7 +279,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-15" title="差動放大器之差模增益、差模輸入阻抗與 CMRR 計算" source="Exercise 2.15 · Textbook P83" topic="差動放大器">
+<PracticeCard id="elec-ch2-prac-2-15" type="exercise" title="差動放大器之差模增益、差模輸入阻抗與 CMRR 計算" source="Exercise 2.15 · Textbook P83" topic="差動放大器">
 
 考慮如圖 2.16 所示之經典單運算放大器差動放大器電路，其電阻值為 $R_1 = R_3 = 2\text{ k}\Omega$，$R_2 = R_4 = 200\text{ k}\Omega$：
 
@@ -330,7 +331,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-3" title="三運算放大器儀表放大器 (Instrumentation Amplifier) 之連續可調增益設計" source="Example 2.3 · Textbook P85-P86" topic="儀表放大器">
+<PracticeCard id="elec-ch2-ex-2-3" type="example" title="三運算放大器儀表放大器 (Instrumentation Amplifier) 之連續可調增益設計" source="Example 2.3 · Textbook P85-P86" topic="儀表放大器">
 
 儀表放大器廣泛應用於生醫感測與微弱差動量測。圖 2.20(b) 所示為經典的三運算放大器儀表放大器電路，其差模增益由單一電阻 $2R_1$ 調控：
 
@@ -386,7 +387,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-4" title="一階主動低通濾波器 (STC 積分器) 之轉移函數、波德圖與參數設計" source="Example 2.4 · Textbook P89-P90" topic="主動濾波器與積分器">
+<PracticeCard id="elec-ch2-ex-2-4" type="example" title="一階主動低通濾波器 (STC 積分器) 之轉移函數、波德圖與參數設計" source="Example 2.4 · Textbook P89-P90" topic="主動濾波器與積分器">
 
 考慮如圖 2.23 所示之運算放大器電路，其回授網路為電阻 $R_2$ 與電容 $C_2$ 並聯：
 
@@ -441,7 +442,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-5" title="光電探測器轉阻積分放大電路設計與積分頻率計算" source="Example 2.5 · Textbook P92" topic="光電信號放大">
+<PracticeCard id="elec-ch2-ex-2-5" type="example" title="光電探測器轉阻積分放大電路設計與積分頻率計算" source="Example 2.5 · Textbook P92" topic="光電信號放大">
 
 在微弱光強度量測中，光電探測器（Photodetector）常以電流源並聯內阻的模型表示。如圖 2.25 所示，探測器產生頻率 $10\text{ kHz}$、峰值振幅 $10\ \mu\text{A}$ 之正弦電流訊號 $i_s(t)$，內阻為 $R_s = 5\text{ k}\Omega$。該訊號送入米勒積分器進行放大與積分：
 
@@ -494,7 +495,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-6" title="米勒積分器之脈衝暫態響應與並聯回授電阻 RF 之穩態與飽和分析" source="Example 2.6 · Textbook P93-P94" topic="米勒積分器暫態響應">
+<PracticeCard id="elec-ch2-ex-2-6" type="example" title="米勒積分器之脈衝暫態響應與並聯回授電阻 RF 之穩態與飽和分析" source="Example 2.6 · Textbook P93-P94" topic="米勒積分器暫態響應">
 
 如圖 2.27(a) 所示，將振幅 $1\text{ V}$、寬度 $1\text{ ms}$ 之單一矩形電壓脈衝輸入至米勒積分器，已知 $R = 10\text{ k}\Omega$，$C = 10\text{ nF}$，運算放大器之輸出飽和電壓為 $\pm 13\text{ V}$：
 
@@ -553,7 +554,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-18" title="對稱方波輸入米勒積分器之三角波輸出時間常數設計" source="Exercise 2.18 · Textbook P97" topic="米勒積分器應用">
+<PracticeCard id="elec-ch2-prac-2-18" type="exercise" title="對稱方波輸入米勒積分器之三角波輸出時間常數設計" source="Exercise 2.18 · Textbook P97" topic="米勒積分器應用">
 
 將一個峰對峰值為 $5\text{ V}$（即 $\pm 2.5\text{ V}$）、平均值為 $0\text{ V}$、週期為 $T = 2\ \mu\text{s}$ 的對稱方波電壓輸入至理想米勒積分器。試設計積分器之時間常數 $CR$，使輸出端產生峰對峰值恰為 $5\text{ V}$ 的對稱三角波。
 
@@ -593,7 +594,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-21" title="輸入補償電壓 (Input Offset Voltage) 對電壓轉移特性曲線之平移效應" source="Exercise 2.21 · Textbook P98" topic="直流非理想性 (DC Imperfections)">
+<PracticeCard id="elec-ch2-prac-2-21" type="exercise" title="輸入補償電壓 (Input Offset Voltage) 對電壓轉移特性曲線之平移效應" source="Exercise 2.21 · Textbook P98" topic="直流非理想性 (DC Imperfections)">
 
 利用圖 2.29 所示之輸入補償電壓等效電路模型，考慮開路直流增益 $A_0 = 10^4\text{ V/V}$、輸出飽和電壓為 $\pm 10\text{ V}$ 且具有輸入補償電壓 $V_{OS} = +5\text{ mV}$ 的運算放大器：
 
@@ -641,7 +642,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-22" title="輸入補償電壓 Vos 在大增益反相放大器之輸出直流偏移與最大動態範圍" source="Exercise 2.22 · Textbook P100" topic="直流非理想性 (DC Imperfections)">
+<PracticeCard id="elec-ch2-prac-2-22" type="exercise" title="輸入補償電壓 Vos 在大增益反相放大器之輸出直流偏移與最大動態範圍" source="Exercise 2.22 · Textbook P100" topic="直流非理想性 (DC Imperfections)">
 
 考慮一個以標稱增益 $1000\text{ V/V}$ 設計之反相放大器（$R_1 = 1\text{ k}\Omega, R_2 = 1\text{ M}\Omega$），運算放大器具備輸入補償電壓 $V_{OS} = 3\text{ mV}$，輸出飽和電壓為 $\pm 10\text{ V}$：
 
@@ -689,7 +690,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-24" title="輸入偏壓電流 (IB) 與輸入補償電流 (IOS) 之輸出直流偏移與補償電阻設計" source="Exercise 2.24 · Textbook P104" topic="直流非理想性 (DC Imperfections)">
+<PracticeCard id="elec-ch2-prac-2-24" type="exercise" title="輸入偏壓電流 (IB) 與輸入補償電流 (IOS) 之輸出直流偏移與補償電阻設計" source="Exercise 2.24 · Textbook P104" topic="直流非理想性 (DC Imperfections)">
 
 考慮一個反相放大器電路，電阻為 $R_1 = 10\text{ k}\Omega$，$R_2 = 1\text{ M}\Omega$。運算放大器之輸入偏壓電流為 $I_B = 100\text{ nA}$，輸入補償電流為 $I_{OS} = 10\text{ nA}$：
 
@@ -733,7 +734,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-25" title="米勒積分器受輸入補償電壓 Vos 影響之輸出電壓線性漂移與飽和時間" source="Exercise 2.25 · Textbook P105" topic="積分器直流漂移與飽和">
+<PracticeCard id="elec-ch2-prac-2-25" type="exercise" title="米勒積分器受輸入補償電壓 Vos 影響之輸出電壓線性漂移與飽和時間" source="Exercise 2.25 · Textbook P105" topic="積分器直流漂移與飽和">
 
 考慮一個米勒積分器，時間常數為 $\tau = CR = 1\text{ ms}$，輸入電阻為 $R = 10\text{ k}\Omega$（積分電容 $C = 0.1\ \mu\text{F}$）。運算放大器具備輸入補償電壓 $V_{OS} = 2\text{ mV}$，輸出飽和電壓為 $\pm 12\text{ V}$：
 
@@ -780,7 +781,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-7" title="有限增益頻寬積 (GBW) 對同相與反相閉迴路放大器 3-dB 頻寬之影響與取捨" source="Example 2.7 · Textbook P109-P110" topic="頻率響應與 GBW">
+<PracticeCard id="elec-ch2-ex-2-7" type="example" title="有限增益頻寬積 (GBW) 對同相與反相閉迴路放大器 3-dB 頻寬之影響與取捨" source="Example 2.7 · Textbook P109-P110" topic="頻率響應與 GBW">
 
 考慮一個單位增益頻寬為 $f_t = 1\text{ MHz}$ 的內部補償運算放大器：
 
@@ -841,7 +842,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-27" title="內部補償運算放大器之低頻極點、單位增益頻寬與任意頻率增益估算" source="Exercise 2.27 · Textbook P111" topic="頻率響應與 GBW">
+<PracticeCard id="elec-ch2-prac-2-27" type="exercise" title="內部補償運算放大器之低頻極點、單位增益頻寬與任意頻率增益估算" source="Exercise 2.27 · Textbook P111" topic="頻率響應與 GBW">
 
 某顆內部補償運算放大器的開路直流電壓增益為 $A_0 = 10^6\text{ V/V}$（即 $120\text{ dB}$），且在頻率 $f = 10\text{ kHz}$ 處量測得其開路增益為 $40\text{ dB}$：
 
@@ -893,7 +894,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-8" title="大訊號輸出電壓飽和與輸出電流極限之電阻負載分析" source="Example 2.8 · Textbook P112-P113" topic="大訊號非線性失真">
+<PracticeCard id="elec-ch2-ex-2-8" type="example" title="大訊號輸出電壓飽和與輸出電流極限之電阻負載分析" source="Example 2.8 · Textbook P112-P113" topic="大訊號非線性失真">
 
 考慮如圖 2.43(a) 所示之同相放大器電路，標稱增益設計為 $1 + \frac{R_2}{R_1} = 1 + \frac{9\text{ k}\Omega}{1\text{ k}\Omega} = 10\text{ V/V}$。電路輸入低頻正弦波電壓（峰值為 $V_p$），輸出端接負載電阻 $R_L$。運算放大器規格為：輸出飽和電壓 $V_{sat} = \pm 13\text{ V}$，最大輸出電流極限為 $I_{omax} = \pm 20\text{ mA}$：
 
@@ -951,7 +952,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-29" title="單位增益隨耦器之壓擺率 (Slew Rate) 與小訊號指數上升之臨界階躍電壓" source="Exercise 2.29 · Textbook P115" topic="壓擺率 (Slew Rate) 與全功率頻寬">
+<PracticeCard id="elec-ch2-prac-2-29" type="exercise" title="單位增益隨耦器之壓擺率 (Slew Rate) 與小訊號指數上升之臨界階躍電壓" source="Exercise 2.29 · Textbook P115" topic="壓擺率 (Slew Rate) 與全功率頻寬">
 
 考慮接成單位增益隨耦器（Unity-Gain Follower）組態的運算放大器，已知其壓擺率為 $\text{SR} = 1\text{ V}/\mu\text{s}$，單位增益頻寬為 $f_t = 1\text{ MHz}$（即 $\omega_t = 2\pi \times 10^6\text{ rad/s}$）：
 
@@ -1012,7 +1013,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-ex-2-9" title="弦波訊號下之壓擺率限制與全功率頻寬 (Full-Power Bandwidth fM) 公式推導" source="Example 2.9 · Textbook P116" topic="壓擺率 (Slew Rate) 與全功率頻寬">
+<PracticeCard id="elec-ch2-ex-2-9" type="example" title="弦波訊號下之壓擺率限制與全功率頻寬 (Full-Power Bandwidth fM) 公式推導" source="Example 2.9 · Textbook P116" topic="壓擺率 (Slew Rate) 與全功率頻寬">
 
 考慮使用壓擺率為 $\text{SR}$、最大額定輸出擺幅為 $V_{omax}$ 的運算放大器建構單位增益隨耦器。輸入端施加全幅正弦波電壓 $v_I(t) = V_{omax}\sin(\omega t)$：
 
@@ -1065,7 +1066,7 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="elec-ch2-prac-2-30" title="全功率頻寬 fM 計算與高頻超限下之最大無失真輸出電壓" source="Exercise 2.30 · Textbook P116" topic="壓擺率 (Slew Rate) 與全功率頻寬">
+<PracticeCard id="elec-ch2-prac-2-30" type="exercise" title="全功率頻寬 fM 計算與高頻超限下之最大無失真輸出電壓" source="Exercise 2.30 · Textbook P116" topic="壓擺率 (Slew Rate) 與全功率頻寬">
 
 某運算放大器具備額定輸出電壓擺幅 $V_{omax} = \pm 5\text{ V}$ 以及壓擺率 $\text{SR} = 10\text{ V}/\mu\text{s}$：
 
