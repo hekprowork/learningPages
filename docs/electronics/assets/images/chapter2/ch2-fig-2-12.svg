@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 340" width="100%" height="100%" role="img" aria-labelledby="title-2-12 desc-2-12">
+  <title id="title-2-12">Figure 2.12 The Noninverting Configuration</title>
+  <desc id="desc-2-12">Circuit diagram of the noninverting operational amplifier configuration with input signal source vI and negative feedback network consisting of R1 and R2.</desc>
+
+  <style>
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sub-norm { font-size: 0.72em; font-style: normal; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Inverting feedback node and R1 to ground -->
+  <path class="wire" d="M 65 170 L 65 135 L 125 135"/>
+  <line class="wire" x1="65" y1="170" x2="65" y2="180"/>
+  <line class="wire" x1="51" y1="180" x2="79" y2="180"/>
+  <line class="wire" x1="56" y1="185" x2="74" y2="185"/>
+  <line class="wire" x1="61" y1="190" x2="69" y2="190"/>
+  <path class="wire" d="M 125.0,135.0 L 133.0,135.0 L 139.7,126.5 L 146.3,143.5 L 153.0,126.5 L 159.7,143.5 L 166.3,126.5 L 173.0,135.0 L 181.0,135.0"/>
+  <line class="wire" x1="181" y1="135" x2="235" y2="135"/>
+  <text class="math" x="145" y="115">R<tspan class="sub-norm">1</tspan></text>
+  <circle class="junc" cx="205" cy="135" r="3.5"/>
+
+  <!-- Feedback resistor R2 -->
+  <path class="wire" d="M 205 135 L 205 70 L 240 70"/>
+  <path class="wire" d="M 240.0,70.0 L 248.0,70.0 L 254.7,61.5 L 261.3,78.5 L 268.0,61.5 L 274.7,78.5 L 281.3,61.5 L 288.0,70.0 L 296.0,70.0"/>
+  <path class="wire" d="M 296 70 L 350 70 L 350 165"/>
+  <text class="math" x="260" y="52">R<tspan class="sub-norm">2</tspan></text>
+
+  <!-- Op-Amp Body -->
+  <polygon points="235,108 320,165 235,222" class="opamp-body"/>
+  <text class="opamp-sign" x="248" y="135">−</text>
+  <text class="opamp-sign" x="248" y="195">+</text>
+
+  <!-- Non-inverting input with input terminal and voltage source vI -->
+  <line class="wire" x1="235" y1="195" x2="195" y2="195"/>
+  <circle class="term" cx="195" cy="195" r="4.5"/>
+  <path class="wire" d="M 190.5 195 L 140 195 L 140 228"/>
+  <circle class="comp-bg" cx="140" cy="250" r="22"/>
+  <text class="sign" x="140" y="241">+</text>
+  <text class="sign" x="140" y="262">−</text>
+  <text class="math" x="90" y="256">v<tspan class="sub">I</tspan></text>
+  <line class="wire" x1="140" y1="272" x2="140" y2="285"/>
+  <line class="wire" x1="140" y1="285" x2="140" y2="295"/>
+  <line class="wire" x1="126" y1="295" x2="154" y2="295"/>
+  <line class="wire" x1="131" y1="300" x2="149" y2="300"/>
+  <line class="wire" x1="136" y1="305" x2="144" y2="305"/>
+
+  <!-- Output wire and terminal -->
+  <line class="wire" x1="320" y1="165" x2="350" y2="165"/>
+  <circle class="junc" cx="350" cy="165" r="3.5"/>
+  <line class="wire" x1="350" y1="165" x2="415" y2="165"/>
+  <circle class="term" cx="415" cy="165" r="4.5"/>
+
+  <!-- Output voltage indicators -->
+  <text class="sign" x="415" y="195">+</text>
+  <text class="math" x="408" y="225">v<tspan class="sub">O</tspan></text>
+  <text class="sign" x="415" y="255">−</text>
+  <line class="wire" x1="415" y1="270" x2="415" y2="280"/>
+  <line class="wire" x1="401" y1="280" x2="429" y2="280"/>
+  <line class="wire" x1="406" y1="285" x2="424" y2="285"/>
+  <line class="wire" x1="411" y1="290" x2="419" y2="290"/>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 620" width="100%" height="100%" role="img" aria-labelledby="title-2-27 desc-2-27">
+  <title id="title-2-27">Figure 2.27 Waveforms for Example 2.6</title>
+  <desc id="desc-2-27">Waveforms for Example 2.6: (a) Input pulse of 1 V height and 1 ms width; (b) Output linear ramp of ideal integrator saturating at -10 V; (c) Output exponential ramp with feedback resistor RF having 10 ms time constant reaching -9.5 V at 1 ms then decaying toward 0 V.</desc>
+
+  <style>
+    .axis { fill: none; stroke: #000000; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .waveform { fill: none; stroke: #000000; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .wave-dash { fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 6,4; }
+    .guide-dash { fill: none; stroke: #000000; stroke-width: 1.2; stroke-dasharray: 5,4; }
+    .arrow { fill: #000000; stroke: none; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 14px; fill: #000000; }
+    .txt-annot { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 13px; fill: #000000; }
+    .math { font-family: "Times New Roman", Times, Georgia, serif; font-style: italic; font-size: 17px; fill: #000000; }
+    .sub { font-size: 0.72em; font-style: italic; baseline-shift: sub; }
+    .sub-norm { font-size: 0.72em; font-style: normal; baseline-shift: sub; }
+    .lbl-subfig { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: normal; fill: #000000; text-anchor: middle; }
+    .tick-lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; fill: #000000; }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- ================= SUBFIGURE (a) ================= -->
+  <g id="subfig-a">
+    <!-- Axes -->
+    <line class="axis" x1="160" y1="145" x2="160" y2="45"/>
+    <polygon class="arrow" points="160,40 156,50 164,50"/>
+    <line class="axis" x1="130" y1="120" x2="480" y2="120"/>
+    <polygon class="arrow" points="485,120 475,116 475,124"/>
+
+    <!-- Axis Labels -->
+    <text class="math" x="135" y="55">v<tspan class="sub">I</tspan>(t)</text>
+    <text class="math" x="495" y="124">t</text>
+
+    <!-- Ticks & Values -->
+    <text class="tick-lbl" x="132" y="75">1 V</text>
+    <line class="axis" x1="156" y1="70" x2="160" y2="70"/>
+    <text class="tick-lbl" x="148" y="115">0</text>
+    <text class="tick-lbl" x="156" y="137">0</text>
+    <text class="tick-lbl" x="257" y="137">1 ms</text>
+    <line class="axis" x1="270" y1="120" x2="270" y2="124"/>
+
+    <!-- Pulse Waveform -->
+    <path class="waveform" d="M 160,120 L 160,70 L 270,70 L 270,120 L 380,120"/>
+
+    <text class="lbl-subfig" x="270" y="165">(a)</text>
+  </g>
+
+  <!-- ================= SUBFIGURE (b) ================= -->
+  <g id="subfig-b">
+    <!-- Axes -->
+    <line class="axis" x1="160" y1="365" x2="160" y2="200"/>
+    <polygon class="arrow" points="160,195 156,205 164,205"/>
+    <line class="axis" x1="130" y1="220" x2="480" y2="220"/>
+    <polygon class="arrow" points="485,220 475,216 475,224"/>
+
+    <!-- Axis Labels -->
+    <text class="math" x="132" y="210">v<tspan class="sub-norm">O</tspan>(t)</text>
+    <text class="math" x="495" y="224">t</text>
+
+    <!-- Ticks & Values -->
+    <text class="tick-lbl" x="148" y="215">0</text>
+    <text class="tick-lbl" x="257" y="237">1 ms</text>
+    <line class="axis" x1="270" y1="220" x2="270" y2="224"/>
+    <text class="tick-lbl" x="120" y="305">−10 V</text>
+    <line class="axis" x1="156" y1="300" x2="160" y2="300"/>
+
+    <!-- Guide Dashes -->
+    <line class="guide-dash" x1="270" y1="220" x2="270" y2="300"/>
+    <line class="guide-dash" x1="160" y1="300" x2="270" y2="300"/>
+
+    <!-- Linear Ramp & Saturation -->
+    <path class="waveform" d="M 160,220 L 270,300 L 395,300"/>
+
+    <text class="lbl-subfig" x="270" y="375">(b)</text>
+  </g>
+
+  <!-- ================= SUBFIGURE (c) ================= -->
+  <g id="subfig-c">
+    <!-- Axes -->
+    <line class="axis" x1="160" y1="585" x2="160" y2="405"/>
+    <polygon class="arrow" points="160,400 156,410 164,410"/>
+    <line class="axis" x1="130" y1="425" x2="480" y2="425"/>
+    <polygon class="arrow" points="485,425 475,421 475,429"/>
+
+    <!-- Axis Labels -->
+    <text class="math" x="132" y="415">v<tspan class="sub-norm">O</tspan>(t)</text>
+    <text class="math" x="495" y="429">t</text>
+
+    <!-- Ticks & Values -->
+    <text class="tick-lbl" x="148" y="420">0</text>
+    <text class="tick-lbl" x="257" y="442">1 ms</text>
+    <line class="axis" x1="270" y1="425" x2="270" y2="429"/>
+    <text class="tick-lbl" x="117" y="511">−9.5 V</text>
+    <line class="axis" x1="156" y1="506" x2="160" y2="506"/>
+
+    <!-- Guide Dashes -->
+    <line class="guide-dash" x1="270" y1="425" x2="270" y2="506"/>
+    <line class="guide-dash" x1="160" y1="506" x2="270" y2="506"/>
+
+    <!-- Exponential Falling (solid from 0 to 1 ms) -->
+    <path class="waveform" d="M 160,425 C 198,460 234,488 270,506"/>
+
+    <!-- Dashed Continuation to -100 V -->
+    <path class="wave-dash" d="M 270,506 C 295,518 318,528 342,536"/>
+    <text class="txt-annot" x="325" y="555">to −100 V</text>
+
+    <!-- Exponential Recovery after 1 ms (solid then dashed to 0 V) -->
+    <path class="waveform" d="M 270,506 C 304,488 338,474 372,463"/>
+    <path class="wave-dash" d="M 372,463 C 394,456 416,450 438,446"/>
+    <text class="txt-annot" x="444" y="443">to 0 V</text>
+
+    <!-- Annotation Arrows & Label -->
+    <text class="txt-annot" x="340" y="508">Exponentials with</text>
+    <text class="txt-annot" x="340" y="524">time constant of 10 ms</text>
+
+    <!-- Pointer arrow to rising branch -->
+    <path class="axis" d="M 335,504 C 322,498 312,492 305,487"/>
+    <polygon class="arrow" points="302,485 308,493 312,487"/>
+
+    <!-- Pointer arrow to falling dashed branch -->
+    <path class="axis" d="M 335,524 C 324,528 316,532 310,535"/>
+    <polygon class="arrow" points="306,537 312,530 316,536"/>
+
+    <text class="lbl-subfig" x="270" y="598">(c)</text>
+  </g>
+</svg>

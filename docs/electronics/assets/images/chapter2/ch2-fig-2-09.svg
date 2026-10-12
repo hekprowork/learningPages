@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 360" width="100%" height="100%" role="img" aria-labelledby="title-2-09 desc-2-09">
+  <title id="title-2-09">Figure 2.9 A Current Amplifier Based on the Inverting Configuration</title>
+  <desc id="desc-2-09">A current amplifier circuit based on the inverting configuration. The circuit delivers its output current to floating load resistor R4 with a current gain of 1 + R2/R3, zero input resistance, and infinite output resistance.</desc>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <defs>
+    <style>
+      .wire { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .opamp-body { fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: round; }
+      .source { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .term { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .junc { fill: #000000; }
+      .math { font-family: "Times New Roman", Times, Georgia, serif; font-size: 19px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .math-frac { font-family: "Times New Roman", Times, Georgia, serif; font-size: 15px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .sub { font-size: 0.72em; font-style: normal; }
+      .sub-it { font-size: 0.72em; font-style: italic; }
+      .pm { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 17px; font-weight: bold; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .paren { font-family: "Times New Roman", Times, Georgia, serif; font-size: 32px; font-style: normal; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .arrow { fill: #000000; }
+      .arrow-line { stroke: #000000; stroke-width: 1.6; stroke-linecap: round; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Input Current Source iI -->
+  <!-- Ground below source -->
+  <line class="wire" x1="75" y1="253" x2="75" y2="275"/>
+  <line class="wire" x1="63" y1="275" x2="87" y2="275"/>
+  <line class="wire" x1="67" y1="279" x2="83" y2="279"/>
+  <line class="wire" x1="71" y1="283" x2="79" y2="283"/>
+
+  <!-- Source Circle and Internal Arrow -->
+  <circle class="source" cx="75" cy="235" r="18"/>
+  <line class="arrow-line" x1="75" y1="246" x2="75" y2="225"/>
+  <polygon class="arrow" points="75,221 71.5,228 78.5,228"/>
+  <text class="math" x="42" y="235">i<tspan class="sub-it">I</tspan></text>
+
+  <!-- Wire from current source to inverting input -->
+  <polyline class="wire" points="75,217 75,195 111,195"/>
+  <circle class="term" cx="115" cy="195" r="3.5"/>
+  <text class="math" x="115" y="178">v<tspan class="sub-it">I</tspan><tspan font-style="normal"> = 0</tspan></text>
+  <line class="wire" x1="119" y1="195" x2="160" y2="195"/>
+
+  <!-- Inverting Input Junction -->
+  <circle class="junc" cx="160" cy="195" r="3.5"/>
+  <line class="wire" x1="160" y1="195" x2="220" y2="195"/>
+
+  <!-- Op-Amp Body -->
+  <polygon class="opamp-body" points="220,170 310,220 220,270"/>
+  <text class="pm" x="233" y="195">−</text>
+  <text class="pm" x="233" y="245">+</text>
+
+  <!-- Op-Amp Non-inverting input ground -->
+  <polyline class="wire" points="220,245 175,245 175,275"/>
+  <line class="wire" x1="163" y1="275" x2="187" y2="275"/>
+  <line class="wire" x1="167" y1="279" x2="183" y2="279"/>
+  <line class="wire" x1="171" y1="283" x2="179" y2="283"/>
+
+  <!-- Feedback Path: upward from junction -->
+  <polyline class="wire" points="160,195 160,75 210,75"/>
+
+  <!-- Current Arrow i2 = iI -->
+  <line class="arrow-line" x1="168" y1="62" x2="200" y2="62"/>
+  <polygon class="arrow" points="204,62 197,58.5 197,65.5"/>
+  <text class="math" x="186" y="47">i<tspan class="sub">2</tspan><tspan font-style="normal"> = </tspan>i<tspan class="sub-it">I</tspan></text>
+
+  <!-- Resistor R2 -->
+  <path class="wire" d="M 210,75 l 5,-8 l 10,16 l 10,-16 l 10,16 l 10,-16 l 10,16 l 5,-8"/>
+  <text class="math" x="240" y="54">R<tspan class="sub">2</tspan></text>
+
+  <!-- Junction after R2 -->
+  <line class="wire" x1="270" y1="75" x2="345" y2="75"/>
+  <circle class="junc" cx="345" cy="75" r="3.5"/>
+
+  <!-- Branch R3 (vertical down to ground) -->
+  <line class="wire" x1="345" y1="75" x2="345" y2="105"/>
+  <path class="wire" d="M 345,105 l 8,5 l -16,10 l 16,10 l -16,10 l 16,10 l -16,10 l 8,5"/>
+  <text class="math" x="372" y="135" text-anchor="start">R<tspan class="sub">3</tspan></text>
+  <line class="wire" x1="345" y1="165" x2="345" y2="195"/>
+  <!-- Ground below R3 -->
+  <line class="wire" x1="333" y1="195" x2="357" y2="195"/>
+  <line class="wire" x1="337" y1="199" x2="353" y2="199"/>
+  <line class="wire" x1="341" y1="203" x2="349" y2="203"/>
+
+  <!-- Current Arrow i3 pointing UP -->
+  <line class="arrow-line" x1="326" y1="158" x2="326" y2="127"/>
+  <polygon class="arrow" points="326,123 322.5,130 329.5,130"/>
+  <!-- Label i3 = (R2/R3) iI -->
+  <text class="math" x="260" y="142" text-anchor="end">i<tspan class="sub">3</tspan><tspan font-style="normal"> =</tspan></text>
+  <text class="math-frac" x="277" y="133">R<tspan class="sub">2</tspan></text>
+  <line class="wire" x1="267" y1="141" x2="287" y2="141" stroke-width="1.3"/>
+  <text class="math-frac" x="277" y="153">R<tspan class="sub">3</tspan></text>
+  <text class="math" x="294" y="142" text-anchor="start">i<tspan class="sub-it">I</tspan></text>
+
+  <!-- Branch R4 (Load) -->
+  <line class="wire" x1="345" y1="75" x2="371" y2="75"/>
+  <circle class="term" cx="375" cy="75" r="3.5"/>
+  <!-- Current Arrow i4 -->
+  <line class="arrow-line" x1="375" y1="62" x2="403" y2="62"/>
+  <polygon class="arrow" points="407,62 400,58.5 400,65.5"/>
+  <text class="math" x="391" y="47">i<tspan class="sub">4</tspan></text>
+
+  <line class="wire" x1="379" y1="75" x2="420" y2="75"/>
+  <path class="wire" d="M 420,75 l 5,-8 l 10,16 l 10,-16 l 10,16 l 10,-16 l 10,16 l 5,-8"/>
+  <text class="math" x="450" y="54">R<tspan class="sub">4</tspan></text>
+  <line class="wire" x1="480" y1="75" x2="506" y2="75"/>
+  <circle class="term" cx="510" cy="75" r="3.5"/>
+
+  <!-- Feedback return to Op-Amp Output -->
+  <polyline class="wire" points="514,75 535,75 535,220 310,220"/>
+
+  <!-- Current Formula below Op-Amp: i4 = (1 + R2/R3) iI -->
+  <g transform="translate(390, 285)">
+    <text class="math" x="-46" y="0" text-anchor="end">i<tspan class="sub">4</tspan><tspan font-style="normal"> =</tspan></text>
+    <text class="paren" x="-36" y="-1">(</text>
+    <text class="math" x="-18" y="0"><tspan font-style="normal">1 +</tspan></text>
+    <text class="math-frac" x="12" y="-10">R<tspan class="sub">2</tspan></text>
+    <line class="wire" x1="2" y1="-1" x2="22" y2="-1" stroke-width="1.3"/>
+    <text class="math-frac" x="12" y="10">R<tspan class="sub">3</tspan></text>
+    <text class="paren" x="30" y="-1">)</text>
+    <text class="math" x="42" y="0" text-anchor="start">i<tspan class="sub-it">I</tspan></text>
+  </g>
+</svg>

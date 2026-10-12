@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="100%" height="100%" role="img" aria-labelledby="title-2-08 desc-2-08">
+  <title id="title-2-08">Figure 2.8 Circuit for Example 2.2</title>
+  <desc id="desc-2-08">Circuit diagram for Example 2.2 showing an inverting operational amplifier configuration with a T-network feedback loop. Circled numbers 1 through 8 indicate the sequence of analysis steps: virtual ground (1), input current i1 (2), zero input current to op amp (3), feedback current i2 (4), node x voltage vx (5), resistor R3 current i3 (6), feedback current i4 (7), and output voltage vo (8).</desc>
+
+  <style>
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sub-norm { font-size: 0.72em; font-style: normal; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; fill: #111111; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .step-circle { fill: #111111; }
+    .step-num { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: bold; fill: #ffffff; text-anchor: middle; dominant-baseline: central; }
+    .arrow-line { fill: none; stroke: #111111; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .arrow { fill: #111111; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- ==================== INPUT TERMINAL & vI ==================== -->
+  <circle class="term" cx="100" cy="210" r="3.5"/>
+  <text class="sign" x="100" y="234">+</text>
+  <text class="math" x="100" y="258" text-anchor="middle">v<tspan class="sub">I</tspan></text>
+
+  <!-- Ground below vI -->
+  <line class="wire" x1="100" y1="268" x2="100" y2="282"/>
+  <line class="wire" x1="86" y1="282" x2="114" y2="282"/>
+  <line class="wire" x1="91" y1="287" x2="109" y2="287"/>
+  <line class="wire" x1="96" y1="292" x2="104" y2="292"/>
+
+  <!-- ==================== STEP 2 & INPUT CURRENT i1 ==================== -->
+  <line class="wire" x1="104" y1="210" x2="180" y2="210"/>
+
+  <circle class="step-circle" cx="108" cy="180" r="11"/>
+  <text class="step-num" x="108" y="180">2</text>
+
+  <line class="arrow-line" x1="126" y1="180" x2="152" y2="180"/>
+  <polygon class="arrow" points="152,176 160,180 152,184"/>
+  <text class="math" x="141" y="167" text-anchor="middle">i<tspan class="sub-norm">1</tspan></text>
+
+  <!-- Resistor R1 -->
+  <path class="wire" d="M 180.0,210.0 L 188.0,210.0 L 194.7,201.5 L 201.3,218.5 L 208.0,201.5 L 214.7,218.5 L 221.3,201.5 L 228.0,210.0 L 236.0,210.0"/>
+  <text class="math" x="210" y="190" text-anchor="middle">R<tspan class="sub-norm">1</tspan></text>
+
+  <!-- Wire to inverting input junction -->
+  <line class="wire" x1="236" y1="210" x2="280" y2="210"/>
+  <circle class="junc" cx="280" cy="210" r="3.5"/>
+
+  <!-- ==================== STEP 1: VIRTUAL GROUND v1 ==================== -->
+  <text class="sign" x="270" y="230">+</text>
+  <text class="math" x="270" y="250" text-anchor="middle">v<tspan class="sub-norm">1</tspan></text>
+  <text class="sign" x="270" y="270">−</text>
+
+  <circle class="step-circle" cx="242" cy="250" r="11"/>
+  <text class="step-num" x="242" y="250">1</text>
+
+  <!-- ==================== STEP 3: OP AMP INPUT CURRENT 0 ==================== -->
+  <line class="wire" x1="280" y1="210" x2="370" y2="210"/>
+
+  <line class="arrow-line" x1="310" y1="197" x2="336" y2="197"/>
+  <polygon class="arrow" points="336,193 344,197 336,201"/>
+  <text class="txt" x="325" y="184" text-anchor="middle">0</text>
+
+  <circle class="step-circle" cx="325" cy="158" r="11"/>
+  <text class="step-num" x="325" y="158">3</text>
+
+  <!-- ==================== OP AMP & NONINVERTING TERMINAL ==================== -->
+  <polygon points="370,185 455,235 370,285" class="opamp-body"/>
+  <text class="opamp-sign" x="384" y="210">−</text>
+  <text class="opamp-sign" x="384" y="260">+</text>
+
+  <polyline class="wire" points="370,260 280,260 280,285"/>
+  <line class="wire" x1="266" y1="285" x2="294" y2="285"/>
+  <line class="wire" x1="271" y1="290" x2="289" y2="290"/>
+  <line class="wire" x1="276" y1="295" x2="284" y2="295"/>
+
+  <!-- ==================== FEEDBACK T-NETWORK ==================== -->
+  <!-- Wire from inverting node up to feedback horizontal wire -->
+  <polyline class="wire" points="280,210 280,90 340,90"/>
+
+  <!-- STEP 4: Current i2 through R2 -->
+  <circle class="step-circle" cx="272" cy="65" r="11"/>
+  <text class="step-num" x="272" y="65">4</text>
+
+  <line class="arrow-line" x1="292" y1="65" x2="318" y2="65"/>
+  <polygon class="arrow" points="318,61 326,65 318,69"/>
+  <text class="math" x="306" y="52" text-anchor="middle">i<tspan class="sub-norm">2</tspan></text>
+
+  <!-- Resistor R2 -->
+  <path class="wire" d="M 340.0,90.0 L 348.0,90.0 L 354.7,81.5 L 361.3,98.5 L 368.0,81.5 L 374.7,98.5 L 381.3,81.5 L 388.0,90.0 L 396.0,90.0"/>
+  <text class="math" x="370" y="70" text-anchor="middle">R<tspan class="sub-norm">2</tspan></text>
+
+  <!-- Wire from R2 to Node x -->
+  <line class="wire" x1="396" y1="90" x2="440" y2="90"/>
+  <circle class="junc" cx="440" cy="90" r="3.5"/>
+  <text class="math" x="452" y="105">x</text>
+
+  <!-- STEP 5: Node x voltage vx -->
+  <text class="math" x="440" y="60" text-anchor="middle">v<tspan class="sub">x</tspan></text>
+  <circle class="step-circle" cx="440" cy="35" r="11"/>
+  <text class="step-num" x="440" y="35">5</text>
+
+  <!-- VERTICAL BRANCH R3 & STEP 6: Current i3 -->
+  <line class="wire" x1="440" y1="90" x2="440" y2="120"/>
+  <!-- Resistor R3 -->
+  <path class="wire" d="M 440.0,120.0 L 440.0,128.0 L 431.5,134.7 L 448.5,141.3 L 431.5,148.0 L 448.5,154.7 L 431.5,161.3 L 440.0,168.0 L 440.0,176.0"/>
+  <text class="math" x="414" y="148" text-anchor="middle">R<tspan class="sub-norm">3</tspan></text>
+
+  <!-- Current arrow i3 pointing UP -->
+  <line class="arrow-line" x1="462" y1="165" x2="462" y2="137"/>
+  <polygon class="arrow" points="458,137 462,129 466,137"/>
+  <text class="math" x="478" y="148" text-anchor="middle">i<tspan class="sub-norm">3</tspan></text>
+
+  <!-- STEP 6 Circle -->
+  <circle class="step-circle" cx="504" cy="148" r="11"/>
+  <text class="step-num" x="504" y="148">6</text>
+
+  <!-- Ground below R3 -->
+  <line class="wire" x1="440" y1="176" x2="440" y2="195"/>
+  <line class="wire" x1="426" y1="195" x2="454" y2="195"/>
+  <line class="wire" x1="431" y1="200" x2="449" y2="200"/>
+  <line class="wire" x1="436" y1="205" x2="444" y2="205"/>
+
+  <!-- HORIZONTAL BRANCH R4 & STEP 7: Current i4 -->
+  <line class="wire" x1="440" y1="90" x2="530" y2="90"/>
+
+  <line class="arrow-line" x1="466" y1="75" x2="492" y2="75"/>
+  <polygon class="arrow" points="492,71 500,75 492,79"/>
+  <text class="math" x="480" y="62" text-anchor="middle">i<tspan class="sub-norm">4</tspan></text>
+
+  <!-- STEP 7 Circle -->
+  <circle class="step-circle" cx="506" cy="50" r="11"/>
+  <text class="step-num" x="506" y="50">7</text>
+
+  <!-- Resistor R4 -->
+  <path class="wire" d="M 530.0,90.0 L 538.0,90.0 L 544.7,81.5 L 551.3,98.5 L 558.0,81.5 L 564.7,98.5 L 571.3,81.5 L 578.0,90.0 L 586.0,90.0"/>
+  <text class="math" x="560" y="70" text-anchor="middle">R<tspan class="sub-norm">4</tspan></text>
+
+  <!-- Wire from R4 to output junction -->
+  <polyline class="wire" points="586,90 630,90 630,235"/>
+
+  <!-- ==================== OUTPUT & STEP 8: vO ==================== -->
+  <line class="wire" x1="455" y1="235" x2="680" y2="235"/>
+  <circle class="junc" cx="630" cy="235" r="3.5"/>
+  <circle class="term" cx="680" cy="235" r="3.5"/>
+
+  <text class="sign" x="680" y="258">+</text>
+  <text class="math" x="680" y="280" text-anchor="middle">v<tspan class="sub-norm">O</tspan></text>
+
+  <!-- STEP 8 Circle -->
+  <circle class="step-circle" cx="648" cy="280" r="11"/>
+  <text class="step-num" x="648" y="280">8</text>
+
+  <!-- Ground below vO -->
+  <line class="wire" x1="680" y1="290" x2="680" y2="305"/>
+  <line class="wire" x1="666" y1="305" x2="694" y2="305"/>
+  <line class="wire" x1="671" y1="310" x2="689" y2="310"/>
+  <line class="wire" x1="676" y1="315" x2="684" y2="315"/>
+</svg>

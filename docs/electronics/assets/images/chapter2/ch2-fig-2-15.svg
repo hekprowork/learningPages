@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="100%" height="100%" role="img" aria-labelledby="title-2-15 desc-2-15">
+  <title id="title-2-15">Figure 2.15 Input Signals in Terms of Differential and Common-Mode Components</title>
+  <desc id="desc-2-15">Representation of the input signals to a differential amplifier in terms of their differential and common-mode components.</desc>
+  
+  <style>
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .wire-dash { fill: none; stroke: #111111; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 5,4; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #111111; }
+    .math-bold { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-weight: bold; font-size: 20px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sub-norm { font-size: 0.72em; font-style: normal; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .lbl-subfig { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; }
+    .arrow { fill: #111111; }
+    .arrow-line { fill: none; stroke: #111111; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Ground -->
+  
+    <line class="wire" x1="130" y1="246" x2="130" y2="256"/>
+    <line class="wire" x1="116" y1="256" x2="144" y2="256"/>
+    <line class="wire" x1="121" y1="261" x2="139" y2="261"/>
+    <line class="wire" x1="126" y1="266" x2="134" y2="266"/>
+    
+
+  <!-- Source vIcm -->
+  <line class="wire" x1="130" y1="246" x2="130" y2="222"/>
+  <circle class="comp-bg" cx="130" cy="200" r="22"/>
+  <text class="sign" x="130" y="190">+</text>
+  <text class="sign" x="130" y="211">−</text>
+  <text class="math" x="68" y="206">v<tspan class="sub">Icm</tspan></text>
+
+  <!-- Wire to split node -->
+  <path class="wire" d="M 130 178 L 130 160 L 200 160"/>
+  <circle class="junc" cx="200" cy="160" r="3.5"/>
+
+  <!-- Upper branch: vId / 2 source -->
+  <line class="wire" x1="200" y1="160" x2="200" y2="124"/>
+  <circle class="comp-bg" cx="200" cy="100" r="22"/>
+  <text class="sign" x="200" y="90">−</text>
+  <text class="sign" x="200" y="111">+</text>
+  <text class="math" x="234" y="107">v<tspan class="sub">Id</tspan>/2</text>
+
+  <!-- Upper terminal -->
+  <path class="wire" d="M 200 78 L 200 60 L 260 60"/>
+  <circle class="term" cx="260" cy="60" r="4.5"/>
+  <text class="math" x="276" y="66">v<tspan class="sub">I1</tspan> = v<tspan class="sub">Icm</tspan> − v<tspan class="sub">Id</tspan>/2</text>
+
+  <!-- Lower branch: vId / 2 source -->
+  <line class="wire" x1="200" y1="160" x2="200" y2="196"/>
+  <circle class="comp-bg" cx="200" cy="220" r="22"/>
+  <text class="sign" x="200" y="210">−</text>
+  <text class="sign" x="200" y="231">+</text>
+  <text class="math" x="234" y="227">v<tspan class="sub">Id</tspan>/2</text>
+
+  <!-- Lower terminal -->
+  <path class="wire" d="M 200 242 L 200 260 L 260 260"/>
+  <circle class="term" cx="260" cy="260" r="4.5"/>
+  <text class="math" x="276" y="266">v<tspan class="sub">I2</tspan> = v<tspan class="sub">Icm</tspan> + v<tspan class="sub">Id</tspan>/2</text>
+
+  <!-- Formulas in center-right -->
+  <g transform="translate(285, 142)">
+    <text class="math" x="0" y="0">v<tspan class="sub">Id</tspan> = v<tspan class="sub">I2</tspan> − v<tspan class="sub">I1</tspan></text>
+    <text class="math" x="0" y="32">v<tspan class="sub">Icm</tspan> = ½(v<tspan class="sub">I1</tspan> + v<tspan class="sub">I2</tspan>)</text>
+  </g>
+</svg>

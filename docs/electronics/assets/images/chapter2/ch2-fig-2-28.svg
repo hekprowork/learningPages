@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" width="100%" height="100%">
+  <title>Figure 2.28 (a) A differentiator. (b) Frequency response of a differentiator with a time constant CR.</title>
+  <desc>Figure 2.28 from Chapter 2 Operational Amplifiers. (a) Circuit schematic of an op-amp differentiator showing input capacitor C, feedback resistor R, virtual ground 0 V, input current i, and output voltage vo(t). (b) Frequency response magnitude plot |Vo/Vi| (dB) versus omega (log scale), with 0 dB crossing at omega = 1/(CR) and slope +6 dB/octave.</desc>
+
+  <defs>
+    <!-- Arrow marker for current and axis pointers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#000000" />
+    </marker>
+    <!-- Arrow marker for curves / callouts -->
+    <marker id="callout-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#000000" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- ========================================== -->
+  <!-- Part (a): Circuit Diagram                  -->
+  <!-- ========================================== -->
+  <g id="part-a">
+    <!-- Op-Amp Triangle -->
+    <!-- Inputs at x=340, y=140 (-) and y=170 (+). Peak at x=390, y=155 -->
+    <polygon points="340,125 340,185 390,155" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+    
+    <!-- Op-Amp Terminals '-' and '+' -->
+    <text x="348" y="144" font-family="Times New Roman, STIX, serif" font-size="16" font-weight="bold" text-anchor="middle">-</text>
+    <text x="348" y="174" font-family="Times New Roman, STIX, serif" font-size="16" font-weight="bold" text-anchor="middle">+</text>
+
+    <!-- Non-inverting input terminal (+) grounded -->
+    <line x1="340" y1="170" x2="310" y2="170" stroke="#000000" stroke-width="1.5" />
+    <line x1="310" y1="170" x2="310" y2="190" stroke="#000000" stroke-width="1.5" />
+    <!-- Ground symbol at non-inverting terminal -->
+    <line x1="300" y1="190" x2="320" y2="190" stroke="#000000" stroke-width="1.5" />
+    <line x1="304" y1="194" x2="316" y2="194" stroke="#000000" stroke-width="1.5" />
+    <line x1="308" y1="198" x2="312" y2="198" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Inverting input line and virtual ground -->
+    <line x1="340" y1="140" x2="280" y2="140" stroke="#000000" stroke-width="1.5" />
+    <!-- Node at inverting input -->
+    <circle cx="305" cy="140" r="2.5" fill="#000000" />
+    
+    <!-- Virtual ground annotation arrow to node 305, 140 -->
+    <path d="M 285,190 L 305,190 L 305,148" fill="none" stroke="#000000" stroke-width="1" marker-end="url(#callout-arrow)" />
+    <text x="265" y="194" font-family="Times New Roman, STIX, serif" font-size="15" font-style="italic">0 V</text>
+    <!-- '0' indicating zero current into inverting input -->
+    <text x="312" y="130" font-family="Times New Roman, STIX, serif" font-size="14">0</text>
+    <line x1="324" y1="135" x2="338" y2="138" stroke="#000000" stroke-width="1" marker-end="url(#callout-arrow)" />
+
+    <!-- Capacitor C -->
+    <!-- Input terminal to capacitor -->
+    <line x1="230" y1="140" x2="275" y2="140" stroke="#000000" stroke-width="1.5" />
+    <!-- Capacitor plates at x=275 and x=285 -->
+    <line x1="275" y1="128" x2="275" y2="152" stroke="#000000" stroke-width="2" />
+    <line x1="283" y1="128" x2="283" y2="152" stroke="#000000" stroke-width="2" />
+    <line x1="283" y1="140" x2="305" y2="140" stroke="#000000" stroke-width="1.5" />
+    <!-- Label C -->
+    <text x="279" y="120" font-family="Times New Roman, STIX, serif" font-size="16" font-style="italic" text-anchor="middle">C</text>
+
+    <!-- Input current arrow i over input wire -->
+    <line x1="242" y1="128" x2="262" y2="128" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)" />
+    <text x="252" y="122" font-family="Times New Roman, STIX, serif" font-size="15" font-style="italic" text-anchor="middle">i</text>
+
+    <!-- Input port circle and labels -->
+    <circle cx="230" cy="140" r="3" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
+    <text x="222" y="156" font-family="Times New Roman, STIX, serif" font-size="16" text-anchor="middle">+</text>
+    <text x="222" y="174" font-family="Times New Roman, STIX, serif" font-size="15" font-style="italic" text-anchor="middle">v<tspan baseline-shift="sub" font-size="11">I</tspan>(t)</text>
+    <text x="222" y="190" font-family="Times New Roman, STIX, serif" font-size="16" text-anchor="middle">−</text>
+
+    <!-- Input Ground -->
+    <line x1="222" y1="200" x2="222" y2="204" stroke="#000000" stroke-width="1.5" />
+    <line x1="212" y1="204" x2="232" y2="204" stroke="#000000" stroke-width="1.5" />
+    <line x1="216" y1="208" x2="228" y2="208" stroke="#000000" stroke-width="1.5" />
+    <line x1="220" y1="212" x2="224" y2="212" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Feedback Path with Resistor R -->
+    <line x1="305" y1="140" x2="305" y2="100" stroke="#000000" stroke-width="1.5" />
+    <line x1="305" y1="100" x2="335" y2="100" stroke="#000000" stroke-width="1.5" />
+    
+    <!-- Feedback current arrow i -->
+    <line x1="316" y1="90" x2="336" y2="90" stroke="#000000" stroke-width="1.2" marker-end="url(#arrow)" />
+    <text x="326" y="84" font-family="Times New Roman, STIX, serif" font-size="15" font-style="italic" text-anchor="middle">i</text>
+
+    <!-- Resistor R zigzag between 335 and 375 -->
+    <path d="M 335,100 L 338,95 L 344,105 L 350,95 L 356,105 L 362,95 L 368,105 L 372,95 L 375,100" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" />
+    <text x="355" y="86" font-family="Times New Roman, STIX, serif" font-size="16" font-style="italic" text-anchor="middle">R</text>
+
+    <line x1="375" y1="100" x2="410" y2="100" stroke="#000000" stroke-width="1.5" />
+    <line x1="410" y1="100" x2="410" y2="155" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Op-Amp Output line -->
+    <line x1="390" y1="155" x2="445" y2="155" stroke="#000000" stroke-width="1.5" />
+    <circle cx="410" cy="155" r="2.5" fill="#000000" />
+    
+    <!-- Output Terminal -->
+    <circle cx="445" cy="155" r="3" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
+    <text x="445" y="172" font-family="Times New Roman, STIX, serif" font-size="16" text-anchor="middle">+</text>
+    <text x="445" y="190" font-family="Times New Roman, STIX, serif" font-size="15" font-style="italic" text-anchor="middle">v<tspan baseline-shift="sub" font-size="11">O</tspan>(t)</text>
+    <text x="445" y="206" font-family="Times New Roman, STIX, serif" font-size="16" text-anchor="middle">−</text>
+
+    <!-- Output Ground -->
+    <line x1="445" y1="216" x2="445" y2="220" stroke="#000000" stroke-width="1.5" />
+    <line x1="435" y1="220" x2="455" y2="220" stroke="#000000" stroke-width="1.5" />
+    <line x1="439" y1="224" x2="451" y2="224" stroke="#000000" stroke-width="1.5" />
+    <line x1="443" y1="228" x2="447" y2="228" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Formulas on the right of circuit -->
+    <g transform="translate(480, 115)" font-family="Times New Roman, STIX, serif" font-size="16">
+      <!-- i(t) = C d v_I(t) / dt -->
+      <text x="0" y="18" font-style="italic">i<tspan font-style="normal">(</tspan>t<tspan font-style="normal">) = </tspan>C</text>
+      <g transform="translate(68, 0)">
+        <text x="18" y="10" font-style="italic" text-anchor="middle">dv<tspan baseline-shift="sub" font-size="11">I</tspan><tspan font-style="normal">(</tspan>t<tspan font-style="normal">)</tspan></text>
+        <line x1="0" y1="14" x2="36" y2="14" stroke="#000000" stroke-width="1" />
+        <text x="18" y="27" font-style="italic" text-anchor="middle">dt</text>
+      </g>
+
+      <!-- v_O(t) = -CR d v_I(t) / dt -->
+      <g transform="translate(0, 36)">
+        <text x="0" y="18" font-style="italic">v<tspan baseline-shift="sub" font-size="11">O</tspan><tspan font-style="normal">(</tspan>t<tspan font-style="normal">) = −</tspan>CR</text>
+        <g transform="translate(85, 0)">
+          <text x="18" y="10" font-style="italic" text-anchor="middle">dv<tspan baseline-shift="sub" font-size="11">I</tspan><tspan font-style="normal">(</tspan>t<tspan font-style="normal">)</tspan></text>
+          <line x1="0" y1="14" x2="36" y2="14" stroke="#000000" stroke-width="1" />
+          <text x="18" y="27" font-style="italic" text-anchor="middle">dt</text>
+        </g>
+      </g>
+
+      <!-- V_o / V_i = -sCR -->
+      <g transform="translate(5, 78)">
+        <text x="9" y="8" font-style="italic" text-anchor="middle">V<tspan baseline-shift="sub" font-size="11">o</tspan></text>
+        <line x1="0" y1="13" x2="18" y2="13" stroke="#000000" stroke-width="1" />
+        <text x="9" y="26" font-style="italic" text-anchor="middle">V<tspan baseline-shift="sub" font-size="11">i</tspan></text>
+        <text x="24" y="16" font-style="italic"><tspan font-style="normal">= −</tspan>sCR</text>
+      </g>
+    </g>
+
+    <!-- Subfigure label (a) -->
+    <text x="405" y="255" font-family="Times New Roman, STIX, serif" font-size="16" text-anchor="middle">(a)</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- Part (b): Frequency Response Bode Plot      -->
+  <!-- ========================================== -->
+  <g id="part-b">
+    <!-- Axes: Origin at (240, 440) -->
+    <!-- Horizontal axis (omega, log scale) -->
+    <line x1="220" y1="440" x2="520" y2="440" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)" />
+    <!-- Vertical axis (|Vo/Vi| (dB)) -->
+    <line x1="240" y1="460" x2="240" y2="295" stroke="#000000" stroke-width="1.5" marker-end="url(#arrow)" />
+
+    <!-- Origin '0' -->
+    <text x="230" y="445" font-family="Times New Roman, STIX, serif" font-size="15" text-anchor="end">0</text>
+
+    <!-- Vertical axis label: |Vo/Vi| (dB) -->
+    <g transform="translate(210, 275)" font-family="Times New Roman, STIX, serif">
+      <line x1="4" y1="3" x2="4" y2="27" stroke="#000000" stroke-width="1.2" />
+      <text x="13" y="11" font-size="14" font-style="italic" text-anchor="middle">V<tspan baseline-shift="sub" font-size="10">o</tspan></text>
+      <line x1="6" y1="15" x2="20" y2="15" stroke="#000000" stroke-width="1" />
+      <text x="13" y="25" font-size="14" font-style="italic" text-anchor="middle">V<tspan baseline-shift="sub" font-size="10">i</tspan></text>
+      <line x1="22" y1="3" x2="22" y2="27" stroke="#000000" stroke-width="1.2" />
+      <text x="28" y="18" font-size="15">(dB)</text>
+    </g>
+
+    <!-- Horizontal axis label: omega (log scale) -->
+    <text x="526" y="445" font-family="Times New Roman, STIX, serif" font-size="15">
+      <tspan font-style="italic">ω</tspan> (log scale)
+    </text>
+
+    <!-- Frequency response curve: 20 dB/dec (+6 dB/octave) line -->
+    <!-- Passes through omega = 1/(CR) at 0 dB, so (310, 440) -->
+    <!-- Dashed lower extension -->
+    <line x1="272" y1="466" x2="292" y2="452" stroke="#000000" stroke-width="2" stroke-dasharray="8,5" />
+    
+    <!-- Solid response line from (292, 452) up to (480, 320) -->
+    <line x1="292" y1="452" x2="480" y2="320" stroke="#000000" stroke-width="2" />
+    
+    <!-- Dashed upper extension -->
+    <line x1="480" y1="320" x2="502" y2="305" stroke="#000000" stroke-width="2" stroke-dasharray="8,5" />
+
+    <!-- Crossing frequency tick and label 1/(CR) -->
+    <line x1="310" y1="435" x2="310" y2="445" stroke="#000000" stroke-width="1.5" />
+    <g transform="translate(310, 452)" font-family="Times New Roman, STIX, serif" font-size="15">
+      <text x="0" y="8" text-anchor="middle">1</text>
+      <line x1="-10" y1="12" x2="10" y2="12" stroke="#000000" stroke-width="1" />
+      <text x="0" y="26" font-style="italic" text-anchor="middle">CR</text>
+    </g>
+
+    <!-- Slope callout: curve arrow pointing to the line, with label +6 dB/octave -->
+    <path d="M 425,430 Q 380,430 375,400" fill="none" stroke="#000000" stroke-width="1.2" marker-end="url(#callout-arrow)" />
+    <text x="432" y="434" font-family="Times New Roman, STIX, serif" font-size="15">+6 dB/octave</text>
+
+    <!-- Subfigure label (b) -->
+    <text x="405" y="525" font-family="Times New Roman, STIX, serif" font-size="16" text-anchor="middle">(b)</text>
+  </g>
+
+</svg>

@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 600" width="100%" height="100%" role="img" aria-labelledby="title-2-44 desc-2-44">
+  <title id="title-2-44">Figure 2.44 Unity-Gain Follower Step Response and Slew-Rate Limiting</title>
+  <desc id="desc-2-44">(a) Unity-gain follower. (b) Input step waveform. (c) Linearly rising output waveform when amplifier is slew-rate limited. (d) Exponentially rising output waveform when initial slope is smaller than or equal to slew rate.</desc>
+
+  <defs>
+    <!-- Arrowhead markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#111111"/>
+    </marker>
+    <marker id="arrow-sm" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <style>
+    .bg { fill: #ffffff; }
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .wire-thin { fill: none; stroke: #111111; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .wire-dash { fill: none; stroke: #111111; stroke-width: 1.6; stroke-dasharray: 5,4; stroke-linecap: round; stroke-linejoin: round; }
+    .wave-line { fill: none; stroke: #111111; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: #111111; }
+    .txt-sm { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 20px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .lbl-subfig { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" width="100%" height="100%"/>
+
+  <!-- ========================================== -->
+  <!-- Subfigure (a): Unity-Gain Follower         -->
+  <!-- ========================================== -->
+  <g id="subfig-a">
+    <!-- Subfigure Label -->
+    <text class="lbl-subfig" x="240" y="440">(a)</text>
+
+    <!-- Op Amp Triangle -->
+    <path class="opamp-body" d="M 210 180 L 300 240 L 210 300 Z"/>
+    <text class="opamp-sign" x="224" y="210">−</text>
+    <text class="opamp-sign" x="224" y="270">+</text>
+
+    <!-- Direct Feedback Loop (Output to Inverting Terminal) -->
+    <!-- Op amp output wire to junction -->
+    <line class="wire" x1="300" y1="240" x2="335" y2="240"/>
+    <circle class="junc" cx="335" cy="240" r="3.5"/>
+    <!-- Loop: Up, Left, Down, Right into '-' input -->
+    <polyline class="wire" points="335,240 335,150 160,150 160,210 210,210"/>
+
+    <!-- Noninverting Input (+) Terminal and Voltage Label -->
+    <line class="wire" x1="210" y1="270" x2="130" y2="270"/>
+    <circle class="term" cx="130" cy="270" r="4.5"/>
+
+    <!-- Ground under input -->
+    <line class="wire" x1="118" y1="365" x2="142" y2="365"/>
+    <line class="wire" x1="122" y1="370" x2="138" y2="370"/>
+    <line class="wire" x1="126" y1="375" x2="134" y2="375"/>
+
+    <!-- vI Polarity & Label -->
+    <text class="sign" x="130" y="295">+</text>
+    <text class="math" x="130" y="320" text-anchor="middle">v<tspan class="sub">I</tspan></text>
+    <text class="sign" x="130" y="345">−</text>
+
+    <!-- Output Terminal and Voltage Label -->
+    <line class="wire" x1="335" y1="240" x2="380" y2="240"/>
+    <circle class="term" cx="380" cy="240" r="4.5"/>
+
+    <!-- Ground under output -->
+    <line class="wire" x1="368" y1="365" x2="392" y2="365"/>
+    <line class="wire" x1="372" y1="370" x2="388" y2="370"/>
+    <line class="wire" x1="376" y1="375" x2="384" y2="375"/>
+
+    <!-- vO Polarity & Label -->
+    <text class="sign" x="380" y="270">+</text>
+    <text class="math" x="380" y="300" text-anchor="middle">v<tspan class="sub">O</tspan></text>
+    <text class="sign" x="380" y="335">−</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- Subfigure (b): Input Step Waveform         -->
+  <!-- ========================================== -->
+  <g id="subfig-b">
+    <!-- Subfigure Label -->
+    <text class="lbl-subfig" x="660" y="160">(b)</text>
+
+    <!-- Axes -->
+    <!-- Vertical axis (vI) -->
+    <line class="wire-thin" x1="540" y1="135" x2="540" y2="35" marker-end="url(#arrow)"/>
+    <text class="math" x="518" y="44">v<tspan class="sub">I</tspan></text>
+
+    <!-- Horizontal axis (t) -->
+    <line class="wire-thin" x1="510" y1="120" x2="820" y2="120" marker-end="url(#arrow)"/>
+    <text class="math" x="822" y="135">t</text>
+    <text class="txt" x="526" y="138">0</text>
+
+    <!-- Waveform: 0 for t < 0, instant step to V at t = 0, flat for t > 0 -->
+    <line class="wave-line" x1="475" y1="120" x2="540" y2="120"/>
+    <line class="wave-line" x1="540" y1="120" x2="540" y2="65"/>
+    <line class="wave-line" x1="540" y1="65" x2="780" y2="65"/>
+
+    <!-- Height V Dimension Indicator (Bidirectional Arrow) -->
+    <line class="wire-thin" x1="680" y1="84" x2="680" y2="68" marker-end="url(#arrow-sm)"/>
+    <line class="wire-thin" x1="680" y1="102" x2="680" y2="117" marker-end="url(#arrow-sm)"/>
+    <text class="math" x="680" y="99" text-anchor="middle">V</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- Subfigure (c): Slew-Rate Limited Output    -->
+  <!-- ========================================== -->
+  <g id="subfig-c">
+    <!-- Subfigure Label -->
+    <text class="lbl-subfig" x="660" y="330">(c)</text>
+
+    <!-- Axes -->
+    <!-- Vertical axis (vO) -->
+    <line class="wire-thin" x1="540" y1="305" x2="540" y2="205" marker-end="url(#arrow)"/>
+    <text class="math" x="518" y="214">v<tspan class="sub">O</tspan></text>
+
+    <!-- Horizontal axis (t) -->
+    <line class="wire-thin" x1="510" y1="290" x2="820" y2="290" marker-end="url(#arrow)"/>
+    <text class="math" x="822" y="305">t</text>
+    <text class="txt" x="526" y="308">0</text>
+
+    <!-- Waveform: 0 for t < 0, linear ramp to V, flat for remaining t -->
+    <line class="wave-line" x1="475" y1="290" x2="540" y2="290"/>
+    <path class="wave-line" d="M 540 290 L 610 235 Q 618 235 630 235 L 780 235"/>
+
+    <!-- Slope = SR Label with Arrow pointing to the linear ramp -->
+    <text class="txt" x="526" y="246" text-anchor="end">Slope = SR</text>
+    <line class="wire-thin" x1="532" y1="243" x2="572" y2="260" marker-end="url(#arrow-sm)"/>
+
+    <!-- Height V Dimension Indicator (Bidirectional Arrow) -->
+    <line class="wire-thin" x1="680" y1="254" x2="680" y2="238" marker-end="url(#arrow-sm)"/>
+    <line class="wire-thin" x1="680" y1="272" x2="680" y2="287" marker-end="url(#arrow-sm)"/>
+    <text class="math" x="680" y="269" text-anchor="middle">V</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- Subfigure (d): Exponential Output (Small V)-->
+  <!-- ========================================== -->
+  <g id="subfig-d">
+    <!-- Subfigure Label -->
+    <text class="lbl-subfig" x="660" y="505">(d)</text>
+
+    <!-- Axes -->
+    <!-- Vertical axis (vO) -->
+    <line class="wire-thin" x1="540" y1="480" x2="540" y2="380" marker-end="url(#arrow)"/>
+    <text class="math" x="518" y="389">v<tspan class="sub">O</tspan></text>
+
+    <!-- Horizontal axis (t) -->
+    <line class="wire-thin" x1="510" y1="465" x2="820" y2="465" marker-end="url(#arrow)"/>
+    <text class="math" x="822" y="480">t</text>
+    <text class="txt" x="526" y="483">0</text>
+
+    <!-- Initial Tangent Line (dashed) -->
+    <line class="wire-dash" x1="540" y1="465" x2="600" y2="400"/>
+
+    <!-- Waveform: 0 for t < 0, exponential rise toward V -->
+    <line class="wave-line" x1="475" y1="465" x2="540" y2="465"/>
+    <path class="wave-line" d="M 540 465 C 570 422, 615 410, 675 410 L 780 410"/>
+
+    <!-- Slope = omega_t V <= SR Label above tangent line with pointing arrow -->
+    <text class="txt" x="655" y="382" text-anchor="middle">
+      Slope = <tspan class="math">ω<tspan class="sub">t</tspan>V</tspan> ≤ SR
+    </text>
+    <line class="wire-thin" x1="620" y1="390" x2="580" y2="415" marker-end="url(#arrow-sm)"/>
+
+    <!-- Height V Dimension Indicator (Bidirectional Arrow) -->
+    <line class="wire-thin" x1="680" y1="429" x2="680" y2="413" marker-end="url(#arrow-sm)"/>
+    <line class="wire-thin" x1="680" y1="447" x2="680" y2="462" marker-end="url(#arrow-sm)"/>
+    <text class="math" x="680" y="444" text-anchor="middle">V</text>
+  </g>
+</svg>

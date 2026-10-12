@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 280" width="100%" height="100%" role="img" aria-labelledby="title-2-07 desc-2-07">
+  <title id="title-2-07">Figure 2.7 Analysis of the inverting configuration taking into account the finite open-loop gain of the op amp</title>
+  <desc id="desc-2-07">Schematic diagram showing the analysis of the inverting operational amplifier configuration taking into account the finite open-loop gain A. Depicts the input source vI, input current i1 through R1, feedback current i2 = i1 through R2, inverting terminal voltage -vO/A, and output voltage vO relative to ground.</desc>
+
+  <style>
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #111111; }
+    .math-sm { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 16px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sub-norm { font-size: 0.72em; font-style: normal; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; fill: #111111; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .arrow-line { fill: none; stroke: #111111; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .arrow { fill: #111111; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- ==================== INPUT SOURCE vI ==================== -->
+  <!-- Ground below source -->
+  <line class="wire" x1="70" y1="193" x2="70" y2="215"/>
+  <line class="wire" x1="56" y1="215" x2="84" y2="215"/>
+  <line class="wire" x1="61" y1="220" x2="79" y2="220"/>
+  <line class="wire" x1="66" y1="225" x2="74" y2="225"/>
+
+  <!-- Source Circle -->
+  <circle class="comp-bg" cx="70" cy="175" r="18"/>
+  <text class="sign" x="70" y="167">+</text>
+  <text class="sign" x="70" y="184">−</text>
+  <text class="math" x="35" y="181">v<tspan class="sub">I</tspan></text>
+
+  <!-- Wire from source to input terminal -->
+  <polyline class="wire" points="70,157 70,130 110,130"/>
+  <circle class="term" cx="110" cy="130" r="3.5"/>
+
+  <!-- ==================== INPUT BRANCH R1 ==================== -->
+  <!-- Wire from terminal to R1 -->
+  <line class="wire" x1="114" y1="130" x2="150" y2="130"/>
+
+  <!-- Current i1 arrow -->
+  <line class="arrow-line" x1="118" y1="117" x2="142" y2="117"/>
+  <polygon class="arrow" points="142,113 150,117 142,121"/>
+  <text class="math" x="134" y="105" text-anchor="middle">i<tspan class="sub-norm">1</tspan></text>
+
+  <!-- Resistor R1 -->
+  <path class="wire" d="M 150.0,130.0 L 158.0,130.0 L 164.7,121.5 L 171.3,138.5 L 178.0,121.5 L 184.7,138.5 L 191.3,121.5 L 198.0,130.0 L 206.0,130.0"/>
+  <text class="math" x="180" y="110" text-anchor="middle">R<tspan class="sub-norm">1</tspan></text>
+
+  <!-- Wire from R1 to junction dot -->
+  <line class="wire" x1="206" y1="130" x2="245" y2="130"/>
+  <circle class="junc" cx="245" cy="130" r="3.5"/>
+
+  <!-- ==================== INVERTING INPUT & VOLTAGE ==================== -->
+  <!-- Wire from junction to op-amp inverting terminal -->
+  <line class="wire" x1="245" y1="130" x2="330" y2="130"/>
+
+  <!-- Arrow with 0 current into inverting terminal -->
+  <line class="arrow-line" x1="272" y1="117" x2="298" y2="117"/>
+  <polygon class="arrow" points="298,113 306,117 298,121"/>
+  <text class="txt" x="289" y="105" text-anchor="middle">0</text>
+
+  <!-- Voltage -vO/A at inverting node -->
+  <g transform="translate(245, 154)">
+    <text class="math-sm" x="-26" y="2" text-anchor="middle">−</text>
+    <text class="math-sm" x="0" y="-7" text-anchor="middle">v<tspan class="sub-norm">O</tspan></text>
+    <line class="wire" x1="-12" y1="-1" x2="12" y2="-1" stroke-width="1.5"/>
+    <text class="math-sm" x="0" y="15" text-anchor="middle">A</text>
+  </g>
+
+  <!-- ==================== OP-AMP BODY ==================== -->
+  <polygon points="330,105 415,155 330,205" class="opamp-body"/>
+  <text class="opamp-sign" x="344" y="130">−</text>
+  <text class="opamp-sign" x="344" y="180">+</text>
+  <text class="math" x="375" y="156" font-size="22px" text-anchor="middle">A</text>
+
+  <!-- ==================== NON-INVERTING INPUT & GROUND ==================== -->
+  <polyline class="wire" points="330,180 245,180 245,215"/>
+  <line class="wire" x1="231" y1="215" x2="259" y2="215"/>
+  <line class="wire" x1="236" y1="220" x2="254" y2="220"/>
+  <line class="wire" x1="241" y1="225" x2="249" y2="225"/>
+
+  <!-- ==================== FEEDBACK PATH R2 ==================== -->
+  <polyline class="wire" points="245,130 245,55 330,55"/>
+
+  <!-- Arrow and i2 = i1 above feedback wire -->
+  <line class="arrow-line" x1="268" y1="42" x2="300" y2="42"/>
+  <polygon class="arrow" points="300,38 308,42 300,46"/>
+  <text class="math" x="288" y="29" text-anchor="middle">i<tspan class="sub-norm">2</tspan> = i<tspan class="sub-norm">1</tspan></text>
+
+  <!-- Resistor R2 -->
+  <path class="wire" d="M 330.0,55.0 L 338.0,55.0 L 344.7,46.5 L 351.3,63.5 L 358.0,46.5 L 364.7,63.5 L 371.3,46.5 L 378.0,55.0 L 386.0,55.0"/>
+  <text class="math" x="360" y="34" text-anchor="middle">R<tspan class="sub-norm">2</tspan></text>
+
+  <!-- Wire from R2 to output junction -->
+  <polyline class="wire" points="386,55 460,55 460,155"/>
+
+  <!-- ==================== OUTPUT & vO ==================== -->
+  <line class="wire" x1="415" y1="155" x2="505" y2="155"/>
+  <circle class="junc" cx="460" cy="155" r="3.5"/>
+  <circle class="term" cx="505" cy="155" r="3.5"/>
+
+  <text class="sign" x="505" y="178">+</text>
+  <text class="math" x="505" y="199" text-anchor="middle">v<tspan class="sub-norm">O</tspan></text>
+  <text class="sign" x="505" y="220">−</text>
+
+  <!-- Ground below vO -->
+  <line class="wire" x1="505" y1="228" x2="505" y2="236"/>
+  <line class="wire" x1="491" y1="236" x2="519" y2="236"/>
+  <line class="wire" x1="496" y1="241" x2="514" y2="241"/>
+  <line class="wire" x1="501" y1="246" x2="509" y2="246"/>
+</svg>

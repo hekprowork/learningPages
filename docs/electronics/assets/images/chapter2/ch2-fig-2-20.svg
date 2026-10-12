@@ -1,0 +1,456 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 860" width="100%" height="100%" role="img" aria-labelledby="title-2-20 desc-2-20">
+  <title id="title-2-20">Figure 2.20 Instrumentation Amplifier Configurations and Analysis</title>
+  <desc id="desc-2-20">Three subfigures showing the instrumentation amplifier: (a) Initial approach with separate grounded resistors R1 at node X; (b) Improved configuration with node X disconnected from ground and the two resistors combined into a single 2R1; (c) Differential signal analysis of the circuit with virtual grounds and node voltages vO1, vO2, and differential output vO.</desc>
+
+  <style>
+    .wire { fill: none; stroke: #000000; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #000000; stroke-width: 2.2; stroke-linejoin: round; }
+    .term { fill: #ffffff; stroke: #000000; stroke-width: 2.2; }
+    .junc { fill: #000000; }
+    .subfig-lbl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 21px; font-weight: normal; fill: #000000; text-anchor: middle; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #000000; }
+    .math-sm { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 17px; fill: #000000; }
+    .opamp-name { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 19px; font-weight: 500; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: normal; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+    .txt-lbl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; fill: #000000; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <defs>
+    <!-- Op-amp symbol pointing right: base at x=0, tip at x=64, height 70 (y from -35 to +35) -->
+    <g id="opamp">
+      <polygon points="0,-35 64,0 0,35" class="opamp-body"/>
+    </g>
+
+    <!-- Horizontal resistor (length 60: 10 lead + 40 body + 10 lead) -->
+    <g id="res-h">
+      <line class="wire" x1="0" y1="0" x2="10" y2="0"/>
+      <path class="wire" d="M 10,0 L 13.3,-8 L 20,8 L 26.7,-8 L 33.3,8 L 40,-8 L 46.7,8 L 50,0"/>
+      <line class="wire" x1="50" y1="0" x2="60" y2="0"/>
+    </g>
+
+    <!-- Vertical resistor (length 60: 10 lead + 40 body + 10 lead) -->
+    <g id="res-v">
+      <line class="wire" x1="0" y1="0" x2="0" y2="10"/>
+      <path class="wire" d="M 0,10 L -8,13.3 L 8,20 L -8,26.7 L 8,33.3 L -8,40 L 8,46.7 L 0,50"/>
+      <line class="wire" x1="0" y1="50" x2="0" y2="60"/>
+    </g>
+
+    <!-- Standard 3-line Ground symbol -->
+    <g id="gnd">
+      <line class="wire" x1="0" y1="0" x2="0" y2="10"/>
+      <line class="wire" x1="-14" y1="10" x2="14" y2="10"/>
+      <line class="wire" x1="-9" y1="15" x2="9" y2="15"/>
+      <line class="wire" x1="-4" y1="20" x2="4" y2="20"/>
+    </g>
+
+    <!-- Left-pointing Ground symbol for node X in (a) -->
+    <g id="gnd-left">
+      <line class="wire" x1="0" y1="0" x2="-10" y2="0"/>
+      <line class="wire" x1="-10" y1="-14" x2="-10" y2="14"/>
+      <line class="wire" x1="-15" y1="-9" x2="-15" y2="9"/>
+      <line class="wire" x1="-20" y1="-4" x2="-20" y2="4"/>
+    </g>
+
+    <!-- Arrow markers -->
+    <marker id="arr-right" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#000000"/>
+    </marker>
+    <marker id="arr-up" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <!-- ========================================================================================== -->
+  <!-- SUBFIGURE (a): Initial approach to the circuit                                             -->
+  <!-- ========================================================================================== -->
+  <g id="subfig-a" transform="translate(30, 30)">
+    <!-- Inputs vI1, vI2 -->
+    <text class="math" x="12" y="106">v<tspan style="font-size:0.7em;">I1</tspan></text>
+    <circle class="term" cx="42" cy="100" r="4.5"/>
+    <line class="wire" x1="47" y1="100" x2="140" y2="100"/>
+
+    <text class="math" x="12" y="526">v<tspan style="font-size:0.7em;">I2</tspan></text>
+    <circle class="term" cx="42" cy="520" r="4.5"/>
+    <line class="wire" x1="47" y1="520" x2="140" y2="520"/>
+
+    <!-- Op-amp A1 -->
+    <use href="#opamp" x="140" y="115"/>
+    <text class="opamp-name" x="170" y="115">A<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+    <text class="opamp-sign" x="151" y="99">+</text>
+    <text class="opamp-sign" x="151" y="131">−</text>
+
+    <!-- Op-amp A2 -->
+    <use href="#opamp" x="140" y="505"/>
+    <text class="opamp-name" x="170" y="505">A<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <text class="opamp-sign" x="151" y="489">−</text>
+    <text class="opamp-sign" x="151" y="521">+</text>
+
+    <!-- Inverting feedback loop A1 (R2) -->
+    <line class="wire" x1="140" y1="130" x2="110" y2="130"/>
+    <circle class="junc" cx="110" cy="130" r="3.5"/>
+    <line class="wire" x1="110" y1="130" x2="110" y2="210"/>
+    <line class="wire" x1="110" y1="210" x2="145" y2="210"/>
+    <use href="#res-h" x="145" y="210"/>
+    <text class="math" x="169" y="198">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <line class="wire" x1="205" y1="210" x2="250" y2="210"/>
+
+    <!-- Inverting feedback loop A2 (R2) -->
+    <line class="wire" x1="140" y1="490" x2="110" y2="490"/>
+    <circle class="junc" cx="110" cy="490" r="3.5"/>
+    <line class="wire" x1="110" y1="490" x2="110" y2="410"/>
+    <line class="wire" x1="110" y1="410" x2="145" y2="410"/>
+    <use href="#res-h" x="145" y="410"/>
+    <text class="math" x="169" y="398">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <line class="wire" x1="205" y1="410" x2="250" y2="410"/>
+
+    <!-- Resistors R1 and Node X to Ground -->
+    <line class="wire" x1="110" y1="130" x2="110" y2="225"/>
+    <use href="#res-v" x="110" y="225"/>
+    <text class="math" x="122" y="260">R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+    <line class="wire" x1="110" y1="285" x2="110" y2="310"/>
+
+    <circle class="junc" cx="110" cy="310" r="3.5"/>
+    <text class="txt-lbl" style="font-weight:500;" x="124" y="315">X</text>
+    <line class="wire" x1="110" y1="310" x2="80" y2="310"/>
+    <use href="#gnd-left" x="80" y="310"/>
+
+    <line class="wire" x1="110" y1="310" x2="110" y2="335"/>
+    <use href="#res-v" x="110" y="335"/>
+    <text class="math" x="122" y="370">R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+    <line class="wire" x1="110" y1="395" x2="110" y2="490"/>
+
+    <!-- A1 output & connection to difference stage -->
+    <line class="wire" x1="204" y1="115" x2="250" y2="115"/>
+    <line class="wire" x1="250" y1="115" x2="250" y2="275"/>
+    <circle class="junc" cx="250" cy="210" r="3.5"/>
+    <line class="wire" x1="250" y1="275" x2="290" y2="275"/>
+
+    <!-- A2 output & connection to difference stage -->
+    <line class="wire" x1="204" y1="505" x2="250" y2="505"/>
+    <line class="wire" x1="250" y1="505" x2="250" y2="345"/>
+    <circle class="junc" cx="250" cy="410" r="3.5"/>
+    <line class="wire" x1="250" y1="345" x2="290" y2="345"/>
+
+    <!-- A1, A2 stage gain expressions -->
+    <text class="math" x="225" y="90">( 1 + <tspan style="font-size:0.85em;">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan>/R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></tspan> ) v<tspan style="font-size:0.7em;">I1</tspan></text>
+    <text class="math" x="225" y="540">( 1 + <tspan style="font-size:0.85em;">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan>/R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></tspan> ) v<tspan style="font-size:0.7em;">I2</tspan></text>
+
+    <!-- Difference Amplifier Stage: A3 -->
+    <!-- Inverting feed resistor R3 -->
+    <use href="#res-h" x="290" y="275"/>
+    <text class="math" x="314" y="260">R<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <line class="wire" x1="350" y1="275" x2="420" y2="275"/>
+
+    <!-- Noninverting feed resistor R3 -->
+    <use href="#res-h" x="290" y="345"/>
+    <text class="math" x="314" y="367">R<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <line class="wire" x1="350" y1="345" x2="420" y2="345"/>
+
+    <!-- Op-amp A3 -->
+    <use href="#opamp" x="420" y="310"/>
+    <text class="opamp-name" x="450" y="310">A<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <text class="opamp-sign" x="431" y="294">−</text>
+    <text class="opamp-sign" x="431" y="326">+</text>
+
+    <!-- Feedback loop R4 -->
+    <circle class="junc" cx="385" cy="275" r="3.5"/>
+    <line class="wire" x1="385" y1="275" x2="385" y2="225"/>
+    <line class="wire" x1="385" y1="225" x2="400" y2="225"/>
+    <use href="#res-h" x="400" y="225"/>
+    <text class="math" x="424" y="212">R<tspan style="font-size:0.7em; font-style:normal;">4</tspan></text>
+    <line class="wire" x1="460" y1="225" x2="495" y2="225"/>
+    <line class="wire" x1="495" y1="225" x2="495" y2="310"/>
+
+    <!-- Ground resistor R4 -->
+    <circle class="junc" cx="385" cy="345" r="3.5"/>
+    <line class="wire" x1="385" y1="345" x2="385" y2="365"/>
+    <use href="#res-v" x="385" y="365"/>
+    <text class="math" x="398" y="400">R<tspan style="font-size:0.7em; font-style:normal;">4</tspan></text>
+    <line class="wire" x1="385" y1="425" x2="385" y2="440"/>
+    <use href="#gnd" x="385" y="440"/>
+
+    <!-- Output vO -->
+    <line class="wire" x1="484" y1="310" x2="525" y2="310"/>
+    <circle class="junc" cx="495" cy="310" r="3.5"/>
+    <circle class="term" cx="530" cy="310" r="4.5"/>
+
+    <text class="sign" x="530" y="344">+</text>
+    <text class="math" x="524" y="375">v<tspan style="font-size:0.7em;">O</tspan></text>
+    <text class="sign" x="530" y="402">−</text>
+    <use href="#gnd" x="530" y="420"/>
+
+    <!-- Subfigure Label -->
+    <text class="subfig-lbl" x="280" y="700">(a)</text>
+  </g>
+
+
+  <!-- ========================================================================================== -->
+  <!-- SUBFIGURE (b): Node X disconnected from ground, 2R1 lumped together                        -->
+  <!-- ========================================================================================== -->
+  <g id="subfig-b" transform="translate(590, 30)">
+    <!-- Inputs vI1, vI2 -->
+    <text class="math" x="12" y="106">v<tspan style="font-size:0.7em;">I1</tspan></text>
+    <circle class="term" cx="42" cy="100" r="4.5"/>
+    <line class="wire" x1="47" y1="100" x2="140" y2="100"/>
+
+    <text class="math" x="12" y="526">v<tspan style="font-size:0.7em;">I2</tspan></text>
+    <circle class="term" cx="42" cy="520" r="4.5"/>
+    <line class="wire" x1="47" y1="520" x2="140" y2="520"/>
+
+    <!-- Op-amp A1 -->
+    <use href="#opamp" x="140" y="115"/>
+    <text class="opamp-name" x="170" y="115">A<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+    <text class="opamp-sign" x="151" y="99">+</text>
+    <text class="opamp-sign" x="151" y="131">−</text>
+
+    <!-- Op-amp A2 -->
+    <use href="#opamp" x="140" y="505"/>
+    <text class="opamp-name" x="170" y="505">A<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <text class="opamp-sign" x="151" y="489">−</text>
+    <text class="opamp-sign" x="151" y="521">+</text>
+
+    <!-- Inverting feedback loop A1 (R2) -->
+    <line class="wire" x1="140" y1="130" x2="110" y2="130"/>
+    <circle class="junc" cx="110" cy="130" r="3.5"/>
+    <line class="wire" x1="110" y1="130" x2="110" y2="200"/>
+    <line class="wire" x1="110" y1="200" x2="145" y2="200"/>
+    <use href="#res-h" x="145" y="200"/>
+    <text class="math" x="169" y="188">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <line class="wire" x1="205" y1="200" x2="250" y2="200"/>
+
+    <!-- Inverting feedback loop A2 (R2) -->
+    <line class="wire" x1="140" y1="490" x2="110" y2="490"/>
+    <circle class="junc" cx="110" cy="490" r="3.5"/>
+    <line class="wire" x1="110" y1="490" x2="110" y2="420"/>
+    <line class="wire" x1="110" y1="420" x2="145" y2="420"/>
+    <use href="#res-h" x="145" y="420"/>
+    <text class="math" x="169" y="408">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <line class="wire" x1="205" y1="420" x2="250" y2="420"/>
+
+    <!-- Lumped Resistor 2R1 between node 1 and node 2 -->
+    <line class="wire" x1="110" y1="130" x2="110" y2="275"/>
+    <use href="#res-v" x="110" y="275"/>
+    <text class="math" x="122" y="315">2R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+    <line class="wire" x1="110" y1="335" x2="110" y2="490"/>
+
+    <!-- A1 output & connection to difference stage -->
+    <line class="wire" x1="204" y1="115" x2="250" y2="115"/>
+    <line class="wire" x1="250" y1="115" x2="250" y2="275"/>
+    <circle class="junc" cx="250" cy="200" r="3.5"/>
+    <line class="wire" x1="250" y1="275" x2="290" y2="275"/>
+
+    <!-- A2 output & connection to difference stage -->
+    <line class="wire" x1="204" y1="505" x2="250" y2="505"/>
+    <line class="wire" x1="250" y1="505" x2="250" y2="345"/>
+    <circle class="junc" cx="250" cy="420" r="3.5"/>
+    <line class="wire" x1="250" y1="345" x2="290" y2="345"/>
+
+    <!-- Difference Amplifier Stage: A3 -->
+    <!-- Inverting feed resistor R3 -->
+    <use href="#res-h" x="290" y="275"/>
+    <text class="math" x="314" y="260">R<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <line class="wire" x1="350" y1="275" x2="420" y2="275"/>
+
+    <!-- Noninverting feed resistor R3 -->
+    <use href="#res-h" x="290" y="345"/>
+    <text class="math" x="314" y="367">R<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <line class="wire" x1="350" y1="345" x2="420" y2="345"/>
+
+    <!-- Op-amp A3 -->
+    <use href="#opamp" x="420" y="310"/>
+    <text class="opamp-name" x="450" y="310">A<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <text class="opamp-sign" x="431" y="294">−</text>
+    <text class="opamp-sign" x="431" y="326">+</text>
+
+    <!-- Feedback loop R4 -->
+    <circle class="junc" cx="385" cy="275" r="3.5"/>
+    <line class="wire" x1="385" y1="275" x2="385" y2="225"/>
+    <line class="wire" x1="385" y1="225" x2="400" y2="225"/>
+    <use href="#res-h" x="400" y="225"/>
+    <text class="math" x="424" y="212">R<tspan style="font-size:0.7em; font-style:normal;">4</tspan></text>
+    <line class="wire" x1="460" y1="225" x2="495" y2="225"/>
+    <line class="wire" x1="495" y1="225" x2="495" y2="310"/>
+
+    <!-- Ground resistor R4 -->
+    <circle class="junc" cx="385" cy="345" r="3.5"/>
+    <line class="wire" x1="385" y1="345" x2="385" y2="365"/>
+    <use href="#res-v" x="385" y="365"/>
+    <text class="math" x="398" y="400">R<tspan style="font-size:0.7em; font-style:normal;">4</tspan></text>
+    <line class="wire" x1="385" y1="425" x2="385" y2="440"/>
+    <use href="#gnd" x="385" y="440"/>
+
+    <!-- Output vO -->
+    <line class="wire" x1="484" y1="310" x2="525" y2="310"/>
+    <circle class="junc" cx="495" cy="310" r="3.5"/>
+    <circle class="term" cx="530" cy="310" r="4.5"/>
+
+    <text class="sign" x="530" y="344">+</text>
+    <text class="math" x="524" y="375">v<tspan style="font-size:0.7em;">O</tspan></text>
+    <text class="sign" x="530" y="402">−</text>
+    <use href="#gnd" x="530" y="420"/>
+
+    <!-- Subfigure Label -->
+    <text class="subfig-lbl" x="280" y="700">(b)</text>
+  </g>
+
+
+  <!-- ========================================================================================== -->
+  <!-- SUBFIGURE (c): Complete analysis of the circuit assuming ideal op amps                     -->
+  <!-- ========================================================================================== -->
+  <g id="subfig-c" transform="translate(1140, 30)">
+    <!-- Inputs vI1, vI2 with differential indicators -->
+    <text class="math" x="6" y="106">v<tspan style="font-size:0.7em;">I1</tspan></text>
+    <circle class="term" cx="36" cy="100" r="4.5"/>
+    <line class="wire" x1="41" y1="100" x2="140" y2="100"/>
+
+    <text class="sign" x="108" y="112">+</text>
+    <text class="txt-lbl" style="font-size:15px;" x="98" y="130">0 V</text>
+    <text class="sign" x="108" y="146">−</text>
+
+    <text class="math" x="6" y="526">v<tspan style="font-size:0.7em;">I2</tspan></text>
+    <circle class="term" cx="36" cy="520" r="4.5"/>
+    <line class="wire" x1="41" y1="520" x2="140" y2="520"/>
+
+    <text class="sign" x="108" y="474">−</text>
+    <text class="txt-lbl" style="font-size:15px;" x="98" y="492">0 V</text>
+    <text class="sign" x="108" y="508">+</text>
+
+    <!-- Op-amp A1 -->
+    <use href="#opamp" x="140" y="115"/>
+    <text class="opamp-name" x="170" y="115">A<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+    <text class="opamp-sign" x="151" y="99">+</text>
+    <text class="opamp-sign" x="151" y="131">−</text>
+
+    <!-- Op-amp A2 -->
+    <use href="#opamp" x="140" y="505"/>
+    <text class="opamp-name" x="170" y="505">A<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <text class="opamp-sign" x="151" y="489">−</text>
+    <text class="opamp-sign" x="151" y="521">+</text>
+
+    <!-- Virtual ground currents into inverting terminals (0 current arrows) -->
+    <!-- Inverting terminal of A1 at (140, 130) -->
+    <line class="wire" x1="140" y1="130" x2="110" y2="130"/>
+    <path d="M 124,130 L 132,130" stroke="#000000" stroke-width="2" marker-end="url(#arr-right)"/>
+    <text class="txt-lbl" style="font-weight:bold; font-size:15px;" x="136" y="144">0</text>
+
+    <!-- Inverting terminal of A2 at (140, 490) -->
+    <line class="wire" x1="140" y1="490" x2="110" y2="490"/>
+    <path d="M 124,490 L 132,490" stroke="#000000" stroke-width="2" marker-end="url(#arr-right)"/>
+    <text class="txt-lbl" style="font-weight:bold; font-size:15px;" x="136" y="484">0</text>
+
+    <!-- Node voltages at inverting nodes -->
+    <text class="math" x="80" y="174">v<tspan style="font-size:0.7em;">I1</tspan></text>
+    <circle class="junc" cx="110" cy="170" r="3.5"/>
+    <text class="sign" x="65" y="196">−</text>
+
+    <text class="math" x="80" y="446">v<tspan style="font-size:0.7em;">I2</tspan></text>
+    <circle class="junc" cx="110" cy="450" r="3.5"/>
+    <text class="sign" x="65" y="424">+</text>
+
+    <!-- Voltage across 2R1: (vI2 - vI1) = vId -->
+    <text class="math-sm" x="60" y="292">(v<tspan style="font-size:0.7em;">I2</tspan> − v<tspan style="font-size:0.7em;">I1</tspan>)</text>
+    <text class="math-sm" x="60" y="312">= v<tspan style="font-size:0.7em;">Id</tspan></text>
+
+    <!-- Resistor 2R1 between node 1 and 2 -->
+    <line class="wire" x1="110" y1="130" x2="110" y2="275"/>
+    <use href="#res-v" x="110" y="275"/>
+    <text class="math" x="122" y="314">2R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+    <line class="wire" x1="110" y1="335" x2="110" y2="490"/>
+
+    <!-- Current through 2R1: arrow pointing upward -->
+    <line class="wire" x1="152" y1="330" x2="152" y2="280" marker-end="url(#arr-up)"/>
+    <text class="math-sm" x="158" y="295">v<tspan style="font-size:0.7em;">Id</tspan></text>
+    <line class="wire" x1="158" y1="300" x2="182" y2="300"/>
+    <text class="math-sm" x="158" y="316">2R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+
+    <!-- Upper loop: R2 and current arrow pointing right -->
+    <line class="wire" x1="110" y1="170" x2="145" y2="170"/>
+    <use href="#res-h" x="145" y="170"/>
+    <text class="math" x="169" y="158">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <line class="wire" x1="205" y1="170" x2="250" y2="170"/>
+
+    <!-- Current through upper R2 -->
+    <line class="wire" x1="175" y1="184" x2="205" y2="184" marker-end="url(#arr-right)"/>
+    <text class="math-sm" x="180" y="202">v<tspan style="font-size:0.7em;">Id</tspan>/2R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+
+    <!-- Lower loop: R2 and current arrow pointing right -->
+    <line class="wire" x1="110" y1="450" x2="145" y2="450"/>
+    <use href="#res-h" x="145" y="450"/>
+    <text class="math" x="169" y="474">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan></text>
+    <line class="wire" x1="205" y1="450" x2="250" y2="450"/>
+
+    <!-- Current through lower R2 -->
+    <line class="wire" x1="180" y1="436" x2="210" y2="436" marker-end="url(#arr-right)"/>
+    <text class="math-sm" x="185" y="426">v<tspan style="font-size:0.7em;">Id</tspan>/2R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></text>
+
+    <!-- A1 output & node voltage vO1 -->
+    <line class="wire" x1="204" y1="115" x2="250" y2="115"/>
+    <line class="wire" x1="250" y1="115" x2="250" y2="275"/>
+    <circle class="junc" cx="250" cy="170" r="3.5"/>
+    <text class="math" x="238" y="106">v<tspan style="font-size:0.7em;">O1</tspan></text>
+    <line class="wire" x1="250" y1="275" x2="290" y2="275"/>
+
+    <!-- A2 output & node voltage vO2 -->
+    <line class="wire" x1="204" y1="505" x2="250" y2="505"/>
+    <line class="wire" x1="250" y1="505" x2="250" y2="345"/>
+    <circle class="junc" cx="250" cy="450" r="3.5"/>
+    <text class="math" x="238" y="525">v<tspan style="font-size:0.7em;">O2</tspan></text>
+    <line class="wire" x1="250" y1="345" x2="290" y2="345"/>
+
+    <!-- Differential output voltage between stage 1 outputs -->
+    <!-- vId ( 1 + 2R2/2R1 ) with +/- signs -->
+    <text class="sign" x="250" y="302">−</text>
+    <text class="math-sm" x="250" y="325">v<tspan style="font-size:0.7em;">Id</tspan> ( 1 + <tspan style="font-size:0.85em;">2R<tspan style="font-size:0.7em; font-style:normal;">2</tspan>/2R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></tspan> )</text>
+    <text class="sign" x="250" y="338">+</text>
+
+    <!-- Difference Amplifier Stage: A3 -->
+    <!-- Inverting feed resistor R3 -->
+    <use href="#res-h" x="290" y="275"/>
+    <text class="math" x="314" y="260">R<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <line class="wire" x1="350" y1="275" x2="420" y2="275"/>
+
+    <!-- Noninverting feed resistor R3 -->
+    <use href="#res-h" x="290" y="345"/>
+    <text class="math" x="314" y="367">R<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <line class="wire" x1="350" y1="345" x2="420" y2="345"/>
+
+    <!-- Op-amp A3 -->
+    <use href="#opamp" x="420" y="310"/>
+    <text class="opamp-name" x="450" y="310">A<tspan style="font-size:0.7em; font-style:normal;">3</tspan></text>
+    <text class="opamp-sign" x="431" y="294">−</text>
+    <text class="opamp-sign" x="431" y="326">+</text>
+
+    <!-- Feedback loop R4 -->
+    <circle class="junc" cx="385" cy="275" r="3.5"/>
+    <line class="wire" x1="385" y1="275" x2="385" y2="225"/>
+    <line class="wire" x1="385" y1="225" x2="400" y2="225"/>
+    <use href="#res-h" x="400" y="225"/>
+    <text class="math" x="424" y="212">R<tspan style="font-size:0.7em; font-style:normal;">4</tspan></text>
+    <line class="wire" x1="460" y1="225" x2="495" y2="225"/>
+    <line class="wire" x1="495" y1="225" x2="495" y2="310"/>
+
+    <!-- Ground resistor R4 -->
+    <circle class="junc" cx="385" cy="345" r="3.5"/>
+    <line class="wire" x1="385" y1="345" x2="385" y2="365"/>
+    <use href="#res-v" x="385" y="365"/>
+    <text class="math" x="398" y="400">R<tspan style="font-size:0.7em; font-style:normal;">4</tspan></text>
+    <line class="wire" x1="385" y1="425" x2="385" y2="440"/>
+    <use href="#gnd" x="385" y="440"/>
+
+    <!-- Output vO and Overall Gain Formula -->
+    <line class="wire" x1="484" y1="310" x2="525" y2="310"/>
+    <circle class="junc" cx="495" cy="310" r="3.5"/>
+    <circle class="term" cx="530" cy="310" r="4.5"/>
+
+    <text class="sign" x="530" y="325">+</text>
+    <!-- Output formula vO = (R4/R3)(1 + R2/R1)vId -->
+    <text class="math" x="525" y="348">v<tspan style="font-size:0.7em;">O</tspan> = <tspan style="font-size:0.85em;">R<tspan style="font-size:0.7em; font-style:normal;">4</tspan>/R<tspan style="font-size:0.7em; font-style:normal;">3</tspan></tspan> ( 1 + <tspan style="font-size:0.85em;">R<tspan style="font-size:0.7em; font-style:normal;">2</tspan>/R<tspan style="font-size:0.7em; font-style:normal;">1</tspan></tspan> ) v<tspan style="font-size:0.7em;">Id</tspan></text>
+    <use href="#gnd" x="530" y="380"/>
+
+    <!-- Subfigure Label -->
+    <text class="subfig-lbl" x="280" y="700">(c)</text>
+  </g>
+</svg>

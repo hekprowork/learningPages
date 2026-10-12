@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 660" width="100%" height="100%" role="img" aria-labelledby="title-2-24 desc-2-24">
+  <title id="title-2-24">Figure 2.24 The inverting Miller integrator and its frequency response</title>
+  <desc id="desc-2-24">(a) Schematic of the inverting Miller integrator op-amp circuit with input resistor R and feedback capacitor C, showing virtual ground and transfer equations. (b) Frequency response magnitude Bode plot with -6 dB/octave slope passing through 0 dB at unity-gain frequency 1/CR.</desc>
+
+  <defs>
+    <style>
+      .wire { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .wire-thin { stroke: #000000; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .wire-dash { stroke: #000000; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 6,5; fill: none; }
+      .opamp { fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: round; }
+      .terminal { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .dot { fill: #000000; }
+      .arrow { fill: #000000; stroke: none; }
+      .math { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 18px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .math-lg { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 19px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .math-sm { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 14px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .txt { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .txt-sm { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 14px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .pm { font-family: "Helvetica Neue", Arial, -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .sublabel { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 17px; fill: #000000; text-anchor: middle; }
+      .caption { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 15px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- ========================================================================= -->
+  <!-- ==================== SUBFIGURE (a): MILLER INTEGRATOR ==================== -->
+  <!-- ========================================================================= -->
+  <g id="subfig-a">
+    <!-- Input terminal -->
+    <circle cx="60" cy="120" r="4" class="terminal"/>
+
+    <!-- Input voltage v_I(t) notation -->
+    <text x="60" y="145" class="pm">+</text>
+    <text x="60" y="168" class="math">v<tspan font-size="12px" dy="3">I</tspan><tspan font-size="16px" dy="-3">(t)</tspan></text>
+    <!-- Ground below v_I(t) -->
+    <line x1="60" y1="180" x2="60" y2="190" class="wire"/>
+    <line x1="48" y1="190" x2="72" y2="190" class="wire"/>
+    <line x1="52" y1="195" x2="68" y2="195" class="wire"/>
+    <line x1="56" y1="200" x2="64" y2="200" class="wire"/>
+
+    <!-- Wire from terminal to resistor R with current arrow i1 -->
+    <line x1="64" y1="120" x2="95" y2="120" class="wire"/>
+    <!-- Current arrow i1 above input wire -->
+    <line x1="70" y1="108" x2="84" y2="108" class="wire-thin"/>
+    <polygon points="84,105 90,108 84,111" class="arrow"/>
+    <text x="78" y="96" class="math-sm">i<tspan font-size="10px" dy="2">1</tspan></text>
+
+    <!-- Resistor R -->
+    <path d="M 95,120 L 100,120 L 104,112 L 112,128 L 120,112 L 128,128 L 136,112 L 140,120 L 145,120" class="wire"/>
+    <text x="120" y="99" class="math">R</text>
+
+    <!-- Wire from R to inverting node -->
+    <line x1="145" y1="120" x2="175" y2="120" class="wire"/>
+    <circle cx="175" cy="120" r="3.5" class="dot"/>
+
+    <!-- Virtual ground annotations at node: 0 (current) and 0 V (voltage) -->
+    <line x1="175" y1="120" x2="215" y2="120" class="wire"/>
+    <text x="195" y="108" class="math">0</text>
+    <text x="195" y="136" class="txt-sm">0 V</text>
+
+    <!-- Op-amp triangle -->
+    <polygon points="215,95 305,140 215,185" class="opamp"/>
+    <text x="227" y="120" class="pm">−</text>
+    <text x="227" y="160" class="pm">+</text>
+
+    <!-- Non-inverting input to ground -->
+    <polyline points="215,160 175,160 175,195" class="wire"/>
+    <line x1="163" y1="195" x2="187" y2="195" class="wire"/>
+    <line x1="167" y1="200" x2="183" y2="200" class="wire"/>
+    <line x1="171" y1="205" x2="179" y2="205" class="wire"/>
+
+    <!-- Feedback branch -->
+    <line x1="175" y1="120" x2="175" y2="55" class="wire"/>
+    <line x1="175" y1="55" x2="230" y2="55" class="wire"/>
+
+    <!-- Current arrow i1 in feedback branch -->
+    <line x1="188" y1="44" x2="202" y2="44" class="wire-thin"/>
+    <polygon points="202,41 208,44 202,47" class="arrow"/>
+    <text x="196" y="32" class="math-sm">i<tspan font-size="10px" dy="2">1</tspan></text>
+
+    <!-- Capacitor C plates -->
+    <line x1="230" y1="40" x2="230" y2="70" class="wire"/>
+    <line x1="242" y1="40" x2="242" y2="70" class="wire"/>
+    <!-- Capacitor label C -->
+    <text x="236" y="85" class="math">C</text>
+
+    <!-- Capacitor voltage polarity + vC - -->
+    <text x="220" y="27" class="pm">+</text>
+    <text x="236" y="27" class="math">v<tspan font-size="12px" dy="3">C</tspan></text>
+    <text x="252" y="27" class="pm">−</text>
+
+    <!-- Wire from capacitor to op-amp output -->
+    <polyline points="242,55 310,55 310,140" class="wire"/>
+    <circle cx="310" cy="140" r="3.5" class="dot"/>
+
+    <!-- Output terminal -->
+    <line x1="305" y1="140" x2="355" y2="140" class="wire"/>
+    <circle cx="355" cy="140" r="4" class="terminal"/>
+
+    <!-- Output voltage v_O(t) notation -->
+    <text x="355" y="165" class="pm">+</text>
+    <text x="355" y="188" class="math">v<tspan font-size="12px" dy="3">O</tspan><tspan font-size="16px" dy="-3">(t)</tspan></text>
+    <!-- Ground below v_O(t) -->
+    <line x1="355" y1="200" x2="355" y2="210" class="wire"/>
+    <line x1="343" y1="210" x2="367" y2="210" class="wire"/>
+    <line x1="347" y1="215" x2="363" y2="215" class="wire"/>
+    <line x1="351" y1="220" x2="359" y2="220" class="wire"/>
+
+    <!-- ==================== EQUATIONS (RIGHT SIDE OF 2.24a) ==================== -->
+    <!-- Equation 1: Time domain integrator equation -->
+    <!-- v_O(t) = - 1/(CR) ∫_0^t v_I(t') dt' - V_C -->
+    <g transform="translate(395, 95)">
+      <text x="0" y="0" class="math-lg" text-anchor="start">v<tspan font-size="12px" dy="3">O</tspan><tspan font-size="17px" dy="-3">(t) = −</tspan></text>
+      <!-- Fraction 1 / CR -->
+      <text x="86" y="-12" class="math-lg">1</text>
+      <line x1="72" y1="-1" x2="100" y2="-1" class="wire-thin"/>
+      <text x="86" y="13" class="math-lg">CR</text>
+      <!-- Integral symbol -->
+      <text x="114" y="0" font-family="'Times New Roman', serif" font-size="34px" fill="#000000" text-anchor="middle" dominant-baseline="central">∫</text>
+      <text x="125" y="-14" class="math-sm">t</text>
+      <text x="122" y="14" class="math-sm">0</text>
+      <!-- Integrand -->
+      <text x="134" y="0" class="math-lg" text-anchor="start">v<tspan font-size="12px" dy="3">I</tspan><tspan font-size="17px" dy="-3">(t′)dt′ − </tspan>V<tspan font-size="12px" dy="3">C</tspan></text>
+    </g>
+
+    <!-- Equation 2: Transfer function V_o / V_i = - 1 / (sCR) -->
+    <g transform="translate(460, 155)">
+      <!-- Fraction Vo / Vi -->
+      <text x="0" y="-12" class="math-lg">V<tspan font-size="12px" dy="3">o</tspan></text>
+      <line x1="-15" y1="-1" x2="15" y2="-1" class="wire-thin"/>
+      <text x="0" y="13" class="math-lg">V<tspan font-size="12px" dy="3">i</tspan></text>
+      <!-- = - -->
+      <text x="34" y="0" class="math-lg">= −</text>
+      <!-- Fraction 1 / sCR -->
+      <text x="76" y="-12" class="math-lg">1</text>
+      <line x1="58" y1="-1" x2="94" y2="-1" class="wire-thin"/>
+      <text x="76" y="13" class="math-lg">sCR</text>
+    </g>
+
+    <!-- Sublabel (a) -->
+    <text x="320" y="250" class="sublabel">(a)</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- ==================== SUBFIGURE (b): FREQUENCY RESPONSE =================== -->
+  <!-- ========================================================================= -->
+  <g id="subfig-b">
+    <!-- Vertical Axis: Magnitude |Vo/Vi| (dB) -->
+    <line x1="180" y1="535" x2="180" y2="330" class="wire"/>
+    <polygon points="180,318 175,332 185,332" class="arrow"/>
+
+    <!-- Vertical axis label: |Vo/Vi| (dB) -->
+    <g transform="translate(180, 285)">
+      <line x1="-36" y1="-17" x2="-36" y2="17" class="wire-thin"/>
+      <text x="-21" y="-8" class="math-sm">V<tspan font-size="10px" dy="2">o</tspan></text>
+      <line x1="-31" y1="0" x2="-11" y2="0" class="wire-thin"/>
+      <text x="-21" y="9" class="math-sm">V<tspan font-size="10px" dy="2">i</tspan></text>
+      <line x1="-6" y1="-17" x2="-6" y2="17" class="wire-thin"/>
+      <text x="6" y="0" class="txt" text-anchor="start">(dB)</text>
+    </g>
+
+    <!-- Origin 0 label (in 3rd quadrant) -->
+    <text x="164" y="506" class="txt">0</text>
+
+    <!-- Horizontal Axis: Frequency omega (log scale) -->
+    <line x1="160" y1="490" x2="500" y2="490" class="wire"/>
+    <polygon points="510,490 496,485 496,495" class="arrow"/>
+    <text x="522" y="490" class="math" text-anchor="start">ω <tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-style="normal" font-size="15px">(log scale)</tspan></text>
+
+    <!-- Frequency response curve: slope = -6 dB/octave (-20 dB/decade) -->
+    <!-- Extends as dashed on the left above vertical axis, solid in between, dashed on right below 0 dB axis -->
+    <!-- Left dashed line: from (135, 336) to (180, 370) -->
+    <line x1="135" y1="336" x2="180" y2="370" class="wire-dash"/>
+    <!-- Main solid line: from (180, 370) to (360, 505) -->
+    <line x1="180" y1="370" x2="360" y2="505" class="wire" stroke-width="2.4"/>
+    <!-- Right dashed line: from (360, 505) to (405, 539) -->
+    <line x1="360" y1="505" x2="405" y2="539" class="wire-dash"/>
+
+    <!-- Unity-gain frequency tick mark on horizontal axis: omega = 1/CR -->
+    <!-- Axis is at y = 490. Line intersects at x = 340 -->
+    <line x1="340" y1="484" x2="340" y2="496" class="wire"/>
+
+    <!-- Label 1/CR below tick mark -->
+    <g transform="translate(340, 518)">
+      <text x="0" y="-8" class="math-sm">1</text>
+      <line x1="-12" y1="-1" x2="12" y2="-1" class="wire-thin"/>
+      <text x="0" y="9" class="math-sm">CR</text>
+    </g>
+
+    <!-- Slope annotation: -6 dB/octave with curved pointer arrow -->
+    <text x="440" y="430" class="txt" text-anchor="start">−6 dB/octave</text>
+    <path d="M 432,430 Q 350,422 288,449" class="wire-thin"/>
+    <polygon points="283,452 294,446 291,455" class="arrow"/>
+
+    <!-- Sublabel (b) -->
+    <text x="330" y="575" class="sublabel">(b)</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- ==================== OVERALL FIGURE CAPTION ============================= -->
+  <!-- ========================================================================= -->
+  <text x="370" y="625" class="caption">Figure 2.24 (a) The Miller or inverting integrator. (b) Frequency response of the integrator.</text>
+</svg>

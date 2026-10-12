@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="100%" height="100%" role="img" aria-labelledby="title-2-16 desc-2-16">
+  <title id="title-2-16">Figure 2.16 A Difference Amplifier</title>
+  <desc id="desc-2-16">Schematic diagram of an op-amp difference amplifier showing inputs vI1 and vI2, feedback resistor R2, feed-in resistors R1 and R3, grounding resistor R4, and single-ended output vO.</desc>
+  
+  <style>
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .wire-dash { fill: none; stroke: #111111; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 5,4; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #111111; }
+    .math-bold { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-weight: bold; font-size: 20px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sub-norm { font-size: 0.72em; font-style: normal; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .lbl-subfig { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; }
+    .arrow { fill: #111111; }
+    .arrow-line { fill: none; stroke: #111111; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Inputs -->
+  <circle class="term" cx="110" cy="140" r="4.5"/>
+  <text class="math" x="65" y="146">v<tspan class="sub">I1</tspan></text>
+
+  <circle class="term" cx="110" cy="210" r="4.5"/>
+  <text class="math" x="65" y="216">v<tspan class="sub">I2</tspan></text>
+
+  <!-- Input resistor R1 -->
+  <line class="wire" x1="115" y1="140" x2="150" y2="140"/>
+  <path class="wire" d="M 150.0,140.0 L 162.0,140.0 L 165.8,130.0 L 173.5,150.0 L 181.2,130.0 L 188.8,150.0 L 196.5,130.0 L 204.2,150.0 L 208.0,140.0 L 220.0,140.0"/>
+  <line class="wire" x1="220" y1="140" x2="290" y2="140"/>
+  <text class="math" x="175" y="118">R<tspan class="sub-norm">1</tspan></text>
+
+  <!-- Input resistor R3 -->
+  <line class="wire" x1="115" y1="210" x2="150" y2="210"/>
+  <path class="wire" d="M 150.0,210.0 L 162.0,210.0 L 165.8,200.0 L 173.5,220.0 L 181.2,200.0 L 188.8,220.0 L 196.5,200.0 L 204.2,220.0 L 208.0,210.0 L 220.0,210.0"/>
+  <line class="wire" x1="220" y1="210" x2="290" y2="210"/>
+  <text class="math" x="175" y="192">R<tspan class="sub-norm">3</tspan></text>
+
+  <!-- Op-amp -->
+  
+    <polygon points="290,133.0 365,175 290,217.0" class="opamp-body"/>
+    <text class="opamp-sign" x="302" y="153">−</text>
+    <text class="opamp-sign" x="302" y="197">+</text>
+    
+
+  <!-- Junction at inv input (260, 140) and non-inv (260, 210) -->
+  <circle class="junc" cx="255" cy="140" r="3.5"/>
+  <circle class="junc" cx="255" cy="210" r="3.5"/>
+
+  <!-- Feedback path: R2 -->
+  <path class="wire" d="M 255 140 L 255 75 L 320 75"/>
+  <path class="wire" d="M 320.0,75.0 L 332.0,75.0 L 336.2,65.0 L 344.8,85.0 L 353.2,65.0 L 361.8,85.0 L 370.2,65.0 L 378.8,85.0 L 383.0,75.0 L 395.0,75.0"/>
+  <path class="wire" d="M 395 75 L 450 75 L 450 175"/>
+  <text class="math" x="350" y="58">R<tspan class="sub-norm">2</tspan></text>
+
+  <!-- Ground path at non-inv input: R4 -->
+  <line class="wire" x1="255" y1="210" x2="255" y2="235"/>
+  <path class="wire" d="M 255.0,235.0 L 255.0,247.0 L 245.0,250.4 L 265.0,257.2 L 245.0,264.1 L 265.0,270.9 L 245.0,277.8 L 265.0,284.6 L 255.0,288.0 L 255.0,300.0"/>
+  <line class="wire" x1="255" y1="300" x2="255" y2="315"/>
+  <text class="math" x="272" y="272">R<tspan class="sub-norm">4</tspan></text>
+  
+    <line class="wire" x1="255" y1="315" x2="255" y2="325"/>
+    <line class="wire" x1="241" y1="325" x2="269" y2="325"/>
+    <line class="wire" x1="246" y1="330" x2="264" y2="330"/>
+    <line class="wire" x1="251" y1="335" x2="259" y2="335"/>
+    
+
+  <!-- Output wire -->
+  <line class="wire" x1="365" y1="175" x2="510" y2="175"/>
+  <circle class="junc" cx="450" cy="175" r="3.5"/>
+  <circle class="term" cx="510" cy="175" r="4.5"/>
+
+  <!-- Output voltage markings -->
+  <text class="sign" x="510" y="205">+</text>
+  <text class="math" x="502" y="235">v<tspan class="sub-norm">O</tspan></text>
+  <text class="sign" x="510" y="265">−</text>
+  
+    <line class="wire" x1="510" y1="280" x2="510" y2="290"/>
+    <line class="wire" x1="496" y1="290" x2="524" y2="290"/>
+    <line class="wire" x1="501" y1="295" x2="519" y2="295"/>
+    <line class="wire" x1="506" y1="300" x2="514" y2="300"/>
+    
+</svg>

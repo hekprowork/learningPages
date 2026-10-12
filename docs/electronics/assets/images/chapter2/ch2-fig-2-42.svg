@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 480" width="100%" height="100%">
+  <title>Figure 2.42 Frequency response of an amplifier with a nominal gain of -10 V/V</title>
+  <desc>Bode plot showing the closed-loop magnitude frequency response of an inverting amplifier with a nominal low-frequency gain of -10 V/V (20 dB). The corner frequency is 90.9 kHz (-3 dB point), followed by a high-frequency asymptote falling at -20 dB/decade and crossing 0 dB at 909 kHz.</desc>
+
+  <defs>
+    <!-- Arrowhead markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#000000" />
+    </marker>
+    <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1.5 0 L 5 8 L 8.5 0 z" fill="#000000" />
+    </marker>
+    <marker id="arrow-up" viewBox="0 0 10 10" refX="5" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1.5 8 L 5 0 L 8.5 8 z" fill="#000000" />
+    </marker>
+  </defs>
+
+  <style>
+    .bg { fill: #ffffff; }
+    .axis { stroke: #000000; stroke-width: 1.5; fill: none; }
+    .dash-line { stroke: #000000; stroke-width: 1.2; stroke-dasharray: 6 4; fill: none; }
+    .thin-line { stroke: #000000; stroke-width: 1; fill: none; }
+    .curve { stroke: #000000; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .label-text { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 19px; fill: #000000; }
+    .label-italic { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-style: italic; font-size: 19px; fill: #000000; }
+    .sub-text { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-style: italic; font-size: 13px; fill: #000000; }
+    .caption-title { font-family: "Arial", "Helvetica", sans-serif; font-weight: bold; font-size: 15px; fill: #000000; }
+    .caption-desc { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 16px; fill: #000000; }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- Main Plot Area Coordinates:
+       Origin: (160, 320)
+       X-axis ends: (600, 320)
+       Y-axis ends: (160, 80)
+       Corner frequency: x = 440 (90.9 kHz)
+       Unity gain (0 dB): x = 500 (909 kHz), y = 320
+       20 dB level: y = 140
+       10 dB level: y = 230
+       0 dB level: y = 320
+  -->
+
+  <!-- Coordinate Axes -->
+  <!-- X Axis -->
+  <line x1="160" y1="320" x2="600" y2="320" class="axis" marker-end="url(#arrow)" />
+  <!-- Y Axis -->
+  <line x1="160" y1="320" x2="160" y2="80" class="axis" marker-end="url(#arrow)" />
+
+  <!-- Y Axis Ticks and Labels -->
+  <!-- 20 dB -->
+  <line x1="152" y1="140" x2="160" y2="140" class="thin-line" />
+  <text x="142" y="146" text-anchor="end" class="label-text">20</text>
+
+  <!-- 10 dB -->
+  <line x1="152" y1="230" x2="160" y2="230" class="thin-line" />
+  <text x="142" y="236" text-anchor="end" class="label-text">10</text>
+
+  <!-- X Axis Ticks and Labels -->
+  <!-- 90.9 kHz tick -->
+  <line x1="440" y1="320" x2="440" y2="328" class="thin-line" />
+  <text x="440" y="348" text-anchor="middle" class="label-text">90.9</text>
+
+  <!-- 909 kHz tick -->
+  <line x1="500" y1="320" x2="500" y2="328" class="thin-line" />
+  <text x="500" y="348" text-anchor="middle" class="label-text">909</text>
+
+  <!-- X Axis Label: f (kHz) -->
+  <text x="560" y="358" class="label-italic">f<tspan font-style="normal" font-family="'Times New Roman', Times, serif"> (kHz)</tspan></text>
+
+  <!-- Y Axis Label: |Vo / Vi| (dB) -->
+  <g transform="translate(125, 45)">
+    <!-- Absolute value bars and fraction -->
+    <line x1="0" y1="5" x2="0" y2="43" stroke="#000000" stroke-width="1.2" />
+    <text x="12" y="22" text-anchor="middle" class="label-italic">V<tspan dy="4" class="sub-text">o</tspan></text>
+    <line x1="4" y1="26" x2="20" y2="26" stroke="#000000" stroke-width="1.1" />
+    <text x="12" y="39" text-anchor="middle" class="label-italic">V<tspan dy="3" class="sub-text">i</tspan></text>
+    <line x1="24" y1="5" x2="24" y2="43" stroke="#000000" stroke-width="1.2" />
+    <text x="32" y="28" class="label-text">(dB)</text>
+  </g>
+
+  <!-- Dashed construction lines -->
+  <!-- Vertical dashed line from 90.9 tick up to horizontal asymptote at 20 dB -->
+  <line x1="440" y1="320" x2="440" y2="140" class="dash-line" />
+  <!-- Extension of horizontal asymptote beyond corner frequency -->
+  <line x1="440" y1="140" x2="495" y2="140" class="dash-line" />
+
+  <!-- Actual curve: flat at 20 dB (y=140) from x=160 to x=400, rounds through (440, 167) [-3 dB], then rolls off into asymptote to (500, 320) -->
+  <path d="M 160 140 L 400 140 C 424 140 435 152 440 167 C 445 182 460 220 500 320" class="curve" />
+
+  <!-- High-frequency asymptote line extension slightly above corner -->
+  <line x1="432" y1="116" x2="440" y2="140" class="dash-line" />
+
+  <!-- 3 dB Dimension marker -->
+  <!-- Top arrow pointing down to y=140 -->
+  <line x1="480" y1="120" x2="480" y2="139" class="thin-line" marker-end="url(#arrow-down)" />
+  <!-- Bottom arrow pointing up to y=167 (curve level at x=440 extended to x=480) -->
+  <line x1="440" y1="167" x2="495" y2="167" class="thin-line" />
+  <line x1="480" y1="187" x2="480" y2="168" class="thin-line" marker-end="url(#arrow-up)" />
+  <!-- "3 dB" label -->
+  <text x="492" y="158" class="label-text">3 dB</text>
+
+  <!-- -20 dB/decade pointer and label -->
+  <!-- Curved/straight pointer pointing to the rolloff slope -->
+  <path d="M 528 226 C 510 230 495 242 485 252" class="thin-line" marker-end="url(#arrow)" />
+  <text x="538" y="232" class="label-text">&#8722;20 dB/decade</text>
+
+  <!-- Caption below -->
+  <text x="80" y="420">
+    <tspan class="caption-title">Figure 2.42</tspan>
+    <tspan dx="10" class="caption-desc">Frequency response of an amplifier with a nominal gain of &#8722;10 V/V.</tspan>
+  </text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 400" width="100%" height="100%">
+  <title>Figure 2.29 Circuit model for an op amp with input offset voltage Vos</title>
+  <desc>A circuit model showing an actual op amp represented by an offset-free op amp with a DC input offset voltage source Vos placed in series with its non-inverting input terminal.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 1 2 L 7 5 L 1 8 Z" fill="#000000" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- Outer Op Amp Triangle (Actual op amp) -->
+  <!-- Vertices: Top-Left (160, 60), Bottom-Left (160, 320), Apex (380, 190) -->
+  <polygon points="160,60 160,320 380,190" fill="none" stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- Inner Op Amp Triangle (Offset-free op amp) -->
+  <!-- Vertices: Top-Left (240, 115), Bottom-Left (240, 265), Apex (350, 190) -->
+  <polygon points="240,115 240,265 350,190" fill="#f8f9fa" stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Terminal 1: Inverting input wire and circle -->
+  <line x1="125" y1="100" x2="240" y2="100" stroke="#000000" stroke-width="2" />
+  <circle cx="125" cy="100" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  <text x="110" y="105" font-family="Times New Roman, serif" font-size="20" text-anchor="end">1</text>
+  <!-- Inverting symbol '-' inside inner op amp -->
+  <text x="250" y="107" font-family="Times New Roman, serif" font-size="24" text-anchor="start" font-weight="normal">−</text>
+  <!-- Minus sign inside outer op amp near pin 1 -->
+  <text x="172" y="107" font-family="Times New Roman, serif" font-size="24" text-anchor="start" font-weight="normal">−</text>
+
+  <!-- Terminal 3: Output wire and circle -->
+  <line x1="350" y1="190" x2="415" y2="190" stroke="#000000" stroke-width="2" />
+  <circle cx="415" cy="190" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  <text x="430" y="196" font-family="Times New Roman, serif" font-size="20" text-anchor="start">3</text>
+
+  <!-- Terminal 2: Non-inverting input wire and circle -->
+  <line x1="125" y1="280" x2="190" y2="280" stroke="#000000" stroke-width="2" />
+  <circle cx="125" cy="280" r="3.5" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  <text x="110" y="285" font-family="Times New Roman, serif" font-size="20" text-anchor="end">2</text>
+  <!-- Plus sign inside outer op amp near pin 2 -->
+  <text x="172" y="287" font-family="Times New Roman, serif" font-size="22" text-anchor="start">+</text>
+
+  <!-- Non-inverting '+' symbol inside inner op amp -->
+  <text x="250" y="250" font-family="Times New Roman, serif" font-size="22" text-anchor="start">+</text>
+
+  <!-- Vos Voltage Source -->
+  <circle cx="190" cy="210" r="22" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  <text x="190" y="202" font-family="Times New Roman, serif" font-size="18" text-anchor="middle">−</text>
+  <text x="190" y="226" font-family="Times New Roman, serif" font-size="18" text-anchor="middle">+</text>
+
+  <!-- Wire connecting Pin 2 line to Vos bottom -->
+  <line x1="190" y1="280" x2="190" y2="232" stroke="#000000" stroke-width="2" />
+
+  <!-- Wire connecting Vos top to inner op amp non-inverting input -->
+  <path d="M 190,188 L 190,170 L 225,170 L 225,242 L 240,242" fill="none" stroke="#000000" stroke-width="2" />
+
+  <!-- Vos label -->
+  <g transform="translate(180, 252)">
+    <text font-family="Times New Roman, serif" font-size="20" font-style="italic">V<tspan font-size="14" font-style="italic" dy="5">OS</tspan></text>
+  </g>
+
+  <!-- Annotations / Callouts -->
+  <!-- Callout to "Actual op amp" -->
+  <path d="M 320,126 Q 328,105 345,95" fill="none" stroke="#000000" stroke-width="1.2" marker-start="url(#arrow)" />
+  <text x="355" y="99" font-family="Times New Roman, serif" font-size="18">Actual op amp</text>
+
+  <!-- Callout to "Offset-free op amp" -->
+  <path d="M 315,215 Q 320,245 335,260" fill="none" stroke="#000000" stroke-width="1.2" marker-start="url(#arrow)" />
+  <text x="345" y="265" font-family="Times New Roman, serif" font-size="18">Offset-free op amp</text>
+
+  <!-- Caption / Title Text -->
+  <text x="325" y="360" font-family="Times New Roman, serif" font-size="18" text-anchor="middle">
+    <tspan font-weight="bold">Figure 2.29</tspan><tspan> Circuit model for an op amp with input offset voltage </tspan><tspan font-style="italic">V</tspan><tspan font-style="italic" font-size="13" dy="4">OS</tspan><tspan dy="-4">.</tspan>
+  </text>
+</svg>

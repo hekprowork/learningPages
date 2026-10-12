@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450" width="100%" height="100%" role="img" aria-labelledby="title-2-35 desc-2-35">
+  <title id="title-2-35">Figure 2.35 Reducing the effect of the input bias currents by introducing a resistor R3</title>
+  <desc id="desc-2-35">Analysis of closed-loop inverting amplifier with input bias current compensation resistor R3 in series with the noninverting terminal.</desc>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <style>
+      .wire { fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .opamp-body { fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: round; }
+      .comp-bg { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .term { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .junc { fill: #000000; }
+      .arrow { fill: #000000; }
+      .arrow-line { fill: none; stroke: #000000; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 19px; fill: #000000; }
+      .sub { font-size: 0.72em; font-style: italic; }
+      .sub-norm { font-size: 0.72em; font-style: normal; }
+      .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 20px; font-weight: normal; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: normal; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <!-- Op Amp Triangle Symbol (large to accommodate internal bias current model) -->
+  <polygon points="320,50 530,225 320,400" class="opamp-body"/>
+  <text class="opamp-sign" x="336" y="132">−</text>
+  <text class="opamp-sign" x="336" y="258">+</text>
+
+  <!-- Internal Circuitry: Inverting terminal bias current model -->
+  <line class="wire" x1="320" y1="150" x2="385" y2="150"/>
+  <circle class="term" cx="385" cy="150" r="4"/>
+  <circle class="junc" cx="355" cy="150" r="3.5"/>
+  <line class="wire" x1="355" y1="150" x2="355" y2="172"/>
+  <circle class="comp-bg" cx="355" cy="188" r="16"/>
+  <line class="wire" x1="355" y1="180" x2="355" y2="198"/>
+  <polygon points="351.5,193 358.5,193 355,200" class="arrow"/>
+  <text class="math" x="380" y="194">I<tspan class="sub">B1</tspan></text>
+  <line class="wire" x1="355" y1="204" x2="355" y2="216"/>
+  <!-- ground -->
+  <line class="wire" x1="355" y1="216" x2="355" y2="225"/>
+  <line class="wire" x1="341" y1="225" x2="369" y2="225"/>
+  <line class="wire" x1="346" y1="230" x2="364" y2="230"/>
+  <line class="wire" x1="351" y1="235" x2="359" y2="235"/>
+
+  <!-- Internal Circuitry: Noninverting terminal bias current model -->
+  <line class="wire" x1="320" y1="275" x2="385" y2="275"/>
+  <circle class="term" cx="385" cy="275" r="4"/>
+  <circle class="junc" cx="355" cy="275" r="3.5"/>
+  <line class="wire" x1="355" y1="275" x2="355" y2="297"/>
+  <circle class="comp-bg" cx="355" cy="313" r="16"/>
+  <line class="wire" x1="355" y1="305" x2="355" y2="323"/>
+  <polygon points="351.5,318 358.5,318 355,325" class="arrow"/>
+  <text class="math" x="380" y="319">I<tspan class="sub">B2</tspan></text>
+  <line class="wire" x1="355" y1="329" x2="355" y2="341"/>
+  <!-- ground -->
+  <line class="wire" x1="355" y1="341" x2="355" y2="350"/>
+  <line class="wire" x1="341" y1="350" x2="369" y2="350"/>
+  <line class="wire" x1="346" y1="355" x2="364" y2="355"/>
+  <line class="wire" x1="351" y1="360" x2="359" y2="360"/>
+
+  <!-- Inverting Input External Network (R1 to ground) -->
+  <line class="wire" x1="295" y1="150" x2="320" y2="150"/>
+  <circle class="junc" cx="295" cy="150" r="3.5"/>
+  <line class="wire" x1="235" y1="150" x2="295" y2="150"/>
+  <!-- R1 -->
+  <path class="wire" d="M 175,150 l 10,0 l 3.33,-9 l 6.67,18 l 6.67,-18 l 6.67,18 l 6.67,-18 l 6.67,18 l 3.33,-9 l 10,0"/>
+  <text class="math" x="205" y="178" text-anchor="middle">R<tspan class="sub-norm">1</tspan></text>
+  <line class="wire" x1="135" y1="150" x2="175" y2="150"/>
+  <line class="wire" x1="135" y1="150" x2="135" y2="170"/>
+  <!-- ground -->
+  <line class="wire" x1="135" y1="170" x2="135" y2="179"/>
+  <line class="wire" x1="121" y1="179" x2="149" y2="179"/>
+  <line class="wire" x1="126" y1="184" x2="144" y2="184"/>
+  <line class="wire" x1="131" y1="189" x2="139" y2="189"/>
+
+  <!-- Current Arrow above R1: IB2 * R3 / R1 -->
+  <text class="math" x="165" y="80" text-anchor="middle">I<tspan class="sub">B2</tspan>R<tspan class="sub-norm">3</tspan></text>
+  <line class="wire" x1="145" y1="86" x2="185" y2="86" stroke-width="1.2"/>
+  <text class="math" x="165" y="104" text-anchor="middle">R<tspan class="sub-norm">1</tspan></text>
+  <line class="arrow-line" x1="140" y1="116" x2="190" y2="116"/>
+  <polygon points="188,112.5 188,119.5 195,116" class="arrow"/>
+
+  <!-- Noninverting Input External Network (R3 to ground) -->
+  <line class="wire" x1="235" y1="275" x2="320" y2="275"/>
+  <!-- R3 -->
+  <path class="wire" d="M 175,275 l 10,0 l 3.33,-9 l 6.67,18 l 6.67,-18 l 6.67,18 l 6.67,-18 l 6.67,18 l 3.33,-9 l 10,0"/>
+  <text class="math" x="205" y="303" text-anchor="middle">R<tspan class="sub-norm">3</tspan></text>
+  <line class="wire" x1="135" y1="275" x2="175" y2="275"/>
+  <line class="wire" x1="135" y1="275" x2="135" y2="295"/>
+  <!-- ground -->
+  <line class="wire" x1="135" y1="295" x2="135" y2="304"/>
+  <line class="wire" x1="121" y1="304" x2="149" y2="304"/>
+  <line class="wire" x1="126" y1="309" x2="144" y2="309"/>
+  <line class="wire" x1="131" y1="314" x2="139" y2="314"/>
+
+  <!-- Current Arrow above R3: IB2 -->
+  <text class="math" x="165" y="244" text-anchor="middle">I<tspan class="sub">B2</tspan></text>
+  <line class="arrow-line" x1="140" y1="254" x2="190" y2="254"/>
+  <polygon points="188,250.5 188,257.5 195,254" class="arrow"/>
+
+  <!-- Voltage Indicator Arc from (-IB2 * R3) to both terminals -->
+  <text class="math" x="205" y="386" text-anchor="middle">(−I<tspan class="sub">B2</tspan>R<tspan class="sub-norm">3</tspan>)</text>
+  <!-- Arc branch to (+) terminal lead -->
+  <path class="arrow-line" d="M 210 368 Q 235 325 252 285"/>
+  <polygon points="247,290 254,288 253,281" class="arrow"/>
+  <!-- Arc branch to (-) terminal junction -->
+  <path class="arrow-line" d="M 220 368 Q 288 275 294 165"/>
+  <polygon points="290,172 297,171 295,162" class="arrow"/>
+
+  <!-- Feedback Path (R2) -->
+  <line class="wire" x1="295" y1="150" x2="295" y2="45"/>
+  <line class="wire" x1="295" y1="45" x2="380" y2="45"/>
+  <!-- R2 -->
+  <path class="wire" d="M 380,45 l 10,0 l 3.33,-9 l 6.67,18 l 6.67,-18 l 6.67,18 l 6.67,-18 l 6.67,18 l 3.33,-9 l 10,0"/>
+  <text class="math" x="410" y="28" text-anchor="middle">R<tspan class="sub-norm">2</tspan></text>
+  <line class="wire" x1="440" y1="45" x2="550" y2="45"/>
+  <line class="wire" x1="550" y1="45" x2="550" y2="225"/>
+
+  <!-- Current Arrow below R2: IB1 - IB2 * (R3 / R1) -->
+  <line class="arrow-line" x1="460" y1="70" x2="375" y2="70"/>
+  <polygon points="378,66.5 378,73.5 370,70" class="arrow"/>
+  <text class="math" x="375" y="98">I<tspan class="sub">B1</tspan> − I<tspan class="sub">B2</tspan></text>
+  <text class="math" x="445" y="88" text-anchor="middle">R<tspan class="sub-norm">3</tspan></text>
+  <line class="wire" x1="437" y1="93" x2="453" y2="93" stroke-width="1.2"/>
+  <text class="math" x="445" y="108" text-anchor="middle">R<tspan class="sub-norm">1</tspan></text>
+
+  <!-- Output Terminal and Voltage VO -->
+  <line class="wire" x1="530" y1="225" x2="585" y2="225"/>
+  <circle class="junc" cx="550" cy="225" r="3.5"/>
+  <circle class="term" cx="585" cy="225" r="4.5"/>
+
+  <text class="sign" x="585" y="252">+</text>
+  <text class="math" x="585" y="272" text-anchor="middle">V<tspan class="sub-norm">O</tspan></text>
+  <text class="sign" x="585" y="292">−</text>
+  <!-- ground -->
+  <line class="wire" x1="585" y1="300" x2="585" y2="309"/>
+  <line class="wire" x1="571" y1="309" x2="599" y2="309"/>
+  <line class="wire" x1="576" y1="314" x2="594" y2="314"/>
+  <line class="wire" x1="581" y1="319" x2="589" y2="319"/>
+</svg>

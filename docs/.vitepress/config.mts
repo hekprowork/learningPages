@@ -128,6 +128,20 @@ export default defineConfig({
           ]
         },
         {
+          text: 'Chapter 2: 運算放大器 (Operational Amplifiers)',
+          collapsed: false,
+          items: [
+            { text: '0001: 理想運算放大器', link: '/electronics/chapter2/0001-ideal-op-amp' },
+            { text: '0002: 反相組態', link: '/electronics/chapter2/0002-inverting-configuration' },
+            { text: '0003: 非反相組態', link: '/electronics/chapter2/0003-noninverting-configuration' },
+            { text: '0004: 差動放大器', link: '/electronics/chapter2/0004-difference-amplifiers' },
+            { text: '0005: 積分器與微分器', link: '/electronics/chapter2/0005-integrators-and-differentiators' },
+            { text: '0006: 直流非理想效應', link: '/electronics/chapter2/0006-dc-imperfections' },
+            { text: '0007: 有限開迴路增益與頻寬', link: '/electronics/chapter2/0007-finite-gain-and-bandwidth' },
+            { text: '0008: 大訊號操作限制', link: '/electronics/chapter2/0008-large-signal-operation' }
+          ]
+        },
+        {
           text: '觀念筆記與電路推導 (Learning Records)',
           collapsed: false,
           items: [

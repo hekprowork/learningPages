@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 240" width="100%" height="100%">
+  <title>Figure 2.5 The inverting closed-loop configuration</title>
+  <desc>Schematic diagram of an op amp in an inverting closed-loop configuration with input resistor R1, feedback resistor R2, noninverting terminal grounded, and output voltage vo taken relative to ground.</desc>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <defs>
+    <style>
+      .wire { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .symbol { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .source { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .terminal { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .dot { fill: #000000; }
+      .math { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 16px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .pm { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 15px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .label { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 16px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <!-- Op Amp Triangle Body -->
+  <polygon points="230,85 305,130 230,175" class="symbol"/>
+  <text x="242" y="105" class="pm">−</text>
+  <text x="242" y="155" class="pm">+</text>
+
+  <!-- Input source vI -->
+  <circle cx="65" cy="150" r="16" class="source"/>
+  <text x="65" y="143" class="pm">+</text>
+  <text x="65" y="158" class="pm">−</text>
+  <text x="35" y="150" class="math">v<tspan font-style="normal" font-size="11px" dy="3">I</tspan></text>
+
+  <!-- Ground at vI -->
+  <line x1="65" y1="166" x2="65" y2="185" class="wire"/>
+  <line x1="53" y1="185" x2="77" y2="185" class="wire"/>
+  <line x1="57" y1="189" x2="73" y2="189" class="wire"/>
+  <line x1="61" y1="193" x2="69" y2="193" class="wire"/>
+
+  <!-- Wire from vI to input terminal circle -->
+  <polyline points="65,134 65,105 106,105" class="wire"/>
+  <circle cx="110" cy="105" r="3.5" class="terminal"/>
+
+  <!-- Wire to R1, Resistor R1, wire to node -->
+  <line x1="114" y1="105" x2="135" y2="105" class="wire"/>
+  <!-- Resistor R1: 135 to 175 -->
+  <path d="M 135,105 l 4,-7 l 6,14 l 6,-14 l 6,14 l 6,-14 l 6,14 l 3,-7 l 3,0" class="wire"/>
+  <text x="155" y="87" class="math">R<tspan font-style="normal" font-size="11px" dy="3">1</tspan></text>
+
+  <!-- Wire from R1 to Inverting terminal node (Terminal 1) -->
+  <line x1="175" y1="105" x2="230" y2="105" class="wire"/>
+  <circle cx="195" cy="105" r="3.5" class="dot"/>
+  <text x="185" y="120" class="label">1</text>
+
+  <!-- Noninverting terminal (Terminal 2) & Ground -->
+  <line x1="230" y1="155" x2="195" y2="155" class="wire"/>
+  <text x="185" y="155" class="label">2</text>
+  <line x1="195" y1="155" x2="195" y2="185" class="wire"/>
+  <!-- Ground at Terminal 2 -->
+  <line x1="183" y1="185" x2="207" y2="185" class="wire"/>
+  <line x1="187" y1="189" x2="203" y2="189" class="wire"/>
+  <line x1="191" y1="193" x2="199" y2="193" class="wire"/>
+
+  <!-- Feedback Path (R2) -->
+  <polyline points="195,105 195,55 240,55" class="wire"/>
+  <!-- Resistor R2: 240 to 280 -->
+  <path d="M 240,55 l 4,-7 l 6,14 l 6,-14 l 6,14 l 6,-14 l 6,14 l 3,-7 l 3,0" class="wire"/>
+  <text x="260" y="37" class="math">R<tspan font-style="normal" font-size="11px" dy="3">2</tspan></text>
+  <polyline points="280,55 330,55 330,130" class="wire"/>
+  <circle cx="330" cy="130" r="3.5" class="dot"/>
+
+  <!-- Output wire and Terminal 3 -->
+  <line x1="305" y1="130" x2="385" y2="130" class="wire"/>
+  <circle cx="385" cy="130" r="3.5" class="terminal"/>
+  <text x="355" y="117" class="label">3</text>
+
+  <!-- Output voltage vo reference -->
+  <text x="385" y="152" class="pm">+</text>
+  <text x="385" y="168" class="math">v<tspan font-style="normal" font-size="11px" dy="3">O</tspan></text>
+  <line x1="385" y1="180" x2="385" y2="190" class="wire"/>
+  <!-- Output Ground -->
+  <line x1="373" y1="190" x2="397" y2="190" class="wire"/>
+  <line x1="377" y1="194" x2="393" y2="194" class="wire"/>
+  <line x1="381" y1="198" x2="389" y2="198" class="wire"/>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 300" width="100%" height="100%" role="img" aria-labelledby="title-2-25 desc-2-25">
+  <title id="title-2-25">Figure 2.25 The integrator with input current source (Example 2.5)</title>
+  <desc id="desc-2-25">Circuit schematic of an op-amp integrator driven by a photodetector modeled as a current source is in parallel with a 5 kΩ source resistance, with feedback capacitor C.</desc>
+
+  <style>
+    .wire { fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .term { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .junc { fill: #000000; }
+    .arrow { fill: #000000; stroke: none; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; fill: #000000; }
+    .math { font-family: "Times New Roman", Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #000000; }
+    .sub { font-size: 0.72em; font-style: italic; baseline-shift: sub; }
+    .sub-norm { font-size: 0.72em; font-style: normal; baseline-shift: sub; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 18px; font-weight: normal; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Current source i_s -->
+  <line class="wire" x1="90" y1="130" x2="90" y2="170"/>
+  <circle class="comp-bg" cx="90" cy="190" r="20"/>
+  <!-- Arrow inside circle pointing up -->
+  <line class="wire" x1="90" y1="202" x2="90" y2="178"/>
+  <polygon class="arrow" points="90,176 86,186 94,186"/>
+  <!-- Wire below current source to ground -->
+  <line class="wire" x1="90" y1="210" x2="90" y2="235"/>
+  <!-- Ground at (90, 235) -->
+  <line class="wire" x1="77" y1="235" x2="103" y2="235"/>
+  <line class="wire" x1="82" y1="240" x2="98" y2="240"/>
+  <line class="wire" x1="86" y1="245" x2="94" y2="245"/>
+  <!-- Label i_s -->
+  <text class="math" x="55" y="196">i<tspan class="sub">s</tspan></text>
+
+  <!-- Top wire from i_s to resistor -->
+  <line class="wire" x1="90" y1="130" x2="165" y2="130"/>
+  <circle class="junc" cx="165" cy="130" r="3.5"/>
+
+  <!-- Resistor 5 kΩ -->
+  <line class="wire" x1="165" y1="130" x2="165" y2="152"/>
+  <path class="wire" d="M 165,152 L 165,158 L 156,163 L 174,173 L 156,183 L 174,193 L 156,203 L 174,213 L 165,218 L 165,235"/>
+  <!-- Ground at (165, 235) -->
+  <line class="wire" x1="152" y1="235" x2="178" y2="235"/>
+  <line class="wire" x1="157" y1="240" x2="173" y2="240"/>
+  <line class="wire" x1="161" y1="245" x2="169" y2="245"/>
+  <!-- Label 5 kΩ -->
+  <text class="txt" x="184" y="195">5 kΩ</text>
+
+  <!-- Wire from resistor junction to inverting input junction -->
+  <line class="wire" x1="165" y1="130" x2="310" y2="130"/>
+  <circle class="junc" cx="300" cy="130" r="3.5"/>
+
+  <!-- Feedback branch -->
+  <path class="wire" d="M 300,130 L 300,60 L 360,60"/>
+  <!-- Capacitor C plates -->
+  <line class="wire" x1="360" y1="46" x2="360" y2="74"/>
+  <line class="wire" x1="370" y1="46" x2="370" y2="74"/>
+  <text class="math" x="365" y="94" text-anchor="middle">C</text>
+  <path class="wire" d="M 370,60 L 430,60 L 430,150"/>
+
+  <!-- Op-amp triangle -->
+  <polygon class="opamp-body" points="330,105 420,150 330,195"/>
+  <!-- Inverting input sign -->
+  <text class="sign" x="343" y="130">−</text>
+  <!-- Non-inverting input sign -->
+  <text class="sign" x="343" y="170">+</text>
+
+  <!-- Inverting input wire into op-amp -->
+  <line class="wire" x1="300" y1="130" x2="330" y2="130"/>
+
+  <!-- Non-inverting input wire to ground -->
+  <path class="wire" d="M 330,170 L 310,170 L 310,210"/>
+  <!-- Ground at (310, 210) -->
+  <line class="wire" x1="297" y1="210" x2="323" y2="210"/>
+  <line class="wire" x1="302" y1="215" x2="318" y2="215"/>
+  <line class="wire" x1="306" y1="220" x2="314" y2="220"/>
+
+  <!-- Output wire -->
+  <line class="wire" x1="420" y1="150" x2="470" y2="150"/>
+  <circle class="junc" cx="430" cy="150" r="3.5"/>
+  <circle class="term" cx="470" cy="150" r="4.5"/>
+  <text class="math" x="484" y="155">v<tspan class="sub-norm">O</tspan></text>
+</svg>

@@ -9,7 +9,7 @@
   <h1 class="hub-title">電子學</h1>
   <div class="hub-subtitle">Microelectronic Circuits & Analog Signal Processing</div>
   <p class="hub-lead">
-    本模組以經典教材 Sedra & Smith《Microelectronic Circuits》為基礎，涵蓋類比微電子核心概念：訊號源等效模型、受控源四大放大器組態、級聯負載效應、單時間常數 (STC) 頻率響應分析與波德圖漸近線判定。
+    本模組以經典教材 Sedra & Smith《Microelectronic Circuits》為基礎，涵蓋訊號源與放大器模型、單時間常數頻率響應，以及運算放大器的閉迴路組態、非理想效應與大訊號限制。
   </p>
   <div class="hub-meta-bar">
     <div class="hub-meta-item">
@@ -34,8 +34,8 @@
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">正式講義單元</span>
-    <span class="hub-stat-number">07</span>
-    <span class="hub-stat-sub">訊號頻譜至頻率響應精要</span>
+    <span class="hub-stat-number">14</span>
+    <span class="hub-stat-sub">Chapter 1–2 完整教學路徑</span>
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">觀念推導與速查</span>
@@ -85,6 +85,38 @@
       </div>
       <div class="hub-card-footer">
         <a class="hub-btn-link" href="./chapter1/0002-signals">進入 Chapter 1 講義 →</a>
+      </div>
+    </div>
+    <!-- Chapter 2 Card -->
+    <div class="hub-card">
+      <div class="hub-card-top">
+        <div class="hub-card-badge-row">
+          <span class="hub-tag hub-tag-accent">Chapter 02</span>
+          <span class="hub-card-count">8 單元 · 46 張重繪圖表</span>
+        </div>
+        <h3 class="hub-card-title">
+          <a href="/electronics/chapter2/0001-ideal-op-amp">運算放大器 (Operational Amplifiers)</a>
+        </h3>
+        <p class="hub-card-desc">
+          從理想運放兩大分析規則出發，完整推導反相、非反相、差動、儀表放大器、積分與微分電路，並納入直流誤差、有限頻寬及大訊號限制。
+        </p>
+        <ul class="hub-lesson-list">
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0001–0003</span>
+            <a class="hub-lesson-link" href="/electronics/chapter2/0001-ideal-op-amp">理想模型與兩種基本閉迴路組態</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0004–0006</span>
+            <a class="hub-lesson-link" href="/electronics/chapter2/0004-difference-amplifiers">差動應用、動態運算與直流非理想效應</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0007–0008</span>
+            <a class="hub-lesson-link" href="/electronics/chapter2/0007-finite-gain-and-bandwidth">頻寬、飽和、輸出電流與轉換速率</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hub-card-footer">
+        <a class="hub-btn-link" href="/electronics/chapter2/0001-ideal-op-amp">進入 Chapter 2 講義 →</a>
       </div>
     </div>
     <!-- Learning Records Card -->

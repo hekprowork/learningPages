@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="100%" height="100%" role="img" aria-labelledby="title-2-19 desc-2-19">
+  <title id="title-2-19">Figure 2.19 Finding the Input Resistance of Difference Amplifier</title>
+  <desc id="desc-2-19">Circuit for determining the differential input resistance Rid of the difference amplifier when matched resistors R3=R1 and R4=R2 are used, showing virtual short circuit.</desc>
+  
+  <style>
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .wire-dash { fill: none; stroke: #111111; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 5,4; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 20px; fill: #111111; }
+    .math-bold { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-weight: bold; font-size: 20px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sub-norm { font-size: 0.72em; font-style: normal; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .lbl-subfig { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; text-anchor: middle; }
+    .arrow { fill: #111111; }
+    .arrow-line { fill: none; stroke: #111111; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <defs>
+    <marker id="arrow-head-19" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#111111"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Differential Source vId -->
+  <line class="wire" x1="130" y1="140" x2="130" y2="153"/>
+  <circle class="comp-bg" cx="130" cy="175" r="22"/>
+  <text class="sign" x="130" y="165">−</text>
+  <text class="sign" x="130" y="186">+</text>
+  <line class="wire" x1="130" y1="197" x2="130" y2="210"/>
+  <text class="math" x="75" y="181">v<tspan class="sub">Id</tspan></text>
+
+  <!-- Connect source to terminals -->
+  <line class="wire" x1="130" y1="140" x2="195" y2="140"/>
+  <circle class="term" cx="195" cy="140" r="4.5"/>
+  <line class="wire" x1="130" y1="210" x2="195" y2="210"/>
+  <circle class="term" cx="195" cy="210" r="4.5"/>
+
+  <!-- Rid bracket/arrows -->
+  <path class="arrow-line" d="M 165 175 L 185 175" marker-end="url(#arrow-head-19)"/>
+  <path class="arrow-line" d="M 165 155 L 165 195"/>
+  <text class="math" x="152" y="230">R<tspan class="sub">id</tspan></text>
+
+  <!-- Upper line with current ii (pointing left) -->
+  <line class="wire" x1="200" y1="140" x2="230" y2="140"/>
+  <path class="wire" d="M 230.0,140.0 L 242.0,140.0 L 245.8,130.0 L 253.5,150.0 L 261.2,130.0 L 268.8,150.0 L 276.5,130.0 L 284.2,150.0 L 288.0,140.0 L 300.0,140.0"/>
+  <line class="wire" x1="300" y1="140" x2="360" y2="140"/>
+  <text class="math" x="255" y="118">R<tspan class="sub-norm">1</tspan></text>
+  <line class="arrow-line" x1="225" y1="122" x2="195" y2="122" marker-end="url(#arrow-head-19)"/>
+  <text class="math" x="205" y="114">i<tspan class="sub">i</tspan></text>
+
+  <!-- Lower line with current ii (pointing right) -->
+  <line class="wire" x1="200" y1="210" x2="230" y2="210"/>
+  <path class="wire" d="M 230.0,210.0 L 242.0,210.0 L 245.8,200.0 L 253.5,220.0 L 261.2,200.0 L 268.8,220.0 L 276.5,200.0 L 284.2,220.0 L 288.0,210.0 L 300.0,210.0"/>
+  <line class="wire" x1="300" y1="210" x2="360" y2="210"/>
+  <text class="math" x="255" y="192">R<tspan class="sub-norm">1</tspan></text>
+  <line class="arrow-line" x1="200" y1="228" x2="230" y2="228" marker-end="url(#arrow-head-19)"/>
+  <text class="math" x="210" y="248">i<tspan class="sub">i</tspan></text>
+
+  <!-- Nodes at op-amp input -->
+  <circle class="junc" cx="335" cy="140" r="3.5"/>
+  <circle class="junc" cx="335" cy="210" r="3.5"/>
+
+  <!-- Virtual short circuit line -->
+  <line class="wire-dash" x1="335" y1="140" x2="335" y2="210"/>
+  <g transform="translate(345, 235)">
+    <path class="arrow-line" d="M 25 5 C 10 5 -5 -10 -9 -30" marker-end="url(#arrow-head-19)"/>
+    <text class="txt" x="32" y="10" font-size="15px">Virtual short circuit</text>
+  </g>
+
+  <!-- Feedback R2 -->
+  <path class="wire" d="M 335 140 L 335 75 L 390 75"/>
+  <path class="wire" d="M 390.0,75.0 L 402.0,75.0 L 406.2,65.0 L 414.8,85.0 L 423.2,65.0 L 431.8,85.0 L 440.2,65.0 L 448.8,85.0 L 453.0,75.0 L 465.0,75.0"/>
+  <path class="wire" d="M 465 75 L 515 75 L 515 175"/>
+  <text class="math" x="420" y="58">R<tspan class="sub-norm">2</tspan></text>
+
+  <!-- Ground resistor R2 at (+) terminal -->
+  <line class="wire" x1="335" y1="210" x2="335" y2="235"/>
+  <path class="wire" d="M 335.0,235.0 L 335.0,247.0 L 325.0,250.4 L 345.0,257.2 L 325.0,264.1 L 345.0,270.9 L 325.0,277.8 L 345.0,284.6 L 335.0,288.0 L 335.0,300.0"/>
+  <line class="wire" x1="335" y1="300" x2="335" y2="315"/>
+  <text class="math" x="350" y="272">R<tspan class="sub-norm">2</tspan></text>
+  
+    <line class="wire" x1="335" y1="315" x2="335" y2="325"/>
+    <line class="wire" x1="321" y1="325" x2="349" y2="325"/>
+    <line class="wire" x1="326" y1="330" x2="344" y2="330"/>
+    <line class="wire" x1="331" y1="335" x2="339" y2="335"/>
+    
+
+  <!-- Op-amp -->
+  
+    <polygon points="360,133.0 435,175 360,217.0" class="opamp-body"/>
+    <text class="opamp-sign" x="372" y="153">−</text>
+    <text class="opamp-sign" x="372" y="197">+</text>
+    
+
+  <!-- Output -->
+  <line class="wire" x1="435" y1="175" x2="560" y2="175"/>
+  <circle class="junc" cx="515" cy="175" r="3.5"/>
+  <circle class="term" cx="560" cy="175" r="4.5"/>
+</svg>

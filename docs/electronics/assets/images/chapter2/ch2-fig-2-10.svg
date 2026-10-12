@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 370" width="100%" height="100%" role="img" aria-labelledby="title-2-10 desc-2-10">
+  <title id="title-2-10">Figure 2.10 A Weighted Summer</title>
+  <desc id="desc-2-10">An inverting weighted summer operational amplifier circuit combining multiple input voltages v1, v2 through vn with input resistors R1, R2 through Rn and feedback resistor Rf.</desc>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <defs>
+    <style>
+      .wire { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .wire-dash { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 4,4; fill: none; }
+      .opamp-body { fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: round; }
+      .term { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .junc { fill: #000000; }
+      .math { font-family: "Times New Roman", Times, Georgia, serif; font-size: 19px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .math-frac { font-family: "Times New Roman", Times, Georgia, serif; font-size: 15px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .sub { font-size: 0.72em; font-style: normal; }
+      .sub-it { font-size: 0.72em; font-style: italic; }
+      .pm { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 17px; font-weight: bold; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .paren { font-family: "Times New Roman", Times, Georgia, serif; font-size: 34px; font-style: normal; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .arrow { fill: #000000; }
+      .arrow-line { stroke: #000000; stroke-width: 1.6; stroke-linecap: round; fill: none; }
+      .pointer-line { stroke: #000000; stroke-width: 1.5; stroke-linecap: round; fill: none; }
+      .dot-vert { fill: #000000; }
+    </style>
+  </defs>
+
+  <!-- Input Branches -->
+  <!-- Branch 1: v1 and R1 -->
+  <text class="math" x="46" y="75" text-anchor="end">v<tspan class="sub">1</tspan></text>
+  <circle class="term" cx="65" cy="75" r="3.5"/>
+  <line class="wire" x1="69" y1="75" x2="120" y2="75"/>
+  <!-- Current Arrow i1 -->
+  <line class="arrow-line" x1="72" y1="62" x2="102" y2="62"/>
+  <polygon class="arrow" points="106,62 99,58.5 99,65.5"/>
+  <text class="math" x="89" y="47">i<tspan class="sub">1</tspan></text>
+  <!-- Resistor R1 -->
+  <path class="wire" d="M 120,75 l 5,-8 l 10,16 l 10,-16 l 10,16 l 10,-16 l 10,16 l 5,-8"/>
+  <text class="math" x="150" y="54">R<tspan class="sub">1</tspan></text>
+  <line class="wire" x1="180" y1="75" x2="205" y2="75"/>
+
+  <!-- Branch 2: v2 and R2 -->
+  <text class="math" x="46" y="135" text-anchor="end">v<tspan class="sub">2</tspan></text>
+  <circle class="term" cx="65" cy="135" r="3.5"/>
+  <line class="wire" x1="69" y1="135" x2="120" y2="135"/>
+  <!-- Current Arrow i2 -->
+  <line class="arrow-line" x1="72" y1="122" x2="102" y2="122"/>
+  <polygon class="arrow" points="106,122 99,118.5 99,125.5"/>
+  <text class="math" x="89" y="107">i<tspan class="sub">2</tspan></text>
+  <!-- Resistor R2 -->
+  <path class="wire" d="M 120,135 l 5,-8 l 10,16 l 10,-16 l 10,16 l 10,-16 l 10,16 l 5,-8"/>
+  <text class="math" x="150" y="114">R<tspan class="sub">2</tspan></text>
+  <line class="wire" x1="180" y1="135" x2="205" y2="135"/>
+
+  <!-- Vertical Ellipsis between inputs -->
+  <circle class="dot-vert" cx="120" cy="165" r="1.5"/>
+  <circle class="dot-vert" cx="120" cy="173" r="1.5"/>
+  <circle class="dot-vert" cx="120" cy="181" r="1.5"/>
+
+  <!-- Branch n: vn and Rn -->
+  <text class="math" x="46" y="215" text-anchor="end">v<tspan class="sub-it">n</tspan></text>
+  <circle class="term" cx="65" cy="215" r="3.5"/>
+  <line class="wire" x1="69" y1="215" x2="120" y2="215"/>
+  <!-- Current Arrow in -->
+  <line class="arrow-line" x1="72" y1="202" x2="102" y2="202"/>
+  <polygon class="arrow" points="106,202 99,198.5 99,205.5"/>
+  <text class="math" x="89" y="187">i<tspan class="sub-it">n</tspan></text>
+  <!-- Resistor Rn -->
+  <path class="wire" d="M 120,215 l 5,-8 l 10,16 l 10,-16 l 10,16 l 10,-16 l 10,16 l 5,-8"/>
+  <text class="math" x="150" y="194">R<tspan class="sub-it">n</tspan></text>
+  <line class="wire" x1="180" y1="215" x2="205" y2="215"/>
+
+  <!-- Summing Bus at x = 205 -->
+  <line class="wire" x1="205" y1="75" x2="205" y2="145"/>
+  <circle class="junc" cx="205" cy="135" r="3.5"/>
+  <circle class="junc" cx="205" cy="145" r="3.5"/>
+  <line class="wire-dash" x1="205" y1="145" x2="205" y2="200"/>
+  <line class="wire" x1="205" y1="200" x2="205" y2="215"/>
+
+  <!-- Wire from Summing Bus to Inverting Junction -->
+  <line class="wire" x1="205" y1="145" x2="295" y2="145"/>
+  <!-- Current Arrow i on bus wire -->
+  <line class="arrow-line" x1="225" y1="133" x2="258" y2="133"/>
+  <polygon class="arrow" points="262,133 255,129.5 255,136.5"/>
+  <text class="math" x="243" y="119">i</text>
+
+  <!-- Inverting Input Junction -->
+  <circle class="junc" cx="295" cy="145" r="3.5"/>
+  <line class="wire" x1="295" y1="145" x2="355" y2="145"/>
+
+  <!-- Virtual Ground 0 V Pointer Arrow -->
+  <text class="math" x="200" y="240" text-anchor="middle"><tspan font-style="normal">0 V</tspan></text>
+  <path class="pointer-line" d="M 215,232 C 242,212 268,185 290,154"/>
+  <polygon class="arrow" points="293,150 286,155 291,161"/>
+
+  <!-- Zero Input Current Indicator into (-) terminal -->
+  <line class="arrow-line" x1="312" y1="154" x2="338" y2="154"/>
+  <polygon class="arrow" points="342,154 335,150.5 335,157.5"/>
+  <text class="math" x="325" y="167"><tspan font-style="normal">0</tspan></text>
+
+  <!-- Op-Amp Body -->
+  <polygon class="opamp-body" points="355,120 445,170 355,220"/>
+  <text class="pm" x="368" y="145">−</text>
+  <text class="pm" x="368" y="195">+</text>
+
+  <!-- Non-inverting Ground -->
+  <polyline class="wire" points="355,195 295,195 295,240"/>
+  <line class="wire" x1="283" y1="240" x2="307" y2="240"/>
+  <line class="wire" x1="287" y1="244" x2="303" y2="244"/>
+  <line class="wire" x1="291" y1="248" x2="299" y2="248"/>
+
+  <!-- Feedback Loop: upward from junction -->
+  <polyline class="wire" points="295,145 295,85 375,85"/>
+  <!-- Current Arrow i above feedback loop -->
+  <line class="arrow-line" x1="318" y1="72" x2="352" y2="72"/>
+  <polygon class="arrow" points="356,72 349,68.5 349,75.5"/>
+  <text class="math" x="337" y="58">i</text>
+
+  <!-- Feedback Resistor Rf -->
+  <path class="wire" d="M 375,85 l 5,-8 l 10,16 l 10,-16 l 10,16 l 10,-16 l 10,16 l 5,-8"/>
+  <text class="math" x="405" y="64">R<tspan class="sub-it">f</tspan></text>
+  <polyline class="wire" points="435,85 490,85 490,170"/>
+
+  <!-- Op-Amp Output -->
+  <line class="wire" x1="445" y1="170" x2="560" y2="170"/>
+  <circle class="junc" cx="490" cy="170" r="3.5"/>
+  <circle class="term" cx="560" cy="170" r="3.5"/>
+
+  <!-- Output Voltage vo Polarities and Ground -->
+  <text class="pm" x="560" y="195">+</text>
+  <text class="math" x="560" y="215">v<tspan class="sub">O</tspan></text>
+  <text class="pm" x="560" y="235">−</text>
+  <line class="wire" x1="560" y1="244" x2="560" y2="256"/>
+  <line class="wire" x1="548" y1="256" x2="572" y2="256"/>
+  <line class="wire" x1="552" y1="260" x2="568" y2="260"/>
+  <line class="wire" x1="556" y1="264" x2="564" y2="264"/>
+
+  <!-- Equation: vo = - ( Rf/R1 v1 + Rf/R2 v2 + ... + Rf/Rn vn ) -->
+  <g transform="translate(345, 318)">
+    <text class="math" x="-142" y="0" text-anchor="end">v<tspan class="sub">O</tspan><tspan font-style="normal"> = −</tspan></text>
+    <text class="paren" x="-132" y="-1">(</text>
+
+    <!-- Term 1: Rf/R1 v1 -->
+    <text class="math-frac" x="-106" y="-10">R<tspan class="sub-it">f</tspan></text>
+    <line class="wire" x1="-116" y1="-1" x2="-96" y2="-1" stroke-width="1.3"/>
+    <text class="math-frac" x="-106" y="10">R<tspan class="sub">1</tspan></text>
+    <text class="math" x="-84" y="0">v<tspan class="sub">1</tspan></text>
+
+    <!-- + -->
+    <text class="math" x="-64" y="0"><tspan font-style="normal">+</tspan></text>
+
+    <!-- Term 2: Rf/R2 v2 -->
+    <text class="math-frac" x="-42" y="-10">R<tspan class="sub-it">f</tspan></text>
+    <line class="wire" x1="-52" y1="-1" x2="-32" y2="-1" stroke-width="1.3"/>
+    <text class="math-frac" x="-42" y="10">R<tspan class="sub">2</tspan></text>
+    <text class="math" x="-20" y="0">v<tspan class="sub">2</tspan></text>
+
+    <!-- + ... + -->
+    <text class="math" x="0" y="0"><tspan font-style="normal">+ ··· +</tspan></text>
+
+    <!-- Term n: Rf/Rn vn -->
+    <text class="math-frac" x="38" y="-10">R<tspan class="sub-it">f</tspan></text>
+    <line class="wire" x1="28" y1="-1" x2="48" y2="-1" stroke-width="1.3"/>
+    <text class="math-frac" x="38" y="10">R<tspan class="sub-it">n</tspan></text>
+    <text class="math" x="60" y="0">v<tspan class="sub-it">n</tspan></text>
+
+    <text class="paren" x="78" y="-1">)</text>
+  </g>
+</svg>

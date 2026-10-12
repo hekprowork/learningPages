@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="100%" height="100%" role="img" aria-labelledby="title-2-23 desc-2-23">
+  <title id="title-2-23">Figure 2.23 Circuit for Example 2.4</title>
+  <desc id="desc-2-23">First-order active low-pass filter circuit based on an inverting op amp with input resistor R1 and a parallel combination of resistor R2 and capacitor C2 in the feedback path.</desc>
+
+  <defs>
+    <style>
+      .wire { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .opamp { fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: round; }
+      .terminal { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .dot { fill: #000000; }
+      .math { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 18px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .pm { font-family: "Helvetica Neue", Arial, -apple-system, BlinkMacSystemFont, sans-serif; font-size: 18px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .caption { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 16px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- ==================== INPUT CIRCUITRY ==================== -->
+  <!-- Input terminal -->
+  <circle cx="65" cy="155" r="4" class="terminal"/>
+
+  <!-- Input voltage Vi notation -->
+  <text x="65" y="180" class="pm">+</text>
+  <text x="65" y="202" class="math">V<tspan font-size="13px" dy="3">i</tspan></text>
+  <!-- Input ground -->
+  <line x1="65" y1="214" x2="65" y2="224" class="wire"/>
+  <line x1="53" y1="224" x2="77" y2="224" class="wire"/>
+  <line x1="57" y1="229" x2="73" y2="229" class="wire"/>
+  <line x1="61" y1="234" x2="69" y2="234" class="wire"/>
+
+  <!-- Wire from terminal to resistor R1 -->
+  <line x1="69" y1="155" x2="100" y2="155" class="wire"/>
+
+  <!-- Resistor R1 -->
+  <path d="M 100,155 L 105,155 L 109,147 L 117,163 L 125,147 L 133,163 L 141,147 L 145,155 L 150,155" class="wire"/>
+  <text x="125" y="134" class="math">R<tspan font-size="13px" dy="3">1</tspan></text>
+
+  <!-- Wire from R1 to inverting node -->
+  <line x1="150" y1="155" x2="180" y2="155" class="wire"/>
+  <circle cx="180" cy="155" r="3.5" class="dot"/>
+
+  <!-- Wire into op-amp inverting input -->
+  <line x1="180" y1="155" x2="210" y2="155" class="wire"/>
+
+  <!-- ==================== OP-AMP ==================== -->
+  <!-- Op-amp triangle -->
+  <polygon points="210,130 300,175 210,220" class="opamp"/>
+  <!-- Inverting (-) and non-inverting (+) labels inside op-amp -->
+  <text x="222" y="155" class="pm">−</text>
+  <text x="222" y="195" class="pm">+</text>
+
+  <!-- Non-inverting input ground connection -->
+  <polyline points="210,195 180,195 180,230" class="wire"/>
+  <line x1="168" y1="230" x2="192" y2="230" class="wire"/>
+  <line x1="172" y1="235" x2="188" y2="235" class="wire"/>
+  <line x1="176" y1="240" x2="184" y2="240" class="wire"/>
+
+  <!-- ==================== FEEDBACK NETWORK ==================== -->
+  <!-- Left vertical feedback wire -->
+  <line x1="180" y1="155" x2="180" y2="55" class="wire"/>
+  <circle cx="180" cy="105" r="3.5" class="dot"/>
+
+  <!-- Lower parallel branch: Resistor R2 -->
+  <line x1="180" y1="105" x2="230" y2="105" class="wire"/>
+  <path d="M 230,105 L 235,105 L 239,97 L 247,113 L 255,97 L 263,113 L 271,97 L 275,105 L 280,105" class="wire"/>
+  <text x="255" y="85" class="math">R<tspan font-size="13px" dy="3">2</tspan></text>
+  <line x1="280" y1="105" x2="330" y2="105" class="wire"/>
+
+  <!-- Upper parallel branch: Capacitor C2 -->
+  <line x1="180" y1="55" x2="250" y2="55" class="wire"/>
+  <!-- Capacitor C2 plates -->
+  <line x1="250" y1="40" x2="250" y2="70" class="wire"/>
+  <line x1="260" y1="40" x2="260" y2="70" class="wire"/>
+  <text x="255" y="27" class="math">C<tspan font-size="13px" dy="3">2</tspan></text>
+  <line x1="260" y1="55" x2="330" y2="55" class="wire"/>
+
+  <!-- Right vertical feedback wire -->
+  <line x1="330" y1="55" x2="330" y2="175" class="wire"/>
+  <circle cx="330" cy="105" r="3.5" class="dot"/>
+  <circle cx="330" cy="175" r="3.5" class="dot"/>
+
+  <!-- ==================== OUTPUT CIRCUITRY ==================== -->
+  <!-- Op-amp output to junction and terminal -->
+  <line x1="300" y1="175" x2="380" y2="175" class="wire"/>
+  <circle cx="380" cy="175" r="4" class="terminal"/>
+
+  <!-- Output voltage Vo notation -->
+  <text x="380" y="200" class="pm">+</text>
+  <text x="380" y="222" class="math">V<tspan font-size="13px" dy="3">o</tspan></text>
+  <!-- Output ground -->
+  <line x1="380" y1="234" x2="380" y2="244" class="wire"/>
+  <line x1="368" y1="244" x2="392" y2="244" class="wire"/>
+  <line x1="372" y1="249" x2="388" y2="249" class="wire"/>
+  <line x1="376" y1="254" x2="384" y2="254" class="wire"/>
+
+  <!-- ==================== CAPTION ==================== -->
+  <text x="240" y="295" class="caption">Figure 2.23 Circuit for Example 2.4.</text>
+</svg>

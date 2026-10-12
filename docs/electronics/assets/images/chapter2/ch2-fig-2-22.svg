@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="540" height="260">
+  <title>Figure 2.22 The inverting configuration with general impedances in the feedback and feed-in paths</title>
+  <desc>Figure 2.22 showing an inverting op-amp configuration where general impedances Z1 and Z2 replace resistors R1 and R2, with closed-loop gain Vo/Vi = -Z2/Z1.</desc>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <!-- Common Styles -->
+  <style>
+    .wire { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    .box { stroke: #000000; stroke-width: 2; fill: #ffffff; }
+    .triangle { stroke: #000000; stroke-width: 2; fill: #ffffff; stroke-linejoin: round; }
+    .terminal { stroke: #000000; stroke-width: 2; fill: #ffffff; }
+    .dot { fill: #000000; stroke: none; }
+    .label { font-family: "Times New Roman", Times, serif; font-size: 20px; text-anchor: middle; dominant-baseline: middle; fill: #000000; }
+    .label-italic { font-family: "Times New Roman", Times, serif; font-style: italic; font-size: 20px; text-anchor: middle; dominant-baseline: middle; fill: #000000; }
+    .sub { font-family: "Times New Roman", Times, serif; font-style: italic; font-size: 14px; }
+    .sign { font-family: "Times New Roman", Times, serif; font-size: 19px; text-anchor: middle; dominant-baseline: middle; fill: #000000; }
+  </style>
+
+  <!-- Definition of Ground Symbol -->
+  <defs>
+    <g id="ground">
+      <line x1="0" y1="0" x2="0" y2="12" class="wire" />
+      <line x1="-14" y1="12" x2="14" y2="12" class="wire" />
+      <line x1="-9" y1="17" x2="9" y2="17" class="wire" />
+      <line x1="-4" y1="22" x2="4" y2="22" class="wire" />
+    </g>
+  </defs>
+
+  <!-- Op-Amp Triangle -->
+  <!-- Inverting input (-) at y=120, Non-inverting input (+) at y=160, Output at (280, 140) -->
+  <polygon points="200,95 200,185 280,140" class="triangle" />
+
+  <!-- Op-Amp Terminal Signs -->
+  <text x="212" y="120" class="sign">−</text>
+  <text x="212" y="160" class="sign">+</text>
+
+  <!-- Input terminal Vi at x=50, y=120 -->
+  <circle cx="50" cy="120" r="3.5" class="terminal" />
+  
+  <!-- Wire from input terminal to Z1 -->
+  <line x1="53.5" y1="120" x2="90" y2="120" class="wire" />
+
+  <!-- Impedance Z1: Box from x=90 to x=150, y=107 to y=133 -->
+  <rect x="90" y="107" width="60" height="26" class="box" />
+  <text x="120" y="93" class="label-italic">Z<tspan dy="4" class="sub">1</tspan></text>
+
+  <!-- Wire from Z1 to inverting input of op-amp -->
+  <line x1="150" y1="120" x2="200" y2="120" class="wire" />
+
+  <!-- Node at inverting input branch (x=175, y=120) -->
+  <circle cx="175" cy="120" r="3" class="dot" />
+
+  <!-- Feedback path: up from x=175 to y=65, through Z2, to output node at x=310 -->
+  <line x1="175" y1="120" x2="175" y2="65" class="wire" />
+  <line x1="175" y1="65" x2="205" y2="65" class="wire" />
+
+  <!-- Impedance Z2: Box from x=205 to x=265, y=52 to y=78 -->
+  <rect x="205" y="52" width="60" height="26" class="box" />
+  <text x="235" y="38" class="label-italic">Z<tspan dy="4" class="sub">2</tspan></text>
+
+  <line x1="265" y1="65" x2="310" y2="65" class="wire" />
+  <line x1="310" y1="65" x2="310" y2="140" class="wire" />
+
+  <!-- Op-Amp output wire -->
+  <line x1="280" y1="140" x2="350" y2="140" class="wire" />
+  <circle cx="310" cy="140" r="3" class="dot" />
+
+  <!-- Output terminal Vo at x=350, y=140 -->
+  <circle cx="350" cy="140" r="3.5" class="terminal" />
+
+  <!-- Non-inverting input wire to Ground -->
+  <line x1="200" y1="160" x2="175" y2="160" class="wire" />
+  <use href="#ground" x="175" y="160" />
+
+  <!-- Input Voltage Vi polarities and Ground -->
+  <text x="50" y="142" class="sign">+</text>
+  <text x="50" y="162" class="label-italic">V<tspan dy="4" class="sub">i</tspan></text>
+  <text x="50" y="182" class="sign">−</text>
+  <use href="#ground" x="50" y="188" />
+
+  <!-- Output Voltage Vo polarities and Ground -->
+  <text x="350" y="162" class="sign">+</text>
+  <text x="350" y="182" class="label-italic">V<tspan dy="4" class="sub">o</tspan></text>
+  <text x="350" y="202" class="sign">−</text>
+  <use href="#ground" x="350" y="208" />
+
+  <!-- Formula on the right: Vo/Vi = -Z2/Z1 -->
+  <g transform="translate(420, 140)">
+    <!-- Vo / Vi -->
+    <text x="-40" y="-12" class="label-italic">V<tspan dy="4" class="sub">o</tspan></text>
+    <line x1="-54" y1="-2" x2="-26" y2="-2" class="wire" />
+    <text x="-40" y="16" class="label-italic">V<tspan dy="4" class="sub">i</tspan></text>
+
+    <!-- = - -->
+    <text x="-12" y="-1" class="label">=</text>
+    <text x="3" y="-1" class="label">−</text>
+
+    <!-- Z2 / Z1 -->
+    <text x="28" y="-12" class="label-italic">Z<tspan dy="4" class="sub">2</tspan></text>
+    <line x1="14" y1="-2" x2="42" y2="-2" class="wire" />
+    <text x="28" y="16" class="label-italic">Z<tspan dy="4" class="sub">1</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 330" width="100%" height="100%">
+  <title>Figure 2.4 Representation of the signal sources v1 and v2 in terms of their differential and common-mode components</title>
+  <desc>Schematic diagram illustrating the decomposition of input signals v1 and v2 into their differential component vId/2 and common-mode component vIcm.</desc>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <defs>
+    <style>
+      .wire { stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .source { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .terminal { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .dot { fill: #000000; }
+      .math { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 16px; font-style: italic; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .pm { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 15px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .label { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 16px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+      .eq { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 26px; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <!-- ==================== LEFT SIDE: v1 and v2 ==================== -->
+  <!-- Terminal 1 & v1 -->
+  <polyline points="150,50 90,50 90,84" class="wire"/>
+  <circle cx="150" cy="50" r="3.5" class="terminal"/>
+  <text x="150" y="34" class="label">1</text>
+
+  <circle cx="90" cy="100" r="16" class="source"/>
+  <text x="90" y="93" class="pm">+</text>
+  <text x="90" y="108" class="pm">−</text>
+  <text x="62" y="100" class="math">v<tspan font-style="normal" font-size="11px" dy="3">1</tspan></text>
+
+  <!-- Ground for v1 -->
+  <line x1="90" y1="116" x2="90" y2="135" class="wire"/>
+  <line x1="78" y1="135" x2="102" y2="135" class="wire"/>
+  <line x1="82" y1="139" x2="98" y2="139" class="wire"/>
+  <line x1="86" y1="143" x2="94" y2="143" class="wire"/>
+
+  <!-- Terminal 2 & v2 -->
+  <polyline points="150,230 90,230 90,264" class="wire"/>
+  <circle cx="150" cy="230" r="3.5" class="terminal"/>
+  <text x="150" y="214" class="label">2</text>
+
+  <circle cx="90" cy="280" r="16" class="source"/>
+  <text x="90" y="273" class="pm">+</text>
+  <text x="90" y="288" class="pm">−</text>
+  <text x="62" y="280" class="math">v<tspan font-style="normal" font-size="11px" dy="3">2</tspan></text>
+
+  <!-- Ground for v2 -->
+  <line x1="90" y1="296" x2="90" y2="314" class="wire"/>
+  <line x1="78" y1="314" x2="102" y2="314" class="wire"/>
+  <line x1="82" y1="318" x2="98" y2="318" class="wire"/>
+  <line x1="86" y1="322" x2="94" y2="322" class="wire"/>
+
+  <!-- Equal sign -->
+  <text x="195" y="165" class="eq">=</text>
+
+  <!-- ==================== RIGHT SIDE: DECOMPOSED COMPONENTS ==================== -->
+  <!-- Common-mode source vIcm -->
+  <circle cx="260" cy="190" r="16" class="source"/>
+  <text x="260" y="183" class="pm">+</text>
+  <text x="260" y="198" class="pm">−</text>
+  <text x="225" y="190" class="math">v<tspan font-style="normal" font-size="11px" dy="3">Icm</tspan></text>
+
+  <!-- Ground for vIcm -->
+  <line x1="260" y1="206" x2="260" y2="225" class="wire"/>
+  <line x1="248" y1="225" x2="272" y2="225" class="wire"/>
+  <line x1="252" y1="229" x2="268" y2="229" class="wire"/>
+  <line x1="256" y1="233" x2="264" y2="233" class="wire"/>
+
+  <!-- Wire from vIcm to junction -->
+  <polyline points="260,174 260,150 360,150" class="wire"/>
+  <circle cx="360" cy="150" r="3.5" class="dot"/>
+
+  <!-- Upper differential source vId/2 (negative on top, positive on bottom) -->
+  <line x1="360" y1="150" x2="360" y2="121" class="wire"/>
+  <circle cx="360" cy="105" r="16" class="source"/>
+  <text x="360" y="98" class="pm">−</text>
+  <text x="360" y="113" class="pm">+</text>
+  <text x="398" y="105" class="math">v<tspan font-style="normal" font-size="11px" dy="3">Id</tspan><tspan font-style="normal" font-size="15px" dy="-3">/2</tspan></text>
+
+  <!-- Wire from upper source to Terminal 1 -->
+  <polyline points="360,89 360,50 420,50" class="wire"/>
+  <circle cx="420" cy="50" r="3.5" class="terminal"/>
+  <text x="420" y="34" class="label">1</text>
+
+  <!-- Lower differential source vId/2 (negative on top, positive on bottom) -->
+  <line x1="360" y1="150" x2="360" y2="189" class="wire"/>
+  <circle cx="360" cy="205" r="16" class="source"/>
+  <text x="360" y="198" class="pm">−</text>
+  <text x="360" y="213" class="pm">+</text>
+  <text x="398" y="205" class="math">v<tspan font-style="normal" font-size="11px" dy="3">Id</tspan><tspan font-style="normal" font-size="15px" dy="-3">/2</tspan></text>
+
+  <!-- Wire from lower source to Terminal 2 -->
+  <polyline points="360,221 360,260 420,260" class="wire"/>
+  <circle cx="420" cy="260" r="3.5" class="terminal"/>
+  <text x="420" y="244" class="label">2</text>
+</svg>

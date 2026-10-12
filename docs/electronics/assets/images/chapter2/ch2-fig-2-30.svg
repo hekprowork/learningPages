@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 330" width="100%" height="100%" role="img" aria-labelledby="title-2-30 desc-2-30">
+  <title id="title-2-30">Figure 2.30 Evaluating the output dc offset voltage due to Vos in a closed-loop amplifier</title>
+  <desc id="desc-2-30">Circuit diagram of an op-amp closed-loop amplifier with an input offset voltage source Vos connected to the non-inverting terminal, producing an output dc voltage Vo = Vos(1 + R2/R1).</desc>
+
+  <style>
+    .wire { fill: none; stroke: #111111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #111111; stroke-width: 2.2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .term { fill: #ffffff; stroke: #111111; stroke-width: 2.2; }
+    .junc { fill: #111111; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; fill: #111111; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 19px; fill: #111111; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 17px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 19px; font-weight: 500; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .arrow { fill: #111111; }
+    .arrow-line { fill: none; stroke: #111111; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <defs>
+    <!-- Arrowhead marker for curved indicator arrow -->
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" class="arrow"/>
+    </marker>
+  </defs>
+
+  <!-- Clean pure white background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Inverting Input Branch: Ground to R1 to inverting node -->
+  <!-- Ground at (75, 175) -->
+  <line class="wire" x1="75" y1="140" x2="75" y2="175"/>
+  <line class="wire" x1="61" y1="175" x2="89" y2="175"/>
+  <line class="wire" x1="66" y1="180" x2="84" y2="180"/>
+  <line class="wire" x1="71" y1="185" x2="79" y2="185"/>
+
+  <!-- Wire from ground to R1 -->
+  <line class="wire" x1="75" y1="140" x2="105" y2="140"/>
+
+  <!-- Resistor R1 (width 50 px, from 105 to 155) -->
+  <path class="wire" d="M 105 140 L 110 140 L 114 131 L 122 149 L 130 131 L 138 149 L 146 131 L 151 140 L 155 140"/>
+  <text class="math" x="130" y="123" text-anchor="middle">R<tspan class="sub">1</tspan></text>
+
+  <!-- Wire from R1 to junction at (195, 140) -->
+  <line class="wire" x1="155" y1="140" x2="230" y2="140"/>
+  <circle class="junc" cx="195" cy="140" r="3.5"/>
+
+  <!-- Feedback Loop: Node (195, 140) up to y=65, through R2, down to output at (390, 170) -->
+  <path class="wire" d="M 195 140 L 195 65 L 260 65"/>
+  <!-- Resistor R2 (width 50 px, from 260 to 310) -->
+  <path class="wire" d="M 260 65 L 265 65 L 269 56 L 277 74 L 285 56 L 293 74 L 301 56 L 306 65 L 310 65"/>
+  <text class="math" x="285" y="48" text-anchor="middle">R<tspan class="sub">2</tspan></text>
+  <path class="wire" d="M 310 65 L 380 65 L 380 170"/>
+
+  <!-- Non-inverting Input Branch: Ground to Vos to non-inverting node -->
+  <!-- Ground at (115, 235) -->
+  <line class="wire" x1="115" y1="200" x2="115" y2="235"/>
+  <line class="wire" x1="101" y1="235" x2="129" y2="235"/>
+  <line class="wire" x1="106" y1="240" x2="124" y2="240"/>
+  <line class="wire" x1="111" y1="245" x2="119" y2="245"/>
+
+  <!-- Wire from ground to Vos circle -->
+  <line class="wire" x1="115" y1="200" x2="152" y2="200"/>
+
+  <!-- Voltage Source Vos (circle cx=170, cy=200, r=18) -->
+  <circle class="comp-bg" cx="170" cy="200" r="18"/>
+  <text class="sign" x="160" y="200">−</text>
+  <text class="sign" x="180" y="200">+</text>
+  <text class="math" x="170" y="235" text-anchor="middle">V<tspan class="sub">OS</tspan></text>
+
+  <!-- Wire from Vos to non-inverting terminal -->
+  <line class="wire" x1="188" y1="200" x2="230" y2="200"/>
+
+  <!-- Op-Amp Body -->
+  <polygon class="opamp-body" points="230,110 230,230 350,170"/>
+  <text class="opamp-sign" x="242" y="140">−</text>
+  <text class="opamp-sign" x="242" y="200">+</text>
+
+  <!-- Indicator: Offset-free op amp -->
+  <text class="txt" x="270" y="285" text-anchor="middle">Offset-free</text>
+  <text class="txt" x="270" y="303" text-anchor="middle">op amp</text>
+  <path class="arrow-line" d="M 270 268 C 270 245 285 220 295 204" marker-end="url(#arrowhead)"/>
+
+  <!-- Output wire and terminals -->
+  <line class="wire" x1="350" y1="170" x2="420" y2="170"/>
+  <circle class="junc" cx="380" cy="170" r="3.5"/>
+  <circle class="term" cx="420" cy="170" r="4.5"/>
+  <text class="math" x="420" y="200" text-anchor="middle">V<tspan class="sub">O</tspan></text>
+
+  <!-- Output Voltage Equation: Vo = Vos(1 + R2/R1) -->
+  <g transform="translate(415, 120)">
+    <text class="math" x="0" y="0">V<tspan class="sub">O</tspan> = V<tspan class="sub">OS</tspan><tspan font-style="normal" font-size="28px" dx="4">(</tspan><tspan dx="2">1 + </tspan></text>
+    <text class="math" x="135" y="-13" text-anchor="middle">R<tspan class="sub">2</tspan></text>
+    <line class="wire" x1="122" y1="-6" x2="148" y2="-6" stroke-width="1.8"/>
+    <text class="math" x="135" y="14" text-anchor="middle">R<tspan class="sub">1</tspan></text>
+    <text class="math" x="154" y="0"><tspan font-style="normal" font-size="28px">)</tspan></text>
+  </g>
+</svg>

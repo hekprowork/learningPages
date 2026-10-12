@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 450" width="100%" height="100%" role="img" aria-labelledby="title-2-33 desc-2-33">
+  <title id="title-2-33">Figure 2.33 Op-Amp Input Bias Currents Represented by Two Current Sources</title>
+  <desc id="desc-2-33">Diagram showing op-amp input bias currents represented by two current sources IB1 and IB2 connected between the input terminals (pin 1 and pin 2) and ground, with output terminal pin 3.</desc>
+
+  <style>
+    .wire { fill: none; stroke: #000000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .opamp-body { fill: #ffffff; stroke: #000000; stroke-width: 2; stroke-linejoin: round; }
+    .comp-bg { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .term { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .junc { fill: #000000; }
+    .txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: #000000; }
+    .math { font-family: 'Times New Roman', Times, Georgia, serif; font-style: italic; font-size: 19px; fill: #000000; }
+    .sub { font-size: 0.72em; font-style: italic; }
+    .sub-norm { font-size: 0.72em; font-style: normal; }
+    .opamp-sign { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 20px; font-weight: normal; fill: #000000; text-anchor: middle; dominant-baseline: central; }
+    .arrow { fill: #000000; }
+  </style>
+
+  <!-- Clean pure white background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Large Op-Amp Triangle Body -->
+  <polygon points="170,45 450,225 170,405" class="opamp-body"/>
+
+  <!-- ========================================== -->
+  <!-- Pin 1: Inverting Input Terminal & IB1 Model -->
+  <!-- ========================================== -->
+  <line class="wire" x1="90" y1="145" x2="170" y2="145"/>
+  <circle class="term" cx="90" cy="145" r="4.5"/>
+  <text class="txt" x="105" y="132">1</text>
+  <text class="opamp-sign" x="186" y="128">−</text>
+
+  <!-- Internal inverting branch -->
+  <line class="wire" x1="170" y1="145" x2="275" y2="145"/>
+  <circle class="junc" cx="225" cy="145" r="3.5"/>
+  <circle class="term" cx="275" cy="145" r="4"/>
+
+  <!-- Current source IB1 -->
+  <line class="wire" x1="225" y1="145" x2="225" y2="166"/>
+  <circle class="comp-bg" cx="225" cy="182" r="16"/>
+  <!-- Downward arrow inside source circle -->
+  <line class="wire" x1="225" y1="174" x2="225" y2="192"/>
+  <polygon points="221.5,187 228.5,187 225,194" class="arrow"/>
+  <text class="math" x="250" y="188">I<tspan class="sub">B1</tspan></text>
+
+  <!-- Connection to ground -->
+  <line class="wire" x1="225" y1="198" x2="225" y2="218"/>
+  <line class="wire" x1="211" y1="218" x2="239" y2="218"/>
+  <line class="wire" x1="216" y1="223" x2="234" y2="223"/>
+  <line class="wire" x1="221" y1="228" x2="229" y2="228"/>
+
+  <!-- ========================================== -->
+  <!-- Pin 2: Non-inverting Input Terminal & IB2 Model -->
+  <!-- ========================================== -->
+  <line class="wire" x1="90" y1="275" x2="170" y2="275"/>
+  <circle class="term" cx="90" cy="275" r="4.5"/>
+  <text class="txt" x="105" y="262">2</text>
+  <text class="opamp-sign" x="186" y="258">+</text>
+
+  <!-- Internal non-inverting branch -->
+  <line class="wire" x1="170" y1="275" x2="275" y2="275"/>
+  <circle class="junc" cx="225" cy="275" r="3.5"/>
+  <circle class="term" cx="275" cy="275" r="4"/>
+
+  <!-- Current source IB2 -->
+  <line class="wire" x1="225" y1="275" x2="225" y2="296"/>
+  <circle class="comp-bg" cx="225" cy="312" r="16"/>
+  <!-- Downward arrow inside source circle -->
+  <line class="wire" x1="225" y1="304" x2="225" y2="322"/>
+  <polygon points="221.5,317 228.5,317 225,324" class="arrow"/>
+  <text class="math" x="250" y="318">I<tspan class="sub">B2</tspan></text>
+
+  <!-- Connection to ground -->
+  <line class="wire" x1="225" y1="328" x2="225" y2="348"/>
+  <line class="wire" x1="211" y1="348" x2="239" y2="348"/>
+  <line class="wire" x1="216" y1="353" x2="234" y2="353"/>
+  <line class="wire" x1="221" y1="358" x2="229" y2="358"/>
+
+  <!-- ========================================== -->
+  <!-- Pin 3: Output Terminal -->
+  <!-- ========================================== -->
+  <line class="wire" x1="450" y1="225" x2="495" y2="225"/>
+  <circle class="term" cx="495" cy="225" r="4.5"/>
+  <text class="txt" x="466" y="212">3</text>
+</svg>

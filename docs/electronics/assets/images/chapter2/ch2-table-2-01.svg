@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" width="100%" height="100%">
+  <title>Table 2.1 Characteristics of the Ideal Op Amp</title>
+  <desc>Summary table listing the five ideal operational amplifier characteristics: infinite input impedance, zero output impedance, zero common-mode gain (infinite CMRR), infinite open-loop gain A, and infinite bandwidth.</desc>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <defs>
+    <style>
+      .table-border { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .table-divider { stroke: #000000; stroke-width: 1.5; }
+      .table-title-bold { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #000000; dominant-baseline: central; }
+      .table-title-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 16px; font-weight: normal; fill: #000000; dominant-baseline: central; }
+      .table-item { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 15.5px; fill: #000000; dominant-baseline: central; }
+      .table-item-math { font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif; font-size: 15.5px; font-style: italic; fill: #000000; }
+    </style>
+  </defs>
+
+  <!-- Table Box -->
+  <rect x="12" y="12" width="616" height="196" class="table-border"/>
+
+  <!-- Header -->
+  <text x="32" y="38" class="table-title-bold">Table 2.1<tspan class="table-title-text" dx="14">Characteristics of the Ideal Op Amp</tspan></text>
+
+  <!-- Header Divider Line -->
+  <line x1="12" y1="58" x2="628" y2="58" class="table-divider"/>
+
+  <!-- List Items -->
+  <text x="32" y="85" class="table-item">1. Infinite input impedance</text>
+  <text x="32" y="110" class="table-item">2. Zero output impedance</text>
+  <text x="32" y="135" class="table-item">3. Zero common-mode gain or, equivalently, infinite common-mode rejection</text>
+  <text x="32" y="160" class="table-item">4. Infinite open-loop gain <tspan class="table-item-math">A</tspan></text>
+  <text x="32" y="185" class="table-item">5. Infinite bandwidth</text>
+</svg>
