@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" role="img" aria-labelledby="title desc">
+  <title id="title">Current amplifier two-port model</title>
+  <desc id="desc">Input resistance Ri and a current-controlled current source Ais ii in parallel with output resistance Ro.</desc>
+  <defs>
+    <style>
+      .wire{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .thin{fill:none;stroke:#111;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .label{fill:#111;font:20px Arial,sans-serif}
+      .small{fill:#111;font:17px Arial,sans-serif}
+      .port{fill:#fff;stroke:#111;stroke-width:3}
+    </style>
+  </defs>
+  <rect width="760" height="330" fill="#fff"/>
+  <text class="label" x="32" y="34">Current amplifier (CCCS)</text>
+  <circle class="port" cx="82" cy="105" r="6"/><circle class="port" cx="82" cy="225" r="6"/>
+  <circle class="port" cx="678" cy="105" r="6"/><circle class="port" cx="678" cy="225" r="6"/>
+  <path class="wire" d="M88 105H184M88 225H678"/>
+  <path class="wire" d="M184 105V120l10 10 10-20 10 20 10-20 10 20 10-10v105"/>
+  <path class="wire" d="M456 225V205l-30-38 30-38 30 38-30 38Z"/>
+  <path class="wire" d="M456 129V105H678M456 205V225"/>
+  <path class="wire" d="M578 105V120l10 10 10-20 10 20 10-20 10 20 10-10v105"/>
+  <path class="thin" d="M456 190v-42M448 156l8-8 8 8"/>
+  <path class="thin" d="M150 105h32M174 99l8 6-8 6"/>
+  <path class="thin" d="M625 105h32M649 99l8 6-8 6"/>
+  <path class="thin" d="M700 132v24M694 144h12M694 186h12"/>
+  <path class="thin" d="M360 225v18m-16 0h32m-26 6h20m-14 6h8"/>
+  <text class="label" x="114" y="92">i<tspan baseline-shift="sub" font-size="70%">i</tspan></text><text class="small" x="226" y="166">R<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+  <text class="small" x="488" y="168">A<tspan baseline-shift="sub" font-size="70%">is</tspan> · i<tspan baseline-shift="sub" font-size="70%">i</tspan></text><text class="small" x="620" y="166">R<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+  <text class="label" x="700" y="169">v<tspan baseline-shift="sub" font-size="70%">o</tspan></text><text class="label" x="660" y="92">i<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+</svg>

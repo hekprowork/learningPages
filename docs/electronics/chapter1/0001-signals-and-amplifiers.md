@@ -68,6 +68,32 @@ $$\eta \equiv \frac{P_L}{P_{DC}} \times 100\%$$
 
 根據輸入訊號（電壓或電流）與輸出受控源的類型，電子學將放大器抽象化為四種二埠 (Two-Port) 等效模型：
 
+以下示意圖皆採相同閱讀方向：左側為輸入埠，右側為輸出埠；$R_i$ 表示輸入電阻，$R_o$ 表示輸出電阻，菱形受控源則表示由輸入訊號控制的輸出源。
+
+### 1. 電壓放大器 (Voltage Amplifier)
+
+輸入電壓 $v_i$ 控制串聯的壓控電壓源 $A_{vo}v_i$，因此適合用電壓增益描述。
+
+![電壓放大器二埠等效模型：VCVS 串聯輸出電阻](../assets/images/amplifier-model-voltage.svg)
+
+### 2. 電流放大器 (Current Amplifier)
+
+輸入電流 $i_i$ 控制並聯的流控電流源 $A_{is}i_i$，輸出電阻 $R_o$ 與受控源並聯。
+
+![電流放大器二埠等效模型：CCCS 並聯輸出電阻](../assets/images/amplifier-model-current.svg)
+
+### 3. 轉導放大器 (Transconductance Amplifier)
+
+輸入電壓 $v_i$ 控制並聯的壓控電流源 $G_mv_i$，將電壓訊號轉換成輸出電流。
+
+![轉導放大器二埠等效模型：VCCS 並聯輸出電阻](../assets/images/amplifier-model-transconductance.svg)
+
+### 4. 轉阻放大器 (Transresistance Amplifier)
+
+輸入電流 $i_i$ 控制串聯的流控電壓源 $R_mi_i$，將電流訊號轉換成輸出電壓。
+
+![轉阻放大器二埠等效模型：CCVS 串聯輸出電阻](../assets/images/amplifier-model-transresistance.svg)
+
 | 放大器類型 (Amplifier Type) | 增益參數與定義 | 測試條件 | 理想輸入電阻 $R_i$ | 理想輸出電阻 $R_o$ | 等效受控源形式 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **電壓放大器 (Voltage Amp)** | $A_{vo} \equiv \left.\frac{v_o}{v_i}\right\vert_{i_o=0}$ (V/V) | 開路 ($i_o = 0$) | $\infty$ (不分走源電壓) | $0$ (負載變動不影響輸出) | 壓控電壓源 (VCVS): $A_{vo} v_i$ |
