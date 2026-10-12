@@ -104,6 +104,10 @@ $$G_v=\frac{v_o}{v_s}=\frac{v_{i1}}{v_s}\prod_{k=1}^{n}A_{v,k}$$
 
 ### 級聯範例：三個放大級的實際增益
 
+![三級串接電壓放大器等效電路與級間負載效應](../assets/images/three-stage-amplifier-loading.svg)
+
+下圖展示由訊號源、三個串接電壓放大級與負載組成的等效電路，具體呈現級間輸入電阻對前級輸出造成的負載分壓效應。
+
 考慮 $v_s=1\text{ mV}$、$R_s=100\text{ k}\Omega$、$R_L=100\Omega$ 的三級放大器：
 
 - 第 1 級：$R_{i1}=1\text{ M}\Omega$、$A_{vo1}=10$、$R_{o1}=1\text{ k}\Omega$

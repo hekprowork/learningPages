@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1580 310" role="img" aria-labelledby="title desc">
+  <title id="title">Three-stage cascaded voltage amplifier with interstage loading</title>
+  <desc id="desc">Schematic diagram showing a signal source, three cascaded voltage amplifier stages with input and output resistances, VCVS sources, interstage loading, and load resistance.</desc>
+  <defs>
+    <style>
+      .wire { fill: none; stroke: #111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .thin-wire { fill: none; stroke: #111; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .source-sym { fill: #fff; stroke: #111; stroke-width: 2.2; }
+      .diamond { fill: #fff; stroke: #111; stroke-width: 2.2; stroke-linejoin: round; }
+      .port { fill: #fff; stroke: #111; stroke-width: 2.2; }
+      .math { fill: #111; font: italic 16px "Times New Roman", Georgia, serif; }
+      .stage-title { fill: #111; font: 700 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; letter-spacing: 0.5px; }
+      .divider { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 5,4; }
+      .note { fill: #475569; font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1580" height="310" fill="#fff"/>
+
+  <!-- Stage Titles -->
+  <text class="stage-title" x="110" y="32" text-anchor="middle">Source</text>
+  <text class="stage-title" x="415" y="32" text-anchor="middle">Stage 1</text>
+  <text class="stage-title" x="805" y="32" text-anchor="middle">Stage 2</text>
+  <text class="stage-title" x="1195" y="32" text-anchor="middle">Stage 3</text>
+  <text class="stage-title" x="1485" y="32" text-anchor="middle">Load</text>
+
+  <!-- Dividers between stages -->
+  <line class="divider" x1="220" y1="20" x2="220" y2="245"/>
+  <line class="divider" x1="610" y1="20" x2="610" y2="245"/>
+  <line class="divider" x1="1000" y1="20" x2="1000" y2="245"/>
+  <line class="divider" x1="1390" y1="20" x2="1390" y2="245"/>
+
+  <!-- ==================== 1. SOURCE ==================== -->
+  <!-- Source Voltage vs -->
+  <circle class="source-sym" cx="65" cy="155" r="22"/>
+  <path class="thin-wire" d="M65 142v8M61 146h8M61 166h8"/>
+  <text class="math" x="35" y="160" text-anchor="end">v<tspan baseline-shift="sub" font-size="70%">s</tspan></text>
+  <path class="wire" d="M65 133V95H90l5-9 10 18 10-18 10 18 10-18 5 9H220"/>
+  <text class="math" x="115" y="72" text-anchor="middle">R<tspan baseline-shift="sub" font-size="70%">s</tspan> = 100 kΩ</text>
+  <path class="wire" d="M65 177v38"/>
+  <!-- Ground at source -->
+  <path class="thin-wire" d="M65 215v10M53 225h24M58 230h14M62 235h6"/>
+  <!-- Input current arrow ii -->
+  <path class="thin-wire" d="M165 88h22M182 84l5 4-5 4"/>
+  <text class="math" x="176" y="80" text-anchor="middle">i<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+  <!-- Port 1 -->
+  <circle class="port" cx="220" cy="95" r="4.5"/>
+
+  <!-- ==================== 2. STAGE 1 ==================== -->
+  <!-- Ri1 = 1 MΩ -->
+  <path class="wire" d="M220 95H290v30l-8 5 16 10-16 10 16 10-16 10 8 5v40"/>
+  <text class="math" x="306" y="148" text-anchor="start">R<tspan baseline-shift="sub" font-size="70%">i1</tspan></text>
+  <text class="math" x="306" y="168" text-anchor="start">= 1 MΩ</text>
+  <!-- vi1 voltage markers -->
+  <text class="math" x="255" y="125" text-anchor="middle">+</text>
+  <text class="math" x="255" y="155" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">i1</tspan></text>
+  <text class="math" x="255" y="185" text-anchor="middle">−</text>
+  <!-- Ground at Ri1 -->
+  <path class="thin-wire" d="M290 215v10M278 225h24M283 230h14M287 235h6"/>
+
+  <!-- VCVS 1: 10 vi1 -->
+  <polygon class="diamond" points="455,127 477,155 455,183 433,155"/>
+  <path class="thin-wire" d="M455 141v8M451 145h8M451 167h8"/>
+  <text class="math" x="423" y="155" text-anchor="end">10 v<tspan baseline-shift="sub" font-size="70%">i1</tspan></text>
+  <path class="wire" d="M455 127V95H495l5-9 10 18 10-18 10 18 10-18 5 9H610"/>
+  <text class="math" x="520" y="72" text-anchor="middle">R<tspan baseline-shift="sub" font-size="70%">o1</tspan> = 1 kΩ</text>
+  <path class="wire" d="M455 183v32"/>
+  <!-- Ground at VCVS 1 -->
+  <path class="thin-wire" d="M455 215v10M443 225h24M448 230h14M452 235h6"/>
+  <!-- Port 2 -->
+  <circle class="port" cx="610" cy="95" r="4.5"/>
+
+  <!-- ==================== 3. STAGE 2 ==================== -->
+  <!-- Ri2 = 10 kΩ -->
+  <path class="wire" d="M610 95H680v30l-8 5 16 10-16 10 16 10-16 10 8 5v40"/>
+  <text class="math" x="696" y="148" text-anchor="start">R<tspan baseline-shift="sub" font-size="70%">i2</tspan></text>
+  <text class="math" x="696" y="168" text-anchor="start">= 10 kΩ</text>
+  <!-- vi2 voltage markers -->
+  <text class="math" x="645" y="125" text-anchor="middle">+</text>
+  <text class="math" x="645" y="155" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">i2</tspan></text>
+  <text class="math" x="645" y="185" text-anchor="middle">−</text>
+  <!-- Ground at Ri2 -->
+  <path class="thin-wire" d="M680 215v10M668 225h24M673 230h14M677 235h6"/>
+
+  <!-- VCVS 2: 100 vi2 -->
+  <polygon class="diamond" points="850,127 872,155 850,183 828,155"/>
+  <path class="thin-wire" d="M850 141v8M846 145h8M846 167h8"/>
+  <text class="math" x="818" y="155" text-anchor="end">100 v<tspan baseline-shift="sub" font-size="70%">i2</tspan></text>
+  <path class="wire" d="M850 127V95H890l5-9 10 18 10-18 10 18 10-18 5 9H1000"/>
+  <text class="math" x="915" y="72" text-anchor="middle">R<tspan baseline-shift="sub" font-size="70%">o2</tspan> = 1 kΩ</text>
+  <path class="wire" d="M850 183v32"/>
+  <!-- Ground at VCVS 2 -->
+  <path class="thin-wire" d="M850 215v10M838 225h24M843 230h14M847 235h6"/>
+  <!-- Port 3 -->
+  <circle class="port" cx="1000" cy="95" r="4.5"/>
+
+  <!-- ==================== 4. STAGE 3 ==================== -->
+  <!-- Ri3 = 10 kΩ -->
+  <path class="wire" d="M1000 95H1070v30l-8 5 16 10-16 10 16 10-16 10 8 5v40"/>
+  <text class="math" x="1086" y="148" text-anchor="start">R<tspan baseline-shift="sub" font-size="70%">i3</tspan></text>
+  <text class="math" x="1086" y="168" text-anchor="start">= 10 kΩ</text>
+  <!-- vi3 voltage markers -->
+  <text class="math" x="1035" y="125" text-anchor="middle">+</text>
+  <text class="math" x="1035" y="155" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">i3</tspan></text>
+  <text class="math" x="1035" y="185" text-anchor="middle">−</text>
+  <!-- Ground at Ri3 -->
+  <path class="thin-wire" d="M1070 215v10M1058 225h24M1063 230h14M1067 235h6"/>
+
+  <!-- VCVS 3: 1 vi3 -->
+  <polygon class="diamond" points="1240,127 1262,155 1240,183 1218,155"/>
+  <path class="thin-wire" d="M1240 141v8M1236 145h8M1236 167h8"/>
+  <text class="math" x="1208" y="155" text-anchor="end">1 v<tspan baseline-shift="sub" font-size="70%">i3</tspan></text>
+  <path class="wire" d="M1240 127V95H1280l5-9 10 18 10-18 10 18 10-18 5 9H1390"/>
+  <text class="math" x="1305" y="72" text-anchor="middle">R<tspan baseline-shift="sub" font-size="70%">o3</tspan> = 10 Ω</text>
+  <path class="wire" d="M1240 183v32"/>
+  <!-- Ground at VCVS 3 -->
+  <path class="thin-wire" d="M1240 215v10M1228 225h24M1233 230h14M1237 235h6"/>
+  <!-- Output current arrow io -->
+  <path class="thin-wire" d="M1345 88h22M1362 84l5 4-5 4"/>
+  <text class="math" x="1356" y="80" text-anchor="middle">i<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+  <!-- Port 4 -->
+  <circle class="port" cx="1390" cy="95" r="4.5"/>
+
+  <!-- ==================== 5. LOAD ==================== -->
+  <!-- RL = 100 Ω -->
+  <path class="wire" d="M1390 95H1485v30l-8 5 16 10-16 10 16 10-16 10 8 5v40"/>
+  <text class="math" x="1465" y="148" text-anchor="end">R<tspan baseline-shift="sub" font-size="70%">L</tspan></text>
+  <text class="math" x="1465" y="168" text-anchor="end">= 100 Ω</text>
+  <!-- vo output voltage markers -->
+  <text class="math" x="1530" y="125" text-anchor="middle">+</text>
+  <text class="math" x="1530" y="155" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+  <text class="math" x="1530" y="185" text-anchor="middle">−</text>
+  <!-- Ground at RL -->
+  <path class="thin-wire" d="M1485 215v10M1473 225h24M1478 230h14M1482 235h6"/>
+
+  <!-- Footer explanation -->
+  <text class="note" x="790" y="280" text-anchor="middle">三級串接放大器等效模型：訊號經由各級輸入電阻與前級輸出電阻分壓傳遞，總電壓增益 G<tspan baseline-shift="sub" font-size="70%">v</tspan> = (v<tspan baseline-shift="sub" font-size="70%">i1</tspan>/v<tspan baseline-shift="sub" font-size="70%">s</tspan>) · A<tspan baseline-shift="sub" font-size="70%">v1</tspan> · A<tspan baseline-shift="sub" font-size="70%">v2</tspan> · A<tspan baseline-shift="sub" font-size="70%">v3</tspan></text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" role="img" aria-labelledby="title desc">
+  <title id="title">Signal source equivalents: Thevenin and Norton models</title>
+  <desc id="desc">Side-by-side schematic diagrams of Thevenin voltage source with series resistance and Norton current source with parallel resistance.</desc>
+  <defs>
+    <style>
+      .wire { fill: none; stroke: #111; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+      .source-sym { fill: #fff; stroke: #111; stroke-width: 2.5; }
+      .port { fill: #fff; stroke: #111; stroke-width: 2.5; }
+      .math { fill: #111; font: italic 20px "Times New Roman", Georgia, serif; }
+      .label { fill: #222; font: 600 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .box { fill: #f8f9fa; stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 4,4; }
+    </style>
+  </defs>
+  <rect width="760" height="270" fill="#fff"/>
+
+  <!-- Left: Thevenin form -->
+  <rect class="box" x="50" y="30" width="225" height="175" rx="6"/>
+
+  <!-- Thevenin Source -->
+  <circle class="source-sym" cx="115" cy="125" r="24"/>
+  <path class="wire" d="M115 110v10M110 115h10" stroke-width="2"/>
+  <path class="wire" d="M110 137h10" stroke-width="2"/>
+  <text class="math" x="78" y="131" text-anchor="end">v<tspan baseline-shift="sub" font-size="70%">s</tspan>(t)</text>
+
+  <!-- Thevenin Wires & Rs -->
+  <path class="wire" d="M115 101V75H165l6-10 12 20 12-20 12 20 12-20 12 20 6-10H315"/>
+  <text class="math" x="201" y="52" text-anchor="middle">R<tspan baseline-shift="sub" font-size="70%">s</tspan></text>
+  <path class="wire" d="M115 149V175H315"/>
+
+  <!-- Thevenin Terminals -->
+  <circle class="port" cx="315" cy="75" r="5"/>
+  <circle class="port" cx="315" cy="175" r="5"/>
+  <text class="label" x="185" y="240" text-anchor="middle">(a) 戴維寧模型 (Thévenin form)</text>
+
+  <!-- Right: Norton form -->
+  <rect class="box" x="425" y="30" width="205" height="175" rx="6"/>
+
+  <!-- Norton Source -->
+  <circle class="source-sym" cx="485" cy="125" r="24"/>
+  <path class="wire" d="M485 139V111M478 120l7-9 7 9" stroke-width="2"/>
+  <text class="math" x="448" y="131" text-anchor="end">i<tspan baseline-shift="sub" font-size="70%">s</tspan>(t)</text>
+
+  <!-- Norton Wires & Rs -->
+  <path class="wire" d="M485 101V75H685"/>
+  <path class="wire" d="M485 149V175H685"/>
+  <circle cx="575" cy="75" r="4" fill="#111"/>
+  <circle cx="575" cy="175" r="4" fill="#111"/>
+  <path class="wire" d="M575 75v18l-10 4 20 8-20 8 20 8-20 8 20 8-20 8 20 8-10 4v18"/>
+  <text class="math" x="600" y="131" text-anchor="start">R<tspan baseline-shift="sub" font-size="70%">s</tspan></text>
+
+  <!-- Norton Terminals -->
+  <circle class="port" cx="685" cy="75" r="5"/>
+  <circle class="port" cx="685" cy="175" r="5"/>
+  <text class="label" x="555" y="240" text-anchor="middle">(b) 諾頓模型 (Norton form)</text>
+</svg>

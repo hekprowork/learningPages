@@ -36,6 +36,10 @@ $$ T(s) = \frac{V_o(s)}{V_i(s)} $$
 - **低通濾波器 (Low-Pass Filter)**：讓低頻信號通過且幾乎沒有衰減（在 $\omega = 0$ 時，傳輸率為 1），但會衰減高頻輸入信號。
 - **高通濾波器 (High-Pass Filter)**：在極高頻（$\omega = \infty$）處傳輸率為 1，並隨著頻率降低而衰減，在直流（$\omega = 0$）時衰減為 0。
 
+![一階 RC 單時間常數 (STC) 低通與高通網路](../assets/images/stc-low-high-pass-networks.svg)
+
+圖中展示典型的一階 RC 低通與高通電路結構，分別對應下方摘要表中隨頻率變化的低通與高通傳遞函數 $T(s)$。
+
 ### STC 網路的頻率響應摘要
 
 | 參數 | 低通 (LP) | 高通 (HP) |

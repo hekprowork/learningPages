@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" role="img" aria-labelledby="title desc">
+  <title id="title">Canonical First-Order RC STC Networks</title>
+  <desc id="desc">Side-by-side schematics of canonical first-order RC single-time-constant networks: low-pass network and high-pass network.</desc>
+  <defs>
+    <style>
+      .wire { fill: none; stroke: #111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .thin-wire { fill: none; stroke: #111; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+      .port { fill: #fff; stroke: #111; stroke-width: 2.2; }
+      .math { fill: #111; font: italic 16px "Times New Roman", Georgia, serif; }
+      .title { fill: #111; font: 700 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .eq { fill: #475569; font: italic 13px "Times New Roman", Georgia, serif; }
+      .box { fill: #f8f9fa; stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 4,4; }
+    </style>
+  </defs>
+  <rect width="760" height="270" fill="#fff"/>
+
+  <!-- ==================== Left: Low-Pass (LP) Network ==================== -->
+  <rect class="box" x="45" y="24" width="310" height="195" rx="6"/>
+  <text class="title" x="200" y="48" text-anchor="middle">(a) 低通 RC 網路 (Low-Pass, LP)</text>
+
+  <!-- Input Terminals & vi -->
+  <circle class="port" cx="85" cy="95" r="4.5"/>
+  <circle class="port" cx="85" cy="175" r="4.5"/>
+  <text class="math" x="68" y="112" text-anchor="middle">+</text>
+  <text class="math" x="68" y="139" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+  <text class="math" x="68" y="164" text-anchor="middle">−</text>
+
+  <!-- Series Resistor R -->
+  <path class="wire" d="M85 95h50l5-9 10 18 10-18 10 18 10-18 5 9h50"/>
+  <text class="math" x="165" y="74" text-anchor="middle">R</text>
+
+  <!-- Shunt Capacitor C -->
+  <circle cx="240" cy="95" r="3.5" fill="#111"/>
+  <path class="wire" d="M240 95v31M225 126h30M225 138h30M240 138v37"/>
+  <circle cx="240" cy="175" r="3.5" fill="#111"/>
+  <text class="math" x="268" y="137" text-anchor="start">C</text>
+
+  <!-- Ground Connection -->
+  <path class="thin-wire" d="M240 175v12M228 187h24M233 192h14M237 197h6"/>
+
+  <!-- Bottom Common Line -->
+  <path class="wire" d="M85 175h230"/>
+
+  <!-- Top Output Line -->
+  <path class="wire" d="M240 95h75"/>
+
+  <!-- Output Terminals & vo -->
+  <circle class="port" cx="315" cy="95" r="4.5"/>
+  <circle class="port" cx="315" cy="175" r="4.5"/>
+  <text class="math" x="332" y="112" text-anchor="middle">+</text>
+  <text class="math" x="332" y="139" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+  <text class="math" x="332" y="164" text-anchor="middle">−</text>
+
+  <!-- Transfer Function equation -->
+  <text class="eq" x="200" y="244" text-anchor="middle">T(s) = 1 / (1 + sRC) = 1 / (1 + s/ω<tspan baseline-shift="sub" font-size="70%">0</tspan>),   ω<tspan baseline-shift="sub" font-size="70%">0</tspan> = 1/(RC)</text>
+
+  <!-- ==================== Right: High-Pass (HP) Network ==================== -->
+  <rect class="box" x="405" y="24" width="310" height="195" rx="6"/>
+  <text class="title" x="560" y="48" text-anchor="middle">(b) 高通 RC 網路 (High-Pass, HP)</text>
+
+  <!-- Input Terminals & vi -->
+  <circle class="port" cx="445" cy="95" r="4.5"/>
+  <circle class="port" cx="445" cy="175" r="4.5"/>
+  <text class="math" x="428" y="112" text-anchor="middle">+</text>
+  <text class="math" x="428" y="139" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+  <text class="math" x="428" y="164" text-anchor="middle">−</text>
+
+  <!-- Series Capacitor C -->
+  <path class="wire" d="M445 95h55M500 80v30M512 80v30M512 95h88"/>
+  <text class="math" x="506" y="72" text-anchor="middle">C</text>
+
+  <!-- Shunt Resistor R -->
+  <circle cx="600" cy="95" r="3.5" fill="#111"/>
+  <path class="wire" d="M600 95v18l-7 4 14 8-14 8 14 8-14 8 7 4v18"/>
+  <circle cx="600" cy="175" r="3.5" fill="#111"/>
+  <text class="math" x="620" y="137" text-anchor="start">R</text>
+
+  <!-- Ground Connection -->
+  <path class="thin-wire" d="M600 175v12M588 187h24M593 192h14M597 197h6"/>
+
+  <!-- Bottom Common Line -->
+  <path class="wire" d="M445 175h230"/>
+
+  <!-- Top Output Line -->
+  <path class="wire" d="M600 95h75"/>
+
+  <!-- Output Terminals & vo -->
+  <circle class="port" cx="675" cy="95" r="4.5"/>
+  <circle class="port" cx="675" cy="175" r="4.5"/>
+  <text class="math" x="692" y="112" text-anchor="middle">+</text>
+  <text class="math" x="692" y="139" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+  <text class="math" x="692" y="164" text-anchor="middle">−</text>
+
+  <!-- Transfer Function equation -->
+  <text class="eq" x="560" y="244" text-anchor="middle">T(s) = sRC / (1 + sRC) = (s/ω<tspan baseline-shift="sub" font-size="70%">0</tspan>) / (1 + s/ω<tspan baseline-shift="sub" font-size="70%">0</tspan>),   ω<tspan baseline-shift="sub" font-size="70%">0</tspan> = 1/(RC)</text>
+</svg>
