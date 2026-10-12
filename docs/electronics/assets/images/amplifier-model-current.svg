@@ -3,8 +3,8 @@
   <desc id="desc">Textbook-style current amplifier model with input resistance, current-controlled current source, and output resistance.</desc>
   <defs>
     <pattern id="shade" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">
-      <rect width="9" height="9" fill="#f5f5f5"/>
-      <path d="M0 0V9" stroke="#dedede" stroke-width="1"/>
+      <rect width="9" height="9" fill="#eef7fb"/>
+      <path d="M0 0V9" stroke="#d7ebf3" stroke-width="1"/>
     </pattern>
     <style>
       .wire{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
@@ -23,6 +23,8 @@
   <path class="wire" d="M440 125V105H678M440 205V225"/>
   <path class="wire" d="M440 125L410 165 440 205 470 165Z"/>
   <path class="wire" d="M570 105V120l10 10 10-20 10 20 10-20 10 20 10-10v105"/>
+  <circle cx="205" cy="225" r="4.5" fill="#111"/><circle cx="440" cy="225" r="4.5" fill="#111"/>
+  <circle cx="570" cy="105" r="4.5" fill="#111"/><circle cx="570" cy="225" r="4.5" fill="#111"/>
   <path class="thin" d="M440 190v-48M432 150l8-8 8 8"/>
   <path class="thin" d="M120 105h32M144 99l8 6-8 6"/>
   <path class="thin" d="M616 105h32M640 99l8 6-8 6"/>
