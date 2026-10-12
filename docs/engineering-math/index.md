@@ -63,7 +63,7 @@
           <span class="hub-card-count">8 單元</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/engineering-math/chapter1/0001-ode-fundamentals">一階常微分方程式 (First-Order ODEs)</a>
+          <a href="./chapter1/0001-ode-fundamentals">一階常微分方程式 (First-Order ODEs)</a>
         </h3>
         <p class="hub-card-desc">
           解析解法、存在唯一性定理、可分離變數、一階線性、正合判定、積分因子求解技術、特殊非線性代換與 RL/RC 暫態建模。
@@ -71,20 +71,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001–0003</span>
-            <a class="hub-lesson-link" href="/engineering-math/chapter1/0001-ode-fundamentals">基本概念、解的本質/初值問題與可分離變數法</a>
+            <a class="hub-lesson-link" href="./chapter1/0001-ode-fundamentals">基本概念、解的本質/初值問題與可分離變數法</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0004–0006</span>
-            <a class="hub-lesson-link" href="/engineering-math/chapter1/0004-first-order-linear-odes">一階線性、正合微分方程位勢函數與積分因子法</a>
+            <a class="hub-lesson-link" href="./chapter1/0004-first-order-linear-odes">一階線性、正合微分方程位勢函數與積分因子法</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0007–0008</span>
-            <a class="hub-lesson-link" href="/engineering-math/chapter1/0007-nonlinear-odes-bernoulli-riccati">齊次/白努利/黎卡提與 RL/RC 電路暫態應用</a>
+            <a class="hub-lesson-link" href="./chapter1/0007-nonlinear-odes-bernoulli-riccati">齊次/白努利/黎卡提與 RL/RC 電路暫態應用</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/engineering-math/chapter1/0001-ode-fundamentals">進入 Chapter 1 講義 →</a>
+        <a class="hub-btn-link" href="./chapter1/0001-ode-fundamentals">進入 Chapter 1 講義 →</a>
       </div>
     </div>
     <!-- Chapter 2 Card -->
@@ -95,7 +95,7 @@
           <span class="hub-card-count">9 單元</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/engineering-math/second-order/0001-second-order-ode-concepts">二階與高階常微分方程式 (Second-Order & Higher)</a>
+          <a href="./second-order/0001-second-order-ode-concepts">二階與高階常微分方程式 (Second-Order & Higher)</a>
         </h3>
         <p class="hub-card-desc">
           二階常係數齊次線性 ODE、特徵方程、待定係數法、微分運算子逆算子、參數變異法、柯西－尤拉方程與降階法。
@@ -103,20 +103,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001–0003</span>
-            <a class="hub-lesson-link" href="/engineering-math/second-order/0001-second-order-ode-concepts">二階線性概念、朗斯基行列式與特徵方程式</a>
+            <a class="hub-lesson-link" href="./second-order/0001-second-order-ode-concepts">二階線性概念、朗斯基行列式與特徵方程式</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0004–0006</span>
-            <a class="hub-lesson-link" href="/engineering-math/second-order/0004-higher-order-linear-odes">高階常係數、待定係數法與微分逆運算子法</a>
+            <a class="hub-lesson-link" href="./second-order/0004-higher-order-linear-odes">高階常係數、待定係數法與微分逆運算子法</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0007–0009</span>
-            <a class="hub-lesson-link" href="/engineering-math/second-order/0007-variation-of-parameters">參數變異法、柯西－尤拉方程與降階法</a>
+            <a class="hub-lesson-link" href="./second-order/0007-variation-of-parameters">參數變異法、柯西－尤拉方程與降階法</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/engineering-math/second-order/0001-second-order-ode-concepts">進入 Chapter 2 講義 →</a>
+        <a class="hub-btn-link" href="./second-order/0001-second-order-ode-concepts">進入 Chapter 2 講義 →</a>
       </div>
     </div>
     <!-- Learning Records Card -->
@@ -127,7 +127,7 @@
           <span class="hub-card-count">1 篇推導基線</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/engineering-math/chapter2/0001-integrating-factors">觀念筆記與推導基線 (Learning Records)</a>
+          <a href="./chapter2/0001-integrating-factors">觀念筆記與推導基線 (Learning Records)</a>
         </h3>
         <p class="hub-card-desc">
           探討積分因子幾何意義、對稱勢函數連續性條件與全微分存在性證明。
@@ -135,12 +135,12 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="/engineering-math/chapter2/0001-integrating-factors">建立積分因子法學習基線與幾何架構</a>
+            <a class="hub-lesson-link" href="./chapter2/0001-integrating-factors">建立積分因子法學習基線與幾何架構</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/engineering-math/chapter2/0001-integrating-factors">閱讀推導筆記 →</a>
+        <a class="hub-btn-link" href="./chapter2/0001-integrating-factors">閱讀推導筆記 →</a>
       </div>
     </div>
     <!-- Cheatsheet Card -->
@@ -151,7 +151,7 @@
           <span class="hub-card-count">1 張速查卡</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/engineering-math/chapter3/001-integrating-factors-cheatsheet">核心公式速查表 (Reference Cheatsheets)</a>
+          <a href="./chapter3/001-integrating-factors-cheatsheet">核心公式速查表 (Reference Cheatsheets)</a>
         </h3>
         <p class="hub-card-desc">
           高密度解題公式速查卡，收錄積分因子判別式、微分算子特解表與特徵根型態。
@@ -159,12 +159,12 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">001</span>
-            <a class="hub-lesson-link" href="/engineering-math/chapter3/001-integrating-factors-cheatsheet">一階 ODE 積分因子與正合法速查卡</a>
+            <a class="hub-lesson-link" href="./chapter3/001-integrating-factors-cheatsheet">一階 ODE 積分因子與正合法速查卡</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/engineering-math/chapter3/001-integrating-factors-cheatsheet">開啟速查手冊 →</a>
+        <a class="hub-btn-link" href="./chapter3/001-integrating-factors-cheatsheet">開啟速查手冊 →</a>
       </div>
     </div>
   </div>
@@ -190,19 +190,19 @@
           <td><strong>Chapter 1 互動範例與精選題庫</strong></td>
           <td>一階 ODE 各種解析解法、積分因子實戰與電路工程應用</td>
           <td>56 題</td>
-          <td><a class="hub-lesson-link" href="/engineering-math/practice/0001-chapter1-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0001-chapter1-examples">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 1–2 正式教材例題</strong></td>
           <td>教材正規例題逐題解析，附完整來源標註與題目對帳</td>
           <td>35 題</td>
-          <td><a class="hub-lesson-link" href="/engineering-math/practice/0003-textbook-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0003-textbook-examples">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 互動範例與精選題庫</strong></td>
           <td>二階常係數齊次/非齊次、微分算子法、參數變異與尤拉方程</td>
           <td>15 題</td>
-          <td><a class="hub-lesson-link" href="/engineering-math/practice/0002-chapter2-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0002-chapter2-examples">練習題卡 →</a></td>
         </tr>
       </tbody>
     </table>

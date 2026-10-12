@@ -8,7 +8,8 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "check:katex": "node scripts/check-katex.js",
-    "check:subject-index": "node scripts/check-subject-index-render.js"
+    "check:subject-index": "node scripts/check-subject-index-render.js",
+    "check:subject-routes": "node scripts/check-subject-routes.js"
   },
   "dependencies": {
     "katex": "^0.16.21",

@@ -63,7 +63,7 @@
           <span class="hub-card-count">7 單元</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/electronics/chapter1/0001-signals-and-amplifiers">訊號與放大器基礎 (Signals & Amplifiers)</a>
+          <a href="./chapter1/0001-signals-and-amplifiers">訊號與放大器基礎 (Signals & Amplifiers)</a>
         </h3>
         <p class="hub-card-desc">
           深入探索微小感測訊號的二埠等效模型、受控源放大器分類、級聯負載效應與單時間常數頻率響應。
@@ -71,20 +71,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="/electronics/chapter1/0001-signals-and-amplifiers">訊號、放大器模型與頻率響應精要 (Overview)</a>
+            <a class="hub-lesson-link" href="./chapter1/0001-signals-and-amplifiers">訊號、放大器模型與頻率響應精要 (Overview)</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0002–0004</span>
-            <a class="hub-lesson-link" href="/electronics/chapter1/0002-signals">訊號特性、訊號頻譜與類比/數位訊號分類</a>
+            <a class="hub-lesson-link" href="./chapter1/0002-signals">訊號特性、訊號頻譜與類比/數位訊號分類</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0005–0007</span>
-            <a class="hub-lesson-link" href="/electronics/chapter1/0005-amplifiers">放大器概念、電路模型與 STC 頻率響應</a>
+            <a class="hub-lesson-link" href="./chapter1/0005-amplifiers">放大器概念、電路模型與 STC 頻率響應</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/electronics/chapter1/0001-signals-and-amplifiers">進入 Chapter 1 講義 →</a>
+        <a class="hub-btn-link" href="./chapter1/0001-signals-and-amplifiers">進入 Chapter 1 講義 →</a>
       </div>
     </div>
     <!-- Learning Records Card -->
@@ -95,7 +95,7 @@
           <span class="hub-card-count">1 篇深度筆記</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/electronics/learning-records/0001-signals-and-amplifiers-foundations">觀念筆記與電路推導 (Learning Records)</a>
+          <a href="./learning-records/0001-signals-and-amplifiers-foundations">觀念筆記與電路推導 (Learning Records)</a>
         </h3>
         <p class="hub-card-desc">
           深入探討戴維寧/諾頓訊號源、二埠阻抗匹配極限、多級放大器負載效應推導與工作點物理意涵。
@@ -103,12 +103,12 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="/electronics/learning-records/0001-signals-and-amplifiers-foundations">建立訊號模型與四大放大器等效電路核心思維</a>
+            <a class="hub-lesson-link" href="./learning-records/0001-signals-and-amplifiers-foundations">建立訊號模型與四大放大器等效電路核心思維</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/electronics/learning-records/0001-signals-and-amplifiers-foundations">閱讀理論推導 →</a>
+        <a class="hub-btn-link" href="./learning-records/0001-signals-and-amplifiers-foundations">閱讀理論推導 →</a>
       </div>
     </div>
     <!-- Cheatsheet Card -->
@@ -119,7 +119,7 @@
           <span class="hub-card-count">1 張速查卡</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/electronics/reference/001-amplifier-models-and-frequency-response">核心公式速查表 (Reference Cheatsheets)</a>
+          <a href="./reference/001-amplifier-models-and-frequency-response">核心公式速查表 (Reference Cheatsheets)</a>
         </h3>
         <p class="hub-card-desc">
           考試、複習與電路設計必備之高密度速查卡，彙整電壓/電流/轉導/轉阻四大組態轉換參數。
@@ -127,12 +127,12 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">001</span>
-            <a class="hub-lesson-link" href="/electronics/reference/001-amplifier-models-and-frequency-response">放大器模型、增益計算與頻率響應速查手冊</a>
+            <a class="hub-lesson-link" href="./reference/001-amplifier-models-and-frequency-response">放大器模型、增益計算與頻率響應速查手冊</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/electronics/reference/001-amplifier-models-and-frequency-response">開啟速查手冊 →</a>
+        <a class="hub-btn-link" href="./reference/001-amplifier-models-and-frequency-response">開啟速查手冊 →</a>
       </div>
     </div>
   </div>
@@ -158,91 +158,91 @@
           <td><strong>Chapter 1 互動範例題庫</strong></td>
           <td>訊號源等效、二埠受控源增益與頻率響應</td>
           <td>範例題庫</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0001-chapter1-examples">開啟題庫 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0001-chapter1-examples">開啟題庫 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 互動範例題庫</strong></td>
           <td>理想與非理想運算放大器、負回授虛接地電路</td>
           <td>範例題庫</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0002-chapter2-examples">開啟題庫 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0002-chapter2-examples">開啟題庫 →</a></td>
         </tr>
         <tr>
           <td><strong>教材題卡盤點總覽</strong></td>
           <td>Chapter 1 & 2 教材題目覆蓋與對帳報告</td>
           <td>盤點總覽</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0003-textbook-missing">查閱報告 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0003-textbook-missing">查閱報告 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 1 Problems (1.4–1.20)</strong></td>
           <td>訊號頻譜、有效值、分貝增益與二埠阻抗分析</td>
           <td>17 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0004-chapter1-problems-1-4-1-20">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0004-chapter1-problems-1-4-1-20">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 1 Problems (1.21–1.42)</strong></td>
           <td>電壓、電流、轉導與轉阻放大器模型實戰</td>
           <td>22 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0016-chapter1-problems-1-21-1-42">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0016-chapter1-problems-1-21-1-42">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 1 Problems (1.43–1.65)</strong></td>
           <td>多級放大器負載效應計算與級聯增益分析</td>
           <td>23 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0014-chapter1-problems-1-43-1-65">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0014-chapter1-problems-1-43-1-65">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 1 Problems (1.66–1.83)</strong></td>
           <td>單時間常數 (STC) 低通/高通網路與頻率響應</td>
           <td>18 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0015-chapter1-problems-1-66-1-83">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0015-chapter1-problems-1-66-1-83">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 1 Exercises 補齊</strong></td>
           <td>Chapter 1 課堂隨堂練習題</td>
           <td>7 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0005-chapter1-exercises-missing">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0005-chapter1-exercises-missing">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 Problems (2.9–2.24)</strong></td>
           <td>反相放大器、求和器與加權 DAC 電路</td>
           <td>16 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0009-chapter2-problems-2-9-2-24">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0009-chapter2-problems-2-9-2-24">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 Problems (2.25–2.60)</strong></td>
           <td>非反相放大器、電壓隨耦器與差動放大器 (Diff-Amp)</td>
           <td>36 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0010-chapter2-problems-2-25-2-60">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0010-chapter2-problems-2-25-2-60">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 Problems (2.61–2.80)</strong></td>
           <td>儀表放大器 (In-Amp) 與積分器/微分器暫態分析</td>
           <td>20 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0008-chapter2-problems-2-61-2-80">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0008-chapter2-problems-2-61-2-80">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 Problems (2.81–2.107)</strong></td>
           <td>有限增益、頻寬積 (GBW) 與非理想直流失調 (Offset)</td>
           <td>27 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0011-chapter2-problems-2-81-2-107">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0011-chapter2-problems-2-81-2-107">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 Problems (2.108–2.127)</strong></td>
           <td>迴轉率 (Slew Rate)、全功率頻寬與雜訊分析</td>
           <td>20 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0012-chapter2-problems-2-108-2-127">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0012-chapter2-problems-2-108-2-127">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 缺漏題卡補齊</strong></td>
           <td>Chapter 2 運算放大器缺漏練習題</td>
           <td>21 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0006-chapter2-missing-partial">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0006-chapter2-missing-partial">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 Exercises (2.23, 2.28)</strong></td>
           <td>Chapter 2 儀表放大器精選練習題</td>
           <td>2 題</td>
-          <td><a class="hub-lesson-link" href="/electronics/practice/0013-chapter2-exercises-2-23-2-28">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" href="./practice/0013-chapter2-exercises-2-23-2-28">練習題卡 →</a></td>
         </tr>
       </tbody>
     </table>
