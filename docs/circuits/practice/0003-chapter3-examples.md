@@ -71,8 +71,6 @@ $$
 
 求圖 3.5(a) 三個非參考節點的電壓 $v_1$、$v_2$、$v_3$。
 
-![Figure 3.4](../assets/images/ch3-ex2_figure_3.4.png)
-
 ![Figure 3.5](../assets/images/ch3-ex2_figure_3.5.png)
 
 <template #solution>
@@ -124,10 +122,6 @@ $$
 <PracticeCard id="ch3-ex3" type="example" title="例題 3.3：超節點" source="課本 p.94" topic="含電壓源的節點分析">
 
 求圖 3.9 電路的節點電壓。
-
-![Figure 3.10](../assets/images/ch3-ex3_figure_3.10.png)
-
-![Figure 3.11](../assets/images/ch3-ex3_figure_3.11.png)
 
 ![Figure 3.9](../assets/images/ch3-ex3_figure_3.9.png)
 
@@ -189,8 +183,6 @@ $$
 
 ![Figure 3.12](../assets/images/ch3-ex4_figure_3.12.png)
 
-![Figure 3.13](../assets/images/ch3-ex4_figure_3.13.png)
-
 <template #solution>
 
 節點 1–2 與節點 3–4 各形成一個超節點。由兩個超節點的 KCL 得
@@ -226,10 +218,6 @@ $$
 使用節點分析，求圖 3.14 電路的 $v_1$、$v_2$、$v_3$。
 
 ![Figure 3.14](../assets/images/ch3-pr4_figure_3.14.png)
-
-![Figure 3.15](../assets/images/ch3-pr4_figure_3.15.png)
-
-![Figure 3.16](../assets/images/ch3-pr4_figure_3.16.png)
 
 <template #solution>
 
@@ -293,8 +281,6 @@ $$
 
 ![Figure 3.19](../assets/images/ch3-pr5_figure_3.19.png)
 
-![Figure 3.20](../assets/images/ch3-pr5_figure_3.20.png)
-
 <template #solution>
 
 依圖示的順時針網孔方向，先為兩個網孔各寫一條 KVL 方程；共用的 $4\,\Omega$ 支路電流須以兩網孔電流之差表示。聯立兩式後，依原題的參考方向得到：
@@ -312,8 +298,6 @@ $$
 <PracticeCard id="ch3-ex6" type="example" title="Example 3.6：含受控源的網孔分析" source="課本 p.100" topic="網孔分析、受控源">
 
 以網孔分析求圖 3.20 中的電流 $I_o$。
-
-![Figure 3.19](../assets/images/ch3-ex6_figure_3.19.png)
 
 ![Figure 3.20](../assets/images/ch3-ex6_figure_3.20.png)
 
@@ -357,10 +341,6 @@ $$
 以網孔分析求圖 3.21 中的 $I_o$。
 
 ![Figure 3.21](../assets/images/ch3-pr6_figure_3.21.png)
-
-![Figure 3.22](../assets/images/ch3-pr6_figure_3.22.png)
-
-![Figure 3.23](../assets/images/ch3-pr6_figure_3.23.png)
 
 <template #solution>
 
@@ -419,11 +399,7 @@ $$
 
 使用網孔分析求圖 3.25 的 $i_1$、$i_2$ 與 $i_3$。
 
-![Figure 3.2](../assets/images/ch3-pr7_figure_3.2.png)
-
 ![Figure 3.25](../assets/images/ch3-pr7_figure_3.25.png)
-
-![Figure 3.26](../assets/images/ch3-pr7_figure_3.26.png)
 
 <template #solution>
 
@@ -477,8 +453,6 @@ $$
 
 ![Figure 3.28](../assets/images/ch3-pr8_figure_3.28.png)
 
-![Figure 3.29](../assets/images/ch3-pr8_figure_3.29.png)
-
 <template #solution>
 
 各對角元素取該節點相連電阻的導納和，節點間的非對角元素取負導納；右側向量為流入節點的獨立電流源代數和。課本答案為
@@ -504,8 +478,6 @@ $$
 <PracticeCard id="ch3-ex9" type="example" title="Example 3.9：由檢視法建立網孔電流矩陣" source="課本 p.107" topic="網孔分析、檢視法">
 
 以檢視法寫出圖 3.29 的網孔電流方程。
-
-![Figure 3.28](../assets/images/ch3-ex9_figure_3.28.png)
 
 ![Figure 3.29](../assets/images/ch3-ex9_figure_3.29.png)
 
@@ -567,8 +539,6 @@ $$
 
 ![Figure 3.31](../assets/images/ch3-ex10_figure_3.31.png)
 
-![Figure 3.32](../assets/images/ch3-ex10_figure_3.32.png)
-
 <template #solution>
 
 1. 依圖 3.31 建立直流電路圖；獨立電壓源使用 `VDC`、獨立電流源使用 `IDC`，並以 `VIEWPOINTS` 顯示所需節點電壓。
@@ -585,11 +555,7 @@ $$
 
 對圖 3.33 的電路使用 PSpice，求節點電壓 $V_1$、$V_2$ 與 $V_3$。
 
-![Figure 3.31](../assets/images/ch3-pr10_figure_3.31.png)
-
 ![Figure 3.33](../assets/images/ch3-pr10_figure_3.33.png)
-
-![Figure 3.34](../assets/images/ch3-pr10_figure_3.34.png)
 
 <template #solution>
 
@@ -605,8 +571,6 @@ $$
 <PracticeCard id="ch3-ex11" type="example" title="Example 3.11：以 PSpice 求受控源電路電流" source="課本 p.110" topic="PSpice 與受控電壓源">
 
 在圖 3.34 的電路中，求電流 $i_1$、$i_2$ 與 $i_3$。
-
-![Figure 3.33](../assets/images/ch3-ex11_figure_3.33.png)
 
 ![Figure 3.34](../assets/images/ch3-ex11_figure_3.34.png)
 
@@ -644,8 +608,6 @@ $$
 求圖 3.41 電晶體電路中的 $I_B$、$I_C$ 與 $v_o$。假設電晶體工作於主動模式，且 $\beta=50$。
 
 ![Figure 3.41](../assets/images/ch3-ex12_figure_3.41.png)
-
-![Figure 3.42](../assets/images/ch3-ex12_figure_3.42.png)
 
 <template #solution>
 
@@ -702,8 +664,6 @@ $$
 圖 3.43 的 BJT 電路中，$\beta=150$、$V_{BE}=0.7\ \mathrm{V}$。求輸出電壓 $v_o$。
 
 ![Figure 3.43](../assets/images/ch3-ex13_figure_3.43.png)
-
-![Figure 3.44](../assets/images/ch3-ex13_figure_3.44.png)
 
 <template #solution>
 
