@@ -16,6 +16,8 @@
   * 輸入電阻 $R_i = \infty$
   * 輸出電阻 $R_o = 0$
 
+![電壓放大器二埠等效模型：VCVS 串聯輸出電阻](../assets/images/amplifier-model-voltage.svg)
+
 ### (2) 電流放大器 (Current Amplifier)
 * **輸入 / 輸出訊號**：電流 / 電流
 * **增益參數**：短路電流增益 (Short-Circuit Current Gain)
@@ -23,6 +25,8 @@
 * **理想特性**：
   * 輸入電阻 $R_i = 0$
   * 輸出電阻 $R_o = \infty$
+
+![電流放大器二埠等效模型：CCCS 並聯輸出電阻](../assets/images/amplifier-model-current.svg)
 
 ### (3) 轉導放大器 (Transconductance Amplifier)
 * **輸入 / 輸出訊號**：電壓 / 電流
@@ -32,6 +36,8 @@
   * 輸入電阻 $R_i = \infty$
   * 輸出電阻 $R_o = \infty$
 
+![轉導放大器二埠等效模型：VCCS 並聯輸出電阻](../assets/images/amplifier-model-transconductance.svg)
+
 ### (4) 轉阻放大器 (Transresistance Amplifier)
 * **輸入 / 輸出訊號**：電流 / 電壓
 * **增益參數**：開路轉阻 (Open-Circuit Transresistance)
@@ -39,6 +45,8 @@
 * **理想特性**：
   * 輸入電阻 $R_i = 0$
   * 輸出電阻 $R_o = 0$
+
+![轉阻放大器二埠等效模型：CCVS 串聯輸出電阻](../assets/images/amplifier-model-transresistance.svg)
 
 ---
 
