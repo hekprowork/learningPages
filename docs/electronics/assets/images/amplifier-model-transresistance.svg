@@ -30,7 +30,7 @@
   <path class="thin" d="M700 132v24M694 144h12M694 186h12"/>
   <path class="thin" d="M380 225v18m-16 0h32m-26 6h20m-14 6h8"/>
   <text class="math" x="112" y="92">i<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
-  <text class="small" x="244" y="166">R<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+  <text class="small" x="274" y="166">R<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
   <text class="small" x="472" y="166">R<tspan baseline-shift="sub" font-size="70%">m</tspan>i<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
   <text class="small" x="558" y="82">R<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
   <text class="math" x="700" y="169">v<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
