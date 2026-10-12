@@ -1,15 +1,49 @@
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
+import type MarkdownIt from 'markdown-it'
 import { defineConfig } from 'vitepress'
+
+const projectRoot = resolve(process.cwd())
+const workbookIncludePattern = /<!--\s*workbook-include:\s*cards\s+([^>\s]+)\s*-->/g
+
+const readWorkbookCards = (relativePath: string): string => {
+  const absolutePath = resolve(projectRoot, relativePath)
+  const normalizedRoot = `${projectRoot}/`
+
+  if (!absolutePath.startsWith(normalizedRoot)) {
+    throw new Error(`Workbook include must stay inside the project: ${relativePath}`)
+  }
+
+  const source = readFileSync(absolutePath, 'utf8')
+  const cards = source.match(/<PracticeCard\b[\s\S]*?<\/PracticeCard>/g) ?? []
+
+  if (!cards.length) {
+    throw new Error(`Workbook include contains no PracticeCard blocks: ${relativePath}`)
+  }
+
+  return cards.join('\n\n')
+}
+
+const workbookIncludePlugin = (markdown: MarkdownIt) => {
+  markdown.core.ruler.before('block', 'workbook-includes', (state: { src: string }) => {
+    state.src = state.src.replace(workbookIncludePattern, (_match, relativePath: string) =>
+      readWorkbookCards(relativePath)
+    )
+  })
+}
 
 export default defineConfig({
   title: '學習筆記庫',
   description: 'Multi-Subject Engineering & Science Learning Portal',
   base: '/learningPages/',
+  srcExclude: ['electronics/practice-source/**'],
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css' }],
     ['meta', { name: 'theme-color', content: '#3b82f6' }]
   ],
   markdown: {
-    math: true
+    math: true,
+    config: workbookIncludePlugin
   },
   themeConfig: {
     siteTitle: 'Library 學習筆記庫',
@@ -111,21 +145,9 @@ export default defineConfig({
           text: '互動式題庫練習系統 (Interactive Practice Workbooks)',
           collapsed: false,
           items: [
-            { text: 'Chapter 1: 互動式範例與練習題庫', link: '/electronics/practice/0001-chapter1-examples' },
-            { text: 'Chapter 2: 互動式範例與練習題庫', link: '/electronics/practice/0002-chapter2-examples' },
-            { text: 'Chapter 1/2: 教材題卡完整盤點', link: '/electronics/practice/0003-textbook-missing' },
-            { text: 'Chapter 1 Problems 1.4–1.20（17 題）', link: '/electronics/practice/0004-chapter1-problems-1-4-1-20' },
-            { text: 'Chapter 1 Exercises 缺漏補齊（7 題）', link: '/electronics/practice/0005-chapter1-exercises-missing' },
-            { text: 'Chapter 2 缺漏題卡目前批次（21 題）', link: '/electronics/practice/0006-chapter2-missing-partial' },
-            { text: 'Chapter 2 Problems 2.61–2.80（20 題）', link: '/electronics/practice/0008-chapter2-problems-2-61-2-80' },
-            { text: 'Chapter 2 Problems 2.9–2.24（16 題）', link: '/electronics/practice/0009-chapter2-problems-2-9-2-24' },
-            { text: 'Chapter 2 Problems 2.25–2.60（36 題）', link: '/electronics/practice/0010-chapter2-problems-2-25-2-60' },
-            { text: 'Chapter 2 Problems 2.81–2.107（27 題）', link: '/electronics/practice/0011-chapter2-problems-2-81-2-107' },
-            { text: 'Chapter 2 Problems 2.108–2.127（20 題）', link: '/electronics/practice/0012-chapter2-problems-2-108-2-127' },
-            { text: 'Chapter 2 Exercises 2.23、2.28（2 題）', link: '/electronics/practice/0013-chapter2-exercises-2-23-2-28' },
-            { text: 'Chapter 1 Problems 1.43–1.65（23 題）', link: '/electronics/practice/0014-chapter1-problems-1-43-1-65' },
-            { text: 'Chapter 1 Problems 1.66–1.83（18 題）', link: '/electronics/practice/0015-chapter1-problems-1-66-1-83' },
-            { text: 'Chapter 1 Problems 1.21–1.42（22 題）', link: '/electronics/practice/0016-chapter1-problems-1-21-1-42' }
+            { text: 'Chapter 1 統一題庫（112 題）', link: '/electronics/practice/0001-chapter1-workbook' },
+            { text: 'Chapter 2 統一題庫（162 題）', link: '/electronics/practice/0002-chapter2-workbook' },
+            { text: 'Chapter 1/2: 教材題卡完整盤點', link: '/electronics/practice/0003-textbook-missing' }
           ]
         }
       ],

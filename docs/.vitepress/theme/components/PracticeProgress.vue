@@ -44,10 +44,25 @@ import {
   type PracticeFilterType
 } from './practice-filter'
 
-const props = defineProps<{
-  total: number
-  prefix: string
-}>()
+const props = withDefaults(
+  defineProps<{
+    total: number
+    prefix?: string
+    prefixes?: string[]
+  }>(),
+  {
+    prefix: '',
+    prefixes: undefined
+  }
+)
+
+const getPrefixes = (): string[] => {
+  if (props.prefixes?.length) return props.prefixes
+  return props.prefix ? [props.prefix] : []
+}
+
+const matchesPrefix = (id: string | undefined): boolean =>
+  !!id && getPrefixes().some((prefix) => id.startsWith(prefix))
 
 const currentType = ref<PracticeFilterType>('all')
 const currentTotal = ref(props.total)
@@ -100,7 +115,7 @@ const countDoneForCards = (cards: HTMLElement[]): number => {
   if (typeof window === 'undefined') return 0
   return cards.reduce((count, card) => {
     const id = card.dataset.practiceId
-    return id && id.startsWith(props.prefix) && localStorage.getItem(id) === 'true'
+    return matchesPrefix(id) && localStorage.getItem(id) === 'true'
       ? count + 1
       : count
   }, 0)
@@ -110,7 +125,7 @@ const syncProgress = (detail?: PracticeFilterChangeDetail) => {
   if (typeof window === 'undefined') return
   const cards = getCards().filter((card) => {
     const id = card.dataset.practiceId
-    return !!id && id.startsWith(props.prefix)
+    return matchesPrefix(id)
   })
   const type = detail && isPracticeFilterType(detail.type) ? detail.type : getUrlType()
   const currentCards =
@@ -155,17 +170,17 @@ const resetProgress = () => {
 
   const cards = getCards().filter((card) => {
     const id = card.dataset.practiceId
-    if (!id || !id.startsWith(props.prefix)) return false
+    if (!id || !matchesPrefix(id)) return false
     return currentType.value === 'all' || card.dataset.practiceType === currentType.value
   })
   const keysToRemove =
     currentType.value === 'all'
       ? Array.from({ length: localStorage.length }, (_, index) => localStorage.key(index)).filter(
-          (key): key is string => !!key && key.startsWith(props.prefix)
+          (key): key is string => !!key && matchesPrefix(key)
         )
       : cards
           .map((card) => card.dataset.practiceId)
-          .filter((key): key is string => !!key && key.startsWith(props.prefix))
+          .filter((key): key is string => !!key && matchesPrefix(key))
 
   keysToRemove.forEach((key) => localStorage.removeItem(key))
   syncProgress()

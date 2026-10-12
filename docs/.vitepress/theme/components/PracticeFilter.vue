@@ -33,9 +33,24 @@ import {
   type PracticeFilterType
 } from './practice-filter'
 
-const props = defineProps<{
-  prefix: string
-}>()
+const props = withDefaults(
+  defineProps<{
+    prefix?: string
+    prefixes?: string[]
+  }>(),
+  {
+    prefix: '',
+    prefixes: undefined
+  }
+)
+
+const getPrefixes = (): string[] => {
+  if (props.prefixes?.length) return props.prefixes
+  return props.prefix ? [props.prefix] : []
+}
+
+const matchesPrefix = (id: string | undefined): boolean =>
+  !!id && getPrefixes().some((prefix) => id.startsWith(prefix))
 
 const filterRoot = ref<HTMLElement | null>(null)
 const activeType = ref<PracticeFilterType>('all')
@@ -53,7 +68,7 @@ const getScope = (): HTMLElement | null => {
 
 const getCards = (scope: HTMLElement): HTMLElement[] =>
   Array.from(scope.querySelectorAll<HTMLElement>('[data-practice-card]')).filter((card) =>
-    card.dataset.practiceId?.startsWith(props.prefix)
+    matchesPrefix(card.dataset.practiceId)
   )
 
 const getHeadings = (scope: HTMLElement): HTMLHeadingElement[] =>

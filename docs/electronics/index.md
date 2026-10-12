@@ -155,94 +155,22 @@
       </thead>
       <tbody>
         <tr>
-          <td><strong>Chapter 1 互動範例題庫</strong></td>
-          <td>訊號源等效、二埠受控源增益與頻率響應</td>
-          <td>範例題庫</td>
-          <td><a class="hub-lesson-link" href="./practice/0001-chapter1-examples">開啟題庫 →</a></td>
+          <td><strong>Chapter 1 統一互動題庫</strong></td>
+          <td>範例、Exercises、Problems 1.1–1.83</td>
+          <td>112 題</td>
+          <td><a class="hub-lesson-link" href="./practice/0001-chapter1-workbook">開啟題庫 →</a></td>
         </tr>
         <tr>
-          <td><strong>Chapter 2 互動範例題庫</strong></td>
-          <td>理想與非理想運算放大器、負回授虛接地電路</td>
-          <td>範例題庫</td>
-          <td><a class="hub-lesson-link" href="./practice/0002-chapter2-examples">開啟題庫 →</a></td>
+          <td><strong>Chapter 2 統一互動題庫</strong></td>
+          <td>範例、Exercises、Problems 2.1–2.127</td>
+          <td>162 題</td>
+          <td><a class="hub-lesson-link" href="./practice/0002-chapter2-workbook">開啟題庫 →</a></td>
         </tr>
         <tr>
           <td><strong>教材題卡盤點總覽</strong></td>
           <td>Chapter 1 & 2 教材題目覆蓋與對帳報告</td>
           <td>盤點總覽</td>
           <td><a class="hub-lesson-link" href="./practice/0003-textbook-missing">查閱報告 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 1 Problems (1.4–1.20)</strong></td>
-          <td>訊號頻譜、有效值、分貝增益與二埠阻抗分析</td>
-          <td>17 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0004-chapter1-problems-1-4-1-20">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 1 Problems (1.21–1.42)</strong></td>
-          <td>電壓、電流、轉導與轉阻放大器模型實戰</td>
-          <td>22 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0016-chapter1-problems-1-21-1-42">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 1 Problems (1.43–1.65)</strong></td>
-          <td>多級放大器負載效應計算與級聯增益分析</td>
-          <td>23 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0014-chapter1-problems-1-43-1-65">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 1 Problems (1.66–1.83)</strong></td>
-          <td>單時間常數 (STC) 低通/高通網路與頻率響應</td>
-          <td>18 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0015-chapter1-problems-1-66-1-83">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 1 Exercises 補齊</strong></td>
-          <td>Chapter 1 課堂隨堂練習題</td>
-          <td>7 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0005-chapter1-exercises-missing">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 2 Problems (2.9–2.24)</strong></td>
-          <td>反相放大器、求和器與加權 DAC 電路</td>
-          <td>16 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0009-chapter2-problems-2-9-2-24">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 2 Problems (2.25–2.60)</strong></td>
-          <td>非反相放大器、電壓隨耦器與差動放大器 (Diff-Amp)</td>
-          <td>36 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0010-chapter2-problems-2-25-2-60">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 2 Problems (2.61–2.80)</strong></td>
-          <td>儀表放大器 (In-Amp) 與積分器/微分器暫態分析</td>
-          <td>20 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0008-chapter2-problems-2-61-2-80">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 2 Problems (2.81–2.107)</strong></td>
-          <td>有限增益、頻寬積 (GBW) 與非理想直流失調 (Offset)</td>
-          <td>27 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0011-chapter2-problems-2-81-2-107">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 2 Problems (2.108–2.127)</strong></td>
-          <td>迴轉率 (Slew Rate)、全功率頻寬與雜訊分析</td>
-          <td>20 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0012-chapter2-problems-2-108-2-127">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 2 缺漏題卡補齊</strong></td>
-          <td>Chapter 2 運算放大器缺漏練習題</td>
-          <td>21 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0006-chapter2-missing-partial">練習題卡 →</a></td>
-        </tr>
-        <tr>
-          <td><strong>Chapter 2 Exercises (2.23, 2.28)</strong></td>
-          <td>Chapter 2 儀表放大器精選練習題</td>
-          <td>2 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0013-chapter2-exercises-2-23-2-28">練習題卡 →</a></td>
         </tr>
       </tbody>
     </table>
