@@ -7,32 +7,60 @@
       <path d="M0 0V9" stroke="#d7ebf3" stroke-width="1"/>
     </pattern>
     <style>
-      .wire{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-      .thin{fill:none;stroke:#111;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .wire{fill:none;stroke:#111;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
       .math{fill:#111;font:italic 22px "Times New Roman",Georgia,serif}
-      .small{fill:#111;font:italic 19px "Times New Roman",Georgia,serif}
-      .port{fill:#fff;stroke:#111;stroke-width:3}
+      .port{fill:#fff;stroke:#111;stroke-width:2.5}
+      .signal{fill:#0088cc;font:italic 22px "Times New Roman",Georgia,serif}
+      .signal-mark{fill:none;stroke:#0088cc;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
     </style>
   </defs>
   <rect width="760" height="330" fill="#fff"/>
-  <rect x="112" y="42" width="548" height="220" fill="url(#shade)"/>
-  <circle class="port" cx="82" cy="105" r="6"/><circle class="port" cx="82" cy="225" r="6"/>
-  <circle class="port" cx="678" cy="105" r="6"/><circle class="port" cx="678" cy="225" r="6"/>
-  <path class="wire" d="M88 105H205M88 225H678"/>
-  <path class="wire" d="M205 105V120l10 10 10-20 10 20 10-20 10 20 10-10v105"/>
-  <path class="wire" d="M440 125V105H510M440 205V225"/>
-  <path class="wire" d="M440 125L410 165 440 205 470 165Z"/>
-  <path class="wire" d="M510 105l10-10 10 20 10-20 10 20 10-20 10 20 10-10H678"/>
-  <circle cx="205" cy="225" r="4.5" fill="#111"/><circle cx="440" cy="225" r="4.5" fill="#111"/>
-  <path class="thin" d="M440 143v12M434 149h12M440 178v12"/>
-  <path class="thin" d="M120 105h32M144 99l8 6-8 6"/>
-  <path class="thin" d="M616 105h32M640 99l8 6-8 6"/>
-  <path class="thin" d="M700 132v24M694 144h12M694 186h12"/>
-  <path class="thin" d="M380 225v18m-16 0h32m-26 6h20m-14 6h8"/>
-  <text class="math" x="112" y="92">i<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
-  <text class="small" x="274" y="166">R<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
-  <text class="small" x="472" y="166">R<tspan baseline-shift="sub" font-size="70%">m</tspan>i<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
-  <text class="small" x="558" y="82">R<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
-  <text class="math" x="700" y="169">v<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
-  <text class="math" x="650" y="92">i<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+  <!-- Shaded model area (Ri, controlled source, Ro) -->
+  <rect x="176" y="48" width="470" height="200" fill="url(#shade)"/>
+
+  <!-- Terminals -->
+  <circle class="port" cx="70" cy="110" r="5.5"/>
+  <circle class="port" cx="70" cy="230" r="5.5"/>
+  <circle class="port" cx="690" cy="110" r="5.5"/>
+  <circle class="port" cx="690" cy="230" r="5.5"/>
+
+  <!-- Input wires and Ri -->
+  <path class="wire" d="M76 110H220"/>
+  <path class="wire" d="M220 110V134l-11 6 22 12-22 12 22 12-22 12 22 12-11 6V230"/>
+
+  <!-- Output wires, CCVS, and Ro -->
+  <path class="wire" d="M440 210V230"/>
+  <path class="wire" d="M440 130V110H526l6-11 12 22 12-22 12 22 12-22 12 22 6-11H684"/>
+
+  <!-- Diamond controlled source (CCVS) -->
+  <polygon points="440,130 472,170 440,210 408,170" fill="#fff" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+  <path class="wire" d="M434 152h12M440 146v12M434 188h12" stroke-width="2"/>
+
+  <!-- Bottom common line (Ground reference) -->
+  <path class="wire" d="M76 230H684"/>
+
+  <!-- Ground connection & symbol -->
+  <path class="wire" d="M330 230v22M314 252h32M320 258h20M326 264h8" stroke-width="2"/>
+
+  <!-- Black connection dots on bottom line -->
+  <circle cx="220" cy="230" r="4.5" fill="#111"/>
+  <circle cx="330" cy="230" r="4.5" fill="#111"/>
+  <circle cx="440" cy="230" r="4.5" fill="#111"/>
+
+  <!-- Input current ii arrow and label (cyan/blue) -->
+  <path class="signal-mark" d="M110 78h45M147 72l8 6-8 6"/>
+  <text class="signal" x="132" y="66" text-anchor="middle">i<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+
+  <!-- Component labels (black) -->
+  <text class="math" x="246" y="176">R<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+  <text class="math" x="488" y="176">R<tspan baseline-shift="sub" font-size="70%">m</tspan>i<tspan baseline-shift="sub" font-size="70%">i</tspan></text>
+  <text class="math" x="562" y="84" text-anchor="middle">R<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+
+  <!-- Output current io arrow and label (cyan/blue) -->
+  <path class="signal-mark" d="M645 78h45M682 72l8 6-8 6"/>
+  <text class="signal" x="668" y="66" text-anchor="middle">i<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
+
+  <!-- Output voltage vo markers and label (cyan/blue) -->
+  <path class="signal-mark" d="M720 140h12M726 134v12M720 206h12"/>
+  <text class="signal" x="726" y="178" text-anchor="middle">v<tspan baseline-shift="sub" font-size="70%">o</tspan></text>
 </svg>
