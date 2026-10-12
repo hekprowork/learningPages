@@ -85,7 +85,6 @@ export default defineConfig({
           text: 'Chapter 1: 訊號與放大器基礎 (Signals & Amplifiers)',
           collapsed: false,
           items: [
-            { text: '0001: 訊號、放大器模型與頻率響應 (Overview)', link: '/electronics/chapter1/0001-signals-and-amplifiers' },
             { text: '0002: 訊號 (Signals)', link: '/electronics/chapter1/0002-signals' },
             { text: '0003: 訊號的頻譜 (Frequency Spectrum of Signals)', link: '/electronics/chapter1/0003-frequency-spectrum-of-signals' },
             { text: '0004: 類比與數位訊號 (Analog and Digital Signals)', link: '/electronics/chapter1/0004-analog-and-digital-signals' },

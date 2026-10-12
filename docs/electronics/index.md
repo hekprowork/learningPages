@@ -60,22 +60,22 @@
       <div class="hub-card-top">
         <div class="hub-card-badge-row">
           <span class="hub-tag hub-tag-accent">Chapter 01</span>
-          <span class="hub-card-count">7 單元</span>
+          <span class="hub-card-count">6 單元</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./chapter1/0001-signals-and-amplifiers">訊號與放大器基礎 (Signals & Amplifiers)</a>
+          <a href="./chapter1/0002-signals">訊號與放大器基礎 (Signals & Amplifiers)</a>
         </h3>
         <p class="hub-card-desc">
           深入探索微小感測訊號的二埠等效模型、受控源放大器分類、級聯負載效應與單時間常數頻率響應。
         </p>
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
-            <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="./chapter1/0001-signals-and-amplifiers">訊號、放大器模型與頻率響應精要 (Overview)</a>
+            <span class="hub-lesson-code">0002</span>
+            <a class="hub-lesson-link" href="./chapter1/0002-signals">訊號源模型與負載效應</a>
           </li>
           <li class="hub-lesson-item">
-            <span class="hub-lesson-code">0002–0004</span>
-            <a class="hub-lesson-link" href="./chapter1/0002-signals">訊號特性、訊號頻譜與類比/數位訊號分類</a>
+            <span class="hub-lesson-code">0003–0004</span>
+            <a class="hub-lesson-link" href="./chapter1/0003-frequency-spectrum-of-signals">訊號頻譜與類比/數位訊號分類</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0005–0007</span>
@@ -84,7 +84,7 @@
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./chapter1/0001-signals-and-amplifiers">進入 Chapter 1 講義 →</a>
+        <a class="hub-btn-link" href="./chapter1/0002-signals">進入 Chapter 1 講義 →</a>
       </div>
     </div>
     <!-- Learning Records Card -->

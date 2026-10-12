@@ -1,5 +1,7 @@
 # 0007: 放大器的頻率響應 (Frequency Response of Amplifiers)
 
+> 放大器不一定對所有頻率提供相同增益；低頻與高頻端的滾降，會決定可用頻寬以及輸出波形是否失真。
+
 ## 放大器頻寬 (Amplifier Bandwidth)
 
 放大器的增益在一個很寬的頻率範圍內（大約在 $\omega_1$ 到 $\omega_2$ 之間）保持幾乎不變。低於 $\omega_1$ 或高於 $\omega_2$ 的信號會經歷較低的增益，且頻率越遠離 $\omega_1$ 和 $\omega_2$，增益下降越多。增益幾乎保持恆定（通常在 3 dB 變化範圍內）的頻率區間稱為**放大器頻寬 (Amplifier Bandwidth)**。通常放大器的設計會使其頻寬與所需放大的信號頻譜相符，否則會導致信號失真。不同頻率分量的信號會被放大不同的倍數。
@@ -49,6 +51,26 @@ $$ T(s) = \frac{V_o(s)}{V_i(s)} $$
 
 $$ \omega_0 = \frac{1}{\tau} $$
 
+對最常見的 RC 單時間常數網路，還可寫成：
+
+$$\omega_0=\frac{1}{RC},\qquad f_0=\frac{1}{2\pi RC}$$
+
 其中 $\tau$ 是網路的時間常數 ($\tau = CR$ 或 $\tau = L/R$)。$\omega_0$ 也被稱為轉折頻率 (corner frequency)、折角頻率 (break frequency) 或極點頻率 (pole frequency)。
+
+### 3-dB 點與波德圖漸近線
+
+低通與高通 STC 模型可分別寫成：
+
+$$T_{LP}(s)=\frac{K}{1+s/\omega_0},\qquad T_{HP}(s)=\frac{K}{1+\omega_0/s}$$
+
+在 $\omega=\omega_0$ 時，輸出振幅為通帶最大值的 $1/\sqrt{2}$，也就是下降約 $3\text{ dB}$。低通模型在此處的相位為 $-45^\circ$，高通模型則為 $+45^\circ$。
+
+在漸近滾降區中，每增加一個 decade（頻率增加 $10$ 倍），單一極點會帶來 $20\text{ dB}$ 的增益變化：低通高頻端為 $-20\text{ dB/decade}$，高通低頻端則以相同斜率向下衰減。這個規則是繪製單極點波德圖的快速方法。
+
+### 快速檢查：單一極點的高頻衰減
+
+若低通放大器的 $3\text{-dB}$ 頻率為 $100\text{ kHz}$，直流增益為 $60\text{ dB}$，在 $10\text{ MHz}$ 時已經跨越 $2$ 個 decade，因此：
+
+$$G(10\text{ MHz})\approx60\text{ dB}-2\times20\text{ dB}=20\text{ dB}$$
 
 計算時間常數的簡單方法：將獨立電壓或電流源設為零；從電抗元件（電容 $C$ 或電感 $L$）的兩個端點看進去，求出其等效電阻 $R$。時間常數即為 $CR$ 或 $L/R$。
