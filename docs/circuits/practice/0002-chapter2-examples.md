@@ -734,8 +734,6 @@ $$R_{ab} = 40\ \Omega,\quad i = 6\text{ A}$$
 
 電烤麵包機的核心元件是一個將電能轉換為熱能的電氣元件（電阻器）。一個電阻為 $15\ \Omega$、兩端電壓為 $120\ \mathrm{V}$ 的烤麵包機，所吸取的電流是多少？
 
-![Figure 2.8](../assets/images/ch2-pr1_figure_2.8.png)
-
 <template #solution>
 
 **教材答案：** $8\ \mathrm{A}$
@@ -762,8 +760,6 @@ $$R_{ab} = 40\ \Omega,\quad i = 6\text{ A}$$
 
 某電阻器接於電壓源 $v=15\cos t\ \mathrm{V}$ 時，吸收的瞬時功率為 $30\cos^2 t\ \mathrm{mW}$。求電流 $i$ 與電阻 $R$。
 
-![Figure 2.9](../assets/images/ch2-pr3_figure_2.9.png)
-
 <template #solution>
 
 **教材答案：** $i=2\cos t\ \mathrm{mA}$、$R=7.5\ \mathrm{k}\Omega$
@@ -778,9 +774,9 @@ $$R_{ab} = 40\ \Omega,\quad i = 6\text{ A}$$
 
 ![Figure 2.14](../assets/images/ch2-pr4_figure_2.14.png)
 
-![Figure 2.15](../assets/images/ch2-pr4_figure_2.15.png)
-
 <template #solution>
+
+![Figure 2.15](../assets/images/ch2-pr4_figure_2.15.png)
 
 圖 2.15 顯示此電路有五個分支與三個節點。$1\ \Omega$ 與 $2\ \Omega$ 電阻並聯；$4\ \Omega$ 電阻與 $10\ \mathrm{V}$ 電壓源也並聯。沒有任何元件串聯。
 
@@ -793,10 +789,6 @@ $$R_{ab} = 40\ \Omega,\quad i = 6\text{ A}$$
 求圖 2.22 電路中的電壓 $v_1$ 與 $v_2$。
 
 ![Figure 2.22](../assets/images/ch2-pr5_figure_2.22.png)
-
-![Figure 2.23](../assets/images/ch2-pr5_figure_2.23.png)
-
-![Figure 2.24](../assets/images/ch2-pr5_figure_2.24.png)
 
 <template #solution>
 
@@ -824,11 +816,7 @@ $$R_{ab} = 40\ \Omega,\quad i = 6\text{ A}$$
 
 如圖 2.26 所示，求 $v_o$ 與 $i_o$，並求出各支路的電流與電壓。
 
-![Figure 2.25](../assets/images/ch2-pr7_figure_2.25.png)
-
 ![Figure 2.26](../assets/images/ch2-pr7_figure_2.26.png)
-
-![Figure 2.27](../assets/images/ch2-pr7_figure_2.27.png)
 
 <template #solution>
 
@@ -880,8 +868,6 @@ $$
 求圖 2.28 電路中的所有電流與電壓。
 
 ![Figure 2.28](../assets/images/ch2-pr8_figure_2.28.png)
-
-![Figure 2.29](../assets/images/ch2-pr8_figure_2.29.png)
 
 <template #solution>
 
@@ -986,8 +972,6 @@ $$
 
 求圖 2.39 端點 $a$-$b$ 所見的等效電阻 $R_{ab}$。
 
-![Figure 2.38](../assets/images/ch2-pr10_figure_2.38.png)
-
 ![Figure 2.39](../assets/images/ch2-pr10_figure_2.39.png)
 
 <template #solution>
@@ -1075,8 +1059,6 @@ $$
 求圖 2.43 中的 $v_1$、$v_2$、$i_1$ 與 $i_2$，並計算 12-$\Omega$ 與 40-$\Omega$ 電阻所消耗的功率。
 
 ![Figure 2.43](../assets/images/ch2-pr12_figure_2.43.png)
-
-![Figure 2.44](../assets/images/ch2-pr12_figure_2.44.png)
 
 <template #solution>
 
