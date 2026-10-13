@@ -1036,10 +1036,6 @@ $$
 
 使用電源轉換法，求圖 4.22 電路中的 $i_x$。
 
-![Figure 4.20](../assets/images/ch4-pr7_figure_4.20.png)
-
-![Figure 4.21](../assets/images/ch4-pr7_figure_4.21.png)
-
 ![Figure 4.22](../assets/images/ch4-pr7_figure_4.22.png)
 
 <template #solution>
@@ -1059,10 +1055,6 @@ $$
 
 ![Figure 4.30](../assets/images/ch4-pr8_figure_4.30.png)
 
-![Figure 4.31](../assets/images/ch4-pr8_figure_4.31.png)
-
-![Figure 4.32](../assets/images/ch4-pr8_figure_4.32.png)
-
 <template #solution>
 
 **課本答案：**
@@ -1079,13 +1071,7 @@ $$
 
 求圖 4.34 中端點 $a-b$ 左側電路的戴維寧等效電路。
 
-![Figure 4.32](../assets/images/ch4-pr9_figure_4.32.png)
-
-![Figure 4.33](../assets/images/ch4-pr9_figure_4.33.png)
-
 ![Figure 4.34](../assets/images/ch4-pr9_figure_4.34.png)
-
-![Figure 4.35](../assets/images/ch4-pr9_figure_4.35.png)
 
 <template #solution>
 
@@ -1103,11 +1089,7 @@ $$
 
 求圖 4.36 電路的戴維寧等效電路。
 
-![Figure 4.35](../assets/images/ch4-pr10_figure_4.35.png)
-
 ![Figure 4.36](../assets/images/ch4-pr10_figure_4.36.png)
-
-![Figure 4.37](../assets/images/ch4-pr10_figure_4.37.png)
 
 <template #solution>
 
@@ -1123,12 +1105,6 @@ $$
 <PracticeCard id="ch4-pr11" type="practice" title="Practice Problem 4.11" source="課本 p.151" topic="諾頓定理 (Norton's Theorem)">
 
 求圖 4.42 電路在端點 $a-b$ 的諾頓等效電路。
-
-![Figure 4.39](../assets/images/ch4-pr11_figure_4.39.png)
-
-![Figure 4.40](../assets/images/ch4-pr11_figure_4.40.png)
-
-![Figure 4.41](../assets/images/ch4-pr11_figure_4.41.png)
 
 ![Figure 4.42](../assets/images/ch4-pr11_figure_4.42.png)
 
@@ -1229,13 +1205,13 @@ $$
 
 考慮圖 4.31 的電路（見例題 4.9），使用 PSpice 求其戴維寧等效電路與諾頓等效電路。
 
-![Figure 4.31](../assets/images/ch4-pr8_figure_4.31.png)
+![Figure 4.31](../assets/images/ex_4_9_circuit.png)
+
+<template #solution>
 
 ![Figure 4.53](../assets/images/ch4-ex14_figure_4.53.png)
 
 ![Figure 4.54](../assets/images/ch4-ex14_figure_4.54.png)
-
-<template #solution>
 
 在端點 $a-b$ 插入探測電流源 $I_2$，執行 DC Sweep，令 $I_2$ 由 $0$ 掃描至 $1\ \mathrm{A}$，步進為 $0.1\ \mathrm{A}$。由圖 4.53 的 $V(I_2)$ 直線得到
 
@@ -1270,15 +1246,9 @@ $$
 
 <PracticeCard id="ch4-pr14" type="practice" title="Practice Problem 4.14" source="課本 p.158" topic="以 PSpice 求戴維寧等效 (PSpice 與戴維寧定理)">
 
-以 PSpice 重做練習題 4.9，求端點 $a-b$ 的戴維寧等效電路。
-
-![Figure 4.32](../assets/images/ch4-pr9_figure_4.32.png)
-
-![Figure 4.33](../assets/images/ch4-pr9_figure_4.33.png)
+以 PSpice 重做練習題 4.9；原電路如圖 4.34，求端點 $a-b$ 的戴維寧等效電路。
 
 ![Figure 4.34](../assets/images/ch4-pr9_figure_4.34.png)
-
-![Figure 4.35](../assets/images/ch4-pr9_figure_4.35.png)
 
 <template #solution>
 
@@ -1301,11 +1271,11 @@ $$
 
 ![Figure 4.55](../assets/images/ch4-ex15_figure_4.55.png)
 
+<template #solution>
+
 ![Figure 4.56](../assets/images/ch4-ex15_figure_4.56.png)
 
 ![Figure 4.57](../assets/images/ch4-pr15_figure_4.57.png)
-
-<template #solution>
 
 將圖 4.55 的負載電阻設定為參數 $R_L$，在 PSpice 中以 Global Parameter 執行 DC Sweep，例如從 $100\ \Omega$ 掃描至 $5\ \mathrm{k}\Omega$。功率曲線可由負載端電壓與電流的乘積取得；由於 PSpice 的 $I(R_2)$ 參考方向與被動符號相反，可使用
 
@@ -1371,9 +1341,9 @@ $$
 
 某電壓源接上功率為 $2\ \mathrm{W}$ 的負載時，端電壓為 $12\ \mathrm{V}$；卸除負載後，端電壓升為 $12.4\ \mathrm{V}$。求：(a) 電源電壓 $v_s$ 與內阻 $R_s$；(b) 接上 $8\ \Omega$ 負載時的端電壓。
 
-![Figure 4.62](../assets/images/ch4-ex16_figure_4.62.png)
-
 <template #solution>
+
+![Figure 4.62](../assets/images/ch4-ex16_figure_4.62.png)
 
 把實際電壓源表示成戴維寧等效電路。卸除負載時沒有內阻壓降，因此
 
@@ -1444,7 +1414,7 @@ $$
 
 在圖 4.63 中，$R_1=500\ \Omega$、$R_3=200\ \Omega$。調整 $R_2=125\ \Omega$ 後電橋平衡，求未知電阻 $R_x$。
 
-![Figure 4.63](../assets/images/ch4-ex18_figure_4.63.png)
+![Figure 4.63](../assets/images/ch4-ex17_figure_4.63.png)
 
 <template #solution>
 
@@ -1469,7 +1439,9 @@ $$
 
 <PracticeCard id="ch4-pr17" type="practice" title="Practice Problem 4.17" source="課本 p.163" topic="惠斯登電橋與電阻量測 (Wheatstone Bridge)">
 
-惠斯登電橋中 $R_1=R_3=1\ \mathrm{k}\Omega$。調整 $R_2$ 直到檢流計沒有電流；此時 $R_2=3.2\ \mathrm{k}\Omega$。求未知電阻的值。
+圖 4.63 的惠斯登電橋中，$R_1=R_3=1\ \mathrm{k}\Omega$。調整 $R_2$ 直到檢流計沒有電流；此時 $R_2=3.2\ \mathrm{k}\Omega$。求未知電阻 $R_x$。
+
+![Figure 4.63](../assets/images/ch4-pr17_figure_4.63.png)
 
 <template #solution>
 
@@ -1496,9 +1468,9 @@ $$
 
 ![Figure 4.64](../assets/images/ch4-pr17_figure_4.64.png)
 
-![Figure 4.65](../assets/images/ch4-pr17_figure_4.65.png)
-
 <template #solution>
+
+![Figure 4.65](../assets/images/ch4-pr17_figure_4.65.png)
 
 先對檢流計端點 $a-b$ 求戴維寧等效。
 
