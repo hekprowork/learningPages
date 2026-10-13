@@ -13,8 +13,6 @@ title: Chapter 1 基本概念：例題與練習題
 
 一個電子的電荷為 $-1.602\times10^{-19}\,\mathrm{C}$。求 $4{,}600$ 個電子所代表的總電荷。
 
-![Figure 1.5](../assets/images/ch1-ex1_figure_1.5.png)
-
 <template #solution>
 
 電子數與每個電子的電荷相乘：
@@ -39,8 +37,6 @@ q=(20-15t-10e^{-3t})\,\mathrm{mC},
 $$
 
 求 $t=1.0\,\mathrm{s}$ 時的電流。
-
-![Figure 1.5](../assets/images/ch1-pr1_figure_1.5.png)
 
 <template #solution>
 
@@ -72,8 +68,6 @@ $$
 
 求 $t=0.5\,\mathrm{s}$ 時的電流。
 
-![Figure 1.5](../assets/images/ch1-ex2_figure_1.5.png)
-
 <template #solution>
 
 以 $i=dq/dt$ 微分：
@@ -99,8 +93,6 @@ $$
 
 求 $100$ 億個質子所代表的電荷量。
 
-![Figure 1.5](../assets/images/ch1-pr2_figure_1.5.png)
-
 <template #solution>
 
 每個質子的電荷為 $+1.6021\times10^{-19}\,\mathrm{C}$，而 $100$ 億為 $10^{10}$；因此
@@ -119,8 +111,6 @@ $$
 <PracticeCard id="ch1-ex3" type="example" title="Example 1.3：由電流求區間電荷" source="課本 p.14" topic="電流與電荷">
 
 若通過端點的電流為 $i=(3t^2-t)\,\mathrm{A}$，求從 $t=1\,\mathrm{s}$ 至 $t=2\,\mathrm{s}$ 進入端點的總電荷。
-
-![Figure 1.5](../assets/images/ch1-ex3_figure_1.5.png)
 
 <template #solution>
 
@@ -154,8 +144,6 @@ i(t)=
 $$
 
 求從 $t=0$ 至 $t=2\,\mathrm{s}$ 進入元件的電荷。
-
-![Figure 1.7](../assets/images/ch1-pr3_figure_1.7.png)
 
 <template #solution>
 
@@ -307,8 +295,6 @@ $$
 <PracticeCard id="ch1-ex6" type="example" title="Example 1.6：電燈的能量消耗" source="課本 p.20" topic="功率與能量">
 
 一個 $100\ \mathrm{W}$ 電燈泡連續使用 $2\ \mathrm{h}$，求它消耗的能量。
-
-![Figure 1.11](../assets/images/ch1-ex6_figure_1.11.png)
 
 <template #solution>
 
