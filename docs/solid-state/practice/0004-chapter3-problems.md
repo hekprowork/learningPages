@@ -311,11 +311,11 @@ Sketch the simplified band diagram, properly labeling positions, energies, and d
 
 **(a)** 繪製並標示能隙 $1.5\,\mathrm{eV}$ 半導體的簡化能帶圖：$x=0$ 至 $2\,\mu\mathrm{m}$ 電壓為常數；$x=2$ 至 $4\,\mu\mathrm{m}$ 有指向右方、大小 $2\,\mathrm{V/\mu m}$ 的電場；接著從 $x=4$ 至 $8\,\mu\mathrm{m}$，電壓增加 $3\,\mathrm{V}$。
 
-**(b)** 某半導體電子能帶結構為 $E(k)=(4k^2+5)\,\mathrm{eV}$，其中 $k$ 單位為 $\mathrm{\AA^{-1}}$（$1\,\mathrm{\AA}=10^{-10}\,\mathrm{m}$）。計算電子有效質量。為什麼有效質量不同於實際電子質量 $9.1\times10^{-31}\,\mathrm{kg}$？
+**(b)** 某半導體電子能帶結構為 $E(k)=(4k^2+5)\,\mathrm{eV}$，其中 $k$ 單位為 $\text{Å}^{-1}$（$1\,\text{Å}=10^{-10}\,\mathrm{m}$）。計算電子有效質量。為什麼有效質量不同於實際電子質量 $9.1\times10^{-31}\,\mathrm{kg}$？
 
 **English:** **(a)** Sketch and label the simplified band diagram of a semiconductor with a band gap of $1.5\,\mathrm{eV}$ subjected to the following: from $x=0$ to $2\,\mu\mathrm{m}$, the voltage is constant; from $x=2$ to $4\,\mu\mathrm{m}$, there is an electric field of $2\,\mathrm{V/\mu m}$ pointing to the right; then from $x=4$ to $8\,\mu\mathrm{m}$, the voltage increases by $3\,\mathrm{V}$.
 
-**(b)** A semiconductor has an electron band structure $E(k)=(4k^2+5)\,\mathrm{eV}$, where $k$ has units of $\mathrm{\AA^{-1}}$ ($1\,\mathrm{\AA}=10^{-10}\,\mathrm{m}$). Calculate the effective mass of the electrons. Why is the effective mass different from the actual electron mass of $9.1\times10^{-31}\,\mathrm{kg}$?
+**(b)** A semiconductor has an electron band structure $E(k)=(4k^2+5)\,\mathrm{eV}$, where $k$ has units of $\text{Å}^{-1}$ ($1\,\text{Å}=10^{-10}\,\mathrm{m}$). Calculate the effective mass of the electrons. Why is the effective mass different from the actual electron mass of $9.1\times10^{-31}\,\mathrm{kg}$?
 
 <template #solution>
 

@@ -29,7 +29,7 @@
 ### 3. KaTeX 數學公式驗證與建置檢查
 - 行內公式使用 `$...$`，區塊公式使用 `$$...$$`。
 - 文本中避免未轉義的孤立 `$` 符號（應使用 `\$` 或 backticks \`$\`）。
-- 每次更動後必須執行 `npx vitepress build docs` 確保無 KaTeX 語法與建置錯誤。
+- 每次更動後請先執行 `npm run check:katex -- docs/solid-state` 與 `npm run check:mathjax -- docs/solid-state`，再執行 `npx vitepress build docs`。網站使用 MathJax 3 實際渲染 Markdown 公式；KaTeX 檢查僅是輔助，不可用建置成功代替公式解析驗證。
 
 ### 4. 路由與超連結規範
 - 模組內部所有超連結必須使用絕對路徑 `/solid-state/...`。

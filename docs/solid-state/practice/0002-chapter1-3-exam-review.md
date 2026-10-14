@@ -21,9 +21,9 @@
 
 ### 題 1：晶格幾何與密度
 
-矽為鑽石結構，$a=5.43\,\text{\AA}$。求傳統立方晶胞原子數、體密度、$(111)$ 面密度，並與 $(110)$ 比較。只考慮本教材所用的理想未重構晶面。
+矽為鑽石結構，$a=5.43\,\text{Å}$。求傳統立方晶胞原子數、體密度、$(111)$ 面密度，並與 $(110)$ 比較。只考慮本教材所用的理想未重構晶面。
 
-**English:** Silicon has the diamond structure with $a=5.43\,\text{\AA}$. Find the number of atoms in a conventional cubic cell, the volume density, and the $(111)$ planar density; compare the latter with the $(110)$ planar density. Use the ideal unreconstructed surfaces described in this textbook.
+**English:** Silicon has the diamond structure with $a=5.43\,\text{Å}$. Find the number of atoms in a conventional cubic cell, the volume density, and the $(111)$ planar density; compare the latter with the $(110)$ planar density. Use the ideal unreconstructed surfaces described in this textbook.
 
 ::: details 解答與回代
 傳統晶胞有 $8$ 個原子。$a=5.43\times10^{-8}\ \mathrm{cm}$，所以

@@ -9,7 +9,8 @@
     "docs:preview": "vitepress preview docs",
     "check:katex": "node scripts/check-katex.js",
     "check:subject-index": "node scripts/check-subject-index-render.js",
-    "check:subject-routes": "node scripts/check-subject-routes.js"
+    "check:subject-routes": "node scripts/check-subject-routes.js",
+    "check:mathjax": "node scripts/check-mathjax.js"
   },
   "dependencies": {
     "katex": "^0.16.21",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@types/katex": "^0.16.7",
     "@types/three": "^0.174.0",
-    "markdown-it-mathjax3": "^4.3.2"
+    "markdown-it-mathjax3": "^4.3.2",
+    "mathjax-full": "^3.2.1"
   }
 }

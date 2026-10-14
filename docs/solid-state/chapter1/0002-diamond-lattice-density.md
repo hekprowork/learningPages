@@ -39,7 +39,7 @@
 - **每個傳統晶胞包含總原子數**：$4 + 4 = \mathbf{8 \text{ 個原子}}$
 
 ### 2. 矽原子體密度 ($\rho_V$) 數值推導：
-已知矽的晶格常數 $a = 5.43\text{ \AA} = 5.43 \times 10^{-8}\text{ cm}$：
+已知矽的晶格常數 $a = 5.43\text{ Å} = 5.43 \times 10^{-8}\text{ cm}$：
 
 $$\rho_V = \frac{\text{原子數}}{\text{晶胞體積}} = \frac{8}{a^3} = \frac{8}{(5.43 \times 10^{-8}\text{ cm})^3} \approx \mathbf{5.0 \times 10^{22} \text{ atoms/cm}^3}$$
 
@@ -53,9 +53,9 @@ $$\rho_V = \frac{\text{原子數}}{\text{晶胞體積}} = \frac{8}{a^3} = \frac{
 
 $$d_{\text{NN}} = \sqrt{\left(\frac{a}{4}\right)^2 + \left(\frac{a}{4}\right)^2 + \left(\frac{a}{4}\right)^2} = \sqrt{\frac{3a^2}{16}} = \frac{\sqrt{3}}{4}a$$
 
-代入矽之 $a = 5.43\text{ \AA}$：
+代入矽之 $a = 5.43\text{ Å}$：
 
-$$d_{\text{NN}} \approx \frac{1.732 \times 5.43}{4} \approx \mathbf{2.35\text{ \AA}}$$
+$$d_{\text{NN}} \approx \frac{1.732 \times 5.43}{4} \approx \mathbf{2.35\text{ Å}}$$
 
 ---
 

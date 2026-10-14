@@ -32,7 +32,7 @@ v_g=\frac{1}{\hbar}\frac{dE}{dk}.$$
 
 $$E_B^*\approx13.6\ \mathrm{eV}\,
 \frac{m^*/m_0}{\varepsilon_r^2},\qquad
-a_B^*\approx0.529\ \text{\AA}\,
+a_B^*\approx0.529\ \text{Å}\,
 \frac{\varepsilon_r}{m^*/m_0}.$$
 
 其中 $m_0$ 是自由電子質量、$\varepsilon_r$ 是相對介電常數。晶體的介電屏蔽與有效質量使施體態比真空氫原子更淺、更廣；各向異性或實際雜質能階須用更完整模型。

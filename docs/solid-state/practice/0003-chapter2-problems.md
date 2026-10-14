@@ -13,7 +13,7 @@
 
 ​(b) 對固定波長、固定電極材料與配置，繪製預期量到的光電流 (I) 對阻滯電壓 (V) 曲線；請畫出數個不同光強度的情況。
 
-​(c) 鉑的功函數為 $4.09\,\text{eV}$。若以波長 $2440\,\text{\AA}$ 的入射光照射 Pt 電極，為使光電流降至零，需要多大的阻滯電位？注意每個電子逸出表面時會損失 $q\Phi$ 的能量。
+​(c) 鉑的功函數為 $4.09\,\text{eV}$。若以波長 $2440\,\text{Å}$ 的入射光照射 Pt 電極，為使光電流降至零，需要多大的阻滯電位？注意每個電子逸出表面時會損失 $q\Phi$ 的能量。
 
 **English:**
 
@@ -21,7 +21,7 @@
 
 (b) For a fixed wavelength, electrode material, and electrode configuration, sketch the expected measured photocurrent $I$ versus retarding voltage $V$; show several cases with different light intensities.
 
-(c) Platinum has a work function of $4.09\,\text{eV}$. If Pt is illuminated with incident light of wavelength $2440\,\text{\AA}$, what retarding potential is required to reduce the photocurrent to zero? Note that each electron loses energy $q\Phi$ when it escapes from the surface.
+(c) Platinum has a work function of $4.09\,\text{eV}$. If Pt is illuminated with incident light of wavelength $2440\,\text{Å}$, what retarding potential is required to reduce the photocurrent to zero? Note that each electron loses energy $q\Phi$ when it escapes from the surface.
 
 <template #solution>
 
@@ -33,11 +33,11 @@
 
 <PracticeCard type="exercise" id="ss-ch2-p2-2" title="Problem 2.2：鋅的光電效應" source="PDF p.79 / 印刷 p.78" topic="光電效應">
 
-在光電效應實驗中，鋅放出光電子的截止波長為 $310\,\text{nm}$。計算鋅的功函數；再計算波長 $2000\,\text{\AA}$ 的光所產生光電子的速度（該波長不是截止波長）。
+在光電效應實驗中，鋅放出光電子的截止波長為 $310\,\text{nm}$。計算鋅的功函數；再計算波長 $2000\,\text{Å}$ 的光所產生光電子的速度（該波長不是截止波長）。
 
 **English:**
 
-In a photoelectric-effect experiment, the cutoff wavelength for photoelectron emission from zinc is $310\,\text{nm}$. Calculate the work function of zinc, and then calculate the speed of photoelectrons produced by light of wavelength $2000\,\text{\AA}$ (this wavelength is not the cutoff wavelength).
+In a photoelectric-effect experiment, the cutoff wavelength for photoelectron emission from zinc is $310\,\text{nm}$. Calculate the work function of zinc, and then calculate the speed of photoelectrons produced by light of wavelength $2000\,\text{Å}$ (this wavelength is not the cutoff wavelength).
 
 <template #solution>
 
@@ -52,7 +52,7 @@ In a photoelectric-effect experiment, the cutoff wavelength for photoelectron em
 ​(a) 證明氫原子光譜的各條譜線可以用 Å 表示為
 
 $$
-\lambda[\text{\AA}]=\frac{911n_1^{2}n^{2}}{n^{2}-n_1^{2}},
+\lambda[\text{Å}]=\frac{911n_1^{2}n^{2}}{n^{2}-n_1^{2}},
 $$
 
 其中 Lyman 系列的 $n_1=1$、Balmer 系列的 $n_1=2$、Paschen 系列的 $n_1=3$，且整數 (n) 大於 $n_1$。
@@ -63,7 +63,7 @@ $$
 
 (a) Show that the wavelengths of the spectral lines of hydrogen can be expressed in Å as
 $$
-\lambda[\text{\AA}]=\frac{911n_1^{2}n^{2}}{n^{2}-n_1^{2}},
+\lambda[\text{Å}]=\frac{911n_1^{2}n^{2}}{n^{2}-n_1^{2}},
 $$
 where $n_1=1$ for the Lyman series, $n_1=2$ for the Balmer series, and $n_1=3$ for the Paschen series, with the integer $n$ greater than $n_1$.
 

@@ -37,6 +37,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate solid-state math (KaTeX and MathJax)
+        run: |
+          npm run check:katex -- docs/solid-state
+          npm run check:mathjax -- docs/solid-state
+
       - name: Build with VitePress
         run: npm run docs:build
 

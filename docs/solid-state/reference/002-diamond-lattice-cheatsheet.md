@@ -6,10 +6,10 @@
 
 | 物理量名稱 | 符號 / 理論公式 | 矽 ($\text{Si}$) 數值與單位 | 物理意義說明 |
 | :--- | :--- | :--- | :--- |
-| **晶格常數 (Lattice Constant)** | $a$ | $5.43\text{ \AA} = 5.43 \times 10^{-8}\text{ cm}$ | 傳統立方晶胞的單邊長度 |
+| **晶格常數 (Lattice Constant)** | $a$ | $5.43\text{ Å} = 5.43 \times 10^{-8}\text{ cm}$ | 傳統立方晶胞的單邊長度 |
 | **晶胞內原子總數 (Atoms/Cell)** | $N_{\text{cell}} = 4 (\text{FCC}) + 4 (\text{內插}) = 8$ | **8 個原子 / 晶胞** | 1 個鑽石晶胞包含 8 個完整的矽原子 |
 | **原子體密度 (Volume Density)** | $\rho_V = \frac{8}{a^3}$ | **$5.0 \times 10^{22}\text{ atoms/cm}^3$** | 固態半導體最常用的體原子濃度基準常數 |
-| **最近鄰原子距離 (Nearest Neighbor)** | $d_{\text{NN}} = \frac{\sqrt{3}}{4}a$ | **$2.35\text{ \AA}$** | 共價鍵長度（體對角線長度的四分之一） |
+| **最近鄰原子距離 (Nearest Neighbor)** | $d_{\text{NN}} = \frac{\sqrt{3}}{4}a$ | **$2.35\text{ Å}$** | 共價鍵長度（體對角線長度的四分之一） |
 | **配位數 (Coordination Number)** | $Z = 4$ | **4** | 每個原子被 4 個最近鄰原子以四面體共價鍵包圍 |
 
 ---

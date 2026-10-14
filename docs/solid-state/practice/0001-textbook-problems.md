@@ -25,9 +25,9 @@
 
 <PracticeCard type="exercise" id="ss-ch1-p1-2" title="Problem 1.2：bcc 晶格幾何與最大堆積率" source="PDF p.48 / 印刷 p.47" topic="晶格幾何">
 
-對晶格常數為 $3\,\text{\AA}$ 的 bcc 晶格，計算最近鄰原子之間的距離、原子半徑，以及每個原子的體積；並求最大堆積率。
+對晶格常數為 $3\,\text{Å}$ 的 bcc 晶格，計算最近鄰原子之間的距離、原子半徑，以及每個原子的體積；並求最大堆積率。
 
-**English:** For a bcc lattice with lattice constant $3\,\text{\AA}$, calculate the nearest-neighbor distance, atomic radius, volume per atom, and maximum packing fraction.
+**English:** For a bcc lattice with lattice constant $3\,\text{Å}$, calculate the nearest-neighbor distance, atomic radius, volume per atom, and maximum packing fraction.
 
 <template #solution>
 
@@ -85,9 +85,9 @@
 
 <PracticeCard type="exercise" id="ss-ch1-p1-6" title="Problem 1.6：GaAs 晶格常數與 primitive cell 體積" source="PDF p.48 / 印刷 p.47" topic="晶格常數">
 
-Ga 與 As 的原子半徑分別為 $136\,\text{pm}$ 與 $114\,\text{pm}$。使用硬球近似，求 GaAs 的晶格常數與 primitive cell 的體積。已知 $1\,\text{\AA}=100\,\text{pm}$。
+Ga 與 As 的原子半徑分別為 $136\,\text{pm}$ 與 $114\,\text{pm}$。使用硬球近似，求 GaAs 的晶格常數與 primitive cell 的體積。已知 $1\,\text{Å}=100\,\text{pm}$。
 
-**English:** The atomic radii of Ga and As are $136\,\text{pm}$ and $114\,\text{pm}$. Using the hard-sphere approximation, find the GaAs lattice constant and primitive-cell volume. Use $1\,\text{\AA}=100\,\text{pm}$.
+**English:** The atomic radii of Ga and As are $136\,\text{pm}$ and $114\,\text{pm}$. Using the hard-sphere approximation, find the GaAs lattice constant and primitive-cell volume. Use $1\,\text{Å}=100\,\text{pm}$.
 
 <template #solution>
 
@@ -99,9 +99,9 @@ Ga 與 As 的原子半徑分別為 $136\,\text{pm}$ 與 $114\,\text{pm}$。使�
 
 <PracticeCard type="exercise" id="ss-ch1-p1-7" title="Problem 1.7：fcc 晶格的面密度與體密度" source="PDF p.48 / 印刷 p.47" topic="fcc 晶格">
 
-繪製晶格常數為 $5\,\text{\AA}$、具有單原子基底的 fcc 晶格單位晶胞，並計算 $(110)$ 晶面上的單位面積原子密度與單位體積原子密度。在此晶胞中標示一個 interstitial defect（間隙缺陷）。
+繪製晶格常數為 $5\,\text{Å}$、具有單原子基底的 fcc 晶格單位晶胞，並計算 $(110)$ 晶面上的單位面積原子密度與單位體積原子密度。在此晶胞中標示一個 interstitial defect（間隙缺陷）。
 
-**English:** Draw an fcc unit cell with a one-atom basis and lattice constant $5\,\text{\AA}$. Calculate the atomic density per unit area on the $(110)$ plane and per unit volume. Mark one interstitial defect in the cell.
+**English:** Draw an fcc unit cell with a one-atom basis and lattice constant $5\,\text{Å}$. Calculate the atomic density per unit area on the $(110)$ plane and per unit volume. Mark one interstitial defect in the cell.
 
 <template #solution>
 
@@ -113,7 +113,7 @@ Ga 與 As 的原子半徑分別為 $136\,\text{pm}$ 與 $114\,\text{pm}$。使�
 
 <PracticeCard type="exercise" id="ss-ch1-p1-8" title="Problem 1.8：鑽石晶格的最近鄰" source="PDF p.48 / 印刷 p.47" topic="鑽石晶格">
 
-沿著鑽石晶格的 (⟨110⟩) 方向觀看並繪圖，並以 Figure 1–9 為參考；圖中需包含連接最近鄰原子的線段。
+沿著鑽石晶格的 $\langle110\rangle$ 方向觀看並繪圖，並以 Figure 1–9 為參考；圖中需包含連接最近鄰原子的線段。
 
 ![Figure 1–9：鑽石晶格單位晶胞與四個最近鄰](../assets/images/ch1-p1-8-fig1-9.png)
 
@@ -129,7 +129,7 @@ Ga 與 As 的原子半徑分別為 $136\,\text{pm}$ 與 $114\,\text{pm}$。使�
 
 <PracticeCard type="exercise" id="ss-ch1-p1-9" title="Problem 1.9：bcc 作為兩個互穿 sc 晶格" source="PDF p.48 / 印刷 p.47" topic="晶格表示法">
 
-以圖示說明 bcc 晶格可表示為兩個互穿的 sc 晶格。為簡化圖示，請畫出沿 (⟨100⟩) 方向觀看的晶格。
+以圖示說明 bcc 晶格可表示為兩個互穿的 sc 晶格。為簡化圖示，請畫出沿 $\langle100\rangle$ 方向觀看的晶格。
 
 **English:** Illustrate how a bcc lattice can be represented as two interpenetrating simple-cubic lattices. For clarity, draw the lattice viewed along a $\langle100\rangle$ direction.
 
@@ -145,7 +145,7 @@ Ga 與 As 的原子半徑分別為 $136\,\text{pm}$ 與 $114\,\text{pm}$。使�
 
 ​(a) 求 Si 晶圓 $(100)$ 表面上的原子數，單位為 $\text{atoms}/\text{cm}^{2}$。
 
-​(b) InP 中最近鄰 In 原子之間的距離是多少（單位：$\text{\AA}$）？
+​(b) InP 中最近鄰 In 原子之間的距離是多少（單位：$\text{Å}$）？
 
 **English:** (a) Find the number of atoms per square centimeter on a Si $(100)$ wafer surface. (b) Find the nearest-neighbor In–In distance in InP, in angstroms.
 
@@ -159,9 +159,9 @@ Ga 與 As 的原子半徑分別為 $136\,\text{pm}$ 與 $114\,\text{pm}$。使�
 
 <PracticeCard type="exercise" id="ss-ch1-p1-11" title="Problem 1.11：NaCl 硬球模型密度" source="PDF p.49 / 印刷 p.48" topic="離子晶體">
 
-Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA}$，原子量分別為 (23) 與 (35.5)。將離子視為硬球，計算 NaCl 的密度，並與實測密度 $2.17\,\text{g}/\text{cm}^{3}$ 比較。
+Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{Å}$ 與 $1.8\,\text{Å}$，原子量分別為 (23) 與 (35.5)。將離子視為硬球，計算 NaCl 的密度，並與實測密度 $2.17\,\text{g}/\text{cm}^{3}$ 比較。
 
-**English:** The ionic radii of Na$^+$ and Cl$^-$ are $1.0\,\text{\AA}$ and $1.8\,\text{\AA}$; their atomic weights are 23 and 35.5. Treating the ions as hard spheres, calculate the density of NaCl and compare it with the measured value $2.17\,\text{g}/\text{cm}^{3}$.
+**English:** The ionic radii of Na$^+$ and Cl$^-$ are $1.0\,\text{Å}$ and $1.8\,\text{Å}$; their atomic weights are 23 and 35.5. Treating the ions as hard spheres, calculate the density of NaCl and compare it with the measured value $2.17\,\text{g}/\text{cm}^{3}$.
 
 <template #solution>
 
@@ -173,7 +173,7 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 <PracticeCard type="exercise" id="ss-ch1-p1-12" title="Problem 1.12：具有雙原子基底的 sc 晶格" source="PDF p.49 / 印刷 p.48" topic="堆積率">
 
-繪製晶格常數 $a=4\,\text{\AA}$ 的 sc 單位晶胞。這是一個雙原子基底：原子 A 位於晶格點，原子 B 從每個晶格點沿 $a/2,0,0$ 位移。假設兩種原子大小相同，且結構為緊密堆積（最近鄰原子彼此接觸）。計算：
+繪製晶格常數 $a=4\,\text{Å}$ 的 sc 單位晶胞。這是一個雙原子基底：原子 A 位於晶格點，原子 B 從每個晶格點沿 $a/2,0,0$ 位移。假設兩種原子大小相同，且結構為緊密堆積（最近鄰原子彼此接觸）。計算：
 
 ​(i) 堆積率，即原子所占總體積的比例；
 
@@ -181,7 +181,7 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 ​(iii) $100$ 晶面上每單位面積的 A 原子數。
 
-**English:** Draw a simple-cubic unit cell with $a=4\,\text{\AA}$ and a two-atom basis: A at each lattice point and B displaced by $(a/2,0,0)$. Assuming equal-size atoms in close contact, calculate (i) the packing fraction, (ii) the number of B atoms per unit volume, and (iii) the number of A atoms per unit area on a $(100)$ plane.
+**English:** Draw a simple-cubic unit cell with $a=4\,\text{Å}$ and a two-atom basis: A at each lattice point and B displaced by $(a/2,0,0)$. Assuming equal-size atoms in close contact, calculate (i) the packing fraction, (ii) the number of B atoms per unit volume, and (iii) the number of A atoms per unit area on a $(100)$ plane.
 
 <template #solution>
 
@@ -207,7 +207,7 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 <PracticeCard type="exercise" id="ss-ch1-p1-14" title="Problem 1.14：等價的 {111} 與 {110} 晶面" source="PDF p.49 / 印刷 p.48" topic="等價晶面">
 
-繪製如 Figure 1–7 所示的立方體，並在其中畫出具有不同方向的四個 ({111}) 晶面；再對 ({110}) 晶面重複同樣的作圖。
+繪製如 Figure 1–7 所示的立方體，並在其中畫出具有不同方向的四個 $\{111\}$ 晶面；再對 $\{110\}$ 晶面重複同樣的作圖。
 
 ![Figure 1–7：立方晶格中的晶體方向](../assets/images/ch1-p1-14-fig1-7.png)
 
@@ -253,7 +253,7 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 <PracticeCard type="exercise" id="ss-ch1-p1-17" title="Problem 1.17：由 fcc 建構鑽石晶格" source="PDF p.49 / 印刷 p.48" topic="鑽石晶格">
 
-從一個 fcc 晶格開始，從每個 fcc 原子沿 ((1/4,1/4,1/4)) 加入原子，以得到鑽石晶格。說明為什麼 Figure 1–8a 中只有四個新增原子出現在鑽石單位晶胞內。
+從一個 fcc 晶格開始，從每個 fcc 原子沿 $(1/4,1/4,1/4)$ 加入原子，以得到鑽石晶格。說明為什麼 Figure 1–8a 中只有四個新增原子出現在鑽石單位晶胞內。
 
 ![Figure 1–8：由 fcc 建構鑽石晶格](../assets/images/ch1-p1-17-fig1-8.png)
 
@@ -293,11 +293,11 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 <PracticeCard type="exercise" id="ss-ch1-p1-19" title="Problem 1.19：InGaAs 晶格匹配與臨界厚度" source="PDF p.49 / 印刷 p.48" topic="異質磊晶">
 
-​(a) 求在 InP 基板上以晶格匹配方式成長的 $\mathrm{In}_{1-x}\mathrm{Ga}_{x}\mathrm{As}$ 組成。晶格常數為 $a_{\mathrm{InAs}}=6.0584\,\text{\AA}$、$a_{\mathrm{GaAs}}=5.6533\,\text{\AA}$，以及 $a_{\mathrm{InP}}=5.8688\,\text{\AA}$。
+​(a) 求在 InP 基板上以晶格匹配方式成長的 $\mathrm{In}_{1-x}\mathrm{Ga}_{x}\mathrm{As}$ 組成。晶格常數為 $a_{\mathrm{InAs}}=6.0584\,\text{Å}$、$a_{\mathrm{GaAs}}=5.6533\,\text{Å}$，以及 $a_{\mathrm{InP}}=5.8688\,\text{Å}$。
 
 ​(b) 在 GaAs 基板上以假同形（pseudomorphic）方式成長 $\mathrm{In}_{0.2}\mathrm{Ga}_{0.8}\mathrm{As}$ 合金。求成長層的最大厚度。
 
-**English:** (a) Find the composition of $\mathrm{In}_{1-x}\mathrm{Ga}_{x}\mathrm{As}$ lattice-matched to InP, using $a_{\mathrm{InAs}}=6.0584\,\text{\AA}$, $a_{\mathrm{GaAs}}=5.6533\,\text{\AA}$, and $a_{\mathrm{InP}}=5.8688\,\text{\AA}$. (b) Find the maximum thickness for pseudomorphic $\mathrm{In}_{0.2}\mathrm{Ga}_{0.8}\mathrm{As}$ grown on GaAs.
+**English:** (a) Find the composition of $\mathrm{In}_{1-x}\mathrm{Ga}_{x}\mathrm{As}$ lattice-matched to InP, using $a_{\mathrm{InAs}}=6.0584\,\text{Å}$, $a_{\mathrm{GaAs}}=5.6533\,\text{Å}$, and $a_{\mathrm{InP}}=5.8688\,\text{Å}$. (b) Find the maximum thickness for pseudomorphic $\mathrm{In}_{0.2}\mathrm{Ga}_{0.8}\mathrm{As}$ grown on GaAs.
 
 <template #solution>
 
@@ -313,9 +313,9 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 ​(a) 對下圖所示、邊長為 (a) 的立方晶胞，使用正確記號標示三個晶面。
 
-​(b) 使用正確記號寫出所有等價的 (⟨100⟩) 方向。
+​(b) 使用正確記號寫出所有等價的 $\langle100\rangle$ 方向。
 
-​(c) 在下方兩組以 primitive vectors (mathbf a,mathbf b,mathbf c) 為軸的座標上，分別：(1) 畫出 ([011]) 方向；(2) 畫出 ((111)) 晶面。
+​(c) 在下方兩組以 primitive vectors $(\mathbf a,\mathbf b,\mathbf c)$ 為軸的座標上，分別：(1) 畫出 $[011]$ 方向；(2) 畫出 $(111)$ 晶面。
 
 ![Self Quiz 1 圖示：三個晶面與兩組作圖座標](../assets/images/ch1-sq1-figures.png)
 
@@ -323,7 +323,7 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 <template #solution>
 
-教材答案（印刷 p.596，PDF p.597）：(a) 依序為 ((111))、$100$、$110$。答案頁未列出 (b) 的完整方向清單，也未列出 (c) 的作圖；(b)、(c) 需自行解題。
+教材答案（印刷 p.596，PDF p.597）：(a) 依序為 $(111)$、$100$、$110$。答案頁未列出 (b) 的完整方向清單，也未列出 (c) 的作圖；(b)、(c) 需自行解題。
 
 </template>
 
@@ -337,7 +337,7 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 ​(b) 下列晶面（只畫出第一象限 $0<x,y,z<a$，虛線僅供參考）全部屬於哪一組等價晶面？使用正確記號。
 
-​(c) 下列三個只畫出第一象限的晶面中，哪一個是 ((121)) 晶面？請圈出正確圖形。
+​(c) 下列三個只畫出第一象限的晶面中，哪一個是 $(121)$ 晶面？請圈出正確圖形。
 
 ![Self Quiz 2(b)–(c)：等價晶面與 ​(121) 候選圖](../assets/images/ch1-sq2bc-planes.png)
 
@@ -345,7 +345,7 @@ Na$^+$ 與 Cl$^-$ 的離子半徑分別為 $1.0\,\text{\AA}$ 與 $1.8\,\text{\AA
 
 <template #solution>
 
-教材答案（印刷 p.596，PDF p.597）：(a) $1\text{ and }2$；(b) ({110})；(c) 圖 B。
+教材答案（印刷 p.596，PDF p.597）：(a) $1\text{ and }2$；(b) $\{110\}$；(c) 圖 B。
 
 </template>
 
