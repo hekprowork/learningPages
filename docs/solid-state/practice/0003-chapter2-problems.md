@@ -5,6 +5,16 @@
 <PracticeFilter prefix="ss-ch2-" />
 <PracticeProgress :total="19" prefix="ss-ch2-" />
 
+## 老師 2026/10/14 期中考板書對照
+
+> **判讀說明**：以下是與老師課堂板書**同主題的教材練習**，不是老師確認的考試原題。老師的題號與課本 Problem / Self Quiz 題號不同。板書來源：[Notion｜固態電子導論](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)（可能需要學校帳號權限）。
+
+- **老師第 3 題：氫原子發射光譜** — [Problem 2.3：Lyman／Balmer／Paschen](#card-ss-ch2-p2-3)、[Problem 2.5：Balmer／Rydberg 常數](#card-ss-ch2-p2-5)。老師要求算**頻率 Hz**，而課本題主要算**波長或 Rydberg 常數**。
+- **老師第 4 題：一維薛丁格方程式與期望值** — [Problem 2.6：位置期望值](#card-ss-ch2-p2-6)、[Problem 2.12：能量期望值](#card-ss-ch2-p2-12)。兩題皆非「寫出一維不含時薛丁格方程式」原題。
+- **老師第 6 題：無限／有限深量子井** — [Problem 2.11：無限深井能階](#card-ss-ch2-p2-11)、[Self Quiz 2：有限深井](#card-ss-ch2-sq2)。老師另外提到有限井能階的超越方程式；Self Quiz 2 未要求該數值求解。
+- **老師第 10 題：量子穿隧** — [Problem 2.9：有限位能障壁](#card-ss-ch2-p2-9)、[Self Quiz 4：反射機率](#card-ss-ch2-sq4)。相關概念相同，但並非直接代入老師板書 $T\approx e^{-2\kappa L}$ 的原題。
+
+
 ## Problems
 
 <PracticeCard type="exercise" id="ss-ch2-p2-1" title="Problem 2.1：光電效應實驗" source="PDF p.79 / 印刷 p.78" topic="光電效應">
@@ -48,6 +58,9 @@ In a photoelectric-effect experiment, the cutoff wavelength for photoelectron em
 </PracticeCard>
 
 <PracticeCard type="exercise" id="ss-ch2-p2-3" title="Problem 2.3：氫原子光譜線" source="PDF p.79–80 / 印刷 p.78–79" topic="原子光譜">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 3 題｜氫原子發射光譜：老師要求計算兩種系列的**頻率（Hz）**；本題主要算**波長**，屬同主題練習。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 ​(a) 證明氫原子光譜的各條譜線可以用 Å 表示為
 
@@ -97,6 +110,9 @@ Using the Heisenberg uncertainty principle, estimate the momentum uncertainty of
 
 <PracticeCard type="exercise" id="ss-ch2-p2-5" title="Problem 2.5：由 Balmer 線求 Rydberg 常數" source="PDF p.80 / 印刷 p.79" topic="Bohr 模型">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 3 題｜Balmer 光譜：本題由波長推算 Rydberg 常數，與老師指定的頻率計算不同。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 由 Balmer 系列計算可知，氫光譜的第一條譜線波長為 $656.1\,\text{nm}$。Bohr 理論以氫原子電子由第三能階躍遷到第二能階，預測幾乎相同的輻射躍遷。由此求 Rydberg 常數。
 
 **English:**
@@ -112,6 +128,9 @@ From calculations for the Balmer series, the wavelength of the first line in the
 </PracticeCard>
 
 <PracticeCard type="exercise" id="ss-ch2-p2-6" title="Problem 2.6：一維波函數的機率分布" source="PDF p.80 / 印刷 p.79" topic="波函數">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 4 題｜期望值：本題練習位置期望值；老師另要求寫一維不含時薛丁格方程式。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 考慮一個已正規化的電子波函數，教材原式照錄為
 
@@ -203,6 +222,9 @@ The electron wave function is $Ce^{ikx}$ between $x=-2\,\text{cm}$ and $x=2\,\te
 
 <PracticeCard type="exercise" id="ss-ch2-p2-9" title="Problem 2.9：有限位能障壁與穿隧" source="PDF p.80 / 印刷 p.79" topic="量子穿隧">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 10 題｜量子穿隧：有限位能障壁的穿透機率概念；本題不是老師板書近似穿透率公式的直接代入題。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 定義位能 $V$ 為位置 $x$ 的函數：
 
 $$
@@ -257,6 +279,9 @@ By analyzing the electron-shell structure of a carbon (C) atom, determine the nu
 
 <PracticeCard type="exercise" id="ss-ch2-p2-11" title="Problem 2.11：無限深量子井的前五個能階" source="PDF p.80 / 印刷 p.79" topic="量子井">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 6 題｜無限深量子井：計算能階；本題提供具體井寬，是直接相關的計算練習。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 計算寬度為 $0.59\,\text{nm}$ 的無限深量子井（QW）中，電子的前五個能階。
 
 **English:**
@@ -272,6 +297,9 @@ Calculate the first five energy levels of an electron in an infinite quantum wel
 </PracticeCard>
 
 <PracticeCard type="exercise" id="ss-ch2-p2-12" title="Problem 2.12：疊加態的期望能量" source="PDF p.80 / 印刷 p.79" topic="量子態">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 4 題｜期望值：本題為能量期望值，與老師板書的通用期望值公式相關。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 原子中的電子由下列波函數描述；以下分式形式依 PDF 版面轉錄：
 
@@ -343,6 +371,9 @@ For each one-dimensional function defined over $x\to-\infty$ to $x\to+\infty$, d
 
 <PracticeCard type="practice" id="ss-ch2-sq2" title="Self Quiz 2：有限深位能井" source="PDF p.81 / 印刷 p.80" topic="量子井">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 6 題｜有限深量子井：本題是概念判斷，非老師板書所列超越方程式的數值求解。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 考慮下圖所示的有限深位能井。
 
 ![Self Quiz 2：有限深位能井](../assets/images/ch2-sq2-well.png)
@@ -398,6 +429,9 @@ Consider the potential well shown above, whose minimum potential is $0\,\text{eV
 </PracticeCard>
 
 <PracticeCard type="practice" id="ss-ch2-sq4" title="Self Quiz 4：位能障壁的反射機率" source="PDF p.82–83 / 印刷 p.81–82" topic="量子穿隧">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 10 題｜量子穿隧：比較障壁的反射機率，與穿透率相關，但題型不同。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 考慮從左側入射的量子力學粒子；兩個系統中粒子具有明確能量，能量由箭頭的垂直位置表示。對下圖兩個系統，粒子在 System 1 中被反射的機率，是否大於在 System 2 中被反射的機率？請選 yes / no / not enough information provided。
 
