@@ -68,7 +68,10 @@ export default defineConfig({
           items: [
             { text: '0001: 密勒指數與晶格幾何', link: '/solid-state/chapter1/0001-miller-indices' },
             { text: '0002: 鑽石結構與矽原子密度推導', link: '/solid-state/chapter1/0002-diamond-lattice-density' },
-            { text: '0003: 塊狀晶體生長與矽晶圓製備', link: '/solid-state/chapter1/0003-bulk-crystal-growth' }
+            { text: '0003: 塊狀晶體生長與矽晶圓製備', link: '/solid-state/chapter1/0003-bulk-crystal-growth' },
+            { text: '0004: 半導體材料、晶格與晶胞', link: '/solid-state/chapter1/0004-materials-and-lattices' },
+            { text: '0005: 磊晶生長、晶格匹配與缺陷', link: '/solid-state/chapter1/0005-epitaxial-growth' },
+            { text: '0006: 週期晶體中的波與布里淵區', link: '/solid-state/chapter1/0006-waves-in-crystals' }
           ]
         },
         {
@@ -86,6 +89,18 @@ export default defineConfig({
             { text: '0008: 量子穿隧效應', link: '/solid-state/chapter2/0008-quantum-tunneling' },
             { text: '0009: 氫原子與四個量子數', link: '/solid-state/chapter2/0009-hydrogen-atom' },
             { text: '0010: 週期表、電子組態與半導體鍵結', link: '/solid-state/chapter2/0010-periodic-table' }
+          ]
+        },
+        {
+          text: 'Chapter 3: 半導體能帶與載子',
+          collapsed: false,
+          items: [
+            { text: '章節導讀與目錄', link: '/solid-state/chapter3/' },
+            { text: '0001: 鍵結、能帶與能隙', link: '/solid-state/chapter3/0001-energy-bands' },
+            { text: '0002: 電子、電洞、摻雜與有效質量', link: '/solid-state/chapter3/0002-carriers-and-effective-mass' },
+            { text: '0003: 費米分布與平衡載子濃度', link: '/solid-state/chapter3/0003-carrier-concentrations' },
+            { text: '0004: 漂移、遷移率、電阻與霍爾效應', link: '/solid-state/chapter3/0004-drift-and-hall' },
+            { text: '0005: 熱平衡下費米能階不變', link: '/solid-state/chapter3/0005-equilibrium-fermi-level' }
           ]
         },
         {
@@ -110,7 +125,10 @@ export default defineConfig({
           text: '教材題庫 (Textbook Problems)',
           collapsed: false,
           items: [
-            { text: 'Chapter 1–2 Problems & Self Quiz（44 題）', link: '/solid-state/practice/0001-textbook-problems' }
+            { text: 'Chapter 1 Problems & Self Quiz（25 題）', link: '/solid-state/practice/0001-textbook-problems' },
+            { text: 'Chapter 2 Problems & Self Quiz（19 題）', link: '/solid-state/practice/0003-chapter2-problems' },
+            { text: 'Chapter 3 Problems & Self Quiz（34 題）', link: '/solid-state/practice/0004-chapter3-problems' },
+            { text: '第 1–3 章考前概念總檢核', link: '/solid-state/practice/0002-chapter1-3-exam-review' }
           ]
         }
       ],

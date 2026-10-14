@@ -28,17 +28,32 @@
 
 頁碼以 PDF 閱讀器頁碼為準；教材印刷頁碼通常比 PDF 閱讀頁碼少 1。
 
+## Chapter 1 與 Chapter 3 新增頁面來源
+
+| 教學頁面 | 教材段落 | PDF 閱讀頁碼 |
+| :--- | :--- | :---: |
+| [半導體材料、晶格與晶胞](/solid-state/chapter1/0004-materials-and-lattices) | §1.1–1.2.2 | 22–28 |
+| [磊晶生長、晶格匹配與缺陷](/solid-state/chapter1/0005-epitaxial-growth) | §1.4 | 38–45 |
+| [週期晶體中的波與布里淵區](/solid-state/chapter1/0006-waves-in-crystals) | §1.5 | 46–48 |
+| [鍵結、能帶與能隙](/solid-state/chapter3/0001-energy-bands) | §3.1 | 84–95 |
+| [電子、電洞、摻雜與有效質量](/solid-state/chapter3/0002-carriers-and-effective-mass) | §3.2 | 95–110 |
+| [費米分布與平衡載子濃度](/solid-state/chapter3/0003-carrier-concentrations) | §3.3 | 110–121 |
+| [漂移、遷移率、電阻與霍爾效應](/solid-state/chapter3/0004-drift-and-hall) | §3.4 | 121–132 |
+| [熱平衡下費米能階不變](/solid-state/chapter3/0005-equilibrium-fermi-level) | §3.5 | 132–133 |
+
 ## Local Workspace Inventory
 
 本次掃描 `docs/solid-state/` 全目錄後，確認固態電子專區目前包含：
 
 - `sspd-eee-swapnil.pdf`：本地教材 PDF 與 Chapter 2 主要對照來源。
 - `index.md`：VitePress 固態電子科目首頁；`index.html` 是既有的獨立靜態入口頁。
-- `chapter1/`：3 篇 VitePress 教學頁，主題為密勒指數、鑽石結構與矽晶圓製備。
+- `chapter1/`：6 篇 VitePress 教學頁，涵蓋材料、晶格、密勒指數、鑽石結構、長晶、磊晶與週期晶體中的波。
 - `chapter2/`：1 篇章節導讀與 10 篇「Atoms and Electrons」VitePress 教學頁。
+- `chapter3/`：1 篇章節導讀與 5 篇「Energy Bands and Charge Carriers in Semiconductors」VitePress 教學頁。
 - `learning-records/`：3 篇材料、晶面與晶體生長的學習摘要及推導紀錄。
 - `lessons/`：3 篇既有獨立 HTML 課程頁，對應 Chapter 1 的三個主題。
 - `reference/`：3 組密勒指數、鑽石晶格與晶體生長速查表；每組包含 Markdown，並保留既有獨立 HTML 版本。
+- `practice/`：既有第 1–2 章教材題庫，以及第 1–3 章考前概念總檢核與原創跨章計算。
 - `assets/`：晶格互動展示頁、JavaScript 檢視器與共用樣式表。
 - `MISSION.md`：科目目標、完成條件與內容範圍；`NOTES.md`：學習偏好與既有進度。
 - `AGENTS.md`：本專區的文件結構、術語、路由與公式規範。
