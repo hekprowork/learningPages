@@ -5,6 +5,18 @@
 <PracticeFilter prefix="ss-ch3-" />
 <PracticeProgress :total="34" prefix="ss-ch3-" />
 
+## 老師 2026/10/14 期中考板書對照
+
+> **判讀說明**：以下題目是與老師課堂板書**同主題的教材練習**，不是老師確認的考試原題。老師題號並非課本 Problem / Self Quiz 題號。板書來源：[Notion｜固態電子導論](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)（可能需要學校帳號權限）。
+
+- **老師第 1 題：能隙與光子波長**、**第 7 題：直接／間接能隙的 E–k 圖** — [Self Quiz 3：Si／GaAs 能帶及發光波長](#card-ss-ch3-sq3)。
+- **老師第 8 題：施主／受主摻雜、n、p、費米能階與霍爾係數** — [Problem 3.3：補償摻雜](#card-ss-ch3-p3-3)、[Problem 3.8：n、p、費米能階](#card-ss-ch3-p3-8)、[Self Quiz 6：n、p、EF−Ei](#card-ss-ch3-sq6)。霍爾部分可接續下面第 11 題。
+- **老師第 9 題：n、p 與導電率** — [Problem 3.10：平衡載子](#card-ss-ch3-p3-10)、[Problem 3.11：高溫載子](#card-ss-ch3-p3-11)、[Problem 3.12：導電率](#card-ss-ch3-p3-12)、[Problem 3.14：導電率與電流密度](#card-ss-ch3-p3-14)。
+- **老師第 11 題：霍爾效應、載子濃度與遷移率** — [Problem 3.20：霍爾濃度](#card-ss-ch3-p3-20)、[Problem 3.26：霍爾濃度／遷移率](#card-ss-ch3-p3-26)、[Self Quiz 8：量測方式](#card-ss-ch3-sq8)。
+- **老師第 12 題：部分游離** — [Problem 3.23：低溫凍結與游離施主濃度](#card-ss-ch3-p3-23)。
+- **未在這兩章找到直接對應題卡**：老師第 2 題的 Miller 指數／晶圓類型，以及第 5 題 CZ 拉晶；應另外查第 1 章及相關製程教材。
+
+
 ## Problems
 
 <PracticeCard type="exercise" id="ss-ch3-p3-1" title="Problem 3.1：GaN 的近似束縛能" source="PDF p.135 / 印刷 p.134" topic="束縛能">
@@ -38,6 +50,9 @@
 </PracticeCard>
 
 <PracticeCard type="exercise" id="ss-ch3-p3-3" title="Problem 3.3：矽基板的施體與受體摻雜" source="PDF p.135 / 印刷 p.134" topic="摻雜與載子濃度">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 8 題｜施主／受主補償摻雜：練習求電子與電洞濃度；老師還要求 $E_F-E_i$ 與霍爾係數。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 **(a)** 室溫下，一塊 Si 基板摻有 $2.70\times10^{16}\,\mathrm{cm^{-3}}$ 的施體原子。求該樣品的電子濃度與電洞濃度，並判定基板的型別。給定：$n_i=1.5\times10^{10}\,\mathrm{cm^{-3}}$、$N_c=6.0953\times10^{19}\,\mathrm{cm^{-3}}$、$E_g=1.1\,\mathrm{eV}$。
 
@@ -123,6 +138,9 @@
 
 <PracticeCard type="exercise" id="ss-ch3-p3-8" title="Problem 3.8：鍺摻砷後的平衡載子與 Fermi 能階" source="PDF p.136 / 印刷 p.135" topic="Fermi 能階">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 8、9 題｜平衡電子、電洞濃度及費米能階位置；本題未要求霍爾係數／導電率。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 考慮一塊室溫下摻有 $5\times10^{15}\,\mathrm{cm^{-3}}$ 砷（As）原子的 Ge 晶體。求平衡電子濃度、電洞濃度，以及 Fermi 能階相對於本質能階 $E_i$ 與導帶能階 $E_c$ 的位置。另請繪製能帶圖。
 
 **English:**  Consider a Ge crystal at room temperature doped with $5\times10^{15}\,\mathrm{cm^{-3}}$ As atoms. Find the equilibrium electron and hole concentrations, and the position of the Fermi level with respect to the intrinsic energy level ($E_i$) and conduction-band energy ($E_c$). Draw the energy-band diagram also.
@@ -153,6 +171,9 @@
 
 <PracticeCard type="exercise" id="ss-ch3-p3-10" title="Problem 3.10：低濃度砷摻雜 Ge 的電洞濃度" source="PDF p.136 / 印刷 p.135" topic="補償與載子濃度">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 8、9 題｜摻雜後電洞濃度、費米能階：對應載子濃度計算部分。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 一塊 Ge 樣品摻有 $10^{14}\,\mathrm{cm^{-3}}$ 的砷（As）原子。平衡電洞濃度為何？Fermi 能階相對於本質能階的位置為何？
 
 給定：$n_i=2.5\times10^{13}\,\mathrm{cm^{-3}}$。
@@ -171,6 +192,9 @@ Given: $n_i=2.5\times10^{13}\,\mathrm{cm^{-3}}$.
 
 <PracticeCard type="exercise" id="ss-ch3-p3-11" title="Problem 3.11：高溫新型半導體的載子濃度" source="PDF p.136 / 印刷 p.135" topic="高溫載子統計">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 9 題｜由摻雜和溫度求電子、電洞濃度；與載子濃度公式相關。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 某種新半導體具有 $N_c=10^{19}\,\mathrm{cm^{-3}}$、$N_v=5\times10^{18}\,\mathrm{cm^{-3}}$，以及 $E_g=2\,\mathrm{eV}$。若摻入 $10^{17}$ 個施體（完全游離），請在 $627\,^{\circ}\mathrm{C}$ 下計算電子濃度、電洞濃度與本質載子濃度。繪製簡化能帶圖，並標示 $E_F$ 的位置。
 
 **English:**  A new semiconductor has $N_c=10^{19}\,\mathrm{cm^{-3}}$, $N_v=5\times10^{18}\,\mathrm{cm^{-3}}$, and $E_g=2\,\mathrm{eV}$. If it is doped with $10^{17}$ donors (fully ionized), calculate the electron, hole, and intrinsic carrier concentrations at $627\,^{\circ}\mathrm{C}$. Sketch the simplified band diagram, showing the position of $E_F$.
@@ -184,6 +208,9 @@ Given: $n_i=2.5\times10^{13}\,\mathrm{cm^{-3}}$.
 </PracticeCard>
 
 <PracticeCard type="exercise" id="ss-ch3-p3-12" title="Problem 3.12：半導體的最小導電率" source="PDF p.136 / 印刷 p.135" topic="導電率">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 9 題｜導電率：本題從電子／電洞遷移率探討最小導電率。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 **(a)** 證明半導體樣品的最小導電率發生在
 
@@ -234,6 +261,9 @@ $$
 </PracticeCard>
 
 <PracticeCard type="exercise" id="ss-ch3-p3-14" title="Problem 3.14：摻雜與幾何尺寸對導電的影響" source="PDF p.136 / 印刷 p.135" topic="導電率與電流密度">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 9 題｜導電率：討論摻雜濃度與幾何尺寸改變時的導電率及電流密度。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 在一根 n 型半導體矩形棒中，若棒長變為原來的四倍，而摻雜濃度降為原來的一半；在外加電壓保持不變時，導電率與通過棒的電流密度將如何改變？
 
@@ -327,6 +357,9 @@ Sketch the simplified band diagram, properly labeling positions, energies, and d
 
 <PracticeCard type="exercise" id="ss-ch3-p3-20" title="Problem 3.20：霍爾效應判定摻雜型態與濃度" source="PDF p.137 / 印刷 p.136" topic="霍爾效應">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 8、11 題｜霍爾效應：由霍爾電壓推回樣品型別與摻雜濃度；題型與老師板書的霍爾係數／載子濃度相關。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 一個厚度 $3\,\mathrm{mm}$ 的摻雜矽樣品 A，在電流密度 $J=300\,\mathrm{A/m^2}$、磁場 $B_z=1\,\mathrm{Wb/m^2}$ 下，量得霍爾電壓 $V_y=3\,\mathrm{mV}$。求半導體類型與摻雜濃度。
 
 **English:** A doped Si sample A of thickness $3\,\mathrm{mm}$ shows a Hall voltage of $V_y=3\,\mathrm{mV}$ for current density $J=300\,\mathrm{A/m^2}$ under a magnetic field of $B_z=1\,\mathrm{Wb/m^2}$. Find the type of semiconductor and the doping concentration.
@@ -409,6 +442,9 @@ where $c_1=1.9\times10^{12}\,\mathrm{dyne\,cm^{-2}}$ for Si and the conduction-b
 
 <PracticeCard type="exercise" id="ss-ch3-p3-23" title="Problem 3.23：考慮凍結效應的遷移率計算" source="PDF p.138 / 印刷 p.137" topic="載子凍結">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 12 題｜部分游離：低溫載子凍結、施主不完全游離的直接相關練習。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 重新處理問題 3.22，考慮低溫時載子凍結回施體的效應，即將離化雜質濃度取為
 
 $$
@@ -475,6 +511,9 @@ where the donor ionization energy for Si is $E_d=45\,\mathrm{meV}$.
 
 <PracticeCard type="exercise" id="ss-ch3-p3-26" title="Problem 3.26：霍爾量測的載子型態、濃度與遷移率" source="PDF p.139 / 印刷 p.138" topic="霍爾效應">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 11 題｜霍爾量測：由量測結果求載子型態、濃度與遷移率，與板書要求高度相關。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 考慮一根寬度 $0.02\,\mathrm{cm}$、厚度 $8\,\mu\mathrm{m}$、長度 $0.6\,\mathrm{cm}$ 的矽棒。霍爾量測時，$z$ 方向產生的磁場為 $10^{-5}\,\mathrm{Wb/cm^2}$，電流為 $0.8\,\mathrm{mA}$。若兩端電壓為 $+1\,\mathrm{mV}$，且 $V_{CD}=50\,\mathrm{mV}$，求多數載子的型態、濃度與遷移率。
 
 **English:** Consider a Si bar with width $0.02\,\mathrm{cm}$, thickness $8\,\mu\mathrm{m}$, and length $0.6\,\mathrm{cm}$. During a Hall measurement, the magnetic field generated in the $z$ direction is $10^{-5}\,\mathrm{Wb/cm^2}$ and the current is $0.8\,\mathrm{mA}$. If the voltage at the two ends is $+1\,\mathrm{mV}$ and $V_{CD}=50\,\mathrm{mV}$, find the type, concentration, and mobility of the majority carriers.
@@ -535,6 +574,9 @@ where the donor ionization energy for Si is $E_d=45\,\mathrm{meV}$.
 
 <PracticeCard type="practice" id="ss-ch3-sq3" title="Self Quiz 3：矽與砷化鎵的能帶結構" source="PDF p.141 / 印刷 p.140" topic="直接與間接能隙">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 1、7 題｜能隙與波長、直接／間接能隙：本題比較 Si／GaAs 的能帶、發光效率與波長；老師第 7 題另要求**繪製 E–k 圖**。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 以下問題參照 **Fig. 3–10** 所示的矽與 GaAs 能帶結構。
 
 **(a)** 哪一種材料看起來具有較小的（導帶）電子有效質量，矽或 GaAs？
@@ -593,6 +635,9 @@ where the donor ionization energy for Si is $E_d=45\,\mathrm{meV}$.
 
 <PracticeCard type="practice" id="ss-ch3-sq5" title="Self Quiz 5：摻雜半導體的平衡能帶圖" source="PDF pp.141–142 / 印刷 pp.140–141" topic="費米能階與摻雜">
 
+> **課堂板書重點對照（同主題、非原題）**：老師第 8 題｜受主／施主摻雜及費米能階：本題以能帶圖判斷型別，非求 n、p 與霍爾係數的數值題。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
+
 下方為摻雜直接能隙半導體的平衡能帶圖，其中包含本徵費米能階 $E_i$、費米能階 $E_F$、受體能階 $E_a$、施體能階 $E_d$、價帶邊緣 $E_V$ 與導帶邊緣 $E_C$。
 
 **(a)** 該半導體是 n 型、p 型，還是資訊不足？圈選一項：n 型／p 型／資訊不足。
@@ -624,6 +669,9 @@ where the donor ionization energy for Si is $E_d=45\,\mathrm{meV}$.
 </PracticeCard>
 
 <PracticeCard type="practice" id="ss-ch3-sq6" title="Self Quiz 6：本徵濃度、摻雜與費米能階" source="PDF p.142 / 印刷 p.141" topic="載子濃度">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 8、9 題｜補償摻雜、n、p 及 $E_F-E_i$：與老師第 8 題的多項要求直接相關，霍爾係數須另練習。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 某假想半導體在 $300\,\mathrm{K}$ 的本徵載子濃度為 $1.0\times10^{10}\,\mathrm{cm^{-3}}$，導帶與價帶的有效態密度 $N_c$ 與 $N_v$ 均為 $10^{19}\,\mathrm{cm^{-3}}$。
 
@@ -668,6 +716,9 @@ where the donor ionization energy for Si is $E_d=45\,\mathrm{meV}$.
 </PracticeCard>
 
 <PracticeCard type="practice" id="ss-ch3-sq8" title="Self Quiz 8：高電場遷移率與量測" source="PDF p.142 / 印刷 p.141" topic="遷移率量測">
+
+> **課堂板書重點對照（同主題、非原題）**：老師第 11 題｜霍爾效應：本題詢問量測載子濃度與遷移率的方法，和板書的兩項要求一致。 [查看 Notion 板書來源](https://app.notion.com/p/22f038339615421bb7da2c870c0e8997)。
+
 
 **(a)** 在非常高的電場下，遷移率是否仍有意義？為什麼？
 
