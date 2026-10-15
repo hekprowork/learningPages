@@ -28,31 +28,20 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr1" type="practice" title="Practice Problem 1.1：由電荷求電流" source="課本 p.14" topic="電流與電荷">
+<PracticeCard id="ch1-pr2" type="practice" title="Practice Problem 1.2：質子所代表的電荷" source="課本 p.14" topic="電荷">
 
-在 Example 1.2 的情境中，若進入端點的總電荷為
-
-$$
-q=(20-15t-10e^{-3t})\,\mathrm{mC},
-$$
-
-求 $t=1.0\,\mathrm{s}$ 時的電流。
+求 $100$ 億個質子所代表的電荷量。
 
 <template #solution>
 
-由 $i=dq/dt$：
+每個質子的電荷為 $+1.6021\times10^{-19}\,\mathrm{C}$，而 $100$ 億為 $10^{10}$；因此
 
 $$
-i(t)=\left(-15+30e^{-3t}\right)\,\mathrm{mA}.
+q=(10^{10})(1.6021\times10^{-19})
+=1.6021\times10^{-9}\,\mathrm{C}.
 $$
 
-代入 $t=1.0\,\mathrm{s}$：
-
-$$
-i(1)=-15+30e^{-3}=-13.506\,\mathrm{mA}.
-$$
-
-負號表示實際電流方向與「進入端點」的參考方向相反。課本答案：$-13.506\,\mathrm{mA}$。
+課本答案：$1.6021\times10^{-9}\,\mathrm{C}$。
 
 </template>
 
@@ -89,20 +78,31 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-pr2" type="practice" title="Practice Problem 1.2：質子所代表的電荷" source="課本 p.14" topic="電荷">
+<PracticeCard id="ch1-pr1" type="practice" title="Practice Problem 1.1：由電荷求電流" source="課本 p.14" topic="電流與電荷">
 
-求 $100$ 億個質子所代表的電荷量。
+在 Example 1.2 的情境中，若進入端點的總電荷為
+
+$$
+q=(20-15t-10e^{-3t})\,\mathrm{mC},
+$$
+
+求 $t=1.0\,\mathrm{s}$ 時的電流。
 
 <template #solution>
 
-每個質子的電荷為 $+1.6021\times10^{-19}\,\mathrm{C}$，而 $100$ 億為 $10^{10}$；因此
+由 $i=dq/dt$：
 
 $$
-q=(10^{10})(1.6021\times10^{-19})
-=1.6021\times10^{-9}\,\mathrm{C}.
+i(t)=\left(-15+30e^{-3t}\right)\,\mathrm{mA}.
 $$
 
-課本答案：$1.6021\times10^{-9}\,\mathrm{C}$。
+代入 $t=1.0\,\mathrm{s}$：
+
+$$
+i(1)=-15+30e^{-3}=-13.506\,\mathrm{mA}.
+$$
+
+負號表示實際電流方向與「進入端點」的參考方向相反。課本答案：$-13.506\,\mathrm{mA}$。
 
 </template>
 
@@ -562,7 +562,6 @@ $$
 </template>
 
 </PracticeCard>
-## 教材直接來源補齊
 
 <PracticeCard id="ch1-pr10" type="practice" title="Practice Problem 1.10：練習問題解決流程" source="課本 p.28" topic="問題解決流程">
 
