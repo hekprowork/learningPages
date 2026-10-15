@@ -15,7 +15,7 @@ description: 電路學第二章 基礎電路定律 (Basic Laws) 互動題庫、�
 :::
 
 <PracticeFilter prefix="ch2-" />
-<PracticeProgress :total="110" prefix="ch2-" />
+<PracticeProgress :total="117" prefix="ch2-" />
 
 <PracticeCard id="ch2-ex-2-1" type="example" title="電熨斗等效電阻計算" source="Example 2.1 · Slide P17" topic="歐姆定律與電導">
 
@@ -1424,447 +1424,836 @@ $$R_1\approx50\text{ m}\Omega,\quad R_2=505\text{ m}\Omega,\quad R_3=5.556\ \Ome
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch2-hw-section" type="homework" title="第二章 課堂指定作業習題與重點解答提示" source="Homework 清單 · Slide P93-94" topic="課後作業清單">
-
-課堂指定之課後作業題號清單，包含簡報所提供之解答提示（P22: $V_o = -11.905\text{ V}, P_{\text{dep}} = 566.9\text{ W}$；P38: $R_{eq} = 10\ \Omega, i_o = 3.5\text{ A}$）。
-
-*Chapter 2 Textbook Homework Problems: #8, 11, 15, 22, 31, 38, 47, 55.*
-
-- Prob #8
-- Prob #11
-- Prob #15
-- Prob #22 
-- Prob #31
-- Prob #38 
-- Prob #47
-- Prob #55
-
-> **求解目標：課本課後習題自主演練**
-
-<template #solution>
-
-#### 逐步解析：
-
-- **Prob #22 簡報提示**：$V_o = -11.905\text{ V},\quad P_{\text{dependent source}} = 566.9\text{ W}$
-
-- **Prob #38 簡報提示**：$R_{eq} = 10\ \Omega,\quad i_o = 3.5\text{ A}$
-
-- 其餘指定題號（#8, #11, #15, #31, #47, #55）請參考課本對應習題，循序應用歐姆定律、KCL、KVL 與串並聯公式練習。
-
-::: tip 標準答案
-$$\text{指定題號：\#8, \#11, \#15, \#22, \#31, \#38, \#47, \#55}$$
-:::
-
-</template>
-</PracticeCard>
 
 
-## 課本章末習題：Problems 2.1–2.75
+## 課本章末習題：Problems 2.1–2.83
 
-以下依原書題號排列。每題保留原題敘述、電路圖與標示；需要自行設計題目的題型亦照原文呈現。來源為《Fundamentals of Electric Circuits》Chapter 2，印刷頁 65–76（PDF 第 71–82 頁）。
+以下依原書題號排列。每題保留原題敘述、電路圖與標示；需要自行設計題目的題型亦照原文呈現。來源為《Fundamentals of Electric Circuits》Chapter 2，印刷頁 65–78（PDF 第 71–84 頁）。
 
-<!-- Chapter-end textbook problems 2.1–2.75 -->
+<!-- Chapter-end textbook problems 2.1–2.83 -->
 
 <PracticeCard id="ch2-problem-2-1" type="exercise" title="課本習題 2.1" source="課本 Chapter 2 · Problems 2.1 · 印刷頁 65" topic="歐姆定律">
 
 ![課本 Chapter 2 習題 2.1 原題與電路圖](../assets/images/ch2_problem_2_01.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.1 標準答案原文](../assets/images/ch2_appendix_answer_2_01.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-2" type="exercise" title="課本習題 2.2" source="課本 Chapter 2 · Problems 2.2 · 印刷頁 65" topic="歐姆定律">
 
 ![課本 Chapter 2 習題 2.2 原題與電路圖](../assets/images/ch2_problem_2_02.png)
 
+<template #solution>
+
+**自行推導：** 由額定值 $P=V^2/R$，得 $R=120^2/60=240\ \Omega$。回代：$120^2/240=60\text{ W}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-3" type="exercise" title="課本習題 2.3" source="課本 Chapter 2 · Problems 2.3 · 印刷頁 65" topic="歐姆定律">
 
 ![課本 Chapter 2 習題 2.3 原題與電路圖](../assets/images/ch2_problem_2_03.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.3 標準答案原文](../assets/images/ch2_appendix_answer_2_03.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-4" type="exercise" title="課本習題 2.4" source="課本 Chapter 2 · Problems 2.4 · 印刷頁 66" topic="歐姆定律">
 
 ![課本 Chapter 2 習題 2.4 原題與電路圖](../assets/images/ch2_problem_2_04.png)
 
+<template #solution>
+
+**自行推導：** 開關接 1 時只有 $100\ \Omega$ 支路，$i=40/100=0.4\text{ A}$；接 2 時只有 $250\ \Omega$ 支路，$i=40/250=0.16\text{ A}$。兩者均符合 $40-iR=0$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-5" type="exercise" title="課本習題 2.5" source="課本 Chapter 2 · Problems 2.5 · 印刷頁 66" topic="節點、支路與迴路">
 
 ![課本 Chapter 2 習題 2.5 原題與電路圖](../assets/images/ch2_problem_2_05.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.5 標準答案原文](../assets/images/ch2_appendix_answer_2_05.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-6" type="exercise" title="課本習題 2.6" source="課本 Chapter 2 · Problems 2.6 · 印刷頁 66" topic="節點、支路與迴路">
 
 ![課本 Chapter 2 習題 2.6 原題與電路圖](../assets/images/ch2_problem_2_06.png)
 
+<template #solution>
+
+**自行推導：** 依圖中紅點辨識，共有 **8 個節點**；逐段數相鄰節點間的支路，共 **15 條支路**。作為拓撲檢查，獨立迴路數 $l=b-n+1=15-8+1=8$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-7" type="exercise" title="課本習題 2.7" source="課本 Chapter 2 · Problems 2.7 · 印刷頁 66" topic="節點、支路與迴路">
 
 ![課本 Chapter 2 習題 2.7 原題與電路圖](../assets/images/ch2_problem_2_07.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.7 標準答案原文](../assets/images/ch2_appendix_answer_2_07.png)
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-8" type="exercise" title="課本習題 2.8" source="課本 Chapter 2 · Problems 2.8 · 印刷頁 66" topic="KCL 與 KVL">
+<PracticeCard id="ch2-problem-2-8" type="exercise" title="課本習題 2.8" source="課本 Chapter 2 · Problems 2.8 · 印刷頁 66" topic="老師指定練習 · KCL 與 KVL">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.8 原題與電路圖](../assets/images/ch2_problem_2_08.png)
 
+<template #solution>
+
+**自行推導：** 本題為開放式設計題。一個有效例子：指定 $i_a=2\text{ A}$、$i_b=5\text{ A}$、$i_c=8\text{ A}$。由左上節點 KCL，$i_1=i_b-i_a=3\text{ A}$；由下方左節點，$i_2=i_c-i_b=3\text{ A}$；由中間節點，$i_3=i_1+i_2=6\text{ A}$。驗算右下節點：$i_a+i_3=2+6=8=i_c$，殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-9" type="exercise" title="課本習題 2.9" source="課本 Chapter 2 · Problems 2.9 · 印刷頁 66" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.9 原題與電路圖](../assets/images/ch2_problem_2_09.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.9 標準答案原文](../assets/images/ch2_appendix_answer_2_09.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-10" type="exercise" title="課本習題 2.10" source="課本 Chapter 2 · Problems 2.10 · 印刷頁 66" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.10 原題與電路圖](../assets/images/ch2_problem_2_10.png)
 
+<template #solution>
+
+**自行推導：** 外左支路標示 $-8\text{ A}$，表示實際有 $8\text{ A}$ 從頂點往左下；底支路 $-6\text{ A}$ 表示實際有 $6\text{ A}$ 從右下往左下。左下 KCL：$-i_1=8+6$，故 $i_1=-14\text{ A}$。右下 KCL：$i_2=4+6=10\text{ A}$。頂點驗算：$-8+4=-14+10=-4\text{ A}$。
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-11" type="exercise" title="課本習題 2.11" source="課本 Chapter 2 · Problems 2.11 · 印刷頁 66" topic="KCL 與 KVL">
+<PracticeCard id="ch2-problem-2-11" type="exercise" title="課本習題 2.11" source="課本 Chapter 2 · Problems 2.11 · 印刷頁 66" topic="老師指定練習 · KCL 與 KVL">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.11 原題與電路圖](../assets/images/ch2_problem_2_11.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.11 標準答案原文](../assets/images/ch2_appendix_answer_2_11.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-12" type="exercise" title="課本習題 2.12" source="課本 Chapter 2 · Problems 2.12 · 印刷頁 67" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.12 原題與電路圖](../assets/images/ch2_problem_2_12.png)
 
+<template #solution>
+
+**自行推導：** 以下方導線為 $0\text{ V}$。左端上節點為 $40\text{ V}$；跨過標示 $-50\text{ V}+$ 的元件後為 $90\text{ V}$；再跨 $+20\text{ V}-$ 後為 $70\text{ V}$，故 $v_1=70\text{ V}$。上方 $+30\text{ V}-$ 元件使右端節點為 $90-30=60\text{ V}$，故 $v_3=60\text{ V}$、$v_2=70-60=10\text{ V}$。逐段電壓差回代均與圖示極性一致。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-13" type="exercise" title="課本習題 2.13" source="課本 Chapter 2 · Problems 2.13 · 印刷頁 67" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.13 原題與電路圖](../assets/images/ch2_problem_2_13.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.13 標準答案原文](../assets/images/ch2_appendix_answer_2_13.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-14" type="exercise" title="課本習題 2.14" source="課本 Chapter 2 · Problems 2.14 · 印刷頁 67" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.14 原題與電路圖](../assets/images/ch2_problem_2_14.png)
 
+<template #solution>
+
+**自行推導：** 以下方導線為 $0\text{ V}$。左中節點由 $4\text{ V}$ 的極性得 $-4\text{ V}$，上方節點為 $-1\text{ V}$；右中節點為 $5\text{ V}$；中央節點因 $+2\text{ V}-$ 為 $7\text{ V}$。故 $V_1=-1-7=-8\text{ V}$、$V_2=5-(-1)=6\text{ V}$、$V_3=-4-7=-11\text{ V}$、$V_4=7\text{ V}$。各支路電壓均由同一組節點電位回算，KVL 殘差為零。
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-15" type="exercise" title="課本習題 2.15" source="課本 Chapter 2 · Problems 2.15 · 印刷頁 67" topic="KCL 與 KVL">
+<PracticeCard id="ch2-problem-2-15" type="exercise" title="課本習題 2.15" source="課本 Chapter 2 · Problems 2.15 · 印刷頁 67" topic="老師指定練習 · KCL 與 KVL">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.15 原題與電路圖](../assets/images/ch2_problem_2_15.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.15 標準答案原文](../assets/images/ch2_appendix_answer_2_15.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-16" type="exercise" title="課本習題 2.16" source="課本 Chapter 2 · Problems 2.16 · 印刷頁 67" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.16 原題與電路圖](../assets/images/ch2_problem_2_16.png)
 
+<template #solution>
+
+**自行推導：** 兩電源上端分別為 $10\text{ V}$ 與 $25\text{ V}$。流經上方兩電阻的電流從右往左，大小 $(25-10)/(16+14)=0.5\text{ A}$；中點電壓 $V_o=10+(0.5)(16)=18\text{ V}$。驗算：$25-(0.5)(14)=18$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-17" type="exercise" title="課本習題 2.17" source="課本 Chapter 2 · Problems 2.17 · 印刷頁 67" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.17 原題與電路圖](../assets/images/ch2_problem_2_17.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.17 標準答案原文](../assets/images/ch2_appendix_answer_2_17.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-18" type="exercise" title="課本習題 2.18" source="課本 Chapter 2 · Problems 2.18 · 印刷頁 67" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.18 原題與電路圖](../assets/images/ch2_problem_2_18.png)
 
+<template #solution>
+
+**自行推導：** 沿圖示 $I$ 方向套 KVL：$30+10-8-(3+5)I=0$，故 $I=4\text{ A}$。由右端 $8\text{ V}$ 電源往左回推，$V_{ab}=8+5I=28\text{ V}$。驗算：$30+10-3(4)=28$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-19" type="exercise" title="課本習題 2.19" source="課本 Chapter 2 · Problems 2.19 · 印刷頁 67" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.19 原題與電路圖](../assets/images/ch2_problem_2_19.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.19 標準答案原文](../assets/images/ch2_appendix_answer_2_19.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-20" type="exercise" title="課本習題 2.20" source="課本 Chapter 2 · Problems 2.20 · 印刷頁 68" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.20 原題與電路圖](../assets/images/ch2_problem_2_20.png)
 
+<template #solution>
+
+**自行推導：** 沿圖示 $i_o$ 方向寫 KVL：$54-22i_o-5i_o=0$，故 $i_o=2\text{ A}$。回代 $54-44-10=0\text{ V}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-21" type="exercise" title="課本習題 2.21" source="課本 Chapter 2 · Problems 2.21 · 印刷頁 68" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.21 原題與電路圖](../assets/images/ch2_problem_2_21.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.21 標準答案原文](../assets/images/ch2_appendix_answer_2_21.png)
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-22" type="exercise" title="課本習題 2.22" source="課本 Chapter 2 · Problems 2.22 · 印刷頁 68" topic="KCL 與 KVL">
+<PracticeCard id="ch2-problem-2-22" type="exercise" title="課本習題 2.22" source="課本 Chapter 2 · Problems 2.22 · 印刷頁 68" topic="老師指定練習 · KCL 與 KVL">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.22 原題與電路圖](../assets/images/ch2_problem_2_22.png)
 
+<template #solution>
+
+**自行推導：** 設左側上節點為 $V_A$、右側上節點為 $V_B$，則 $V_o=V_A-V_B$。左節點 KCL：$V_A/10+(V_A-V_B)/10=0$，故 $V_B=2V_A$。右節點 KCL：$(V_B-V_A)/10-25-2V_o=0$，代入得 $V_A=250/21\approx11.905\text{ V}$、$V_B=500/21\approx23.810\text{ V}$，所以 $V_o=-250/21\approx-11.905\text{ V}$。受控源箭頭向上但 $2V_o=-500/21\text{ A}$，實際向下，吸收功率 $P=V_B(-2V_o)=250000/441\approx566.9\text{ W}$。回代左、右 KCL 殘差均為零，與老師簡報 CH002（PDF 第 94 頁）的 P22 提示一致。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-23" type="exercise" title="課本習題 2.23" source="課本 Chapter 2 · Problems 2.23 · 印刷頁 68" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.23 原題與電路圖](../assets/images/ch2_problem_2_23.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.23 標準答案原文](../assets/images/ch2_appendix_answer_2_23.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-24" type="exercise" title="課本習題 2.24" source="課本 Chapter 2 · Problems 2.24 · 印刷頁 68" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.24 原題與電路圖](../assets/images/ch2_problem_2_24.png)
 
+<template #solution>
+
+**自行推導：** 左側迴路 $I_o=V_s/(R_1+R_2)$。右側受控電流源使輸出節點電壓 $V_o=-\alpha I_o(R_3\parallel R_4)$，所以 $V_o/V_s=-\alpha(R_3\parallel R_4)/(R_1+R_2)$。若四個電阻皆為 $R$，則 $V_o/V_s=-\alpha/4$；欲使 $|V_o/V_s|=10$，需 $\alpha=40$。回代得 $-10$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-25" type="exercise" title="課本習題 2.25" source="課本 Chapter 2 · Problems 2.25 · 印刷頁 68" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.25 原題與電路圖](../assets/images/ch2_problem_2_25.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.25 標準答案原文](../assets/images/ch2_appendix_answer_2_25.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-26" type="exercise" title="課本習題 2.26" source="課本 Chapter 2 · Problems 2.26 · 印刷頁 68" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.26 原題與電路圖](../assets/images/ch2_problem_2_26.png)
 
+<template #solution>
+
+**自行推導：** $16\ \Omega$ 支路電流 $i_o=3\text{ A}$，故並聯部分電壓 $V=16(3)=48\text{ V}$。其餘支路電流依次為 $48/8=6$、$48/4=12$、$48/2=24\text{ A}$，所以 $i_x=6+12+24+3=45\text{ A}$。全電路電阻吸收功率 $10(45)^2+48(45)=22{,}410\text{ W}$。驗算：各並聯支路壓降皆為 $48\text{ V}$，KCL 殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-27" type="exercise" title="課本習題 2.27" source="課本 Chapter 2 · Problems 2.27 · 印刷頁 68" topic="KCL 與 KVL">
 
 ![課本 Chapter 2 習題 2.27 原題與電路圖](../assets/images/ch2_problem_2_27.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.27 標準答案原文](../assets/images/ch2_appendix_answer_2_27.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-28" type="exercise" title="課本習題 2.28" source="課本 Chapter 2 · Problems 2.28 · 印刷頁 69" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.28 原題與電路圖](../assets/images/ch2_problem_2_28.png)
 
+<template #solution>
+
+**自行推導：** 本題為開放式設計題。一個有效例子：設定 $V_s=12\text{ V}$、$R_1=2\ \Omega$、$R_2=6\ \Omega$、$R_3=3\ \Omega$。並聯等效 $R_2\parallel R_3=2\ \Omega$，總電阻 $4\ \Omega$，源電流 $3\text{ A}$。因此 $v_1=6\text{ V}$，$v_2=v_3=6\text{ V}$；支路電流為 $1\text{ A}$ 與 $2\text{ A}$。驗算：$3=1+2\text{ A}$，$12=6+6\text{ V}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-29" type="exercise" title="課本習題 2.29" source="課本 Chapter 2 · Problems 2.29 · 印刷頁 69" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.29 原題與電路圖](../assets/images/ch2_problem_2_29.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 931 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.29 標準答案原文](../assets/images/ch2_appendix_answer_2_29.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-30" type="exercise" title="課本習題 2.30" source="課本 Chapter 2 · Problems 2.30 · 印刷頁 69" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.30 原題與電路圖](../assets/images/ch2_problem_2_30.png)
 
+<template #solution>
+
+**自行推導：** 由圖，$180\ \Omega$ 與中間 $60\ \Omega$ 串聯成 $240\ \Omega$；此路與右側 $60\ \Omega$ 並聯，得 $240\parallel60=48\ \Omega$；再與左側 $25\ \Omega$ 串聯，故 $R_{eq}=73\ \Omega$。
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-31" type="exercise" title="課本習題 2.31" source="課本 Chapter 2 · Problems 2.31 · 印刷頁 69" topic="串並聯與等效電阻">
+<PracticeCard id="ch2-problem-2-31" type="exercise" title="課本習題 2.31" source="課本 Chapter 2 · Problems 2.31 · 印刷頁 69" topic="老師指定練習 · 串並聯與等效電阻">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.31 原題與電路圖](../assets/images/ch2_problem_2_31.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.31 標準答案原文](../assets/images/ch2_appendix_answer_2_31.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-32" type="exercise" title="課本習題 2.32" source="課本 Chapter 2 · Problems 2.32 · 印刷頁 69" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.32 原題與電路圖](../assets/images/ch2_problem_2_32.png)
 
+<template #solution>
+
+**自行推導：** 左右兩組分別為 $60\parallel40=24\ \Omega$ 與 $200\parallel50=40\ \Omega$，都接在中央節點與下方節點之間。設中央節點電壓為 $V$，KCL：$V/24+V/40+16=0$，得 $V=-240\text{ V}$。依圖示箭頭，$i_1=V/50=-4.8\text{ A}$、$i_2=V/200=-1.2\text{ A}$、$i_3=V/40=-6\text{ A}$、$i_4=V/60=-4\text{ A}$。回代 $-4.8-1.2-6-4+16=0$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-33" type="exercise" title="課本習題 2.33" source="課本 Chapter 2 · Problems 2.33 · 印刷頁 69" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.33 原題與電路圖](../assets/images/ch2_problem_2_33.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.33 標準答案原文](../assets/images/ch2_appendix_answer_2_33.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-34" type="exercise" title="課本習題 2.34" source="課本 Chapter 2 · Problems 2.34 · 印刷頁 69" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.34 原題與電路圖](../assets/images/ch2_problem_2_34.png)
 
+<template #solution>
+
+**自行推導：** 取電源負端為 $0\text{ V}$，正端為 $200\text{ V}$。按圖中接點列 KCL，依序求得上方 $20,28,60\ \Omega$ 後的節點電位為 $160,132,102\text{ V}$，下方兩內部節點為 $52,62\text{ V}$。電源電流 $(200-160)/20=2\text{ A}$，故 $R_{eq}=200/2=100\ \Omega$；總電阻吸收功率 $P=200(2)=400\text{ W}$。以此節點電位回代各節點 KCL，殘差均為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-35" type="exercise" title="課本習題 2.35" source="課本 Chapter 2 · Problems 2.35 · 印刷頁 69" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.35 原題與電路圖](../assets/images/ch2_problem_2_35.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.35 標準答案原文](../assets/images/ch2_appendix_answer_2_35.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-36" type="exercise" title="課本習題 2.36" source="課本 Chapter 2 · Problems 2.36 · 印刷頁 70" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.36 原題與電路圖](../assets/images/ch2_problem_2_36.png)
 
+<template #solution>
+
+**自行推導：** 取電源負端為 $0\text{ V}$，正端為 $20\text{ V}$。由右往左化簡：$50+30=80\ \Omega$，與直下 $20\ \Omega$ 並聯為 $16\ \Omega$，再加 $24\ \Omega$ 為 $40\ \Omega$；另一支路為 $25+(60\parallel20)=25+15=40\ \Omega$。兩支路並聯為 $20\ \Omega$，再加左端 $80\ \Omega$，全電路 $100\ \Omega$，故 $i=20/100=0.2\text{ A}$。左端 $80\ \Omega$ 後節點為 $4\text{ V}$，經右側 $40\ \Omega$ 支路電流 $0.1\text{ A}$，再經 $24\ \Omega$ 後為 $1.6\text{ V}$；$50+30$ 支路電流 $1.6/80=0.02\text{ A}$，所以 $V_o=0.02(30)=0.6\text{ V}$。回代入口 KCL：$0.2=0.1+0.1$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-37" type="exercise" title="課本習題 2.37" source="課本 Chapter 2 · Problems 2.37 · 印刷頁 70" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.37 原題與電路圖](../assets/images/ch2_problem_2_37.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.37 標準答案原文](../assets/images/ch2_appendix_answer_2_37.png)
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-38" type="exercise" title="課本習題 2.38" source="課本 Chapter 2 · Problems 2.38 · 印刷頁 70" topic="串並聯與等效電阻">
+<PracticeCard id="ch2-problem-2-38" type="exercise" title="課本習題 2.38" source="課本 Chapter 2 · Problems 2.38 · 印刷頁 70" topic="老師指定練習 · 串並聯與等效電阻">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.38 原題與電路圖](../assets/images/ch2_problem_2_38.png)
 
+<template #solution>
+
+**自行推導：** 在 $2.5\ \Omega$ 後的節點，$6\parallel12=4\ \Omega$，右側 $20\parallel80=16\ \Omega$，該路總共 $4+16=20\ \Omega$。此路與 $15\ \Omega$、上方 $60\ \Omega$ 三路並聯，得 $R_{\text{後段}}=15\parallel20\parallel60=7.5\ \Omega$；與入口 $2.5\ \Omega$ 串聯，故 $R_{eq}=10\ \Omega$，$i_o=35/10=3.5\text{ A}$。回代入口壓降 $2.5(3.5)=8.75\text{ V}$、後段 $7.5(3.5)=26.25\text{ V}$，兩者和 $35\text{ V}$，與老師簡報 CH002（PDF 第 94 頁）的 P38 提示一致。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-39" type="exercise" title="課本習題 2.39" source="課本 Chapter 2 · Problems 2.39 · 印刷頁 70" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.39 原題與電路圖](../assets/images/ch2_problem_2_39.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.39 標準答案原文](../assets/images/ch2_appendix_answer_2_39.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-40" type="exercise" title="課本習題 2.40" source="課本 Chapter 2 · Problems 2.40 · 印刷頁 70" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.40 原題與電路圖](../assets/images/ch2_problem_2_40.png)
 
+<template #solution>
+
+**自行推導：** 由最右端回推：$1+2=3\ \Omega$，與 $6\ \Omega$ 並聯得 $2\ \Omega$；加上前方 $2\ \Omega$ 為 $4\ \Omega$，與 $4\ \Omega$ 並聯得 $2\ \Omega$；再加 $8\ \Omega$，故 $R_{eq}=10\ \Omega$，$I=15/10=1.5\text{ A}$。回代 $IR_{eq}=15\text{ V}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-41" type="exercise" title="課本習題 2.41" source="課本 Chapter 2 · Problems 2.41 · 印刷頁 70" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.41 原題與電路圖](../assets/images/ch2_problem_2_41.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.41 標準答案原文](../assets/images/ch2_appendix_answer_2_41.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-42" type="exercise" title="課本習題 2.42" source="課本 Chapter 2 · Problems 2.42 · 印刷頁 70" topic="串並聯與等效電阻">
 
-![課本 Chapter 2 習題 2.42 原題與電路圖](../assets/images/ch2_problem_2_42.png)
+![課本 Chapter 2 習題 2.42(a) 原題與電路圖](../assets/images/ch2_problem_2_42.png)
+
+![課本 Chapter 2 習題 2.42(b) 電路圖](../assets/images/ch2_problem_2_42_b.png)
 
 ![課本 Chapter 2 習題 2.42 原題與電路圖（續 2）](../assets/images/ch2_problem_2_42_continued.png)
 
+<template #solution>
+
+**自行推導：** 圖 (a)：$20\parallel30=12\ \Omega$，與 $8\ \Omega$ 串聯為 $20\ \Omega$，再與上方 $5\ \Omega$ 並聯，$R_{ab}=4\ \Omega$。圖 (b)：中間三路 $4\parallel(5+3)\parallel8=2\ \Omega$；右邊三路 $5\parallel10\parallel4=20/11\ \Omega$，加左端 $2\ \Omega$，得 $R_{ab}=2+2+20/11=64/11\approx5.818\ \Omega$。兩圖的每一步均按共端節點判斷串並聯。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-43" type="exercise" title="課本習題 2.43" source="課本 Chapter 2 · Problems 2.43 · 印刷頁 71" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.43 原題與電路圖](../assets/images/ch2_problem_2_43.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.43 標準答案原文](../assets/images/ch2_appendix_answer_2_43.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-44" type="exercise" title="課本習題 2.44" source="課本 Chapter 2 · Problems 2.44 · 印刷頁 71" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.44 原題與電路圖](../assets/images/ch2_problem_2_44.png)
 
+<template #solution>
+
+**自行推導：** 上方導線把 $5\ \Omega$ 左端與 $20\ \Omega$ 右端短接，因此兩者並聯：$5\parallel20=4\ \Omega$。再加 $2\ \Omega$ 為 $6\ \Omega$，與右端 $3\ \Omega$ 並聯，故 $R_{ab}=6\parallel3=2\ \Omega$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-45" type="exercise" title="課本習題 2.45" source="課本 Chapter 2 · Problems 2.45 · 印刷頁 71" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.45 原題與電路圖](../assets/images/ch2_problem_2_45.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.45 標準答案原文](../assets/images/ch2_appendix_answer_2_45.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-46" type="exercise" title="課本習題 2.46" source="課本 Chapter 2 · Problems 2.46 · 印刷頁 71" topic="串並聯與等效電阻">
 
 ![課本 Chapter 2 習題 2.46 原題與電路圖](../assets/images/ch2_problem_2_46.png)
 
+<template #solution>
+
+**自行推導：** 依圖，$(20\parallel5)=4\ \Omega$，$(24\parallel8)=6\ \Omega$，三個 $15\ \Omega$ 並聯為 $5\ \Omega$。整個單迴路等效 $R=4+6+5+5+12=32\ \Omega$，故 $I=80/32=2.5\text{ A}$；回代 $2.5(32)=80\text{ V}$。
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-47" type="exercise" title="課本習題 2.47" source="課本 Chapter 2 · Problems 2.47 · 印刷頁 72" topic="串並聯與等效電阻">
+<PracticeCard id="ch2-problem-2-47" type="exercise" title="課本習題 2.47" source="課本 Chapter 2 · Problems 2.47 · 印刷頁 72" topic="老師指定練習 · 串並聯與等效電阻">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.47 原題與電路圖](../assets/images/ch2_problem_2_47.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.47 標準答案原文](../assets/images/ch2_appendix_answer_2_47.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-48" type="exercise" title="課本習題 2.48" source="課本 Chapter 2 · Problems 2.48 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.48 原題與電路圖](../assets/images/ch2_problem_2_48.png)
 
+<template #solution>
+
+**自行推導：** Y 轉 Δ 使用各對應兩臂電阻之和再加兩臂乘積除以對面臂。圖 (a) 三臂均 $10\ \Omega$，故 Δ 三邊各 $30\ \Omega$。圖 (b) 以左、右、下三端 $a,b,c$ 表示：$R_{ab}=30+20+(30)(20)/50=62\ \Omega$；$R_{bc}=20+50+(20)(50)/30=103.333\ \Omega$；$R_{ac}=30+50+(30)(50)/20=155\ \Omega$。逐對端點代回兩端等效阻值，與原 Y 網路相同。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-49" type="exercise" title="課本習題 2.49" source="課本 Chapter 2 · Problems 2.49 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.49 原題與電路圖](../assets/images/ch2_problem_2_49.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.49 標準答案原文](../assets/images/ch2_appendix_answer_2_49.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-50" type="exercise" title="課本習題 2.50" source="課本 Chapter 2 · Problems 2.50 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.50 原題與電路圖](../assets/images/ch2_problem_2_50.png)
 
+<template #solution>
+
+**自行推導：** 本題為開放式設計題。一個使用 Y–Δ 轉換的例子：指定圖中每個 $R=1\text{ k}\Omega$、電流源 $9\text{ mA}$，求電流源端電壓與中間橋臂電流。將「上端、左中點、右中點」形成的三個 $R$ Δ 網路轉為 Y，各臂皆 $R^2/(3R)=R/3$。從 Y 中心到下端，左右各有 $R/3+R=4R/3$，兩路並聯為 $2R/3$；再與上端到 Y 中心的 $R/3$ 串聯，總等效 $R$。源端電壓 $V=(9\text{ mA})(1\text{ k}\Omega)=9\text{ V}$。原圖左右對稱，因此兩柱各 $4.5\text{ mA}$、中間橋臂電流為 $0$；回代 $4.5+4.5=9\text{ mA}$，橋臂兩端均為 $4.5\text{ V}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-51" type="exercise" title="課本習題 2.51" source="課本 Chapter 2 · Problems 2.51 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.51 原題與電路圖](../assets/images/ch2_problem_2_51.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.51 標準答案原文](../assets/images/ch2_appendix_answer_2_51.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-52" type="exercise" title="課本習題 2.52" source="課本 Chapter 2 · Problems 2.52 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.52 原題與電路圖](../assets/images/ch2_problem_2_52.png)
 
+<template #solution>
+
+**自行推導：** 把左側上下兩個入口 $3\ \Omega$ 電阻分別提出。對其間六個內部節點施加 $1\text{ V}$ 測試電壓，按各條 $3\ \Omega$ 支路列 KCL，可得內部等效 $177/55\ \Omega$。因此 $R_{eq}=3+177/55+3=507/55\approx9.218\ \Omega$。以 $1\text{ V}$ 回代內部網路，從上端流入的測試電流為 $55/177\text{ A}$，與下端流出相等。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-53" type="exercise" title="課本習題 2.53" source="課本 Chapter 2 · Problems 2.53 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.53 原題與電路圖](../assets/images/ch2_problem_2_53.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.53 標準答案原文](../assets/images/ch2_appendix_answer_2_53.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-54" type="exercise" title="課本習題 2.54" source="課本 Chapter 2 · Problems 2.54 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.54 原題與電路圖](../assets/images/ch2_problem_2_54.png)
 
+<template #solution>
+
+**自行推導：** 依圖中節點連接關係，以測試源法求兩組端口。對 (a) $a-b$ 施加 $1\text{ V}$，其餘端口開路，流入電流為 $1/130\text{ A}$，故 $R_{ab}=130\ \Omega$。對 (b) $c-d$ 施加 $1\text{ V}$，其餘端口開路，流入電流為 $1/140\text{ A}$，故 $R_{cd}=140\ \Omega$。測試解回代各內部節點 KCL 的殘差均為零。
+
+</template>
 </PracticeCard>
 
-<PracticeCard id="ch2-problem-2-55" type="exercise" title="課本習題 2.55" source="課本 Chapter 2 · Problems 2.55 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
+<PracticeCard id="ch2-problem-2-55" type="exercise" title="課本習題 2.55" source="課本 Chapter 2 · Problems 2.55 · 印刷頁 73" topic="老師指定練習 · Y–Δ 轉換與電阻網路">
+> **老師指定練習**：此題列於課堂 Homework 清單（Slide P93–94）。
+
 
 ![課本 Chapter 2 習題 2.55 原題與電路圖](../assets/images/ch2_problem_2_55.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.55 標準答案原文](../assets/images/ch2_appendix_answer_2_55.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-56" type="exercise" title="課本習題 2.56" source="課本 Chapter 2 · Problems 2.56 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.56 原題與電路圖](../assets/images/ch2_problem_2_56.png)
 
+<template #solution>
+
+**自行推導：** 以下方導線為 $0\text{ V}$，令 $16\ \Omega$ 後節點為 $V$。對 $V$ 及右側兩節點列 KCL，可得三節點依序為 $1354500/32113\approx42.18\text{ V}$、$588000/32113\approx18.31\text{ V}$、$567000/32113\approx17.66\text{ V}$。因此題求 $V\approx42.18\text{ V}$。回代入口：$(100-V)/16=V/35+(V-18.31)/15+(V-17.66)/30$（四捨五入前殘差為零）。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-57" type="exercise" title="課本習題 2.57" source="課本 Chapter 2 · Problems 2.57 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
 
 ![課本 Chapter 2 習題 2.57 原題與電路圖](../assets/images/ch2_problem_2_57.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.57 標準答案原文](../assets/images/ch2_appendix_answer_2_57.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-58" type="exercise" title="課本習題 2.58" source="課本 Chapter 2 · Problems 2.58 · 印刷頁 73" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.58 原題與電路圖](../assets/images/ch2_problem_2_58.png)
 
+<template #solution>
+
+**自行推導：** 額定燈泡阻值 $R_L=120^2/60=240\ \Omega$；與 $80\ \Omega$ 並聯為 $60\ \Omega$。要使燈泡兩端為額定 $120\text{ V}$，並聯部分電流 $120/60=2\text{ A}$，串聯 $40\ \Omega$ 壓降 $80\text{ V}$，故 $V_s=120+80=200\text{ V}$。回代燈泡功率 $120^2/240=60\text{ W}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-59" type="exercise" title="課本習題 2.59" source="課本 Chapter 2 · Problems 2.59 · 印刷頁 73" topic="實際應用與量測">
 
-![課本 Chapter 2 習題 2.59 原題與電路圖](../assets/images/ch2_problem_2_59.png)
+![課本 Chapter 2 習題 2.59 原題開頭](../assets/images/ch2_problem_2_59.png)
+
+![課本 Chapter 2 習題 2.59 題幹續頁與圖 2.123](../assets/images/ch2_problem_2_59_continuation.png)
 
 ![課本 Chapter 2 習題 2.59 原題與電路圖（續 2）](../assets/images/ch2_problem_2_59_continued.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.59 標準答案原文](../assets/images/ch2_appendix_answer_2_59.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-60" type="exercise" title="課本習題 2.60" source="課本 Chapter 2 · Problems 2.60 · 印刷頁 74" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.60 原題與電路圖](../assets/images/ch2_problem_2_60.png)
 
+參照題 2.59 的燈泡額定值及圖示：
+
+![課本 Chapter 2 習題 2.59 圖 2.123](../assets/images/ch2_problem_2_59_continuation.png)
+
 ![習題 2.60 所引用的習題 2.59 三燈泡電路（Figure 2.123）](../assets/images/ch2_problem_2_60_reference.png)
 
+<template #solution>
+
+**自行推導：** 由題 2.59 的圖 2.123，三燈泡額定為 $30\text{ W}$、$40\text{ W}$、$50\text{ W}$，且都額定 $120\text{ V}$。並聯在 $120\text{ V}$ 電源時，每顆都承受額定電壓，因此電流依序為 $30/120=0.25\text{ A}$、$40/120=0.3333\text{ A}$、$50/120=0.4167\text{ A}$。總電流 $1\text{ A}$，回代總功率 $120(1)=120\text{ W}=30+40+50\text{ W}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-61" type="exercise" title="課本習題 2.61" source="課本 Chapter 2 · Problems 2.61 · 印刷頁 74" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.61 原題與電路圖](../assets/images/ch2_problem_2_61.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.61 標準答案原文](../assets/images/ch2_appendix_answer_2_61.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-62" type="exercise" title="課本習題 2.62" source="課本 Chapter 2 · Problems 2.62 · 印刷頁 74" topic="實際應用與量測">
 
-![課本 Chapter 2 習題 2.62 原題與電路圖](../assets/images/ch2_problem_2_62.png)
+![課本 Chapter 2 習題 2.62 原題開頭](../assets/images/ch2_problem_2_62.png)
 
+![課本 Chapter 2 習題 2.62 題幹續頁與圖 2.125](../assets/images/ch2_problem_2_62_continuation.png)
+
+<template #solution>
+
+**自行推導：** 圖示兩負載分別接於 $110\text{ V}$，總功率 $P=110(8+2)=1100\text{ W}=1.1\text{ kW}$。一年運轉 $10(365)=3650\text{ h}$，耗電 $1.1(3650)=4015\text{ kWh}$。每度 $0.06$ 美元，年費為 **240.90 美元**。檢查：電流 $8+2=10\text{ A}$，$110(10)=1100\text{ W}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-63" type="exercise" title="課本習題 2.63" source="課本 Chapter 2 · Problems 2.63 · 印刷頁 74" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.63 原題與電路圖](../assets/images/ch2_problem_2_63.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.63 標準答案原文](../assets/images/ch2_appendix_answer_2_63.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-64" type="exercise" title="課本習題 2.64" source="課本 Chapter 2 · Problems 2.64 · 印刷頁 74" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.64 原題與電路圖](../assets/images/ch2_problem_2_64.png)
 
+<template #solution>
+
+**自行推導：** 當電位器有效阻值為 $0$ 時達最大電流 $10\text{ A}$，故固定 $R=110/10=11\ \Omega$。當有效阻值最大時電流 $1\text{ A}$，總阻值 $110\ \Omega$，故 $R_x=110-11=99\ \Omega$。回代兩端：$110/11=10\text{ A}$、$110/(11+99)=1\text{ A}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-65" type="exercise" title="課本習題 2.65" source="課本 Chapter 2 · Problems 2.65 · 印刷頁 74" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.65 原題與電路圖](../assets/images/ch2_problem_2_65.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.65 標準答案原文](../assets/images/ch2_appendix_answer_2_65.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-66" type="exercise" title="課本習題 2.66" source="課本 Chapter 2 · Problems 2.66 · 印刷頁 74" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.66 原題與電路圖](../assets/images/ch2_problem_2_66.png)
 
+<template #solution>
+
+**自行推導：** $20\text{ k}\Omega/\text{V}$ 的表在 $10\text{ V}$ 滿刻度時內阻 $R_m=20\text{ k}\Omega/\text{V}\times10\text{ V}=200\text{ k}\Omega$，滿刻度電流 $I=10/200{,}000=50\ \mu\text{A}$。改量 $50\text{ V}$ 時總阻值 $50/I=1\text{ M}\Omega$，故串聯電阻 $R_s=800\text{ k}\Omega$。其滿刻度耗功率 $I^2R_s=0.002\text{ W}=2\text{ mW}$。驗算：$I(200+800)\text{ k}\Omega=50\text{ V}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-67" type="exercise" title="課本習題 2.67" source="課本 Chapter 2 · Problems 2.67 · 印刷頁 74" topic="實際應用與量測">
@@ -1873,52 +2262,207 @@ $$\text{指定題號：\#8, \#11, \#15, \#22, \#31, \#38, \#47, \#55}$$
 
 ![課本 Chapter 2 習題 2.67 原題與電路圖（續 2）](../assets/images/ch2_problem_2_67_continued.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.67 標準答案原文](../assets/images/ch2_appendix_answer_2_67.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-68" type="exercise" title="課本習題 2.68" source="課本 Chapter 2 · Problems 2.68 · 印刷頁 75" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.68 原題與電路圖](../assets/images/ch2_problem_2_68.png)
 
+<template #solution>
+
+**自行推導：** 原電路的並聯阻值 $40\parallel60=24\ \Omega$，總阻值 $16+24=40\ \Omega$，故 $I=4/40=0.1\text{ A}$。串入 $1\ \Omega$ 電流表後，$I^\prime=4/(16+1+24)=4/41\approx0.09756\text{ A}$。百分誤差 $|I-I^\prime|/I\times100\%=100/41\approx2.439\%$。回代各情況的電阻壓降總和均為 $4\text{ V}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-69" type="exercise" title="課本習題 2.69" source="課本 Chapter 2 · Problems 2.69 · 印刷頁 75" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.69 原題與電路圖](../assets/images/ch2_problem_2_69.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.69 標準答案原文](../assets/images/ch2_appendix_answer_2_69.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-70" type="exercise" title="課本習題 2.70" source="課本 Chapter 2 · Problems 2.70 · 印刷頁 75" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.70 原題與電路圖](../assets/images/ch2_problem_2_70.png)
 
+<template #solution>
+
+**自行推導：** 以 $o$ 為接地點，下端 $0\text{ V}$、上端 $25\text{ V}$。左分壓得 $v_a=25(12)/(8+12)=15\text{ V}$；右分壓得 $v_b=25(10)/(15+10)=10\text{ V}$；因此 $v_{ab}=5\text{ V}$。若改以 $a$ 接地，兩側電位整體減 $15\text{ V}$：$v_a=0$、$v_b=-5\text{ V}$、$v_{ab}=5\text{ V}$，而 $o=-15\text{ V}$。分壓回代左右各支路總壓均 $25\text{ V}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-71" type="exercise" title="課本習題 2.71" source="課本 Chapter 2 · Problems 2.71 · 印刷頁 75" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.71 原題與電路圖](../assets/images/ch2_problem_2_71.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.71 標準答案原文](../assets/images/ch2_appendix_answer_2_71.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-72" type="exercise" title="課本習題 2.72" source="課本 Chapter 2 · Problems 2.72 · 印刷頁 76" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.72 原題與電路圖](../assets/images/ch2_problem_2_72.png)
 
+<template #solution>
+
+**自行推導：** 上下兩路完全對稱，因此中央 $2\ \Omega$ 橋臂兩端同電位，無電流。每路各有兩個 $1\ \Omega$ 串聯成 $2\ \Omega$；兩路並聯為 $1\ \Omega$，再與入口 $1\ \Omega$ 串聯，總電阻 $2\ \Omega$。電源電流 $10/2=5\text{ A}$，入口電阻降 $5\text{ V}$，故圖示 $V_o=5\text{ V}$。兩路各 $2.5\text{ A}$，橋臂兩端電位均 $2.5\text{ V}$，KCL/KVL 殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-73" type="exercise" title="課本習題 2.73" source="課本 Chapter 2 · Problems 2.73 · 印刷頁 76" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.73 原題與電路圖](../assets/images/ch2_problem_2_73.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.73 標準答案原文](../assets/images/ch2_appendix_answer_2_73.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-74" type="exercise" title="課本習題 2.74" source="課本 Chapter 2 · Problems 2.74 · 印刷頁 76" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.74 原題與電路圖](../assets/images/ch2_problem_2_74.png)
 
+<template #solution>
+
+**自行推導：** 電動機阻值 $0.02\ \Omega$，圖中保險絲另有 $0.01\ \Omega$，固定串聯部分共 $0.03\ \Omega$。高速 $5\text{ A}$ 時僅 $R_3$ 串聯，$R_3=6/5-0.03=1.17\ \Omega$；中速 $3\text{ A}$ 時 $R_2+R_3=6/3-0.03=1.97\ \Omega$，所以 $R_2=0.80\ \Omega$；低速 $1\text{ A}$ 時 $R_1+R_2+R_3=6/1-0.03=5.97\ \Omega$，所以 $R_1=4.00\ \Omega$。回代三檔總阻值 $1.2,2.0,6.0\ \Omega$，電流恰為 $5,3,1\text{ A}$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch2-problem-2-75" type="exercise" title="課本習題 2.75" source="課本 Chapter 2 · Problems 2.75 · 印刷頁 76" topic="實際應用與量測">
 
 ![課本 Chapter 2 習題 2.75 原題與電路圖](../assets/images/ch2_problem_2_75.png)
 
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.75 標準答案原文](../assets/images/ch2_appendix_answer_2_75.png)
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-76" type="exercise" title="課本習題 2.76" source="課本 Chapter 2 · Problems 2.76 · 印刷頁 77" topic="實際應用與量測">
+
+本題沿用 2.75 的電阻分配概念；以下同時附上前題圖，供完整對照。
+
+![課本 Chapter 2 習題 2.75 原題與電路圖](../assets/images/ch2_problem_2_75.png)
+
+![課本 Chapter 2 習題 2.76 原題與電路圖](../assets/images/ch2_problem_2_76.png)
+
+<template #solution>
+
+**自行推導：** 圖中的各級上下對稱，所有橫向橋接的 $1\ \Omega$ 電阻兩端等電位，故無電流。每個最右側方塊由兩條 $2\ \Omega$ 路並聯，等效 $1\ \Omega$；往左每上一級都是兩條「$1\ \Omega$ 加下級 $1\ \Omega$」路並聯，仍為 $1\ \Omega$。入口另有 $1\ \Omega$ 串聯，故 $R_{ab}=2\ \Omega$。回代：若在 $a-b$ 加 $2\text{ V}$，入口電流為 $1\text{ A}$，各級依對稱性等分，所有橋臂電流為零。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-77" type="exercise" title="課本習題 2.77" source="課本 Chapter 2 · Problems 2.77 · 印刷頁 77" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.77 原題與電路圖](../assets/images/ch2_problem_2_77.png)
+
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.77 標準答案原文](../assets/images/ch2_appendix_answer_2_77.png)
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-78" type="exercise" title="課本習題 2.78" source="課本 Chapter 2 · Problems 2.78 · 印刷頁 77" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.78 原題與電路圖](../assets/images/ch2_problem_2_78.png)
+
+<template #solution>
+
+**自行推導：** 電位器滑臂與下端相接，故下段 $\alpha R$ 被短路；從上端到滑臂的有效阻值為 $(1-\alpha)R$。與左上方固定 $R$ 串聯分壓，得 $v_o/v_s=(1-\alpha)R/[R+(1-\alpha)R]=(1-\alpha)/(2-\alpha)$。邊界回代：$\alpha=0$ 得 $1/2$，$\alpha=1$ 得 $0$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-79" type="exercise" title="課本習題 2.79" source="課本 Chapter 2 · Problems 2.79 · 印刷頁 77" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.79 原題與電路圖](../assets/images/ch2_problem_2_79.png)
+
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.79 標準答案原文](../assets/images/ch2_appendix_answer_2_79.png)
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-80" type="exercise" title="課本習題 2.80" source="課本 Chapter 2 · Problems 2.80 · 印刷頁 77" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.80 原題與電路圖](../assets/images/ch2_problem_2_80.png)
+
+<template #solution>
+
+**自行推導：** 以放大器輸出電壓不隨負載改變的理想模型，$10\ \Omega$ 喇叭在最大功率 $12\text{ W}$ 時有 $V_{\rm rms}^2=PR=120\text{ V}^2$。改接 $4\ \Omega$ 喇叭，最大功率 $P=V_{\rm rms}^2/R=120/4=30\text{ W}$。回代 $P(4)=120\text{ V}^2$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-81" type="exercise" title="課本習題 2.81" source="課本 Chapter 2 · Problems 2.81 · 印刷頁 77" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.81 原題與電路圖](../assets/images/ch2_problem_2_81.png)
+
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.81 標準答案原文](../assets/images/ch2_appendix_answer_2_81.png)
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-82" type="exercise" title="課本習題 2.82" source="課本 Chapter 2 · Problems 2.82 · 印刷頁 78" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.82 原題與電路圖](../assets/images/ch2_problem_2_82.png)
+
+<template #solution>
+
+**自行推導：** 圖中的矩形外框是電阻陣列外形，端子間只依內部六個電阻連接。以端口加 $1\text{ V}$ 測試源並列各內部節點 KCL，求得：(a) 端子 $1$–$2$，$R_{12}=265/3\approx88.33\ \Omega$；(b) $1$–$3$，$R_{13}=325/3\approx108.33\ \Omega$；(c) $1$–$4$，$R_{14}=100\ \Omega$。對應測試電流依序為 $3/265,3/325,1/100\text{ A}$；各節點回代 KCL 殘差為零。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-83" type="exercise" title="課本習題 2.83" source="課本 Chapter 2 · Problems 2.83 · 印刷頁 78" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.83 原題與電路圖](../assets/images/ch2_problem_2_83.png)
+
+<template #solution>
+
+**課本附錄 D 標準答案**（PDF 第 932 頁，Answers to Odd-Numbered Problems）：
+
+![課本附錄 D 習題 2.83 標準答案原文](../assets/images/ch2_appendix_answer_2_83.png)
+
+</template>
 </PracticeCard>

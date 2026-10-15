@@ -1,7 +1,7 @@
 export const PRACTICE_CARD_TYPES = [
   'example',
-  'exercise',
   'practice',
+  'exercise',
   'homework',
   'exam'
 ] as const

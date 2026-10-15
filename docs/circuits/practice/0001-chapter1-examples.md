@@ -4,7 +4,7 @@ title: Chapter 1 基本概念：例題與練習題
 
 # Chapter 1 基本概念：例題與練習題
 
-本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 1 章之核心 Example、Practice Problem 與章末 Problems 1.1–1.39。已有詳解的題目可點擊「查看詳解」；每題均可勾選標記學習進度。
+本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 1 章之核心 Example、Practice Problem 與章末 Problems 1.1–1.39。已有詳解的題目可點擊「查看詳解」；章末奇數題附有課本附錄 D 的原版答案，偶數題提供標明「自行推導」的解答。每題均可勾選標記學習進度。
 
 <PracticeFilter prefix="ch1-" />
 <PracticeProgress :total="59" prefix="ch1-" />
@@ -586,11 +586,20 @@ $$
 
 ## 章末 Problems（1.1–1.39）
 
-以下保留課本英文原題與原圖，題幹中的數值、符號和圖表可直接對照。此區先提供自包含題目供練習，尚未加入未經教材答案核對的解答。
+以下保留課本英文原題與原圖，題幹中的數值、符號和圖表可直接對照。奇數題的「查看詳解」附上課本附錄 D（PDF 第 931 頁）原版答案；偶數題因附錄未提供答案，改附標明來源的自行推導。附錄只提供最終答案，未附計算過程。
 
 <PracticeCard id="ch1-problem-01" type="exercise" title="章末習題 1.1" source="課本 p.24" topic="電荷與電流">
 
 ![習題 1.1 題幹](../assets/images/ch1-problem-1-01.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.1 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.1 答案](../assets/images/ch1-appendix-d-answer-1-01.png)
+
+</template>
 
 </PracticeCard>
 
@@ -598,11 +607,33 @@ $$
 
 ![習題 1.2 題幹](../assets/images/ch1-problem-1-02.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。由 $i=dq/dt$，各小題逐項微分：
+
+- (a) $i=3\,\mathrm{mA}$。
+- (b) $i=(16t+4)\,\mathrm{A}$。
+- (c) $i=(-3e^{-t}+10e^{-2t})\,\mathrm{nA}$。
+- (d) $i=1200\pi\cos(120\pi t)\,\mathrm{pA}$。
+- (e) $i=20e^{-4t}[-4\cos(50t)-50\sin(50t)]\,\mathrm{\mu A}$。
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-03" type="exercise" title="章末習題 1.3" source="課本 p.24" topic="電荷與電流">
 
 ![習題 1.3 題幹](../assets/images/ch1-problem-1-03.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.3 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.3 答案](../assets/images/ch1-appendix-d-answer-1-03.png)
+
+</template>
 
 </PracticeCard>
 
@@ -610,25 +641,65 @@ $$
 
 ![習題 1.4 題幹](../assets/images/ch1-problem-1-04.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。恆定電流下 $q=I\Delta t=(7.4\,\mathrm{A})(20\,\mathrm{s})=148\,\mathrm{C}$。回代 $148/20=7.4\,\mathrm{A}$。
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-05" type="exercise" title="章末習題 1.5" source="課本 p.24" topic="電荷與電流">
 
 ![習題 1.5 題幹](../assets/images/ch1-problem-1-05.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.5 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.5 答案](../assets/images/ch1-appendix-d-answer-1-05.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-06" type="exercise" title="章末習題 1.6" source="課本 p.24" topic="電荷與電流">
 
+**老師指定練習題**（CH001 課堂投影片第 47–48 頁 Homework 清單）。
+
 ![習題 1.6 題幹](../assets/images/ch1-problem-1-06.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。圖 1.23 的電流是電荷曲線的斜率 $i=dq/dt$：
+
+- (a) $0$ 至 $2\,\mathrm{ms}$：$i=(30-0)\,\mathrm{mC}/(2-0)\,\mathrm{ms}=15\,\mathrm{A}$，故 $i(1\,\mathrm{ms})=15\,\mathrm{A}$。
+- (b) $2$ 至 $8\,\mathrm{ms}$ 電荷不變，故 $i(6\,\mathrm{ms})=0$。
+- (c) $8$ 至 $12\,\mathrm{ms}$：$i=(0-30)\,\mathrm{mC}/(12-8)\,\mathrm{ms}=-7.5\,\mathrm{A}$，故 $i(10\,\mathrm{ms})=-7.5\,\mathrm{A}$。
+
+</template>
 
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-07" type="exercise" title="章末習題 1.7" source="課本 p.24" topic="電荷與電流">
 
+**老師指定練習題**（CH001 課堂投影片第 47–48 頁 Homework 清單）。
+
 ![習題 1.7 題幹](../assets/images/ch1-problem-1-07-part1.png)
 
 ![習題 1.7 圖表或續題](../assets/images/ch1-problem-1-07-part2.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.7 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.7 答案](../assets/images/ch1-appendix-d-answer-1-07.png)
+
+</template>
 
 </PracticeCard>
 
@@ -636,11 +707,29 @@ $$
 
 ![習題 1.8 題幹](../assets/images/ch1-problem-1-08.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。通過的電荷等於圖 1.25 下的面積；$0$ 至 $1\,\mathrm{ms}$ 是三角形，$1$ 至 $2\,\mathrm{ms}$ 是長方形：
+
+$$q=\tfrac12(1\,\mathrm{ms})(10\,\mathrm{mA})+(1\,\mathrm{ms})(10\,\mathrm{mA})=15\,\mathrm{\mu C}.$$
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-09" type="exercise" title="章末習題 1.9" source="課本 p.24" topic="電荷與電流">
 
 ![習題 1.9 題幹](../assets/images/ch1-problem-1-09.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.9 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.9 答案](../assets/images/ch1-appendix-d-answer-1-09.png)
+
+</template>
 
 </PracticeCard>
 
@@ -648,11 +737,27 @@ $$
 
 ![習題 1.10 題幹](../assets/images/ch1-problem-1-10.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。$q=I\Delta t=(10\times10^3\,\mathrm{A})(15\times10^{-6}\,\mathrm{s})=0.15\,\mathrm{C}$。
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-11" type="exercise" title="章末習題 1.11" source="課本 p.24" topic="電壓、功率與能量">
 
 ![習題 1.11 題幹](../assets/images/ch1-problem-1-11.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.11 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.11 答案](../assets/images/ch1-appendix-d-answer-1-11.png)
+
+</template>
 
 </PracticeCard>
 
@@ -660,17 +765,63 @@ $$
 
 ![習題 1.12 題幹](../assets/images/ch1-problem-1-12.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。以 $q(0)=0$ 為繪圖基準，逐段積分 $dq/dt=i(t)$：
+
+$$
+q(t)=\begin{cases}
+1.5t^2, &0\le t<6,\\
+54+18(t-6), &6\le t<10,\\
+126-12(t-10), &10\le t<15,\\
+66, &15\le t\le20,
+\end{cases}\qquad\mathrm{C}.
+$$
+
+依序連結 $(0,0)$、$(6,54)$、$(10,126)$、$(15,66)$、$(20,66)$；第一段為拋物線，其餘為直線。各段求導均回到題給電流，分段交界的電荷也連續。題目未指定初始電荷，若 $q(0)\ne0$，整條曲線需再加上該常數。
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-13" type="exercise" title="章末習題 1.13" source="課本 p.25" topic="電壓、功率與能量">
 
 ![習題 1.13 題幹](../assets/images/ch1-problem-1-13.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.13 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.13 答案](../assets/images/ch1-appendix-d-answer-1-13.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-14" type="exercise" title="章末習題 1.14" source="課本 p.25" topic="電壓、功率與能量">
 
+**老師指定練習題**（CH001 課堂投影片第 47–48 頁 Homework 清單）。
+
 ![習題 1.14 題幹](../assets/images/ch1-problem-1-14.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。由 $q(0)=0$ 與 $i=dq/dt$：
+
+$$q(1)=\int_0^1 20(1-e^{-0.5t})\,dt=20[-1+2e^{-0.5}]\,\mathrm{mC}\approx4.261\,\mathrm{mC}.$$
+
+以被動符號慣例計算瞬時功率：
+
+$$p(1)=v(1)i(1)=200\cos(2)(1-e^{-0.5})\,\mathrm{mW}\approx-32.748\,\mathrm{mW}.$$
+
+負值表示在該瞬間裝置淨輸出 $32.748\,\mathrm{mW}$，而非吸收功率。
+
+> **有疑慮｜講義答案與課本題幹不一致：** CH001 投影片第 48 頁寫 $q=13.65\,\mathrm{mC}$、$p=171.71\,\mathrm{mW}$，但與本頁課本題幹給的 $v(t)=10\cos(2t)$、$i(t)=20(1-e^{-0.5t})$ 不符。以上依題給函數積分與代入 $t=1\,\mathrm{s}$，故保留可回算的數值，並明列此差異。
+
+</template>
 
 </PracticeCard>
 
@@ -678,11 +829,31 @@ $$
 
 ![習題 1.15 題幹](../assets/images/ch1-problem-1-15.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.15 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.15 答案](../assets/images/ch1-appendix-d-answer-1-15.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-16" type="exercise" title="章末習題 1.16" source="課本 p.25" topic="電路元件">
 
 ![習題 1.16 題幹](../assets/images/ch1-problem-1-16.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。圖 1.27 的電流在前 $2\,\mathrm{s}$ 以 $30\,\mathrm{mA/s}$ 上升，後 $2\,\mathrm{s}$ 以同斜率下降。取 $p=vi$ 為元件吸收功率：
+
+$$p(t)=\begin{cases}150t\,\mathrm{mW},&0<t<2,\\-150(4-t)\,\mathrm{mW},&2<t<4,\\0,&t>4.\end{cases}$$
+
+因此功率圖在 $t=0$ 至 $2$ 從 $0$ 線性上升至 $+300\,\mathrm{mW}$，於 $t=2$ 瞬間跳到 $-300\,\mathrm{mW}$，再於 $t=4$ 升回 $0$。正、負三角形面積各為 $+0.300\,\mathrm{J}$ 與 $-0.300\,\mathrm{J}$，所以 $0<t<4$ 的**淨吸收能量**為 $0\,\mathrm{J}$。
+
+</template>
 
 </PracticeCard>
 
@@ -690,11 +861,41 @@ $$
 
 ![習題 1.17 題幹](../assets/images/ch1-problem-1-17.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.17 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.17 答案](../assets/images/ch1-appendix-d-answer-1-17.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-18" type="exercise" title="章末習題 1.18" source="課本 p.25" topic="電路元件">
 
+**老師指定練習題**（CH001 課堂投影片第 47–48 頁 Homework 清單）。
+
 ![習題 1.18 題幹](../assets/images/ch1-problem-1-18.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。依圖 1.29 的箭頭和極性，電流進入正端時取正吸收功率；進入負端時取負值。$0.4I=4\,\mathrm{A}$。
+
+| 元件 | 計算 | 吸收功率 |
+|---|---:|---:|
+| $p_1$（30 V 電壓源） | $-30(10)$ | $-300\,\mathrm{W}$ |
+| $p_2$（10 V） | $10(10)$ | $100\,\mathrm{W}$ |
+| $p_3$（20 V） | $20(14)$ | $280\,\mathrm{W}$ |
+| $p_4$（8 V） | $-8(4)$ | $-32\,\mathrm{W}$ |
+| $p_5$（12 V 受控源） | $-12(4)$ | $-48\,\mathrm{W}$ |
+
+功率閉合：$-300+100+280-32-48=0\,\mathrm{W}$。
+
+**講義對照**：上述五個功率值與 CH001 投影片第 48 頁相符。
+
+</template>
 
 </PracticeCard>
 
@@ -702,11 +903,42 @@ $$
 
 ![習題 1.19 題幹](../assets/images/ch1-problem-1-19.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.19 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.19 答案](../assets/images/ch1-appendix-d-answer-1-19.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-20" type="exercise" title="章末習題 1.20" source="課本 p.25" topic="電路元件">
 
+**老師指定練習題**（CH001 課堂投影片第 47–48 頁 Homework 清單）。
+
 ![習題 1.20 題幹](../assets/images/ch1-problem-1-20.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。沿左側電源與 12 V 元件往中間節點走，$V_o=30-12=18\,\mathrm{V}$。右側受控源電壓 $5I_o=5(2)=10\,\mathrm{V}$。依電流箭頭與極性計算各元件的吸收功率：
+
+| 元件 | 計算 | 吸收功率 |
+|---|---:|---:|
+| 30 V 電壓源 | $-30(6)$ | $-180\,\mathrm{W}$ |
+| 12 V 元件 | $12(6)$ | $72\,\mathrm{W}$ |
+| $V_o$ 元件 | $18(3)$ | $54\,\mathrm{W}$ |
+| 上方 28 V 元件 | $28(2)$ | $56\,\mathrm{W}$ |
+| 中間 28 V 元件 | $28(1)$ | $28\,\mathrm{W}$ |
+| $5I_o$ 受控源 | $-10(3)$ | $-30\,\mathrm{W}$ |
+
+回代節點電流 $6=3+2+1\,\mathrm{A}$；功率總和 $-180+72+54+56+28-30=0\,\mathrm{W}$。
+
+**講義對照**：$V_o=18\,\mathrm{V}$ 與各元件功率均與 CH001 投影片第 48 頁相符。
+
+</template>
 
 </PracticeCard>
 
@@ -714,11 +946,27 @@ $$
 
 ![習題 1.21 題幹](../assets/images/ch1-problem-1-21.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.21 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.21 答案](../assets/images/ch1-appendix-d-answer-1-21.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-22" type="exercise" title="章末習題 1.22" source="課本 p.26" topic="應用題">
 
 ![習題 1.22 題幹](../assets/images/ch1-problem-1-22.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。$q=I\Delta t=(40\times10^3\,\mathrm{A})(1.7\times10^{-3}\,\mathrm{s})=68\,\mathrm{C}$。
+
+</template>
 
 </PracticeCard>
 
@@ -726,11 +974,27 @@ $$
 
 ![習題 1.23 題幹](../assets/images/ch1-problem-1-23.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.23 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.23 答案](../assets/images/ch1-appendix-d-answer-1-23.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-24" type="exercise" title="章末習題 1.24" source="課本 p.26" topic="應用題">
 
 ![習題 1.24 題幹](../assets/images/ch1-problem-1-24.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。一天用電量 $E=(0.060\,\mathrm{kW})(24\,\mathrm{h})=1.44\,\mathrm{kWh}$；費用為 $1.44(8.2)=11.808$ 美分，約 **11.81 美分**。
+
+</template>
 
 </PracticeCard>
 
@@ -738,11 +1002,31 @@ $$
 
 ![習題 1.25 題幹](../assets/images/ch1-problem-1-25.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.25 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.25 答案](../assets/images/ch1-appendix-d-answer-1-25.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-26" type="exercise" title="章末習題 1.26" source="課本 p.26" topic="應用題">
 
 ![習題 1.26 題幹](../assets/images/ch1-problem-1-26.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。額定容量 $0.8\,\mathrm{Ah}=I(10\,\mathrm{h})$：
+
+- (a) $I=0.08\,\mathrm{A}=80\,\mathrm{mA}$。
+- (b) $P=VI=(6)(0.08)=0.48\,\mathrm{W}$。
+- (c) $E=P\Delta t=(0.48\,\mathrm{W})(10\,\mathrm{h})=4.8\,\mathrm{Wh}$。
+
+</template>
 
 </PracticeCard>
 
@@ -752,11 +1036,30 @@ $$
 
 ![習題 1.27 圖表或續題](../assets/images/ch1-problem-1-27-part2.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.27 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.27 答案](../assets/images/ch1-appendix-d-answer-1-27.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-28" type="exercise" title="章末習題 1.28" source="課本 p.26" topic="應用題">
 
 ![習題 1.28 題幹](../assets/images/ch1-problem-1-28.png)
+
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。
+
+- (a) $I=P/V=60/120=0.5\,\mathrm{A}$。
+- (b) 平年共 $365\times24=8760\,\mathrm{h}$。用電量 $(0.060\,\mathrm{kW})(8760\,\mathrm{h})=525.6\,\mathrm{kWh}$，費用 $525.6(9.5\,\mathrm{cents/kWh})=4993.2$ 美分，即 **$49.932$ 美元**（約 $49.93）。
+
+</template>
 
 </PracticeCard>
 
@@ -764,17 +1067,46 @@ $$
 
 ![習題 1.29 題幹](../assets/images/ch1-problem-1-29.png)
 
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.29 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.29 答案](../assets/images/ch1-appendix-d-answer-1-29.png)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-30" type="exercise" title="章末習題 1.30" source="課本 p.26" topic="應用題">
 
 ![習題 1.30 題幹](../assets/images/ch1-problem-1-30.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。本月用量超過 250 kWh，額外用量為 $2436-250=2186\,\mathrm{kWh}$。月費
+
+$$6+250(0.02)+2186(0.07)=\$164.02.$$
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-31" type="exercise" title="章末習題 1.31" source="課本 p.26" topic="應用題">
 
+**老師指定練習題**（CH001 課堂投影片第 47–48 頁 Homework 清單）。
+
 ![習題 1.31 題幹](../assets/images/ch1-problem-1-31.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.31 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.31 答案](../assets/images/ch1-appendix-d-answer-1-31.png)
+
+</template>
 
 </PracticeCard>
 
@@ -782,11 +1114,29 @@ $$
 
 ![習題 1.32 題幹](../assets/images/ch1-problem-1-32.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。由 $t=q/I$：
+
+$$t=\frac{15\,\mathrm{C}}{20\times10^{-6}\,\mathrm{A}}=750{,}000\,\mathrm{s}\approx208.33\,\mathrm{h}\approx8.68\,\mathrm{days}.$$
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-33" type="exercise" title="章末習題 1.33" source="課本 p.26" topic="綜合題">
 
 ![習題 1.33 題幹](../assets/images/ch1-problem-1-33.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.33 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.33 答案](../assets/images/ch1-appendix-d-answer-1-33.png)
+
+</template>
 
 </PracticeCard>
 
@@ -796,11 +1146,30 @@ $$
 
 ![習題 1.34 圖表或續題](../assets/images/ch1-problem-1-34-part2.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。由圖 1.32，基礎功率 200 W 持續 $18\,\mathrm{h}$；800 W 持續 $2\,\mathrm{h}$；1200 W 持續 $4\,\mathrm{h}$，共 24 h。
+
+- (a) $E=0.2(18)+0.8(2)+1.2(4)=10.0\,\mathrm{kWh}$。
+- (b) $P_{\mathrm{avg}}=E/(24\,\mathrm{h})=0.4167\,\mathrm{kW}\approx416.7\,\mathrm{W}$。
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-35" type="exercise" title="章末習題 1.35" source="課本 p.27" topic="綜合題">
 
 ![習題 1.35 題幹](../assets/images/ch1-problem-1-35.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.35 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.35 答案](../assets/images/ch1-appendix-d-answer-1-35.png)
+
+</template>
 
 </PracticeCard>
 
@@ -808,11 +1177,30 @@ $$
 
 ![習題 1.36 題幹](../assets/images/ch1-problem-1-36.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。容量 $Q=160\,\mathrm{Ah}$，故
+
+- (a) $I=Q/t=160/40=4\,\mathrm{A}$。
+- (b) $t=Q/I=160\,\mathrm{Ah}/0.001\,\mathrm{A}=160{,}000\,\mathrm{h}\approx6666.7\,\mathrm{days}$。此為理想容量估算，未計自放電。
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-37" type="exercise" title="章末習題 1.37" source="課本 p.27" topic="綜合題">
 
 ![習題 1.37 題幹](../assets/images/ch1-problem-1-37.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.37 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.37 答案](../assets/images/ch1-appendix-d-answer-1-37.png)
+
+</template>
 
 </PracticeCard>
 
@@ -820,10 +1208,26 @@ $$
 
 ![習題 1.38 題幹](../assets/images/ch1-problem-1-38.png)
 
+
+<template #solution>
+
+**自行推導**（課本附錄 D 未列此偶數題答案）。馬達功率 $P=(10\,\mathrm{hp})(746\,\mathrm{W/hp})=7460\,\mathrm{W}$。30 分鐘為 $1800\,\mathrm{s}$，故 $E=P\Delta t=7460(1800)=13{,}428{,}000\,\mathrm{J}=13.428\,\mathrm{MJ}$。
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch1-problem-39" type="exercise" title="章末習題 1.39" source="課本 p.27" topic="綜合題">
 
 ![習題 1.39 題幹](../assets/images/ch1-problem-1-39.png)
+
+
+<template #solution>
+
+課本附錄 D「Answers to Odd-Numbered Problems」對習題 1.39 的原版答案（PDF 第 931 頁）：
+
+![課本附錄 D：習題 1.39 答案](../assets/images/ch1-appendix-d-answer-1-39.png)
+
+</template>
 
 </PracticeCard>

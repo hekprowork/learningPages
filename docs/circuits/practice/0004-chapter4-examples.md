@@ -1196,7 +1196,7 @@ $$
 
 **課本印刷答案：** $R_L=4.222\ \Omega$，$P_{\max}=2.901\ \mathrm{mW}$。
 
-**數值對帳註記：** 由圖中元件標示的 SI 單位與 $V_{\mathrm{Th}}=7\ \mathrm{V}$、$R_{\mathrm{Th}}=4.222\ \Omega$ 回代，$V^2/\Omega$ 的結果應為 $2.901\ \mathrm{W}$；因此 PDF 答案中的 `mW` 與電路數值不一致，疑為教材單位誤植。
+> **有疑慮｜課本答案單位：** 由圖中元件標示的 SI 單位與 $V_{\mathrm{Th}}=7\ \mathrm{V}$、$R_{\mathrm{Th}}=4.222\ \Omega$ 回代，$V^2/\Omega$ 的結果應為 $2.901\ \mathrm{W}$；因此 PDF 答案中的 `mW` 與電路數值不一致，疑為教材單位誤植。
 
 </template>
 </PracticeCard>
@@ -1558,11 +1558,28 @@ $$
 
 ![課本章末習題 4.1 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-01.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.1 答案](../assets/images/ch4-appendix-answers/answer-4-01.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-2" type="exercise" title="章末習題 4.2" source="課本 p.160" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.2 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-02.webp)
+
+<template #solution>
+
+
+**自行推導的示範設計。** 題目是開放式設計題，故可取 $R_1=R_2=R_3=R_4=R_5=1\,\Omega$，請同學以節點電壓法求圖 4.70 在 $I=1\,\mathrm A$ 與 $I=2\,\mathrm A$ 時的 $v_o$，並驗證輸出與輸入成正比。以底線為零電位、三個上方節點為 $V_1,V_2,v_o$，列式 $2V_1-V_2=I$、$-V_1+3V_2-v_o=0$、$-V_2+2v_o=0$，解得 $v_o=I/8$。故兩種輸入依序得到 $0.125\,\mathrm V$ 與 $0.250\,\mathrm V$；輸入加倍，輸出也加倍。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1570,11 +1587,28 @@ $$
 
 ![課本章末習題 4.3 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-03.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.3 答案](../assets/images/ch4-appendix-answers/answer-4-03.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-4" type="exercise" title="章末習題 4.4" source="課本 p.160" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.4 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-04.webp)
+
+<template #solution>
+
+
+**自行推導。** 設 6 Ω 頂端節點為 $V_1$、右側頂端為 $V_2$。左側 3 Ω 與 6 Ω 都接地。KCL 給出 $V_1/3+V_1/6+(V_1-V_2)/2=0$，以及 $V_2/4+(V_2-V_1)/2=9$。解得 $V_1=9\,\mathrm V$、$V_2=18\,\mathrm V$，故箭頭向下的 $i_o=V_1/6=1.5\,\mathrm A$。把電流源縮為 $1\,\mathrm A$ 時同式得 $1/6\,\mathrm A$，乘回 9 即 $1.5\,\mathrm A$，符合線性。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1582,11 +1616,28 @@ $$
 
 ![課本章末習題 4.5 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-05.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.5 答案](../assets/images/ch4-appendix-answers/answer-4-05.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-6" type="exercise" title="章末習題 4.6" source="課本 p.160" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.6 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-06.webp)
+
+<template #solution>
+
+
+**自行推導。** 第 1 次實驗給出線性比例 $V_o/V_s=4/12=1/3$。所以第 2 次需 $V_s=3(16)=48\,\mathrm V$；第 3 次 $V_o=(1/3)(1)=1/3\,\mathrm V$；第 4 次需 $V_s=3(-2)=-6\,\mathrm V$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1594,17 +1645,44 @@ $$
 
 ![課本章末習題 4.7 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-07.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.7 答案](../assets/images/ch4-appendix-answers/answer-4-07.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-8" type="exercise" title="章末習題 4.8" source="課本 p.160" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.8 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-08.webp)
 
+<template #solution>
+
+
+**自行推導。** 左側的 $4+5=9\,\Omega$ 串聯支路接地。節點 $V_o$ 的 KCL 為 $V_o/9+(V_o-3)/1+(V_o-9)/3=0$，故 $V_o=54/13\,\mathrm V\approx4.154\,\mathrm V$。用疊加檢查：僅 3 V 源作用時得 $27/13\,\mathrm V$；僅 9 V 源作用時也得 $27/13\,\mathrm V$，相加即 $54/13\,\mathrm V$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-9" type="exercise" title="章末習題 4.9" source="課本 p.161" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.9 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-09.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.9 答案](../assets/images/ch4-appendix-answers/answer-4-09.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -1612,17 +1690,49 @@ $$
 
 ![課本章末習題 4.10 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-10.webp)
 
+<template #solution>
+
+
+**自行推導的示範設計。** 題目允許自選非零增益，取 $R=1\,\Omega$、$k=1$、$V=2\,\mathrm V$、$I=1\,\mathrm A$。在 $a$ 點列 KCL，受控源左端電位是 $(1+k)V_{ab}$，故 $[(1+k)V_{ab}-V]/R=I$，得到 $V_{ab}=(V+IR)/(1+k)=1.5\,\mathrm V$。疊加時保留受控源：單獨 $V$ 貢獻 $1\,\mathrm V$；單獨 $I$ 貢獻 $0.5\,\mathrm V$，總和仍是 $1.5\,\mathrm V$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-11" type="exercise" title="章末習題 4.11" source="課本 p.161" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.11 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-11.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.11 答案](../assets/images/ch4-appendix-answers/answer-4-11.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-12" type="exercise" title="章末習題 4.12" source="課本 p.161" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.12 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-12.webp)
+
+<template #solution>
+
+
+**課堂投影片答案：** $v_o=-0.125\,\mathrm V$。**自行推導核對：** 設 5 Ω 左右節點分別為 $V_1,V_2$，上方 2 A 源由右指向左，故
+
+$$\frac{V_1-12}{6}+\frac{V_1}{3}+\frac{V_1-V_2}{5}=2,\qquad \frac{V_2-19}{4}+\frac{V_2}{12}+\frac{V_2-V_1}{5}=-2.$$
+
+解得 $V_1=8.05\,\mathrm V$、$V_2=8.175\,\mathrm V$，因此 $v_o=V_1-V_2=-0.125\,\mathrm V$，與投影片一致。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1630,11 +1740,28 @@ $$
 
 ![課本章末習題 4.13 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-13.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.13 答案](../assets/images/ch4-appendix-answers/answer-4-13.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-14" type="exercise" title="章末習題 4.14" source="課本 p.161" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.14 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-14.webp)
+
+<template #solution>
+
+
+**自行推導。** 左側節點由 20 V 源固定為 $20\,\mathrm V$。設右側 $3\,\Omega$ 頂端為 $V_o$，中央 4 Ω 與 2 Ω 接點為 $V_c$。2 A 源由右往左、1 A 源由下往上，KCL 為 $(V_o-20)/6+(V_o-V_c)/2+V_o/3=-2$ 與 $(V_c-20)/4+(V_c-V_o)/2=1$。解得 $V_o=8\,\mathrm V$、$V_c=40/3\,\mathrm V$；回代兩式殘差均為零。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1642,23 +1769,69 @@ $$
 
 ![課本章末習題 4.15 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-15.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.15 答案](../assets/images/ch4-appendix-answers/answer-4-15.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-16" type="exercise" title="章末習題 4.16" source="課本 p.161" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.16 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-16.webp)
+
+<template #solution>
+
+
+> **有疑慮｜講義答案單位：** 課堂投影片標示 $i_o=0.111\,\mathrm{mA}$，但與圖 4.84 的 $12\,\mathrm V$、歐姆電阻及安培電流源**單位不一致**。
+
+**自行推導：** 設三個上方未知節點（由左至右）為 $V_1,V_2,V_3$，4 A 源由 $V_2$ 指向 $V_1$。KCL 為
+
+$$\frac{V_1-12}{4}+\frac{V_1}{10}+\frac{V_1-V_2}{3}=4,\quad \frac{V_2-V_1}{3}+\frac{V_2-V_3}{2}=-4,\quad \frac{V_3-V_2}{2}+\frac{V_3}{5}=2.$$
+
+解得 $V_1=104/9\,\mathrm V$，故 $i_o=(12-V_1)/4=1/9\,\mathrm A=0.111\,\mathrm A$。將所有節點值代回三條 KCL，殘差為零；投影片數值 0.111 與計算一致，**投影片的 mA 單位疑為筆誤**。
+
+
+
+</template>
 
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-17" type="exercise" title="章末習題 4.17" source="課本 p.162" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.17 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-17.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.17 答案](../assets/images/ch4-appendix-answers/answer-4-17.webp)
+
+</template>
 
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-18" type="exercise" title="章末習題 4.18" source="課本 p.162" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.18 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-18.webp)
+
+<template #solution>
+
+
+**課堂投影片答案：** $V_o=11.2\,\mathrm V$。**自行推導核對：** 設中央節點為 $V_1$，右節點 $V_o$。受控電流源由中往右，大小 $0.5V_o$，疊加時必須保留。KCL 為 $(V_1-10)/2+(V_1-V_o)+0.5V_o=2$，以及 $(V_o-V_1)+V_o/4=0.5V_o$。解得 $V_1=8.4\,\mathrm V$、$V_o=11.2\,\mathrm V$；與投影片一致。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1666,11 +1839,30 @@ $$
 
 ![課本章末習題 4.19 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-19.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 933 頁）：
+
+![課本附錄 D 習題 4.19 答案](../assets/images/ch4-appendix-answers/answer-4-19.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-20" type="exercise" title="章末習題 4.20" source="課本 p.162" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.20 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-20.webp)
+
+<template #solution>
+
+
+**課堂投影片的 P20 未列數值；以下自行推導。** 由 $a$ 至 $b$ 的開路電壓設為 $V$。依每個並聯支路的方向列 KCL：$V/10+(V-12)/20+(V-16)/40=3$。解得 $V_{Th}=160/7\,\mathrm V\approx22.857\,\mathrm V$。關閉獨立源（電流源開路、電壓源短路）後 $R_{Th}=10\parallel20\parallel40=40/7\,\Omega\approx5.714\,\Omega$。因此端點間等效為 **$160/7\,\mathrm V$ 電壓源串聯 $40/7\,\Omega$**，正端在 $a$。回代 KCL：$(160/7)(7/40)-12/20-16/40=3\,\mathrm A$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1678,11 +1870,28 @@ $$
 
 ![課本章末習題 4.21 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-21.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.21 答案](../assets/images/ch4-appendix-answers/answer-4-21.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-22" type="exercise" title="章末習題 4.22" source="課本 p.162" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.22 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-22.webp)
+
+<template #solution>
+
+
+**自行推導。** 設左側頂點 $V_1$、4 Ω 頂點 $V_2$，右端由電壓源固定為 $20\,\mathrm V$。2 A 電流源向下離開 $V_1$，故 $V_1/5+(V_1-V_2)/5=-2$，$(V_2-V_1)/5+V_2/4+(V_2-20)/10=0$。解得 $V_1=-35/9\,\mathrm V$、$V_2=20/9\,\mathrm V$；箭頭向下的 $i=V_2/4=5/9\,\mathrm A\approx0.556\,\mathrm A$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1690,11 +1899,30 @@ $$
 
 ![課本章末習題 4.23 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-23.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.23 答案](../assets/images/ch4-appendix-answers/answer-4-23.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-24" type="exercise" title="章末習題 4.24" source="課本 p.162" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.24 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-24.webp)
+
+<template #solution>
+
+
+**課堂投影片答案：** $V_x=2.978\,\mathrm V$。**自行推導核對：** 設 8 Ω 右端節點為 $V_1$、右端節點為 $V_2$；左端由電源固定在 40 V，故 $V_x=40-V_1$。3 A 源由 $V_1$ 向 $V_2$，受控源 $2V_x$ 向上。KCL 為 $(V_1-40)/8+(V_1-V_2)/10=-3$，$(V_2-V_1)/10+V_2/10=3+2(40-V_1)$。解得 $V_1=1740/47\,\mathrm V$，所以 $V_x=140/47\,\mathrm V\approx2.979\,\mathrm V$，與投影片四捨五入值一致。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1702,11 +1930,28 @@ $$
 
 ![課本章末習題 4.25 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-25.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.25 答案](../assets/images/ch4-appendix-answers/answer-4-25.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-26" type="exercise" title="章末習題 4.26" source="課本 p.163" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.26 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-26.webp)
+
+<template #solution>
+
+
+**自行推導。** 設 2 Ω 頂端為 $V_1$、4 Ω 左端為 $V_2$，20 V 電源頂端固定為 $20\,\mathrm V$。3 A 源由 $V_1$ 指向 $V_2$；6 A 源注入 $V_1$。KCL：$V_1/2+(V_1-V_2)/5+3=6$，$(V_2-V_1)/5+(V_2-20)/4=3$。解得 $V_1=118/11\,\mathrm V$、$V_2=248/11\,\mathrm V$；$i_o=(V_2-20)/4=7/11\,\mathrm A\approx0.636\,\mathrm A$，與箭頭同向。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1714,11 +1959,28 @@ $$
 
 ![課本章末習題 4.27 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-27.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.27 答案](../assets/images/ch4-appendix-answers/answer-4-27.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-28" type="exercise" title="章末習題 4.28" source="課本 p.163" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.28 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-28.webp)
+
+<template #solution>
+
+
+**自行推導。** 設 1 Ω 與 4 Ω 之間電位為 $V_1$，4 Ω 右端為 $V_2$。依標示 $V_o=V_1-V_2$，受控源向下為 $V_o/3$ 安培。KCL：$(V_1-8)/1+(V_1-V_2)/4=0$，$(V_2-V_1)/4+V_2/3+(V_1-V_2)/3=0$。解得 $V_1=6\,\mathrm V$、$V_2=-2\,\mathrm V$，所以 $I_o=(8-V_1)/1=2\,\mathrm A$，$V_o=8\,\mathrm V$；代回受控源為 $8/3\,\mathrm A$，兩節點殘差均為零。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1726,11 +1988,28 @@ $$
 
 ![課本章末習題 4.29 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-29.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.29 答案](../assets/images/ch4-appendix-answers/answer-4-29.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-30" type="exercise" title="章末習題 4.30" source="課本 p.163" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.30 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-30.webp)
+
+<template #solution>
+
+
+**自行推導。** 設 24 Ω 右端 $V_1$、60 Ω 右端 $V_2$，則 $i_x=(12-V_1)/24$。受控電流源向上注入 $V_2$。KCL：$(V_1-12)/24+V_1/30+(V_1-V_2)/60=0$，$(V_2-V_1)/60+V_2/10=0.7i_x$。解得 $V_1=924/157\,\mathrm V$，故 $i_x=40/157\,\mathrm A\approx0.2548\,\mathrm A$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1738,11 +2017,28 @@ $$
 
 ![課本章末習題 4.31 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-31.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.31 答案](../assets/images/ch4-appendix-answers/answer-4-31.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-32" type="exercise" title="章末習題 4.32" source="課本 p.163" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.32 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-32.webp)
+
+<template #solution>
+
+
+**自行推導。** 設 15 Ω 右端 $V_1$、40 Ω 頂端 $V_2$，則 $i_x=(60-V_1)/15$；受控源從 $V_1$ 向 $V_2$ 送出 $0.5i_x$。KCL：$(V_1-60)/15+V_1/50+(V_1-V_2)/10+0.5i_x=0$，$(V_2-V_1)/10+V_2/40-0.5i_x=0$。解得 $V_1=36\,\mathrm V$、$V_2=35.2\,\mathrm V$，故 $i_x=(60-36)/15=1.6\,\mathrm A$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1750,11 +2046,28 @@ $$
 
 ![課本章末習題 4.33 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-33.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.33 答案](../assets/images/ch4-appendix-answers/answer-4-33.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-34" type="exercise" title="章末習題 4.34" source="課本 p.164" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.34 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-34.webp)
+
+<template #solution>
+
+
+**自行推導的示範設計。** 可請同學取圖 4.102 的 $V=2\,\mathrm V$、$I=1\,\mathrm A$、$R_1=R_2=R_3=1\,\Omega$，求 $a-b$ 的戴維寧等效並接 $R_L=1.5\,\Omega$ 驗證。開路時中央節點為分壓 $1\,\mathrm V$，電流源的 $1\,\mathrm A$ 經 $R_3$ 回到中央，故 $V_{Th}=V_a=1+1(1)=2\,\mathrm V$。關閉獨立源後 $R_{Th}=R_3+(R_1\parallel R_2)=1.5\,\Omega$。接負載時 $I_L=2/(1.5+1.5)=2/3\,\mathrm A$；用原電路列節點式亦得到 $V_a=1\,\mathrm V$、$I_L=2/3\,\mathrm A$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1766,17 +2079,44 @@ $$
 
 ![習題 4.12 的電路與條件](../assets/images/ch4-end-problems/problem-4-12.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.35 答案](../assets/images/ch4-appendix-answers/answer-4-35.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-36" type="exercise" title="章末習題 4.36" source="課本 p.164" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.36 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-36.webp)
 
+<template #solution>
+
+
+**自行推導。** 移除 12 Ω 電阻，頂部節點由左側 50 V、10 Ω 支路與右側 40 Ω 支路決定：$(V-50)/10+V/40=0$，所以 $V=40\,\mathrm V$。電阻下端由 30 V 源固定為 $30\,\mathrm V$，故 $V_{Th}=40-30=10\,\mathrm V$（上端為正）。關閉兩個獨立電壓源後，從 12 Ω 兩端看入 $R_{Th}=10\parallel40=8\,\Omega$。恢復負載得箭頭向下 $i=10/(8+12)=0.5\,\mathrm A$；回代原頂點 KCL：$(36-50)/10+(36-30)/12+36/40=0$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-37" type="exercise" title="章末習題 4.37" source="課本 p.164" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.37 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-37.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.37 答案](../assets/images/ch4-appendix-answers/answer-4-37.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -1784,11 +2124,28 @@ $$
 
 ![課本章末習題 4.38 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-38.webp)
 
+<template #solution>
+
+
+**自行推導。** 拿掉右側 10 Ω 負載，1 Ω 無電流。設左、中央頂點電位為 $V_1,V_2$：$V_1/16+(V_1-V_2)/4=3$，$(V_2-V_1)/4+(V_2-12)/5=0$，得開路 $V_{Th}=V_2=19.2\,\mathrm V$。關閉 3 A 源（開路）與 12 V 源（短路）後，從負載看入 $R_{Th}=1+[5\parallel(4+16)]=5\,\Omega$。接回 10 Ω，$V_o=19.2\cdot10/(5+10)=12.8\,\mathrm V$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-39" type="exercise" title="章末習題 4.39" source="課本 p.164" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.39 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-39.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.39 答案](../assets/images/ch4-appendix-answers/answer-4-39.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -1796,11 +2153,30 @@ $$
 
 ![課本章末習題 4.40 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-40.webp)
 
+<template #solution>
+
+
+**自行推導。** 圖 4.107 是單一迴路。設順時針電流 $i$，$V_o=(10\,\mathrm{k}\Omega)i$；KVL 為 $70-V_o-(20\,\mathrm{k}\Omega)i-4V_o=0$，解得 $i=1\,\mathrm{mA}$、$V_o=10\,\mathrm V$，所以開路端電壓 $V_{Th}=V_{ab}=70-10=60\,\mathrm V$。求等效電阻時把 70 V 源短路，但保留受控源。對 $a-b$ 施加測試電壓 $V_t$，有 $V_o=-V_t$，受控源上端為 $-4V_t$；測試電流 $I_t=V_t/(10\,\mathrm{k}\Omega)+[V_t-(-4V_t)]/(20\,\mathrm{k}\Omega)=0.35V_t\,\mathrm{mS/V}$。故 $R_{Th}=V_t/I_t=20/7\,\mathrm{k}\Omega\approx2.857\,\mathrm{k}\Omega$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-41" type="exercise" title="章末習題 4.41" source="課本 p.165" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.41 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-41.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.41 答案](../assets/images/ch4-appendix-answers/answer-4-41.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -1808,11 +2184,28 @@ $$
 
 ![課本章末習題 4.42 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-42.webp)
 
+<template #solution>
+
+
+**自行推導。** 以底線為地，設端點为 $V_a,V_b$、中央節點为 $V_m$、右上 20 V 源頂端為 $V_c$（圖示下正上負）。開路節點方程式：$(V_a-30)/10+(V_a-V_m)/10=0$；$(V_m-V_a)/10+V_m/10+(V_m-V_b)/20+(V_m-V_c)/20=5$；右側超節點滿足 $(V_b-V_m)/20+V_b/10+(V_c-V_m)/20=0$、$V_b-V_c=20$。解得 $(V_a,V_m,V_b,V_c)=(30,30,20,0)\,\mathrm V$，故 $V_{Th}=V_{ab}=10\,\mathrm V$。關閉獨立源後向 $a$ 注入 1 A、由 $b$ 抽出 1 A，節點解為 $V_a=5\,\mathrm V$、$V_b=-5\,\mathrm V$，故 $R_{Th}=V_{ab}/1\,\mathrm A=10\,\Omega$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-43" type="exercise" title="章末習題 4.43" source="課本 p.165" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.43 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-43.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.43 答案](../assets/images/ch4-appendix-answers/answer-4-43.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -1820,11 +2213,31 @@ $$
 
 ![課本章末習題 4.44 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-44.webp)
 
+<template #solution>
+
+
+**自行推導。** 以 $c$ 為地。開路時 1 Ω 無電流，設頂部中央節點 $V_t=V_a$、中部節點 $V_b$、24 V 源頂端 $V_l$，其下端為 $V_l-24$。KCL：$(V_l-V_t)/3+(V_l-24)/2=0$，$(V_t-V_l)/3+(V_t-V_b)/4=0$，$(V_b-V_t)/4+V_b/5=2$。解得 $(V_l,V_t,V_b)=(22,19,15)\,\mathrm V$。
+
+- (a) $V_{Th,ab}=V_a-V_b=4\,\mathrm V$。關閉獨立源後 $R_{Th,ab}=1+[4\parallel(3+2+5)]=27/7\,\Omega\approx3.857\,\Omega$。
+- (b) $V_{Th,bc}=V_b-V_c=15\,\mathrm V$。$a$ 開路，1 Ω 不導電；$R_{Th,bc}=5\parallel(4+3+2)=45/14\,\Omega\approx3.214\,\Omega$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-45" type="exercise" title="章末習題 4.45" source="課本 p.165" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.45 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-45.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.45 答案](../assets/images/ch4-appendix-answers/answer-4-45.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -1832,17 +2245,45 @@ $$
 
 ![課本章末習題 4.46 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-46.webp)
 
+<template #solution>
+
+
+**自行推導的示範設計。** 題目是開放式設計題。取 $I=3\,\mathrm A$、$R_1=R_2=R_3=1\,\Omega$，請同學求 $a-b$ 的諾頓等效並核對開路電壓。短路 $a-b$ 時 $R_3$ 被旁路，3 A 在 $R_1$ 與 $R_2$ 平分，故流經外部短路的 $I_N=1.5\,\mathrm A$（由 $a$ 向 $b$）。關閉電流源後 $R_N=R_3\parallel(R_2+R_1)=2/3\,\Omega$。因此 $V_{oc}=I_NR_N=1\,\mathrm V$；原電路節點法也得到 $V_a=1\,\mathrm V$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-47" type="exercise" title="章末習題 4.47" source="課本 p.165" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.47 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-47.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.47 答案](../assets/images/ch4-appendix-answers/answer-4-47.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-48" type="exercise" title="章末習題 4.48" source="課本 p.165" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.48 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-48.webp)
+
+<template #solution>
+
+
+**課堂投影片答案：** $R_N=-4\,\Omega$、$I_N=3.0\,\mathrm A$。**自行推導核對：** 開路時 2 A 全經 4 Ω，故 $i_o=2\,\mathrm A$、左上節點 $8\,\mathrm V$。受控電壓源由左正右負，壓降 $10i_o=20\,\mathrm V$，所以 $V_{oc}=V_{ab}=8-20=-12\,\mathrm V$。短路 $a-b$，設左上節點 $V_1$，受控源右端為 $V_1-10(V_1/4)=-1.5V_1$；2 Ω 流向短路的電流為 $-0.75V_1$。超節點 KCL：$V_1/4-0.75V_1=2$，解得 $V_1=-4\,\mathrm V$，因此 $I_{sc}=3\,\mathrm A$（$a$ 向 $b$）。$R_N=V_{oc}/I_{sc}=-4\,\Omega$，符合投影片；負電阻來自受控源。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1854,11 +2295,28 @@ $$
 
 ![Figure 4.102 電路圖與原始條件](../assets/images/ch4-end-problems/problem-4-34.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.49 答案](../assets/images/ch4-appendix-answers/answer-4-49.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-50" type="exercise" title="章末習題 4.50" source="課本 p.166" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.50 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-50.webp)
+
+<template #solution>
+
+
+**自行推導。** 先僅看虛線左邊的 $a-b$ 網路。開路時 6 Ω 無電流，左上節點由 2 A 源與 4 Ω 定為 8 V；12 V 源左正右負，故 $V_{Th}=V_{ab}=8-12=-4\,\mathrm V$。關閉左側獨立源後 $R_N=R_{Th}=6+4=10\,\Omega$，$I_N=V_{Th}/R_N=-0.4\,\mathrm A$（以 $a\to b$ 為正，實際向上）。接回右側 4 A 電流源和 5 Ω，設端電壓為 $V$，KCL：$V/5+(V+4)/10=4$，得 $V=12\,\mathrm V$，因此向下的 $i=V/5=2.4\,\mathrm A$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1866,11 +2324,28 @@ $$
 
 ![課本章末習題 4.51 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-51.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.51 答案](../assets/images/ch4-appendix-answers/answer-4-51.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-52" type="exercise" title="章末習題 4.52" source="課本 p.166" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.52 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-52.webp)
+
+<template #solution>
+
+
+**自行推導。** 左側 3 kΩ 電阻受 12 V 驅動，短路支路電流 $i_o=12/(3\,\mathrm{k}\Omega)=4\,\mathrm{mA}$（向下）。右側受控源向下送出 $20i_o=80\,\mathrm{mA}$，開路端點的 2 kΩ 電阻必向上送回同樣電流，因此 $V_{Th}=V_{ab}=-(80\,\mathrm{mA})(2\,\mathrm{k}\Omega)=-160\,\mathrm V$。關閉 12 V 源後 $i_o=0$，受控源變為零電流源，故 $R_{Th}=2\,\mathrm{k}\Omega$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1878,11 +2353,28 @@ $$
 
 ![課本章末習題 4.53 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-53.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.53 答案](../assets/images/ch4-appendix-answers/answer-4-53.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-54" type="exercise" title="章末習題 4.54" source="課本 p.166" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.54 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-54.webp)
+
+<template #solution>
+
+
+**自行推導。** 右側端電壓就是 $V_x$。左迴路 $I_o=(3-2V_x)/(1\,\mathrm{k}\Omega)$；右端開路時 $V_x/50+40I_o=0$。解得 $I_o=-1\,\mathrm{mA}$、$V_{Th}=V_x=2\,\mathrm V$。求 $R_{Th}$ 時把 3 V 獨立源短路並加測試電壓 $V_t$：$I_o=-2V_t/(1\,\mathrm{k}\Omega)$，流入端口的測試電流為 $I_t=V_t/50+40I_o=-0.06V_t\,\mathrm{A/V}$，所以 $R_{Th}=V_t/I_t=-50/3\,\Omega\approx-16.667\,\Omega$。負等效電阻由受控源造成。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1890,11 +2382,28 @@ $$
 
 ![課本章末習題 4.55 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-55.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.55 答案](../assets/images/ch4-appendix-answers/answer-4-55.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-56" type="exercise" title="章末習題 4.56" source="課本 p.166" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.56 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-56.webp)
+
+<template #solution>
+
+
+**自行推導。** 以底線為零電位，12 kΩ 右端、2 kΩ 右端與輸出頂點分別為 $V_1,V_2,V_o$；用 kΩ 和 mA 列 KCL：$(V_1-36)/12+V_1/24+(V_1-V_2)/2=0$，$(V_2-V_1)/2+(V_2-V_o)/10+3=0$，$(V_o-V_2)/10+V_o/1=0$。解得 $V_1=16/7\,\mathrm V$、$V_2=-22/7\,\mathrm V$、$V_o=-2/7\,\mathrm V\approx-0.286\,\mathrm V$；各節點回代殘差為零。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1902,11 +2411,28 @@ $$
 
 ![課本章末習題 4.57 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-57.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.57 答案](../assets/images/ch4-appendix-answers/answer-4-57.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-58" type="exercise" title="章末習題 4.58" source="課本 p.167" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.58 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-58.webp)
+
+<template #solution>
+
+
+**自行推導。** 把獨立 $v_s$ 歸零（短路）後，於負載端施加測試電壓 $V_t$。設 $R_1,R_2$ 接點電位為 $V_c$，控制電流 $i_b=-V_c/R_1$。圖上受控電流源由輸出端指向該接點，KCL 為 $V_c/R_1+V_c/R_2-b i_b=0$，即 $V_c[(1+b)/R_1+1/R_2]=0$。一般正電阻、正電流增益 $b$ 下，$V_c=i_b=0$，測試端無電流，因此 **$R_{Th}=\infty$**（理想電流源輸出）；未給出元件數值亦不影響此結論。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1914,11 +2440,28 @@ $$
 
 ![課本章末習題 4.59 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-59.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.59 答案](../assets/images/ch4-appendix-answers/answer-4-59.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-60" type="exercise" title="章末習題 4.60" source="課本 p.167" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.60 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-60.webp)
+
+<template #solution>
+
+
+**自行推導。** 取 $b$ 為零電位。圖 4.126 中，上方 2 A 源由 $a$ 指向 $b$、中間 3 A 源由 4 Ω 右端指向左端。設 18 V 源右端 $V_c$、4 Ω 與 6 Ω 接點 $V_d$、10 V 源右端 $V_e$。兩電壓拘束式為 $V_a-V_c=18$、$V_a-V_e=10$。超節點及 $V_d$ 的 KCL 為 $(V_c-V_d)/4+V_e/5=1$、$(V_d-V_c)/4+V_d/6=-3$。解得 $(V_a,V_c,V_d,V_e)=(10,-8,-12,0)\,\mathrm V$，故 $V_{Th}=V_{ab}=10\,\mathrm V$。關閉獨立源後，端口電阻為 $R_{Th}=5\parallel(4+6)=10/3\,\Omega$。諾頓電流 $I_N=V_{Th}/R_{Th}=3\,\mathrm A$（外部短路由 $a$ 流向 $b$），$R_N=10/3\,\Omega$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1926,11 +2469,28 @@ $$
 
 ![課本章末習題 4.61 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-61.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.61 答案](../assets/images/ch4-appendix-answers/answer-4-61.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-62" type="exercise" title="章末習題 4.62" source="課本 p.167" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.62 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-62.webp)
+
+<template #solution>
+
+
+**自行推導。** 圖中只有受控源，零外部激勵時 $V_{Th}=0$。以 $b$ 為地，向 $a$ 注入 $1\,\mathrm A$ 測試電流；設中點電位為 $V_m$，則 $i_o=V_m/20$、$v_o=V_a-V_m$、左下端電位為 $2v_o$。KCL：$(V_a-V_m)/10-0.1i_o=1$，$(V_m-V_a)/10+V_m/20+[V_m-2(V_a-V_m)]/40+0.1i_o=0$。解得 $V_a=920/29\,\mathrm V$、$V_m=600/29\,\mathrm V$，故 $R_{Th}=V_a/(1\,\mathrm A)=920/29\,\Omega\approx31.724\,\Omega$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1938,11 +2498,28 @@ $$
 
 ![課本章末習題 4.63 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-63.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.63 答案](../assets/images/ch4-appendix-answers/answer-4-63.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-64" type="exercise" title="章末習題 4.64" source="課本 p.167" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.64 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-64.webp)
+
+<template #solution>
+
+
+**自行推導。** 只有受控源，開路時 $V_{Th}=0$。以 $b$ 為地，在 $a$ 施加測試電壓 $V_t$，設 2 Ω 頂端為 $V_c$，則 $i_x=V_c/2$，左上受控源電位為 $10i_x=5V_c$。中間節點 KCL：$(V_c-5V_c)/4+V_c/2+(V_c-V_t)/1=0$，解得 $V_c=2V_t$。流入端口的測試電流 $I_t=(V_t-V_c)/1=-V_t$，因此 $R_{Th}=V_t/I_t=-1\,\Omega$。負電阻由受控電壓源形成。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1950,11 +2527,28 @@ $$
 
 ![課本章末習題 4.65 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-65.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.65 答案](../assets/images/ch4-appendix-answers/answer-4-65.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-66" type="exercise" title="章末習題 4.66" source="課本 p.168" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.66 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-66.webp)
+
+<template #solution>
+
+
+**自行推導。** 移除可變電阻 $R$，令左、右端節點為 $V_1,V_2$。上方 10 V 源從左負到右正，故上支路左往右電流為 $(V_1-V_2+10)/2$。KCL：$(V_1-20)/3+(V_1-V_2+10)/2=0$，$V_2/5+6+(V_2-V_1-10)/2=0$。解得 $(V_1,V_2)=(2,0)\,\mathrm V$，所以 $V_{Th}=2\,\mathrm V$。關閉獨立源後 $R_{Th}=2\parallel(3+5)=8/5\,\Omega$。最佳負載 $R=8/5\,\Omega$，最大功率 $P_{\max}=V_{Th}^2/(4R_{Th})=5/8\,\mathrm W=0.625\,\mathrm W$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1962,11 +2556,28 @@ $$
 
 ![課本章末習題 4.67 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-67.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.67 答案](../assets/images/ch4-appendix-answers/answer-4-67.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-68" type="exercise" title="章末習題 4.68" source="課本 p.168" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.68 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-68.webp)
+
+<template #solution>
+
+
+**自行推導。** 設上方 10 Ω 與 20 Ω 接點為 $V$。10 Ω 電阻下端由 8 V 源固定為 $8\,\mathrm V$，故其功率 $P_{10}=(V-8)^2/10$。對任意被動 $R\ge0$，節點式為 $(V-12)/R+(V-8)/10+V/20=0$。解得 $V=(12/R+0.8)/(1/R+0.15)$。當 $R\to0$，$V\to12\,\mathrm V$ 且 $P_{10}\to(12-8)^2/10=1.6\,\mathrm W$；當 $R\to\infty$，$V\to16/3\,\mathrm V$，功率僅 $0.711\,\mathrm W$。中間 $R=10\,\Omega$ 時 $V=8\,\mathrm V$、功率為零。因此在 $R\ge0$ 的範圍，**$R=0\,\Omega$（短路）使 10 Ω 電阻取得最大 $1.6\,\mathrm W$**；若限定 $R>0$，則只有趨近 $0\,\Omega$ 的上確界。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1974,11 +2585,28 @@ $$
 
 ![課本章末習題 4.69 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-69.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.69 答案](../assets/images/ch4-appendix-answers/answer-4-69.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-70" type="exercise" title="章末習題 4.70" source="課本 p.168" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.70 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-70.webp)
+
+<template #solution>
+
+
+**自行推導。** 移除可變電阻 $R$。右下節點僅經 6 Ω 接地，故開路時 $V_x=0$、受控源電流為零；右上節點與中央節點等電位。由 4 V 源、5 Ω 與 15 Ω 分壓，$V_{Th}=4\cdot15/(5+15)=3\,\mathrm V$（右上相對右下）。求端口電阻時短路 4 V 源，從右下往右上接入 1 A 測試源。設中央、右上、右下節點為 $V_c,V_u,V_d$；$V_x=-V_d$，KCL：$V_c/5+V_c/15+(V_c-V_u)/5-3V_d=0$、$(V_u-V_c)/5+3V_d=1$、$V_d/6=-1$。解得 $V_u=395/4\,\mathrm V$、$V_d=-6\,\mathrm V$，故 $R_{Th}=(V_u-V_d)/1=419/4\,\Omega=104.75\,\Omega$。因此最佳 $R=R_{Th}=419/4\,\Omega$，$P_{\max}=V_{Th}^2/(4R_{Th})=9/419\,\mathrm W\approx21.48\,\mathrm{mW}$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1986,11 +2614,30 @@ $$
 
 ![課本章末習題 4.71 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-71.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.71 答案](../assets/images/ch4-appendix-answers/answer-4-71.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-72" type="exercise" title="章末習題 4.72" source="課本 p.168" topic="Chapter 4 Problems">
 
+**老師指定練習題**（課堂 Homework 清單）
+
 ![課本章末習題 4.72 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-72.webp)
+
+<template #solution>
+
+
+**課堂投影片答案：** (a) $R_{Th}=12\,\Omega$、$V_{Th}=40\,\mathrm V$；(b) $i=2\,\mathrm A$；(c) $R_L=12\,\Omega$；(d) $P_{\max}=33.33\,\mathrm W$。**自行推導核對：** 以 20 V 源左端底線為零電位，$b=-20\,\mathrm V$。負載開路時，4 A 源通過 2 Ω 使左上節點為 $8\,\mathrm V$；6 Ω 上的 2 A 源由左向右，使 $V_a=8+(2)(6)=20\,\mathrm V$，故 $V_{ab}=20-(-20)=40\,\mathrm V$。關閉獨立源後 $R_{Th}=2+4+6=12\,\Omega$。若 $R_L=8\,\Omega$，電流 $40/(12+8)=2\,\mathrm A$；最佳負載 $R_L=R_{Th}=12\,\Omega$，其功率 $40^2/[4(12)]=100/3\,\mathrm W\approx33.33\,\mathrm W$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -1998,17 +2645,46 @@ $$
 
 ![課本章末習題 4.73 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-73.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.73 答案](../assets/images/ch4-appendix-answers/answer-4-73.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-74" type="exercise" title="章末習題 4.74" source="課本 p.169" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.74 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-74.webp)
 
+<template #solution>
+
+
+**自行推導。** 把橋中間負載 $R_L$ 拿掉。兩個分壓器的中點電壓分別為 $V_L=v_sR_2/(R_1+R_2)$ 與 $V_R=v_sR_4/(R_3+R_4)$，故 $V_{Th}=V_L-V_R$。將理想電壓源短路後，從兩中點看入的電阻串聯：$R_{Th}=(R_1\parallel R_2)+(R_3\parallel R_4)$。最大功率傳輸時
+
+$$R_L=R_{Th},\qquad P_{\max}=\frac{v_s^2}{4R_{Th}}\left[\frac{R_2}{R_1+R_2}-\frac{R_4}{R_3+R_4}\right]^2.$$
+
+若電橋恰好平衡，括號為零，最大功率亦為零。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-75" type="exercise" title="章末習題 4.75" source="課本 p.169" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.75 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-75.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.75 答案](../assets/images/ch4-appendix-answers/answer-4-75.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2020,6 +2696,15 @@ $$
 
 ![習題 4.34 的電路與條件](../assets/images/ch4-end-problems/problem-4-34.webp)
 
+<template #solution>
+
+
+**自行推導（題目要求以 PSpice 或 MultiSim 驗證，但此處採原電路方程式核對）。** 將題目數值代入習題 4.34 的電路。開路時中央節點分壓為 $40\cdot40/(10+40)=32\,\mathrm V$；3 A 電流源由中央流向端點 $a$，經 20 Ω 回流，使 $V_{Th}=32+(3)(20)=92\,\mathrm V$。關閉獨立源後 $R_{Th}=20+(10\parallel40)=28\,\Omega$。因此 $a-b$ 戴維寧等效為 **92 V 串聯 28 Ω**；諾頓形式為 $I_N=92/28=23/7\,\mathrm A$ 並聯 28 Ω。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-77" type="exercise" title="章末習題 4.77" source="課本 p.169" topic="Chapter 4 Problems">
@@ -2029,6 +2714,14 @@ $$
 本題沿用習題 4.44 的電路與條件：
 
 ![習題 4.44 的電路與條件](../assets/images/ch4-end-problems/problem-4-44.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.77 答案](../assets/images/ch4-appendix-answers/answer-4-77.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2040,6 +2733,15 @@ $$
 
 ![習題 4.52 的電路與條件](../assets/images/ch4-end-problems/problem-4-52.webp)
 
+<template #solution>
+
+
+**自行推導（題目要求以 PSpice 或 MultiSim 驗證；此處以原電路方程式核對）。** 本題沿用圖 4.118：左側 $i_o=12/(3\,\mathrm{k}\Omega)=4\,\mathrm{mA}$；右側向下的受控源為 $20i_o=80\,\mathrm{mA}$。開路 KCL 給 $V_{Th}/(2\,\mathrm{k}\Omega)+80\,\mathrm{mA}=0$，故 $V_{Th}=-160\,\mathrm V$（$a$ 相對 $b$）。關閉 12 V 源後 $i_o=0$，所以 $R_{Th}=2\,\mathrm{k}\Omega$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-79" type="exercise" title="章末習題 4.79" source="課本 p.169" topic="Chapter 4 Problems">
@@ -2049,6 +2751,14 @@ $$
 本題引用的 Figure 4.123：
 
 ![Figure 4.123 電路圖](../assets/images/ch4-end-problems/problem-4-57.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.79 答案](../assets/images/ch4-appendix-answers/answer-4-79.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2060,6 +2770,15 @@ $$
 
 ![習題 4.59 的電路與條件](../assets/images/ch4-end-problems/problem-4-59.webp)
 
+<template #solution>
+
+
+**自行推導（題目要求以 PSpice 或 MultiSim 驗證；此處以原電路方程式核對）。** 本題沿用圖 4.125。兩個垂直支路皆為 $60\,\Omega$，並聯後為 $30\,\Omega$；8 A 源使頂部電壓為 $8(30)=240\,\mathrm V$。兩個中點開路電壓：$V_a=240(50/60)=200\,\mathrm V$、$V_b=240(40/60)=160\,\mathrm V$，故 $V_{Th}=V_{ab}=40\,\mathrm V$。關閉電流源（開路）後，從 $a-b$ 看入 $R_{Th}=(10+20)\parallel(50+40)=22.5\,\Omega$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-81" type="exercise" title="章末習題 4.81" source="課本 p.169" topic="Chapter 4 Problems">
@@ -2070,11 +2789,28 @@ $$
 
 ![習題 4.60 的電路與條件](../assets/images/ch4-end-problems/problem-4-60.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.81 答案](../assets/images/ch4-appendix-answers/answer-4-81.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-82" type="exercise" title="章末習題 4.82" source="課本 p.169" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.82 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-82.webp)
+
+<template #solution>
+
+
+**自行推導。** 開路電壓 $V_{Th}=12\,\mathrm V$，短路電流 $I_{sc}=20\,\mathrm A$，所以電池等效內阻 $R_{Th}=V_{Th}/I_{sc}=0.6\,\Omega$。接 $2\,\Omega$ 燈泡後 $I=12/(0.6+2)=60/13\,\mathrm A$，燈泡消耗 $P=I^2R=(60/13)^2(2)=7200/169\,\mathrm W\approx42.60\,\mathrm W$。
+
+
+
+</template>
 
 </PracticeCard>
 
@@ -2082,17 +2818,42 @@ $$
 
 ![課本章末習題 4.83 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-83.webp)
 
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.83 答案](../assets/images/ch4-appendix-answers/answer-4-83.webp)
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-84" type="exercise" title="章末習題 4.84" source="課本 p.169" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.84 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-84.webp)
 
+<template #solution>
+
+
+**自行推導。** 開路時端電壓等於戴維寧電壓 $V_{Th}=12\,\mathrm V$。接 $4\,\Omega$ 負載時電流 $I=10.8/4=2.7\,\mathrm A$；內阻壓降 $12-10.8=1.2\,\mathrm V$，故 $R_{Th}=1.2/2.7=4/9\,\Omega\approx0.444\,\Omega$。等效電路為 **12 V 電壓源串聯 $4/9\,\Omega$**；回代分壓 $12\cdot4/(4+4/9)=10.8\,\mathrm V$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-85" type="exercise" title="章末習題 4.85" source="課本 p.169" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.85 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-85.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.85 答案](../assets/images/ch4-appendix-answers/answer-4-85.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2102,11 +2863,31 @@ $$
 
 ![章末習題 4.86 續頁](../assets/images/ch4-end-problems/problem-4-86-continued.webp)
 
+<template #solution>
+
+
+**自行推導。** 由表中兩組量測，端電壓隨輸出電流的斜率為 $(8-3)/(1-1.5)=-10\,\Omega$，故黑盒子等效內阻 $R_{Th}=10\,\Omega$，而 $V_{Th}=V+IR_{Th}=3+(1.5)(10)=18\,\mathrm V$。第三組驗算：$10.5+(0.75)(10)=18\,\mathrm V$。
+
+- (a) $R=4\,\Omega$ 時 $i=18/(10+4)=9/7\,\mathrm A\approx1.286\,\mathrm A$。
+- (b) 最大輸出功率在 $R=R_{Th}=10\,\Omega$，$P_{\max}=18^2/[4(10)]=8.1\,\mathrm W$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-87" type="exercise" title="章末習題 4.87" source="課本 p.170" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.87 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-87.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.87 答案](../assets/images/ch4-appendix-answers/answer-4-87.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2114,11 +2895,31 @@ $$
 
 ![課本章末習題 4.88 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-88.webp)
 
+<template #solution>
+
+
+**自行推導。** 量測 2 kΩ 支路電流時，將內阻 $R_i$ 的電流表**串接**於該支路。暫取下 2 kΩ，從 $a-b$ 看入：左側 4 mA 源與 30 kΩ、10 kΩ 使開路 $V_a=120\,\mathrm V$；右側分壓使 $V_b=60(20)/(5+20)=48\,\mathrm V$，因此 $V_{Th}=V_{ab}=72\,\mathrm V$。關閉獨立源後 $R_{Th}=(30+10)\,\mathrm{k}\Omega+(5\parallel20)\,\mathrm{k}\Omega=44\,\mathrm{k}\Omega$。接回 2 kΩ 與電流表，箭頭方向的讀值
+
+- (a) $R_i=500\,\Omega$：$I_o=72/(44{,}000+2{,}000+500)=1.548\,\mathrm{mA}$；
+- (b) $R_i=0$：$I_o=72/(44{,}000+2{,}000)=1.565\,\mathrm{mA}$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-89" type="exercise" title="章末習題 4.89" source="課本 p.170" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.89 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-89.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.89 答案](../assets/images/ch4-appendix-answers/answer-4-89.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2126,11 +2927,28 @@ $$
 
 ![課本章末習題 4.90 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-90.webp)
 
+<template #solution>
+
+
+**自行推導。** 電橋平衡時兩中點電位相同，故 $2\,\mathrm{k}\Omega/R_{adj}=4\,\mathrm{k}\Omega/42.6\,\Omega$。解得 $R_{adj}=21.3\,\Omega$；相對於全行程 100 Ω，可調電阻滑動端位置為 $21.3/100=0.213$，即**從零電阻端起約 21.3% 的行程**。串聯的 $R_s$ 只改變整橋激勵大小，不改變平衡比。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-91" type="exercise" title="章末習題 4.91" source="課本 p.170" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.91 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-91.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.91 答案](../assets/images/ch4-appendix-answers/answer-4-91.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2138,11 +2956,28 @@ $$
 
 ![課本章末習題 4.92 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-92.webp)
 
+<template #solution>
+
+
+**自行推導。** 原圖的比值 $3/5=6/10$，所以原橋**平衡**。將右下 10 kΩ 改為 18 kΩ 後，左右支路分別為 8 kΩ、24 kΩ，並聯為 6 kΩ；串聯上方 2 kΩ，橋兩端電壓 $220\cdot6/(2+6)=165\,\mathrm V$。開路中點 $V_a=165(5/8)=103.125\,\mathrm V$、$V_b=165(18/24)=123.75\,\mathrm V$，故 $V_{Th,ab}=-20.625\,\mathrm V$。關閉 220 V 源，對 $a-b$ 注入 1 mA 測試電流，節點方程式解得 $V_a=225/128\,\mathrm V$、$V_b=-297/64\,\mathrm V$，故 $R_{Th}=819/128\,\mathrm{k}\Omega\approx6.398\,\mathrm{k}\Omega$。最佳負載等於此電阻，最大功率 $P_{\max}=V_{Th}^2/(4R_{Th})=121/7280\,\mathrm W\approx16.62\,\mathrm{mW}$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-93" type="exercise" title="章末習題 4.93" source="課本 p.171" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.93 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-93.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.93 答案](../assets/images/ch4-appendix-answers/answer-4-93.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2150,11 +2985,30 @@ $$
 
 ![課本章末習題 4.94 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-94.webp)
 
+<template #solution>
+
+
+**自行推導。** 令 $x=R_g+R_s$。負載開路時 $V_o/V_g=R_p/(x+R_p)=1/8$，故 $x=7R_p$。把 $V_g$ 短路後由負載端看入 $R_{eq}=R_{Th}=x\parallel R_p=7R_p/8=100\,\Omega$，因此 $R_p=800/7\,\Omega\approx114.286\,\Omega$，$x=800\,\Omega$，且 $R_s=x-R_g=700\,\Omega$。
+
+(b) $V_g=12\,\mathrm V$ 時開路 $V_{Th}=12/8=1.5\,\mathrm V$；接 $R_L=50\,\Omega$ 後 $I_L=V_{Th}/(R_{Th}+R_L)=1.5/(100+50)=0.010\,\mathrm A=10\,\mathrm{mA}$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-95" type="exercise" title="章末習題 4.95" source="課本 p.171" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.95 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-95.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.95 答案](../assets/images/ch4-appendix-answers/answer-4-95.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2162,11 +3016,31 @@ $$
 
 ![課本章末習題 4.96 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-96.webp)
 
+<template #solution>
+
+
+**自行推導。** 將上方負載 $R$ 拿掉，以圖示左端為正求戴維寧電壓。令電池右端（端點 1）為 $0\,\mathrm V$、左端（端點 4）為 $9\,\mathrm V$；開路時上方兩個 10 Ω 無電流。依內部 10、40、8、60、8 Ω 網路的 KCL，左中節點 $V_P=228/35\,\mathrm V$、中上節點 $V_Q=204/35\,\mathrm V$、右中節點 $V_M=24/35\,\mathrm V$，故 $V_{Th}=V_Q-V_M=36/7\,\mathrm V$。將 9 V 源短路並由負載端注入 1 A 測試電流，KCL 得兩端電位 $V_3=150/7\,\mathrm V$、$V_2=-110/7\,\mathrm V$，因此 $R_{Th}=260/7\,\Omega$。
+
+- (a) $V_o=V_{Th}R/(R+R_{Th})=1.8\,\mathrm V$，解得 $R=20\,\Omega$。
+- (b) 對被動 $R\ge0$，負載電流 $I=V_{Th}/(R+R_{Th})$ 在 $R=0\,\Omega$ 最大，$I_{\max}=(36/7)/(260/7)=9/65\,\mathrm A\approx0.13846\,\mathrm A$。
+
+
+
+</template>
+
 </PracticeCard>
 
 <PracticeCard id="ch4-problem-97" type="exercise" title="章末習題 4.97" source="課本 p.171" topic="Chapter 4 Problems">
 
 ![課本章末習題 4.97 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-97.webp)
+
+<template #solution>
+
+課本附錄 D「奇數題答案」（印刷頁 A-23／A-24，PDF 第 934 頁）：
+
+![課本附錄 D 習題 4.97 答案](../assets/images/ch4-appendix-answers/answer-4-97.webp)
+
+</template>
 
 </PracticeCard>
 
@@ -2178,30 +3052,13 @@ $$
 
 ![Practice Problem 4.18 電路圖](../assets/images/ch4-pr18_figure_4.66.png)
 
-</PracticeCard>
-<PracticeCard id="ch4-hw-ch4" type="homework" title="Chapter 4 課後作業題目清單與重點題庫索引" source="H.W. Index · Slide P.123–124" topic="第四章指定作業題庫索引" :hide-checkbox="true">
-
-Alexander & Sadiku 第四章 Circuit Theorems 課後指定作業清單與重點答案：
-
-- **指定習題編號**：
-  $$\text{H.W. Problems: } \#9,\ \#12,\ \#16,\ \#17,\ \#18,\ \#20,\ \#24,\ \#37,\ \#41,\ \#48,\ \#72$$
-
-::: details 課後作業重點標準答案速查 (Slide P.124)
-- **Problem 4.12**：$V_o = -0.125\text{ V}$
-- **Problem 4.16**：$i_o = 0.111\text{ mA}$
-- **Problem 4.18**：$V_o = 11.2\text{ V}$
-- **Problem 4.24**：$V_x = 2.978\text{ V}$
-- **Problem 4.48**：$R_{eq} = -4\ \Omega,\ I_N = 3.0\text{ A}$
-- **Problem 4.72**：
-  - (a) $R_{Th} = 12\ \Omega,\ V_{Th} = 40\text{ V}$
-  - (b) $i = 2\text{ A}$
-  - (c) $R_{Th} = R_L = 12\ \Omega$
-  - (d) $P_{\max} = 33.33\text{ W}$
-:::
-
 <template #solution>
 
-請遵循本章各例題之解題 SOP（重疊分步求解、電源轉換簡化、戴維寧/諾頓測試源法、最大功率配對），自主演練上述 11 道作業精選習題。
+
+**自行推導。** 沿用 Practice Problem 4.18 圖 4.66。以電源右端為零、左端為 $16\,\mathrm V$，設橋頂節點為 $V_T$、橋底節點（40 Ω 左端）為 $V_B$。KCL：$(V_T-16)/20+V_T/30+(V_T-V_B)/14=0$，$(V_B-16)/60+V_B/40+(V_B-V_T)/14=0$。解得 $V_T=1104/125\,\mathrm V$、$V_B=992/125\,\mathrm V=7.936\,\mathrm V$。因此 40 Ω 電阻電流由橋底流向電源右端為 $I_{40}=V_B/40=124/625\,\mathrm A=0.1984\,\mathrm A$，功率 $P_{40}=V_B^2/40=123008/78125\,\mathrm W\approx1.575\,\mathrm W$。交叉核對：電橋 14 Ω 電流 $(V_T-V_B)/14=0.064\,\mathrm A$，符合原練習題給的 64 mA。
+
+
 
 </template>
+
 </PracticeCard>

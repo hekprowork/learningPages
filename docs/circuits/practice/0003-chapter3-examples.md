@@ -4,7 +4,7 @@ title: Chapter 3 分析方法：例題與練習題
 
 # Chapter 3 分析方法：例題與練習題
 
-本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 3 章之核心 Example 與 Practice Problem。前 26 張例題與課中練習卡附有詳解；下方另收錄課本第 3 章章末習題 3.1–3.93。章末習題依原書題幹與電路圖呈現，尚未附經教材核對的解答。完成題目後可勾選標記學習進度。
+本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 3 章之核心 Example 與 Practice Problem。前 26 張例題與課中練習卡附有詳解；下方另收錄課本第 3 章章末習題 3.1–3.93。章末習題依原書題幹與電路圖呈現；詳解區收錄附錄 D 的奇數題標準答案，偶數題則標明課本未提供答案。完成題目後可勾選標記學習進度。
 
 <PracticeFilter prefix="ch3-" />
 <PracticeProgress :total="119" prefix="ch3-" />
@@ -732,200 +732,518 @@ $$
 
 ![習題 3.1 原文題幹與圖表](../assets/images/ch3-problem-3-01.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.1 答案](../assets/images/ch3-answer-3-01.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob2" type="exercise" title="章末習題 3.2" source="課本 p.112" topic="節點分析">
 
 ![習題 3.2 原文題幹與圖表](../assets/images/ch3-problem-3-02.png)
 
+
+<template #solution>
+
+**自行推導**（依圖 3.51 的電流方向）：設兩節點電壓為 $v_1,v_2$，KCL 為
+
+$$\frac{v_1}{10}+\frac{v_1}{5}+\frac{v_1-v_2}{2}=-6,\qquad \frac{v_2}{4}+\frac{v_2-v_1}{2}=6+3=9.$$
+
+解得 **$v_1=0\,\mathrm V$、$v_2=12\,\mathrm V$**。回代兩式分別為 $0+0-6=-6$ 與 $3+6=9\,\mathrm A$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob3" type="exercise" title="章末習題 3.3" source="課本 p.112" topic="節點分析">
 
 ![習題 3.3 原文題幹與圖表](../assets/images/ch3-problem-3-03.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.3 答案](../assets/images/ch3-answer-3-03.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob4" type="exercise" title="章末習題 3.4" source="課本 p.112" topic="節點分析">
 
 ![習題 3.4 原文題幹與圖表](../assets/images/ch3-problem-3-04.png)
 
+
+<template #solution>
+
+**自行推導**：3 A 電流源由右節點流向左節點。左側總注入為 $6+3=9\,\mathrm A$，右側為 $2-3=-1\,\mathrm A$。故
+
+$$\left(\frac1{20}+\frac1{10}\right)v_L=9,\qquad \left(\frac1{40}+\frac1{40}\right)v_R=-1.$$
+
+得 $v_L=60\,\mathrm V$、$v_R=-20\,\mathrm V$，因此 **$i_1=3\,\mathrm A$、$i_2=6\,\mathrm A$、$i_3=-0.5\,\mathrm A$、$i_4=-0.5\,\mathrm A$**（負號表示與圖上箭頭相反）。回代：$i_1+i_2=9\,\mathrm A$，$i_3+i_4=-1\,\mathrm A$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob5" type="exercise" title="章末習題 3.5" source="課本 p.113" topic="節點分析">
 
 ![習題 3.5 原文題幹與圖表](../assets/images/ch3-problem-3-05.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.5 答案](../assets/images/ch3-answer-3-05.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob6" type="exercise" title="章末習題 3.6" source="課本 p.113" topic="節點分析">
 
 ![習題 3.6 原文題幹與圖表](../assets/images/ch3-problem-3-06.png)
 
+
+<template #solution>
+
+**自行推導**：以底線為參考節點，中央節點電壓為 $V_1$。KCL：
+
+$$\frac{V_1-10}{10}+\frac{V_1-10}{5}+\frac{V_1-20}{4}+\frac{V_1}{10}=0.$$
+
+解得 **$V_1=\frac{160}{13}\,\mathrm V\approx12.31\,\mathrm V$**。回代左、右與下方支路電流的代數和為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob7" type="exercise" title="章末習題 3.7" source="課本 p.113" topic="節點分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.7 原文題幹與圖表](../assets/images/ch3-problem-3-07.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.7 答案](../assets/images/ch3-answer-3-07.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob8" type="exercise" title="章末習題 3.8" source="課本 p.113" topic="節點分析">
 
 ![習題 3.8 原文題幹與圖表](../assets/images/ch3-problem-3-08.png)
 
+
+<template #solution>
+
+**自行推導**：令中間上方節點為 $v_b$，右端受控源頂端為 $5v_o$。左節點 KCL 得 $v_o/4+(v_o-v_b)/6=0$，故 $v_b=2.5v_o$。中間節點 KCL 為
+
+$$\frac{v_b-v_o}{6}+\frac{v_b-5v_o}{20}+\frac{v_b-60}{20}=0.$$
+
+聯立得 **$v_o=12\,\mathrm V$**、$v_b=30\,\mathrm V$。回代中間節點：$3-1.5-1.5=0\,\mathrm A$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob9" type="exercise" title="章末習題 3.9" source="課本 p.113" topic="節點分析">
 
 ![習題 3.9 原文題幹與圖表](../assets/images/ch3-problem-3-09.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.9 答案](../assets/images/ch3-answer-3-09.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob10" type="exercise" title="章末習題 3.10" source="課本 p.113" topic="節點分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.10 原文題幹與圖表](../assets/images/ch3-problem-3-10.png)
 
+
+<template #solution>
+
+**自行推導**：設左、中、右節點電壓分別為 $v_L,v_C,v_R$，依圖中箭頭 $I_o=v_L/8$。三個節點的 KCL 為
+
+$$\frac{v_L}{8}+v_L-v_R+4=0,\quad \frac{v_C}{2}+2I_o-4=0,\quad \frac{v_R}{4}+v_R-v_L-2I_o=0.$$
+
+解得 $v_L=v_R=-32\,\mathrm V$、$v_C=24\,\mathrm V$，所以 **$I_o=-4\,\mathrm A$**，實際方向向上。回代三個 KCL 等式，殘差皆為零。
+
+**老師講義對照**：CH003 講義第 74 頁列 $I_o=-4\,\mathrm A$，與上述推導一致。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob11" type="exercise" title="章末習題 3.11" source="課本 p.113" topic="節點分析">
 
 ![習題 3.11 原文題幹與圖表](../assets/images/ch3-problem-3-11.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.11 答案](../assets/images/ch3-answer-3-11.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob12" type="exercise" title="章末習題 3.12" source="課本 p.113" topic="節點分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.12 原文題幹與圖表](../assets/images/ch3-problem-3-12.png)
 
+
+<template #solution>
+
+**自行推導**：設左側未知節點為 $v_a$，右側為 $V_o$；$I_x=v_a/20$。KCL：
+
+$$\frac{v_a-40}{20}+\frac{v_a}{20}+\frac{v_a-V_o}{10}=0,\qquad \frac{V_o-v_a}{10}+\frac{V_o}{10}=4I_x.$$
+
+解得 $v_a=40\,\mathrm V$，**$V_o=60\,\mathrm V$**，$I_x=2\,\mathrm A$。回代兩式各為 $0\,\mathrm A$。
+
+**老師講義對照**：CH003 講義第 74 頁列 $V_o=60\,\mathrm V$，與上述推導一致。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob13" type="exercise" title="章末習題 3.13" source="課本 p.114" topic="節點分析">
 
 ![習題 3.13 原文題幹與圖表](../assets/images/ch3-problem-3-13.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.13 答案](../assets/images/ch3-answer-3-13.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob14" type="exercise" title="章末習題 3.14" source="課本 p.114" topic="節點分析">
 
 ![習題 3.14 原文題幹與圖表](../assets/images/ch3-problem-3-14.png)
 
+
+<template #solution>
+
+**自行推導**：以底線為零電位，左邊 100 V 電源上端為 $100\,\mathrm V$，右邊 50 V 電源上端為 $-50\,\mathrm V$。設左上節點 $v_a$，中間節點 $v_o$。電流源由左流向中間，KCL 為
+
+$$v_a-100+\frac{v_a-v_o}{2}+12.5=0,\qquad \frac{v_o}{4}+\frac{v_o+50}{8}+\frac{v_o-v_a}{2}-12.5=0.$$
+
+解得 $v_a=75\,\mathrm V$，**$v_o=50\,\mathrm V$**。回代兩節點 KCL 殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob15" type="exercise" title="章末習題 3.15" source="課本 p.114" topic="節點分析">
 
 ![習題 3.15 原文題幹與圖表](../assets/images/ch3-problem-3-15.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.15 答案](../assets/images/ch3-answer-3-15.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob16" type="exercise" title="章末習題 3.16" source="課本 p.114" topic="節點分析">
 
 ![習題 3.16 原文題幹與圖表](../assets/images/ch3-problem-3-16.png)
 
+
+<template #solution>
+
+**自行推導**：右側獨立電壓源給 $v_3=13\,\mathrm V$；$v_o=v_2$。受控源極性給 $v_1-v_2=2v_o$，所以 $v_1=3v_2$。對 $v_1,v_2$ 超節點寫 KCL：
+
+$$v_1+2(v_1-13)+4v_2+8(v_2-13)=2.$$
+
+故 **$v_1=\frac{132}{7}\,\mathrm V\approx18.86\,\mathrm V$、$v_2=\frac{44}{7}\,\mathrm V\approx6.286\,\mathrm V$、$v_3=13\,\mathrm V$**。回代受控源拘束式與超節點 KCL 均成立。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob17" type="exercise" title="章末習題 3.17" source="課本 p.114" topic="節點分析">
 
 ![習題 3.17 原文題幹與圖表](../assets/images/ch3-problem-3-17.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.17 答案](../assets/images/ch3-answer-3-17.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob18" type="exercise" title="章末習題 3.18" source="課本 p.114" topic="節點分析">
 
 ![習題 3.18 原文題幹與圖表](../assets/images/ch3-problem-3-18.png)
 
+
+<template #solution>
+
+**自行推導**：依圖 3.67，電壓源極性為 $v_3-v_1=30\,\mathrm V$。對 $v_1,v_3$ 超節點和節點 2 寫 KCL：
+
+$$\frac{v_1}{4}+\frac{v_1-v_2}{2}+\frac{v_3-v_2}{2}+\frac{v_3}{8}=0,\qquad \frac{v_2-v_1}{2}+\frac{v_2-v_3}{2}=15.$$
+
+解得 **$v_1=30\,\mathrm V$、$v_2=60\,\mathrm V$、$v_3=60\,\mathrm V$**。回代：超節點 $7.5-15+0+7.5=0\,\mathrm A$，節點 2 為 $15+0=15\,\mathrm A$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob19" type="exercise" title="章末習題 3.19" source="課本 p.114" topic="節點分析">
 
 ![習題 3.19 原文題幹與圖表](../assets/images/ch3-problem-3-19.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.19 答案](../assets/images/ch3-answer-3-19.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob20" type="exercise" title="章末習題 3.20" source="課本 p.115" topic="節點分析">
 
 ![習題 3.20 原文題幹與圖表](../assets/images/ch3-problem-3-20.png)
 
+
+<template #solution>
+
+**自行推導**：右側 $4\,\Omega$ 電阻的參考電流 $i=v_3/4$。電壓源拘束式為 $v_1-v_3=12$、$v_1-v_2=2i=v_3/2$。對三個節點組成的超節點寫 KCL：
+
+$$\frac{v_1}{4}+v_2+\frac{v_3}{4}=0.$$
+
+解得 **$v_1=-3\,\mathrm V$、$v_2=4.5\,\mathrm V$、$v_3=-15\,\mathrm V$**（$i=-3.75\,\mathrm A$）。回代兩個拘束式分別為 $12=12$、$-7.5=-7.5\,\mathrm V$，超節點 KCL 為 $-0.75+4.5-3.75=0\,\mathrm A$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob21" type="exercise" title="章末習題 3.21" source="課本 p.115" topic="節點分析">
 
 ![習題 3.21 原文題幹與圖表](../assets/images/ch3-problem-3-21.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.21 答案](../assets/images/ch3-answer-3-21.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob22" type="exercise" title="章末習題 3.22" source="課本 p.115" topic="節點分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.22 原文題幹與圖表](../assets/images/ch3-problem-3-22.png)
 
+
+<template #solution>
+
+**自行推導**：左側 12 V 電源上端為 $12\,\mathrm V$，$v_o=12-v_1$。右側受控源上端因圖示極性為 $-5v_o=5v_1-60$。兩個未知節點的 KCL 為
+
+$$\frac{v_1-12}{2}+\frac{v_1}{4}+\frac{v_1-v_2}{8}+3=0,$$
+$$\frac{v_2-v_1}{8}+\frac{v_2-(5v_1-60)}{1}-3=0.$$
+
+解得 **$v_1=-\frac{120}{11}\,\mathrm V\approx-10.91\,\mathrm V$、$v_2=-\frac{1104}{11}\,\mathrm V\approx-100.36\,\mathrm V$**。回代 $v_o=\frac{252}{11}\,\mathrm V$，受控源上端 $-\frac{1260}{11}\,\mathrm V$，兩個 KCL 殘差均為零。
+
+**老師講義對照**：CH003 講義第 74 頁列 $v_1=-10.91\,\mathrm V$、$v_2=-100.37\,\mathrm V$；依題圖參數聯立的精確值為 $-1104/11\,\mathrm V\approx-100.364\,\mathrm V$，與講義第二個小數位相差 $0.01\,\mathrm V$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob23" type="exercise" title="章末習題 3.23" source="課本 p.115" topic="節點分析">
 
 ![習題 3.23 原文題幹與圖表](../assets/images/ch3-problem-3-23.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.23 答案](../assets/images/ch3-answer-3-23.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob24" type="exercise" title="章末習題 3.24" source="課本 p.115" topic="節點分析">
 
 ![習題 3.24 原文題幹與圖表](../assets/images/ch3-problem-3-24.png)
 
+
+<template #solution>
+
+**自行推導**：依圖 3.73 左至右四個節點設為 $v_L,v_A,v_B,v_R$。電流源 4 A 從 $A$ 流往 $L$，2 A 從 $B$ 流往 $R$。KCL：
+
+$$v_L+\frac{v_L-v_R}{8}=4,\quad \frac{v_A}{2}+\frac{v_A-v_B}{4}=-4,$$
+$$\frac{v_B}{2}+\frac{v_B-v_A}{4}=-2,\quad v_R+\frac{v_R-v_L}{8}=2.$$
+
+解得 $v_L=3.8\,\mathrm V$、$v_A=-7\,\mathrm V$、$v_B=-5\,\mathrm V$、$v_R=2.2\,\mathrm V$，故依 8 Ω 上標示的極性，**$V_o=v_L-v_R=1.6\,\mathrm V$**。四個 KCL 方程式回代殘差皆為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob25" type="exercise" title="章末習題 3.25" source="課本 p.115" topic="節點分析">
 
 ![習題 3.25 原文題幹與圖表](../assets/images/ch3-problem-3-25.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.25 答案](../assets/images/ch3-answer-3-25.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob26" type="exercise" title="章末習題 3.26" source="課本 p.115" topic="節點分析">
 
 ![習題 3.26 原文題幹與圖表](../assets/images/ch3-problem-3-26.png)
 
+
+<template #solution>
+
+**自行推導**：依 10 Ω 上箭頭 $i_o=(v_1-v_3)/10$；右下 10 V 電源上端為 $-10\,\mathrm V$，左下 15 V 電源上端為 $15\,\mathrm V$。三個節點的 KCL 為
+
+$$\frac{v_1-15}{20}+\frac{v_1-v_2}{5}+\frac{v_1-v_3}{10}+3=0,$$
+$$\frac{v_2-v_1}{5}+\frac{v_2-v_3}{5}+\frac{v_2-4i_o}{5}=0,$$
+$$\frac{v_3+10}{15}+\frac{v_3-v_2}{5}+\frac{v_3-v_1}{10}-3=0.$$
+
+解得 **$v_1=-\frac{525}{73}\,\mathrm V\approx-7.192\,\mathrm V$、$v_2=-\frac{1420}{511}\,\mathrm V\approx-2.779\,\mathrm V$、$v_3=\frac{1475}{511}\,\mathrm V\approx2.886\,\mathrm V$**。將這三值及 $i_o=(v_1-v_3)/10$ 回代，三個 KCL 殘差皆為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob27" type="exercise" title="章末習題 3.27" source="課本 p.116" topic="節點分析">
 
 ![習題 3.27 原文題幹與圖表](../assets/images/ch3-problem-3-27.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.27 答案](../assets/images/ch3-answer-3-27.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob28" type="exercise" title="章末習題 3.28" source="課本 p.116" topic="節點分析">
 
 ![習題 3.28 原文題幹與圖表](../assets/images/ch3-problem-3-28.png)
 
+
+<template #solution>
+
+**自行推導**：取圖中中央節點為接地。左 60 V 電源上端為 $v_a-60$，右 90 V 電源上端為 $v_a+90$。依序對 $c,d,b$ 與底部超節點寫 KCL：
+
+$$\frac{v_c}{5}+\frac{v_c-v_d}{10}+\frac{v_c-v_b}{4}=0,$$
+$$\frac{v_d}{20}+\frac{v_d-v_c}{10}+\frac{v_d-v_a+60}{4}=0,$$
+$$\frac{v_b}{8}+\frac{v_b-v_c}{4}+\frac{v_b-v_a-90}{8}=0,$$
+$$\frac{v_a}{16}+\frac{v_a-60-v_d}{4}+\frac{v_a+90-v_b}{8}=0.$$
+
+電阻單位為 $\Omega$。解得 **$v_a=-\frac{95}{9}\,\mathrm V\approx-10.56\,\mathrm V$、$v_b=\frac{185}{9}\,\mathrm V\approx20.56\,\mathrm V$、$v_c=\frac{25}{18}\,\mathrm V\approx1.389\,\mathrm V$、$v_d=-\frac{175}{4}\,\mathrm V=-43.75\,\mathrm V$**。四個 KCL 方程式回代殘差均為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob29" type="exercise" title="章末習題 3.29" source="課本 p.116" topic="節點分析">
 
 ![習題 3.29 原文題幹與圖表](../assets/images/ch3-problem-3-29.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.29 答案](../assets/images/ch3-answer-3-29.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob30" type="exercise" title="章末習題 3.30" source="課本 p.116" topic="節點分析">
 
 ![習題 3.30 原文題幹與圖表](../assets/images/ch3-problem-3-30.png)
 
+
+<template #solution>
+
+**自行推導**：設 10、20、40 Ω 交點為 $v_a$，96 V 電源左端為 $v_b$；右端 $v_o=v_b+96$，依向上參考箭頭 $i_o=(v_a-v_b)/40$。受控電壓源上端為 $4v_o$。對節點 $v_a$ 與 $v_b,v_o$ 超節點寫 KCL：
+
+$$\frac{v_a-80}{10}+\frac{v_a-4v_o}{20}+\frac{v_a-v_b}{40}=0,$$
+$$\frac{v_b-v_a}{40}+\frac{v_o}{80}-2i_o=0.$$
+
+代入 $v_b=v_o-96$ 與 $i_o=(v_a-v_b)/40$ 後，解得 **$v_o=-1075.2\,\mathrm V=-1.0752\,\mathrm{kV}$、$i_o=-4.48\,\mathrm A$**。負號表示 $i_o$ 實際向下；回代兩個 KCL 及 96 V 拘束式殘差均為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob31" type="exercise" title="章末習題 3.31" source="課本 p.116" topic="節點分析">
 
 ![習題 3.31 原文題幹與圖表](../assets/images/ch3-problem-3-31.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932 頁）：
+
+![課本附錄 D 習題 3.31 答案](../assets/images/ch3-answer-3-31.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob32" type="exercise" title="章末習題 3.32" source="課本 p.116" topic="節點分析">
 
 ![習題 3.32 原文題幹與圖表](../assets/images/ch3-problem-3-32.png)
 
+
+<template #solution>
+
+**自行推導**：底線接地；12 V 電源直接給 $v_2=12\,\mathrm V$。左邊 10 V 電源右端為正，故 $v_2-v_1=10$；右邊 20 V 電源左端為正，故 $v_2-v_3=20$。因此 **$v_1=2\,\mathrm V$、$v_2=12\,\mathrm V$、$v_3=-8\,\mathrm V$**。回代兩個電壓拘束式分別為 $10$ 與 $20\,\mathrm V$；流經電源的電流可由超節點 KCL 求得。
+
+</template>
 </PracticeCard>
 
 ### 網孔分析（3.33–3.66）
 
 <PracticeCard id="ch3-prob33" type="exercise" title="章末習題 3.33" source="課本 p.117" topic="網孔分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.33 原文題幹與圖表](../assets/images/ch3-problem-3-33.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 932、933 頁）：
+
+![課本附錄 D 習題 3.33 答案，部分 1](../assets/images/ch3-answer-3-33-1.png)
+
+![課本附錄 D 習題 3.33 答案，部分 2](../assets/images/ch3-answer-3-33-2.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob34" type="exercise" title="章末習題 3.34" source="課本 p.117" topic="網孔分析">
@@ -936,6 +1254,16 @@ $$
 
 ![圖 3.83(b) 電路](../assets/images/ch3-problem-3-34-figure-b.png)
 
+
+<template #solution>
+
+**自行推導**：兩個電路都可重新排列成沒有支路交叉的平面圖。以下以黑白節點圖重畫；節點 $A,B,C,D,E$ 在 (a) 對應原圖的左上、左中、左下、右上、右下，在 (b) 對應左上、中央、右上、左下、右下。圖中的每一條邊都保留了原電路的元件值；(a) 的 10 V 電源 $B$ 端為正，(b) 的 4 A 電流源由 $D$ 指向 $C$。
+
+![習題 3.34 兩個電路的無交叉平面重畫](../assets/images/ch3-answer-3-34-planar.png)
+
+以原圖逐條核對邊的端點後，(a) 有 5 個節點、8 條支路，(b) 有 5 個節點、9 條支路，圖中均沒有不相連支路相交。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob35" type="exercise" title="章末習題 3.35" source="課本 p.117" topic="網孔分析">
@@ -946,12 +1274,26 @@ $$
 
 ![習題 3.5 的原題與電路圖](../assets/images/ch3-problem-3-05.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.35 答案](../assets/images/ch3-answer-3-35.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob36" type="exercise" title="章末習題 3.36" source="課本 p.117" topic="網孔分析">
 
 ![習題 3.36 原文題幹與圖表](../assets/images/ch3-problem-3-36.png)
 
+
+<template #solution>
+
+**自行推導**：令左右兩個網孔電流 $m_1,m_2$ 均為順時針。依 12 V 與 10 V 電源極性寫 KVL：$10m_1-6m_2=12$、$-6m_1+8m_2=-10$，得 $m_1=9/11\,\mathrm A$、$m_2=-7/11\,\mathrm A$。依圖示向下參考方向，**$i_1=-9/11\,\mathrm A$、$i_2=m_1-m_2=16/11\,\mathrm A$、$i_3=-7/11\,\mathrm A$**。回代兩個 KVL 等式及節點 KCL：$i_1+i_2+i_3=0$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob37" type="exercise" title="章末習題 3.37" source="課本 p.117" topic="網孔分析">
@@ -962,15 +1304,31 @@ $$
 
 ![習題 3.8 的原題與電路圖](../assets/images/ch3-problem-3-08.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.37 答案](../assets/images/ch3-answer-3-37.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob38" type="exercise" title="章末習題 3.38" source="課本 p.117" topic="網孔分析">
 
 ![習題 3.38 原文題幹與圖表](../assets/images/ch3-problem-3-38.png)
 
+
+<template #solution>
+
+**自行推導**：取下方中央節點為地，中央 1 Ω 上端電壓為 $v_m$，則圖示向下的 $I_o=v_m/1\,\Omega$。以 60 V 與 22.5 V 電源兩端作超節點，並納入 10 A、5 A 電流源，聯立 KCL 可得 $v_m=-29/8\,\mathrm V$。所以 **$I_o=-29/8\,\mathrm A=-3.625\,\mathrm A$**，實際流向向上。檢核其餘節點電壓：左中 $-11.5\,\mathrm V$、左下 $-16.5\,\mathrm V$、上中 $52.75\,\mathrm V$、右上 $25.9375\,\mathrm V$、右中 $17\,\mathrm V$；代入各節點 KCL 殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob39" type="exercise" title="章末習題 3.39" source="課本 p.117" topic="網孔分析">
+
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
 
 ![習題 3.39 原文題幹與圖表](../assets/images/ch3-problem-3-39.png)
 
@@ -978,48 +1336,120 @@ $$
 
 ![習題 3.1 的原題與電路圖](../assets/images/ch3-problem-3-01.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.39 答案](../assets/images/ch3-answer-3-39.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob40" type="exercise" title="章末習題 3.40" source="課本 p.118" topic="網孔分析">
 
 ![習題 3.40 原文題幹與圖表](../assets/images/ch3-problem-3-40.png)
 
+
+<template #solution>
+
+**自行推導**：電橋兩邊的上方電阻同為 $6\,\mathrm{k}\Omega$、下方同為 $4\,\mathrm{k}\Omega$，故兩個中點等電位，中間 $2\,\mathrm{k}\Omega$ 無電流。每條路徑為 $6+4=10\,\mathrm{k}\Omega$，並聯等效 $5\,\mathrm{k}\Omega$，再與左上 $2\,\mathrm{k}\Omega$ 串聯。總電阻 $7\,\mathrm{k}\Omega$，因此 **$i_o=56/7\,\mathrm{mA}=8\,\mathrm{mA}$**（向右）。回代電源 KVL：$8\,\mathrm{mA}\times2\,\mathrm{k}\Omega+4\,\mathrm{mA}\times10\,\mathrm{k}\Omega$ 的兩路電壓皆為 $56\,\mathrm V$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob41" type="exercise" title="章末習題 3.41" source="課本 p.118" topic="網孔分析">
 
 ![習題 3.41 原文題幹與圖表](../assets/images/ch3-problem-3-41.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.41 答案](../assets/images/ch3-answer-3-41.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob42" type="exercise" title="章末習題 3.42" source="課本 p.118" topic="網孔分析">
 
 ![習題 3.42 原文題幹與圖表](../assets/images/ch3-problem-3-42.png)
 
+
+<template #solution>
+
+**自行推導／自行設計的一個有效例題**：令圖中 $V_1=10\,\mathrm V$、$V_2=20\,\mathrm V$、$V_3=30\,\mathrm V$，三個網孔電流依圖示均為順時針。矩陣方程式為
+
+$$\begin{bmatrix}50&-30&0\\-30&100&-40\\0&-40&50\end{bmatrix}\begin{bmatrix}i_1\\i_2\\i_3\end{bmatrix}=\begin{bmatrix}10\\20\\30\end{bmatrix}.$$
+
+解得 **$i_1=0.8\,\mathrm A$、$i_2=1\,\mathrm A$、$i_3=1.4\,\mathrm A$**。回代三列分別為 $10$、$20$、$30\,\mathrm V$，殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob43" type="exercise" title="章末習題 3.43" source="課本 p.118" topic="網孔分析">
 
 ![習題 3.43 原文題幹與圖表](../assets/images/ch3-problem-3-43.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.43 答案](../assets/images/ch3-answer-3-43.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob44" type="exercise" title="章末習題 3.44" source="課本 p.118" topic="網孔分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.44 原文題幹與圖表](../assets/images/ch3-problem-3-44.png)
 
+
+<template #solution>
+
+**自行推導**：以下方導線為地。右側 180 V 電源上端為 $180\,\mathrm V$；左上 90 V 電源左端為 $270\,\mathrm V$。令 1 Ω 兩端的左、右節點為 $v_a,v_b$，KCL：
+
+$$\frac{v_a-270}{2}+\frac{v_a}{5}+v_a-v_b=0,\qquad \frac{v_b-180}{4}+v_b-v_a=45.$$
+
+解得 $v_a=230\,\mathrm V$、$v_b=256\,\mathrm V$，所以 **$i_o=(v_a-v_b)/1\,\Omega=-26\,\mathrm A$**，實際向左。回代兩個 KCL 殘差為零。
+
+**老師講義對照**：CH003 講義第 74 頁列 $i_o=-26\,\mathrm A$，與上述推導一致。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob45" type="exercise" title="章末習題 3.45" source="課本 p.118" topic="網孔分析">
 
 ![習題 3.45 原文題幹與圖表](../assets/images/ch3-problem-3-45.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.45 答案](../assets/images/ch3-answer-3-45.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob46" type="exercise" title="章末習題 3.46" source="課本 p.118" topic="網孔分析">
 
 ![習題 3.46 原文題幹與圖表](../assets/images/ch3-problem-3-46.png)
 
+
+<template #solution>
+
+**自行推導**：依圖示順時針方向，$v_o=3i_1$。兩個網孔 KVL 為
+
+$$3i_1+8(i_1-i_2)=12,\qquad 6i_2+8(i_2-i_1)+2v_o=0.$$
+
+聯立得 **$i_1=28/23\,\mathrm A\approx1.2174\,\mathrm A$、$i_2=4/23\,\mathrm A\approx0.1739\,\mathrm A$**。回代兩式左邊依序為 $12\,\mathrm V$、$0\,\mathrm V$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob47" type="exercise" title="章末習題 3.47" source="課本 p.118" topic="網孔分析">
@@ -1030,72 +1460,180 @@ $$
 
 ![習題 3.19 的原題與電路圖](../assets/images/ch3-problem-3-19.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.47 答案](../assets/images/ch3-answer-3-47.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob48" type="exercise" title="章末習題 3.48" source="課本 p.119" topic="網孔分析">
 
 ![習題 3.48 原文題幹與圖表](../assets/images/ch3-problem-3-48.png)
 
+
+<template #solution>
+
+**自行推導**：以下方導線為地，左電源上端 $6\,\mathrm V$，右電源上端 $-3\,\mathrm V$，中間 4 V 電源上端 $4\,\mathrm V$。令 4、2 kΩ 交點為 $v_a$，2、5、10 kΩ 交點為 $v_b$，KCL（電阻以 kΩ 計）為
+
+$$\frac{v_a-6}{4}+\frac{v_a-v_b}{2}+v_a-4=0,\qquad \frac{v_b-v_a}{2}+\frac{v_b+3}{5}+\frac{v_b}{10}=0.$$
+
+解得 $v_a=82/23\,\mathrm V$、$v_b=34/23\,\mathrm V$。**10 kΩ 電流由上往下為 $v_b/(10\,\mathrm{k}\Omega)=0.14783\,\mathrm{mA}$**。回代兩個 KCL 殘差皆為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob49" type="exercise" title="章末習題 3.49" source="課本 p.119" topic="網孔分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.49 原文題幹與圖表](../assets/images/ch3-problem-3-49.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.49 答案](../assets/images/ch3-answer-3-49.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob50" type="exercise" title="章末習題 3.50" source="課本 p.119" topic="網孔分析">
 
 ![習題 3.50 原文題幹與圖表](../assets/images/ch3-problem-3-50.png)
 
+
+<template #solution>
+
+**自行推導**：以下方導線為地，左中節點為 $35\,\mathrm V$。令上方節點 $v_t$、中央節點 $v_c$，則依向右箭頭 $i_o=(35-v_t)/4$。KCL 為
+
+$$\frac{v_t-35}{4}+\frac{v_t-v_c}{2}+\frac{v_t}{8}=0,\qquad \frac{v_c-v_t}{2}+\frac{v_c-35}{10}=3i_o.$$
+
+解得 $v_t=805/26\,\mathrm V$、$v_c=3815/104\,\mathrm V$，故 **$i_o=105/104\,\mathrm A\approx1.0096\,\mathrm A$**。兩個 KCL 回代殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob51" type="exercise" title="章末習題 3.51" source="課本 p.119" topic="網孔分析">
 
 ![習題 3.51 原文題幹與圖表](../assets/images/ch3-problem-3-51.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.51 答案](../assets/images/ch3-answer-3-51.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob52" type="exercise" title="章末習題 3.52" source="課本 p.119" topic="網孔分析">
 
 ![習題 3.52 原文題幹與圖表](../assets/images/ch3-problem-3-52.png)
 
+
+<template #solution>
+
+**自行推導**：三個網孔電流依圖均為順時針。3 A 電流源在兩個右側網孔共用支路，且箭頭向右，故 $i_3-i_2=3$。上方 2 Ω 的電壓 $v_o=2(i_1-i_2)$。左側網孔 KVL 及右側超網孔 KVL 可寫成
+
+$$2(i_1-i_2)+4(i_1-i_3)=12,\qquad 8i_2+2v_o+4(i_3-i_1)+2(i_2-i_1)=0.$$
+
+解得 **$i_1=3.5\,\mathrm A$、$i_2=-0.5\,\mathrm A$、$i_3=2.5\,\mathrm A$**。回代 $i_3-i_2=3\,\mathrm A$、$v_o=8\,\mathrm V$，兩個 KVL 殘差皆為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob53" type="exercise" title="章末習題 3.53" source="課本 p.119" topic="網孔分析">
 
 ![習題 3.53 原文題幹與圖表](../assets/images/ch3-problem-3-53.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.53 答案](../assets/images/ch3-answer-3-53.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob54" type="exercise" title="章末習題 3.54" source="課本 p.120" topic="網孔分析">
 
 ![習題 3.54 原文題幹與圖表](../assets/images/ch3-problem-3-54.png)
 
+
+<template #solution>
+
+**自行推導**：將 1 kΩ 保留為 $1000\,\Omega$，三個順時針網孔的 KVL 為
+
+$$2000i_1-1000i_2=2,\quad -1000i_1+2001i_2-i_3=10,\quad -i_2+1001i_3=12.$$
+
+解得 **$i_1\approx4.668\,\mathrm{mA}$、$i_2\approx7.336\,\mathrm{mA}$、$i_3\approx11.995\,\mathrm{mA}$**。以未四捨五入的聯立解回代三個 KVL，殘差均為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob55" type="exercise" title="章末習題 3.55" source="課本 p.120" topic="網孔分析">
 
 ![習題 3.55 原文題幹與圖表](../assets/images/ch3-problem-3-55.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.55 答案](../assets/images/ch3-answer-3-55.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob56" type="exercise" title="章末習題 3.56" source="課本 p.120" topic="網孔分析">
 
 ![習題 3.56 原文題幹與圖表](../assets/images/ch3-problem-3-56.png)
 
+
+<template #solution>
+
+**自行推導**：左側電源上端為 $12\,\mathrm V$。令中間及右側節點分別為 $v_m,v_r$，每支電阻都是 2 Ω，KCL 得 $3v_m-v_r=12$、$3v_r-v_m=12$，故 $v_m=v_r=6\,\mathrm V$。依圖中極性，**$v_1=12-v_r=6\,\mathrm V$、$v_2=v_r=6\,\mathrm V$**。兩個 KCL 回代殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob57" type="exercise" title="章末習題 3.57" source="課本 p.120" topic="網孔分析">
 
+**老師指定練習**（CH003 講義第 73–74 頁 Homework）
+
 ![習題 3.57 原文題幹與圖表](../assets/images/ch3-problem-3-57.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.57 答案](../assets/images/ch3-answer-3-57.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob58" type="exercise" title="章末習題 3.58" source="課本 p.120" topic="網孔分析">
 
 ![習題 3.58 原文題幹與圖表](../assets/images/ch3-problem-3-58.png)
 
+
+<template #solution>
+
+**自行推導**：依圖示三個順時針網孔，KVL 為
+
+$$40i_1-10i_2=-120,\qquad -10i_1+50i_2-10i_3=0,\qquad -10i_2+40i_3=120.$$
+
+解得 **$i_1=-3\,\mathrm A$、$i_2=0\,\mathrm A$、$i_3=3\,\mathrm A$**。負號表示左下網孔實際為逆時針；回代三式分別得到 $-120$、$0$、$120\,\mathrm V$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob59" type="exercise" title="章末習題 3.59" source="課本 p.120" topic="網孔分析">
@@ -1106,48 +1644,117 @@ $$
 
 ![習題 3.30 的原題與電路圖](../assets/images/ch3-problem-3-30.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.59 答案](../assets/images/ch3-answer-3-59.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob60" type="exercise" title="章末習題 3.60" source="課本 p.120" topic="網孔分析">
 
 ![習題 3.60 原文題幹與圖表](../assets/images/ch3-problem-3-60.png)
 
+
+<template #solution>
+
+**自行推導**：以下方導線為地，電壓源上端為 $56\,\mathrm V$。令左、右側節點為 $v_L,v_R$，圖示 $i_o=v_L/1\,\Omega$。KCL：
+
+$$v_L+\frac{v_L-56}{4}+0.5i_o=0,\qquad \frac{v_R}{2}+\frac{v_R-56}{8}=0.5i_o.$$
+
+解得 $v_L=8\,\mathrm V$、$v_R=17.6\,\mathrm V$、$i_o=8\,\mathrm A$。依 $P=V^2/R$，**1 Ω：$64\,\mathrm W$；2 Ω：$154.88\,\mathrm W$；4 Ω：$576\,\mathrm W$；8 Ω：$184.32\,\mathrm W$**。回代左右節點 KCL 均為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob61" type="exercise" title="章末習題 3.61" source="課本 p.120" topic="網孔分析">
 
 ![習題 3.61 原文題幹與圖表](../assets/images/ch3-problem-3-61.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.61 答案](../assets/images/ch3-answer-3-61.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob62" type="exercise" title="章末習題 3.62" source="課本 p.120" topic="網孔分析">
 
 ![習題 3.62 原文題幹與圖表](../assets/images/ch3-problem-3-62.png)
 
+
+<template #solution>
+
+**自行推導**：以 mA 為網孔電流單位，兩個電流源拘束式依箭頭為 $i_2-i_1=4$、$i_2-i_3=2i_1$。沿外框寫 KVL：$4i_1+8i_2+2i_3=60$（kΩ·mA = V）。故 **$i_1=2\,\mathrm{mA}$、$i_2=6\,\mathrm{mA}$、$i_3=2\,\mathrm{mA}$**。回代兩個電流源式得 $4=4$ 與 $4=4\,\mathrm{mA}$，外框得 $8+48+4=60\,\mathrm V$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob63" type="exercise" title="章末習題 3.63" source="課本 p.121" topic="網孔分析">
 
 ![習題 3.63 原文題幹與圖表](../assets/images/ch3-problem-3-63.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.63 答案](../assets/images/ch3-answer-3-63.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob64" type="exercise" title="章末習題 3.64" source="課本 p.121" topic="網孔分析">
 
 ![習題 3.64 原文題幹與圖表](../assets/images/ch3-problem-3-64.png)
 
+
+<template #solution>
+
+**自行推導**：令上中、右上、中央節點分別為 $v_a,v_b,v_c$。依圖示 $i_o=(v_a-v_c)/10$、$v_o=v_a-v_b$，受控電壓源拘束式 $v_b-v_c=4i_o$。KCL：
+
+$$\frac{v_a-250}{50}+\frac{v_a-v_b}{10}+\frac{v_a-v_c}{10}=0,$$
+$$\frac{v_b-v_a}{10}+\frac{v_b}{40}+\frac{v_c-v_a}{10}+0.2v_o-5=0.$$
+
+解得 **$v_o=50/17\,\mathrm V\approx2.941\,\mathrm V$、$i_o=25/51\,\mathrm A\approx0.4902\,\mathrm A$**。把節點電壓 $v_a=10750/51$、$v_b=10600/51$、$v_c=3500/17\,\mathrm V$ 回代，兩個 KCL 和受控源拘束式殘差均為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob65" type="exercise" title="章末習題 3.65" source="課本 p.121" topic="網孔分析">
 
 ![習題 3.65 原文題幹與圖表](../assets/images/ch3-problem-3-65.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.65 答案](../assets/images/ch3-answer-3-65.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob66" type="exercise" title="章末習題 3.66" source="課本 p.121" topic="網孔分析">
 
 ![習題 3.66 原文題幹與圖表](../assets/images/ch3-problem-3-66.png)
 
+
+<template #solution>
+
+**自行推導**：依圖示五個順時針網孔，列 KVL 矩陣（Ω、A、V）：
+
+$$\begin{bmatrix}30&-4&-6&-2&0\\-4&30&0&-2&-6\\-6&0&18&-4&0\\-2&-2&-4&12&-4\\0&-6&0&-4&18\end{bmatrix}\begin{bmatrix}i_1\\i_2\\i_3\\i_4\\i_5\end{bmatrix}=\begin{bmatrix}-12\\-16\\30\\0\\-32\end{bmatrix}.$$
+
+解得 **$i_1\approx-0.27793\,\mathrm A$、$i_2\approx-1.04876\,\mathrm A$、$i_3\approx1.46822\,\mathrm A$、$i_4\approx-0.47610\,\mathrm A$、$i_5\approx-2.23316\,\mathrm A$**。以未四捨五入的解回代矩陣方程式，五列殘差均為零。
+
+</template>
 </PracticeCard>
 
 ### 方程式檢視法（3.67–3.74）
@@ -1156,48 +1763,116 @@ $$
 
 ![習題 3.67 原文題幹與圖表](../assets/images/ch3-problem-3-67.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.67 答案](../assets/images/ch3-answer-3-67.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob68" type="exercise" title="章末習題 3.68" source="課本 p.121" topic="檢視法">
 
 ![習題 3.68 原文題幹與圖表](../assets/images/ch3-problem-3-68.png)
 
+
+<template #solution>
+
+**自行推導／自行設計的一個有效例題**：取 $R_1=R_2=R_3=R_4=1\,\Omega$，$I_1=4\,\mathrm A$（向上）、$I_2=1\,\mathrm A$（向左）、$V_1=1\,\mathrm V$。左節點電壓記 $v_L$，中央 $V_o$；KCL 為 $2v_L-V_o=I_1+I_2=5$、$3V_o-v_L=V_1-I_2=0$。解得 **$v_L=3\,\mathrm V$、$V_o=1\,\mathrm V$**。回代兩個 KCL 等式分別為 $5=5$、$0=0\,\mathrm A$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob69" type="exercise" title="章末習題 3.69" source="課本 p.122" topic="檢視法">
 
 ![習題 3.69 原文題幹與圖表](../assets/images/ch3-problem-3-69.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.69 答案](../assets/images/ch3-answer-3-69.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob70" type="exercise" title="章末習題 3.70" source="課本 p.122" topic="檢視法">
 
 ![習題 3.70 原文題幹與圖表](../assets/images/ch3-problem-3-70.png)
 
+
+<template #solution>
+
+**自行推導**：圖中 $i_x=2V_1$，受控電流源由 $V_2$ 指向 $V_1$，大小 $4i_x=8V_1$。檢視即可列節點方程式：
+
+$$3V_1=20+8V_1,\qquad 5V_2=-7-8V_1.$$
+
+故 **$V_1=-4\,\mathrm V$、$V_2=5\,\mathrm V$**；$i_x=-8\,\mathrm A$，表示實際向上。回代兩個節點 KCL：$-12=20-32$、$25=-7+32\,\mathrm A$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob71" type="exercise" title="章末習題 3.71" source="課本 p.122" topic="檢視法">
 
 ![習題 3.71 原文題幹與圖表](../assets/images/ch3-problem-3-71.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.71 答案](../assets/images/ch3-answer-3-71.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob72" type="exercise" title="章末習題 3.72" source="課本 p.122" topic="檢視法">
 
 ![習題 3.72 原文題幹與圖表](../assets/images/ch3-problem-3-72.png)
 
+
+<template #solution>
+
+**自行推導**：以圖示順時針網孔方向檢視共用電阻與電源極性，得到
+
+$$\begin{bmatrix}7&0&-2&0\\0&5&0&-1\\-2&0&6&-4\\0&-1&-4&5\end{bmatrix}\begin{bmatrix}i_1\\i_2\\i_3\\i_4\end{bmatrix}=\begin{bmatrix}8\\-4\\4\\-10\end{bmatrix}.$$
+
+例如第一列是 $5i_1+2(i_1-i_3)=8$；第二列含 4 V 電源由正端往負端，因此右邊為 $-4\,\mathrm V$。此題只要求網孔方程式。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob73" type="exercise" title="章末習題 3.73" source="課本 p.122" topic="檢視法">
 
 ![習題 3.73 原文題幹與圖表](../assets/images/ch3-problem-3-73.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.73 答案](../assets/images/ch3-answer-3-73.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob74" type="exercise" title="章末習題 3.74" source="課本 p.122" topic="檢視法">
 
 ![習題 3.74 原文題幹與圖表](../assets/images/ch3-problem-3-74.png)
 
+
+<template #solution>
+
+**自行推導**：依圖示順時針網孔與各電源極性，直接得到
+
+$$\begin{bmatrix}R_1+R_4+R_6&-R_4&-R_6&0\\-R_4&R_2+R_4+R_5&0&-R_5\\-R_6&0&R_6+R_7+R_8&-R_8\\0&-R_5&-R_8&R_3+R_5+R_8\end{bmatrix}\begin{bmatrix}i_1\\i_2\\i_3\\i_4\end{bmatrix}=\begin{bmatrix}V_1\\-V_2\\V_3\\V_2-V_4\end{bmatrix}.$$
+
+共用電阻在非對角線取負號；例如 $i_2$ 沿 $V_2$ 由正端到負端，故第二列右端是 $-V_2$。此題只要求網孔方程式。
+
+</template>
 </PracticeCard>
 
 ### PSpice 與 MultiSim（3.75–3.83）
@@ -1210,6 +1885,14 @@ $$
 
 ![習題 3.58 的原題與電路圖](../assets/images/ch3-problem-3-58.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.75 答案](../assets/images/ch3-answer-3-75.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob76" type="exercise" title="章末習題 3.76" source="課本 p.122" topic="電路模擬">
@@ -1220,12 +1903,32 @@ $$
 
 ![習題 3.27 的原題與電路圖](../assets/images/ch3-problem-3-27.png)
 
+
+<template #solution>
+
+**自行推導（沿用習題 3.27 的同一電路）**：依圖 3.76，$i_o=4v_2$（4 S 支路），受控源電流為 $3i_o$。節點 KCL：
+
+$$2v_1+(v_1-v_2)+4(v_1-v_3)+3i_o=2,$$
+$$4v_2+(v_2-v_1)+(v_2-v_3)=0,$$
+$$2v_3+(v_3-v_2)+4(v_3-v_1)-3i_o=4.$$
+
+解得 **$v_1=0.625\,\mathrm V$、$v_2=0.375\,\mathrm V$、$v_3=1.625\,\mathrm V$**，與課本附錄 D 對習題 3.27 的答案相同。回代三個 KCL 殘差均為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob77" type="exercise" title="章末習題 3.77" source="課本 p.123" topic="電路模擬">
 
 ![習題 3.77 原文題幹與圖表](../assets/images/ch3-problem-3-77.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.77 答案](../assets/images/ch3-answer-3-77.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob78" type="exercise" title="章末習題 3.78" source="課本 p.123" topic="電路模擬">
@@ -1236,6 +1939,12 @@ $$
 
 ![習題 3.20 的原題與電路圖](../assets/images/ch3-problem-3-20.png)
 
+
+<template #solution>
+
+**自行推導（沿用習題 3.20 的同一電路）**：依圖 3.69，$i=v_3/4$，拘束式為 $v_1-v_3=12$、$v_1-v_2=2i$。三節點超節點 KCL 為 $v_1/4+v_2+v_3/4=0$。解得 **$v_1=-3\,\mathrm V$、$v_2=4.5\,\mathrm V$、$v_3=-15\,\mathrm V$**，與本頁習題 3.20 的推導一致。回代兩個拘束式及 KCL 殘差皆為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob79" type="exercise" title="章末習題 3.79" source="課本 p.123" topic="電路模擬">
@@ -1246,12 +1955,26 @@ $$
 
 ![習題 3.28 的原題與電路圖](../assets/images/ch3-problem-3-28.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.79 答案](../assets/images/ch3-answer-3-79.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob80" type="exercise" title="章末習題 3.80" source="課本 p.123" topic="電路模擬">
 
 ![習題 3.80 原文題幹與圖表](../assets/images/ch3-problem-3-80.png)
 
+
+<template #solution>
+
+**自行推導**：右側 20 V 電源固定 $v_3=20\,\mathrm V$。圖示 $I_o=(0-v_4)/2=-v_4/2$，受控電壓源給 $v_2-v_3=6I_o=-3v_4$。左下與左上的 KCL 為 $v_4+v_4/2+8=0$、$(v_1-v_2)/10=8$。因此 **$v_1=116\,\mathrm V$、$v_2=36\,\mathrm V$、$v_3=20\,\mathrm V$、$v_4=-16/3\,\mathrm V\approx-5.333\,\mathrm V$**。回代 $I_o=8/3\,\mathrm A$，受控源兩端 $16\,\mathrm V=6I_o$，兩個 KCL 殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob81" type="exercise" title="章末習題 3.81" source="課本 p.123" topic="電路模擬">
@@ -1262,18 +1985,44 @@ $$
 
 ![例題 3.4 的圖 3.12 電路](../assets/images/ch3-ex4_figure_3.12.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.81 答案](../assets/images/ch3-answer-3-81.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob82" type="exercise" title="章末習題 3.82" source="課本 p.123" topic="電路模擬">
 
 ![習題 3.82 原文題幹與圖表](../assets/images/ch3-problem-3-82.png)
 
+
+<template #solution>
+
+**自行重畫**：依網表把節點 0 當接地，以節點 1–5 及元件連線畫出網路。箭頭表示電流源方向；VS 的正端在節點 4，VF1 的正端在節點 5，E1 的輸出正端在節點 3、負端在節點 2。
+
+![習題 3.82 依 PSpice 網表繪製的節點網路](../assets/images/ch3-answer-3-82-network.png)
+
+逐項核對：$R_1:1\!\leftrightarrow\!2$（2 kΩ）、$R_2:2\!\leftrightarrow\!0$（4 kΩ）、$R_3:3\!\leftrightarrow\!0$（8 kΩ）、$R_4:3\!\leftrightarrow\!4$（6 kΩ）、$R_5:1\!\leftrightarrow\!3$（3 kΩ）；IS 自 0 至 1 為 4 A；F1 自 1 至 3 為 $2I(\mathrm{VF1})$；E1 在 3 與 2 間，滿足 $V_3-V_2=3(V_1-V_3)$。VF1 為節點 5 至地的 0 V 量測電源；原網表沒有其他元件連至節點 5，因此 $I(\mathrm{VF1})=0$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob83" type="exercise" title="章末習題 3.83" source="課本 p.123" topic="電路模擬">
 
 ![習題 3.83 原文題幹與圖表](../assets/images/ch3-problem-3-83.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.83 答案](../assets/images/ch3-answer-3-83.png)
+
+</template>
 </PracticeCard>
 
 ### 應用與綜合題（3.84–3.93）
@@ -1282,54 +2031,116 @@ $$
 
 ![習題 3.84 原文題幹與圖表](../assets/images/ch3-problem-3-84.png)
 
+
+<template #solution>
+
+**自行推導**：左側 15 mV 電源上端為 $0.015\,\mathrm V$；受控電壓源上端為 $v_o/100$。依圖中向左箭頭，$I_o=(v_o/100-0.015)/(4000\,\Omega)$。右側節點 KCL 為 $v_o/(20\,000\,\Omega)=50I_o$。聯立得到 **$v_o=2.5\,\mathrm V$、$I_o=2.5\,\mu\mathrm A$**。回代左邊 4 kΩ 兩端電壓 $0.025-0.015=0.010\,\mathrm V$，右邊 $50I_o=125\,\mu\mathrm A=v_o/20\,\mathrm{k}\Omega$。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob85" type="exercise" title="章末習題 3.85" source="課本 p.123" topic="電路應用">
 
 ![習題 3.85 原文題幹與圖表](../assets/images/ch3-problem-3-85.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.85 答案](../assets/images/ch3-answer-3-85.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob86" type="exercise" title="章末習題 3.86" source="課本 p.123" topic="電路應用">
 
 ![習題 3.86 原文題幹與圖表](../assets/images/ch3-problem-3-86.png)
 
+
+<template #solution>
+
+**自行推導**：設 1 kΩ 右端／2 kΩ 上端電壓為 $v_x$。左側 $I=(0.047-v_x)/1000$；中央節點 KCL 給 $v_x/2000=(400+1)I$，所以 $I=0.047/803000\,\mathrm A\approx58.53\,\mathrm{nA}$。右側節點 KCL 為 $v_o/5000+400I=0$，故 **$v_o\approx-0.11706\,\mathrm V=-117.06\,\mathrm{mV}$**。負號表示輸出端低於地；兩節點 KCL 回代殘差為零。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob87" type="exercise" title="章末習題 3.87" source="課本 p.123" topic="電路應用">
 
 ![習題 3.87 原文題幹與圖表](../assets/images/ch3-problem-3-87.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.87 答案](../assets/images/ch3-answer-3-87.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob88" type="exercise" title="章末習題 3.88" source="課本 p.124" topic="電路應用">
 
 ![習題 3.88 原文題幹與圖表](../assets/images/ch3-problem-3-88.png)
 
+
+<template #solution>
+
+**自行推導**：輸出端 KCL 給 $v_o/10000+40I_o=0$，故 $v_o=-400000I_o$。受控電壓源上端為 $-v_o/1000=400I_o$；因此 2 kΩ 左端節點為 $v_a=400I_o+2000I_o=2400I_o$。該節點 KCL：$(v_a-v_s)/200+v_a/100+I_o=0$，得 $v_s=7400I_o$。所以 **$v_o/v_s=-400000/7400=-2000/37\approx-54.05$**。三個關係回代均成立。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob89" type="exercise" title="章末習題 3.89" source="課本 p.124" topic="電路應用">
 
 ![習題 3.89 原文題幹與圖表](../assets/images/ch3-problem-3-89.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.89 答案](../assets/images/ch3-answer-3-89.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob90" type="exercise" title="章末習題 3.90" source="課本 p.124" topic="電路應用">
 
 ![習題 3.90 原文題幹與圖表](../assets/images/ch3-problem-3-90.png)
 
+
+<template #solution>
+
+**自行推導**：射極電流 $I_E=v_o/500\,\Omega=4/500=8\,\mathrm{mA}$。若電晶體在主動區，$I_B=I_E/(\beta+1)=8/151\,\mathrm{mA}$，基極電壓 $V_B=V_E+V_{BE}=4.7\,\mathrm V$。因此 **$v_s=V_B+(10\,\mathrm{k}\Omega)I_B=4.7+80/151\approx5.230\,\mathrm V$**。驗算集極電壓 $18-(1\,\mathrm{k}\Omega)(150I_B)\approx10.053\,\mathrm V$，高於基極與射極，主動區假設自洽。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob91" type="exercise" title="章末習題 3.91" source="課本 p.124" topic="電路應用">
 
 ![習題 3.91 原文題幹與圖表](../assets/images/ch3-problem-3-91.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.91 答案](../assets/images/ch3-answer-3-91.png)
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob92" type="exercise" title="章末習題 3.92" source="課本 p.124" topic="電路應用">
 
 ![習題 3.92 原文題幹與圖表](../assets/images/ch3-problem-3-92.png)
 
+
+<template #solution>
+
+**自行推導／自行設計的一個有效例題**：取圖中 $V_1=12.7\,\mathrm V$、$R_1=100\,\mathrm{k}\Omega$、$R_2=R_3=1\,\mathrm{k}\Omega$，並給定電晶體 $\beta=99$、$V_{BE}=0.7\,\mathrm V$，求 $I_B$ 與 $V_C$。設主動區，$I_E=100I_B$，$V_E=R_3I_E$，$V_B=V_E+0.7$。集極節點 KCL：$(V_1-V_C)/R_2=I_C+I_B=100I_B$；基極回授電阻給 $(V_C-V_B)/R_1=I_B$。聯立得 **$I_B=40\,\mu\mathrm A$、$I_C=3.96\,\mathrm{mA}$、$I_E=4\,\mathrm{mA}$、$V_C=8.7\,\mathrm V$、$V_B=4.7\,\mathrm V$、$V_E=4\,\mathrm V$**。回代 $V_{CE}=4.7\,\mathrm V$，大於飽和壓降，主動區假設成立。
+
+</template>
 </PracticeCard>
 
 <PracticeCard id="ch3-prob93" type="exercise" title="章末習題 3.93" source="課本 p.124" topic="電路應用">
@@ -1340,4 +2151,12 @@ $$
 
 ![例題 3.11 的圖 3.34 電路](../assets/images/ch3-ex11_figure_3.34.png)
 
+
+<template #solution>
+
+**課本附錄 D 答案**（PDF 第 933 頁）：
+
+![課本附錄 D 習題 3.93 答案](../assets/images/ch3-answer-3-93.png)
+
+</template>
 </PracticeCard>
