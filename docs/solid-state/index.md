@@ -1,5 +1,9 @@
 <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 -->
 <!-- Hallmark · genre: editorial · macrostructure: Index-First Modular Curriculum Matrix · design-system: design.md · designed-as-app -->
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 <div class="subject-hub">
 <header class="hub-header">
   <div class="hub-slug-row">
@@ -63,7 +67,7 @@
           <span class="hub-card-count">6 單元</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/solid-state/chapter1/0001-miller-indices">結晶學與材料基礎 (Crystallography)</a>
+          <a :href="withBase('/solid-state/chapter1/0001-miller-indices.html')">結晶學與材料基礎 (Crystallography)</a>
         </h3>
         <p class="hub-card-desc">
           深入探索晶體結構的幾何對稱性、晶向與晶面系統及塊狀晶體長晶技術。
@@ -71,24 +75,32 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="/solid-state/chapter1/0001-miller-indices">密勒指數與晶格幾何 (Miller Indices & Lattice Geometry)</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter1/0001-miller-indices.html')">密勒指數與晶格幾何 (Miller Indices & Lattice Geometry)</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0002</span>
-            <a class="hub-lesson-link" href="/solid-state/chapter1/0002-diamond-lattice-density">鑽石結構與矽原子密度推導 (Diamond Lattice & Si Density)</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter1/0002-diamond-lattice-density.html')">鑽石結構與矽原子密度推導 (Diamond Lattice & Si Density)</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0003</span>
-            <a class="hub-lesson-link" href="/solid-state/chapter1/0003-bulk-crystal-growth">塊狀晶體生長與矽晶圓製備 (Bulk Crystal Growth & Wafer Prep)</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter1/0003-bulk-crystal-growth.html')">塊狀晶體生長與矽晶圓製備 (Bulk Crystal Growth & Wafer Prep)</a>
+          </li>
+                    <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0004</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter1/0004-materials-and-lattices.html')">半導體材料、晶格與晶胞</a>
           </li>
           <li class="hub-lesson-item">
-            <span class="hub-lesson-code">0004–0006</span>
-            <a class="hub-lesson-link" href="/solid-state/chapter1/0004-materials-and-lattices">材料分類、晶格、磊晶與週期晶體中的波</a>
+            <span class="hub-lesson-code">0005</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter1/0005-epitaxial-growth.html')">磊晶生長、晶格匹配與缺陷</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0006</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter1/0006-waves-in-crystals.html')">週期晶體中的波與布里淵區</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/solid-state/chapter1/0001-miller-indices">進入章節 →</a>
+        <a class="hub-btn-link" :href="withBase('/solid-state/chapter1/0001-miller-indices.html')">進入章節 →</a>
       </div>
     </div>
     <!-- Chapter 2 Card -->
@@ -99,28 +111,56 @@
           <span class="hub-card-count">10 單元</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/solid-state/chapter2/">原子與電子 (Atoms and Electrons)</a>
+          <a :href="withBase('/solid-state/chapter2/')">原子與電子 (Atoms and Electrons)</a>
         </h3>
         <p class="hub-card-desc">
           由光電效應與原子光譜建立量子化證據，以薛丁格方程式、原子軌域與電子組態連接半導體材料特性。
         </p>
         <ul class="hub-lesson-list">
-          <li class="hub-lesson-item">
-            <span class="hub-lesson-code">0001–0004</span>
-            <a class="hub-lesson-link" href="/solid-state/chapter2/0001-physical-models">量子起點、光電效應、原子光譜與波耳模型</a>
+                    <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0001</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0001-physical-models.html')">物理模型與量子觀念的起點</a>
           </li>
           <li class="hub-lesson-item">
-            <span class="hub-lesson-code">0005–0008</span>
-            <a class="hub-lesson-link" href="/solid-state/chapter2/0006-schrodinger-equation">薛丁格方程式、一維位能井與穿隧效應</a>
+            <span class="hub-lesson-code">0002</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0002-photoelectric-effect.html')">光電效應與光子的能量</a>
           </li>
           <li class="hub-lesson-item">
-            <span class="hub-lesson-code">0009–0010</span>
-            <a class="hub-lesson-link" href="/solid-state/chapter2/0009-hydrogen-atom">氫原子量子數、週期表與半導體鍵結</a>
+            <span class="hub-lesson-code">0003</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0003-atomic-spectra.html')">原子光譜與能階指紋</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0004</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0004-bohr-model.html')">波耳氫原子模型</a>
+          </li>
+                    <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0005</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0005-probability-and-uncertainty.html')">機率詮釋與不確定原理</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0006</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0006-schrodinger-equation.html')">薛丁格波動方程式</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0007</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0007-potential-well.html')">一維無限深位能井</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0008</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0008-quantum-tunneling.html')">量子穿隧效應</a>
+          </li>
+                    <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0009</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0009-hydrogen-atom.html')">氫原子與四個量子數</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0010</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter2/0010-periodic-table.html')">週期表、電子組態與半導體鍵結</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/solid-state/chapter2/">進入章節目錄 →</a>
+        <a class="hub-btn-link" :href="withBase('/solid-state/chapter2/')">進入章節目錄 →</a>
       </div>
     </div>
     <!-- Chapter 3 Card -->
@@ -130,15 +170,23 @@
           <span class="hub-tag hub-tag-accent">Chapter 03</span>
           <span class="hub-card-count">5 單元</span>
         </div>
-        <h3 class="hub-card-title"><a href="/solid-state/chapter3/">半導體能帶與載子</a></h3>
+        <h3 class="hub-card-title"><a :href="withBase('/solid-state/chapter3/')">半導體能帶與載子</a></h3>
         <p class="hub-card-desc">從共價鍵與能帶圖出發，練習有效質量、費米分布、載子濃度、漂移電流、霍爾效應與熱平衡能階。</p>
         <ul class="hub-lesson-list">
-          <li class="hub-lesson-item"><span class="hub-lesson-code">0001–0002</span><a class="hub-lesson-link" href="/solid-state/chapter3/0001-energy-bands">能帶、能隙、電子、電洞與摻雜</a></li>
-          <li class="hub-lesson-item"><span class="hub-lesson-code">0003</span><a class="hub-lesson-link" href="/solid-state/chapter3/0003-carrier-concentrations">費米分布、平衡濃度與補償摻雜</a></li>
-          <li class="hub-lesson-item"><span class="hub-lesson-code">0004–0005</span><a class="hub-lesson-link" href="/solid-state/chapter3/0004-drift-and-hall">漂移、霍爾效應與平衡費米能階</a></li>
+                    <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0001</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter3/0001-energy-bands.html')">鍵結、能帶與能隙</a>
+          </li>
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">0002</span>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/chapter3/0002-carriers-and-effective-mass.html')">電子、電洞、摻雜與有效質量</a>
+          </li>
+          <li class="hub-lesson-item"><span class="hub-lesson-code">0003</span><a class="hub-lesson-link" :href="withBase('/solid-state/chapter3/0003-carrier-concentrations.html')">費米分布與平衡載子濃度</a></li>
+          <li class="hub-lesson-item"><span class="hub-lesson-code">0004</span><a class="hub-lesson-link" :href="withBase('/solid-state/chapter3/0004-drift-and-hall.html')">漂移、遷移率、電阻與霍爾效應</a></li>
+          <li class="hub-lesson-item"><span class="hub-lesson-code">0005</span><a class="hub-lesson-link" :href="withBase('/solid-state/chapter3/0005-equilibrium-fermi-level.html')">熱平衡下費米能階不變</a></li>
         </ul>
       </div>
-      <div class="hub-card-footer"><a class="hub-btn-link" href="/solid-state/chapter3/">進入章節目錄 →</a></div>
+      <div class="hub-card-footer"><a class="hub-btn-link" :href="withBase('/solid-state/chapter3/')">進入章節目錄 →</a></div>
     </div>
     <!-- Learning Records Card -->
     <div class="hub-card">
@@ -148,7 +196,7 @@
           <span class="hub-card-count">3 篇筆記</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/solid-state/learning-records/0001-bandgap-and-valence-electrons">觀念筆記與延伸推導 (Learning Records)</a>
+          <a :href="withBase('/solid-state/learning-records/0001-bandgap-and-valence-electrons.html')">觀念筆記與延伸推導 (Learning Records)</a>
         </h3>
         <p class="hub-card-desc">
           保留學習過程中的摘要、推導回顧與延伸觀察；完整教學內容請先閱讀 Chapter 2。
@@ -156,20 +204,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="/solid-state/learning-records/0001-bandgap-and-valence-electrons">基礎半導體材料分類與價電子結構</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/learning-records/0001-bandgap-and-valence-electrons.html')">基礎半導體材料分類與價電子結構</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0002</span>
-            <a class="hub-lesson-link" href="/solid-state/learning-records/0002-interplanar-spacing-definition">密勒指數晶面求法與面間距幾何推導</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/learning-records/0002-interplanar-spacing-definition.html')">密勒指數晶面求法與面間距幾何推導</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0003</span>
-            <a class="hub-lesson-link" href="/solid-state/learning-records/0003-bulk-crystal-growth">塊狀晶體生長與偏析效應 (Scheil Equation)</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/learning-records/0003-bulk-crystal-growth.html')">塊狀晶體生長與偏析效應 (Scheil Equation)</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/solid-state/learning-records/0001-bandgap-and-valence-electrons">瀏覽觀念筆記 →</a>
+        <a class="hub-btn-link" :href="withBase('/solid-state/learning-records/0001-bandgap-and-valence-electrons.html')">瀏覽觀念筆記 →</a>
       </div>
     </div>
     <!-- Cheatsheets Card -->
@@ -180,7 +228,7 @@
           <span class="hub-card-count">3 張速查卡</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/solid-state/reference/001-miller-indices-cheatsheet">核心公式速查表 (Reference Cheatsheets)</a>
+          <a :href="withBase('/solid-state/reference/001-miller-indices-cheatsheet.html')">核心公式速查表 (Reference Cheatsheets)</a>
         </h3>
         <p class="hub-card-desc">
           考試、複習與研究必備之高密度速查卡，彙整幾何參數與物理常數。
@@ -188,20 +236,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">001</span>
-            <a class="hub-lesson-link" href="/solid-state/reference/001-miller-indices-cheatsheet">密勒指數快速速查表 (Miller Indices Cheatsheet)</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/reference/001-miller-indices-cheatsheet.html')">密勒指數快速速查表 (Miller Indices Cheatsheet)</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">002</span>
-            <a class="hub-lesson-link" href="/solid-state/reference/002-diamond-lattice-cheatsheet">鑽石與閃鋅礦結構幾何速查表 (Diamond Cheatsheet)</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/reference/002-diamond-lattice-cheatsheet.html')">鑽石與閃鋅礦結構幾何速查表 (Diamond Cheatsheet)</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">003</span>
-            <a class="hub-lesson-link" href="/solid-state/reference/003-bulk-crystal-growth-cheatsheet">塊狀晶體生長與晶圓製程速查表 (Growth Cheatsheet)</a>
+            <a class="hub-lesson-link" :href="withBase('/solid-state/reference/003-bulk-crystal-growth-cheatsheet.html')">塊狀晶體生長與晶圓製程速查表 (Growth Cheatsheet)</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/solid-state/reference/001-miller-indices-cheatsheet">查閱速查手冊 →</a>
+        <a class="hub-btn-link" :href="withBase('/solid-state/reference/001-miller-indices-cheatsheet.html')">查閱速查手冊 →</a>
       </div>
     </div>
   </div>
@@ -219,16 +267,16 @@
         <span class="hub-card-count">第 1–3 章各章獨立題頁</span>
       </div>
       <h3 class="hub-card-title" style="margin: 0.5rem 0;">
-        <a href="/solid-state/practice/0001-textbook-problems">Chapter 1 Problems & Self Quiz（25 題）</a>
+        <a :href="withBase('/solid-state/practice/0001-textbook-problems.html')">Chapter 1 Problems & Self Quiz（25 題）</a>
       </h3>
       <p class="hub-card-desc">
         依章節整理教材 Problems 與 Self Quiz；每題提供中文與英文敘述。
       </p>
-      <p class="hub-card-desc"><a href="/solid-state/practice/0003-chapter2-problems">Chapter 2 題目（19 題）→</a>　<a href="/solid-state/practice/0004-chapter3-problems">Chapter 3 題目（34 題）→</a></p>
-      <p class="hub-card-desc"><a href="/solid-state/practice/0002-chapter1-3-exam-review">開啟第 1–3 章考前概念總檢核與跨章計算 →</a></p>
+      <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0003-chapter2-problems.html')">Chapter 2 題目（19 題）→</a>　<a :href="withBase('/solid-state/practice/0004-chapter3-problems.html')">Chapter 3 題目（34 題）→</a></p>
+      <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0002-chapter1-3-exam-review.html')">開啟第 1–3 章考前概念總檢核與跨章計算 →</a></p>
     </div>
     <div class="hub-card-footer" style="margin-top: 1.5rem;">
-      <a class="hub-btn-link" href="/solid-state/practice/0001-textbook-problems">開啟題庫工作區 →</a>
+      <a class="hub-btn-link" :href="withBase('/solid-state/practice/0001-textbook-problems.html')">開啟題庫工作區 →</a>
     </div>
   </div>
 </section>
