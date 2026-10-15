@@ -4,10 +4,10 @@ title: Chapter 1 基本概念：例題與練習題
 
 # Chapter 1 基本概念：例題與練習題
 
-本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 1 章之核心 Example 與 Practice Problem。點擊「查看詳解」可展開分步推導與計算結果；完成題目後可勾選標記學習進度。
+本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 1 章之核心 Example、Practice Problem 與章末 Problems 1.1–1.39。已有詳解的題目可點擊「查看詳解」；每題均可勾選標記學習進度。
 
 <PracticeFilter prefix="ch1-" />
-<PracticeProgress :total="20" prefix="ch1-" />
+<PracticeProgress :total="59" prefix="ch1-" />
 
 <PracticeCard id="ch1-ex1" type="example" title="Example 1.1：電子所代表的電荷" source="課本 p.14" topic="電荷">
 
@@ -275,18 +275,44 @@ $$
 先在 $t=5\,\mathrm{ms}$ 求電流：
 
 $$
-i=5\cos(60\pi\times0.005)=5\cos(0.3\pi)\,\mathrm{A}.
+i(5\,\mathrm{ms})=5\cos(60\pi\times0.005)
+=5\cos(0.3\pi)=2.938926\,\mathrm{A}.
 $$
 
-對 (a)，以 $p=vi=6i^2$ 得課本答案：$51.82\,\mathrm{W}$。
+對 (a)，
+
+$$
+v=6i=6(2.938926)=17.633558\,\mathrm{V},
+$$
+
+$$
+p=vi=6i^2=6(2.938926)^2
+=51.823725\,\mathrm{W}\approx51.82\,\mathrm{W}.
+$$
 
 對 (b)，積分項為
 
 $$
-\int_0^t i\,dt=\frac{5}{60\pi}\sin(60\pi t),
+q(t)=\int_0^t i(\tau)\,d\tau
+=\frac{5}{60\pi}\sin(60\pi t).
 $$
 
-代入 $t=5\,\mathrm{ms}$ 後再以 $p=vi$ 計算。課本答案：$18.264\,\mathrm{W}$。
+在 $t=5\,\mathrm{ms}$ 時，
+
+$$
+q=\frac{5}{60\pi}\sin(0.3\pi)=0.02145984\,\mathrm{C},
+$$
+
+$$
+v=6+10q=6+10(0.02145984)=6.214598\,\mathrm{V},
+$$
+
+$$
+p=vi=(6.214598)(2.938926)
+=18.264247\,\mathrm{W}\approx18.264\,\mathrm{W}.
+$$
+
+因電流流入元件的正端，依被動符號約定，正號表示元件吸收功率。
 
 </template>
 
@@ -554,5 +580,250 @@ $$
 教材對 `Practice Problem 1.10` 僅提供上述開放式練習指示，沒有指定章末題號，也沒有提供唯一的數值標準答案。因此本題目前無法進行特定電路的代數回代驗算；待指定欲套用的章末題目後，再依該題教材答案核對。
 
 </template>
+
+</PracticeCard>
+
+
+## 章末 Problems（1.1–1.39）
+
+以下保留課本英文原題與原圖，題幹中的數值、符號和圖表可直接對照。此區先提供自包含題目供練習，尚未加入未經教材答案核對的解答。
+
+<PracticeCard id="ch1-problem-01" type="exercise" title="章末習題 1.1" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.1 題幹](../assets/images/ch1-problem-1-01.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-02" type="exercise" title="章末習題 1.2" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.2 題幹](../assets/images/ch1-problem-1-02.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-03" type="exercise" title="章末習題 1.3" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.3 題幹](../assets/images/ch1-problem-1-03.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-04" type="exercise" title="章末習題 1.4" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.4 題幹](../assets/images/ch1-problem-1-04.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-05" type="exercise" title="章末習題 1.5" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.5 題幹](../assets/images/ch1-problem-1-05.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-06" type="exercise" title="章末習題 1.6" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.6 題幹](../assets/images/ch1-problem-1-06.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-07" type="exercise" title="章末習題 1.7" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.7 題幹](../assets/images/ch1-problem-1-07-part1.png)
+
+![習題 1.7 圖表或續題](../assets/images/ch1-problem-1-07-part2.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-08" type="exercise" title="章末習題 1.8" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.8 題幹](../assets/images/ch1-problem-1-08.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-09" type="exercise" title="章末習題 1.9" source="課本 p.24" topic="電荷與電流">
+
+![習題 1.9 題幹](../assets/images/ch1-problem-1-09.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-10" type="exercise" title="章末習題 1.10" source="課本 p.24" topic="電壓、功率與能量">
+
+![習題 1.10 題幹](../assets/images/ch1-problem-1-10.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-11" type="exercise" title="章末習題 1.11" source="課本 p.24" topic="電壓、功率與能量">
+
+![習題 1.11 題幹](../assets/images/ch1-problem-1-11.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-12" type="exercise" title="章末習題 1.12" source="課本 p.24" topic="電壓、功率與能量">
+
+![習題 1.12 題幹](../assets/images/ch1-problem-1-12.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-13" type="exercise" title="章末習題 1.13" source="課本 p.25" topic="電壓、功率與能量">
+
+![習題 1.13 題幹](../assets/images/ch1-problem-1-13.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-14" type="exercise" title="章末習題 1.14" source="課本 p.25" topic="電壓、功率與能量">
+
+![習題 1.14 題幹](../assets/images/ch1-problem-1-14.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-15" type="exercise" title="章末習題 1.15" source="課本 p.25" topic="電壓、功率與能量">
+
+![習題 1.15 題幹](../assets/images/ch1-problem-1-15.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-16" type="exercise" title="章末習題 1.16" source="課本 p.25" topic="電路元件">
+
+![習題 1.16 題幹](../assets/images/ch1-problem-1-16.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-17" type="exercise" title="章末習題 1.17" source="課本 p.25" topic="電路元件">
+
+![習題 1.17 題幹](../assets/images/ch1-problem-1-17.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-18" type="exercise" title="章末習題 1.18" source="課本 p.25" topic="電路元件">
+
+![習題 1.18 題幹](../assets/images/ch1-problem-1-18.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-19" type="exercise" title="章末習題 1.19" source="課本 p.25" topic="電路元件">
+
+![習題 1.19 題幹](../assets/images/ch1-problem-1-19.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-20" type="exercise" title="章末習題 1.20" source="課本 p.25" topic="電路元件">
+
+![習題 1.20 題幹](../assets/images/ch1-problem-1-20.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-21" type="exercise" title="章末習題 1.21" source="課本 p.26" topic="應用題">
+
+![習題 1.21 題幹](../assets/images/ch1-problem-1-21.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-22" type="exercise" title="章末習題 1.22" source="課本 p.26" topic="應用題">
+
+![習題 1.22 題幹](../assets/images/ch1-problem-1-22.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-23" type="exercise" title="章末習題 1.23" source="課本 p.26" topic="應用題">
+
+![習題 1.23 題幹](../assets/images/ch1-problem-1-23.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-24" type="exercise" title="章末習題 1.24" source="課本 p.26" topic="應用題">
+
+![習題 1.24 題幹](../assets/images/ch1-problem-1-24.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-25" type="exercise" title="章末習題 1.25" source="課本 p.26" topic="應用題">
+
+![習題 1.25 題幹](../assets/images/ch1-problem-1-25.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-26" type="exercise" title="章末習題 1.26" source="課本 p.26" topic="應用題">
+
+![習題 1.26 題幹](../assets/images/ch1-problem-1-26.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-27" type="exercise" title="章末習題 1.27" source="課本 p.26" topic="應用題">
+
+![習題 1.27 題幹](../assets/images/ch1-problem-1-27-part1.png)
+
+![習題 1.27 圖表或續題](../assets/images/ch1-problem-1-27-part2.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-28" type="exercise" title="章末習題 1.28" source="課本 p.26" topic="應用題">
+
+![習題 1.28 題幹](../assets/images/ch1-problem-1-28.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-29" type="exercise" title="章末習題 1.29" source="課本 p.26" topic="應用題">
+
+![習題 1.29 題幹](../assets/images/ch1-problem-1-29.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-30" type="exercise" title="章末習題 1.30" source="課本 p.26" topic="應用題">
+
+![習題 1.30 題幹](../assets/images/ch1-problem-1-30.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-31" type="exercise" title="章末習題 1.31" source="課本 p.26" topic="應用題">
+
+![習題 1.31 題幹](../assets/images/ch1-problem-1-31.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-32" type="exercise" title="章末習題 1.32" source="課本 p.26" topic="綜合題">
+
+![習題 1.32 題幹](../assets/images/ch1-problem-1-32.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-33" type="exercise" title="章末習題 1.33" source="課本 p.26" topic="綜合題">
+
+![習題 1.33 題幹](../assets/images/ch1-problem-1-33.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-34" type="exercise" title="章末習題 1.34" source="課本 p.26" topic="綜合題">
+
+![習題 1.34 題幹](../assets/images/ch1-problem-1-34-part1.png)
+
+![習題 1.34 圖表或續題](../assets/images/ch1-problem-1-34-part2.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-35" type="exercise" title="章末習題 1.35" source="課本 p.27" topic="綜合題">
+
+![習題 1.35 題幹](../assets/images/ch1-problem-1-35.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-36" type="exercise" title="章末習題 1.36" source="課本 p.27" topic="綜合題">
+
+![習題 1.36 題幹](../assets/images/ch1-problem-1-36.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-37" type="exercise" title="章末習題 1.37" source="課本 p.27" topic="綜合題">
+
+![習題 1.37 題幹](../assets/images/ch1-problem-1-37.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-38" type="exercise" title="章末習題 1.38" source="課本 p.27" topic="綜合題">
+
+![習題 1.38 題幹](../assets/images/ch1-problem-1-38.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch1-problem-39" type="exercise" title="章末習題 1.39" source="課本 p.27" topic="綜合題">
+
+![習題 1.39 題幹](../assets/images/ch1-problem-1-39.png)
 
 </PracticeCard>

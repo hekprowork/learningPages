@@ -15,7 +15,7 @@ description: 電路學第二章 基礎電路定律 (Basic Laws) 互動題庫、�
 :::
 
 <PracticeFilter prefix="ch2-" />
-<PracticeProgress :total="34" prefix="ch2-" />
+<PracticeProgress :total="110" prefix="ch2-" />
 
 <PracticeCard id="ch2-ex-2-1" type="example" title="電熨斗等效電阻計算" source="Example 2.1 · Slide P17" topic="歐姆定律與電導">
 
@@ -1456,4 +1456,469 @@ $$\text{指定題號：\#8, \#11, \#15, \#22, \#31, \#38, \#47, \#55}$$
 :::
 
 </template>
+</PracticeCard>
+
+
+## 課本章末習題：Problems 2.1–2.75
+
+以下依原書題號排列。每題保留原題敘述、電路圖與標示；需要自行設計題目的題型亦照原文呈現。來源為《Fundamentals of Electric Circuits》Chapter 2，印刷頁 65–76（PDF 第 71–82 頁）。
+
+<!-- Chapter-end textbook problems 2.1–2.75 -->
+
+<PracticeCard id="ch2-problem-2-1" type="exercise" title="課本習題 2.1" source="課本 Chapter 2 · Problems 2.1 · 印刷頁 65" topic="歐姆定律">
+
+![課本 Chapter 2 習題 2.1 原題與電路圖](../assets/images/ch2_problem_2_01.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-2" type="exercise" title="課本習題 2.2" source="課本 Chapter 2 · Problems 2.2 · 印刷頁 65" topic="歐姆定律">
+
+![課本 Chapter 2 習題 2.2 原題與電路圖](../assets/images/ch2_problem_2_02.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-3" type="exercise" title="課本習題 2.3" source="課本 Chapter 2 · Problems 2.3 · 印刷頁 65" topic="歐姆定律">
+
+![課本 Chapter 2 習題 2.3 原題與電路圖](../assets/images/ch2_problem_2_03.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-4" type="exercise" title="課本習題 2.4" source="課本 Chapter 2 · Problems 2.4 · 印刷頁 66" topic="歐姆定律">
+
+![課本 Chapter 2 習題 2.4 原題與電路圖](../assets/images/ch2_problem_2_04.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-5" type="exercise" title="課本習題 2.5" source="課本 Chapter 2 · Problems 2.5 · 印刷頁 66" topic="節點、支路與迴路">
+
+![課本 Chapter 2 習題 2.5 原題與電路圖](../assets/images/ch2_problem_2_05.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-6" type="exercise" title="課本習題 2.6" source="課本 Chapter 2 · Problems 2.6 · 印刷頁 66" topic="節點、支路與迴路">
+
+![課本 Chapter 2 習題 2.6 原題與電路圖](../assets/images/ch2_problem_2_06.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-7" type="exercise" title="課本習題 2.7" source="課本 Chapter 2 · Problems 2.7 · 印刷頁 66" topic="節點、支路與迴路">
+
+![課本 Chapter 2 習題 2.7 原題與電路圖](../assets/images/ch2_problem_2_07.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-8" type="exercise" title="課本習題 2.8" source="課本 Chapter 2 · Problems 2.8 · 印刷頁 66" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.8 原題與電路圖](../assets/images/ch2_problem_2_08.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-9" type="exercise" title="課本習題 2.9" source="課本 Chapter 2 · Problems 2.9 · 印刷頁 66" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.9 原題與電路圖](../assets/images/ch2_problem_2_09.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-10" type="exercise" title="課本習題 2.10" source="課本 Chapter 2 · Problems 2.10 · 印刷頁 66" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.10 原題與電路圖](../assets/images/ch2_problem_2_10.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-11" type="exercise" title="課本習題 2.11" source="課本 Chapter 2 · Problems 2.11 · 印刷頁 66" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.11 原題與電路圖](../assets/images/ch2_problem_2_11.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-12" type="exercise" title="課本習題 2.12" source="課本 Chapter 2 · Problems 2.12 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.12 原題與電路圖](../assets/images/ch2_problem_2_12.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-13" type="exercise" title="課本習題 2.13" source="課本 Chapter 2 · Problems 2.13 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.13 原題與電路圖](../assets/images/ch2_problem_2_13.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-14" type="exercise" title="課本習題 2.14" source="課本 Chapter 2 · Problems 2.14 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.14 原題與電路圖](../assets/images/ch2_problem_2_14.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-15" type="exercise" title="課本習題 2.15" source="課本 Chapter 2 · Problems 2.15 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.15 原題與電路圖](../assets/images/ch2_problem_2_15.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-16" type="exercise" title="課本習題 2.16" source="課本 Chapter 2 · Problems 2.16 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.16 原題與電路圖](../assets/images/ch2_problem_2_16.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-17" type="exercise" title="課本習題 2.17" source="課本 Chapter 2 · Problems 2.17 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.17 原題與電路圖](../assets/images/ch2_problem_2_17.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-18" type="exercise" title="課本習題 2.18" source="課本 Chapter 2 · Problems 2.18 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.18 原題與電路圖](../assets/images/ch2_problem_2_18.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-19" type="exercise" title="課本習題 2.19" source="課本 Chapter 2 · Problems 2.19 · 印刷頁 67" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.19 原題與電路圖](../assets/images/ch2_problem_2_19.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-20" type="exercise" title="課本習題 2.20" source="課本 Chapter 2 · Problems 2.20 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.20 原題與電路圖](../assets/images/ch2_problem_2_20.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-21" type="exercise" title="課本習題 2.21" source="課本 Chapter 2 · Problems 2.21 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.21 原題與電路圖](../assets/images/ch2_problem_2_21.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-22" type="exercise" title="課本習題 2.22" source="課本 Chapter 2 · Problems 2.22 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.22 原題與電路圖](../assets/images/ch2_problem_2_22.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-23" type="exercise" title="課本習題 2.23" source="課本 Chapter 2 · Problems 2.23 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.23 原題與電路圖](../assets/images/ch2_problem_2_23.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-24" type="exercise" title="課本習題 2.24" source="課本 Chapter 2 · Problems 2.24 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.24 原題與電路圖](../assets/images/ch2_problem_2_24.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-25" type="exercise" title="課本習題 2.25" source="課本 Chapter 2 · Problems 2.25 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.25 原題與電路圖](../assets/images/ch2_problem_2_25.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-26" type="exercise" title="課本習題 2.26" source="課本 Chapter 2 · Problems 2.26 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.26 原題與電路圖](../assets/images/ch2_problem_2_26.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-27" type="exercise" title="課本習題 2.27" source="課本 Chapter 2 · Problems 2.27 · 印刷頁 68" topic="KCL 與 KVL">
+
+![課本 Chapter 2 習題 2.27 原題與電路圖](../assets/images/ch2_problem_2_27.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-28" type="exercise" title="課本習題 2.28" source="課本 Chapter 2 · Problems 2.28 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.28 原題與電路圖](../assets/images/ch2_problem_2_28.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-29" type="exercise" title="課本習題 2.29" source="課本 Chapter 2 · Problems 2.29 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.29 原題與電路圖](../assets/images/ch2_problem_2_29.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-30" type="exercise" title="課本習題 2.30" source="課本 Chapter 2 · Problems 2.30 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.30 原題與電路圖](../assets/images/ch2_problem_2_30.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-31" type="exercise" title="課本習題 2.31" source="課本 Chapter 2 · Problems 2.31 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.31 原題與電路圖](../assets/images/ch2_problem_2_31.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-32" type="exercise" title="課本習題 2.32" source="課本 Chapter 2 · Problems 2.32 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.32 原題與電路圖](../assets/images/ch2_problem_2_32.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-33" type="exercise" title="課本習題 2.33" source="課本 Chapter 2 · Problems 2.33 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.33 原題與電路圖](../assets/images/ch2_problem_2_33.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-34" type="exercise" title="課本習題 2.34" source="課本 Chapter 2 · Problems 2.34 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.34 原題與電路圖](../assets/images/ch2_problem_2_34.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-35" type="exercise" title="課本習題 2.35" source="課本 Chapter 2 · Problems 2.35 · 印刷頁 69" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.35 原題與電路圖](../assets/images/ch2_problem_2_35.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-36" type="exercise" title="課本習題 2.36" source="課本 Chapter 2 · Problems 2.36 · 印刷頁 70" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.36 原題與電路圖](../assets/images/ch2_problem_2_36.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-37" type="exercise" title="課本習題 2.37" source="課本 Chapter 2 · Problems 2.37 · 印刷頁 70" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.37 原題與電路圖](../assets/images/ch2_problem_2_37.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-38" type="exercise" title="課本習題 2.38" source="課本 Chapter 2 · Problems 2.38 · 印刷頁 70" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.38 原題與電路圖](../assets/images/ch2_problem_2_38.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-39" type="exercise" title="課本習題 2.39" source="課本 Chapter 2 · Problems 2.39 · 印刷頁 70" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.39 原題與電路圖](../assets/images/ch2_problem_2_39.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-40" type="exercise" title="課本習題 2.40" source="課本 Chapter 2 · Problems 2.40 · 印刷頁 70" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.40 原題與電路圖](../assets/images/ch2_problem_2_40.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-41" type="exercise" title="課本習題 2.41" source="課本 Chapter 2 · Problems 2.41 · 印刷頁 70" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.41 原題與電路圖](../assets/images/ch2_problem_2_41.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-42" type="exercise" title="課本習題 2.42" source="課本 Chapter 2 · Problems 2.42 · 印刷頁 70" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.42 原題與電路圖](../assets/images/ch2_problem_2_42.png)
+
+![課本 Chapter 2 習題 2.42 原題與電路圖（續 2）](../assets/images/ch2_problem_2_42_continued.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-43" type="exercise" title="課本習題 2.43" source="課本 Chapter 2 · Problems 2.43 · 印刷頁 71" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.43 原題與電路圖](../assets/images/ch2_problem_2_43.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-44" type="exercise" title="課本習題 2.44" source="課本 Chapter 2 · Problems 2.44 · 印刷頁 71" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.44 原題與電路圖](../assets/images/ch2_problem_2_44.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-45" type="exercise" title="課本習題 2.45" source="課本 Chapter 2 · Problems 2.45 · 印刷頁 71" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.45 原題與電路圖](../assets/images/ch2_problem_2_45.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-46" type="exercise" title="課本習題 2.46" source="課本 Chapter 2 · Problems 2.46 · 印刷頁 71" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.46 原題與電路圖](../assets/images/ch2_problem_2_46.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-47" type="exercise" title="課本習題 2.47" source="課本 Chapter 2 · Problems 2.47 · 印刷頁 72" topic="串並聯與等效電阻">
+
+![課本 Chapter 2 習題 2.47 原題與電路圖](../assets/images/ch2_problem_2_47.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-48" type="exercise" title="課本習題 2.48" source="課本 Chapter 2 · Problems 2.48 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.48 原題與電路圖](../assets/images/ch2_problem_2_48.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-49" type="exercise" title="課本習題 2.49" source="課本 Chapter 2 · Problems 2.49 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.49 原題與電路圖](../assets/images/ch2_problem_2_49.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-50" type="exercise" title="課本習題 2.50" source="課本 Chapter 2 · Problems 2.50 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.50 原題與電路圖](../assets/images/ch2_problem_2_50.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-51" type="exercise" title="課本習題 2.51" source="課本 Chapter 2 · Problems 2.51 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.51 原題與電路圖](../assets/images/ch2_problem_2_51.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-52" type="exercise" title="課本習題 2.52" source="課本 Chapter 2 · Problems 2.52 · 印刷頁 72" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.52 原題與電路圖](../assets/images/ch2_problem_2_52.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-53" type="exercise" title="課本習題 2.53" source="課本 Chapter 2 · Problems 2.53 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.53 原題與電路圖](../assets/images/ch2_problem_2_53.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-54" type="exercise" title="課本習題 2.54" source="課本 Chapter 2 · Problems 2.54 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.54 原題與電路圖](../assets/images/ch2_problem_2_54.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-55" type="exercise" title="課本習題 2.55" source="課本 Chapter 2 · Problems 2.55 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.55 原題與電路圖](../assets/images/ch2_problem_2_55.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-56" type="exercise" title="課本習題 2.56" source="課本 Chapter 2 · Problems 2.56 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.56 原題與電路圖](../assets/images/ch2_problem_2_56.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-57" type="exercise" title="課本習題 2.57" source="課本 Chapter 2 · Problems 2.57 · 印刷頁 73" topic="Y–Δ 轉換與電阻網路">
+
+![課本 Chapter 2 習題 2.57 原題與電路圖](../assets/images/ch2_problem_2_57.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-58" type="exercise" title="課本習題 2.58" source="課本 Chapter 2 · Problems 2.58 · 印刷頁 73" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.58 原題與電路圖](../assets/images/ch2_problem_2_58.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-59" type="exercise" title="課本習題 2.59" source="課本 Chapter 2 · Problems 2.59 · 印刷頁 73" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.59 原題與電路圖](../assets/images/ch2_problem_2_59.png)
+
+![課本 Chapter 2 習題 2.59 原題與電路圖（續 2）](../assets/images/ch2_problem_2_59_continued.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-60" type="exercise" title="課本習題 2.60" source="課本 Chapter 2 · Problems 2.60 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.60 原題與電路圖](../assets/images/ch2_problem_2_60.png)
+
+![習題 2.60 所引用的習題 2.59 三燈泡電路（Figure 2.123）](../assets/images/ch2_problem_2_60_reference.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-61" type="exercise" title="課本習題 2.61" source="課本 Chapter 2 · Problems 2.61 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.61 原題與電路圖](../assets/images/ch2_problem_2_61.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-62" type="exercise" title="課本習題 2.62" source="課本 Chapter 2 · Problems 2.62 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.62 原題與電路圖](../assets/images/ch2_problem_2_62.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-63" type="exercise" title="課本習題 2.63" source="課本 Chapter 2 · Problems 2.63 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.63 原題與電路圖](../assets/images/ch2_problem_2_63.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-64" type="exercise" title="課本習題 2.64" source="課本 Chapter 2 · Problems 2.64 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.64 原題與電路圖](../assets/images/ch2_problem_2_64.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-65" type="exercise" title="課本習題 2.65" source="課本 Chapter 2 · Problems 2.65 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.65 原題與電路圖](../assets/images/ch2_problem_2_65.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-66" type="exercise" title="課本習題 2.66" source="課本 Chapter 2 · Problems 2.66 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.66 原題與電路圖](../assets/images/ch2_problem_2_66.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-67" type="exercise" title="課本習題 2.67" source="課本 Chapter 2 · Problems 2.67 · 印刷頁 74" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.67 原題與電路圖](../assets/images/ch2_problem_2_67.png)
+
+![課本 Chapter 2 習題 2.67 原題與電路圖（續 2）](../assets/images/ch2_problem_2_67_continued.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-68" type="exercise" title="課本習題 2.68" source="課本 Chapter 2 · Problems 2.68 · 印刷頁 75" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.68 原題與電路圖](../assets/images/ch2_problem_2_68.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-69" type="exercise" title="課本習題 2.69" source="課本 Chapter 2 · Problems 2.69 · 印刷頁 75" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.69 原題與電路圖](../assets/images/ch2_problem_2_69.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-70" type="exercise" title="課本習題 2.70" source="課本 Chapter 2 · Problems 2.70 · 印刷頁 75" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.70 原題與電路圖](../assets/images/ch2_problem_2_70.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-71" type="exercise" title="課本習題 2.71" source="課本 Chapter 2 · Problems 2.71 · 印刷頁 75" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.71 原題與電路圖](../assets/images/ch2_problem_2_71.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-72" type="exercise" title="課本習題 2.72" source="課本 Chapter 2 · Problems 2.72 · 印刷頁 76" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.72 原題與電路圖](../assets/images/ch2_problem_2_72.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-73" type="exercise" title="課本習題 2.73" source="課本 Chapter 2 · Problems 2.73 · 印刷頁 76" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.73 原題與電路圖](../assets/images/ch2_problem_2_73.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-74" type="exercise" title="課本習題 2.74" source="課本 Chapter 2 · Problems 2.74 · 印刷頁 76" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.74 原題與電路圖](../assets/images/ch2_problem_2_74.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch2-problem-2-75" type="exercise" title="課本習題 2.75" source="課本 Chapter 2 · Problems 2.75 · 印刷頁 76" topic="實際應用與量測">
+
+![課本 Chapter 2 習題 2.75 原題與電路圖](../assets/images/ch2_problem_2_75.png)
+
 </PracticeCard>

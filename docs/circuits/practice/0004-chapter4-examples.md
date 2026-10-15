@@ -31,7 +31,7 @@ description: 電路學第四章 電路定理 (Circuit Theorems) 互動題庫、�
 :::
 
 <PracticeFilter prefix="ch4-" />
-<PracticeProgress :total="36" prefix="ch4-" />
+<PracticeProgress :total="134" prefix="ch4-" />
 
 <PracticeCard id="ch4-ex-4-1" type="example" title="線性性質與比例常數關係分析" source="Example 4.1 · Slide P.7–9" topic="線性性質 (Linearity Property)">
 
@@ -1550,6 +1550,635 @@ $$
 </template>
 </PracticeCard>
 
+## 課本章末習題（Problems 4.1–4.98）
+
+以下依課本題號排列。每張題卡包含原題頁面中的題幹及電路圖；課本未提供可直接核對的完整解答，因此這一區先供自主作答與進度追蹤。
+
+<PracticeCard id="ch4-problem-1" type="exercise" title="章末習題 4.1" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.1 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-01.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-2" type="exercise" title="章末習題 4.2" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.2 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-02.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-3" type="exercise" title="章末習題 4.3" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.3 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-03.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-4" type="exercise" title="章末習題 4.4" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.4 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-04.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-5" type="exercise" title="章末習題 4.5" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.5 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-05.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-6" type="exercise" title="章末習題 4.6" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.6 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-06.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-7" type="exercise" title="章末習題 4.7" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.7 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-07.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-8" type="exercise" title="章末習題 4.8" source="課本 p.160" topic="Chapter 4 Problems">
+
+![課本章末習題 4.8 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-08.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-9" type="exercise" title="章末習題 4.9" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.9 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-09.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-10" type="exercise" title="章末習題 4.10" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.10 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-10.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-11" type="exercise" title="章末習題 4.11" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.11 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-11.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-12" type="exercise" title="章末習題 4.12" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.12 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-12.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-13" type="exercise" title="章末習題 4.13" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.13 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-13.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-14" type="exercise" title="章末習題 4.14" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.14 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-14.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-15" type="exercise" title="章末習題 4.15" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.15 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-15.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-16" type="exercise" title="章末習題 4.16" source="課本 p.161" topic="Chapter 4 Problems">
+
+![課本章末習題 4.16 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-16.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-17" type="exercise" title="章末習題 4.17" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.17 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-17.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-18" type="exercise" title="章末習題 4.18" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.18 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-18.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-19" type="exercise" title="章末習題 4.19" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.19 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-19.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-20" type="exercise" title="章末習題 4.20" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.20 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-20.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-21" type="exercise" title="章末習題 4.21" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.21 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-21.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-22" type="exercise" title="章末習題 4.22" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.22 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-22.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-23" type="exercise" title="章末習題 4.23" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.23 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-23.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-24" type="exercise" title="章末習題 4.24" source="課本 p.162" topic="Chapter 4 Problems">
+
+![課本章末習題 4.24 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-24.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-25" type="exercise" title="章末習題 4.25" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.25 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-25.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-26" type="exercise" title="章末習題 4.26" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.26 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-26.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-27" type="exercise" title="章末習題 4.27" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.27 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-27.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-28" type="exercise" title="章末習題 4.28" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.28 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-28.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-29" type="exercise" title="章末習題 4.29" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.29 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-29.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-30" type="exercise" title="章末習題 4.30" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.30 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-30.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-31" type="exercise" title="章末習題 4.31" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.31 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-31.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-32" type="exercise" title="章末習題 4.32" source="課本 p.163" topic="Chapter 4 Problems">
+
+![課本章末習題 4.32 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-32.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-33" type="exercise" title="章末習題 4.33" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.33 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-33.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-34" type="exercise" title="章末習題 4.34" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.34 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-34.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-35" type="exercise" title="章末習題 4.35" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.35 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-35.webp)
+
+本題沿用習題 4.12 的電路與條件：
+
+![習題 4.12 的電路與條件](../assets/images/ch4-end-problems/problem-4-12.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-36" type="exercise" title="章末習題 4.36" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.36 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-36.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-37" type="exercise" title="章末習題 4.37" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.37 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-37.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-38" type="exercise" title="章末習題 4.38" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.38 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-38.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-39" type="exercise" title="章末習題 4.39" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.39 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-39.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-40" type="exercise" title="章末習題 4.40" source="課本 p.164" topic="Chapter 4 Problems">
+
+![課本章末習題 4.40 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-40.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-41" type="exercise" title="章末習題 4.41" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.41 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-41.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-42" type="exercise" title="章末習題 4.42" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.42 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-42.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-43" type="exercise" title="章末習題 4.43" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.43 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-43.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-44" type="exercise" title="章末習題 4.44" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.44 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-44.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-45" type="exercise" title="章末習題 4.45" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.45 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-45.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-46" type="exercise" title="章末習題 4.46" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.46 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-46.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-47" type="exercise" title="章末習題 4.47" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.47 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-47.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-48" type="exercise" title="章末習題 4.48" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.48 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-48.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-49" type="exercise" title="章末習題 4.49" source="課本 p.165" topic="Chapter 4 Problems">
+
+![課本章末習題 4.49 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-49.webp)
+
+本題引用的 Figure 4.102：
+
+![Figure 4.102 電路圖與原始條件](../assets/images/ch4-end-problems/problem-4-34.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-50" type="exercise" title="章末習題 4.50" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.50 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-50.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-51" type="exercise" title="章末習題 4.51" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.51 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-51.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-52" type="exercise" title="章末習題 4.52" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.52 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-52.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-53" type="exercise" title="章末習題 4.53" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.53 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-53.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-54" type="exercise" title="章末習題 4.54" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.54 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-54.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-55" type="exercise" title="章末習題 4.55" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.55 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-55.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-56" type="exercise" title="章末習題 4.56" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.56 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-56.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-57" type="exercise" title="章末習題 4.57" source="課本 p.166" topic="Chapter 4 Problems">
+
+![課本章末習題 4.57 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-57.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-58" type="exercise" title="章末習題 4.58" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.58 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-58.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-59" type="exercise" title="章末習題 4.59" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.59 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-59.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-60" type="exercise" title="章末習題 4.60" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.60 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-60.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-61" type="exercise" title="章末習題 4.61" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.61 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-61.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-62" type="exercise" title="章末習題 4.62" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.62 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-62.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-63" type="exercise" title="章末習題 4.63" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.63 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-63.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-64" type="exercise" title="章末習題 4.64" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.64 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-64.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-65" type="exercise" title="章末習題 4.65" source="課本 p.167" topic="Chapter 4 Problems">
+
+![課本章末習題 4.65 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-65.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-66" type="exercise" title="章末習題 4.66" source="課本 p.168" topic="Chapter 4 Problems">
+
+![課本章末習題 4.66 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-66.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-67" type="exercise" title="章末習題 4.67" source="課本 p.168" topic="Chapter 4 Problems">
+
+![課本章末習題 4.67 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-67.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-68" type="exercise" title="章末習題 4.68" source="課本 p.168" topic="Chapter 4 Problems">
+
+![課本章末習題 4.68 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-68.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-69" type="exercise" title="章末習題 4.69" source="課本 p.168" topic="Chapter 4 Problems">
+
+![課本章末習題 4.69 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-69.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-70" type="exercise" title="章末習題 4.70" source="課本 p.168" topic="Chapter 4 Problems">
+
+![課本章末習題 4.70 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-70.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-71" type="exercise" title="章末習題 4.71" source="課本 p.168" topic="Chapter 4 Problems">
+
+![課本章末習題 4.71 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-71.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-72" type="exercise" title="章末習題 4.72" source="課本 p.168" topic="Chapter 4 Problems">
+
+![課本章末習題 4.72 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-72.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-73" type="exercise" title="章末習題 4.73" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.73 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-73.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-74" type="exercise" title="章末習題 4.74" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.74 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-74.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-75" type="exercise" title="章末習題 4.75" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.75 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-75.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-76" type="exercise" title="章末習題 4.76" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.76 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-76.webp)
+
+本題沿用習題 4.34 的電路與條件：
+
+![習題 4.34 的電路與條件](../assets/images/ch4-end-problems/problem-4-34.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-77" type="exercise" title="章末習題 4.77" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.77 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-77.webp)
+
+本題沿用習題 4.44 的電路與條件：
+
+![習題 4.44 的電路與條件](../assets/images/ch4-end-problems/problem-4-44.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-78" type="exercise" title="章末習題 4.78" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.78 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-78.webp)
+
+本題沿用習題 4.52 的電路與條件：
+
+![習題 4.52 的電路與條件](../assets/images/ch4-end-problems/problem-4-52.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-79" type="exercise" title="章末習題 4.79" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.79 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-79.webp)
+
+本題引用的 Figure 4.123：
+
+![Figure 4.123 電路圖](../assets/images/ch4-end-problems/problem-4-57.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-80" type="exercise" title="章末習題 4.80" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.80 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-80.webp)
+
+本題沿用習題 4.59 的電路與條件：
+
+![習題 4.59 的電路與條件](../assets/images/ch4-end-problems/problem-4-59.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-81" type="exercise" title="章末習題 4.81" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.81 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-81.webp)
+
+本題沿用習題 4.60 的電路與條件：
+
+![習題 4.60 的電路與條件](../assets/images/ch4-end-problems/problem-4-60.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-82" type="exercise" title="章末習題 4.82" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.82 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-82.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-83" type="exercise" title="章末習題 4.83" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.83 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-83.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-84" type="exercise" title="章末習題 4.84" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.84 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-84.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-85" type="exercise" title="章末習題 4.85" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.85 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-85.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-86" type="exercise" title="章末習題 4.86" source="課本 p.169" topic="Chapter 4 Problems">
+
+![課本章末習題 4.86 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-86.webp)
+
+![章末習題 4.86 續頁](../assets/images/ch4-end-problems/problem-4-86-continued.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-87" type="exercise" title="章末習題 4.87" source="課本 p.170" topic="Chapter 4 Problems">
+
+![課本章末習題 4.87 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-87.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-88" type="exercise" title="章末習題 4.88" source="課本 p.170" topic="Chapter 4 Problems">
+
+![課本章末習題 4.88 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-88.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-89" type="exercise" title="章末習題 4.89" source="課本 p.170" topic="Chapter 4 Problems">
+
+![課本章末習題 4.89 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-89.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-90" type="exercise" title="章末習題 4.90" source="課本 p.170" topic="Chapter 4 Problems">
+
+![課本章末習題 4.90 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-90.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-91" type="exercise" title="章末習題 4.91" source="課本 p.170" topic="Chapter 4 Problems">
+
+![課本章末習題 4.91 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-91.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-92" type="exercise" title="章末習題 4.92" source="課本 p.170" topic="Chapter 4 Problems">
+
+![課本章末習題 4.92 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-92.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-93" type="exercise" title="章末習題 4.93" source="課本 p.171" topic="Chapter 4 Problems">
+
+![課本章末習題 4.93 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-93.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-94" type="exercise" title="章末習題 4.94" source="課本 p.171" topic="Chapter 4 Problems">
+
+![課本章末習題 4.94 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-94.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-95" type="exercise" title="章末習題 4.95" source="課本 p.171" topic="Chapter 4 Problems">
+
+![課本章末習題 4.95 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-95.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-96" type="exercise" title="章末習題 4.96" source="課本 p.171" topic="Chapter 4 Problems">
+
+![課本章末習題 4.96 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-96.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-97" type="exercise" title="章末習題 4.97" source="課本 p.171" topic="Chapter 4 Problems">
+
+![課本章末習題 4.97 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-97.webp)
+
+</PracticeCard>
+
+<PracticeCard id="ch4-problem-98" type="exercise" title="章末習題 4.98" source="課本 p.171" topic="Chapter 4 Problems">
+
+![課本章末習題 4.98 題幹與相關圖表](../assets/images/ch4-end-problems/problem-4-98.webp)
+
+本題沿用 Practice Problem 4.18 的電路：
+
+![Practice Problem 4.18 電路圖](../assets/images/ch4-pr18_figure_4.66.png)
+
+</PracticeCard>
 <PracticeCard id="ch4-hw-ch4" type="homework" title="Chapter 4 課後作業題目清單與重點題庫索引" source="H.W. Index · Slide P.123–124" topic="第四章指定作業題庫索引" :hide-checkbox="true">
 
 Alexander & Sadiku 第四章 Circuit Theorems 課後指定作業清單與重點答案：

@@ -4,10 +4,10 @@ title: Chapter 3 分析方法：例題與練習題
 
 # Chapter 3 分析方法：例題與練習題
 
-本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 3 章之核心 Example 與 Practice Problem。點擊「查看詳解」可展開分步推導與計算結果；完成題目後可勾選標記學習進度。
+本頁面彙整 Alexander & Sadiku《Fundamentals of Electric Circuits》第 3 章之核心 Example 與 Practice Problem。前 26 張例題與課中練習卡附有詳解；下方另收錄課本第 3 章章末習題 3.1–3.93。章末習題依原書題幹與電路圖呈現，尚未附經教材核對的解答。完成題目後可勾選標記學習進度。
 
 <PracticeFilter prefix="ch3-" />
-<PracticeProgress :total="26" prefix="ch3-" />
+<PracticeProgress :total="119" prefix="ch3-" />
 
 <PracticeCard id="ch3-ex1" type="example" title="例題 3.1：兩節點電壓法" source="課本 p.88" topic="節點分析">
 
@@ -718,5 +718,626 @@ $$
 課本答案：$v_o=9\ \mathrm{V}$、$I_o=900\ \mu\mathrm{A}$。
 
 </template>
+
+</PracticeCard>
+
+
+## 章末習題（Problems）
+
+題幹與圖表直接裁自課本，保留原書符號、數值及電路極性。跨題引用的原電路也附在同一張卡內。
+
+### 節點分析（3.1–3.32）
+
+<PracticeCard id="ch3-prob1" type="exercise" title="章末習題 3.1" source="課本 p.112" topic="節點分析">
+
+![習題 3.1 原文題幹與圖表](../assets/images/ch3-problem-3-01.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob2" type="exercise" title="章末習題 3.2" source="課本 p.112" topic="節點分析">
+
+![習題 3.2 原文題幹與圖表](../assets/images/ch3-problem-3-02.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob3" type="exercise" title="章末習題 3.3" source="課本 p.112" topic="節點分析">
+
+![習題 3.3 原文題幹與圖表](../assets/images/ch3-problem-3-03.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob4" type="exercise" title="章末習題 3.4" source="課本 p.112" topic="節點分析">
+
+![習題 3.4 原文題幹與圖表](../assets/images/ch3-problem-3-04.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob5" type="exercise" title="章末習題 3.5" source="課本 p.113" topic="節點分析">
+
+![習題 3.5 原文題幹與圖表](../assets/images/ch3-problem-3-05.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob6" type="exercise" title="章末習題 3.6" source="課本 p.113" topic="節點分析">
+
+![習題 3.6 原文題幹與圖表](../assets/images/ch3-problem-3-06.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob7" type="exercise" title="章末習題 3.7" source="課本 p.113" topic="節點分析">
+
+![習題 3.7 原文題幹與圖表](../assets/images/ch3-problem-3-07.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob8" type="exercise" title="章末習題 3.8" source="課本 p.113" topic="節點分析">
+
+![習題 3.8 原文題幹與圖表](../assets/images/ch3-problem-3-08.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob9" type="exercise" title="章末習題 3.9" source="課本 p.113" topic="節點分析">
+
+![習題 3.9 原文題幹與圖表](../assets/images/ch3-problem-3-09.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob10" type="exercise" title="章末習題 3.10" source="課本 p.113" topic="節點分析">
+
+![習題 3.10 原文題幹與圖表](../assets/images/ch3-problem-3-10.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob11" type="exercise" title="章末習題 3.11" source="課本 p.113" topic="節點分析">
+
+![習題 3.11 原文題幹與圖表](../assets/images/ch3-problem-3-11.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob12" type="exercise" title="章末習題 3.12" source="課本 p.113" topic="節點分析">
+
+![習題 3.12 原文題幹與圖表](../assets/images/ch3-problem-3-12.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob13" type="exercise" title="章末習題 3.13" source="課本 p.114" topic="節點分析">
+
+![習題 3.13 原文題幹與圖表](../assets/images/ch3-problem-3-13.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob14" type="exercise" title="章末習題 3.14" source="課本 p.114" topic="節點分析">
+
+![習題 3.14 原文題幹與圖表](../assets/images/ch3-problem-3-14.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob15" type="exercise" title="章末習題 3.15" source="課本 p.114" topic="節點分析">
+
+![習題 3.15 原文題幹與圖表](../assets/images/ch3-problem-3-15.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob16" type="exercise" title="章末習題 3.16" source="課本 p.114" topic="節點分析">
+
+![習題 3.16 原文題幹與圖表](../assets/images/ch3-problem-3-16.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob17" type="exercise" title="章末習題 3.17" source="課本 p.114" topic="節點分析">
+
+![習題 3.17 原文題幹與圖表](../assets/images/ch3-problem-3-17.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob18" type="exercise" title="章末習題 3.18" source="課本 p.114" topic="節點分析">
+
+![習題 3.18 原文題幹與圖表](../assets/images/ch3-problem-3-18.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob19" type="exercise" title="章末習題 3.19" source="課本 p.114" topic="節點分析">
+
+![習題 3.19 原文題幹與圖表](../assets/images/ch3-problem-3-19.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob20" type="exercise" title="章末習題 3.20" source="課本 p.115" topic="節點分析">
+
+![習題 3.20 原文題幹與圖表](../assets/images/ch3-problem-3-20.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob21" type="exercise" title="章末習題 3.21" source="課本 p.115" topic="節點分析">
+
+![習題 3.21 原文題幹與圖表](../assets/images/ch3-problem-3-21.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob22" type="exercise" title="章末習題 3.22" source="課本 p.115" topic="節點分析">
+
+![習題 3.22 原文題幹與圖表](../assets/images/ch3-problem-3-22.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob23" type="exercise" title="章末習題 3.23" source="課本 p.115" topic="節點分析">
+
+![習題 3.23 原文題幹與圖表](../assets/images/ch3-problem-3-23.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob24" type="exercise" title="章末習題 3.24" source="課本 p.115" topic="節點分析">
+
+![習題 3.24 原文題幹與圖表](../assets/images/ch3-problem-3-24.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob25" type="exercise" title="章末習題 3.25" source="課本 p.115" topic="節點分析">
+
+![習題 3.25 原文題幹與圖表](../assets/images/ch3-problem-3-25.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob26" type="exercise" title="章末習題 3.26" source="課本 p.115" topic="節點分析">
+
+![習題 3.26 原文題幹與圖表](../assets/images/ch3-problem-3-26.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob27" type="exercise" title="章末習題 3.27" source="課本 p.116" topic="節點分析">
+
+![習題 3.27 原文題幹與圖表](../assets/images/ch3-problem-3-27.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob28" type="exercise" title="章末習題 3.28" source="課本 p.116" topic="節點分析">
+
+![習題 3.28 原文題幹與圖表](../assets/images/ch3-problem-3-28.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob29" type="exercise" title="章末習題 3.29" source="課本 p.116" topic="節點分析">
+
+![習題 3.29 原文題幹與圖表](../assets/images/ch3-problem-3-29.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob30" type="exercise" title="章末習題 3.30" source="課本 p.116" topic="節點分析">
+
+![習題 3.30 原文題幹與圖表](../assets/images/ch3-problem-3-30.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob31" type="exercise" title="章末習題 3.31" source="課本 p.116" topic="節點分析">
+
+![習題 3.31 原文題幹與圖表](../assets/images/ch3-problem-3-31.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob32" type="exercise" title="章末習題 3.32" source="課本 p.116" topic="節點分析">
+
+![習題 3.32 原文題幹與圖表](../assets/images/ch3-problem-3-32.png)
+
+</PracticeCard>
+
+### 網孔分析（3.33–3.66）
+
+<PracticeCard id="ch3-prob33" type="exercise" title="章末習題 3.33" source="課本 p.117" topic="網孔分析">
+
+![習題 3.33 原文題幹與圖表](../assets/images/ch3-problem-3-33.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob34" type="exercise" title="章末習題 3.34" source="課本 p.117" topic="網孔分析">
+
+![習題 3.34 原文題幹與圖表](../assets/images/ch3-problem-3-34.png)
+
+圖 3.83(b)（原書排在右欄）：
+
+![圖 3.83(b) 電路](../assets/images/ch3-problem-3-34-figure-b.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob35" type="exercise" title="章末習題 3.35" source="課本 p.117" topic="網孔分析">
+
+![習題 3.35 原文題幹與圖表](../assets/images/ch3-problem-3-35.png)
+
+本題引用習題 3.5 的電路，原圖如下：
+
+![習題 3.5 的原題與電路圖](../assets/images/ch3-problem-3-05.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob36" type="exercise" title="章末習題 3.36" source="課本 p.117" topic="網孔分析">
+
+![習題 3.36 原文題幹與圖表](../assets/images/ch3-problem-3-36.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob37" type="exercise" title="章末習題 3.37" source="課本 p.117" topic="網孔分析">
+
+![習題 3.37 原文題幹與圖表](../assets/images/ch3-problem-3-37.png)
+
+本題引用習題 3.8 的電路，原圖如下：
+
+![習題 3.8 的原題與電路圖](../assets/images/ch3-problem-3-08.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob38" type="exercise" title="章末習題 3.38" source="課本 p.117" topic="網孔分析">
+
+![習題 3.38 原文題幹與圖表](../assets/images/ch3-problem-3-38.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob39" type="exercise" title="章末習題 3.39" source="課本 p.117" topic="網孔分析">
+
+![習題 3.39 原文題幹與圖表](../assets/images/ch3-problem-3-39.png)
+
+本題引用習題 3.1 的電路，原圖如下：
+
+![習題 3.1 的原題與電路圖](../assets/images/ch3-problem-3-01.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob40" type="exercise" title="章末習題 3.40" source="課本 p.118" topic="網孔分析">
+
+![習題 3.40 原文題幹與圖表](../assets/images/ch3-problem-3-40.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob41" type="exercise" title="章末習題 3.41" source="課本 p.118" topic="網孔分析">
+
+![習題 3.41 原文題幹與圖表](../assets/images/ch3-problem-3-41.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob42" type="exercise" title="章末習題 3.42" source="課本 p.118" topic="網孔分析">
+
+![習題 3.42 原文題幹與圖表](../assets/images/ch3-problem-3-42.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob43" type="exercise" title="章末習題 3.43" source="課本 p.118" topic="網孔分析">
+
+![習題 3.43 原文題幹與圖表](../assets/images/ch3-problem-3-43.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob44" type="exercise" title="章末習題 3.44" source="課本 p.118" topic="網孔分析">
+
+![習題 3.44 原文題幹與圖表](../assets/images/ch3-problem-3-44.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob45" type="exercise" title="章末習題 3.45" source="課本 p.118" topic="網孔分析">
+
+![習題 3.45 原文題幹與圖表](../assets/images/ch3-problem-3-45.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob46" type="exercise" title="章末習題 3.46" source="課本 p.118" topic="網孔分析">
+
+![習題 3.46 原文題幹與圖表](../assets/images/ch3-problem-3-46.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob47" type="exercise" title="章末習題 3.47" source="課本 p.118" topic="網孔分析">
+
+![習題 3.47 原文題幹與圖表](../assets/images/ch3-problem-3-47.png)
+
+本題引用習題 3.19 的電路，原圖如下：
+
+![習題 3.19 的原題與電路圖](../assets/images/ch3-problem-3-19.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob48" type="exercise" title="章末習題 3.48" source="課本 p.119" topic="網孔分析">
+
+![習題 3.48 原文題幹與圖表](../assets/images/ch3-problem-3-48.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob49" type="exercise" title="章末習題 3.49" source="課本 p.119" topic="網孔分析">
+
+![習題 3.49 原文題幹與圖表](../assets/images/ch3-problem-3-49.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob50" type="exercise" title="章末習題 3.50" source="課本 p.119" topic="網孔分析">
+
+![習題 3.50 原文題幹與圖表](../assets/images/ch3-problem-3-50.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob51" type="exercise" title="章末習題 3.51" source="課本 p.119" topic="網孔分析">
+
+![習題 3.51 原文題幹與圖表](../assets/images/ch3-problem-3-51.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob52" type="exercise" title="章末習題 3.52" source="課本 p.119" topic="網孔分析">
+
+![習題 3.52 原文題幹與圖表](../assets/images/ch3-problem-3-52.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob53" type="exercise" title="章末習題 3.53" source="課本 p.119" topic="網孔分析">
+
+![習題 3.53 原文題幹與圖表](../assets/images/ch3-problem-3-53.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob54" type="exercise" title="章末習題 3.54" source="課本 p.120" topic="網孔分析">
+
+![習題 3.54 原文題幹與圖表](../assets/images/ch3-problem-3-54.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob55" type="exercise" title="章末習題 3.55" source="課本 p.120" topic="網孔分析">
+
+![習題 3.55 原文題幹與圖表](../assets/images/ch3-problem-3-55.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob56" type="exercise" title="章末習題 3.56" source="課本 p.120" topic="網孔分析">
+
+![習題 3.56 原文題幹與圖表](../assets/images/ch3-problem-3-56.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob57" type="exercise" title="章末習題 3.57" source="課本 p.120" topic="網孔分析">
+
+![習題 3.57 原文題幹與圖表](../assets/images/ch3-problem-3-57.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob58" type="exercise" title="章末習題 3.58" source="課本 p.120" topic="網孔分析">
+
+![習題 3.58 原文題幹與圖表](../assets/images/ch3-problem-3-58.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob59" type="exercise" title="章末習題 3.59" source="課本 p.120" topic="網孔分析">
+
+![習題 3.59 原文題幹與圖表](../assets/images/ch3-problem-3-59.png)
+
+本題引用習題 3.30 的電路，原圖如下：
+
+![習題 3.30 的原題與電路圖](../assets/images/ch3-problem-3-30.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob60" type="exercise" title="章末習題 3.60" source="課本 p.120" topic="網孔分析">
+
+![習題 3.60 原文題幹與圖表](../assets/images/ch3-problem-3-60.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob61" type="exercise" title="章末習題 3.61" source="課本 p.120" topic="網孔分析">
+
+![習題 3.61 原文題幹與圖表](../assets/images/ch3-problem-3-61.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob62" type="exercise" title="章末習題 3.62" source="課本 p.120" topic="網孔分析">
+
+![習題 3.62 原文題幹與圖表](../assets/images/ch3-problem-3-62.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob63" type="exercise" title="章末習題 3.63" source="課本 p.121" topic="網孔分析">
+
+![習題 3.63 原文題幹與圖表](../assets/images/ch3-problem-3-63.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob64" type="exercise" title="章末習題 3.64" source="課本 p.121" topic="網孔分析">
+
+![習題 3.64 原文題幹與圖表](../assets/images/ch3-problem-3-64.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob65" type="exercise" title="章末習題 3.65" source="課本 p.121" topic="網孔分析">
+
+![習題 3.65 原文題幹與圖表](../assets/images/ch3-problem-3-65.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob66" type="exercise" title="章末習題 3.66" source="課本 p.121" topic="網孔分析">
+
+![習題 3.66 原文題幹與圖表](../assets/images/ch3-problem-3-66.png)
+
+</PracticeCard>
+
+### 方程式檢視法（3.67–3.74）
+
+<PracticeCard id="ch3-prob67" type="exercise" title="章末習題 3.67" source="課本 p.121" topic="檢視法">
+
+![習題 3.67 原文題幹與圖表](../assets/images/ch3-problem-3-67.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob68" type="exercise" title="章末習題 3.68" source="課本 p.121" topic="檢視法">
+
+![習題 3.68 原文題幹與圖表](../assets/images/ch3-problem-3-68.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob69" type="exercise" title="章末習題 3.69" source="課本 p.122" topic="檢視法">
+
+![習題 3.69 原文題幹與圖表](../assets/images/ch3-problem-3-69.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob70" type="exercise" title="章末習題 3.70" source="課本 p.122" topic="檢視法">
+
+![習題 3.70 原文題幹與圖表](../assets/images/ch3-problem-3-70.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob71" type="exercise" title="章末習題 3.71" source="課本 p.122" topic="檢視法">
+
+![習題 3.71 原文題幹與圖表](../assets/images/ch3-problem-3-71.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob72" type="exercise" title="章末習題 3.72" source="課本 p.122" topic="檢視法">
+
+![習題 3.72 原文題幹與圖表](../assets/images/ch3-problem-3-72.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob73" type="exercise" title="章末習題 3.73" source="課本 p.122" topic="檢視法">
+
+![習題 3.73 原文題幹與圖表](../assets/images/ch3-problem-3-73.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob74" type="exercise" title="章末習題 3.74" source="課本 p.122" topic="檢視法">
+
+![習題 3.74 原文題幹與圖表](../assets/images/ch3-problem-3-74.png)
+
+</PracticeCard>
+
+### PSpice 與 MultiSim（3.75–3.83）
+
+<PracticeCard id="ch3-prob75" type="exercise" title="章末習題 3.75" source="課本 p.122" topic="電路模擬">
+
+![習題 3.75 原文題幹與圖表](../assets/images/ch3-problem-3-75.png)
+
+本題引用習題 3.58 的電路，原圖如下：
+
+![習題 3.58 的原題與電路圖](../assets/images/ch3-problem-3-58.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob76" type="exercise" title="章末習題 3.76" source="課本 p.122" topic="電路模擬">
+
+![習題 3.76 原文題幹與圖表](../assets/images/ch3-problem-3-76.png)
+
+本題引用習題 3.27 的電路，原圖如下：
+
+![習題 3.27 的原題與電路圖](../assets/images/ch3-problem-3-27.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob77" type="exercise" title="章末習題 3.77" source="課本 p.123" topic="電路模擬">
+
+![習題 3.77 原文題幹與圖表](../assets/images/ch3-problem-3-77.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob78" type="exercise" title="章末習題 3.78" source="課本 p.123" topic="電路模擬">
+
+![習題 3.78 原文題幹與圖表](../assets/images/ch3-problem-3-78.png)
+
+本題引用習題 3.20 的電路，原圖如下：
+
+![習題 3.20 的原題與電路圖](../assets/images/ch3-problem-3-20.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob79" type="exercise" title="章末習題 3.79" source="課本 p.123" topic="電路模擬">
+
+![習題 3.79 原文題幹與圖表](../assets/images/ch3-problem-3-79.png)
+
+本題引用習題 3.28 的電路，原圖如下：
+
+![習題 3.28 的原題與電路圖](../assets/images/ch3-problem-3-28.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob80" type="exercise" title="章末習題 3.80" source="課本 p.123" topic="電路模擬">
+
+![習題 3.80 原文題幹與圖表](../assets/images/ch3-problem-3-80.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob81" type="exercise" title="章末習題 3.81" source="課本 p.123" topic="電路模擬">
+
+![習題 3.81 原文題幹與圖表](../assets/images/ch3-problem-3-81.png)
+
+本題引用例題 3.4 的電路：
+
+![例題 3.4 的圖 3.12 電路](../assets/images/ch3-ex4_figure_3.12.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob82" type="exercise" title="章末習題 3.82" source="課本 p.123" topic="電路模擬">
+
+![習題 3.82 原文題幹與圖表](../assets/images/ch3-problem-3-82.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob83" type="exercise" title="章末習題 3.83" source="課本 p.123" topic="電路模擬">
+
+![習題 3.83 原文題幹與圖表](../assets/images/ch3-problem-3-83.png)
+
+</PracticeCard>
+
+### 應用與綜合題（3.84–3.93）
+
+<PracticeCard id="ch3-prob84" type="exercise" title="章末習題 3.84" source="課本 p.123" topic="電路應用">
+
+![習題 3.84 原文題幹與圖表](../assets/images/ch3-problem-3-84.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob85" type="exercise" title="章末習題 3.85" source="課本 p.123" topic="電路應用">
+
+![習題 3.85 原文題幹與圖表](../assets/images/ch3-problem-3-85.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob86" type="exercise" title="章末習題 3.86" source="課本 p.123" topic="電路應用">
+
+![習題 3.86 原文題幹與圖表](../assets/images/ch3-problem-3-86.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob87" type="exercise" title="章末習題 3.87" source="課本 p.123" topic="電路應用">
+
+![習題 3.87 原文題幹與圖表](../assets/images/ch3-problem-3-87.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob88" type="exercise" title="章末習題 3.88" source="課本 p.124" topic="電路應用">
+
+![習題 3.88 原文題幹與圖表](../assets/images/ch3-problem-3-88.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob89" type="exercise" title="章末習題 3.89" source="課本 p.124" topic="電路應用">
+
+![習題 3.89 原文題幹與圖表](../assets/images/ch3-problem-3-89.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob90" type="exercise" title="章末習題 3.90" source="課本 p.124" topic="電路應用">
+
+![習題 3.90 原文題幹與圖表](../assets/images/ch3-problem-3-90.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob91" type="exercise" title="章末習題 3.91" source="課本 p.124" topic="電路應用">
+
+![習題 3.91 原文題幹與圖表](../assets/images/ch3-problem-3-91.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob92" type="exercise" title="章末習題 3.92" source="課本 p.124" topic="電路應用">
+
+![習題 3.92 原文題幹與圖表](../assets/images/ch3-problem-3-92.png)
+
+</PracticeCard>
+
+<PracticeCard id="ch3-prob93" type="exercise" title="章末習題 3.93" source="課本 p.124" topic="電路應用">
+
+![習題 3.93 原文題幹與圖表](../assets/images/ch3-problem-3-93.png)
+
+本題引用例題 3.11 的電路：
+
+![例題 3.11 的圖 3.34 電路](../assets/images/ch3-ex11_figure_3.34.png)
 
 </PracticeCard>

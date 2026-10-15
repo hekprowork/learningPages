@@ -4,7 +4,7 @@
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Electric Circuit Theory // EE-CORE-102</span>
-    <span class="hub-badge-status">Status 已上線 · 142+ 題教材題卡</span>
+    <span class="hub-badge-status">Status 已上線 · 448+ 題教材題卡</span>
   </div>
   <h1 class="hub-title">電路學</h1>
   <div class="hub-subtitle">Electric Circuit Theory & Network Topology</div>
@@ -44,7 +44,7 @@
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">實戰練習題卡</span>
-    <span class="hub-stat-number">142+</span>
+    <span class="hub-stat-number">448+</span>
     <span class="hub-stat-sub">全自包含圖表題卡系統</span>
   </div>
 </div>
@@ -188,7 +188,7 @@
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
-    <h2 class="hub-section-title">互動式題庫練習系統 (142+ 題)</h2>
+    <h2 class="hub-section-title">互動式題庫練習系統 (448+ 題)</h2>
     <p class="hub-section-desc">搭載 Hallmark 狀態驅動題卡、KaTeX 數學公式與同屏顯式電路圖解之各章題庫與範例練習。</p>
   </div>
   <div class="hub-practice-table-wrap">
@@ -205,26 +205,26 @@
         <tr>
           <td><strong>Chapter 1: Basic Concepts</strong></td>
           <td>電荷、電流、電壓、功率、能量與電路元件特性</td>
-          <td>20 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0001-chapter1-examples">練習題卡 →</a></td>
+          <td>59 題（含章末習題 39 題）</td>
+          <td><a class="hub-lesson-link" href="/circuits/practice/0001-chapter1-examples">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2: Basic Laws</strong></td>
           <td>歐姆定律、KCL、KVL、串並聯等效阻抗與分壓/分流</td>
-          <td>34 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0002-chapter2-examples">練習題卡 →</a></td>
+          <td>110 題（含章末習題 75 題）</td>
+          <td><a class="hub-lesson-link" href="/circuits/practice/0002-chapter2-examples">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 3: Methods of Analysis</strong></td>
           <td>節點分析法、網孔分析法、超節點與超網孔技術</td>
-          <td>26 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0003-chapter3-examples">練習題卡 →</a></td>
+          <td>119 題（含章末習題 93 題）</td>
+          <td><a class="hub-lesson-link" href="/circuits/practice/0003-chapter3-examples">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 4: Circuit Theorems</strong></td>
           <td>重疊定理、電源轉換、戴維寧等效、諾頓等效與最大功率轉移</td>
-          <td>36 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0004-chapter4-examples">練習題卡 →</a></td>
+          <td>134 題（含章末習題 98 題）</td>
+          <td><a class="hub-lesson-link" href="/circuits/practice/0004-chapter4-examples">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 5: Operational Amplifiers</strong></td>
