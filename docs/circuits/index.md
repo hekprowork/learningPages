@@ -4,7 +4,7 @@
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Electric Circuit Theory // EE-CORE-102</span>
-    <span class="hub-badge-status">Status 已上線 · 455+ 題教材題卡</span>
+    <span class="hub-badge-status">Status 已上線 · 464+ 題教材題卡</span>
   </div>
   <h1 class="hub-title">電路學</h1>
   <div class="hub-subtitle">Electric Circuit Theory & Network Topology</div>
@@ -44,7 +44,7 @@
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">實戰練習題卡</span>
-    <span class="hub-stat-number">455+</span>
+    <span class="hub-stat-number">464+</span>
     <span class="hub-stat-sub">全自包含圖表題卡系統</span>
   </div>
 </div>
@@ -188,7 +188,7 @@
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
-    <h2 class="hub-section-title">互動式題庫練習系統 (455+ 題)</h2>
+    <h2 class="hub-section-title">互動式題庫練習系統 (464+ 題)</h2>
     <p class="hub-section-desc">搭載 Hallmark 狀態驅動題卡、KaTeX 數學公式與同屏顯式電路圖解之各章題庫與範例練習。</p>
   </div>
   <div class="hub-practice-table-wrap">
@@ -229,7 +229,7 @@
         <tr>
           <td><strong>Chapter 5: Operational Amplifiers</strong></td>
           <td>理想 Op-Amp 虛短路虛斷路、反相/同相、差動放大與級聯</td>
-          <td>26 題</td>
+          <td>35 題（含老師指定章末習題 9 題）</td>
           <td><a class="hub-lesson-link" href="./practice/0005-chapter5-examples">練習題卡 →</a></td>
         </tr>
         <tr>

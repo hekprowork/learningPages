@@ -25,7 +25,7 @@ description: 電路學第五章 運算放大器 (Operational Amplifiers) 互動�
 :::
 
 <PracticeFilter prefix="ch5-" />
-<PracticeProgress :total="26" prefix="ch5-" />
+<PracticeProgress :total="35" prefix="ch5-" />
 
 <PracticeCard id="ch5-ex-5-1" type="example" title="非理想運算放大器等效電路與閉迴路增益分析" source="Example 5.1 · Slide P.20–24" topic="實際運算放大器模型 (Nonideal Op Amp)">
 
@@ -1233,25 +1233,148 @@ $$
 </template>
 </PracticeCard>
 
-<PracticeCard id="ch5-hw-ch5" type="homework" title="Chapter 5 課後作業題目清單與重點題庫索引" source="H.W. Index · Slide P.81" topic="第五章指定作業題庫索引" :hide-checkbox="true">
 
-Alexander & Sadiku 第五章 Operational Amplifiers 課後指定作業清單：
+## 課本章末習題：老師指定練習
 
-- **指定習題編號**：
-  $$\text{H.W. Problems: } \#10,\ \#15,\ \#20,\ \#25,\ \#30,\ \#40,\ \#60,\ \#65,\ \#70$$
+下列九題依 CH005 簡報第 81 頁 Homework 清單，直接附上課本原題與電路圖。
 
-::: details 課後作業主題分類與核心解題策略指引
-1. **反相與同相放大器基礎 (#10, #15, #20)**：
-   - 掌握虛接地 ($v_a = 0$) 與虛短路 ($v_a = v_b$)，利用反相端節點列寫 KCL 求出閉迴路轉移函數。
-2. **加法器與差動運算電路 (#25, #30, #40)**：
-   - 熟練加法器權重分流與平衡差動放大器四電阻比例條件 ($R_2/R_1 = R_4/R_3$)。
-3. **級聯系統與儀表放大器高階應用 (#60, #65, #70)**：
-   - 多級級聯電路前級輸出即為後級輸入，利用單級增益相乘法則 $A = A_1 A_2 \cdots A_n$ 快速求得總系統響應。
-:::
+<PracticeCard id="ch5-problem-5-10" type="exercise" title="課本習題 5.10" source="課本 Chapter 5 · Problems 5.10 · 印刷頁 201" topic="老師指定練習 · 同相放大器">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.10 原題與電路圖](../assets/images/ch5_problem_5_10.png)
 
 <template #solution>
 
-請參考各節核心例題與 Practice Problem 之標準解題 SOP，自主演練上述 9 道指定作業題目。
+**自行推導：**
+
+同相輸入端沒有電流，故串在 $v_s$ 後面的 $20\text{ k}\Omega$ 無壓降，$v_+=v_s$。反相端是兩個 $10\text{ k}\Omega$ 的輸出分壓點，$v_-=v_o/2$。理想運放虛短使 $v_-=v_+$，所以 $v_o/v_s=2$。回代：$v_o=2v_s$ 時反相端恰為 $v_s$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-15" type="exercise" title="課本習題 5.15" source="課本 Chapter 5 · Problems 5.15 · 印刷頁 201" topic="老師指定練習 · 跨阻放大器">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.15 原題與電路圖](../assets/images/ch5_problem_5_15.png)
+
+<template #solution>
+
+**課本附錄 D 標準答案（PDF 第 934 頁）：**
+
+![課本附錄 D 習題 5.15 標準答案原文](../assets/images/ch5_appendix_answer_5_15.png)
+
+**核對推導：** 由理想運放虛接地，反相端為 $0$。電流源 $i_s$ 全經 $R_1$，其右端節點為 $-i_sR_1$。在該節點列 KCL，得 $v_o/i_s=-(R_1+R_3+R_1R_3/R_2)$；代入 $20,25,40\text{ k}\Omega$ 得 $-92\text{ k}\Omega$，與附錄 D 答案一致。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-20" type="exercise" title="課本習題 5.20" source="課本 Chapter 5 · Problems 5.20 · 印刷頁 202" topic="老師指定練習 · 回授放大器">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.20 原題與電路圖](../assets/images/ch5_problem_5_20.png)
+
+<template #solution>
+
+**自行推導：**
+
+理想運放 $v_-=v_+=v_s=2\text{ V}$。令左側兩個 $4\text{ k}\Omega$ 之間的節點為 $V_A$。在反相端列 KCL：$(2-V_A)/4+(2-v_o)/2=0$，即 $V_A+2v_o=6$（電阻單位為 kΩ）；在 $V_A$ 列 KCL：$(V_A-9)/4+(V_A-2)/4+(V_A-v_o)/8=0$，即 $5V_A-v_o=22$。聯立得 $v_o=8/11\approx0.7273\text{ V}$、$V_A=50/11\approx4.5455\text{ V}$。兩式回代殘差均為零。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-25" type="exercise" title="課本習題 5.25" source="課本 Chapter 5 · Problems 5.25 · 印刷頁 203" topic="老師指定練習 · 電壓追隨器">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.25 原題與電路圖](../assets/images/ch5_problem_5_25.png)
+
+<template #solution>
+
+**課本附錄 D 標準答案（PDF 第 934 頁）：**
+
+![課本附錄 D 習題 5.25 標準答案原文](../assets/images/ch5_appendix_answer_5_25.png)
+
+**核對推導：** 第一級是電壓追隨器，輸出維持 $3.7\text{ V}$；經 $12\text{ k}\Omega$ 與 $20\text{ k}\Omega$ 分壓，$v_o=3.7(20)/(12+20)=2.3125\text{ V}$，附錄 D 列 $2.312\text{ V}$；兩者相差 $0.0005\text{ V}$，來自答案末位顯示。回代串聯支路電流 $3.7/32\text{ k}\Omega=115.625\ \mu\text{A}$，負載壓降 $I(20\text{ k}\Omega)=2.3125\text{ V}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-30" type="exercise" title="課本習題 5.30" source="課本 Chapter 5 · Problems 5.30 · 印刷頁 203" topic="老師指定練習 · 電壓追隨器與負載">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.30 原題與電路圖](../assets/images/ch5_problem_5_30.png)
+
+<template #solution>
+
+**自行推導：**
+
+電壓追隨器輸出為 $1.2\text{ V}$。負載端 $30\text{ k}\Omega\parallel20\text{ k}\Omega=12\text{ k}\Omega$，與 $60\text{ k}\Omega$ 分壓後，負載電壓 $V=1.2(12)/(60+12)=0.2\text{ V}$。故圖示向下的 $i_x=0.2/(20\text{ k}\Omega)=10\ \mu\text{A}$，該 $20\text{ k}\Omega$ 電阻吸收功率 $P=V^2/R=2\ \mu\text{W}$。回代 KCL：$1/60\text{ k}\Omega=0.2/30\text{ k}\Omega+0.2/20\text{ k}\Omega=16.667\ \mu\text{A}$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-40" type="exercise" title="課本習題 5.40" source="課本 Chapter 5 · Problems 5.40 · 印刷頁 205" topic="老師指定練習 · 加法放大器">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.40 原題與電路圖](../assets/images/ch5_problem_5_40.png)
+
+<template #solution>
+
+**自行推導：**
+
+令運放直接輸出（$10\ \Omega$ 電阻左端）為 $V_x$。反相輸入端虛接地，兩個 $100\text{ k}\Omega$ 分別引入 $V_1,V_2$，回授為 $200\text{ k}\Omega$，故 $V_x=-2(V_1+V_2)$。右側 $10\ \Omega$ 與 $40\ \Omega$ 負載分壓，$V_o=40/(10+40)\,V_x=-1.6(V_1+V_2)$。回代反相端 KCL：$V_1/100\text{ k}\Omega+V_2/100\text{ k}\Omega+V_x/200\text{ k}\Omega=0$。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-60" type="exercise" title="課本習題 5.60" source="課本 Chapter 5 · Problems 5.60 · 印刷頁 207" topic="老師指定練習 · 多級回授運放">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.60 原題與電路圖](../assets/images/ch5_problem_5_60.png)
+
+<template #solution>
+
+**自行推導：**
+
+令第一級輸出為 $V_1$、第一級反相節點為 $0$。該節點 KCL 為 $-v_i/5-V_1/10-v_o/4=0$（電阻單位 kΩ）。第二級為同相放大器，反相端由 $2\text{ k}\Omega$ 回授與 $10\text{ k}\Omega$ 接地分壓，因此 $V_1=(10/12)v_o=5v_o/6$。代回 $2v_i+V_1+2.5v_o=0$，得 $v_o/v_i=-3/5=-0.6$。用此增益回代第一級 KCL，殘差為零。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-65" type="exercise" title="課本習題 5.65" source="課本 Chapter 5 · Problems 5.65 · 印刷頁 208" topic="老師指定練習 · 三級級聯放大器">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.65 原題與電路圖](../assets/images/ch5_problem_5_65.png)
+
+<template #solution>
+
+**課本附錄 D 標準答案（PDF 第 935 頁）：**
+
+![課本附錄 D 習題 5.65 標準答案原文](../assets/images/ch5_appendix_answer_5_65.png)
+
+**核對推導：** 第一級是追隨器；輸入電流為零，故 $50\text{ k}\Omega$ 沒有壓降，其輸出為 $6\text{ mV}$。第二級反相增益 $-30/10=-3$，輸出 $-18\text{ mV}$。第三級同相增益 $1+8/40=1.2$（串在同相輸入的 $20\text{ k}\Omega$ 無壓降），故 $v_o=-21.6\text{ mV}$。各級代回虛短與 KCL 均成立，與附錄 D 答案一致。
+
+</template>
+</PracticeCard>
+
+<PracticeCard id="ch5-problem-5-70" type="exercise" title="課本習題 5.70" source="課本 Chapter 5 · Problems 5.70 · 印刷頁 209" topic="老師指定練習 · 三級加法與差動運放">
+
+> **老師指定練習**：CH005 簡報第 81 頁 Homework 清單。
+
+![課本 Chapter 5 習題 5.70 原題與電路圖](../assets/images/ch5_problem_5_70.png)
+
+<template #solution>
+
+**自行推導：**
+
+第 A 級是反相加法器：$V_A=-(30/10)(1+2)=-9\text{ V}$。第 B 級同理：$V_B=-(20/10)(3+4)=-14\text{ V}$。第 C 級同相端由 $60\text{ k}\Omega$ 與 $10\text{ k}\Omega$ 分壓，$V_+=-14(10/70)=-2\text{ V}$，故 $V_-=-2\text{ V}$。在 C 級反相端列 KCL：$(-2-(-9))/20+(-2-v_o)/40=0$（電阻單位 kΩ），得 $v_o=12\text{ V}$。回代：$7/20+(-14)/40=0$，殘差為零。
 
 </template>
 </PracticeCard>
