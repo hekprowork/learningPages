@@ -1,5 +1,9 @@
 <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 -->
 <!-- Hallmark · genre: editorial · macrostructure: Index-First Modular Curriculum Matrix · design-system: design.md · designed-as-app -->
+
+<script setup>
+import { withBase } from 'vitepress'
+</script>
 <div class="subject-hub">
 <header class="hub-header">
   <div class="hub-slug-row">
@@ -22,7 +26,7 @@
     </div>
     <div class="hub-meta-item">
       <span class="hub-meta-label">對帳驗證</span>
-      <span class="hub-meta-val"><a class="hub-lesson-link" href="../adr/0003-textbook-problem-coverage-audit">ADR-0003 教材題目 100% 閉環對帳報告</a></span>
+      <span class="hub-meta-val"><a class="hub-lesson-link" :href="withBase('/adr/0003-textbook-problem-coverage-audit.html')">ADR-0003 教材題目 100% 閉環對帳報告</a></span>
     </div>
   </div>
 </header>
@@ -63,7 +67,7 @@
           <span class="hub-card-count">基本定律</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./chapter2/0001-wye-delta-transformation">基本定律 (Basic Laws)</a>
+          <a :href="withBase('/circuits/chapter2/0001-wye-delta-transformation.html')">基本定律 (Basic Laws)</a>
         </h3>
         <p class="hub-card-desc">
           歐姆定律、節點支路迴路、克希荷夫定律 (KCL/KVL)、串並聯化簡與星形-三角形 (Y-Δ) 等效互換推導。
@@ -71,12 +75,12 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="./chapter2/0001-wye-delta-transformation">星形 (Y) 與等效三角形 (Δ) 網路互換原理與推導</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/chapter2/0001-wye-delta-transformation.html')">星形 (Y) 與等效三角形 (Δ) 網路互換原理與推導</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./chapter2/0001-wye-delta-transformation">進入 Chapter 2 講義 →</a>
+        <a class="hub-btn-link" :href="withBase('/circuits/chapter2/0001-wye-delta-transformation.html')">進入 Chapter 2 講義 →</a>
       </div>
     </div>
     <!-- Chapter 3 Card -->
@@ -87,7 +91,7 @@
           <span class="hub-card-count">3 分析法</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./chapter3/0001-supernode-analysis">分析方法 (Methods of Analysis)</a>
+          <a :href="withBase('/circuits/chapter3/0001-supernode-analysis.html')">分析方法 (Methods of Analysis)</a>
         </h3>
         <p class="hub-card-desc">
           節點電壓分析法、網孔電流分析法、浮動電壓源超節點技術與直接矩陣觀察法。
@@ -95,20 +99,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="./chapter3/0001-supernode-analysis">超節點分析法 (Supernode Analysis) 的原理與實戰破解</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/chapter3/0001-supernode-analysis.html')">超節點分析法 (Supernode Analysis) 的原理與實戰破解</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0002</span>
-            <a class="hub-lesson-link" href="./chapter3/0002-mesh-analysis">網孔分析法 (Mesh Analysis) 與超網孔的原理與實戰破解</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/chapter3/0002-mesh-analysis.html')">網孔分析法 (Mesh Analysis) 與超網孔的原理與實戰破解</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0003</span>
-            <a class="hub-lesson-link" href="./chapter3/0003-inspection-analysis">觀察法分析 (Inspection Analysis) 的矩陣原理與實戰</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/chapter3/0003-inspection-analysis.html')">觀察法分析 (Inspection Analysis) 的矩陣原理與實戰</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./chapter3/0001-supernode-analysis">進入 Chapter 3 講義 →</a>
+        <a class="hub-btn-link" :href="withBase('/circuits/chapter3/0001-supernode-analysis.html')">進入 Chapter 3 講義 →</a>
       </div>
     </div>
     <!-- Learning Records Card -->
@@ -119,7 +123,7 @@
           <span class="hub-card-count">4 篇推導筆記</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./learning-records/0001-wye-delta-transformation-principle">觀念筆記與定理推導 (Learning Records)</a>
+          <a :href="withBase('/circuits/learning-records/0001-wye-delta-transformation-principle.html')">觀念筆記與定理推導 (Learning Records)</a>
         </h3>
         <p class="hub-card-desc">
           深入探討開路測試合法性、雙埠阻抗矩陣、高斯面包絡守恆、平面圖論與歐拉公式拓撲推導。
@@ -127,24 +131,24 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="./learning-records/0001-wye-delta-transformation-principle">星形與三角形等效互換原理與幾何對偶</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/learning-records/0001-wye-delta-transformation-principle.html')">星形與三角形等效互換原理與幾何對偶</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0002</span>
-            <a class="hub-lesson-link" href="./learning-records/0002-open-circuit-terminal-equivalence-validity">開路測試在三端等效推導中的數學物理合法性</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/learning-records/0002-open-circuit-terminal-equivalence-validity.html')">開路測試在三端等效推導中的數學物理合法性</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0003</span>
-            <a class="hub-lesson-link" href="./learning-records/0003-supernode-nodal-analysis-principle">超節點分析法的物理包絡原理與拘束方程式架構</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/learning-records/0003-supernode-nodal-analysis-principle.html')">超節點分析法的物理包絡原理與拘束方程式架構</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0004</span>
-            <a class="hub-lesson-link" href="./learning-records/0004-mesh-supermesh-principle">網孔電流法平面拓撲本質與超網孔迴路獨立性</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/learning-records/0004-mesh-supermesh-principle.html')">網孔電流法平面拓撲本質與超網孔迴路獨立性</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./learning-records/0001-wye-delta-transformation-principle">查閱觀念推導 →</a>
+        <a class="hub-btn-link" :href="withBase('/circuits/learning-records/0001-wye-delta-transformation-principle.html')">查閱觀念推導 →</a>
       </div>
     </div>
     <!-- Cheatsheets Card -->
@@ -155,7 +159,7 @@
           <span class="hub-card-count">4 張速查卡</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./reference/001-wye-delta-reference">核心公式速查表 (Reference Cheatsheets)</a>
+          <a :href="withBase('/circuits/reference/001-wye-delta-reference.html')">核心公式速查表 (Reference Cheatsheets)</a>
         </h3>
         <p class="hub-card-desc">
           考試、複習與解題必備之高密度速查卡，收錄阻抗矩陣與演算法規則。
@@ -163,24 +167,24 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">001</span>
-            <a class="hub-lesson-link" href="./reference/001-wye-delta-reference">星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/reference/001-wye-delta-reference.html')">星形 (Y) 與三角形 (Δ) 網路等效互換速查手冊</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">002</span>
-            <a class="hub-lesson-link" href="./reference/002-supernode-reference">超節點分析法 (Supernode Analysis) 核心速查手冊</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/reference/002-supernode-reference.html')">超節點分析法 (Supernode Analysis) 核心速查手冊</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">003</span>
-            <a class="hub-lesson-link" href="./reference/003-mesh-reference">網孔分析法 (Mesh Analysis) 與超網孔核心速查手冊</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/reference/003-mesh-reference.html')">網孔分析法 (Mesh Analysis) 與超網孔核心速查手冊</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">004</span>
-            <a class="hub-lesson-link" href="./reference/004-inspection-reference">觀察法分析 (Inspection Analysis) 核心速查手冊</a>
+            <a class="hub-lesson-link" :href="withBase('/circuits/reference/004-inspection-reference.html')">觀察法分析 (Inspection Analysis) 核心速查手冊</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./reference/001-wye-delta-reference">開啟速查手冊 →</a>
+        <a class="hub-btn-link" :href="withBase('/circuits/reference/001-wye-delta-reference.html')">開啟速查手冊 →</a>
       </div>
     </div>
   </div>
@@ -206,37 +210,37 @@
           <td><strong>Chapter 1: Basic Concepts</strong></td>
           <td>電荷、電流、電壓、功率、能量與電路元件特性</td>
           <td>59 題（含章末習題 39 題）</td>
-          <td><a class="hub-lesson-link" href="/circuits/practice/0001-chapter1-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0001-chapter1-examples.html')">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2: Basic Laws</strong></td>
           <td>歐姆定律、KCL、KVL、串並聯等效阻抗與分壓/分流</td>
           <td>117 題（含章末習題 83 題）</td>
-          <td><a class="hub-lesson-link" href="/circuits/practice/0002-chapter2-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0002-chapter2-examples.html')">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 3: Methods of Analysis</strong></td>
           <td>節點分析法、網孔分析法、超節點與超網孔技術</td>
           <td>119 題（含章末習題 93 題）</td>
-          <td><a class="hub-lesson-link" href="/circuits/practice/0003-chapter3-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0003-chapter3-examples.html')">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 4: Circuit Theorems</strong></td>
           <td>重疊定理、電源轉換、戴維寧等效、諾頓等效與最大功率轉移</td>
           <td>134 題（含章末習題 98 題）</td>
-          <td><a class="hub-lesson-link" href="/circuits/practice/0004-chapter4-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0004-chapter4-examples.html')">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 5: Operational Amplifiers</strong></td>
           <td>理想 Op-Amp 虛短路虛斷路、反相/同相、差動放大與級聯</td>
           <td>35 題（含老師指定章末習題 9 題）</td>
-          <td><a class="hub-lesson-link" href="./practice/0005-chapter5-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0005-chapter5-examples.html')">練習題卡 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 6: Capacitors and Inductors</strong></td>
           <td>電容與電感元件特性、串並聯等效、儲能與初始條件分析</td>
           <td>精選題庫</td>
-          <td><a class="hub-lesson-link" href="./practice/0006-chapter6-examples">練習題卡 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0006-chapter6-examples.html')">練習題卡 →</a></td>
         </tr>
       </tbody>
     </table>
