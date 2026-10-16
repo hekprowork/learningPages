@@ -57,7 +57,7 @@ features:
 
 </div>
 
-> 題目來源與教材覆蓋狀態請參閱：[教材題目對帳報告](/adr/0003-textbook-problem-coverage-audit)
+> 題目來源與教材覆蓋狀態請參閱：[教材題目對帳報告](/adr/0003-textbook-problem-coverage-audit.html)
 
 <style>
 .portal-container {
