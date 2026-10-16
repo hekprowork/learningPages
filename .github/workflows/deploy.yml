@@ -45,6 +45,9 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
+      - name: Validate subject homepage links
+        run: npm run check:subject-routes
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
