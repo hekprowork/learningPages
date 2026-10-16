@@ -1,5 +1,9 @@
 <!-- Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 -->
 <!-- Hallmark · genre: editorial · macrostructure: Index-First Modular Curriculum Matrix · design-system: design.md · designed-as-app -->
+
+<script setup>
+import { withBase } from 'vitepress'
+</script>
 <div class="subject-hub">
 <header class="hub-header">
   <div class="hub-slug-row">
@@ -63,7 +67,7 @@
           <span class="hub-card-count">6 單元</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./chapter1/0002-signals">訊號與放大器基礎 (Signals & Amplifiers)</a>
+          <a :href="withBase('/electronics/chapter1/0002-signals.html')">訊號與放大器基礎 (Signals & Amplifiers)</a>
         </h3>
         <p class="hub-card-desc">
           深入探索微小感測訊號的二埠等效模型、受控源放大器分類、級聯負載效應與單時間常數頻率響應。
@@ -71,20 +75,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0002</span>
-            <a class="hub-lesson-link" href="./chapter1/0002-signals">訊號源模型與負載效應</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/chapter1/0002-signals.html')">訊號源模型與負載效應</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0003–0004</span>
-            <a class="hub-lesson-link" href="./chapter1/0003-frequency-spectrum-of-signals">訊號頻譜與類比/數位訊號分類</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/chapter1/0003-frequency-spectrum-of-signals.html')">訊號頻譜與類比/數位訊號分類</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0005–0007</span>
-            <a class="hub-lesson-link" href="./chapter1/0005-amplifiers">放大器概念、電路模型與 STC 頻率響應</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/chapter1/0005-amplifiers.html')">放大器概念、電路模型與 STC 頻率響應</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./chapter1/0002-signals">進入 Chapter 1 講義 →</a>
+        <a class="hub-btn-link" :href="withBase('/electronics/chapter1/0002-signals.html')">進入 Chapter 1 講義 →</a>
       </div>
     </div>
     <!-- Chapter 2 Card -->
@@ -95,7 +99,7 @@
           <span class="hub-card-count">8 單元 · 46 張重繪圖表</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="/electronics/chapter2/0001-ideal-op-amp">運算放大器 (Operational Amplifiers)</a>
+          <a :href="withBase('/electronics/chapter2/0001-ideal-op-amp.html')">運算放大器 (Operational Amplifiers)</a>
         </h3>
         <p class="hub-card-desc">
           從理想運放兩大分析規則出發，完整推導反相、非反相、差動、儀表放大器、積分與微分電路，並納入直流誤差、有限頻寬及大訊號限制。
@@ -103,20 +107,20 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001–0003</span>
-            <a class="hub-lesson-link" href="/electronics/chapter2/0001-ideal-op-amp">理想模型與兩種基本閉迴路組態</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/chapter2/0001-ideal-op-amp.html')">理想模型與兩種基本閉迴路組態</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0004–0006</span>
-            <a class="hub-lesson-link" href="/electronics/chapter2/0004-difference-amplifiers">差動應用、動態運算與直流非理想效應</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/chapter2/0004-difference-amplifiers.html')">差動應用、動態運算與直流非理想效應</a>
           </li>
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0007–0008</span>
-            <a class="hub-lesson-link" href="/electronics/chapter2/0007-finite-gain-and-bandwidth">頻寬、飽和、輸出電流與轉換速率</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/chapter2/0007-finite-gain-and-bandwidth.html')">頻寬、飽和、輸出電流與轉換速率</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="/electronics/chapter2/0001-ideal-op-amp">進入 Chapter 2 講義 →</a>
+        <a class="hub-btn-link" :href="withBase('/electronics/chapter2/0001-ideal-op-amp.html')">進入 Chapter 2 講義 →</a>
       </div>
     </div>
     <!-- Learning Records Card -->
@@ -127,7 +131,7 @@
           <span class="hub-card-count">1 篇深度筆記</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./learning-records/0001-signals-and-amplifiers-foundations">觀念筆記與電路推導 (Learning Records)</a>
+          <a :href="withBase('/electronics/learning-records/0001-signals-and-amplifiers-foundations.html')">觀念筆記與電路推導 (Learning Records)</a>
         </h3>
         <p class="hub-card-desc">
           深入探討戴維寧/諾頓訊號源、二埠阻抗匹配極限、多級放大器負載效應推導與工作點物理意涵。
@@ -135,12 +139,12 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">0001</span>
-            <a class="hub-lesson-link" href="./learning-records/0001-signals-and-amplifiers-foundations">建立訊號模型與四大放大器等效電路核心思維</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/learning-records/0001-signals-and-amplifiers-foundations.html')">建立訊號模型與四大放大器等效電路核心思維</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./learning-records/0001-signals-and-amplifiers-foundations">閱讀理論推導 →</a>
+        <a class="hub-btn-link" :href="withBase('/electronics/learning-records/0001-signals-and-amplifiers-foundations.html')">閱讀理論推導 →</a>
       </div>
     </div>
     <!-- Cheatsheet Card -->
@@ -151,7 +155,7 @@
           <span class="hub-card-count">1 張速查卡</span>
         </div>
         <h3 class="hub-card-title">
-          <a href="./reference/001-amplifier-models-and-frequency-response">核心公式速查表 (Reference Cheatsheets)</a>
+          <a :href="withBase('/electronics/reference/001-amplifier-models-and-frequency-response.html')">核心公式速查表 (Reference Cheatsheets)</a>
         </h3>
         <p class="hub-card-desc">
           考試、複習與電路設計必備之高密度速查卡，彙整電壓/電流/轉導/轉阻四大組態轉換參數。
@@ -159,12 +163,12 @@
         <ul class="hub-lesson-list">
           <li class="hub-lesson-item">
             <span class="hub-lesson-code">001</span>
-            <a class="hub-lesson-link" href="./reference/001-amplifier-models-and-frequency-response">放大器模型、增益計算與頻率響應速查手冊</a>
+            <a class="hub-lesson-link" :href="withBase('/electronics/reference/001-amplifier-models-and-frequency-response.html')">放大器模型、增益計算與頻率響應速查手冊</a>
           </li>
         </ul>
       </div>
       <div class="hub-card-footer">
-        <a class="hub-btn-link" href="./reference/001-amplifier-models-and-frequency-response">開啟速查手冊 →</a>
+        <a class="hub-btn-link" :href="withBase('/electronics/reference/001-amplifier-models-and-frequency-response.html')">開啟速查手冊 →</a>
       </div>
     </div>
   </div>
@@ -190,19 +194,19 @@
           <td><strong>Chapter 1 統一互動題庫</strong></td>
           <td>範例、Exercises、Problems 1.1–1.83</td>
           <td>112 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0001-chapter1-workbook">開啟題庫 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/electronics/practice/0001-chapter1-workbook.html')">開啟題庫 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 2 統一互動題庫</strong></td>
           <td>範例、Exercises、Problems 2.1–2.127</td>
           <td>162 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0002-chapter2-workbook">開啟題庫 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/electronics/practice/0002-chapter2-workbook.html')">開啟題庫 →</a></td>
         </tr>
         <tr>
           <td><strong>教材題卡盤點總覽</strong></td>
           <td>Chapter 1 & 2 教材題目覆蓋與對帳報告</td>
           <td>盤點總覽</td>
-          <td><a class="hub-lesson-link" href="./practice/0003-textbook-missing">查閱報告 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/electronics/practice/0003-textbook-missing.html')">查閱報告 →</a></td>
         </tr>
       </tbody>
     </table>
