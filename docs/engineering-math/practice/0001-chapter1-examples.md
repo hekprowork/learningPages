@@ -504,7 +504,7 @@ $$y' + y = \frac{x-1}{x^2}$$
 $I = e^x \implies e^x y = \int \left(\frac{1}{x} - \frac{1}{x^2}\right)e^x dx = \frac{e^x}{x} + c \implies y = \frac{1}{x} + ce^{-x}$。
 
 ::: tip 標準答案
-$$y = e^{-x}\int \left(\frac{x-1}{x^2}\right)e^x dx + ce^{-x}$$
+$$y = \frac{1}{x} + ce^{-x}, \qquad x \neq 0$$
 :::
 
 </template>
