@@ -179,6 +179,7 @@ export default defineConfig({
           items: [
             { text: 'Chapter 1 統一題庫（112 題）', link: '/electronics/practice/0001-chapter1-workbook' },
             { text: 'Chapter 2 統一題庫（162 題）', link: '/electronics/practice/0002-chapter2-workbook' },
+            { text: 'Chapter 3 半導體題庫（47 題）', link: '/electronics/practice/0004-chapter3-workbook' },
             { text: 'Chapter 1/2: 教材題卡完整盤點', link: '/electronics/practice/0003-textbook-missing' }
           ]
         }

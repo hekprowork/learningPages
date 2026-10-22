@@ -176,7 +176,7 @@ import { withBase } from 'vitepress'
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
-    <h2 class="hub-section-title">互動式題庫練習系統 (274 題)</h2>
+    <h2 class="hub-section-title">互動式題庫練習系統 (321 題)</h2>
     <p class="hub-section-desc">搭載 Hallmark 狀態驅動題卡、KaTeX 數學公式與同屏顯式電路圖解之各章題庫與範例練習。</p>
   </div>
   <div class="hub-practice-table-wrap">
@@ -201,6 +201,12 @@ import { withBase } from 'vitepress'
           <td>範例、Exercises、Problems 2.1–2.127</td>
           <td>162 題</td>
           <td><a class="hub-lesson-link" :href="withBase('/electronics/practice/0002-chapter2-workbook.html')">開啟題庫 →</a></td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 3 半導體互動題庫</strong></td>
+          <td>Exercises 3.1–3.16、Problems 3.1–3.31</td>
+          <td>47 題</td>
+          <td><a class="hub-lesson-link" href="./practice/0004-chapter3-workbook">開啟題庫 →</a></td>
         </tr>
         <tr>
           <td><strong>教材題卡盤點總覽</strong></td>
