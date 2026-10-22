@@ -8,12 +8,12 @@ import { withBase } from 'vitepress'
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Microelectronic Circuits // EE-CORE-201</span>
-    <span class="hub-badge-status">Status 已上線 · 274 題教材題卡</span>
+    <span class="hub-badge-status">Status 已上線 · 321 題教材題卡</span>
   </div>
   <h1 class="hub-title">電子學</h1>
   <div class="hub-subtitle">Microelectronic Circuits & Analog Signal Processing</div>
   <p class="hub-lead">
-    本模組以經典教材 Sedra & Smith《Microelectronic Circuits》為基礎，涵蓋訊號源與放大器模型、單時間常數頻率響應，以及運算放大器的閉迴路組態、非理想效應與大訊號限制。
+    本模組以經典教材 Sedra & Smith《Microelectronic Circuits》為基礎，涵蓋訊號源與放大器模型、單時間常數頻率響應、運算放大器，以及半導體載子傳輸與 pn 接面。
   </p>
   <div class="hub-meta-bar">
     <div class="hub-meta-item">
@@ -22,19 +22,19 @@ import { withBase } from 'vitepress'
     </div>
     <div class="hub-meta-item">
       <span class="hub-meta-label">涵蓋範圍</span>
-      <span class="hub-meta-val">Chapter 1–2 (Signals, Amplifiers & Op-Amps)</span>
+      <span class="hub-meta-val">Chapter 1–3 (Signals, Op-Amps & Semiconductors)</span>
     </div>
     <div class="hub-meta-item">
       <span class="hub-meta-label">題卡規模</span>
-      <span class="hub-meta-val">274 題全自包含題卡與 KaTeX 詳解</span>
+      <span class="hub-meta-val">321 題全自包含題卡與 KaTeX 公式</span>
     </div>
   </div>
 </header>
 <div class="hub-stats-grid">
   <div class="hub-stat-card">
     <span class="hub-stat-label">課程核心章節</span>
-    <span class="hub-stat-number">02</span>
-    <span class="hub-stat-sub">訊號放大器與運算放大器</span>
+    <span class="hub-stat-number">03</span>
+    <span class="hub-stat-sub">訊號放大器、運算放大器與半導體</span>
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">正式講義單元</span>
@@ -48,7 +48,7 @@ import { withBase } from 'vitepress'
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">實戰練習題卡</span>
-    <span class="hub-stat-number">274</span>
+    <span class="hub-stat-number">321</span>
     <span class="hub-stat-sub">Examples, Exercises, Problems</span>
   </div>
 </div>
@@ -206,7 +206,7 @@ import { withBase } from 'vitepress'
           <td><strong>Chapter 3 半導體互動題庫</strong></td>
           <td>Exercises 3.1–3.16、Problems 3.1–3.31</td>
           <td>47 題</td>
-          <td><a class="hub-lesson-link" href="./practice/0004-chapter3-workbook">開啟題庫 →</a></td>
+          <td><a class="hub-lesson-link" :href="withBase('/electronics/practice/0004-chapter3-workbook.html')">開啟題庫 →</a></td>
         </tr>
         <tr>
           <td><strong>教材題卡盤點總覽</strong></td>
