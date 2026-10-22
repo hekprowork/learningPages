@@ -15,6 +15,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
 PDF_PATH = ROOT / "課本.pdf"
+SLIDE_PDF_PATH = ROOT / "1151-電路學(一)CIRCUIT THEORY(1)(電子二甲)[1542]_CH004.pdf"
 OUTPUT_DIR = ROOT / "assets" / "images"
 SCALE = 3
 
@@ -60,6 +61,8 @@ FIGURES = {
     "ch4-pr7_figure_4.21.png": (142, (62, 240, 525, 378)),
     "ch4-pr7_figure_4.22.png": (142, (44, 608, 216, 705)),
     "ch4-pr8_figure_4.30.png": (146, (44, 84, 208, 186)),
+    "ch4-ex8_figure_4.28.png": (145, (60, 112, 525, 248)),
+    "ch4-ex8_figure_4.29.png": (145, (390, 455, 535, 536)),
     "ch4-pr8_figure_4.31.png": (146, (44, 213, 185, 353)),
     "ch4-pr8_figure_4.32.png": (146, (49, 354, 527, 542)),
     "ch4-pr9_figure_4.32.png": (146, (49, 354, 527, 542)),
@@ -74,6 +77,7 @@ FIGURES = {
     "ch4-pr11_figure_4.41.png": (151, (369, 473, 534, 565)),
     "ch4-pr11_figure_4.42.png": (151, (369, 613, 523, 703)),
     "ch4-pr12_figure_4.45.png": (152, (44, 600, 198, 704)),
+    "ch4-ex12_figure_4.44.png": (152, (58, 392, 525, 568)),
     "ch4-pr13_figure_4.52.png": (156, (44, 317, 215, 435)),
     "ch4-pr13_figure_4.51.png": (155, (108, 565, 525, 701)),
     "ch4-ex14_figure_4.48.png": (154, (45, 290, 198, 432)),
@@ -100,6 +104,15 @@ FIGURES = {
 }
 
 
+# The first two worked examples add current/voltage annotations only on the
+# lecture-solution slides.  Preserve those annotated circuit regions so the
+# web solution remains understandable without showing the entire slide.
+SLIDE_FIGURES = {
+    "ch4-ex1_solution-circuit.png": (8, (465, 8, 715, 160)),
+    "ch4-ex2_solution-circuit.png": (11, (350, 8, 710, 150)),
+}
+
+
 def crop_figure(page: fitz.Page, rect: tuple[float, float, float, float]) -> Image.Image:
     pixmap = page.get_pixmap(
         matrix=fitz.Matrix(SCALE, SCALE),
@@ -116,7 +129,15 @@ def main() -> None:
         image = crop_figure(document[page_number - 1], rect)
         image.save(OUTPUT_DIR / filename, format="PNG", optimize=True)
         print(f"{filename}: page {page_number}, {image.width}x{image.height}")
-    print(f"Re-cropped {len(FIGURES)} Chapter 4 workbook figures from {PDF_PATH.name}.")
+
+    slide_document = fitz.open(SLIDE_PDF_PATH)
+    for filename, (page_number, rect) in SLIDE_FIGURES.items():
+        image = crop_figure(slide_document[page_number - 1], rect)
+        image.save(OUTPUT_DIR / filename, format="PNG", optimize=True)
+        print(f"{filename}: slide {page_number}, {image.width}x{image.height}")
+
+    total = len(FIGURES) + len(SLIDE_FIGURES)
+    print(f"Re-cropped {total} Chapter 4 workbook figures from the textbook and lecture slides.")
 
 
 if __name__ == "__main__":

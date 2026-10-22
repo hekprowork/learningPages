@@ -49,6 +49,8 @@ description: 電路學第四章 電路定理 (Circuit Theorems) 互動題庫、�
 
 #### 逐步解析：
 
+![例題 4.1 詳解：網孔電流與控制電壓標註](../assets/images/ch4-ex1_solution-circuit.png)
+
 1. **建立網孔電流方程式**：
    設左側網孔電流為 $i_1$，右側網孔電流為 $i_2 = I_o$。
    - 對網孔 1 列寫 KVL：
@@ -144,6 +146,8 @@ $$
 <template #solution>
 
 #### 逐步解析：
+
+![例題 4.2 詳解：反向推導所用的節點電壓與支路電流](../assets/images/ch4-ex2_solution-circuit.png)
 
 1. **假設末端輸出 $I_o = 1\text{ A}$ 由右向左逐級反推**：
    - 最右側支路總阻抗為 $3\ \Omega + 5\ \Omega = 8\ \Omega$，節點 1 電壓為：
@@ -245,6 +249,8 @@ $$
 
 令總電壓為兩分量之和：$v = v_1 + v_2$。
 
+![Figure 4.7：分別保留電壓源與電流源的重疊子電路](../assets/images/ch4-pr3_figure_4.7.png)
+
 1. **第一步：僅考慮 $6\text{ V}$ 電壓源作用（將 $3\text{ A}$ 電流源開路 Open Circuit）**：
    此時電路為單一迴路，利用分壓定律直接求得 $4\ \Omega$ 電阻兩端電壓 $v_1$：
    $$
@@ -341,6 +347,8 @@ $$
 #### 逐步解析：
 
 令總電流為兩獨立源作用分量和：$i_o = i_o' + i_o''$（**相依源全程保留，不可關閉**）。
+
+![Figure 4.10：保留相依源的兩個重疊子電路](../assets/images/ch4-pr3_figure_4.10.png)
 
 1. **第一步：僅由 $4\text{ A}$ 電流源作用（$20\text{ V}$ 電壓源短路）求解 $i_o'$**：
    對圖 4.10(a) 電路建立網孔電流方程式（設網孔電流 $i_1, i_2, i_3$）：
@@ -441,6 +449,8 @@ $$
 #### 逐步解析：
 
 令總電流為三電源分量之代數和：$i = i_1 + i_2 + i_3$。
+
+![Figure 4.13：三個獨立源分別作用時的重疊子電路](../assets/images/ch4-pr4_figure_4.13.png)
 
 1. **第一步：僅 $12\text{ V}$ 電壓源單獨作用（$24\text{ V}$ 短路，$3\text{ A}$ 開路，圖 4.13a）**：
    右側電阻 $4\ \Omega + 8\ \Omega = 12\ \Omega$，與中間 $4\ \Omega$ 並聯：
@@ -548,6 +558,8 @@ $$
 <template #solution>
 
 #### 逐步解析：
+
+![Figure 4.18：電源轉換的三階段等效電路](../assets/images/ch4-pr6_figure_4.18.png)
 
 1. **第一步：左側與右側電源轉換 (圖 4.18a)**：
    - 左側：$12\text{ V}$ 電壓源串聯 $3\ \Omega$ 電阻 $\implies$ 轉換為 $i_{s1} = \frac{12\text{ V}}{3\ \Omega} = 4\text{ A}$ 電流源並聯 $3\ \Omega$ 電阻。
@@ -666,6 +678,8 @@ $$
 
 #### 逐步解析：
 
+![Figure 4.21：含相依源電路的兩階段電源轉換](../assets/images/ch4-pr7_figure_4.21.png)
+
 1. **第一步：轉換左側與相依源支路 (圖 4.21a)**：
    - 左側 $6\text{ V}$ 電壓源串聯 $2\ \Omega$ 電阻 $\implies$ 轉換為 $i_s = \frac{6\text{ V}}{2\ \Omega} = 3\text{ A}$ 電流源並聯 $2\ \Omega$ 電阻。
    - 中間兩顆 $2\ \Omega$ 電阻並聯：
@@ -740,6 +754,10 @@ $$
 <template #solution>
 
 #### 逐步解析：
+
+![Figure 4.28：關閉獨立源求等效電阻，以及開路求戴維寧電壓](../assets/images/ch4-ex8_figure_4.28.png)
+
+![Figure 4.29：接上負載後的戴維寧等效電路](../assets/images/ch4-ex8_figure_4.29.png)
 
 1. **第一步：求戴維寧等效電阻 $R_{Th}$ (圖 4.28a)**：
    將所有獨立電源關閉（$32\text{ V}$ 電壓源短路，$2\text{ A}$ 電流源開路）：
@@ -820,6 +838,10 @@ $$
 
 #### 逐步解析：
 
+![Figure 4.32：外加測試源求 $R_{Th}$，以及開路求 $V_{Th}$](../assets/images/ch4-pr9_figure_4.32.png)
+
+![Figure 4.33：例題 4.9 的戴維寧等效電路](../assets/images/ch4-pr9_figure_4.33.png)
+
 1. **第一步：求開路電壓 $V_{Th} = v_{oc}$ (圖 4.32b)**：
    設網孔電流 $i_1, i_2, i_3$（$a-b$ 端開路）：
    - $i_1 = 5\text{ A}$
@@ -894,6 +916,8 @@ $$
 
 #### 逐步解析：
 
+![Figure 4.35：測試源法、電源轉換與負電阻等效電路](../assets/images/ch4-pr9_figure_4.35.png)
+
 1. **無獨立激勵時之開路電壓**：
    由於電路內無任何獨立電壓源或電流源，無外在激勵時各支路電壓與電流均為零：
    $$
@@ -966,6 +990,10 @@ $$
 
 #### 逐步解析：
 
+![Figure 4.40：求諾頓等效電阻、短路電流與開路電壓](../assets/images/ch4-pr11_figure_4.40.png)
+
+![Figure 4.41：例題 4.11 的諾頓等效電路](../assets/images/ch4-pr11_figure_4.41.png)
+
 1. **第一步：求諾頓等效電阻 $R_N$ (圖 4.40a)**：
    關閉所有獨立源（$12\text{ V}$ 電壓源短路，$2\text{ A}$ 電流源開路）：
    $$
@@ -1030,6 +1058,8 @@ $$
 <template #solution>
 
 #### 逐步解析：
+
+![Figure 4.44：外加測試源求 $R_N$，以及短路求 $I_N$](../assets/images/ch4-ex12_figure_4.44.png)
 
 1. **第一步：求諾頓等效電阻 $R_N$（關閉獨立源，外加 $v_o = 1\text{ V}$ 測試源，圖 4.44a）**：
    將 $10\text{ V}$ 電壓源短路接地。
@@ -1098,6 +1128,8 @@ $$
 <template #solution>
 
 #### 逐步解析：
+
+![Figure 4.51：關閉獨立源求 $R_{Th}$，以及開路求 $V_{Th}$](../assets/images/ch4-pr13_figure_4.51.png)
 
 1. **第一步：求戴維寧等效電阻 $R_{Th}$ (圖 4.51a)**：
    關閉所有獨立源（$12\text{ V}$ 電壓源短路，$2\text{ A}$ 電流源開路）：
