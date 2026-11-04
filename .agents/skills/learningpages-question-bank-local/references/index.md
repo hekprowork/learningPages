@@ -1,8 +1,8 @@
 # 題庫路由
 
-快照：2026-11-05；基準版本 e31a9d52268839e66b32a1e3c5871d967ac92175（包含本機尚未提交的 CH7–8 題庫更新）。
+快照：2026-11-05；工程數學 Chapter 3 依正式教材 PDF 印刷頁碼 P.46–57 盤點並新增 18 張題卡。
 
-共 1,233 張唯一題卡。本次新增的 CH7、CH8 題卡及其圖表引用已逐卡核對；未重新驗證全題庫的所有解答。
+共 1,251 張唯一題卡。本次新增 18 張工程數學 Chapter 3 題卡，逐卡核對題目與來源；未重新驗證全題庫的所有解答。
 
 TSV 欄位：chapter、id、title、type、topic、source、repo_path。用 `rg` 搜尋候選題，按命中列的 `repo_path` 讀 GitHub 原始題卡；同一來源檔只讀一次。索引只用於定位，不可直接依導航文字出題。
 
@@ -33,6 +33,7 @@ TSV 欄位：chapter、id、title、type、topic、source、repo_path。用 `rg`
 
 - CH1：76 題
 - CH2：30 題
+- CH3：18 題
 
 ## 固態電子導論
 
@@ -46,7 +47,7 @@ TSV 欄位：chapter、id、title、type、topic、source、repo_path。用 `rg`
 
 - 電路學：docs/circuits/practice/0001–0008（CH1–8）。
 - 電子學：docs/electronics/practice-source/ 是題卡，practice 工作簿整合／導向頁不重複計入；CH1 112、CH2 162、CH3 47 張。
-- 工數：docs/engineering-math/practice/0001-chapter1-examples.md、0002-chapter2-examples.md，0003-textbook-examples.md 跨 CH1–2。
+- 工數：docs/engineering-math/practice/0001-chapter1-examples.md、0002-chapter2-examples.md、0003-textbook-examples.md（CH1–2）、0004-chapter3-examples.md（CH3）。
 - 固態：docs/solid-state/practice/0001-textbook-problems.md（CH1）、0003-chapter2-problems.md（CH2）、0004-chapter3-problems.md（CH3）。
 
 GitHub：https://github.com/hekprowork/learningPages/blob/main/<repo_path>。

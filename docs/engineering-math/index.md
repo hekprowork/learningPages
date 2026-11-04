@@ -8,7 +8,7 @@ import { withBase } from 'vitepress'
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Engineering Mathematics // MATH-CORE-201</span>
-    <span class="hub-badge-status">Status 已上線 · 106 題實戰題卡</span>
+    <span class="hub-badge-status">Status 已上線 · 124 題實戰題卡</span>
   </div>
   <h1 class="hub-title">工程數學</h1>
   <div class="hub-subtitle">Engineering Mathematics & Analytical Differential Equations</div>
@@ -26,15 +26,15 @@ import { withBase } from 'vitepress'
     </div>
     <div class="hub-meta-item">
       <span class="hub-meta-label">實戰題庫</span>
-      <span class="hub-meta-val">106 題完整題卡（含 35 張正式教材例題卡）</span>
+      <span class="hub-meta-val">124 題完整題卡（含 53 張正式教材例題卡）</span>
     </div>
   </div>
 </header>
 <div class="hub-stats-grid">
   <div class="hub-stat-card">
     <span class="hub-stat-label">課程核心章節</span>
-    <span class="hub-stat-number">02</span>
-    <span class="hub-stat-sub">一階 ODE 與二階高階 ODE</span>
+    <span class="hub-stat-number">03</span>
+    <span class="hub-stat-sub">一階 ODE、二階高階 ODE 與拉普拉斯轉換</span>
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">正式講義單元</span>
@@ -48,7 +48,7 @@ import { withBase } from 'vitepress'
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">實戰練習題卡</span>
-    <span class="hub-stat-number">106</span>
+    <span class="hub-stat-number">124</span>
     <span class="hub-stat-sub">教材例題與精選題庫</span>
   </div>
 </div>
@@ -123,6 +123,30 @@ import { withBase } from 'vitepress'
         <a class="hub-btn-link" :href="withBase('/engineering-math/second-order/0001-second-order-ode-concepts.html')">進入 Chapter 2 講義 →</a>
       </div>
     </div>
+    <!-- Chapter 3 Card -->
+    <div class="hub-card">
+      <div class="hub-card-top">
+        <div class="hub-card-badge-row">
+          <span class="hub-tag hub-tag-accent">Chapter 03</span>
+          <span class="hub-card-count">Laplace Transform</span>
+        </div>
+        <h3 class="hub-card-title">
+          <a :href="withBase('/engineering-math/practice/0004-chapter3-examples.html')">拉普拉斯轉換教材範例</a>
+        </h3>
+        <p class="hub-card-desc">
+          轉換定理、分段函數、反拉普拉斯、初值問題與 RC 電路暫態。
+        </p>
+        <ul class="hub-lesson-list">
+          <li class="hub-lesson-item">
+            <span class="hub-lesson-code">18 題</span>
+            <a class="hub-lesson-link" :href="withBase('/engineering-math/practice/0004-chapter3-examples.html')">開啟教材範例題卡</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hub-card-footer">
+        <a class="hub-btn-link" :href="withBase('/engineering-math/practice/0004-chapter3-examples.html')">開始 Chapter 3 練習 →</a>
+      </div>
+    </div>
     <!-- Learning Records Card -->
     <div class="hub-card">
       <div class="hub-card-top">
@@ -176,7 +200,7 @@ import { withBase } from 'vitepress'
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
-    <h2 class="hub-section-title">互動式題庫練習系統 (106 題)</h2>
+    <h2 class="hub-section-title">互動式題庫練習系統 (124 題)</h2>
     <p class="hub-section-desc">全題目自包含題卡與 KaTeX 嚴謹推導詳解，覆蓋課本例題、課堂練習與精選範例。</p>
   </div>
   <div class="hub-practice-table-wrap">
@@ -207,6 +231,12 @@ import { withBase } from 'vitepress'
           <td>二階常係數齊次/非齊次、微分算子法、參數變異與尤拉方程</td>
           <td>15 題</td>
           <td><a class="hub-lesson-link" :href="withBase('/engineering-math/practice/0002-chapter2-examples.html')">練習題卡 →</a></td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 3 拉普拉斯轉換教材範例</strong></td>
+          <td>轉換定理、分段函數、反轉換、初值問題與 RC 電路應用</td>
+          <td>18 題</td>
+          <td><a class="hub-lesson-link" :href="withBase('/engineering-math/practice/0004-chapter3-examples.html')">練習題卡 →</a></td>
         </tr>
       </tbody>
     </table>

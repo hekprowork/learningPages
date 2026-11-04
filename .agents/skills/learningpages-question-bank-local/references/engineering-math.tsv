@@ -105,4 +105,21 @@ chapter	id	title	type	topic	source	repo_path
 2	math-ch2-missing-13	Euler–Cauchy 方程：複根	example	Euler–Cauchy 方程	正式教材第二章 P.41 · Example	docs/engineering-math/practice/0003-textbook-examples.md
 2	math-ch2-missing-14	Euler–Cauchy 初值問題	example	Euler–Cauchy 方程	正式教材第二章 P.41 · Example	docs/engineering-math/practice/0003-textbook-examples.md
 2	math-ch2-missing-15	降階法：已知一個解求第二個解	example	降階法	正式教材第二章 P.42 · Example	docs/engineering-math/practice/0003-textbook-examples.md
-
+3	math-ch3-prob-1	線性定理：指數與多項式的和	example	線性定理	正式教材第三章 P.46 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-2	求 $\mathcal{L}[te^{2t}]$：第一移位與微乘	example	第一移位 / 微乘	正式教材第三章 P.46–47 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-3	第二移位定理：延遲指數函數	example	第二移位	正式教材第三章 P.48 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-4	多項式乘指數函數	example	第一移位 / 多項式	正式教材第三章 P.51 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-5	分段函數：延遲後改為 $\cos t$	example	分段函數 / 第二移位	正式教材第三章 P.51 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-6	分段函數：兩段常數與延遲指數	example	分段函數 / 第二移位	正式教材第三章 P.51 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-7	$e^t(1-\cosh t)$ 的拉普拉斯轉換	example	第一移位 / 雙曲函數	正式教材第三章 P.52 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-8	多項式的平移與單位步階函數	example	時間平移 / 第二移位	正式教材第三章 P.52 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-9	簡單部分分式反轉換	example	部分分式	正式教材第三章 P.52 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-10	三個相異一次因子的部分分式	example	部分分式 / 反拉普拉斯	正式教材第三章 P.52–53 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-11	反轉換與第二移位：$\cos 3(t-2)$	example	第二移位 / 反拉普拉斯	正式教材第三章 P.53 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-12	完成平方與第一移位	example	第一移位 / 反拉普拉斯	正式教材第三章 P.53 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-13	部分分式與延遲 21 單位	example	部分分式 / 第二移位	正式教材第三章 P.53–54 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-14	指數平移與單位步階函數	example	第一移位 / 第二移位	正式教材第三章 P.54 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-15	微乘定理與延遲正弦函數	example	微乘 / 第二移位	正式教材第三章 P.54 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-16	一階初值問題：$y'-4y=1$	example	初值問題 / 拉普拉斯轉換	正式教材第三章 P.55 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-17	二階初值問題：指數外力	example	初值問題 / 拉普拉斯轉換	正式教材第三章 P.55–56 · Example	docs/engineering-math/practice/0004-chapter3-examples.md
+3	math-ch3-prob-18	二迴路 RC 電路的暫態電流	example	電路模型 / 拉普拉斯轉換	正式教材第三章 P.56–57 · Example	docs/engineering-math/practice/0004-chapter3-examples.md

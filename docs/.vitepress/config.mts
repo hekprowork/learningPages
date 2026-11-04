@@ -271,6 +271,13 @@ export default defineConfig({
             { text: '實戰題庫: Chapter 2 互動式範例與精選題庫 (15 題)', link: '/engineering-math/practice/0002-chapter2-examples' },
             { text: '教材補齊: Chapter 1–2（35 題）', link: '/engineering-math/practice/0003-textbook-examples' }
           ]
+        },
+        {
+          text: 'Chapter 3: 拉普拉斯轉換 (Laplace Transform)',
+          collapsed: false,
+          items: [
+            { text: '0004: 拉普拉斯轉換教材範例題庫（18 題）', link: '/engineering-math/practice/0004-chapter3-examples' }
+          ]
         }
       ]
     },
