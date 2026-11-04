@@ -230,7 +230,9 @@ export default defineConfig({
             { text: 'Chapter 3: 互動式範例與練習題庫（119 題）', link: '/circuits/practice/0003-chapter3-examples' },
             { text: 'Chapter 4: 互動式範例與練習題庫（134 題，電路定理）', link: '/circuits/practice/0004-chapter4-examples' },
             { text: 'Chapter 5: 互動式範例與練習題庫（35 題，運算放大器）', link: '/circuits/practice/0005-chapter5-examples' },
-            { text: 'Chapter 6: 互動式範例與練習題庫 (電容與電感)', link: '/circuits/practice/0006-chapter6-examples' }
+            { text: 'Chapter 6: 互動式範例與練習題庫 (電容與電感)', link: '/circuits/practice/0006-chapter6-examples' },
+            { text: 'Chapter 7: 互動式題庫（123 題，一階電路）', link: '/circuits/practice/0007-chapter7-examples' },
+            { text: 'Chapter 8: 互動式題庫（111 題，二階電路）', link: '/circuits/practice/0008-chapter8-examples' }
           ]
         }
       ],

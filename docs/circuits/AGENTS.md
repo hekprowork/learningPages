@@ -21,6 +21,8 @@
   - `chapter4/`: Chapter 4 電路定理 (Circuit Theorems)
   - `chapter5/`: Chapter 5 運算放大器 (Operational Amplifiers)
   - `chapter6/`: Chapter 6 電容與電感 (Capacitors and Inductors)
+  - `chapter7/`: Chapter 7 一階電路 (First-Order Circuits)
+  - `chapter8/`: Chapter 8 二階電路 (Second-Order Circuits)
   - `learning-records/`: 觀念筆記與定理推導 (Concept Notes & Derivations)
   - `reference/`: 核心公式速查表 (Reference Cheatsheets)
   - `practice/`: 互動式題庫練習系統 (Interactive Practice Workbooks)

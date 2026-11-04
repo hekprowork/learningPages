@@ -8,7 +8,7 @@ import { withBase } from 'vitepress'
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Electric Circuit Theory // EE-CORE-102</span>
-    <span class="hub-badge-status">Status 已上線 · 464+ 題教材題卡</span>
+  <span class="hub-badge-status">Status 已上線 · 第 1–8 章教材題卡</span>
   </div>
   <h1 class="hub-title">電路學</h1>
   <div class="hub-subtitle">Electric Circuit Theory & Network Topology</div>
@@ -22,7 +22,7 @@ import { withBase } from 'vitepress'
     </div>
     <div class="hub-meta-item">
       <span class="hub-meta-label">涵蓋範圍</span>
-      <span class="hub-meta-val">Chapter 1–6 (DC Analysis, Network Theorems, Op-Amps, L & C)</span>
+    <span class="hub-meta-val">Chapter 1–8 (DC Analysis, Network Theorems, Op-Amps, L & C, First- and Second-Order Circuits)</span>
     </div>
     <div class="hub-meta-item">
       <span class="hub-meta-label">對帳驗證</span>
@@ -33,8 +33,8 @@ import { withBase } from 'vitepress'
 <div class="hub-stats-grid">
   <div class="hub-stat-card">
     <span class="hub-stat-label">課程核心章節</span>
-    <span class="hub-stat-number">06</span>
-    <span class="hub-stat-sub">Chapter 1 至 Chapter 6</span>
+    <span class="hub-stat-number">08</span>
+    <span class="hub-stat-sub">Chapter 1 至 Chapter 8</span>
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">講義與推導單元</span>
@@ -48,8 +48,8 @@ import { withBase } from 'vitepress'
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">實戰練習題卡</span>
-    <span class="hub-stat-number">464+</span>
-    <span class="hub-stat-sub">全自包含圖表題卡系統</span>
+    <span class="hub-stat-number">728</span>
+    <span class="hub-stat-sub">第 1 至第 8 章全自包含圖表題卡</span>
   </div>
 </div>
 <section class="hub-section">
@@ -192,7 +192,7 @@ import { withBase } from 'vitepress'
 <section class="hub-section">
   <div class="hub-section-header">
     <span class="hub-section-index">02 / Interactive Workbooks</span>
-    <h2 class="hub-section-title">互動式題庫練習系統 (464+ 題)</h2>
+    <h2 class="hub-section-title">互動式題庫練習系統（728 題）</h2>
     <p class="hub-section-desc">搭載 Hallmark 狀態驅動題卡、KaTeX 數學公式與同屏顯式電路圖解之各章題庫與範例練習。</p>
   </div>
   <div class="hub-practice-table-wrap">
@@ -241,6 +241,18 @@ import { withBase } from 'vitepress'
           <td>電容與電感元件特性、串並聯等效、儲能與初始條件分析</td>
           <td>精選題庫</td>
           <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0006-chapter6-examples.html')">練習題卡 →</a></td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 7: First-Order Circuits</strong></td>
+          <td>一階 RC/RL 自然與階躍響應、時間常數、奇異函數與暫態應用</td>
+          <td>123 題（22 個例題、22 個練習題、79 道章末題）</td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0007-chapter7-examples.html')">練習題卡 →</a></td>
+        </tr>
+        <tr>
+          <td><strong>Chapter 8: Second-Order Circuits</strong></td>
+          <td>二階 RLC 自然與階躍響應、阻尼型態、初末值與電路對偶</td>
+          <td>111 題（17 個例題、17 個練習題、77 道章末題）</td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0008-chapter8-examples.html')">練習題卡 →</a></td>
         </tr>
       </tbody>
     </table>
