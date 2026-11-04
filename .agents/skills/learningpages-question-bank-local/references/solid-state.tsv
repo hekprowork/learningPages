@@ -1,0 +1,80 @@
+chapter	id	title	type	topic	source	repo_path
+1	ss-ch1-p1-1	Problem 1.1：半導體能隙與波長	exercise	能隙與材料	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-2	Problem 1.2：bcc 晶格幾何與最大堆積率	exercise	晶格幾何	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-3	Problem 1.3：晶面標記	exercise	米勒指數	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-4	Problem 1.4：bcc 晶格的密度、(110) 面與缺陷	exercise	晶格與缺陷	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-5	Problem 1.5：Si 與 GaAs 的質量密度	exercise	材料密度	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-6	Problem 1.6：GaAs 晶格常數與 primitive cell 體積	exercise	晶格常數	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-7	Problem 1.7：fcc 晶格的面密度與體密度	exercise	fcc 晶格	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-8	Problem 1.8：鑽石晶格的最近鄰	exercise	鑽石晶格	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-9	Problem 1.9：bcc 作為兩個互穿 sc 晶格	exercise	晶格表示法	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-10	Problem 1.10：Si 表面密度與 InP 最近鄰距離	exercise	面密度	PDF p.48 / 印刷 p.47	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-11	Problem 1.11：NaCl 硬球模型密度	exercise	離子晶體	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-12	Problem 1.12：具有雙原子基底的 sc 晶格	exercise	堆積率	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-13	Problem 1.13：三種立方晶格的晶胞與最近鄰	exercise	立方晶格	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-14	Problem 1.14：等價的 {111} 與 {110} 晶面	exercise	等價晶面	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-15	Problem 1.15：硬球最大填充體積比例	exercise	堆積率	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-16	Problem 1.16：Ge 與 InP 的密度	exercise	材料密度	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-17	Problem 1.17：由 fcc 建構鑽石晶格	exercise	鑽石晶格	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-18	Problem 1.18：三元合金的晶格匹配與能隙	exercise	合金與晶格匹配	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-p1-19	Problem 1.19：InGaAs 晶格匹配與臨界厚度	exercise	異質磊晶	PDF p.49 / 印刷 p.48	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-sq1	Self Quiz 1：晶面、等價方向與晶面作圖	practice	米勒指數	PDF p.50 / 印刷 p.49	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-sq2	Self Quiz 2：primitive cells 與等價晶面	practice	primitive cell	PDF p.50–51 / 印刷 p.49–50	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-sq3	Self Quiz 3：鑽石與 zinc blende 結構	practice	晶體結構	PDF p.51 / 印刷 p.50	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-sq4	Self Quiz 4：半導體中的缺陷維度	practice	晶體缺陷	PDF p.52 / 印刷 p.51	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-sq5	Self Quiz 5：primitive cell、unit cell、lattice 與 crystal	practice	晶格概念	PDF p.52 / 印刷 p.51	docs/solid-state/practice/0001-textbook-problems.md
+1	ss-ch1-sq6	Self Quiz 6：InAs 在不同基板上的臨界厚度	practice	晶格匹配	PDF p.52 / 印刷 p.51	docs/solid-state/practice/0001-textbook-problems.md
+2	ss-ch2-p2-1	Problem 2.1：光電效應實驗	exercise	光電效應	PDF p.79 / 印刷 p.78	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-2	Problem 2.2：鋅的光電效應	exercise	光電效應	PDF p.79 / 印刷 p.78	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-3	Problem 2.3：氫原子光譜線	exercise	原子光譜	PDF p.79–80 / 印刷 p.78–79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-4	Problem 2.4：不確定性原理與束縛能	exercise	不確定性原理	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-5	Problem 2.5：由 Balmer 線求 Rydberg 常數	exercise	Bohr 模型	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-6	Problem 2.6：一維波函數的機率分布	exercise	波函數	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-7	Problem 2.7：分段一維波函數的正規化	exercise	波函數	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-8	Problem 2.8：有限區間內的平面波	exercise	波函數	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-9	Problem 2.9：有限位能障壁與穿隧	exercise	量子穿隧	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-10	Problem 2.10：碳原子的電子、質子與中子	exercise	電子殼層	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-11	Problem 2.11：無限深量子井的前五個能階	exercise	量子井	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-12	Problem 2.12：疊加態的期望能量	exercise	量子態	PDF p.80 / 印刷 p.79	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-p2-13	Problem 2.13：電子組態與化學反應性	exercise	週期表	PDF p.81 / 印刷 p.80	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-sq1	Self Quiz 1：允許的量子力學波函數	practice	波函數	PDF p.81 / 印刷 p.80	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-sq2	Self Quiz 2：有限深位能井	practice	量子井	PDF p.81 / 印刷 p.80	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-sq3	Self Quiz 3：本徵能量與允許波函數	practice	量子態	PDF p.82 / 印刷 p.81	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-sq4	Self Quiz 4：位能障壁的反射機率	practice	量子穿隧	PDF p.82–83 / 印刷 p.81–82	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-sq5	Self Quiz 5：連續測量的位置與動量	practice	量子測量	PDF p.83 / 印刷 p.82	docs/solid-state/practice/0003-chapter2-problems.md
+2	ss-ch2-sq6	Self Quiz 6：古典物理下的光電效應	practice	光電效應	PDF p.83 / 印刷 p.82	docs/solid-state/practice/0003-chapter2-problems.md
+3	ss-ch3-p3-1	Problem 3.1：GaN 的近似束縛能	exercise	束縛能	PDF p.135 / 印刷 p.134	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-2	Problem 3.2：Fermi 函數與能量	exercise	Fermi 函數	PDF p.135 / 印刷 p.134	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-3	Problem 3.3：矽基板的施體與受體摻雜	exercise	摻雜與載子濃度	PDF p.135 / 印刷 p.134	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-4	Problem 3.4：導帶邊緣附近的能態總數	exercise	能態密度	PDF p.135 / 印刷 p.134	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-5	Problem 3.5：AlAs 的 Γ 與 X 谷載子數相等溫度	exercise	多能谷半導體	PDF p.135 / 印刷 p.134	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-6	Problem 3.6：GaAs Γ 谷有效質量與遷移率	exercise	有效質量與遷移率	PDF p.135 / 印刷 p.134	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-7	Problem 3.7：由 ni 曲線求 Si 能隙	exercise	本質載子濃度	PDF p.135 / 印刷 p.134	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-8	Problem 3.8：鍺摻砷後的平衡載子與 Fermi 能階	exercise	Fermi 能階	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-9	Problem 3.9：本質 Ge 的本質能階位置	exercise	本質能階	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-10	Problem 3.10：低濃度砷摻雜 Ge 的電洞濃度	exercise	補償與載子濃度	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-11	Problem 3.11：高溫新型半導體的載子濃度	exercise	高溫載子統計	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-12	Problem 3.12：半導體的最小導電率	exercise	導電率	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-13	Problem 3.13：Si 中電子漂移速度與飽和電流	exercise	漂移與速度飽和	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-14	Problem 3.14：摻雜與幾何尺寸對導電的影響	exercise	導電率與電流密度	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-15	Problem 3.15：銦摻雜對矽的遷移率與電阻率	exercise	遷移率與電阻率	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-16	Problem 3.16：高電場下矽棒的電流	exercise	漂移電流與速度飽和	PDF p.136 / 印刷 p.135	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-17	Problem 3.17：位置電位、能帶與載子運動	exercise	能帶圖與漂移	PDF p.137 / 印刷 p.136	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-18	Problem 3.18：電位剖面與電子運動	exercise	能帶與載子動力學	PDF p.137 / 印刷 p.136	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-19	Problem 3.19：能帶圖與能量色散的有效質量	exercise	有效質量	PDF p.137 / 印刷 p.136	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-20	Problem 3.20：霍爾效應判定摻雜型態與濃度	exercise	霍爾效應	PDF p.137 / 印刷 p.136	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-21	Problem 3.21：摻雜、遷移率與漂移／擴散電流	exercise	輸運現象	PDF pp.137–138 / 印刷 pp.136–137	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-22	Problem 3.22：矽中遷移率與溫度	exercise	散射與遷移率	PDF p.138 / 印刷 p.137	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-23	Problem 3.23：考慮凍結效應的遷移率計算	exercise	載子凍結	PDF p.138 / 印刷 p.137	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-24	Problem 3.24：費米分布機率	exercise	費米能階	PDF p.138 / 印刷 p.137	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-25	Problem 3.25：校正霍爾探針錯位	exercise	霍爾效應	PDF p.139 / 印刷 p.138	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-p3-26	Problem 3.26：霍爾量測的載子型態、濃度與遷移率	exercise	霍爾效應	PDF p.139 / 印刷 p.138	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq1	Self Quiz 1：能帶與材料分類	practice	能帶分類	PDF p.139 / 印刷 p.138	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq2	Self Quiz 2：能量谷與有效質量	practice	有效質量	PDF p.140 / 印刷 p.139	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq3	Self Quiz 3：矽與砷化鎵的能帶結構	practice	直接與間接能隙	PDF p.141 / 印刷 p.140	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq4	Self Quiz 4：力、波向量與電子遷移率	practice	能帶動力學	PDF p.141 / 印刷 p.140	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq5	Self Quiz 5：摻雜半導體的平衡能帶圖	practice	費米能階與摻雜	PDF pp.141–142 / 印刷 pp.140–141	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq6	Self Quiz 6：本徵濃度、摻雜與費米能階	practice	載子濃度	PDF p.142 / 印刷 p.141	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq7	Self Quiz 7：態密度與有效態密度	practice	態密度	PDF p.142 / 印刷 p.141	docs/solid-state/practice/0004-chapter3-problems.md
+3	ss-ch3-sq8	Self Quiz 8：高電場遷移率與量測	practice	遷移率量測	PDF p.142 / 印刷 p.141	docs/solid-state/practice/0004-chapter3-problems.md
+

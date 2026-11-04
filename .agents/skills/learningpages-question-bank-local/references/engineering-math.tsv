@@ -1,0 +1,108 @@
+chapter	id	title	type	topic	source	repo_path
+1	math-ch1-prob-1	1.1 範例 1 (初值問題 (IVP))	example	初值問題 (IVP)	1.1 · 1.1 範例 1	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-2	1.1 範例 2 (初值問題 (IVP))	example	初值問題 (IVP)	1.1 · 1.1 範例 2	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-3	1.2 題 1 (Separable)	practice	Separable	1.2 · 1.2 題 1	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-4	1.2 題 2 (Separable)	practice	Separable	1.2 · 1.2 題 2	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-5	1.2 題 3 (Separable)	practice	Separable	1.2 · 1.2 題 3	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-6	1.2 題 4 (Separable)	practice	Separable	1.2 · 1.2 題 4	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-7	1.2 題 5 (Separable 判別)	practice	Separable 判別	1.2 · 1.2 題 5	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-8	1.2 題 6 (Separable)	practice	Separable	1.2 · 1.2 題 6	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-9	1.2 題 7 (Separable)	practice	Separable	1.2 · 1.2 題 7	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-10	1.2 題 8 (Separable 判別)	practice	Separable 判別	1.2 · 1.2 題 8	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-11	1.2 題 9 (Separable / 三角和差)	practice	Separable / 三角和差	1.2 · 1.2 題 9	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-12	1.2 題 10 (Separable + IVP)	practice	Separable + IVP	1.2 · 1.2 題 10	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-13	1.2 題 11 (Separable + IVP)	practice	Separable + IVP	1.2 · 1.2 題 11	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-14	1.2 題 12 (Separable + IVP)	practice	Separable + IVP	1.2 · 1.2 題 12	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-15	1.2 題 13 (Separable + IVP)	practice	Separable + IVP	1.2 · 1.2 題 13	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-16	1.2 題 14 (Separable + IVP)	practice	Separable + IVP	1.2 · 1.2 題 14	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-17	1.3 題 1 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 1	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-18	1.3 題 2 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 2	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-19	1.3 題 3 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 3	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-20	1.3 題 4 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 4	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-21	1.3 題 5 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 5	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-22	1.3 題 6 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 6	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-23	1.3 題 7 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 7	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-24	1.3 題 8 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 8	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-25	1.3 題 9 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 9	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-26	1.3 題 10 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 10	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-27	1.3 題 11 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 11	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-28	1.3 題 12 (Linear ODE)	practice	Linear ODE	1.3 · 1.3 題 12	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-29	1.3 題 13 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 13	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-30	1.3 題 14 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 14	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-31	1.3 題 15 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 15	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-32	1.3 題 16 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 16	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-33	1.3 題 17 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 17	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-34	1.3 題 18 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 18	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-35	1.3 題 19 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 19	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-36	1.3 題 20 (Linear + IVP)	practice	Linear + IVP	1.3 · 1.3 題 20	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-37	1.4 題 1 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 1	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-38	1.4 題 2 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 2	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-39	1.4 題 3 (正合檢驗)	practice	正合檢驗	1.4 · 1.4 題 3	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-40	1.4 題 4 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 4	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-41	1.4 題 5 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 5	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-42	1.4 題 6 (正合檢驗)	practice	正合檢驗	1.4 · 1.4 題 6	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-43	1.4 題 7 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 7	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-44	1.4 題 8 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 8	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-45	1.4 題 9 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 9	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-46	1.4 題 10 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 10	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-47	1.4 題 11 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 11	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-48	1.4 題 12 (Exact ODE)	practice	Exact ODE	1.4 · 1.4 題 12	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-49	95 考題 1 (積分因子法)	exam	積分因子法	歷屆期中考古精選 · 95 考題 1	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-50	95 考題 2 (一階線性 IVP)	exam	一階線性 IVP	歷屆期中考古精選 · 95 考題 2	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-51	95 考題 3 (可分離變數)	exam	可分離變數	歷屆期中考古精選 · 95 考題 3	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-52	96 考題 1 (可分離變數 IVP)	exam	可分離變數 IVP	歷屆期中考古精選 · 96 考題 1	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-53	96 考題 2 (一階線性)	exam	一階線性	歷屆期中考古精選 · 96 考題 2	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-54	96 考題 3 (正合方程式)	exam	正合方程式	歷屆期中考古精選 · 96 考題 3	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-55	96 考題 4 (正合方程式)	exam	正合方程式	歷屆期中考古精選 · 96 考題 4	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-prob-56	96 考題 5 (可分離變數)	exam	可分離變數	歷屆期中考古精選 · 96 考題 5	docs/engineering-math/practice/0001-chapter1-examples.md
+1	math-ch1-missing-01	一階線性方程、積分曲線與初值問題	example	一階線性 ODE / 初值問題	正式教材第一章 P.7、P.8、P.9 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-02	積分曲線例：含 $1/x$ 的一階線性方程	example	一階線性 ODE	正式教材第一章 P.8 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-03	積分曲線例：$y'+xy=2$	example	一階線性 ODE	正式教材第一章 P.9 · Example / Figure 1.3	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-04	可分離方程的一般解與初值版本	example	可分離變數	正式教材第一章 P.9、P.10 · 1.2 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-05	一階線性方程：$y'+y=\sin x$	example	一階線性 ODE	正式教材第一章 P.10、P.11 · 1.3 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-06	一階線性初值問題：$y'=3x^2-y/x$	example	一階線性 ODE / 初值問題	正式教材第一章 P.11 · 1.3 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-07	正合方程：三角函數勢函數	example	正合微分方程	正式教材第一章 P.13 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-08	正合方程：$x e^{xy}=C$	example	正合微分方程	正式教材第一章 P.14 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-09	非正合方程判定	example	正合性判定	正式教材第一章 P.14 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-10	正合方程：$e^x\sin y+y-x^2=C$	example	正合微分方程	正式教材第一章 P.15 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-11	積分因子：$y^2-6xy+(3xy-6x^2)y'=0$	example	積分因子	正式教材第一章 P.17 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-12	積分因子：$(1-y)e^{x^2/2}=C$	example	積分因子	正式教材第一章 P.18 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-13	積分因子兩種判別：$y(1+x)dx+x(1+y)dy=0$	example	積分因子	正式教材第一章 P.19、P.21 · 1.5 Example（case 3 / case 4）	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-14	積分因子：$x^2-y+\ln|y|=C$	example	積分因子	正式教材第一章 P.22、P.23 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-15	可分離方程：$y-3-xy'=0$	example	可分離變數	正式教材第一章 P.23、P.24 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-16	齊次型一階方程：$xy'=y^2/x+y$	example	齊次型一階 ODE	正式教材第一章 P.24、P.25 · Homogeneous D.E. Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-17	Bernoulli 方程：$y'+y/x=3x^2y^3$	example	Bernoulli 方程	正式教材第一章 P.25 · Bernoulli Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-18	Riccati 方程：已知特解 $y_s=1$	example	Riccati 方程	正式教材第一章 P.25、P.26 · Riccati Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-19	RL 電路：電流建立響應	example	一階線性 ODE / 電路應用	正式教材第一章 P.27 · Application / Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-20	RC 電路：電荷與電流響應	example	一階線性 ODE / 電路應用	正式教材第一章 P.27、P.28 · Application / Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-prob-1	二階常係數齊次 ODE（相異實根）	practice	常係數齊次 ODE	題庫 2.4 (1)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-2	二階常係數齊次 ODE（實數重根）	practice	常係數齊次 ODE	題庫 2.4 (3)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-3	二階常係數齊次 ODE（共軛複數根）	practice	常係數齊次 ODE	題庫 2.4 (5)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-4	二階常係數齊次 ODE（根號共軛複數根）	practice	常係數齊次 ODE	題庫 2.4 (7)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-5	二階常係數齊次 ODE（重根情況）	practice	常係數齊次 ODE	題庫 2.4 (9)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-6	非齊次 ODE 待定係數法（多項式非齊次項）	practice	待定係數法	題庫 2.6 (7)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-7	非齊次 ODE 待定係數法（指數非齊次項）	practice	待定係數法	題庫 2.6 (8)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-8	非齊次 ODE 待定係數法（三角函數非齊次項）	practice	待定係數法	題庫 2.6 (12)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-9	非齊次 ODE 待定係數法（含零特徵根升冪與指數混合項）	practice	待定係數法	題庫 2.6 (14)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-10	非齊次 ODE 待定係數法（多項式與指數乘積型）	practice	待定係數法	題庫 2.6 (18)	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-11	二階常係數共振現象（特解共振乘 $x$）	example	待定係數共振型	Slide P7-P8 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-12	簡諧振動與外力共振（微分運算子極限推導）	example	運算子共振型	Slide P9-P10 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-13	參數變異法 (Variation of Parameters)	example	參數變異法	Slide P11-P12 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-14	柯西－尤拉方程式 (Euler-Cauchy Equation)	example	柯西－尤拉方程式	Slide P12-P13 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-15	降階法求第二個線性獨立解 (Reduction of Order)	example	降階法	Slide P14-P15 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-missing-01	Wronskian 判別與二階齊次方程通解	example	Wronskian	正式教材第二章 P.29 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-02	二階齊次方程：兩相異實根	example	二階常係數齊次微分方程	正式教材第二章 P.31 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-03	二階齊次方程：共軛複根	example	二階常係數齊次微分方程	正式教材第二章 P.31 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-04	二階齊次方程：重根	example	二階常係數齊次微分方程	正式教材第二章 P.31 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-05	三階齊次方程：三個相異實根	example	高階常係數齊次微分方程	正式教材第二章 P.32 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-06	三階齊次方程：三重根	example	高階常係數齊次微分方程	正式教材第二章 P.32 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-07	四階齊次方程：實根含重根	example	高階常係數齊次微分方程	正式教材第二章 P.32 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-08	四階齊次方程：複根含重根	example	高階常係數齊次微分方程	正式教材第二章 P.33 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-09	未定係數法：多項式外力	example	非齊次常係數微分方程	正式教材第二章 P.34 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-10	未定係數法：指數外力	example	非齊次常係數微分方程	正式教材第二章 P.34–P.35 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-11	未定係數法：正弦外力	example	非齊次常係數微分方程	正式教材第二章 P.35、P.37–P.39 · Example（同題重現）	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-12	運算子法：指數乘多項式外力	example	運算子法	正式教材第二章 P.37 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-13	Euler–Cauchy 方程：複根	example	Euler–Cauchy 方程	正式教材第二章 P.41 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-14	Euler–Cauchy 初值問題	example	Euler–Cauchy 方程	正式教材第二章 P.41 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+2	math-ch2-missing-15	降階法：已知一個解求第二個解	example	降階法	正式教材第二章 P.42 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+

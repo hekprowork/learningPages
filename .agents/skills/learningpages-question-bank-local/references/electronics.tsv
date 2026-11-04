@@ -1,0 +1,323 @@
+chapter	id	title	type	topic	source	repo_path
+1	elec-ch1-ex-1-1	訊號源等效電路與外接負載之分壓/分流效應	example	訊號源模型	Example 1.1 · Textbook P36-P37	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-1	訊號源開路電壓、短路電流與等效轉換條件	exercise	訊號源模型	Exercise 1.1 · Textbook P37-P38	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-2	實測開路電壓與短路電流求解訊號源內阻	exercise	訊號源模型	Exercise 1.2 · Textbook P38	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-ex-1-2	音訊放大器之增益、功率平衡與直流轉換效率計算	example	放大器功率與效率	Example 1.2 · Textbook P49-P50	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-10	放大器電壓增益、電流增益與功率增益之分貝換算	exercise	放大器功率與效率	Exercise 1.10 · Textbook P52	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-11	單電源供電放大器輸出弦波功率與效率計算	exercise	放大器功率與效率	Exercise 1.11 · Textbook P52	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-ex-1-3	三級級聯放大器分析與級間負載效應	example	級聯放大器分析	Example 1.3 · Textbook P55-P57	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-15	級聯放大器若移除緩衝級之增益劇烈劣化分析	exercise	級聯放大器分析	Exercise 1.15 · Textbook P57	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-16	級聯放大器在具體輸入訊號下之各級節點電壓分佈	exercise	級聯放大器分析	Exercise 1.16 · Textbook P57	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-ex-1-4	雙極性接面電晶體 (BJT) 小訊號模型與共射極電壓增益	example	電晶體小訊號模型	Example 1.4 · Textbook P60-P61	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-18	電流放大器模型之整體電流增益與負載效應推導	exercise	四大放大器模型	Exercise 1.18 · Textbook P61	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-19	轉導放大器模型之整體電壓增益推導	exercise	四大放大器模型	Exercise 1.19 · Textbook P61	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-ex-1-5	具輸入電容之放大器頻率響應、3-dB 截止頻率與暫態弦波輸出	example	STC 頻率響應分析	Example 1.5 · Textbook P68-P71	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-prac-1-22	單時間常數 (STC) 低通放大器之跨頻率增益分貝計算	exercise	STC 頻率響應分析	Exercise 1.22 · Textbook P73	docs/electronics/practice-source/0001-chapter1-examples.md
+1	elec-ch1-missing-ex-1-3	戴維寧訊號源接不同負載時的輸出電壓	exercise	訊號源模型	Exercise 1.3 · 教材 PDF p.39（印刷 p.9）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-ex-1-4	諾頓訊號源接不同負載時的輸出電流	exercise	訊號源模型	Exercise 1.4 · 教材 PDF p.39（印刷 p.9）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-ex-1-5	週期、頻率與角頻率換算	exercise	頻率頻譜	Exercise 1.5 · 教材 PDF p.42（印刷 p.12）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-ex-1-7	UHF 電視頻道數量	exercise	頻率頻譜	Exercise 1.7 · 教材 PDF p.42（印刷 p.12）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-ex-1-9	4-bit ADC 量化與位元權重	exercise	類比與數位訊號	Exercise 1.9 · 教材 PDF p.45（印刷 p.15）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-ex-1-12	緩衝放大器改善高源阻抗負載驅動	exercise	電壓放大器模型	Exercise 1.12 · 教材 PDF p.55（印刷 p.25）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-ex-1-13	由負載效應反推放大器輸出電阻	exercise	電壓放大器模型	Exercise 1.13 · 教材 PDF p.55（印刷 p.25）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-ex-1-14	電壓放大器負載功率增益	exercise	電壓放大器模型	Exercise 1.14 · 教材 PDF p.55（印刷 p.25）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-problem-1-1	歐姆定律：由兩個電路量求第三量	practice	電路基礎	Chapter 1 Problem 1.1 · 教材 PDF p.76（印刷 p.46）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-problem-1-2	電阻功率與安全額定值	practice	電路基礎	Chapter 1 Problem 1.2 · 教材 PDF p.76（印刷 p.46）	docs/electronics/practice-source/0003-textbook-missing.md
+1	elec-ch1-missing-problem-1-3	歐姆定律與功率定律聯立求解	practice	電路基礎	Chapter 1 Problem 1.3 · 教材 PDF p.76（印刷 p.46）	docs/electronics/practice-source/0003-textbook-missing.md
+1	electronics-ch1-problem-1-4	Problem 1.4	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 76 · 印刷 p. 46	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-5	Problem 1.5	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 76 · 印刷 p. 46	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-6	Problem 1.6	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 76 · 印刷 p. 46	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-7	Problem 1.7	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 76 · 印刷 p. 46	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-8	Problem 1.8	exercise	Chapter 1 Problems · Design	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-9	Problem 1.9	exercise	Chapter 1 Problems · Design	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-10	Problem 1.10	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-11	Problem 1.11	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-12	Problem 1.12	exercise	Chapter 1 Problems · Design	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-13	Problem 1.13	exercise	Chapter 1 Problems · Design	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-14	Problem 1.14	exercise	Chapter 1 Problems · Design	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-15	Problem 1.15	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-16	Problem 1.16	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 77 · 印刷 p. 47	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-17	Problem 1.17	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 78 · 印刷 p. 48	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-18	Problem 1.18	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 78 · 印刷 p. 48	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-19	Problem 1.19	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 78 · 印刷 p. 48	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	electronics-ch1-problem-1-20	Problem 1.20	exercise	Chapter 1 Problems	Sedra & Smith 8e · PDF p. 78 · 印刷 p. 48	docs/electronics/practice-source/0004-chapter1-problems-1-4-1-20.md
+1	elec-ch1-ex-1-6	週期與頻率換算	exercise	頻率與週期	Exercise 1.6 · 教材 PDF p.42（印刷 p.12）	docs/electronics/practice-source/0005-chapter1-exercises-missing.md
+1	elec-ch1-ex-1-8	對稱方波的諧波功率與能量分配	exercise	傅立葉級數與功率	Exercise 1.8 · 教材 PDF p.42（印刷 p.12）	docs/electronics/practice-source/0005-chapter1-exercises-missing.md
+1	elec-ch1-ex-1-17	三級級聯放大器的等效電壓放大器模型	exercise	級聯放大器	Exercise 1.17 · 教材 PDF p.58（印刷 p.28）	docs/electronics/practice-source/0005-chapter1-exercises-missing.md
+1	elec-ch1-ex-1-20	轉阻放大器的整體電壓增益	exercise	四種放大器模型	Exercise 1.20 · 教材 PDF p.63（印刷 p.33）	docs/electronics/practice-source/0005-chapter1-exercises-missing.md
+1	elec-ch1-ex-1-21	BJT 共射極模型的輸入電阻	exercise	BJT 小訊號模型	Exercise 1.21 · 教材 PDF p.63（印刷 p.33）	docs/electronics/practice-source/0005-chapter1-exercises-missing.md
+1	elec-ch1-ex-d1-23	轉導放大器驅動超音波換能器的頻寬與增益設計	exercise	STC 低通頻率響應	Exercise D1.23 · 教材 PDF p.74（印刷 p.44）	docs/electronics/practice-source/0005-chapter1-exercises-missing.md
+1	elec-ch1-ex-d1-24	級間耦合電容的高通 3-dB 頻率設計	exercise	STC 高通頻率響應	Exercise D1.24 · 教材 PDF p.74（印刷 p.44）	docs/electronics/practice-source/0005-chapter1-exercises-missing.md
+1	electronics-ch1-problem-1-43	Problem 1.43	practice	數位訊號與取樣	課本.pdf PDF p.81 / 印刷 p.51	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-44	Problem 1.44	practice	數位訊號與資料容量	課本.pdf PDF p.81 / 印刷 p.51	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-45	Problem 1.45	practice	放大器增益	課本.pdf PDF p.81 / 印刷 p.51	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-46	Problem 1.46	practice	放大器功率與效率	課本.pdf PDF p.81 / 印刷 p.51	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-47	Problem 1.47	practice	放大器飽和與線性範圍	課本.pdf PDF p.81 / 印刷 p.51	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-48	Problem 1.48	practice	電壓放大器電路模型	課本.pdf PDF p.81 / 印刷 p.51	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-49	Problem 1.49	practice	負載效應與輸出電流限制	課本.pdf PDF p.81 / 印刷 p.51	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-50	Problem 1.50	practice	電壓模型與電流模型	課本.pdf PDF p.81–82 / 印刷 p.51–52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-51	Problem 1.51	practice	緩衝放大器	課本.pdf PDF p.82 / 印刷 p.52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-52	Problem 1.52	practice	串接放大器	課本.pdf PDF p.82 / 印刷 p.52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-53	Problem 1.53	practice	串接放大器與級間負載效應	課本.pdf PDF p.82 / 印刷 p.52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-54	Problem 1.54	practice	放大器設計	課本.pdf PDF p.82 / 印刷 p.52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-55	Problem 1.55	practice	多級放大器設計	課本.pdf PDF p.82 / 印刷 p.52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-56	Problem 1.56	practice	電壓放大器規格設計	課本.pdf PDF p.82 / 印刷 p.52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-57	Problem 1.57	practice	電壓放大器分析	課本.pdf PDF p.82 / 印刷 p.52	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-58	Problem 1.58	practice	電流放大器	課本.pdf PDF p.83 / 印刷 p.53	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-59	Problem 1.59	practice	轉阻放大器	課本.pdf PDF p.83 / 印刷 p.53	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-60	Problem 1.60	practice	轉導放大器	課本.pdf PDF p.83 / 印刷 p.53	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-61	Problem 1.61	practice	加權求和放大器設計	課本.pdf PDF p.83 / 印刷 p.53	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-62	Problem 1.62	practice	轉導放大器回授	課本.pdf PDF p.83 / 印刷 p.53	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-63	Problem 1.63	practice	電壓感測放大器設計	課本.pdf PDF p.83 / 印刷 p.53	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-64	Problem 1.64	practice	電流感測放大器設計	課本.pdf PDF p.83 / 印刷 p.53	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-problem-1-65	Problem 1.65	practice	BJT 小訊號模型	課本.pdf PDF p.83–84 / 印刷 p.53–54	docs/electronics/practice-source/0014-chapter1-problems-1-43-1-65.md
+1	electronics-ch1-p1-66	題目 1.66	practice	放大器增益	Sedra & Smith Microelectronic Circuits 8e；PDF p.84 / 印刷 p.54	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-67	題目 1.67	practice	差動放大器	Sedra & Smith Microelectronic Circuits 8e；PDF p.84 / 印刷 p.54	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-68	題目 1.68	practice	二埠網路與 g 參數	Sedra & Smith Microelectronic Circuits 8e；PDF p.84 / 印刷 p.54	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-69	題目 1.69	practice	單時間常數網路	Sedra & Smith Microelectronic Circuits 8e；PDF p.84–85 / 印刷 p.54–55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-70	題目 1.70	practice	低通 STC 網路	Sedra & Smith Microelectronic Circuits 8e；PDF p.85 / 印刷 p.55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-71	題目 1.71	practice	高通與低通 STC 網路	Sedra & Smith Microelectronic Circuits 8e；PDF p.85 / 印刷 p.55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-72	題目 1.72	practice	耦合電容與高通 STC	Sedra & Smith Microelectronic Circuits 8e；PDF p.85 / 印刷 p.55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-73	題目 1.73	practice	頻率響應量測	Sedra & Smith Microelectronic Circuits 8e；PDF p.85 / 印刷 p.55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-74	題目 1.74	practice	頻率響應量測	Sedra & Smith Microelectronic Circuits 8e；PDF p.85 / 印刷 p.55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-75	題目 1.75	practice	緩衝器與級聯頻率響應	Sedra & Smith Microelectronic Circuits 8e；PDF p.85 / 印刷 p.55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-76	題目 1.76	practice	高頻跨導放大器	Sedra & Smith Microelectronic Circuits 8e；PDF p.85 / 印刷 p.55	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-77	題目 1.77	practice	多級放大器頻寬設計	Sedra & Smith Microelectronic Circuits 8e；PDF p.85–86 / 印刷 p.55–56	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-78	題目 1.78	practice	耦合電容設計	Sedra & Smith Microelectronic Circuits 8e；PDF p.86 / 印刷 p.56	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-79	題目 1.79	practice	放大器頻率響應	Sedra & Smith Microelectronic Circuits 8e；PDF p.86 / 印刷 p.56	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-80	題目 1.80	practice	兩級頻率響應	Sedra & Smith Microelectronic Circuits 8e；PDF p.86 / 印刷 p.56	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-81	題目 1.81	practice	跨導放大器設計	Sedra & Smith Microelectronic Circuits 8e；PDF p.86 / 印刷 p.56	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-82	題目 1.82	practice	補償衰減器	Sedra & Smith Microelectronic Circuits 8e；PDF p.87 / 印刷 p.57	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-p1-83	題目 1.83	practice	放大器頻寬與 STC 時間常數	Sedra & Smith Microelectronic Circuits 8e；PDF p.87 / 印刷 p.57	docs/electronics/practice-source/0015-chapter1-problems-1-66-1-83.md
+1	electronics-ch1-problem-1-21	Problem 1.21	practice	Chapter 1 Problems · 交流電路與週期訊號	Sedra & Smith 8e · PDF p. 78–79 · 印刷頁 p. 48–49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-22	Problem 1.22	practice	Chapter 1 Problems · 複數阻抗	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-23	Problem 1.23	practice	Chapter 1 Problems · 網路複數阻抗	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-24	Problem 1.24	practice	Chapter 1 Problems · LC 並聯諧振	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-25	Problem 1.25	practice	Chapter 1 Problems · 訊號源等效表示	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-26	Problem 1.26	practice	Chapter 1 Problems · 訊號源等效參數	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-27	Problem 1.27	practice	Chapter 1 Problems · 訊號源與負載	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-28	Problem 1.28	practice	Chapter 1 Problems · 感測器源電阻	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-29	Problem 1.29	practice	Chapter 1 Problems · 戴維寧與諾頓訊號源	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49；Figure 1.1 取自 PDF p. 36 · 印刷頁 p. 6	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-30	Problem 1.30	practice	Chapter 1 Problems · 戴維寧與諾頓等效	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-31	Problem 1.31	practice	Chapter 1 Problems · 訊號傳輸損失	Sedra & Smith 8e · PDF p. 79 · 印刷頁 p. 49；Figure 1.1 取自 PDF p. 36 · 印刷頁 p. 6	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-32	Problem 1.32	practice	Chapter 1 Problems · 頻率、角頻率與週期	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-33	Problem 1.33	practice	Chapter 1 Problems · 正弦波峰值與均方根值	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-34	Problem 1.34	practice	Chapter 1 Problems · 正弦波訊號表示式	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-35	Problem 1.35	practice	Chapter 1 Problems · 對稱方波	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-36	Problem 1.36	practice	Chapter 1 Problems · 方波頻譜	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-37	Problem 1.37	practice	Chapter 1 Problems · 方波傅立葉分量	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-38	Problem 1.38	practice	Chapter 1 Problems · 方波與正弦波功率	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-39	Problem 1.39	practice	Chapter 1 Problems · 類比與數位訊號	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-40	Problem 1.40	practice	Chapter 1 Problems · 有號幅度表示法與 ADC	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-41	Problem 1.41	practice	Chapter 1 Problems · DAC 解析度與量化誤差	Sedra & Smith 8e · PDF p. 80 · 印刷頁 p. 50	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+1	electronics-ch1-problem-1-42	Problem 1.42	practice	Chapter 1 Problems · 二進位加權 DAC	Sedra & Smith 8e · PDF p. 80–81 · 印刷頁 p. 50–51	docs/electronics/practice-source/0016-chapter1-problems-1-21-1-42.md
+2	elec-ch2-prac-2-1	運算放大器端點引腳數與多組封裝 (Single/Quad Op-Amp Pinout)	exercise	理想運算放大器基礎	Exercise 2.1 · Textbook P60	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-1	有限開路增益對反相放大器增益誤差與虛擬接地之影響	example	反相放大器組態	Example 2.1 · Textbook P68	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-2	高輸入阻抗與大增益反相放大器之 T 型回授網路設計	example	T 型回授網路	Example 2.2 · Textbook P69-P70	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-9	多訊號源重疊定理 (Superposition) 於運算放大器電路之分析	exercise	重疊定理與加法電路	Exercise 2.9 · Textbook P77	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-15	差動放大器之差模增益、差模輸入阻抗與 CMRR 計算	exercise	差動放大器	Exercise 2.15 · Textbook P83	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-3	三運算放大器儀表放大器 (Instrumentation Amplifier) 之連續可調增益設計	example	儀表放大器	Example 2.3 · Textbook P85-P86	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-4	一階主動低通濾波器 (STC 積分器) 之轉移函數、波德圖與參數設計	example	主動濾波器與積分器	Example 2.4 · Textbook P89-P90	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-5	光電探測器轉阻積分放大電路設計與積分頻率計算	example	光電信號放大	Example 2.5 · Textbook P92	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-6	米勒積分器之脈衝暫態響應與並聯回授電阻 RF 之穩態與飽和分析	example	米勒積分器暫態響應	Example 2.6 · Textbook P93-P94	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-18	對稱方波輸入米勒積分器之三角波輸出時間常數設計	exercise	米勒積分器應用	Exercise 2.18 · Textbook P97	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-21	輸入補償電壓 (Input Offset Voltage) 對電壓轉移特性曲線之平移效應	exercise	直流非理想性 (DC Imperfections)	Exercise 2.21 · Textbook P98	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-22	輸入補償電壓 Vos 在大增益反相放大器之輸出直流偏移與最大動態範圍	exercise	直流非理想性 (DC Imperfections)	Exercise 2.22 · Textbook P100	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-24	輸入偏壓電流 (IB) 與輸入補償電流 (IOS) 之輸出直流偏移與補償電阻設計	exercise	直流非理想性 (DC Imperfections)	Exercise 2.24 · Textbook P104	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-25	米勒積分器受輸入補償電壓 Vos 影響之輸出電壓線性漂移與飽和時間	exercise	積分器直流漂移與飽和	Exercise 2.25 · Textbook P105	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-7	有限增益頻寬積 (GBW) 對同相與反相閉迴路放大器 3-dB 頻寬之影響與取捨	example	頻率響應與 GBW	Example 2.7 · Textbook P109-P110	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-27	內部補償運算放大器之低頻極點、單位增益頻寬與任意頻率增益估算	exercise	頻率響應與 GBW	Exercise 2.27 · Textbook P111	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-8	大訊號輸出電壓飽和與輸出電流極限之電阻負載分析	example	大訊號非線性失真	Example 2.8 · Textbook P112-P113	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-29	單位增益隨耦器之壓擺率 (Slew Rate) 與小訊號指數上升之臨界階躍電壓	exercise	壓擺率 (Slew Rate) 與全功率頻寬	Exercise 2.29 · Textbook P115	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-ex-2-9	弦波訊號下之壓擺率限制與全功率頻寬 (Full-Power Bandwidth fM) 公式推導	example	壓擺率 (Slew Rate) 與全功率頻寬	Example 2.9 · Textbook P116	docs/electronics/practice-source/0002-chapter2-examples.md
+2	elec-ch2-prac-2-30	全功率頻寬 fM 計算與高頻超限下之最大無失真輸出電壓	exercise	壓擺率 (Slew Rate) 與全功率頻寬	Exercise 2.30 · Textbook P116	docs/electronics/practice-source/0002-chapter2-examples.md
+2	electronics-ch2-ex-d2-4	Exercise D2.4	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.102 / printed p.72	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-2-5	Exercise 2.5	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.102 / printed p.72	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-2-6	Exercise 2.6	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.102 / printed p.72	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-d2-7	Exercise D2.7	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.104 / printed p.74	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-d2-8	Exercise D2.8	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.104 / printed p.74	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-2-10	Exercise 2.10	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.107 / printed p.77	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-d2-11	Exercise D2.11	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.107 / printed p.77	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-2-12	Exercise 2.12	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.108 / printed p.78	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-2-13	Exercise 2.13	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.108 / printed p.78	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-2-14	Exercise 2.14	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.108 / printed p.78	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-d2-16	Exercise D2.16	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.113 / printed p.83	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-d2-19	Exercise D2.19	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.127 / printed p.97	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-ex-d2-20	Exercise D2.20	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.127 / printed p.97	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-1	Problem 2.1	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.148 / printed p.118	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-2	Problem 2.2	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.148 / printed p.118	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-3	Problem 2.3	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.148 / printed p.118	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-4	Problem 2.4	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.148 / printed p.118	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-5	Problem 2.5	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.148 / printed p.118	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-6	Problem 2.6	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.148 / printed p.118	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-7	Problem 2.7	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.148 / printed p.118	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-8	Problem 2.8	practice	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.149 / printed p.119	docs/electronics/practice-source/0006-chapter2-missing-partial.md
+2	electronics-ch2-problem-2-61	Problem 2.61	practice	Chapter 2 Problems · 有限開迴路增益	Sedra & Smith 8e · PDF p. 156 · 印刷 p. 126	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-62	Problem 2.62	practice	Chapter 2 Problems · 電位計與電壓追隨器	Sedra & Smith 8e · PDF p. 156 · 印刷 p. 126	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-63	Problem 2.63	practice	Chapter 2 Problems · 差動放大器	Sedra & Smith 8e · PDF p. 156 · 印刷 p. 126	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-64	Problem 2.64	practice	Chapter 2 Problems · 差動放大器設計	Sedra & Smith 8e · PDF p. 156 · 印刷 p. 126	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-65	Problem 2.65	practice	Chapter 2 Problems · 差動放大器	Sedra & Smith 8e · PDF p. 156–157 · 印刷 p. 126–127	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-66	Problem 2.66	practice	Chapter 2 Problems · 共模輸入電阻	Sedra & Smith 8e · PDF p. 157 · 印刷 p. 127	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-67	Problem 2.67	practice	Chapter 2 Problems · CMRR	Sedra & Smith 8e · PDF p. 157 · 印刷 p. 127	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-68	Problem 2.68	practice	Chapter 2 Problems · 差動放大器	Sedra & Smith 8e · PDF p. 157 · 印刷 p. 127	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-69	Problem 2.69	practice	Chapter 2 Problems · 高增益差動放大器設計	Sedra & Smith 8e · PDF p. 157 · 印刷 p. 127	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-70	Problem 2.70	practice	Chapter 2 Problems · 可變增益差動放大器	Sedra & Smith 8e · PDF p. 157–158 · 印刷 p. 127–128	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-71	Problem 2.71	practice	Chapter 2 Problems · 電位計可調差動放大器	Sedra & Smith 8e · PDF p. 158 · 印刷 p. 128	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-72	Problem 2.72	practice	Chapter 2 Problems · 差動放大器模組	Sedra & Smith 8e · PDF p. 158 · 印刷 p. 128	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-73	Problem 2.73	practice	Chapter 2 Problems · 儀表放大器	Sedra & Smith 8e · PDF p. 158 · 印刷 p. 128	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-74	Problem 2.74	practice	Chapter 2 Problems · 儀表放大器	Sedra & Smith 8e · PDF p. 159 · 印刷 p. 129	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-75	Problem 2.75	practice	Chapter 2 Problems · 儀表放大器與飽和	Sedra & Smith 8e · PDF p. 159 · 印刷 p. 129	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-76	Problem 2.76	practice	Chapter 2 Problems · 儀表放大器的共模抑制	Sedra & Smith 8e · PDF p. 159 · 印刷 p. 129	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-77	Problem 2.77	practice	Chapter 2 Problems · 儀表放大器 CMRR	Sedra & Smith 8e · PDF p. 159 · 印刷 p. 129	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-78	Problem 2.78	practice	Chapter 2 Problems · 儀表放大器設計	Sedra & Smith 8e · PDF p. 159 · 印刷 p. 129	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-79	Problem 2.79	practice	Chapter 2 Problems · 浮接負載	Sedra & Smith 8e · PDF p. 159 · 印刷 p. 129	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-80	Problem 2.80	practice	Chapter 2 Problems · 電壓轉電流轉換器	Sedra & Smith 8e · PDF p. 159–160 · 印刷 p. 129–130	docs/electronics/practice-source/0008-chapter2-problems-2-61-2-80.md
+2	electronics-ch2-problem-2-09	Problem 2.9	practice	The inverting configuration	課本 PDF p. 149 / 印刷頁 p. 119	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-10	Problem 2.10	practice	The inverting configuration	課本 PDF p. 149 / 印刷頁 p. 119	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-11	Problem 2.11	practice	The inverting configuration	課本 PDF p. 149 / 印刷頁 p. 119	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-12	Problem 2.12	practice	The inverting configuration	課本 PDF p. 149 / 印刷頁 p. 119	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-13	Problem 2.13	practice	The inverting configuration	課本 PDF p. 149 / 印刷頁 p. 119	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-14	Problem 2.14	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-15	Problem 2.15	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-16	Problem 2.16	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-17	Problem 2.17	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-18	Problem 2.18	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-19	Problem 2.19	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-20	Problem 2.20	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-21	Problem 2.21	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-22	Problem 2.22	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-23	Problem 2.23	practice	The inverting configuration	課本 PDF p. 150 / 印刷頁 p. 120	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-24	Problem 2.24	practice	The inverting configuration	課本 PDF pp. 150-151 / 印刷頁 pp. 120-121	docs/electronics/practice-source/0009-chapter2-problems-2-9-2-24.md
+2	electronics-ch2-problem-2-25	Problem 2.25	practice	The inverting configuration	課本 PDF p. 151 / 印刷頁 p. 121	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-26	Problem 2.26	practice	The inverting configuration	課本 PDF p. 151 / 印刷頁 p. 121	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-27	Problem 2.27	practice	The inverting configuration	課本 PDF p. 151 / 印刷頁 p. 121	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-28	Problem 2.28	practice	The inverting configuration	課本 PDF p. 151 / 印刷頁 p. 121	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-29	Problem 2.29	practice	The inverting configuration	課本 PDF p. 151 / 印刷頁 p. 121	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-30	Problem 2.30	practice	The inverting configuration	課本 PDF p. 151 / 印刷頁 p. 121	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-31	Problem 2.31	practice	The inverting configuration	課本 PDF p. 151 / 印刷頁 p. 121	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-32	Problem 2.32	practice	The inverting configuration	課本 PDF pp. 151-152 / 印刷頁 pp. 121-122	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-33	Problem 2.33	practice	The inverting configuration	課本 PDF p. 152 / 印刷頁 p. 122	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-34	Problem 2.34	practice	The inverting configuration	課本 PDF p. 152 / 印刷頁 p. 122	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-35	Problem 2.35	practice	The inverting configuration	課本 PDF p. 152 / 印刷頁 p. 122	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-36	Problem 2.36	practice	The inverting configuration	課本 PDF pp. 152-153 / 印刷頁 pp. 122-123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-37	Problem 2.37	practice	The inverting configuration	課本 PDF p. 153 / 印刷頁 p. 123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-38	Problem 2.38	practice	The weighted summer	課本 PDF p. 153 / 印刷頁 p. 123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-39	Problem 2.39	practice	The weighted summer	課本 PDF p. 153 / 印刷頁 p. 123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-40	Problem 2.40	practice	The weighted summer	課本 PDF p. 153 / 印刷頁 p. 123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-41	Problem 2.41	practice	The weighted summer	課本 PDF p. 153 / 印刷頁 p. 123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-42	Problem 2.42	practice	The weighted summer	課本 PDF p. 153 / 印刷頁 p. 123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-43	Problem 2.43	practice	The weighted summer	課本 PDF p. 153 / 印刷頁 p. 123	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-44	Problem 2.44	practice	The weighted summer	課本 PDF pp. 153-154 / 印刷頁 pp. 123-124	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-45	Problem 2.45	practice	The noninverting configuration	課本 PDF p. 154 / 印刷頁 p. 124	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-46	Problem 2.46	practice	The noninverting configuration	課本 PDF p. 154 / 印刷頁 p. 124	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-47	Problem 2.47	practice	The noninverting configuration	課本 PDF p. 154 / 印刷頁 p. 124	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-48	Problem 2.48	practice	The noninverting configuration	課本 PDF p. 154 / 印刷頁 p. 124	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-49	Problem 2.49	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-50	Problem 2.50	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-51	Problem 2.51	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-52	Problem 2.52	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-53	Problem 2.53	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-54	Problem 2.54	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-55	Problem 2.55	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-56	Problem 2.56	practice	The noninverting configuration	課本 PDF p. 155 / 印刷頁 p. 125	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-57	Problem 2.57	practice	Feedback amplifiers	課本 PDF pp. 155-156 / 印刷頁 pp. 125-126	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-58	Problem 2.58	practice	Feedback amplifiers	課本 PDF p. 156 / 印刷頁 p. 126	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-59	Problem 2.59	practice	Feedback amplifiers	課本 PDF p. 156 / 印刷頁 p. 126	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-60	Problem 2.60	practice	Feedback amplifiers	課本 PDF p. 156 / 印刷頁 p. 126	docs/electronics/practice-source/0010-chapter2-problems-2-25-2-60.md
+2	electronics-ch2-problem-2-81	Problem 2.81	practice	Chapter 2 Problems · 米勒積分器	Sedra & Smith 8e · PDF p. 159 · 印刷 p. 129	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-82	Problem 2.82	practice	Chapter 2 Problems · 米勒積分器設計	Sedra & Smith 8e · PDF p. 160 · 印刷 p. 130	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-83	Problem 2.83	practice	Chapter 2 Problems · 反相積分器	Sedra & Smith 8e · PDF p. 160 · 印刷 p. 130	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-84	Problem 2.84	practice	Chapter 2 Problems · 反相積分器	Sedra & Smith 8e · PDF p. 160 · 印刷 p. 130	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-85	Problem 2.85	practice	Chapter 2 Problems · 米勒積分器設計	Sedra & Smith 8e · PDF p. 160 · 印刷 p. 130	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-86	Problem 2.86	practice	Chapter 2 Problems · 米勒積分器	Sedra & Smith 8e · PDF p. 160 · 印刷 p. 130	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-87	Problem 2.87	practice	Chapter 2 Problems · 米勒積分器	Sedra & Smith 8e · PDF p. 161 · 印刷 p. 131	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-88	Problem 2.88	practice	Chapter 2 Problems · 一階低通主動濾波器	Sedra & Smith 8e · PDF p. 161 · 印刷 p. 131	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-89	Problem 2.89	practice	Chapter 2 Problems · 有限開迴路增益	Sedra & Smith 8e · PDF p. 161 · 印刷 p. 131	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-90	Problem 2.90	practice	Chapter 2 Problems · 微分器	Sedra & Smith 8e · PDF p. 161 · 印刷 p. 131	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-91	Problem 2.91	practice	Chapter 2 Problems · 微分器	Sedra & Smith 8e · PDF p. 161 · 印刷 p. 131	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-92	Problem 2.92	practice	Chapter 2 Problems · 一階高通主動濾波器	Sedra & Smith 8e · PDF p. 161 · 印刷 p. 131	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-93	Problem 2.93	practice	Chapter 2 Problems · 帶通型主動濾波器	Sedra & Smith 8e · PDF p. 161–162 · 印刷 p. 131–132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-94	Problem 2.94	practice	Chapter 2 Problems · 輸入偏移電壓	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-95	Problem 2.95	practice	Chapter 2 Problems · 輸入偏移電壓	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-96	Problem 2.96	practice	Chapter 2 Problems · 輸入偏移電壓與飽和	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-97	Problem 2.97	practice	Chapter 2 Problems · 輸入偏移電壓	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-98	Problem 2.98	practice	Chapter 2 Problems · 偏置電流與偏移電流	Sedra & Smith 8e · PDF p. 162–163 · 印刷 p. 132–133	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-99	Problem 2.99	practice	Chapter 2 Problems · 偏置電流補償	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-100	Problem 2.100	practice	Chapter 2 Problems · 交流耦合非反相放大器	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-101	Problem 2.101	practice	Chapter 2 Problems · 差動放大器偏移	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-102	Problem 2.102	practice	Chapter 2 Problems · 輸入偏移電壓	Sedra & Smith 8e · PDF p. 162 · 印刷 p. 132	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-103	Problem 2.103	practice	Chapter 2 Problems · 偏移電壓漂移	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-104	Problem 2.104	practice	Chapter 2 Problems · 偏置電流補償	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-105	Problem 2.105	practice	Chapter 2 Problems · 偏置電流補償	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-106	Problem 2.106	practice	Chapter 2 Problems · 米勒積分器偏移補償	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-107	Problem 2.107	practice	Chapter 2 Problems · 開迴路增益與頻寬	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0011-chapter2-problems-2-81-2-107.md
+2	electronics-ch2-problem-2-108	Problem 2.108	practice	Chapter 2 Problems · 開迴路增益與頻寬	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-109	Problem 2.109	practice	Chapter 2 Problems · 開迴路增益與頻寬	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-110	Problem 2.110	practice	Chapter 2 Problems · 開迴路增益與頻寬	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-111	Problem 2.111	practice	Chapter 2 Problems · 閉迴路頻率響應	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-112	Problem 2.112	practice	Chapter 2 Problems · 閉迴路頻率響應	Sedra & Smith 8e · PDF p. 163 · 印刷 p. 133	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-113	Problem 2.113	practice	Chapter 2 Problems · 閉迴路頻率響應	Sedra & Smith 8e · PDF p. 163–164 · 印刷 p. 133–134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-114	Problem 2.114	practice	Chapter 2 Problems · 閉迴路頻率響應	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-115	Problem 2.115	practice	Chapter 2 Problems · 閉迴路頻率響應	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-116	Problem 2.116	practice	Chapter 2 Problems · 閉迴路頻率響應設計	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-117	Problem 2.117	practice	Chapter 2 Problems · 級聯放大器頻寬	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-118	Problem 2.118	practice	Chapter 2 Problems · 級聯放大器頻寬	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-119	Problem 2.119	practice	Chapter 2 Problems · 閉迴路頻寬	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-120	Problem 2.120	practice	Chapter 2 Problems · 有限開迴路增益	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-121	Problem 2.121	practice	Chapter 2 Problems · 輸出飽和	Sedra & Smith 8e · PDF p. 164 · 印刷 p. 134	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-122	Problem 2.122	practice	Chapter 2 Problems · 輸出飽和與輸出電流限制	Sedra & Smith 8e · PDF p. 164–165 · 印刷 p. 134–135	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-123	Problem 2.123	practice	Chapter 2 Problems · 壓擺率	Sedra & Smith 8e · PDF p. 165 · 印刷 p. 135	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-124	Problem 2.124	practice	Chapter 2 Problems · 壓擺率	Sedra & Smith 8e · PDF p. 165 · 印刷 p. 135	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-125	Problem 2.125	practice	Chapter 2 Problems · 壓擺率與輸出電流限制	Sedra & Smith 8e · PDF p. 165 · 印刷 p. 135	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-126	Problem 2.126	practice	Chapter 2 Problems · 壓擺率	Sedra & Smith 8e · PDF p. 165 · 印刷 p. 135	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-problem-2-127	Problem 2.127	practice	Chapter 2 Problems · 運算放大器操作限制	Sedra & Smith 8e · PDF p. 165 · 印刷 p. 135	docs/electronics/practice-source/0012-chapter2-problems-2-108-2-127.md
+2	electronics-ch2-ex-2-23	Exercise 2.23	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.130 / printed p.100	docs/electronics/practice-source/0013-chapter2-exercises-2-23-2-28.md
+2	electronics-ch2-ex-2-28	Exercise 2.28	exercise	Chapter 2	Sedra & Smith, Microelectronic Circuits, 8e — PDF p.141 / printed p.111	docs/electronics/practice-source/0013-chapter2-exercises-2-23-2-28.md
+3	elec-ch3-exercise-3-1	本質載子濃度與溫度	exercise	本質半導體	Exercise 3.1 · Textbook P140	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-2	升溫後的 n 型矽載子濃度	exercise	摻雜半導體	Exercise 3.2 · Textbook P144	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-3	硼摻雜濃度反推	exercise	摻雜半導體	Exercise 3.3 · Textbook P144	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-4	漂移速度、電流密度與電阻	exercise	漂移電流	Exercise 3.4 · Textbook P147	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-5	線性濃度梯度造成的電子擴散	exercise	擴散電流	Exercise 3.5 · Textbook P149	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-6	Einstein 關係式	exercise	遷移率與擴散常數	Exercise 3.6 · Textbook P150	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-7	由空乏區寬度表示內建電位	exercise	pn 接面	Exercise 3.7 · Textbook P157	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-8	單邊 p+n 接面近似式	exercise	pn 接面	Exercise 3.8 · Textbook P157	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-9	少數載子濃度倍增的製程調整	exercise	pn 接面平衡濃度	Exercise 3.9 · Textbook P157	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-10	單邊接面的尺度電流近似	exercise	pn 接面電流	Exercise 3.10 · Textbook P164	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-11	降低 ND 對尺度電流的影響	exercise	pn 接面電流	Exercise 3.11 · Textbook P164	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-12	順向偏壓下的空乏區寬度	exercise	pn 接面偏壓	Exercise 3.12 · Textbook P164	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-13	反向偏壓下的空乏區與電荷	exercise	pn 接面偏壓	Exercise 3.13 · Textbook P164	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-14	零偏壓與反向偏壓接面電容	exercise	接面電容	Exercise 3.14 · Textbook P167	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-15	擴散電容公式推導	exercise	擴散電容	Exercise 3.15 · Textbook P169	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-exercise-3-16	少數載子壽命與擴散電容	exercise	擴散電容	Exercise 3.16 · Textbook P169	docs/electronics/practice-source/0017-chapter3-exercises.md
+3	elec-ch3-problem-3-1	溫度、本質載子濃度與游離比例	exercise	本質半導體	Problem 3.1 · Textbook P170	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-2	砷化鎵的本質載子濃度	exercise	本質半導體	Problem 3.2 · Textbook P170	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-3	矽晶圓中的自由電子總數	exercise	本質半導體	Problem 3.3 · Textbook P170	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-4	p 型矽的多數與少數載子	exercise	摻雜半導體	Problem 3.4 · Textbook P170	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-5	由少數電洞濃度反推 ND	exercise	摻雜半導體	Problem 3.5 · Textbook P170	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-6	硼摻雜矽的溫度效應	exercise	摻雜半導體	Problem 3.6 · Textbook P170	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-7	不同材料矽棒的端對端電阻	exercise	漂移電流	Problem 3.7 · Textbook P170–171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-8	電子與電洞漂移速度比較	exercise	漂移電流	Problem 3.8 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-9	由電流反求矽棒長度	exercise	漂移電流	Problem 3.9 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-10	由指定電流密度反求施體濃度	exercise	漂移電流	Problem 3.10 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-11	線性過量電洞分布的擴散電流	exercise	擴散電流	Problem 3.11 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-12	由 Einstein 關係補齊遷移率與擴散常數	exercise	遷移率與擴散常數	Problem 3.12 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-13	對稱摻雜 pn 接面的平衡量	exercise	pn 接面	Problem 3.13 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-14	非對稱摻雜 pn 接面的平衡量	exercise	pn 接面	Problem 3.14 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-15	空乏區儲存電荷估算	exercise	pn 接面	Problem 3.15 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-16	單邊接面的內建電位與電荷	exercise	pn 接面	Problem 3.16 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-17	摻雜十倍對內建電位的影響	exercise	pn 接面	Problem 3.17 · Textbook P171	docs/electronics/practice-source/0018-chapter3-problems-3-1-3-17.md
+3	elec-ch3-problem-3-18	單邊接面電荷密度分布	exercise	pn 接面	Problem 3.18 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-19	三角形電場分布的峰值	exercise	pn 接面電場	Problem 3.19 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-20	2 V 反向偏壓下的 W 與 QJ	exercise	pn 接面偏壓	Problem 3.20 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-21	反向偏壓空乏區的尺度律	exercise	pn 接面偏壓	Problem 3.21 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-22	順向接面的電洞與電子注入比	exercise	pn 接面電流	Problem 3.22 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-23	由接面參數計算 IS 與順向電流	exercise	pn 接面電流	Problem 3.23 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-24	升溫 10°C 對尺度電流的影響	exercise	溫度效應	Problem 3.24 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-25	p+n 單邊接面的順向電流	exercise	pn 接面電流	Problem 3.25 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-26	崩潰區功率與容許電流	exercise	反向崩潰	Problem 3.26 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-27	指定接面的零偏壓與反偏電容	exercise	接面電容	Problem 3.27 · Textbook P172	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-28	漸變接面的反向偏壓電容	exercise	接面電容	Problem 3.28 · Textbook P173	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-29	平行板觀點推導接面電容	exercise	接面電容	Problem 3.29 · Textbook P173	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-30	擴散電容與電流的比例	exercise	擴散電容	Problem 3.30 · Textbook P173	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+3	elec-ch3-problem-3-31	短基極二極體與擴散電容	exercise	擴散電容	Problem 3.31 · Textbook P173	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
+
