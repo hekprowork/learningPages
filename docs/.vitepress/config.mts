@@ -2,8 +2,10 @@ import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import type MarkdownIt from 'markdown-it'
 import { defineConfig } from 'vitepress'
+import { publishQuestionIndex } from '../../scripts/public-question-index.js'
 
 const projectRoot = resolve(process.cwd())
+publishQuestionIndex(projectRoot)
 const workbookIncludePattern = /<!--\s*workbook-include:\s*cards\s+([^>\s]+)\s*-->/g
 
 const readWorkbookCards = (relativePath: string): string => {
@@ -50,6 +52,7 @@ export default defineConfig({
     nav: [
       { text: '首頁', link: '/' },
       { text: '指定題目練習', link: '/exam' },
+      { text: '題目索引 TSV', link: '/question-index' },
       {
         text: 'Library 選擇科目',
         items: [

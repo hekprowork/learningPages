@@ -12,7 +12,8 @@
     "check:subject-routes": "node scripts/check-subject-routes.js",
     "check:mathjax": "node scripts/check-mathjax.js",
     "check:selection": "node --test tests/*.test.js",
-    "check:exam-render": "node scripts/check-exam-render.js"
+    "check:exam-render": "node scripts/check-exam-render.js",
+    "check:public-index": "node scripts/check-public-question-index.js"
   },
   "dependencies": {
     "katex": "^0.16.21",

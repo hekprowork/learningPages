@@ -50,6 +50,9 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
+      - name: Validate published TSV index
+        run: npm run check:public-index
+
       - name: Validate all indexed exam source cards
         run: npm run check:exam-render
 
