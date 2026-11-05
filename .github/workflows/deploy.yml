@@ -50,6 +50,9 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
+      - name: Validate all indexed exam source cards
+        run: npm run check:exam-render
+
       - name: Validate subject homepage links
         run: npm run check:subject-routes
 
