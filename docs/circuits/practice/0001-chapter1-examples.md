@@ -528,7 +528,7 @@ $$
 
 </PracticeCard>
 
-<PracticeCard id="ch1-ex10" type="example" title="Example 1.10：以節點分析求 $8\ \Omega$ 電阻電流" source="課本 p.27" topic="節點分析">
+<PracticeCard id="ch1-ex10" type="example" title="Example 1.10：以節點分析求 8 Ω 電阻電流" source="課本 p.27" topic="節點分析">
 
 求圖中流過 $8\ \Omega$ 電阻的電流 $i_{8\Omega}$。題目確認 $3\ \mathrm{V}$ 電壓源的正端在下方，並以圖中的箭頭為 $i_{8\Omega}$ 正方向。
 

@@ -17,7 +17,7 @@ chapter	id	title	type	topic	source	repo_path
 1	ch1-pr8	Practice Problem 1.8：電子束的功率	practice	電流與功率	課本 p.24	docs/circuits/practice/0001-chapter1-examples.md
 1	ch1-ex9	Example 1.9：分級電價的電費	example	能量計費	課本 p.25	docs/circuits/practice/0001-chapter1-examples.md
 1	ch1-pr9	Practice Problem 1.9：低用電量的平均電價	practice	能量計費	課本 p.25	docs/circuits/practice/0001-chapter1-examples.md
-1	ch1-ex10	Example 1.10：以節點分析求 $8\ \Omega$ 電阻電流	example	節點分析	課本 p.27	docs/circuits/practice/0001-chapter1-examples.md
+1	ch1-ex10	Example 1.10：以節點分析求 8 Ω 電阻電流	example	節點分析	課本 p.27	docs/circuits/practice/0001-chapter1-examples.md
 1	ch1-pr10	Practice Problem 1.10：練習問題解決流程	practice	問題解決流程	課本 p.28	docs/circuits/practice/0001-chapter1-examples.md
 1	ch1-problem-01	章末習題 1.1	exercise	電荷與電流	課本 p.24	docs/circuits/practice/0001-chapter1-examples.md
 1	ch1-problem-02	章末習題 1.2	exercise	電荷與電流	課本 p.24	docs/circuits/practice/0001-chapter1-examples.md

@@ -2,8 +2,8 @@
 
 > 依據《Microelectronic Circuits, 8e》Chapter 2 練習題逐題轉錄；題幹、教材答案與題目引用的圖表均保留在同一張題卡內。
 
-<PracticeFilter prefix="electronics-ch2-exercise-missing-" />
-<PracticeProgress :total="2" prefix="electronics-ch2-exercise-missing-" />
+<PracticeFilter prefix="electronics-ch2-ex-" />
+<PracticeProgress :total="2" prefix="electronics-ch2-ex-" />
 
 <PracticeCard id="electronics-ch2-ex-2-23" type="exercise" title="Exercise 2.23" source="Sedra & Smith, Microelectronic Circuits, 8e — PDF p.130 / printed p.100" topic="Chapter 2">
 
