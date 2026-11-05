@@ -2,9 +2,13 @@
 
 依使用者提供的科目、章節、題型、題數與時間，使用網站既有原題組卷。使用者自己的 agent 執行此流程，無需私人 skill 或帳號；agent 須能讀取公開網址。
 
+## 先確認讀取能力
+
+一般對話模型不一定能連網；網頁讀取工具也可能拒絕整個網域。HTTP 200 不代表每個模型工具可存取。若本站 HTML 也不可讀，停止改副檔名或反覆換網址，請使用者到 https://hekprowork.github.io/learningPages/agent-exam.html#offline-mode 準備原題，貼上含完整 Markdown／LaTeX 題幹的 Prompt。圖像題須附候選題 PDF；只能讀文字的模型應選「只選無圖題」。未收到必要圖表就告知限制。
+
 ## 讀取來源
 
-1. 最簡單的讀取入口是 https://hekprowork.github.io/learningPages/question-reader/index.html 。先開科目章節目錄，依 ID、題名、題型、主題與教材來源選候選題，再點 ID 讀取單題靜態 HTML。這些頁面不需 JavaScript、JSON、TSV 解析或 GitHub 登入。
+1. 最簡單的讀取入口是 https://hekprowork.github.io/learningPages/question-reader/index.html 。先開科目章節目錄，依 ID、題名、題型、主題與教材來源選候選題，再點 ID 讀取單題靜態 HTML。這些頁面不需 JavaScript、JSON、TSV 解析或 GitHub 登入。公式的文字抽取若不完整，使用單題頁的「純文字／LaTeX 原題」連結，保留原始公式語法。
 2. 單題頁保留同次部署原題的題幹、圖片與公式，詳解透過獨立連結按需讀取，選題時不必開啟；直接在本站核對即可完成選題。一般出題無需開啟 GitHub、讀 manifest、比對 source_commit 或計算 SHA-256。Agent 若只支援瀏覽器，直接開上述本站目錄與單題連結，不必操作 GitHub 介面。
 3. 需要程式批次篩選時，才使用 https://hekprowork.github.io/learningPages/question-index.html 的公開 TSV。TSV 是 UTF-8、Tab 分隔，按科目下載。原始檔稽核或維護才需要 GitHub；通常依單題頁核對即可。若工具政策不允許讀取某來源，告知限制，使用其允許的本站 HTML；若整站也不可讀，請使用者提供題目檔案。
 

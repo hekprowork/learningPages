@@ -24,7 +24,7 @@ export function readQuestionCatalog(root) {
       if (!row.id || !row.repo_path?.startsWith(`docs/${subject}/`) || !row.repo_path.endsWith('.md') || row.repo_path.includes('..')) throw new Error(`Invalid indexed question: ${subject}:${row.id}`)
       const published = publishedSources.get(row.repo_path) ?? row.repo_path
       if (published.includes('/practice-source/') || !existsSync(resolve(root, published))) throw new Error(`No published route for ${row.repo_path}`)
-      return { id: row.id, subject, title: row.title, path: published.slice(5, -3) + '.html' }
+      return { id: row.id, subject, title: row.title, chapter: row.chapter, type: row.type, topic: row.topic, path: published.slice(5, -3) + '.html' }
     })
   })
 }
