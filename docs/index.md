@@ -71,3 +71,6 @@ features:
   --vp-c-brand-2: #3b82f6;
 }
 </style>
+
+
+[用網址指定練習題，提供 LLM 出題連結](/question-links)

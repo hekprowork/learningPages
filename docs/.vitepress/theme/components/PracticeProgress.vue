@@ -43,6 +43,7 @@ import {
   type PracticeFilterChangeDetail,
   type PracticeFilterType
 } from './practice-filter'
+import { getSelectedIds } from './practice-selection.js'
 
 const props = withDefaults(
   defineProps<{
@@ -65,6 +66,7 @@ const matchesPrefix = (id: string | undefined): boolean =>
   !!id && getPrefixes().some((prefix) => id.startsWith(prefix))
 
 const currentType = ref<PracticeFilterType>('all')
+const hasSelection = ref(false)
 const currentTotal = ref(props.total)
 const currentDoneCount = ref(0)
 const allTotal = ref(props.total)
@@ -77,7 +79,7 @@ const currentLabel = computed(() => {
 
 const resetLabel = computed(() =>
   currentType.value === 'all'
-    ? '重設全部進度'
+    ? (hasSelection.value ? '重設指定題目進度' : '重設全部進度')
     : `重設${PRACTICE_TYPE_LABELS[currentType.value].zh}進度`
 )
 
@@ -123,9 +125,11 @@ const countDoneForCards = (cards: HTMLElement[]): number => {
 
 const syncProgress = (detail?: PracticeFilterChangeDetail) => {
   if (typeof window === 'undefined') return
+  const selected = getSelectedIds(window.location.search)
+  hasSelection.value = selected !== null
   const cards = getCards().filter((card) => {
     const id = card.dataset.practiceId
-    return matchesPrefix(id)
+    return matchesPrefix(id) && (selected === null || selected.has(id ?? ''))
   })
   const type = detail && isPracticeFilterType(detail.type) ? detail.type : getUrlType()
   const currentCards =
@@ -164,17 +168,19 @@ const resetProgress = () => {
   const label = PRACTICE_TYPE_LABELS[currentType.value]
   const confirmation =
     currentType.value === 'all'
-      ? '確定要重設全部進度嗎？'
+      ? (hasSelection.value ? '確定要重設指定題目的進度嗎？' : '確定要重設全部進度嗎？')
       : `確定要重設「${label.zh} ${label.en}」的進度嗎？`
   if (!window.confirm(confirmation)) return
 
+  const selected = getSelectedIds(window.location.search)
+  hasSelection.value = selected !== null
   const cards = getCards().filter((card) => {
     const id = card.dataset.practiceId
-    if (!id || !matchesPrefix(id)) return false
+    if (!id || !matchesPrefix(id) || (selected !== null && !selected.has(id))) return false
     return currentType.value === 'all' || card.dataset.practiceType === currentType.value
   })
   const keysToRemove =
-    currentType.value === 'all'
+    currentType.value === 'all' && selected === null
       ? Array.from({ length: localStorage.length }, (_, index) => localStorage.key(index)).filter(
           (key): key is string => !!key && matchesPrefix(key)
         )

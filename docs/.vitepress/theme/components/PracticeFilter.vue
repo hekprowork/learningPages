@@ -1,5 +1,10 @@
 <template>
   <nav ref="filterRoot" class="practice-filter" aria-label="練習題分類篩選">
+    <div v-if="selectedIds !== null" class="practice-selection-status" role="status">
+      <span>指定題目：顯示 {{ categoryCounts.all }} 題</span>
+      <span v-if="missingIds.length">；本頁找不到：{{ missingIds.join('、') }}</span>
+      <button type="button" @click="clearSelection">顯示本頁全部題目</button>
+    </div>
     <div class="practice-filter-inner">
       <span class="practice-filter-title">題型</span>
       <div class="practice-filter-segmented" role="group" aria-label="選擇題型">
@@ -32,6 +37,7 @@ import {
   type PracticeFilterChangeDetail,
   type PracticeFilterType
 } from './practice-filter'
+import { getSelectedIds } from './practice-selection.js'
 
 const props = withDefaults(
   defineProps<{
@@ -54,6 +60,8 @@ const matchesPrefix = (id: string | undefined): boolean =>
 
 const filterRoot = ref<HTMLElement | null>(null)
 const activeType = ref<PracticeFilterType>('all')
+const selectedIds = ref<Set<string> | null>(null)
+const missingIds = ref<string[]>([])
 const categoryCounts = reactive(createPracticeCounts())
 const labels = PRACTICE_TYPE_LABELS
 
@@ -119,7 +127,7 @@ const updateHeadingVisibility = (scope: HTMLElement) => {
       heading.dataset.practiceFilterOriginalHidden = String(heading.hidden)
     }
     const originallyHidden = heading.dataset.practiceFilterOriginalHidden === 'true'
-    heading.hidden = originallyHidden || (activeType.value !== 'all' && hasCards && !hasVisibleCards)
+    heading.hidden = originallyHidden || ((activeType.value !== 'all' || selectedIds.value !== null) && hasCards && !hasVisibleCards)
   })
 
 }
@@ -188,14 +196,20 @@ const applyFilter = () => {
   if (!scope) return
   const cards = getCards(scope)
 
-  countCards(cards)
+  const selectedCards = selectedIds.value === null
+    ? cards
+    : cards.filter((card) => selectedIds.value?.has(card.dataset.practiceId ?? ''))
+  const found = new Set(selectedCards.map((card) => card.dataset.practiceId))
+  missingIds.value = selectedIds.value === null ? [] : [...selectedIds.value].filter((id) => !found.has(id))
+  countCards(selectedCards)
   if (activeType.value !== 'all' && categoryCounts[activeType.value] === 0) {
     activeType.value = 'all'
     updateUrl('all', 'replace')
   }
 
   cards.forEach((card) => {
-    card.hidden = activeType.value !== 'all' && getCardType(card) !== activeType.value
+    card.hidden = (selectedIds.value !== null && !selectedIds.value.has(card.dataset.practiceId ?? '')) ||
+      (activeType.value !== 'all' && getCardType(card) !== activeType.value)
   })
 
   updateHeadingVisibility(scope)
@@ -243,21 +257,31 @@ const scrollToHashCard = () => {
 }
 
 const syncFromUrl = (scrollToHash = false) => {
+  selectedIds.value = typeof window === 'undefined' ? null : getSelectedIds(window.location.search)
   const urlState = getUrlType()
   const hashCard = getHashCard()
-  const hashType = hashCard ? getCardType(hashCard) : ''
+  const hashType = hashCard && (selectedIds.value === null || selectedIds.value.has(hashCard.dataset.practiceId ?? ''))
+    ? getCardType(hashCard) : ''
   const nextType: PracticeFilterType = isPracticeCardType(hashType)
     ? hashType
     : urlState.type
 
   activeType.value = nextType
 
-  if (urlState.needsNormalization || (hashCard && nextType !== urlState.type)) {
+  if (urlState.needsNormalization || (isPracticeCardType(hashType) && nextType !== urlState.type)) {
     updateUrl(nextType, 'replace')
   }
 
   applyFilter()
-  if (scrollToHash && hashCard && isPracticeCardType(hashType)) scrollToHashCard()
+  if (scrollToHash && hashCard && isPracticeCardType(hashType) && !hashCard.hidden) scrollToHashCard()
+}
+
+const clearSelection = () => {
+  if (typeof window === 'undefined') return
+  const url = new URL(window.location.href)
+  url.searchParams.delete('ids')
+  window.history.pushState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`)
+  syncFromUrl()
 }
 
 const selectType = (type: PracticeFilterType) => {
@@ -307,6 +331,24 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.practice-selection-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 0 0.6rem;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
+}
+.practice-selection-status button {
+  margin-left: auto;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 4px;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg);
+  cursor: pointer;
+}
 .practice-filter {
   position: sticky;
   top: 48px;
