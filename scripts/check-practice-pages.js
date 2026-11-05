@@ -29,6 +29,8 @@ const practiceRoots = [
 const validTypes = new Set(['example', 'practice', 'exercise', 'homework', 'exam'])
 const failures = []
 const globalIds = new Map()
+const sourceCardsByPath = new Map()
+const excludedPracticeRoot = resolve('docs/electronics/practice-source')
 
 const parseAttributes = (raw) => {
   const attributes = {}
@@ -110,6 +112,82 @@ if (pages.length === 0) {
   process.exit(1)
 }
 
+const verifyRenderedPage = (label, outputFile, expectedCards, sourceTexts) => {
+  if (!existsSync(outputFile)) {
+    failures.push(label + ': missing VitePress output ' + relative(process.cwd(), outputFile))
+    return
+  }
+
+  const html = readFileSync(outputFile, 'utf8')
+  const renderedCards = []
+  for (const tag of html.matchAll(/<div\b[^>]*>/g)) {
+    if (!/\bdata-practice-card(?:\s|=|>)/.test(tag[0])) continue
+    const attributes = parseAttributes(tag[0])
+    renderedCards.push({ id: attributes['data-practice-id'], type: attributes['data-practice-type'] })
+  }
+
+  const expectedById = new Map(expectedCards.map((card) => [card.id, card]))
+  const renderedById = new Map()
+  for (const card of renderedCards) {
+    if (!card.id) {
+      failures.push(label + ': rendered PracticeCard has no data-practice-id')
+      continue
+    }
+    if (renderedById.has(card.id)) {
+      failures.push(label + ': rendered duplicate PracticeCard id "' + card.id + '"')
+    }
+    renderedById.set(card.id, card)
+    const expected = expectedById.get(card.id)
+    if (!expected) {
+      failures.push(label + ': unexpected rendered PracticeCard "' + card.id + '"')
+    } else if (expected.type !== card.type) {
+      failures.push(label + ': rendered type differs for PracticeCard "' + card.id + '"')
+    }
+  }
+  for (const card of expectedCards) {
+    if (!renderedById.has(card.id)) {
+      failures.push(label + ': PracticeCard "' + card.id + '" is missing from rendered HTML')
+    }
+  }
+
+  const pageWithoutScripts = html
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+  if (/(?:katex-error|data-mjx-error|<mjx-merror\b|<merror\b)/i.test(pageWithoutScripts)) {
+    failures.push(label + ': rendered page contains a KaTeX or MathJax error')
+  }
+
+  const plainMetadata = []
+  for (const match of pageWithoutScripts.matchAll(/<(h3|span)\b([^>]*)>([\s\S]*?)<\/\1>/gi)) {
+    const attributes = parseAttributes(match[2])
+    const classes = (attributes.class ?? '').split(/\s+/)
+    if (classes.some((name) =>
+      ['practice-card-title', 'practice-badge--source', 'practice-badge--topic'].includes(name)
+    )) {
+      plainMetadata.push(match[3].replace(/<[^>]*>/g, ' '))
+    }
+  }
+  for (const text of plainMetadata) {
+    if (hasRawMathDelimiter(text)) {
+      failures.push(label + ': rendered PracticeCard metadata contains raw math delimiters')
+      break
+    }
+  }
+
+  const hasMarkdownMath = sourceTexts.some((source) => {
+    const markdownBody = maskCodeAndComments(
+      source.replace(/<PracticeCard\b[^>]*>/g, ' ')
+        .replace(/<PracticeProgress\b[^>]*\/?>/g, ' ')
+        .replace(/<PracticeFilter\b[^>]*\/?>/g, ' ')
+    )
+    return /(?<!\\)\$\$?[^$\n]+\$\$?/.test(markdownBody) ||
+      /\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/.test(markdownBody)
+  })
+  if (hasMarkdownMath && !/<mjx-container\b|<span class="katex\b/i.test(pageWithoutScripts)) {
+    failures.push(label + ': source contains math but rendered HTML has no MathJax or KaTeX output')
+  }
+}
+
 let cardCount = 0
 for (const sourceFile of pages) {
   const source = readFileSync(sourceFile, 'utf8')
@@ -148,7 +226,7 @@ for (const sourceFile of pages) {
       }
     }
 
-    const hideCheckbox = Object.prototype.hasOwnProperty.call(attributes, 'hideCheckbox') &&
+    const hideCheckbox = /\bhideCheckbox(?:\s|$)/.test(rawAttributes) &&
       attributes.hideCheckbox !== 'false'
     cards.push({ id, type, trackable: !hideCheckbox })
     cardCount++
@@ -193,79 +271,53 @@ for (const sourceFile of pages) {
     checkImage(sourceFile, match[1] ?? match[2])
   }
 
-  const relativeSource = relative(docsRoot, sourceFile).replace(/\\/g, '/')
-  const outputFile = resolve(distRoot, relativeSource.replace(/\.md$/i, '.html'))
-  if (!existsSync(outputFile)) {
-    failures.push(relative(process.cwd(), sourceFile) + ': missing VitePress output ' + relative(process.cwd(), outputFile))
-    continue
+  sourceCardsByPath.set(sourceFile, cards)
+  if (!sourceFile.startsWith(excludedPracticeRoot + sep)) {
+    const relativeSource = relative(docsRoot, sourceFile).replace(/\\/g, '/')
+    const outputFile = resolve(distRoot, relativeSource.replace(/\.md$/i, '.html'))
+    verifyRenderedPage(
+      relative(process.cwd(), sourceFile),
+      outputFile,
+      cards,
+      [source]
+    )
   }
+}
 
-  const html = readFileSync(outputFile, 'utf8')
-  const renderedCards = []
-  for (const tag of html.matchAll(/<div\b[^>]*>/g)) {
-    if (!/\bdata-practice-card(?:\s|=|>)/.test(tag[0])) continue
-    const attributes = parseAttributes(tag[0])
-    renderedCards.push({ id: attributes['data-practice-id'], type: attributes['data-practice-type'] })
-  }
+const includedSourcePaths = new Set()
+const workbookFiles = walkMarkdown(resolve('docs/electronics/practice'))
+const includePattern = /<!--\s*workbook-include:\s*cards\s+([^>\s]+)\s*-->/g
+for (const workbookFile of workbookFiles) {
+  const workbookSource = readFileSync(workbookFile, 'utf8')
+  const includes = [...workbookSource.matchAll(includePattern)].map((match) => match[1])
+  if (includes.length === 0) continue
 
-  const expectedById = new Map(cards.map((card) => [card.id, card]))
-  const renderedById = new Map()
-  for (const card of renderedCards) {
-    if (!card.id) {
-      failures.push(relative(process.cwd(), sourceFile) + ': rendered PracticeCard has no data-practice-id')
+  const expectedCards = []
+  const includedSources = []
+  for (const includePath of includes) {
+    const sourceFile = resolve(process.cwd(), includePath)
+    const sourceCards = sourceCardsByPath.get(sourceFile)
+    if (!sourceCards) {
+      failures.push(relative(process.cwd(), workbookFile) + ': workbook include is not a validated practice source: ' + includePath)
       continue
     }
-    if (renderedById.has(card.id)) {
-      failures.push(relative(process.cwd(), sourceFile) + ': rendered duplicate PracticeCard id "' + card.id + '"')
-    }
-    renderedById.set(card.id, card)
-    const expected = expectedById.get(card.id)
-    if (!expected) {
-      failures.push(relative(process.cwd(), sourceFile) + ': unexpected rendered PracticeCard "' + card.id + '"')
-    } else if (expected.type !== card.type) {
-      failures.push(relative(process.cwd(), sourceFile) + ': rendered type differs for PracticeCard "' + card.id + '"')
-    }
-  }
-  for (const card of cards) {
-    if (!renderedById.has(card.id)) {
-      failures.push(relative(process.cwd(), sourceFile) + ': PracticeCard "' + card.id + '" is missing from rendered HTML')
-    }
+    includedSourcePaths.add(sourceFile)
+    expectedCards.push(...sourceCards)
+    includedSources.push(readFileSync(sourceFile, 'utf8'))
   }
 
-  const pageWithoutScripts = html
-    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
-  if (/(?:katex-error|data-mjx-error|<mjx-merror\b|<merror\b)/i.test(pageWithoutScripts)) {
-    failures.push(relative(process.cwd(), sourceFile) + ': rendered page contains a KaTeX or MathJax error')
-  }
-
-  const plainMetadata = []
-  for (const match of pageWithoutScripts.matchAll(/<(h3|span)\b([^>]*)>([\s\S]*?)<\/\1>/gi)) {
-    const attributes = parseAttributes(match[2])
-    const classes = (attributes.class ?? '').split(/\s+/)
-    if (classes.some((name) =>
-      ['practice-card-title', 'practice-badge--source', 'practice-badge--topic'].includes(name)
-    )) {
-      plainMetadata.push(match[3].replace(/<[^>]*>/g, ' '))
-    }
-  }
-  for (const text of plainMetadata) {
-    if (hasRawMathDelimiter(text)) {
-      failures.push(relative(process.cwd(), sourceFile) + ': rendered PracticeCard metadata contains raw math delimiters')
-      break
-    }
-  }
-
-  const markdownBody = maskCodeAndComments(
-    source.replace(/<PracticeCard\b[^>]*>/g, ' ')
-      .replace(/<PracticeProgress\b[^>]*\/?>/g, ' ')
-      .replace(/<PracticeFilter\b[^>]*\/?>/g, ' ')
+  const route = relative(docsRoot, workbookFile).replace(/\\/g, '/').replace(/\.md$/i, '.html')
+  verifyRenderedPage(
+    relative(process.cwd(), workbookFile),
+    resolve(distRoot, route),
+    expectedCards,
+    includedSources
   )
-  const hasMarkdownMath =
-    /(?<!\\)\$\$?[^$\n]+\$\$?/.test(markdownBody) ||
-    /\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/.test(markdownBody)
-  if (hasMarkdownMath && !/<mjx-container\b|<span class="katex\b/i.test(pageWithoutScripts)) {
-    failures.push(relative(process.cwd(), sourceFile) + ': source contains math but rendered HTML has no MathJax or KaTeX output')
+}
+
+for (const sourceFile of sourceCardsByPath.keys()) {
+  if (sourceFile.startsWith(excludedPracticeRoot + sep) && !includedSourcePaths.has(sourceFile)) {
+    failures.push(relative(process.cwd(), sourceFile) + ': excluded practice source is not included by a rendered workbook')
   }
 }
 
