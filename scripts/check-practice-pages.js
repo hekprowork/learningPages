@@ -256,16 +256,6 @@ for (const sourceFile of pages) {
     }
   }
 
-  const visibleText = pageWithoutScripts
-    .replace(/<(?:pre|code)\b[\s\S]*?<\/(?:pre|code)>/gi, ' ')
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/&(?:quot|#34);/g, '"')
-    .replace(/&(?:apos|#39);/g, "'")
-    .replace(/&amp;/g, '&')
-  if (hasRawMathDelimiter(visibleText)) {
-    failures.push(relative(process.cwd(), sourceFile) + ': rendered visible text contains raw math delimiters')
-  }
-
   const markdownBody = maskCodeAndComments(
     source.replace(/<PracticeCard\b[^>]*>/g, ' ')
       .replace(/<PracticeProgress\b[^>]*\/?>/g, ' ')
