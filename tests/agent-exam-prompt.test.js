@@ -9,7 +9,7 @@ import { buildAgentExamPrompt, validateExamRequest, AGENT_GUIDE_URL } from '../d
 const request = {subject:'circuits',scope:'第四章',count:5,minutes:60,type:'example,practice'}
 test('generated prompt includes public guide and exact user requirements',()=>{
  const text=buildAgentExamPrompt({...request,subject:'mixed',scope:'電路學 CH4；工程數學 CH3',count:8})
- assert.ok(text.includes(AGENT_GUIDE_URL));assert.match(text,/電路學 CH4；工程數學 CH3/);assert.match(text,/8 題/);assert.match(text,/60 分鐘/);assert.match(text,/預設不揭露答案/)
+ assert.ok(text.includes(AGENT_GUIDE_URL));assert.match(text,/JSON 與 SHA-256 都不是必要步驟/);assert.match(text,/電路學 CH4；工程數學 CH3/);assert.match(text,/8 題/);assert.match(text,/60 分鐘/);assert.match(text,/預設不揭露答案/)
 })
 test('invalid scope, count, time and unsupported options cannot produce a prompt',()=>{
  for(const change of [{scope:' '},{count:0},{count:1.5},{count:101},{minutes:''},{minutes:481},{subject:'unknown'},{type:'unknown'}]){

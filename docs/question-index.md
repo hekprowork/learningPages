@@ -2,7 +2,13 @@
 title: 公開題目索引
 ---
 
+<script setup>
+import { data as indexVersion } from './question-index.data.js'
+</script>
+
 # 公開題目索引
+
+<p>本次發布來源版本（source_commit）：<code>{{ indexVersion.source_commit || 'unavailable' }}</code>。也可讀取<a href="/learningPages/question-index/version.txt">純文字版本資訊</a>。</p>
 
 任何人都能直接 GET 下列 UTF-8 TSV，無需登入 GitHub 或使用 API。檔案隨網站建置自動從原始索引發布，每次部署都檢查內容完全一致。
 
@@ -12,6 +18,8 @@ title: 公開題目索引
 | 電子學 | [electronics.tsv](/question-index/electronics.tsv) |
 | 工程數學 | [engineering-math.tsv](/question-index/engineering-math.tsv) |
 | 固態電子導論 | [solid-state.tsv](/question-index/solid-state.tsv) |
+
+JSON 與 SHA-256 為可選的程式校驗資訊，讀不到 JSON 或無法計算雜湊仍可直接使用上方 TSV 出題。
 
 [manifest.json：檔案清單、各科題量、SHA-256 與來源版本](/question-index/manifest.json)
 

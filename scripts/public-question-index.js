@@ -29,6 +29,7 @@ export function questionIndexFiles(root) {
     files.set(`${subject}.tsv`, bytes)
     manifest.subjects[subject] = { file: `${subject}.tsv`, questions: rows.length, sha256: createHash('sha256').update(bytes).digest('hex') }
   }
+  files.set('version.txt', Buffer.from(`source_commit: ${sourceCommit ?? 'unavailable'}\n`))
   files.set('manifest.json', Buffer.from(JSON.stringify(manifest, null, 2) + '\n'))
   return files
 }

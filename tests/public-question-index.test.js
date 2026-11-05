@@ -15,7 +15,8 @@ test('public exports preserve source bytes, Unicode, CRLF and hash/count metadat
     const bytes = Buffer.from(INDEX_COLUMNS.join('\t') + '\r\n1\tid-1\t中文標題\texample\t主題\t課本 p.1\tdocs/a.md\r\n')
     for (const subject of SUBJECTS) writeFileSync(resolve(dir, `${subject}.tsv`), bytes)
     const files = questionIndexFiles(root)
-    assert.equal(files.size, 5)
+    assert.equal(files.size, 6)
+    assert.match(files.get('version.txt').toString(), /^source_commit: /)
     const manifest = JSON.parse(files.get('manifest.json'))
     for (const subject of SUBJECTS) {
       assert.deepEqual(files.get(`${subject}.tsv`), bytes)

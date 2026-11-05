@@ -28,5 +28,5 @@ export function buildAgentExamPrompt(request) {
   if (Object.values(validateExamRequest(request)).some(Boolean)) throw new Error('請修正出題需求。')
   const subject = SUBJECT_OPTIONS.find(option => option.value === request.subject).label
   const type = TYPE_OPTIONS.find(option => option.value === request.type).label
-  return `請使用 learningPages 公開題庫替我製作模擬考。\n\n先讀取公開出題指引並依流程執行：\n${AGENT_GUIDE_URL}\n\n我的需求：\n- 科目：${subject}\n- 範圍：${request.scope.trim()}\n- 題數：${Number(request.count)} 題\n- 作答時間：${Number(request.minutes)} 分鐘\n- 題型：${type}（${request.type}）\n\n請核對公開索引與原題，回覆一個跨頁組卷連結、簡短題單與教材來源，預設不揭露答案。候選題不足時先告知，不自行擴大範圍或編造題目。若無法讀取指引、索引或原題，請說明限制；未執行畫面驗證時，不宣稱已驗證實際載入。`
+  return `請使用 learningPages 公開題庫替我製作模擬考。\n\n先讀取公開出題指引並依流程執行：\n${AGENT_GUIDE_URL}\n\n我的需求：\n- 科目：${subject}\n- 範圍：${request.scope.trim()}\n- 題數：${Number(request.count)} 題\n- 作答時間：${Number(request.minutes)} 分鐘\n- 題型：${type}（${request.type}）\n\n公開索引入口：https://hekprowork.github.io/learningPages/question-index.html\nJSON 與 SHA-256 都不是必要步驟；工具讀不到 JSON 時，改從 HTML 索引頁取得版本與 TSV 連結。\n\n請核對公開索引與原題，回覆一個跨頁組卷連結、簡短題單與教材來源，預設不揭露答案。候選題不足時先告知，不自行擴大範圍或編造題目。若無法讀取指引、索引或原題，請說明限制；未執行畫面驗證時，不宣稱已驗證實際載入。`
 }

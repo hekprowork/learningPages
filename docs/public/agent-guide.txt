@@ -4,9 +4,9 @@
 
 ## 讀取來源
 
-1. 讀取 https://hekprowork.github.io/learningPages/question-index/manifest.json 。索引根網址為 https://hekprowork.github.io/learningPages/question-index/ 。
-2. 只下載需求科目的 TSV：circuits.tsv（電路學）、electronics.tsv（電子學）、engineering-math.tsv（工程數學）、solid-state.tsv（固態電子導論）。跨科時下載對應的多份檔案。檔案為 UTF-8、Tab 分隔，欄位包含 chapter、id、title、type、topic、source、repo_path。可以計算 SHA-256 時，與 manifest 核對。
-3. 索引代表最近成功部署版本。依 manifest.source_commit 與 repo_path 組成原題網址：https://raw.githubusercontent.com/hekprowork/learningPages/{source_commit}/{repo_path} 。此處大括號是待替換的欄位，不是實際網址。
+1. 優先讀取 HTML 索引頁 https://hekprowork.github.io/learningPages/question-index.html ，取得 TSV 連結與頁面上的 source_commit。版本亦可從 https://hekprowork.github.io/learningPages/question-index/version.txt 讀取。索引根網址為 https://hekprowork.github.io/learningPages/question-index/ 。manifest.json 是可選資訊；工具若對 JSON 回報 PERMISSION_DENIED，直接改用 HTML 或純文字版本資訊，不要因 JSON 不可讀而停止出題，也不要反覆嘗試被拒絕的 JSON 請求。
+2. 只下載需求科目的 TSV：circuits.tsv（電路學）、electronics.tsv（電子學）、engineering-math.tsv（工程數學）、solid-state.tsv（固態電子導論）。跨科時下載對應的多份檔案。檔案為 UTF-8、Tab 分隔，欄位包含 chapter、id、title、type、topic、source、repo_path。一般出題不需要 SHA-256。只有需要檔案完整性校驗且工具支援時，才選用 manifest.json 與 SHA-256；無法執行校驗時繼續核對 TSV 與原題，不得聲稱已完成雜湊驗證。
+3. 索引代表最近成功部署版本。依 HTML 索引頁或 version.txt 的 source_commit（能讀取 JSON 時亦可用 manifest.source_commit）與 repo_path 組成原題網址：https://raw.githubusercontent.com/hekprowork/learningPages/{source_commit}/{repo_path} 。此處大括號是待替換的欄位，不是實際網址。
 
 ## 選題與核對
 
