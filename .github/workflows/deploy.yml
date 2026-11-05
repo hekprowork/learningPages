@@ -3,6 +3,8 @@ name: Deploy VitePress site to Pages
 on:
   push:
     branches: [main, master]
+  pull_request:
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -11,8 +13,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.event.pull_request.number || 'deploy' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
@@ -42,8 +44,14 @@ jobs:
           npm run check:katex -- docs/solid-state
           npm run check:mathjax -- docs/solid-state
 
+      - name: Validate URL question selection
+        run: npm run check:selection
+
       - name: Build with VitePress
         run: npm run docs:build
+
+      - name: Validate all indexed exam source cards
+        run: npm run check:exam-render
 
       - name: Validate subject homepage links
         run: npm run check:subject-routes
@@ -54,6 +62,7 @@ jobs:
           path: docs/.vitepress/dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

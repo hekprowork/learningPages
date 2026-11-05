@@ -10,7 +10,9 @@
     "check:katex": "node scripts/check-katex.js",
     "check:subject-index": "node scripts/check-subject-index-render.js",
     "check:subject-routes": "node scripts/check-subject-routes.js",
-    "check:mathjax": "node scripts/check-mathjax.js"
+    "check:mathjax": "node scripts/check-mathjax.js",
+    "check:selection": "node --test tests/*.test.js",
+    "check:exam-render": "node scripts/check-exam-render.js"
   },
   "dependencies": {
     "katex": "^0.16.21",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@types/katex": "^0.16.7",
     "@types/three": "^0.174.0",
+    "jsdom": "^26.1.0",
     "markdown-it-mathjax3": "^4.3.2",
     "mathjax-full": "^3.2.1"
   }
