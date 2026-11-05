@@ -56,23 +56,23 @@ chapter	id	title	type	topic	source	repo_path
 1	math-ch1-prob-55	96 考題 4 (正合方程式)	exam	正合方程式	歷屆期中考古精選 · 96 考題 4	docs/engineering-math/practice/0001-chapter1-examples.md
 1	math-ch1-prob-56	96 考題 5 (可分離變數)	exam	可分離變數	歷屆期中考古精選 · 96 考題 5	docs/engineering-math/practice/0001-chapter1-examples.md
 1	math-ch1-missing-01	一階線性方程、積分曲線與初值問題	example	一階線性 ODE / 初值問題	正式教材第一章 P.7、P.8、P.9 · Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-02	積分曲線例：含 $1/x$ 的一階線性方程	example	一階線性 ODE	正式教材第一章 P.8 · Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-03	積分曲線例：$y'+xy=2$	example	一階線性 ODE	正式教材第一章 P.9 · Example / Figure 1.3	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-02	積分曲線例：含倒數係數的一階線性方程	example	一階線性 ODE	正式教材第一章 P.8 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-03	積分曲線例：含變係數與常數項	example	一階線性 ODE	正式教材第一章 P.9 · Example / Figure 1.3	docs/engineering-math/practice/0003-textbook-examples.md
 1	math-ch1-missing-04	可分離方程的一般解與初值版本	example	可分離變數	正式教材第一章 P.9、P.10 · 1.2 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-05	一階線性方程：$y'+y=\sin x$	example	一階線性 ODE	正式教材第一章 P.10、P.11 · 1.3 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-06	一階線性初值問題：$y'=3x^2-y/x$	example	一階線性 ODE / 初值問題	正式教材第一章 P.11 · 1.3 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-05	一階線性方程：正弦外力	example	一階線性 ODE	正式教材第一章 P.10、P.11 · 1.3 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-06	一階線性初值問題：多項式與倒數項	example	一階線性 ODE / 初值問題	正式教材第一章 P.11 · 1.3 Example	docs/engineering-math/practice/0003-textbook-examples.md
 1	math-ch1-missing-07	正合方程：三角函數勢函數	example	正合微分方程	正式教材第一章 P.13 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-08	正合方程：$x e^{xy}=C$	example	正合微分方程	正式教材第一章 P.14 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-08	正合方程：含指數項	example	正合微分方程	正式教材第一章 P.14 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
 1	math-ch1-missing-09	非正合方程判定	example	正合性判定	正式教材第一章 P.14 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-10	正合方程：$e^x\sin y+y-x^2=C$	example	正合微分方程	正式教材第一章 P.15 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-11	積分因子：$y^2-6xy+(3xy-6x^2)y'=0$	example	積分因子	正式教材第一章 P.17 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-12	積分因子：$(1-y)e^{x^2/2}=C$	example	積分因子	正式教材第一章 P.18 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-13	積分因子兩種判別：$y(1+x)dx+x(1+y)dy=0$	example	積分因子	正式教材第一章 P.19、P.21 · 1.5 Example（case 3 / case 4）	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-14	積分因子：$x^2-y+\ln|y|=C$	example	積分因子	正式教材第一章 P.22、P.23 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-15	可分離方程：$y-3-xy'=0$	example	可分離變數	正式教材第一章 P.23、P.24 · Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-16	齊次型一階方程：$xy'=y^2/x+y$	example	齊次型一階 ODE	正式教材第一章 P.24、P.25 · Homogeneous D.E. Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-17	Bernoulli 方程：$y'+y/x=3x^2y^3$	example	Bernoulli 方程	正式教材第一章 P.25 · Bernoulli Example	docs/engineering-math/practice/0003-textbook-examples.md
-1	math-ch1-missing-18	Riccati 方程：已知特解 $y_s=1$	example	Riccati 方程	正式教材第一章 P.25、P.26 · Riccati Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-10	正合方程：含指數、正弦與多項式	example	正合微分方程	正式教材第一章 P.15 · 1.4 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-11	積分因子：二次項微分方程	example	積分因子	正式教材第一章 P.17 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-12	積分因子：含指數積分因子	example	積分因子	正式教材第一章 P.18 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-13	積分因子兩種判別：乘積型微分方程	example	積分因子	正式教材第一章 P.19、P.21 · 1.5 Example（case 3 / case 4）	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-14	積分因子：含對數勢函數	example	積分因子	正式教材第一章 P.22、P.23 · 1.5 Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-15	可分離方程：常數與乘積項	example	可分離變數	正式教材第一章 P.23、P.24 · Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-16	齊次型一階方程：二次相依項	example	齊次型一階 ODE	正式教材第一章 P.24、P.25 · Homogeneous D.E. Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-17	Bernoulli 方程：三次非線性項	example	Bernoulli 方程	正式教材第一章 P.25 · Bernoulli Example	docs/engineering-math/practice/0003-textbook-examples.md
+1	math-ch1-missing-18	Riccati 方程：已知常數特解	example	Riccati 方程	正式教材第一章 P.25、P.26 · Riccati Example	docs/engineering-math/practice/0003-textbook-examples.md
 1	math-ch1-missing-19	RL 電路：電流建立響應	example	一階線性 ODE / 電路應用	正式教材第一章 P.27 · Application / Example	docs/engineering-math/practice/0003-textbook-examples.md
 1	math-ch1-missing-20	RC 電路：電荷與電流響應	example	一階線性 ODE / 電路應用	正式教材第一章 P.27、P.28 · Application / Example	docs/engineering-math/practice/0003-textbook-examples.md
 2	math-ch2-prob-1	二階常係數齊次 ODE（相異實根）	practice	常係數齊次 ODE	題庫 2.4 (1)	docs/engineering-math/practice/0002-chapter2-examples.md
@@ -85,7 +85,7 @@ chapter	id	title	type	topic	source	repo_path
 2	math-ch2-prob-8	非齊次 ODE 待定係數法（三角函數非齊次項）	practice	待定係數法	題庫 2.6 (12)	docs/engineering-math/practice/0002-chapter2-examples.md
 2	math-ch2-prob-9	非齊次 ODE 待定係數法（含零特徵根升冪與指數混合項）	practice	待定係數法	題庫 2.6 (14)	docs/engineering-math/practice/0002-chapter2-examples.md
 2	math-ch2-prob-10	非齊次 ODE 待定係數法（多項式與指數乘積型）	practice	待定係數法	題庫 2.6 (18)	docs/engineering-math/practice/0002-chapter2-examples.md
-2	math-ch2-prob-11	二階常係數共振現象（特解共振乘 $x$）	example	待定係數共振型	Slide P7-P8 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
+2	math-ch2-prob-11	二階常係數共振現象（特解含一次因子）	example	待定係數共振型	Slide P7-P8 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
 2	math-ch2-prob-12	簡諧振動與外力共振（微分運算子極限推導）	example	運算子共振型	Slide P9-P10 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
 2	math-ch2-prob-13	參數變異法 (Variation of Parameters)	example	參數變異法	Slide P11-P12 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
 2	math-ch2-prob-14	柯西－尤拉方程式 (Euler-Cauchy Equation)	example	柯西－尤拉方程式	Slide P12-P13 精選範例	docs/engineering-math/practice/0002-chapter2-examples.md
