@@ -53,7 +53,7 @@ $$y(x)=2-7e^{-(x-1)}.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-02" type="example" title="積分曲線例：含 $1/x$ 的一階線性方程" source="正式教材第一章 P.8 · Example" topic="一階線性 ODE">
+<PracticeCard id="math-ch1-missing-02" type="example" title="積分曲線例：含倒數係數的一階線性方程" source="正式教材第一章 P.8 · Example" topic="一階線性 ODE">
 
 > 來源類型：正式教材 PDF。來源頁面以積分曲線圖搭配此方程展示。
 
@@ -84,7 +84,7 @@ $$y(x)=\frac{e^x(x-1)+C}{x}=e^x\left(1-\frac{1}{x}\right)+\frac{C}{x},\qquad x>0
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-03" type="example" title="積分曲線例：$y'+xy=2$" source="正式教材第一章 P.9 · Example / Figure 1.3" topic="一階線性 ODE">
+<PracticeCard id="math-ch1-missing-03" type="example" title="積分曲線例：含變係數與常數項" source="正式教材第一章 P.9 · Example / Figure 1.3" topic="一階線性 ODE">
 
 > 來源類型：正式教材 PDF。來源頁面主要提供積分曲線圖；下列積分形式是由來源方程精確推得的答案。
 
@@ -156,7 +156,7 @@ $$y(x)=\frac{1}{e^{-x}+\frac14-e^{-1}}.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-05" type="example" title="一階線性方程：$y'+y=\sin x$" source="正式教材第一章 P.10、P.11 · 1.3 Example" topic="一階線性 ODE">
+<PracticeCard id="math-ch1-missing-05" type="example" title="一階線性方程：正弦外力" source="正式教材第一章 P.10、P.11 · 1.3 Example" topic="一階線性 ODE">
 
 > 來源類型：正式教材 PDF。
 
@@ -185,7 +185,7 @@ $$y(x)=\frac12(\sin x-\cos x)+Ce^{-x}.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-06" type="example" title="一階線性初值問題：$y'=3x^2-y/x$" source="正式教材第一章 P.11 · 1.3 Example" topic="一階線性 ODE / 初值問題">
+<PracticeCard id="math-ch1-missing-06" type="example" title="一階線性初值問題：多項式與倒數項" source="正式教材第一章 P.11 · 1.3 Example" topic="一階線性 ODE / 初值問題">
 
 > 來源類型：正式教材 PDF。
 
@@ -245,7 +245,7 @@ $$-\frac12x^2y^2+\frac12y^2+\frac12\sin^2x=C.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-08" type="example" title="正合方程：$x e^{xy}=C$" source="正式教材第一章 P.14 · 1.4 Example" topic="正合微分方程">
+<PracticeCard id="math-ch1-missing-08" type="example" title="正合方程：含指數項" source="正式教材第一章 P.14 · 1.4 Example" topic="正合微分方程">
 
 > 來源類型：正式教材 PDF。
 
@@ -302,7 +302,7 @@ $$M_y\neq N_x,$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-10" type="example" title="正合方程：$e^x\sin y+y-x^2=C$" source="正式教材第一章 P.15 · 1.4 Example" topic="正合微分方程">
+<PracticeCard id="math-ch1-missing-10" type="example" title="正合方程：含指數、正弦與多項式" source="正式教材第一章 P.15 · 1.4 Example" topic="正合微分方程">
 
 > 來源類型：正式教材 PDF。
 
@@ -333,7 +333,7 @@ $$e^x\sin y+y-x^2=C.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-11" type="example" title="積分因子：$y^2-6xy+(3xy-6x^2)y'=0$" source="正式教材第一章 P.17 · 1.5 Example" topic="積分因子">
+<PracticeCard id="math-ch1-missing-11" type="example" title="積分因子：二次項微分方程" source="正式教材第一章 P.17 · 1.5 Example" topic="積分因子">
 
 > 來源類型：正式教材 PDF。
 
@@ -366,7 +366,7 @@ $$xy^3-3x^2y^2=C.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-12" type="example" title="積分因子：$(1-y)e^{x^2/2}=C$" source="正式教材第一章 P.18 · 1.5 Example" topic="積分因子">
+<PracticeCard id="math-ch1-missing-12" type="example" title="積分因子：含指數積分因子" source="正式教材第一章 P.18 · 1.5 Example" topic="積分因子">
 
 > 來源類型：正式教材 PDF；此方程亦與現有 `math-ch1-prob-56` 的 96 考題相同，既有卡片用可分離法得到等價答案。
 
@@ -401,7 +401,7 @@ $$ (1-y)e^{x^2/2}=C.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-13" type="example" title="積分因子兩種判別：$y(1+x)dx+x(1+y)dy=0$" source="正式教材第一章 P.19、P.21 · 1.5 Example（case 3 / case 4）" topic="積分因子">
+<PracticeCard id="math-ch1-missing-13" type="example" title="積分因子兩種判別：乘積型微分方程" source="正式教材第一章 P.19、P.21 · 1.5 Example（case 3 / case 4）" topic="積分因子">
 
 > 來源類型：正式教材 PDF；同一方程在 P.19 與 P.21 分別用 $I(x+y)$、$I(xy)$ 兩種形式示範。
 
@@ -439,7 +439,7 @@ $$x+y+\ln|x|+\ln|y|=C'.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-14" type="example" title="積分因子：$x^2-y+\ln|y|=C$" source="正式教材第一章 P.22、P.23 · 1.5 Example" topic="積分因子">
+<PracticeCard id="math-ch1-missing-14" type="example" title="積分因子：含對數勢函數" source="正式教材第一章 P.22、P.23 · 1.5 Example" topic="積分因子">
 
 > 來源類型：正式教材 PDF。
 
@@ -472,7 +472,7 @@ $$x^2-y+\ln|y|=C,\qquad y\neq0.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-15" type="example" title="可分離方程：$y-3-xy'=0$" source="正式教材第一章 P.23、P.24 · Example" topic="可分離變數">
+<PracticeCard id="math-ch1-missing-15" type="example" title="可分離方程：常數與乘積項" source="正式教材第一章 P.23、P.24 · Example" topic="可分離變數">
 
 > 來源類型：正式教材 PDF。
 
@@ -501,7 +501,7 @@ $$y(x)=3+Cx.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-16" type="example" title="齊次型一階方程：$xy'=y^2/x+y$" source="正式教材第一章 P.24、P.25 · Homogeneous D.E. Example" topic="齊次型一階 ODE">
+<PracticeCard id="math-ch1-missing-16" type="example" title="齊次型一階方程：二次相依項" source="正式教材第一章 P.24、P.25 · Homogeneous D.E. Example" topic="齊次型一階 ODE">
 
 > 來源類型：正式教材 PDF。
 
@@ -532,7 +532,7 @@ $$y(x)=-\frac{x}{\ln|x|+C}.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-17" type="example" title="Bernoulli 方程：$y'+y/x=3x^2y^3$" source="正式教材第一章 P.25 · Bernoulli Example" topic="Bernoulli 方程">
+<PracticeCard id="math-ch1-missing-17" type="example" title="Bernoulli 方程：三次非線性項" source="正式教材第一章 P.25 · Bernoulli Example" topic="Bernoulli 方程">
 
 > 來源類型：正式教材 PDF；屬正式教材中的方法示範。
 
@@ -563,7 +563,7 @@ $$y(x)=\pm\frac{1}{\sqrt{Cx^2-6x^3}}.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch1-missing-18" type="example" title="Riccati 方程：已知特解 $y_s=1$" source="正式教材第一章 P.25、P.26 · Riccati Example" topic="Riccati 方程">
+<PracticeCard id="math-ch1-missing-18" type="example" title="Riccati 方程：已知常數特解" source="正式教材第一章 P.25、P.26 · Riccati Example" topic="Riccati 方程">
 
 > 來源類型：正式教材 PDF；屬講義中的方法示範，不是 101 題庫題。
 
