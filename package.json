@@ -10,7 +10,8 @@
     "check:katex": "node scripts/check-katex.js",
     "check:subject-index": "node scripts/check-subject-index-render.js",
     "check:subject-routes": "node scripts/check-subject-routes.js",
-    "check:mathjax": "node scripts/check-mathjax.js"
+    "check:mathjax": "node scripts/check-mathjax.js",
+    "check:practice-pages": "node scripts/check-practice-pages.js"
   },
   "dependencies": {
     "katex": "^0.16.21",
