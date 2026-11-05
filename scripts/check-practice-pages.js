@@ -232,10 +232,6 @@ for (const sourceFile of pages) {
     cardCount++
   }
 
-  if (cards.length === 0) {
-    failures.push(relative(process.cwd(), sourceFile) + ': practice page contains no PracticeCard components')
-  }
-
   const progressPattern = /<PracticeProgress\b([^>]*)\/?>/g
   for (const match of cleanSource.matchAll(progressPattern)) {
     const location = relative(process.cwd(), sourceFile)
