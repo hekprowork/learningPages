@@ -233,14 +233,14 @@ import { withBase } from 'vitepress'
         <tr>
           <td><strong>Chapter 5: Operational Amplifiers</strong></td>
           <td>理想 Op-Amp 虛短路虛斷路、反相/同相、差動放大與級聯</td>
-          <td>35 題（含老師指定章末習題 9 題）</td>
-          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0005-chapter5-examples.html')">練習題卡 →</a></td>
+          <td>119 題（26 題範例與練習、93 題課本章末習題）</td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0005-chapter5-examples.html')">範例與練習 →</a> · <a class="hub-lesson-link" :href="withBase('/circuits/practice/0009-chapter5-textbook-problems.html')">章末習題 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 6: Capacitors and Inductors</strong></td>
           <td>電容與電感元件特性、串並聯等效、儲能與初始條件分析</td>
-          <td>精選題庫</td>
-          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0006-chapter6-examples.html')">練習題卡 →</a></td>
+          <td>108 題（30 題範例與練習、78 題課本章末習題）</td>
+          <td><a class="hub-lesson-link" :href="withBase('/circuits/practice/0006-chapter6-examples.html')">範例與練習 →</a> · <a class="hub-lesson-link" :href="withBase('/circuits/practice/0010-chapter6-textbook-problems.html')">章末習題 →</a></td>
         </tr>
         <tr>
           <td><strong>Chapter 7: First-Order Circuits</strong></td>
