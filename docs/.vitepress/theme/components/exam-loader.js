@@ -1,10 +1,16 @@
 // Accept unqualified IDs when unique; subject:id disambiguates future collisions.
 export function resolveQuestions(catalog, ids) {
+  const seen = new Set()
   return [...ids].map(key => {
     const matches = catalog.filter(q => key === `${q.subject}:${q.id}` || key === q.id)
     return matches.length === 1 ? { key, question: matches[0] } : {
       key, error: matches.length ? '題目 ID 不唯一，請使用 科目:ID' : '索引中找不到此題目'
     }
+  }).filter(row => {
+    const identity = row.question ? `${row.question.subject}:${row.question.id}` : row.key
+    if (seen.has(identity)) return false
+    seen.add(identity)
+    return true
   })
 }
 

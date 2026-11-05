@@ -35,3 +35,7 @@ test('missing source cards fail visibly, aborted navigation does not return stal
  const controller=new AbortController();controller.abort()
  await assert.rejects(loadExam(row,'https://example.com/',async()=>{throw new Error('aborted')},Parser,controller.signal),/aborted/)
 })
+
+test('qualified and unqualified aliases do not duplicate the same card',()=>{
+ assert.equal(resolveQuestions(catalog,['a','circuits:a']).length,1)
+})
