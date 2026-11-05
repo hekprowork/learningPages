@@ -389,7 +389,7 @@ $$y(x) = C_1 e^{3x} + C_2 e^{-2x} - 2x e^x - \frac{1}{3}e^x$$
 
 ## 課堂精選範例與進階解法 (Lectures & Advanced Methods)
 
-<PracticeCard id="math-ch2-prob-11" type="example" title="二階常係數共振現象（特解共振乘 $x$）" source="Slide P7-P8 精選範例" topic="待定係數共振型">
+<PracticeCard id="math-ch2-prob-11" type="example" title="二階常係數共振現象（特解含一次因子）" source="Slide P7-P8 精選範例" topic="待定係數共振型">
 
 **題目**：
 
