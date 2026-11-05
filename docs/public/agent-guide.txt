@@ -20,7 +20,7 @@
 
 ## 組卷與交付
 
-7. 按出題順序將 ID 放入 https://hekprowork.github.io/learningPages/exam.html 的 ids 參數，使用 URLSearchParams 或等效編碼；例如 https://hekprowork.github.io/learningPages/exam.html?ids=ch4-ex-4-1,math-ch3-prob-1 。跨章、跨科放在同一連結，無需拆成多個原頁連結。若不同科目出現同名 ID，使用 circuits:ID 等「科目:ID」形式。
+7. 按出題順序將「科目:ID」放入 https://hekprowork.github.io/learningPages/exam.html 的 ids 參數，使用 URLSearchParams 或等效編碼一次；例如 https://hekprowork.github.io/learningPages/exam.html?ids=circuits%3Ach4-ex-4-1,engineering-math%3Amath-ch3-prob-1 。冒號為 %3A，不應重複編碼為 %253A。跨章、跨科放在同一連結，無需拆成多個原頁連結。網址放在 text 程式碼區塊內，單獨一行，不使用 Markdown 超連結，也不包成 Google 搜尋網址。另以 text 程式碼區塊列出選定的科目:ID（每行一題），若使用者已在網站備妥候選集，可貼回原 Prompt 產生器核對候選範圍、題數與重複 ID，由網站產生可點擊的直接連結。
 8. repo_path 是 GitHub 原題路徑，並非網站路徑。尤其電子學 practice-source 不直接發布，組卷頁會自動找出對應的工作簿。
 9. 回覆模擬考連結、簡短題單（題名、ID、教材題號／頁碼）、主題分配與時間建議。預設不在初次回覆揭露答案；保留教材「未提供答案」「自行推導」等註記。使用者要求一次一題時，僅提供當前題目。
 10. 交付前核對連結中的 ID、題數與順序。能操作瀏覽器時，檢查組卷頁的「已載入」題數、圖片、公式與載入錯誤。組卷頁需要 JavaScript；HTTP 200 與純文字抓取不代表題卡成功載入。未執行畫面驗證時，明說僅核對索引與本站原題。

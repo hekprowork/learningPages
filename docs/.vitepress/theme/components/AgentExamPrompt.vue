@@ -5,7 +5,13 @@
       <label class="agent-prompt-scope">章節或主題範圍<input v-model="request.scope" required :aria-invalid="touched.scope && !!errors.scope" aria-describedby="agent-scope-help" placeholder="例如：第四章；跨科請同時列出科目" @blur="touched.scope = true" /><span id="agent-scope-help" class="field-help">{{ touched.scope && errors.scope ? errors.scope : '跨章、跨科皆可，請寫出各科範圍。' }}</span></label>
       <label>題數<input v-model="request.count" type="number" min="1" max="100" step="1" required :aria-invalid="touched.count && !!errors.count" aria-describedby="agent-count-help" @blur="touched.count = true" /><span id="agent-count-help" class="field-help">{{ touched.count && errors.count ? errors.count : '1–100 題' }}</span></label>
       <label>作答時間（分鐘）<input v-model="request.minutes" type="number" min="1" max="480" step="1" required :aria-invalid="touched.minutes && !!errors.minutes" aria-describedby="agent-time-help" @blur="touched.minutes = true" /><span id="agent-time-help" class="field-help">{{ touched.minutes && errors.minutes ? errors.minutes : '1–480 分鐘，供 agent 分配時間。' }}</span></label>
-      <label class="agent-prompt-scope">題型<select v-model="request.type"><option v-for="option in TYPE_OPTIONS" :key="option.value" :value="option.value">{{ option.label }}</option></select></label>
+      <fieldset class="question-types" :aria-invalid="!!typeSelection.error" aria-describedby="agent-type-help">
+        <legend>題型</legend>
+        <div class="question-type-options">
+          <label v-for="option in TYPE_OPTIONS" :key="option.value"><input v-model="selectedTypes" type="checkbox" :value="option.value" />{{ option.label }}</label>
+        </div>
+        <span id="agent-type-help" class="field-help">{{ typeSelection.error || '可複選題型。' }}</span>
+      </fieldset>
     </div>
     <div class="agent-prompt-actions">
       <button type="submit" :disabled="!valid || state === 'loading'" :aria-busy="state === 'loading'" :data-state="state">{{ state === 'loading' ? '正在複製…' : state === 'success' ? '已複製 Prompt' : '複製出題 Prompt' }}</button>
@@ -16,8 +22,13 @@
 </template>
 <script setup>
 import { reactive, computed, ref, watch } from 'vue'
-import { SUBJECT_OPTIONS, TYPE_OPTIONS, validateExamRequest, buildAgentExamPrompt } from './agent-exam-prompt.js'
-const request = reactive({ subject: 'circuits', scope: '第四章', count: 5, minutes: 60, type: 'example,practice' })
+import { SUBJECT_OPTIONS, TYPE_OPTIONS, DEFAULT_TYPES, parseQuestionTypes, validateExamRequest, buildAgentExamPrompt } from './agent-exam-prompt.js'
+const request = reactive({ subject: 'circuits', scope: '第四章', count: 5, minutes: 60, type: DEFAULT_TYPES })
+const typeSelection = computed(() => parseQuestionTypes(request.type))
+const selectedTypes = computed({
+  get: () => typeSelection.value.types,
+  set: values => { request.type = TYPE_OPTIONS.filter(option => values.includes(option.value)).map(option => option.value).join(',') }
+})
 const touched = reactive({ scope: false, count: false, minutes: false })
 const errors = computed(() => validateExamRequest(request))
 const valid = computed(() => !Object.values(errors.value).some(Boolean))
@@ -44,6 +55,14 @@ async function copyPrompt() {
 }
 </script>
 <style scoped>
+.question-types { grid-column: 1 / -1; min-width: 0; margin: 0; padding: .75rem; border: 1px solid var(--vp-c-border); border-radius: 4px; }
+.question-types legend { padding-inline: .25rem; font-size: .875rem; font-weight: 600; }
+.question-type-options { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+.question-types .question-type-options label { display: flex; flex-direction: row; align-items: center; min-height: 44px; margin: 0; gap: .5rem; cursor: pointer; }
+.question-types .question-type-options input { width: 1rem; height: 1rem; min-height: 0; padding: 0; accent-color: var(--vp-c-text-1); }
+.question-types[aria-invalid="true"] { border-color: var(--vp-c-danger-1); }
+.question-types .field-help { display: block; font-size: .75rem; color: var(--vp-c-text-2); }
+
 /* Hallmark · component: agent-prompt · genre: editorial · theme: design.md
  * pre-emit critique: P4 H4 E4 S5 R5 V4
  * states: default · hover · focus · active · disabled · loading · error · success */

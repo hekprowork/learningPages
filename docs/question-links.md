@@ -13,6 +13,7 @@ https://hekprowork.github.io/learningPages/exam.html?ids=ch4-ex-4-1,math-ch3-pro
 ```
 
 - 題目按網址中的順序顯示，重複 ID 只顯示一次，也接受 `?ids=ID1&ids=ID2`。
+- [出題 Prompt 產生器](/agent-exam#offline-mode)可先按科目、章節與題型篩選候選集，再把 agent 回傳的 ID 或本站試卷網址貼回核對。網站會拒絕範圍外、重複、題數不符的選題與 Google 搜尋網址，並產生只編碼一次的直接網址。核對成功不代表已驗證動態題卡載入。
 - ID 與 TSV 索引一致；若未來有科目共用 ID，可寫成 `circuits:題目ID` 等 `科目:ID` 形式。
 - 缺少或空的 `ids` 不會列出整個題庫；未知 ID、原頁載入失敗、找不到題卡會逐題提示，可點「重新載入」。
 - 題幹、圖片、公式與詳解取自已發布的原頁。詳解預設收合，每題有「查看原頁」連結。
