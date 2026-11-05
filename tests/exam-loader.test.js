@@ -39,3 +39,11 @@ test('missing source cards fail visibly, aborted navigation does not return stal
 test('qualified and unqualified aliases do not duplicate the same card',()=>{
  assert.equal(resolveQuestions(catalog,['a','circuits:a']).length,1)
 })
+
+test('excluded source Markdown resolves to its published workbook route',()=>{
+ const catalog=readQuestionCatalog(process.cwd())
+ const electronics=catalog.filter(q=>q.subject==='electronics')
+ assert.equal(new Set(electronics.map(q=>q.path)).size,3)
+ assert.ok(electronics.every(q=>!q.path.includes('practice-source')))
+ assert.equal(electronics.find(q=>q.id==='elec-ch1-ex-1-1').path,'electronics/practice/0001-chapter1-workbook.html')
+})
