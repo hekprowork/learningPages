@@ -50,6 +50,9 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
+      - name: Validate agent prompt page
+        run: npm run check:agent-prompt
+
       - name: Validate published TSV index
         run: npm run check:public-index
 
