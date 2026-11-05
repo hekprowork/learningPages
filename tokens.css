@@ -1,0 +1,77 @@
+/* Hallmark · macrostructure: Asymmetric Desktop Workbench · genre: editorial · theme: Monograph
+ * pre-emit critique: P4 H4 E4 S4 R4 V3
+ * anchor: #0f172a (academic monochrome)
+ */
+:root {
+  --color-agent-print-paper: #ffffff;
+  --color-agent-print-ink: #0f172a;
+  --color-agent-paper: var(--hub-paper, #f8fafc);
+  --color-agent-surface: var(--hub-paper-card, #ffffff);
+  --color-agent-surface-muted: var(--hub-paper-muted, #f1f5f9);
+  --color-agent-surface-hover: var(--hub-paper-hover, #e2e8f0);
+
+  --color-agent-ink-title: var(--hub-ink-title, #0f172a);
+  --color-agent-ink-primary: var(--hub-ink-primary, #1e293b);
+  --color-agent-ink-secondary: var(--hub-ink-secondary, #475569);
+  --color-agent-ink-tertiary: var(--hub-ink-tertiary, #64748b);
+  --color-agent-ink-muted: var(--hub-ink-muted, #94a3b8);
+
+  --color-agent-rule-light: var(--hub-rule-light, #e2e8f0);
+  --color-agent-rule-border: var(--hub-rule-border, #cbd5e1);
+  --color-agent-rule-dark: var(--hub-rule-dark, #334155);
+  --color-agent-control-border: var(--hub-ink-secondary, #475569);
+
+  --color-agent-accent: var(--hub-accent-primary, #0f172a);
+  --color-agent-accent-subtle: var(--hub-accent-subtle, #f8fafc);
+  --color-agent-accent-ink: var(--hub-accent-badge-text, #ffffff);
+  --color-agent-focus: var(--hub-focus, #2563eb);
+  --color-agent-danger: var(--vp-c-danger-1, #dc2626);
+  --color-agent-success: var(--vp-c-success-1, #16a34a);
+
+  --font-agent-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  --font-agent-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  --font-agent-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --space-agent-3xs: 4px;
+  --space-agent-2xs: 8px;
+  --space-agent-xs: 12px;
+  --space-agent-sm: 16px;
+  --space-agent-md: 24px;
+  --space-agent-lg: 32px;
+  --space-agent-xl: 48px;
+  --space-agent-2xl: 64px;
+
+  --radius-agent-sm: var(--hub-radius-sm, 4px);
+  --radius-agent-md: var(--hub-radius-md, 8px);
+  --radius-agent-lg: var(--hub-radius-lg, 12px);
+  --radius-agent-pill: var(--hub-radius-pill, 9999px);
+
+  --shadow-agent-sm: var(--hub-shadow-sm, 0 1px 2px 0 rgba(15, 23, 42, 0.05));
+  --shadow-agent-md: var(--hub-shadow-md, 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04));
+
+  --dur-agent-short: 150ms;
+  --ease-agent-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark {
+  --color-agent-paper: var(--hub-paper, #0b0f17);
+  --color-agent-surface: var(--hub-paper-card, #131924);
+  --color-agent-surface-muted: var(--hub-paper-muted, #1c2433);
+  --color-agent-surface-hover: var(--hub-paper-hover, #263143);
+
+  --color-agent-ink-title: var(--hub-ink-title, #f8fafc);
+  --color-agent-ink-primary: var(--hub-ink-primary, #e2e8f0);
+  --color-agent-ink-secondary: var(--hub-ink-secondary, #94a3b8);
+  --color-agent-ink-tertiary: var(--hub-ink-secondary, #94a3b8);
+  --color-agent-ink-muted: var(--hub-ink-muted, #475569);
+
+  --color-agent-rule-light: var(--hub-rule-light, #1e293b);
+  --color-agent-rule-border: var(--hub-rule-border, #334155);
+  --color-agent-rule-dark: var(--hub-rule-dark, #475569);
+  --color-agent-control-border: var(--hub-ink-secondary, #94a3b8);
+
+  --color-agent-accent: var(--hub-accent-primary, #f8fafc);
+  --color-agent-accent-subtle: var(--hub-accent-subtle, #1e293b);
+  --color-agent-accent-ink: var(--hub-accent-badge-text, #0f172a);
+  --color-agent-focus: var(--hub-focus, #3b82f6);
+}

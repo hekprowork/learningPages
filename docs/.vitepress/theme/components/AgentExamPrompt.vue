@@ -55,35 +55,33 @@ async function copyPrompt() {
 }
 </script>
 <style scoped>
-.question-types { grid-column: 1 / -1; min-width: 0; margin: 0; padding: .75rem; border: 1px solid var(--vp-c-border); border-radius: 4px; }
-.question-types legend { padding-inline: .25rem; font-size: .875rem; font-weight: 600; }
-.question-type-options { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
-.question-types .question-type-options label { display: flex; flex-direction: row; align-items: center; min-height: 44px; margin: 0; gap: .5rem; cursor: pointer; }
-.question-types .question-type-options input { width: 1rem; height: 1rem; min-height: 0; padding: 0; accent-color: var(--vp-c-text-1); }
-.question-types[aria-invalid="true"] { border-color: var(--vp-c-danger-1); }
-.question-types .field-help { display: block; font-size: .75rem; color: var(--vp-c-text-2); }
-
-/* Hallmark · component: agent-prompt · genre: editorial · theme: design.md
- * pre-emit critique: P4 H4 E4 S5 R5 V4
+/* Hallmark · component: agent-prompt · genre: editorial · theme: Monograph
+ * pre-emit critique: P4 H4 E4 S4 R4 V3
  * states: default · hover · focus · active · disabled · loading · error · success */
-.agent-prompt { min-width: 0; margin-block: 1.5rem; }
+.agent-prompt { min-width: 0; margin-block: 1rem; }
 .agent-prompt-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.agent-prompt label { display: flex; flex-direction: column; gap: .375rem; font-size: .875rem; font-weight: 600; min-width: 0; }
+.agent-prompt label { display: flex; flex-direction: column; gap: .375rem; font-size: .875rem; font-weight: 600; min-width: 0; color: var(--color-agent-ink-title); }
 .agent-prompt-scope { grid-column: 1 / -1; }
-.agent-prompt input, .agent-prompt select, .agent-prompt textarea { width: 100%; min-width: 0; border: 1px solid var(--vp-c-border); border-radius: var(--hub-radius-sm); background: var(--vp-c-bg); color: var(--vp-c-text-1); padding: .625rem .75rem; font: inherit; font-size: 1rem; font-weight: 400; }
+.agent-prompt input, .agent-prompt select, .agent-prompt textarea { width: 100%; min-width: 0; border: 1px solid var(--color-agent-control-border); border-radius: var(--radius-agent-sm); background: var(--color-agent-surface); color: var(--color-agent-ink-primary); padding: .625rem .75rem; font: inherit; font-size: 1rem; font-weight: 400; box-sizing: border-box; }
 .agent-prompt input, .agent-prompt select, .agent-prompt button { min-height: 44px; }
-.agent-prompt textarea { resize: vertical; line-height: 1.6; overflow-wrap: anywhere; white-space: pre-wrap; }
-.agent-prompt input:focus-visible, .agent-prompt select:focus-visible, .agent-prompt textarea:focus-visible, .agent-prompt button:focus-visible { outline: 2px solid var(--hub-focus); outline-offset: 2px; }
-.agent-prompt [aria-invalid="true"] { border-color: var(--vp-c-danger-1); }
-.field-help { min-height: 1.5em; font-size: .75rem; font-weight: 400; color: var(--vp-c-text-2); }
-.agent-prompt-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin-block: 1.5rem; }
-.agent-prompt button { background: var(--vp-c-text-1); color: var(--vp-c-bg); padding: .625rem 1rem; border: 1px solid var(--vp-c-text-1); border-radius: var(--hub-radius-sm); font-weight: 600; cursor: pointer; white-space: nowrap; }
+.agent-prompt textarea { resize: vertical; line-height: 1.6; overflow-wrap: anywhere; white-space: pre-wrap; font-family: var(--font-agent-mono); font-size: .875rem; }
+.agent-prompt input:focus-visible, .agent-prompt select:focus-visible, .agent-prompt textarea:focus-visible, .agent-prompt button:focus-visible { outline: 2px solid var(--color-agent-focus); outline-offset: 2px; }
+.agent-prompt [aria-invalid="true"] { border-color: var(--color-agent-danger); }
+.field-help { min-height: 1.5em; font-size: .75rem; font-weight: 400; color: var(--color-agent-ink-tertiary); }
+.question-types { grid-column: 1 / -1; min-width: 0; margin: 0; padding: .75rem; border: 1px solid var(--color-agent-control-border); border-radius: var(--radius-agent-sm); }
+.question-types legend { padding-inline: .25rem; font-size: .875rem; font-weight: 600; color: var(--color-agent-ink-title); }
+.question-type-options { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+.question-types .question-type-options label { display: flex; flex-direction: row; align-items: center; min-height: 44px; margin: 0; gap: .5rem; cursor: pointer; font-weight: 400; color: var(--color-agent-ink-primary); }
+.question-types .question-type-options input { width: 1rem; height: 1rem; min-height: 0; padding: 0; accent-color: var(--color-agent-accent); }
+.question-types[aria-invalid="true"] { border-color: var(--color-agent-danger); }
+.agent-prompt-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin-block: 1.25rem; }
+.agent-prompt button { background: var(--color-agent-accent); color: var(--color-agent-accent-ink); padding: .625rem 1.25rem; border: 1px solid var(--color-agent-accent); border-radius: var(--radius-agent-sm); font-weight: 600; cursor: pointer; white-space: nowrap; transition: background-color var(--dur-agent-short) var(--ease-agent-out); }
 .agent-prompt button:active:not(:disabled) { transform: translateY(1px); }
 .agent-prompt button:disabled { opacity: .5; cursor: not-allowed; }
 .agent-prompt button[data-state="loading"] { cursor: progress; }
-.agent-prompt button[data-state="error"] { outline: 2px solid var(--vp-c-danger-1); outline-offset: 2px; }
-.agent-prompt button[data-state="success"] { border-color: var(--vp-c-text-2); }
-.agent-prompt [role="status"] { font-size: .8rem; color: var(--vp-c-text-2); }
-@media (hover: hover) { .agent-prompt button:hover:not(:disabled) { background: var(--vp-c-text-2); } .agent-prompt input:hover, .agent-prompt select:hover, .agent-prompt textarea:hover { background: var(--vp-c-bg-soft); } }
+.agent-prompt button[data-state="error"] { outline: 2px solid var(--color-agent-danger); outline-offset: 2px; }
+.agent-prompt button[data-state="success"] { border-color: var(--color-agent-ink-secondary); }
+.agent-prompt [role="status"] { font-size: .8125rem; color: var(--color-agent-ink-secondary); }
+@media (hover: hover) { .agent-prompt button:hover:not(:disabled) { background: var(--color-agent-ink-secondary); } .agent-prompt input:hover, .agent-prompt select:hover, .agent-prompt textarea:hover { background: var(--color-agent-surface-hover); } }
 @media (max-width: 480px) { .agent-prompt-fields { grid-template-columns: minmax(0, 1fr); } }
 </style>

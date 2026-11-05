@@ -47,7 +47,7 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     mode.value = 'compact'; mode.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
     document.querySelector('button[type=submit]').click(); await settle()
     assert.match(document.querySelector('textarea[readonly]').value, /依索引選題/)
-    document.querySelector('.offline-controls > button').click(); await settle()
+    document.querySelector('[data-action="copy-candidate-prompt"]').click(); await settle()
     assert.match(copied, /篩選後 TSV/)
     const selection = '.selection-return textarea'
     await change(selection, 'circuits:q2')
@@ -58,7 +58,7 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     document.querySelector('.selection-return button[type=submit]').click(); await settle()
     assert.match(document.querySelector('.selection-return [role=status]').textContent, /Google/)
     navigator.clipboard.writeText = async () => { throw Error('denied') }
-    document.querySelector('.offline-controls > button').click(); await settle()
+    document.querySelector('[data-action="copy-candidate-prompt"]').click(); await settle()
     const preview = document.querySelector('textarea[readonly]')
     assert.equal(preview.selectionEnd, preview.value.length)
 

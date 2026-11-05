@@ -1,55 +1,167 @@
 <template>
   <section id="offline-mode" class="offline-model">
-    <div class="offline-controls">
-      <h2>依章節與題型準備出題 Prompt</h2>
-      <p>網站先篩選候選題，agent 再挑題。完整模式附原始題幹與 LaTeX；精簡模式只附 TSV，適合選題後到網站作答。</p>
-      <form @submit.prevent="prepare">
-        <div class="offline-fields">
-          <label>科目<select v-model="request.subject"><option v-for="q in subjects" :key="q.value" :value="q.value">{{ q.label }}</option></select></label>
-          <label>章節<select v-model="request.chapter"><option v-for="chapter in chapters" :key="chapter" :value="chapter">Chapter {{ chapter }}</option></select></label>
-          <label>模考題數（1–10）<input v-model="request.count" type="number" min="1" max="10" step="1" required /></label>
-          <label>候選題數（留空使用全部）<input v-model="request.candidateLimit" type="number" :min="request.count" step="1" aria-describedby="candidate-limit-help" /><span id="candidate-limit-help" class="field-help">留空使用全部符合條件的候選題；填入數量只限制候選集，不影響模考題數。</span></label>
-          <label>作答時間（分鐘）<input v-model="request.minutes" type="number" min="1" max="480" step="1" required /></label>
-          <fieldset class="question-types" :aria-invalid="!!typeSelection.error" aria-describedby="offline-type-help">
-            <legend>題型</legend>
-            <div class="question-type-options">
-              <label v-for="option in TYPE_OPTIONS" :key="option.value"><input v-model="selectedTypes" type="checkbox" :value="option.value" />{{ option.label }}</label>
+    <div class="offline-controls workbench-layout">
+      <div class="workbench-panel workbench-settings">
+        <header class="panel-header">
+          <h2 class="panel-title">依章節與題型準備出題 Prompt</h2>
+          <p class="panel-subtitle">網站先篩選候選題，agent 再挑題。完整模式附原始題幹與 LaTeX；精簡模式只附 TSV，適合選題後到網站作答。</p>
+        </header>
+
+        <form class="offline-form" @submit.prevent="prepare">
+          <div class="offline-fields">
+            <div class="form-row-split">
+              <label class="field-label">
+                <span class="label-text">科目</span>
+                <select v-model="request.subject" class="field-control">
+                  <option v-for="q in subjects" :key="q.value" :value="q.value">{{ q.label }}</option>
+                </select>
+              </label>
+              <label class="field-label">
+                <span class="label-text">章節</span>
+                <select v-model="request.chapter" class="field-control">
+                  <option v-for="chapter in chapters" :key="chapter" :value="chapter">Chapter {{ chapter }}</option>
+                </select>
+              </label>
             </div>
-            <span id="offline-type-help" class="field-help">{{ typeSelection.error || '可複選題型。' }}</span>
-          </fieldset>
-          <label>Prompt 內容<select v-model="request.mode"><option value="full">完整：TSV＋Markdown／LaTeX 題幹</option><option value="compact">精簡：只有候選 TSV</option></select></label>
-        </div>
-        <label v-if="request.mode === 'full'" class="offline-checkbox"><input v-model="request.textOnly" type="checkbox" />只選無圖題</label>
-        <p>目前條件符合 {{ matchingCount }} 題。候選題數留空時準備全部符合條件的題目；指定數量時依主題分散取樣。完整模式會排除未載入或不符無圖條件的題目，以實際備妥數量為準。</p>
-        <button type="submit" :disabled="busy || !!typeSelection.error" :aria-busy="busy">{{ busy ? '正在備妥原題…' : '準備候選原題' }}</button>
-      </form>
-      <p role="status">{{ message }}</p>
-      <template v-if="bundle">
-        <p>已備妥 {{ bundle.entries.length }} 題候選，請讓 agent 選出 {{ request.count }} 題。<strong v-if="request.mode === 'full' && bundle.entries.some(q => q.hasFigures)">含圖像題：可在網站看圖作答；需要 agent 讀圖時，請附候選題 PDF。</strong></p>
-        <button @click="copy">{{ request.mode === 'full' ? '複製完整題目 Prompt' : '複製候選 TSV Prompt' }}</button>
-        <button v-if="request.mode === 'full'" @click="print">列印／存成 PDF</button>
-        <label>出題 Prompt 預覽<textarea ref="preview" :value="bundle.prompt" readonly rows="12" /></label>
-        <form class="selection-return" @submit.prevent="generateUrl">
-          <h3>貼回 agent 的選題結果</h3>
-          <p>貼上 ID 清單或本站試卷網址。網站會核對候選範圍、題數與重複 ID，再產生直接連結。</p>
-          <label>選定的 ID 或網址<textarea v-model="selectionInput" rows="4" placeholder="每行一個科目:ID，也接受逗號分隔" required /></label>
-          <button type="submit">核對並產生試卷連結</button>
-          <p role="status">{{ selectionMessage }}</p>
-          <template v-if="selectedExam">
-            <p><a :href="selectedExam.url">開啟試卷（{{ selectedExam.questions.length }} 題）</a></p>
-            <label>可複製的直接網址<input ref="urlPreview" :value="selectedExam.url" readonly /></label>
-            <button type="button" @click="copyUrl">複製試卷網址</button>
-            <p>已核對 ID、題數與順序；尚未驗證動態試卷載入。</p>
-          </template>
+
+            <div class="form-row-split">
+              <label class="field-label">
+                <span class="label-text">模考題數（1–10）</span>
+                <input v-model="request.count" type="number" min="1" max="10" step="1" required class="field-control" />
+              </label>
+              <label class="field-label">
+                <span class="label-text">候選題數（留空使用全部）</span>
+                <input v-model="request.candidateLimit" type="number" :min="request.count" step="1" aria-describedby="candidate-limit-help" class="field-control" />
+                <span id="candidate-limit-help" class="field-help">留空使用全部符合條件的候選題；填入數量只限制候選集，不影響模考題數。</span>
+              </label>
+            </div>
+
+            <div class="form-row-split">
+              <label class="field-label">
+                <span class="label-text">作答時間（分鐘）</span>
+                <input v-model="request.minutes" type="number" min="1" max="480" step="1" required class="field-control" />
+              </label>
+              <label class="field-label">
+                <span class="label-text">Prompt 內容</span>
+                <select v-model="request.mode" class="field-control">
+                  <option value="full">完整：TSV＋Markdown／LaTeX 題幹</option>
+                  <option value="compact">精簡：只有候選 TSV</option>
+                </select>
+              </label>
+            </div>
+
+            <fieldset class="question-types" :aria-invalid="!!typeSelection.error" aria-describedby="offline-type-help">
+              <legend>題型</legend>
+              <div class="question-type-options">
+                <label v-for="option in TYPE_OPTIONS" :key="option.value" class="checkbox-label">
+                  <input v-model="selectedTypes" type="checkbox" :value="option.value" class="field-checkbox" />
+                  <span>{{ option.label }}</span>
+                </label>
+              </div>
+              <span id="offline-type-help" class="field-help">{{ typeSelection.error || '可複選題型。' }}</span>
+            </fieldset>
+          </div>
+
+          <div v-if="request.mode === 'full'" class="form-row-toggle">
+            <label class="offline-checkbox">
+              <input v-model="request.textOnly" type="checkbox" class="field-checkbox" />
+              <span>只選無圖題</span>
+            </label>
+          </div>
+
+          <div class="form-summary">
+            <p class="summary-text">目前條件符合 <strong>{{ matchingCount }}</strong> 題。候選題數留空時準備全部符合條件的題目；指定數量時依主題分散取樣。完整模式會排除未載入或不符無圖條件的題目，以實際備妥數量為準。</p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" :disabled="busy || !!typeSelection.error" :aria-busy="busy">
+              {{ busy ? '正在備妥原題…' : '準備候選原題' }}
+            </button>
+          </div>
         </form>
-      </template>
+
+        <p role="status" class="status-msg">{{ message }}</p>
+      </div>
+
+      <div class="workbench-panel workbench-output">
+        <template v-if="bundle">
+          <div class="output-header">
+            <div class="output-meta">
+              <span class="status-pill status-ready">已就緒</span>
+              <p class="output-summary">
+                已備妥 <strong>{{ bundle.entries.length }}</strong> 題候選，請讓 agent 選出 <strong>{{ request.count }}</strong> 題。
+                <strong v-if="request.mode === 'full' && bundle.entries.some(q => q.hasFigures)" class="figure-notice">
+                  含圖像題：可在網站看圖作答；需要 agent 讀圖時，請附候選題 PDF。
+                </strong>
+              </p>
+            </div>
+            <div class="output-button-group">
+              <button type="button" class="btn-copy-prompt" data-action="copy-candidate-prompt" @click="copy">
+                {{ request.mode === 'full' ? '複製完整題目 Prompt' : '複製候選 TSV Prompt' }}
+              </button>
+              <button v-if="request.mode === 'full'" type="button" class="btn-print" @click="print">
+                列印／存成 PDF
+              </button>
+            </div>
+          </div>
+
+          <div class="prompt-preview-block">
+            <label for="offline-prompt-preview" class="preview-label">
+              出題 Prompt 預覽
+              <textarea id="offline-prompt-preview" ref="preview" :value="bundle.prompt" readonly rows="12" class="prompt-textarea" />
+            </label>
+          </div>
+
+          <form class="selection-return" @submit.prevent="generateUrl">
+            <h3 class="selection-title">貼回 agent 的選題結果</h3>
+            <p class="field-help">貼上 ID 清單或本站試卷網址。網站會核對候選範圍、題數與重複 ID，再產生直接連結。</p>
+            <label class="field-label">
+              <span class="label-text">選定的 ID 或網址</span>
+              <textarea v-model="selectionInput" rows="3" placeholder="每行一個科目:ID，也接受逗號分隔" required class="field-control return-textarea" />
+            </label>
+            <button type="submit" class="btn-secondary btn-validate">核對並產生試卷連結</button>
+            <p role="status" class="selection-status">{{ selectionMessage }}</p>
+
+            <template v-if="selectedExam">
+              <div class="selected-exam-card">
+                <p class="exam-link-p"><a :href="selectedExam.url" class="exam-link" target="_blank" rel="noopener">開啟試卷（{{ selectedExam.questions.length }} 題）</a></p>
+                <label class="field-label">
+                  <span class="label-text">可複製的直接網址</span>
+                  <input ref="urlPreview" :value="selectedExam.url" readonly class="field-control url-preview-input" />
+                </label>
+                <button type="button" class="btn-secondary" @click="copyUrl">複製試卷網址</button>
+                <p class="field-help">已核對 ID、題數與順序；尚未驗證動態試卷載入。</p>
+              </div>
+            </template>
+          </form>
+        </template>
+
+        <template v-else>
+          <div class="workbench-empty-state">
+            <h3 class="empty-state-title">尚未準備候選原題</h3>
+            <p class="empty-state-desc">在左側設定科目、章節與題數條件後，點擊「<strong>準備候選原題</strong>」。產生的完整出題 Prompt 將顯示於此處，支援一鍵複製與後續選題核對。</p>
+            <ol class="workbench-steps">
+              <li><span class="step-num">1</span> 選擇測驗科目、章節與題型</li>
+              <li><span class="step-num">2</span> 點擊「準備候選原題」</li>
+              <li><span class="step-num">3</span> 複製 Prompt 貼給個人 Agent</li>
+              <li><span class="step-num">4</span> 收到選題結果後貼回下方產生試卷連結</li>
+            </ol>
+          </div>
+        </template>
+      </div>
     </div>
+
     <div v-if="bundle && request.mode === 'full'" class="offline-print">
-      <h2>模擬考候選原題（{{ bundle.entries.length }} 題）</h2>
-      <article v-for="(q,i) in bundle.entries" :key="`${q.subject}:${q.id}`" class="offline-question">
-        <h3>候選 {{ i+1 }}：{{ q.subject }}:{{ q.id }} — {{ q.title }}</h3>
-        <div v-html="q.statement" />
-      </article>
+      <div class="gallery-header">
+        <h2 class="gallery-title">模擬考候選原題（{{ bundle.entries.length }} 題）</h2>
+        <span class="gallery-badge">可向下捲動檢視</span>
+      </div>
+      <div class="offline-print-gallery" role="region" aria-label="模擬考候選原題清單" tabindex="0">
+        <article v-for="(q,i) in bundle.entries" :key="`${q.subject}:${q.id}`" class="offline-question">
+          <h3 class="question-title">候選 {{ i+1 }}：{{ q.subject }}:{{ q.id }} — {{ q.title }}</h3>
+          <div class="question-statement" v-html="q.statement" />
+        </article>
+      </div>
     </div>
   </section>
 </template>
@@ -150,15 +262,9 @@ function print() {
 }
 </script>
 <style scoped>
-.offline-controls .field-help { font-size: .75rem; font-weight: 400; line-height: 1.5; color: var(--vp-c-text-2); }
-.question-types { grid-column: 1 / -1; min-width: 0; margin: 0; padding: .75rem; border: 1px solid var(--vp-c-border); border-radius: 4px; }
-.question-types legend { padding-inline: .25rem; font-size: .875rem; font-weight: 600; }
-.question-type-options { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
-.question-types .question-type-options label { display: flex; flex-direction: row; align-items: center; min-height: 44px; margin: 0; gap: .5rem; cursor: pointer; }
-.question-types .question-type-options input { width: 1rem; height: 1rem; min-height: 0; padding: 0; accent-color: var(--vp-c-text-1); }
-.question-types[aria-invalid="true"] { border-color: var(--vp-c-danger-1); }
-.question-types .field-help { display: block; font-size: .75rem; color: var(--vp-c-text-2); }
-
-.offline-model{margin-block:2rem;min-width:0}.offline-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.offline-controls label{display:flex;flex-direction:column;gap:.4rem;margin-block:.75rem}.offline-controls input,.offline-controls select,.offline-controls textarea{font:inherit;font-size:1rem;padding:.6rem;border:1px solid var(--vp-c-border);border-radius:4px;min-width:0;background:var(--vp-c-bg);color:var(--vp-c-text-1)}.offline-controls textarea{resize:vertical;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}.offline-controls .offline-checkbox{flex-direction:row;align-items:center}.selection-return{border-top:1px solid var(--vp-c-border);margin-top:2rem;padding-top:1rem}.offline-controls button{padding:.6rem .8rem;min-height:44px;margin:.3rem .5rem .3rem 0;border:1px solid var(--vp-c-border);border-radius:4px;white-space:nowrap}.offline-controls button:disabled{opacity:.5;cursor:progress}.offline-controls :focus-visible{outline:2px solid var(--hub-focus);outline-offset:2px}.offline-print :deep(img),.offline-print :deep(svg){max-width:100%;height:auto}.offline-question{margin-block:2rem}@media(max-width:480px){.offline-fields{grid-template-columns:minmax(0,1fr)}}
-@media print{:global(body:has(.offline-print)) :global(.VPNav),:global(body:has(.offline-print)) :global(.VPLocalNav),:global(body:has(.offline-print)) :global(.VPSidebar),:global(body:has(.offline-print)) :global(.VPFooter),:global(body:has(.offline-print)) :global(.VPDocFooter),:global(body:has(.offline-print)) :global(.vp-doc>div>:not(.offline-model)){display:none!important}.offline-controls{display:none!important}.offline-question{break-before:page}.offline-question:first-of-type{break-before:auto}:global(body:has(.offline-print)) :global(.VPContent){padding:0!important}}
+/* Hallmark · component: offline-exam-prompt · genre: editorial · theme: Monograph */
+.offline-model {
+  margin-block: 1rem;
+  min-width: 0;
+}
 </style>
