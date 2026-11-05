@@ -2,10 +2,12 @@ import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import type MarkdownIt from 'markdown-it'
 import { defineConfig } from 'vitepress'
+import { publishReaderNavigation } from '../../scripts/question-readers.js'
 import { publishQuestionIndex } from '../../scripts/public-question-index.js'
 
 const projectRoot = resolve(process.cwd())
 publishQuestionIndex(projectRoot)
+publishReaderNavigation(projectRoot)
 const workbookIncludePattern = /<!--\s*workbook-include:\s*cards\s+([^>\s]+)\s*-->/g
 
 const readWorkbookCards = (relativePath: string): string => {

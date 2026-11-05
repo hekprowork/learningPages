@@ -14,6 +14,8 @@ import AgentExamPrompt from './.vitepress/theme/components/AgentExamPrompt.vue'
 
 <AgentExamPrompt />
 
+[直接瀏覽原題目錄](/question-reader/index.html)：每題皆有靜態 HTML，agent 可在本站完成選題，通常無需開啟 GitHub。
+
 你的 agent 需要能讀取公開網址。Prompt 不會自動傳送給任何 AI 服務；請自行貼上使用。
 
 [閱讀公開出題指引](/agent-guide) · [純文字指引](/agent-guide.txt) · [公開題目索引](/question-index)

@@ -4,14 +4,14 @@
 
 ## 讀取來源
 
-1. 優先讀取 HTML 索引頁 https://hekprowork.github.io/learningPages/question-index.html ，取得 TSV 連結與頁面上的 source_commit。版本亦可從 https://hekprowork.github.io/learningPages/question-index/version.txt 讀取。索引根網址為 https://hekprowork.github.io/learningPages/question-index/ 。manifest.json 是可選資訊；工具若對 JSON 回報 PERMISSION_DENIED，直接改用 HTML 或純文字版本資訊，不要因 JSON 不可讀而停止出題，也不要反覆嘗試被拒絕的 JSON 請求。
-2. 只下載需求科目的 TSV：circuits.tsv（電路學）、electronics.tsv（電子學）、engineering-math.tsv（工程數學）、solid-state.tsv（固態電子導論）。跨科時下載對應的多份檔案。檔案為 UTF-8、Tab 分隔，欄位包含 chapter、id、title、type、topic、source、repo_path。一般出題不需要 SHA-256。只有需要檔案完整性校驗且工具支援時，才選用 manifest.json 與 SHA-256；無法執行校驗時繼續核對 TSV 與原題，不得聲稱已完成雜湊驗證。
-3. 索引代表最近成功部署版本。依 HTML 索引頁或 version.txt 的 source_commit（能讀取 JSON 時亦可用 manifest.source_commit）與 repo_path 組成原題網址：https://raw.githubusercontent.com/hekprowork/learningPages/{source_commit}/{repo_path} 。此處大括號是待替換的欄位，不是實際網址。
+1. 最簡單的讀取入口是 https://hekprowork.github.io/learningPages/question-reader/index.html 。先開科目章節目錄，依 ID、題名、題型、主題與教材來源選候選題，再點 ID 讀取單題靜態 HTML。這些頁面不需 JavaScript、JSON、TSV 解析或 GitHub 登入。
+2. 單題頁保留同次部署原題的題幹、圖片與公式，詳解透過獨立連結按需讀取，選題時不必開啟；直接在本站核對即可完成選題。一般出題無需開啟 GitHub、讀 manifest、比對 source_commit 或計算 SHA-256。Agent 若只支援瀏覽器，直接開上述本站目錄與單題連結，不必操作 GitHub 介面。
+3. 需要程式批次篩選時，才使用 https://hekprowork.github.io/learningPages/question-index.html 的公開 TSV。TSV 是 UTF-8、Tab 分隔，按科目下載。原始檔稽核或維護才需要 GitHub；通常依單題頁核對即可。若工具政策不允許讀取某來源，告知限制，使用其允許的本站 HTML；若整站也不可讀，請使用者提供題目檔案。
 
 ## 選題與核對
 
 4. 按 chapter、type、topic、source 選題，涵蓋需求中的主題，依科目與 ID 去重。同一來源檔只讀一次。type 為 example、practice、exercise、homework 或 exam；教材題號相同的題目可能屬於不同題型，須一併核對 type 與 source。
-5. TSV 只含定位資料。讀取選中題目的原始 PracticeCard，核對 ID、完整條件、教材來源與必要圖片。需要圖表而無法讀取時，明確說明限制，或在授權範圍內改選條件完整的題目。難度若由 agent 判斷，標明為估計；作答時間也是估計，不保證與每個人的速度相同。
+5. TSV 只含定位資料。讀取選中題目的本站單題靜態頁，核對 ID、完整條件、教材來源與必要圖片。需要圖表而無法讀取時，明確說明限制，或在授權範圍內改選條件完整的題目。難度若由 agent 判斷，標明為估計；作答時間也是估計，不保證與每個人的速度相同。
 6. 候選題不足時回報實際數量，請使用者決定是否擴大範圍；不自行擴大章節、不重複湊題、不編造 ID、題幹、圖片或標準答案。若需求缺少會改變選題的必要資訊，先一次詢問缺少項目。
 
 ## 組卷與交付
@@ -19,7 +19,7 @@
 7. 按出題順序將 ID 放入 https://hekprowork.github.io/learningPages/exam.html 的 ids 參數，使用 URLSearchParams 或等效編碼；例如 https://hekprowork.github.io/learningPages/exam.html?ids=ch4-ex-4-1,math-ch3-prob-1 。跨章、跨科放在同一連結，無需拆成多個原頁連結。若不同科目出現同名 ID，使用 circuits:ID 等「科目:ID」形式。
 8. repo_path 是 GitHub 原題路徑，並非網站路徑。尤其電子學 practice-source 不直接發布，組卷頁會自動找出對應的工作簿。
 9. 回覆模擬考連結、簡短題單（題名、ID、教材題號／頁碼）、主題分配與時間建議。預設不在初次回覆揭露答案；保留教材「未提供答案」「自行推導」等註記。使用者要求一次一題時，僅提供當前題目。
-10. 交付前核對連結中的 ID、題數與順序。能操作瀏覽器時，檢查組卷頁的「已載入」題數、圖片、公式與載入錯誤。組卷頁需要 JavaScript；HTTP 200 與純文字抓取不代表題卡成功載入。未執行畫面驗證時，明說僅核對索引與原題。
+10. 交付前核對連結中的 ID、題數與順序。能操作瀏覽器時，檢查組卷頁的「已載入」題數、圖片、公式與載入錯誤。組卷頁需要 JavaScript；HTTP 200 與純文字抓取不代表題卡成功載入。未執行畫面驗證時，明說僅核對索引與本站原題。
 
 ## 能力與資料界線
 

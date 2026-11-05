@@ -24,3 +24,5 @@ dist/
 
 # Generated from the canonical question index during VitePress configuration
 docs/public/question-index/
+
+docs/public/question-reader/

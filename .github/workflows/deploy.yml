@@ -56,7 +56,7 @@ jobs:
       - name: Validate published TSV index
         run: npm run check:public-index
 
-      - name: Validate all indexed exam source cards
+      - name: Publish and validate all static question readers
         run: npm run check:exam-render
 
       - name: Validate subject homepage links

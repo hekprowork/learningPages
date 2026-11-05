@@ -23,6 +23,8 @@ JSON 與 SHA-256 為可選的程式校驗資訊，讀不到 JSON 或無法計算
 
 [manifest.json：檔案清單、各科題量、SHA-256 與來源版本](/question-index/manifest.json)
 
+[Agent 直接讀原題：科目章節目錄與單題 HTML](/question-reader/index.html)
+
 ## 外部程式讀取
 
 ```python
