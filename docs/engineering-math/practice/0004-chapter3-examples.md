@@ -37,7 +37,7 @@ $$\frac{1}{s-3}+\frac{2}{s}$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch3-prob-2" type="example" title="求 $\mathcal{L}[te^{2t}]$：第一移位與微乘" source="正式教材第三章 P.46–47 · Example" topic="第一移位 / 微乘">
+<PracticeCard id="math-ch3-prob-2" type="example" title="第一移位與微乘定理" source="正式教材第三章 P.46–47 · Example" topic="第一移位 / 微乘">
 
 **題目**：求
 
@@ -106,7 +106,7 @@ $$\mathcal{L}\left[e^{-2t}(t^3-3t+2)\right]
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch3-prob-5" type="example" title="分段函數：延遲後改為 $\cos t$" source="正式教材第三章 P.51 · Example" topic="分段函數 / 第二移位">
+<PracticeCard id="math-ch3-prob-5" type="example" title="分段函數：延遲後切換為餘弦函數" source="正式教材第三章 P.51 · Example" topic="分段函數 / 第二移位">
 
 **題目**：若
 
@@ -173,7 +173,7 @@ $$\mathcal{L}[f(t)]=-\frac{4}{s}+\frac{4e^{-s}}{s}+\frac{e^{-3}e^{-3s}}{s+1}.$$
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch3-prob-7" type="example" title="$e^t(1-\cosh t)$ 的拉普拉斯轉換" source="正式教材第三章 P.52 · Example" topic="第一移位 / 雙曲函數">
+<PracticeCard id="math-ch3-prob-7" type="example" title="指數與雙曲餘弦函數的拉普拉斯轉換" source="正式教材第三章 P.52 · Example" topic="第一移位 / 雙曲函數">
 
 **題目**：求
 
@@ -289,7 +289,7 @@ $$\mathcal{L}^{-1}\left[\frac{1}{(s+a)(s+b)(s+c)}\right]
 </template>
 </PracticeCard>
 
-<PracticeCard id="math-ch3-prob-11" type="example" title="反轉換與第二移位：$\cos 3(t-2)$" source="正式教材第三章 P.53 · Example" topic="第二移位 / 反拉普拉斯">
+<PracticeCard id="math-ch3-prob-11" type="example" title="反轉換與第二移位：延遲餘弦函數" source="正式教材第三章 P.53 · Example" topic="第二移位 / 反拉普拉斯">
 
 **題目**：求
 
@@ -415,7 +415,7 @@ $$\mathcal{L}^{-1}\left[\frac{s e^{-10s}}{(s^2+4)^2}\right]
 
 ## 初值問題與電路應用
 
-<PracticeCard id="math-ch3-prob-16" type="example" title="一階初值問題：$y'-4y=1$" source="正式教材第三章 P.55 · Example" topic="初值問題 / 拉普拉斯轉換">
+<PracticeCard id="math-ch3-prob-16" type="example" title="一階初值問題：常數外力" source="正式教材第三章 P.55 · Example" topic="初值問題 / 拉普拉斯轉換">
 
 **題目**：使用拉普拉斯轉換求解
 
