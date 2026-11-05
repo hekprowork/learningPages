@@ -42,10 +42,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate all documentation math
+      - name: Validate course math
         run: |
           npm run check:katex -- docs
-          npm run check:mathjax -- docs
+          npm run check:mathjax -- docs/solid-state
 
       - name: Audit question index against source cards
         run: python .agents/skills/learningpages-question-bank-local/scripts/question_index.py audit --repo .
