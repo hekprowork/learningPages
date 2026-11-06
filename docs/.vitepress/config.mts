@@ -53,8 +53,7 @@ export default defineConfig({
     siteTitle: 'Library 學習筆記庫',
     nav: [
       { text: '首頁', link: '/' },
-      { text: '指定題目練習', link: '/exam' },
-      { text: '題目索引 TSV', link: '/question-index' },
+      { text: '讓我的 Agent 出模考', link: '/agent-exam' },
       {
         text: 'Library 選擇科目',
         items: [
