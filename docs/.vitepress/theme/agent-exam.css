@@ -402,7 +402,7 @@ body:has(.agent-exam-page) {
   justify-content: center;
   white-space: nowrap;
 }
-.agent-exam-page .btn-print {
+.agent-exam-page .btn-download-prompt {
   min-height: 44px;
   padding: 0.625rem 1rem;
   background: var(--color-agent-surface-muted);
@@ -670,17 +670,17 @@ body:has(.agent-exam-page) {
 .agent-exam-page :is(h1, h2, h3) { font-style: normal; overflow-wrap: anywhere; min-width: 0; }
 .agent-exam-page .field-help,
 .agent-exam-page [role="status"] { min-height: 1lh; }
-.agent-exam-page :is(.btn-primary, .btn-secondary, .btn-copy-prompt, .btn-print):focus-visible,
+.agent-exam-page :is(.btn-primary, .btn-secondary, .btn-copy-prompt, .btn-download-prompt):focus-visible,
 .agent-exam-page .field-checkbox:focus-visible {
   outline: 2px solid var(--color-agent-focus);
   outline-offset: 2px;
 }
-.agent-exam-page :is(.btn-secondary, .btn-copy-prompt, .btn-print):active:not(:disabled) { transform: translateY(1px); }
+.agent-exam-page :is(.btn-secondary, .btn-copy-prompt, .btn-download-prompt):active:not(:disabled) { transform: translateY(1px); }
 .agent-exam-page button:disabled { opacity: .55; cursor: not-allowed; }
 .agent-exam-page .agent-exam-links a { white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
 @media (hover: hover) {
   .agent-exam-page :is(.btn-primary, .btn-copy-prompt):hover:not(:disabled) { background: var(--color-agent-ink-secondary); }
-  .agent-exam-page :is(.btn-secondary, .btn-print):hover:not(:disabled) { border-color: var(--color-agent-control-border); }
+  .agent-exam-page :is(.btn-secondary, .btn-download-prompt):hover:not(:disabled) { border-color: var(--color-agent-control-border); }
 }
 @media (prefers-reduced-motion: reduce) {
   .agent-exam-page button:active { transform: none !important; }

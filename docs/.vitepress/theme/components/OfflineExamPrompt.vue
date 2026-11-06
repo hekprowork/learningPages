@@ -104,8 +104,8 @@
               <button type="button" class="btn-copy-prompt" data-action="copy-candidate-prompt" @click="copy">
                 {{ request.mode === 'full' ? '複製完整題目 Prompt' : '複製候選 TSV Prompt' }}
               </button>
-              <button v-if="request.mode === 'full'" type="button" class="btn-print" @click="print">
-                列印／存成 PDF
+              <button type="button" class="btn-download-prompt" @click="downloadPrompt">
+                下載 Prompt（Markdown）
               </button>
             </div>
           </div>
@@ -261,13 +261,19 @@ async function copyUrl() {
     selectionMessage.value = '自動複製失敗，已選取網址，請手動複製。'
   }
 }
-function print() {
-  const images = [...document.querySelectorAll('.offline-print img')]
-  if (images.some(image => !image.complete || !image.naturalWidth)) {
-    message.value = '仍有圖片尚未載入，請稍候再列印；若持續失敗請重新準備原題。'
-    return
-  }
-  window.print()
+function downloadPrompt() {
+  const current = bundle.value
+  if (!current) return
+  const file = new Blob([current.prompt], { type: 'text/markdown;charset=utf-8' })
+  const url = URL.createObjectURL(file)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = `learningPages-${request.subject}-exam-prompt.md`
+  document.body.append(link)
+  link.click()
+  link.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 0)
+  message.value = '已開始下載 Markdown Prompt。'
 }
 </script>
 <style scoped>
