@@ -55,7 +55,6 @@ export default defineConfig({
       { text: '首頁', link: '/' },
       { text: '指定題目練習', link: '/exam' },
       { text: '題目索引 TSV', link: '/question-index' },
-      { text: 'AI 出模考', link: '/agent-exam' },
       {
         text: 'Library 選擇科目',
         items: [
