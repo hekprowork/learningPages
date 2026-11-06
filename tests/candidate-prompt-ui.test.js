@@ -8,7 +8,10 @@ import { JSDOM } from 'jsdom'
 
 const catalog = [
   { id: 'q1', subject: 'circuits', chapter: '4', type: 'example', title: '題一', topic: 'A', source: 'p.1', repo_path: 'docs/circuits/practice/one.md' },
-  { id: 'q2', subject: 'circuits', chapter: '4', type: 'practice', title: '題二', topic: 'B', source: 'p.2', repo_path: 'docs/circuits/practice/one.md' }
+  { id: 'q2', subject: 'circuits', chapter: '4', type: 'practice', title: '題二', topic: 'B', source: 'p.2', repo_path: 'docs/circuits/practice/one.md' },
+  { id: 'q3', subject: 'circuits', chapter: '3', type: 'example', title: '題三', topic: 'C' },
+  { id: 'e1', subject: 'electronics', chapter: '1', type: 'example', title: '電子一' },
+  { id: 'e2', subject: 'electronics', chapter: '2', type: 'example', title: '電子二' }
 ]
 
 test('candidate form copies prompts, validates returned IDs and clears stale selections and preparation', async () => {
@@ -77,31 +80,70 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     await change('input[aria-describedby="candidate-limit-help"]', '')
     document.querySelector('button[type=submit]').click(); await settle()
     assert.match(document.querySelector('.offline-controls').textContent, /已備妥 2 題候選/)
-    const practice = document.querySelector('fieldset input[value=practice]')
+    const practice = document.querySelector('fieldset[aria-describedby="offline-type-help"] input[value=practice]')
     practice.checked = false; practice.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
     assert.equal(document.querySelector('.selection-return a'), null)
     assert.equal(document.querySelector('textarea[readonly]'), null)
-    const example = document.querySelector('fieldset input[value=example]')
+    const example = document.querySelector('fieldset[aria-describedby="offline-type-help"] input[value=example]')
     example.checked = false; example.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
     assert.equal(document.querySelector('button[type=submit]').disabled, true)
-    const fieldset = document.querySelector('fieldset')
+    const fieldset = document.querySelector('fieldset[aria-describedby="offline-type-help"]')
     assert.equal(fieldset.getAttribute('aria-invalid'), 'true')
     assert.match(document.getElementById(fieldset.getAttribute('aria-describedby')).textContent, /至少選擇/)
     for (const box of [example, practice]) { box.checked = true; box.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick() }
 
+    const chapterBox = value => document.querySelector(`fieldset[aria-describedby="offline-chapter-help"] input[value="${value}"]`)
+    const toggleChapter = async value => { chapterBox(value).click(); await mod.nextTick() }
+    assert.equal(chapterBox('4').checked, true)
+    assert.equal(chapterBox('3').checked, false)
+    await toggleChapter('3')
+    assert.match(document.querySelector('.summary-text').textContent, /符合 3 題/)
+    document.querySelector('button[type=submit]').click(); await settle()
+    assert.match(document.querySelector('textarea[readonly]').value, /章節：3、4，/)
+    await change(selection, 'circuits:q3')
+    document.querySelector('.selection-return button[type=submit]').click(); await settle()
+    assert.match(document.querySelector('.selection-return a').href, /ids=circuits%3Aq3/)
+    await toggleChapter('3')
+    assert.equal(document.querySelector('.selection-return a'), null)
+    assert.equal(document.querySelector('textarea[readonly]'), null)
+    await toggleChapter('4')
+    assert.equal(document.querySelector('button[type=submit]').disabled, true)
+    assert.equal(document.querySelector('fieldset[aria-describedby="offline-chapter-help"]').getAttribute('aria-invalid'), 'true')
+    assert.match(document.getElementById('offline-chapter-help').textContent, /至少選擇/)
+    assert.match(document.querySelector('.summary-text').textContent, /符合 0 題/)
+    await change('.offline-fields select', 'electronics', 'change')
+    assert.equal(chapterBox('1').checked, true)
+    assert.equal(chapterBox('2').checked, false)
+    assert.equal(chapterBox('4'), null)
+    assert.match(document.querySelector('.summary-text').textContent, /符合 1 題/)
+    document.querySelector('button[type=submit]').click(); await settle()
+    assert.match(document.querySelector('textarea[readonly]').value, /科目：electronics，章節：1，/)
+    await change('.offline-fields select', 'circuits', 'change')
+    assert.equal(chapterBox('3').checked, true)
+    await toggleChapter('4')
+    await toggleChapter('3')
+
     const pending = []
     window.fetch = async url => new Promise(done => pending.push(() => {
-      const id = url.includes('q1') ? 'q1' : 'q2'
+      const id = new URL(url).pathname.split('/').pop().replace(/\.(html|txt)$/, '')
       done({ ok: true, text: async () => url.endsWith('.txt') ? `ID: ${id}\n求 $x_1$` : `<article data-reader-id="${id}"><div class="practice-card-statement">原題</div></article>` })
     }))
     mode.value = 'full'; mode.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
     assert.equal(document.querySelector('textarea[readonly]'), null)
     document.querySelector('button[type=submit]').click(); await settle()
     assert.equal(pending.length, 4)
-    const type = document.querySelector('fieldset input[value=example]')
-    type.checked = false; type.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
+    await toggleChapter('3')
+    await toggleChapter('4')
     pending.forEach(done => done()); await settle()
     assert.equal(document.querySelector('textarea[readonly]'), null, 'old preparation must not reappear after filter changes')
+    assert.match(document.querySelector('[role=status]').textContent, /條件已變更/)
+    pending.length = 0
+    document.querySelector('button[type=submit]').click(); await settle()
+    assert.equal(pending.length, 2)
+    const type = document.querySelector('fieldset[aria-describedby="offline-type-help"] input[value=example]')
+    type.checked = false; type.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
+    pending.forEach(done => done()); await settle()
+    assert.equal(document.querySelector('textarea[readonly]'), null, 'old preparation must not reappear after type changes')
     assert.match(document.querySelector('[role=status]').textContent, /條件已變更/)
   } finally {
     app?.unmount(); dom.window.close()

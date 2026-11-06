@@ -9,20 +9,25 @@
 
         <form class="offline-form" @submit.prevent="prepare">
           <div class="offline-fields">
-            <div class="form-row-split">
+            <div>
               <label class="field-label">
                 <span class="label-text">科目</span>
                 <select v-model="request.subject" class="field-control">
                   <option v-for="q in subjects" :key="q.value" :value="q.value">{{ q.label }}</option>
                 </select>
               </label>
-              <label class="field-label">
-                <span class="label-text">章節</span>
-                <select v-model="request.chapter" class="field-control">
-                  <option v-for="chapter in chapters" :key="chapter" :value="chapter">Chapter {{ chapter }}</option>
-                </select>
-              </label>
             </div>
+
+            <fieldset class="question-types" :aria-invalid="!!scopeSelection.error" aria-describedby="offline-chapter-help">
+              <legend>章節（可複選）</legend>
+              <div class="question-type-options">
+                <label v-for="chapter in chapters" :key="chapter" class="checkbox-label">
+                  <input v-model="request.chapters" type="checkbox" :value="chapter" class="field-checkbox" />
+                  <span>Chapter {{ chapter }}</span>
+                </label>
+              </div>
+              <span id="offline-chapter-help" class="field-help">{{ scopeSelection.error || '可複選章節，至少選擇一章。' }}</span>
+            </fieldset>
 
             <div class="form-row-split">
               <label class="field-label">
@@ -74,7 +79,7 @@
           </div>
 
           <div class="form-actions">
-            <button type="submit" class="btn-primary" :disabled="busy || !!typeSelection.error" :aria-busy="busy">
+            <button type="submit" class="btn-primary" :disabled="busy || !!scopeSelection.error || !!typeSelection.error" :aria-busy="busy">
               {{ busy ? '正在備妥原題…' : '準備候選原題' }}
             </button>
           </div>
@@ -170,22 +175,26 @@ import { ref, reactive, computed, watch } from 'vue'
 import { withBase } from 'vitepress'
 import { data as catalog } from './question-catalog.data.js'
 import { SUBJECT_OPTIONS, TYPE_OPTIONS, DEFAULT_TYPES, parseQuestionTypes } from './agent-exam-prompt.js'
-import { prepareOfflineExam, prepareCandidateIndex } from './offline-exam.js'
+import { prepareOfflineExam, prepareCandidateIndex, matchOfflineScope } from './offline-exam.js'
 import { validateExamSelection } from './exam-url.js'
 
 const subjects = SUBJECT_OPTIONS.filter(q => q.value !== 'mixed')
-const request = reactive({ subject: 'circuits', chapter: '4', count: 5, candidateLimit: '', minutes: 60, type: DEFAULT_TYPES, textOnly: false, mode: 'full' })
+const request = reactive({ subject: 'circuits', chapters: ['4'], count: 5, candidateLimit: '', minutes: 60, type: DEFAULT_TYPES, textOnly: false, mode: 'full' })
 const typeSelection = computed(() => parseQuestionTypes(request.type))
 const selectedTypes = computed({
   get: () => typeSelection.value.types,
   set: values => { request.type = TYPE_OPTIONS.filter(option => values.includes(option.value)).map(option => option.value).join(',') }
 })
-const chapters = computed(() => [...new Set(catalog.filter(q => q.subject === request.subject).map(q => q.chapter))].sort((a,b) => Number(a) - Number(b)))
-const matchingCount = computed(() => catalog.filter(q => q.subject === request.subject && q.chapter === request.chapter && typeSelection.value.types.includes(q.type)).length)
+const chapters = computed(() => [...new Set(catalog.filter(q => q.subject === request.subject).map(q => q.chapter))].sort((a,b) => Number(a) - Number(b) || a.localeCompare(b)))
+const scopeSelection = computed(() => {
+  try { return { ...matchOfflineScope(catalog, request), error: '' } }
+  catch (error) { return { rows: [], error: error.message === typeSelection.value.error ? '' : error.message } }
+})
+const matchingCount = computed(() => scopeSelection.value.rows.length)
 const bundle = ref(null), busy = ref(false), message = ref('完整模式由你的瀏覽器準備原題，模型本身不必連網。'), preview = ref(null)
 const selectionInput = ref(''), selectedExam = ref(null), selectionMessage = ref(''), urlPreview = ref(null)
 let generation = 0
-watch(() => request.subject, () => { request.chapter = chapters.value[0] || '' }, { flush: 'sync' })
+watch(() => request.subject, () => { request.chapters = chapters.value.length ? [chapters.value[0]] : [] }, { flush: 'sync' })
 watch(() => request.mode, () => { request.textOnly = false }, { flush: 'sync' })
 watch(request, () => {
   generation++
@@ -198,9 +207,9 @@ watch(request, () => {
 watch(selectionInput, () => { selectedExam.value = null; selectionMessage.value = '' }, { flush: 'sync' })
 
 async function prepare() {
-  if (busy.value || typeSelection.value.error) return
+  if (busy.value || scopeSelection.value.error || typeSelection.value.error) return
   const current = ++generation
-  const snapshot = { ...request }
+  const snapshot = { ...request, chapters: [...request.chapters] }
   busy.value = true
   bundle.value = null
   selectedExam.value = null

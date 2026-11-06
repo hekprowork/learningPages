@@ -9,11 +9,11 @@ import { resolveQuestions } from '../docs/.vitepress/theme/components/exam-loade
 import { JSDOM } from 'jsdom'
 
 const catalog = readQuestionCatalog(process.cwd())
-const request = { subject: 'circuits', chapter: '4', type: 'example,practice', count: 3, minutes: 45 }
+const request = { subject: 'circuits', chapters: ['4'], type: 'example,practice', count: 3, minutes: 45 }
 
 test('compact candidates use only the requested subject/chapter/types and preserve source provenance', () => {
   const result = prepareCandidateIndex(catalog, request)
-  assert.equal(result.entries.length, catalog.filter(q => q.subject === request.subject && q.chapter === request.chapter && request.type.split(',').includes(q.type)).length)
+  assert.equal(result.entries.length, catalog.filter(q => q.subject === request.subject && request.chapters.includes(q.chapter) && request.type.split(',').includes(q.type)).length)
   for (const q of result.entries) {
     assert.equal(q.subject, 'circuits')
     assert.equal(q.chapter, '4')
@@ -25,8 +25,8 @@ test('compact candidates use only the requested subject/chapter/types and preser
   assert.ok(!result.prompt.includes('完整候選原題：'))
   const practiceOnly = prepareCandidateIndex(catalog, { ...request, type: 'practice', count: 10 })
   assert.ok(practiceOnly.entries.every(q => q.type === 'practice'))
-  assert.equal(practiceOnly.entries.length, catalog.filter(q => q.subject === request.subject && q.chapter === request.chapter && q.type === 'practice').length)
-  assert.throws(() => prepareCandidateIndex(catalog, { ...request, chapter: '999' }), /只有 0 題/)
+  assert.equal(practiceOnly.entries.length, catalog.filter(q => q.subject === request.subject && request.chapters.includes(q.chapter) && q.type === 'practice').length)
+  assert.throws(() => prepareCandidateIndex(catalog, { ...request, chapters: ['999'] }), /有效的章節/)
   assert.throws(() => prepareCandidateIndex(catalog, { ...request, type: 'bogus' }), /有效題型/)
   assert.throws(() => prepareCandidateIndex(catalog, { ...request, textOnly: true }), /完整模式/)
   assert.throws(() => prepareCandidateIndex(catalog, { ...request, count: 11 }), /1–10/)
@@ -179,5 +179,39 @@ test('full preparation keeps four concurrent per-question tasks', async () => {
     assert.equal(result.entries.length, 30)
     assert.equal(peak, 4)
     assert.equal(active, 0)
+  } finally { dom.window.close() }
+})
+
+
+test('chapter union is canonical in both modes and fetches only selected subject, chapters and types', async () => {
+  const rows = [
+    { id: 'four', subject: 'circuits', chapter: '4', type: 'example', topic: 'A' },
+    { id: 'three', subject: 'circuits', chapter: '3', type: 'practice', topic: 'B' },
+    { id: 'other-chapter', subject: 'circuits', chapter: '2', type: 'example' },
+    { id: 'other-type', subject: 'circuits', chapter: '3', type: 'exam' },
+    { id: 'other-subject', subject: 'electronics', chapter: '3', type: 'example' }
+  ]
+  const options = { ...request, chapters: ['4', '3', '4'], count: 2 }
+  const calls = []
+  const dom = new JSDOM('')
+  const fetcher = async url => {
+    const id = new URL(url).pathname.split('/').pop().replace(/\.(html|txt)$/, '')
+    calls.push(id)
+    return { ok: true, text: async () => url.endsWith('.txt') ? `ID: ${id}\n原題` : `<article data-reader-id="${id}"><div class="practice-card-statement">原題</div></article>` }
+  }
+  try {
+    for (const result of [prepareCandidateIndex(rows, options), await prepareOfflineExam(rows, options, fetcher, dom.window.DOMParser)]) {
+      assert.deepEqual(result.entries.map(q => q.id), ['four', 'three'])
+      assert.match(result.prompt, /章節：3、4，/)
+      const tsv = candidateTsv(result.entries).split('\n').slice(1).map(row => row.split('\t'))
+      assert.deepEqual(tsv.map(row => [row[1], row[2]]), [['4', 'four'], ['3', 'three']])
+    }
+    assert.deepEqual(calls.sort(), ['four', 'four', 'three', 'three'])
+    assert.deepEqual(options.chapters, ['4', '3', '4'])
+    for (const chapters of [[], undefined, null, '4', [4], [''], ['3', '999'], [null], [['4']], Array(1)]) {
+      const invalid = { ...options, chapters }
+      assert.throws(() => prepareCandidateIndex(rows, invalid), /章節/)
+      await assert.rejects(prepareOfflineExam(rows, invalid, () => { throw Error('must not fetch') }, dom.window.DOMParser), /章節/)
+    }
   } finally { dom.window.close() }
 })
