@@ -101,6 +101,9 @@
               </p>
             </div>
             <div class="output-button-group">
+              <button v-if="shareUrl" type="button" class="btn-copy-prompt" data-action="copy-candidate-index" @click="copyCandidateUrl">
+                複製候選題索引網址
+              </button>
               <button type="button" class="btn-copy-prompt" data-action="copy-candidate-prompt" @click="copy">
                 {{ request.mode === 'full' ? '複製完整題目 Prompt' : '複製候選 TSV Prompt' }}
               </button>
@@ -111,6 +114,11 @@
           </div>
 
           <div class="prompt-preview-block">
+            <label v-if="shareUrl" class="field-label">
+              <span class="label-text">候選題索引網址</span>
+              <input ref="sharePreview" :value="shareUrl" readonly class="field-control" />
+              <span class="field-help">AI 讀不到網址時，可切換到精簡模式並複製候選 TSV Prompt。</span>
+            </label>
             <label for="offline-prompt-preview" class="preview-label">
               出題 Prompt 預覽
               <textarea id="offline-prompt-preview" ref="preview" :value="bundle.prompt" readonly rows="12" class="prompt-textarea" />
@@ -177,6 +185,7 @@ import { data as catalog } from './question-catalog.data.js'
 import { SUBJECT_OPTIONS, TYPE_OPTIONS, DEFAULT_TYPES, parseQuestionTypes } from './agent-exam-prompt.js'
 import { prepareOfflineExam, prepareCandidateIndex, matchOfflineScope } from './offline-exam.js'
 import { validateExamSelection } from './exam-url.js'
+import { candidateIndexUrl } from './candidate-index-url.js'
 
 const subjects = SUBJECT_OPTIONS.filter(q => q.value !== 'mixed')
 const request = reactive({ subject: 'circuits', chapters: ['4'], count: 5, candidateLimit: '', minutes: 60, type: DEFAULT_TYPES, textOnly: false, mode: 'full' })
@@ -192,6 +201,8 @@ const scopeSelection = computed(() => {
 })
 const matchingCount = computed(() => scopeSelection.value.rows.length)
 const bundle = ref(null), busy = ref(false), message = ref('完整模式由你的瀏覽器準備原題，模型本身不必連網。'), preview = ref(null)
+const sharePreview = ref(null)
+const shareUrl = computed(() => candidateIndexUrl(import.meta.env?.VITE_CANDIDATE_INDEX_ORIGIN, bundle.value?.entries ?? []))
 const selectionInput = ref(''), selectedExam = ref(null), selectionMessage = ref(''), urlPreview = ref(null)
 let generation = 0
 watch(() => request.subject, () => { request.chapters = chapters.value.length ? [chapters.value[0]] : [] }, { flush: 'sync' })
@@ -239,6 +250,19 @@ async function copy() {
     preview.value?.focus()
     preview.value?.select()
     message.value = '自動複製失敗，已選取文字，請手動複製。'
+  }
+}
+async function copyCandidateUrl() {
+  const current = shareUrl.value
+  if (!current) return
+  try {
+    await navigator.clipboard.writeText(current)
+    if (shareUrl.value === current) message.value = '已複製候選題索引網址。請連同出題要求貼給 AI。'
+  } catch {
+    if (shareUrl.value !== current) return
+    sharePreview.value?.focus()
+    sharePreview.value?.select()
+    message.value = '自動複製失敗，已選取候選題索引網址，請手動複製。'
   }
 }
 function generateUrl() {
