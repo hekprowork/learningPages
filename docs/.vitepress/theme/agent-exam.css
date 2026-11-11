@@ -376,6 +376,26 @@ body:has(.agent-exam-page) {
   line-height: 1.5;
   margin: 0;
 }
+.agent-exam-page .index-version {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--color-agent-ink-secondary);
+  font-size: 0.8125rem;
+  overflow-wrap: anywhere;
+}
+.agent-exam-page .chapter-downloads {
+  margin-block: 1rem;
+  padding-block: 1rem;
+  border-block: 1px solid var(--color-agent-rule-light);
+}
+.agent-exam-page .chapter-downloads h3 {
+  margin: 0 0 0.375rem;
+  color: var(--color-agent-ink-title);
+  font-size: 1rem;
+}
+.agent-exam-page .chapter-downloads .field-help {
+  margin-block: 0 0.75rem;
+}
 .agent-exam-page .figure-notice {
   display: block;
   font-size: 0.8125rem;

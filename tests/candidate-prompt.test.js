@@ -37,7 +37,7 @@ test('TSV fields cannot inject rows or columns; full prompt retains authored LaT
   const q = { id: 'q', subject: 'circuits', title: '題\t名\n換行', text: 'ID: q\n求 $\\frac{1}{s}$', chapter: '4', type: 'example' }
   const tsv = candidateTsv([q])
   assert.equal(tsv.split('\n').length, 2)
-  assert.ok(tsv.split('\n').every(row => row.split('\t').length === 9))
+  assert.ok(tsv.split('\n').every(row => row.split('\t').length === 10))
   const prompt = buildCandidatePrompt([q], { ...request, count: 1 }, 'full')
   assert.match(prompt, /\\frac\{1\}\{s\}/)
   assert.match(prompt, /不要使用 Markdown 超連結/)

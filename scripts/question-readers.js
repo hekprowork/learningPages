@@ -2,10 +2,12 @@ import {readFileSync,mkdirSync,writeFileSync} from 'node:fs'
 import {resolve} from 'node:path'
 import {readQuestionCatalog,SUBJECTS} from './question-catalog.js'
 import {buildExamUrl} from '../docs/.vitepress/theme/components/exam-url.js'
+import {chapterReaderPath,offlineChapterPath} from '../docs/.vitepress/theme/components/question-reader-url.js'
 export const READER_BASE='https://hekprowork.github.io/learningPages/'
 export const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
 const names={circuits:'電路學',electronics:'電子學','engineering-math':'工程數學','solid-state':'固態電子導論'}
 export const readerPath=q=>`question-reader/${q.subject}/${encodeURIComponent(q.id)}.html`
+export {chapterReaderPath,offlineChapterPath}
 export function readerEntries(root){
  const catalog=new Map(readQuestionCatalog(root).map(q=>[`${q.subject}:${q.id}`,q]))
  return SUBJECTS.flatMap(subject=>{
@@ -15,13 +17,14 @@ export function readerEntries(root){
  })
 }
 const documentHtml=(title,body)=>`<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><style>body{font:16px/1.7 system-ui;margin:2rem auto;padding:0 1rem;max-width:960px;overflow-wrap:anywhere}img,svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}td,th{padding:.5rem;text-align:left;border-bottom:1px solid #ccc}details{margin:1.5rem 0}code{white-space:pre-wrap}</style></head><body><main>${body}</main></body></html>`
+export const offlineDocumentHtml=(title,body)=>`<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><style>body{font:16px/1.7 system-ui;margin:2rem auto;padding:0 1rem;max-width:960px;overflow-wrap:anywhere}img,svg{max-width:100%;height:auto}article{border-bottom:1px solid #aaa;padding:1rem 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}details{margin:1rem 0}</style></head><body><main>${body}</main></body></html>`
 const save=(output,path,html)=>{const file=resolve(output,path);mkdirSync(resolve(file,'..'),{recursive:true});writeFileSync(file,html)}
 export function publishReaderNavigation(root,output=resolve(root,'docs/public')){
  const entries=readerEntries(root);const groups=new Map()
- for(const q of entries){const key=`${q.subject}/chapter-${encodeURIComponent(q.chapter)}.html`;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(q)}
+ for(const q of entries){const route=chapterReaderPath(q.subject,q.chapter);const key=route.replace(/^\/question-reader\//,'');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(q)}
  let links=''
  for(const [path,questions] of groups){const q=questions[0];const title=`${names[q.subject]} Chapter ${q.chapter}`
-  links+=`<li><a href="${READER_BASE}question-reader/${path}">${escapeHtml(title)}</a>（${questions.length} 題）</li>`
+  links+=`<li><a href="${READER_BASE}question-reader/${path}">${escapeHtml(title)}</a>（${questions.length} 題） · <a href="${READER_BASE}${offlineChapterPath(q.subject,q.chapter).slice(1)}">離線下載</a></li>`
   const rows=questions.map(q=>`<tr><td><a href="${READER_BASE}${readerPath(q)}">${escapeHtml(q.id)}</a></td><td>${escapeHtml(q.title)}</td><td>${escapeHtml(q.type)}</td><td>${escapeHtml(q.topic)}</td><td>${escapeHtml(q.source)}</td></tr>`).join('')
   save(output,`question-reader/${path}`,documentHtml(title,`<h1>${escapeHtml(title)}</h1><p>依題型與主題選題，點題目 ID 直接讀取原題；無需 GitHub、JSON 或 JavaScript。</p><table><thead><tr><th>ID／讀取原題</th><th>題名</th><th>題型</th><th>主題</th><th>教材來源</th></tr></thead><tbody>${rows}</tbody></table>`))
  }

@@ -1,10 +1,10 @@
 <template>
-  <section id="offline-mode" class="offline-model">
+  <section id="offline-exam-tool" class="offline-model">
     <div class="offline-controls workbench-layout">
       <div class="workbench-panel workbench-settings">
         <header class="panel-header">
           <h2 class="panel-title">依章節與題型準備出題 Prompt</h2>
-          <p class="panel-subtitle">網站先篩選候選題，agent 再挑題。完整模式附原始題幹與 LaTeX；精簡模式只附 TSV，適合選題後到網站作答。</p>
+          <p class="panel-subtitle">網站先篩選候選題，agent 再挑題。快速索引由 Worker 一次回傳；完整模式可讀取題幹，也能按章下載完整題目。</p>
         </header>
 
         <form class="offline-form" @submit.prevent="prepare">
@@ -49,8 +49,8 @@
               <label class="field-label">
                 <span class="label-text">Prompt 內容</span>
                 <select v-model="request.mode" class="field-control">
+                  <option value="compact">快速索引：Worker 候選 TSV</option>
                   <option value="full">完整：TSV＋Markdown／LaTeX 題幹</option>
-                  <option value="compact">精簡：只有候選 TSV</option>
                 </select>
               </label>
             </div>
@@ -80,7 +80,7 @@
 
           <div class="form-actions">
             <button type="submit" class="btn-primary" :disabled="busy || !!scopeSelection.error || !!typeSelection.error" :aria-busy="busy">
-              {{ busy ? '正在備妥原題…' : '準備候選原題' }}
+              {{ busy ? '正在備妥候選…' : request.mode === 'compact' ? '準備候選索引' : '準備完整原題' }}
             </button>
           </div>
         </form>
@@ -95,6 +95,7 @@
               <span class="status-pill status-ready">已就緒</span>
               <p class="output-summary">
                 已備妥 <strong>{{ bundle.entries.length }}</strong> 題候選，請讓 agent 選出 <strong>{{ request.count }}</strong> 題。
+                <span v-if="bundle.version" class="index-version">索引版本：{{ bundle.version }} · 範圍共 {{ bundle.scopeCount ?? bundle.entries.length }} 題 · 含圖 {{ bundle.figureCount ?? bundle.entries.filter(q => q.has_figure).length }} 題</span>
                 <strong v-if="request.mode === 'full' && bundle.entries.some(q => q.hasFigures)" class="figure-notice">
                   含圖像題：可在網站看圖作答；需要 agent 讀圖時，請附候選題 PDF。
                 </strong>
@@ -110,6 +111,9 @@
               <button type="button" class="btn-download-prompt" @click="downloadPrompt">
                 下載 Prompt（Markdown）
               </button>
+              <button type="button" class="btn-download-prompt" data-action="download-candidate-tsv" @click="downloadTsv">
+                下載候選 TSV
+              </button>
             </div>
           </div>
 
@@ -117,12 +121,23 @@
             <label v-if="shareUrl" class="field-label">
               <span class="label-text">候選題索引網址</span>
               <input ref="sharePreview" :value="shareUrl" readonly class="field-control" />
+              <span class="field-help">網址只包含目前候選 ID 與順序；TSV 每列含題型、教材來源、讀取網址與圖像標記。</span>
             </label>
             <label for="offline-prompt-preview" class="preview-label">
               出題 Prompt 預覽
               <textarea id="offline-prompt-preview" ref="preview" :value="bundle.prompt" readonly rows="12" class="prompt-textarea" />
             </label>
           </div>
+
+          <section class="chapter-downloads" aria-labelledby="chapter-download-title">
+            <h3 id="chapter-download-title">按章下載完整候選題幹</h3>
+            <p class="field-help">下載內容依目前章節、題型與候選清單篩選，保留完整題幹、圖片及原始 Markdown／LaTeX，不含解答。</p>
+            <div class="output-button-group">
+              <button v-for="item in chapterDownloads" :key="item.chapter" type="button" class="btn-download-prompt" :data-action="`download-chapter-${item.chapter}`" @click="downloadChapter(item.chapter)">
+                Chapter {{ item.chapter }}（{{ item.count }} 題）
+              </button>
+            </div>
+          </section>
 
           <form class="selection-return" @submit.prevent="generateUrl">
             <h3 class="selection-title">貼回 agent 的選題結果</h3>
@@ -151,7 +166,7 @@
         <template v-else>
           <div class="workbench-empty-state">
             <h3 class="empty-state-title">尚未準備候選原題</h3>
-            <p class="empty-state-desc">在左側設定科目、章節與題數條件後，點擊「<strong>準備候選原題</strong>」。產生的完整出題 Prompt 將顯示於此處，支援一鍵複製與後續選題核對。</p>
+            <p class="empty-state-desc">在左側設定科目、章節與題數條件後，點擊「<strong>準備候選索引</strong>」。產生的 Prompt、候選 TSV 與按章完整題幹下載會顯示於此處。</p>
             <ol class="workbench-steps">
               <li><span class="step-num">1</span> 選擇測驗科目、章節與題型</li>
               <li><span class="step-num">2</span> 點擊「準備候選原題」</li>
@@ -178,16 +193,21 @@
   </section>
 </template>
 <script setup>
-import { ref, reactive, computed, watch } from 'vue'
+import { ref, reactive, computed, watch, onBeforeUnmount } from 'vue'
 import { withBase } from 'vitepress'
 import { data as catalog } from './question-catalog.data.js'
 import { SUBJECT_OPTIONS, TYPE_OPTIONS, DEFAULT_TYPES, parseQuestionTypes } from './agent-exam-prompt.js'
 import { prepareOfflineExam, prepareCandidateIndex, matchOfflineScope } from './offline-exam.js'
+import { loadCandidateIndex } from './candidate-index-api.js'
+import { candidateTsv } from './candidate-prompt.js'
+import { filterOfflineChapterHtml } from './offline-chapter-download.js'
+import { offlineChapterPath } from './question-reader-url.js'
 import { validateExamSelection } from './exam-url.js'
 import { candidateIndexUrl } from './candidate-index-url.js'
 
 const subjects = SUBJECT_OPTIONS.filter(q => q.value !== 'mixed')
-const request = reactive({ subject: 'circuits', chapters: ['4'], count: 5, candidateLimit: '', minutes: 60, type: DEFAULT_TYPES, textOnly: false, mode: 'full' })
+const workerOrigin = import.meta.env?.VITE_CANDIDATE_INDEX_ORIGIN
+const request = reactive({ subject: 'circuits', chapters: ['4'], count: 5, candidateLimit: '', minutes: 60, type: DEFAULT_TYPES, textOnly: false, mode: 'compact' })
 const typeSelection = computed(() => parseQuestionTypes(request.type))
 const selectedTypes = computed({
   get: () => typeSelection.value.types,
@@ -199,43 +219,139 @@ const scopeSelection = computed(() => {
   catch (error) { return { rows: [], error: error.message === typeSelection.value.error ? '' : error.message } }
 })
 const matchingCount = computed(() => scopeSelection.value.rows.length)
-const bundle = ref(null), busy = ref(false), message = ref('完整模式由你的瀏覽器準備原題，模型本身不必連網。'), preview = ref(null)
+const bundle = ref(null), busy = ref(false), message = ref('快速索引會在背景預載；Worker 無法使用時會改用本機題庫。'), preview = ref(null)
 const sharePreview = ref(null)
-const shareUrl = computed(() => candidateIndexUrl(import.meta.env?.VITE_CANDIDATE_INDEX_ORIGIN, bundle.value?.entries ?? []))
+const shareUrl = computed(() => {
+  if (!bundle.value) return ''
+  if (Object.hasOwn(bundle.value, 'shareUrl')) return bundle.value.shareUrl
+  return candidateIndexUrl(workerOrigin, bundle.value.entries ?? [])
+})
 const selectionInput = ref(''), selectedExam = ref(null), selectionMessage = ref(''), urlPreview = ref(null)
+const chapterDownloads = computed(() => {
+  if (!bundle.value) return []
+  return request.chapters.map(chapter => ({
+    chapter,
+    count: bundle.value.entries.filter(entry => entry.chapter === chapter).length
+  })).filter(item => item.count > 0)
+})
 let generation = 0
+let prefetchToken = 0
+let prefetchTimer = null
+let prefetchController = null
+let prefetchJob = null
+let workerCache = null
+
+function requestSnapshot() {
+  return {
+    ...request,
+    chapters: [...request.chapters],
+    type: typeSelection.value.csv,
+  }
+}
+function snapshotKey(snapshot) {
+  return JSON.stringify({
+    subject: snapshot.subject,
+    chapters: snapshot.chapters,
+    type: snapshot.type,
+    count: String(snapshot.count),
+    minutes: String(snapshot.minutes),
+    candidateLimit: String(snapshot.candidateLimit ?? '').trim(),
+  })
+}
+function queueWorkerPrefetch() {
+  clearTimeout(prefetchTimer)
+  prefetchToken++
+  const token = prefetchToken
+  prefetchController?.abort()
+  prefetchController = null
+  prefetchJob = null
+  workerCache = null
+  if (typeof window === 'undefined' || request.mode !== 'compact' || !workerOrigin || scopeSelection.value.error || typeSelection.value.error) return
+  const snapshot = requestSnapshot()
+  const key = snapshotKey(snapshot)
+  prefetchTimer = setTimeout(() => {
+    if (token !== prefetchToken) return
+    prefetchController = new AbortController()
+    const signal = prefetchController.signal
+    const fetcher = window.fetch?.bind(window) ?? fetch.bind(globalThis)
+    const promise = loadCandidateIndex(workerOrigin, snapshot, fetcher, signal)
+      .then(result => {
+        if (token === prefetchToken && key === snapshotKey(requestSnapshot())) {
+          workerCache = { key, result }
+          message.value = `已預載 ${result.candidateCount} 題候選索引（${result.version}）。`
+        }
+        return result
+      })
+      .catch(error => {
+        if (token === prefetchToken && key === snapshotKey(requestSnapshot())) {
+          message.value = 'Worker 暫時無法讀取；準備時會改用本機題庫。'
+        }
+        throw error
+      })
+    prefetchJob = { key, promise }
+    promise.catch(() => {})
+  }, 120)
+}
 watch(() => request.subject, () => { request.chapters = chapters.value.length ? [chapters.value[0]] : [] }, { flush: 'sync' })
 watch(() => request.mode, () => { request.textOnly = false }, { flush: 'sync' })
 watch(request, () => {
   generation++
+  busy.value = false
   bundle.value = null
   selectionInput.value = ''
   selectedExam.value = null
   selectionMessage.value = ''
-  message.value = '條件已變更，請重新準備原題。'
-}, { flush: 'sync' })
+  message.value = request.mode === 'compact' ? '條件已變更，正在更新候選索引。' : '條件已變更，請重新準備原題。'
+  queueWorkerPrefetch()
+}, { flush: 'sync', deep: true, immediate: true })
 watch(selectionInput, () => { selectedExam.value = null; selectionMessage.value = '' }, { flush: 'sync' })
+onBeforeUnmount(() => {
+  clearTimeout(prefetchTimer)
+  prefetchController?.abort()
+})
 
 async function prepare() {
   if (busy.value || scopeSelection.value.error || typeSelection.value.error) return
   const current = ++generation
-  const snapshot = { ...request, chapters: [...request.chapters] }
+  const snapshot = requestSnapshot()
+  const key = snapshotKey(snapshot)
   busy.value = true
   bundle.value = null
   selectedExam.value = null
   selectionInput.value = ''
-  message.value = snapshot.mode === 'full' ? '正在由你的瀏覽器讀取原始題幹與圖片。' : '正在準備篩選後的候選索引。'
+  message.value = snapshot.mode === 'full' ? '正在由你的瀏覽器讀取原始題幹與圖片。' : '正在準備候選索引。'
+  if (snapshot.mode === 'compact' && prefetchTimer) {
+    clearTimeout(prefetchTimer)
+    prefetchTimer = null
+  }
   try {
-    const result = snapshot.mode === 'compact'
-      ? prepareCandidateIndex(catalog, snapshot)
-      : await prepareOfflineExam(catalog, snapshot, window.fetch.bind(window), DOMParser, new URL(withBase('/'), location.origin).href)
+    let result
+    if (snapshot.mode === 'compact') {
+      if (!workerOrigin) {
+        result = prepareCandidateIndex(catalog, snapshot)
+        result.fallbackReason = 'Worker 網址未設定'
+      } else {
+        try {
+          if (workerCache?.key === key) result = workerCache.result
+          else if (prefetchJob?.key === key) result = await prefetchJob.promise
+          else result = await loadCandidateIndex(workerOrigin, snapshot, window.fetch?.bind(window) ?? fetch.bind(globalThis))
+        } catch (error) {
+          if (current !== generation) return
+          result = prepareCandidateIndex(catalog, snapshot)
+          result.fallbackReason = error.message
+        }
+      }
+    } else {
+      result = await prepareOfflineExam(catalog, snapshot, window.fetch.bind(window), DOMParser, new URL(withBase('/'), location.origin).href)
+    }
     if (current !== generation) return
     bundle.value = result
-    message.value = result.failures.length ? '部分來源未載入，已使用其餘符合條件的原題；可重試。' : '已準備完成，請複製 Prompt 給你的 agent。'
+    if (result.fallbackReason) message.value = `Worker 索引未能讀取（${result.fallbackReason}），目前使用本機題庫；可下載此頁的候選 TSV。`
+    else message.value = result.failures.length ? '部分來源未載入，已使用其餘符合條件的原題；可重試。' : '已準備完成，請複製 Prompt 給你的 agent。'
   } catch (error) {
     if (current === generation) message.value = error.message
   } finally {
-    busy.value = false
+    if (current === generation) busy.value = false
   }
 }
 async function copy() {
@@ -297,6 +413,46 @@ function downloadPrompt() {
   link.remove()
   setTimeout(() => URL.revokeObjectURL(url), 0)
   message.value = '已開始下載 Markdown Prompt。'
+}
+function downloadTsv() {
+  const current = bundle.value
+  if (!current) return
+  const file = new Blob([current.tsv || candidateTsv(current.entries)], { type: 'text/tab-separated-values;charset=utf-8' })
+  const url = URL.createObjectURL(file)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = `learningPages-${request.subject}-candidates.tsv`
+  document.body.append(link)
+  link.click()
+  link.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 0)
+  message.value = '已開始下載候選 TSV。'
+}
+async function downloadChapter(chapter) {
+  const current = bundle.value
+  if (!current) return
+  const entries = current.entries.filter(entry => entry.chapter === chapter && typeSelection.value.types.includes(entry.type))
+  if (!entries.length) return
+  try {
+    const base = new URL(withBase('/'), location.origin)
+    const path = offlineChapterPath(request.subject, chapter).replace(/^\//, '')
+    const response = await (window.fetch?.bind(window) ?? fetch.bind(globalThis))(new URL(path, base).href)
+    if (!response.ok) throw new Error(`離線章節讀取失敗（HTTP ${response.status}）。`)
+    const result = filterOfflineChapterHtml(await response.text(), { entries, subject: request.subject, chapter, Parser: DOMParser })
+    if (bundle.value !== current) return
+    const file = new Blob([result.html], { type: 'text/html;charset=utf-8' })
+    const url = URL.createObjectURL(file)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `learningPages-${request.subject}-chapter-${chapter}-candidates.html`
+    document.body.append(link)
+    link.click()
+    link.remove()
+    setTimeout(() => URL.revokeObjectURL(url), 0)
+    message.value = `已開始下載 Chapter ${chapter} 完整題幹（${result.count} 題）。`
+  } catch (error) {
+    if (bundle.value === current) message.value = error.message
+  }
 }
 </script>
 <style scoped>

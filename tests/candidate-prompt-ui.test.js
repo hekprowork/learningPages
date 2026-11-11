@@ -9,9 +9,9 @@ import { JSDOM } from 'jsdom'
 const catalog = [
   { id: 'q1', subject: 'circuits', chapter: '4', type: 'example', title: '題一', topic: 'A', source: 'p.1', repo_path: 'docs/circuits/practice/one.md' },
   { id: 'q2', subject: 'circuits', chapter: '4', type: 'practice', title: '題二', topic: 'B', source: 'p.2', repo_path: 'docs/circuits/practice/one.md' },
-  { id: 'q3', subject: 'circuits', chapter: '3', type: 'example', title: '題三', topic: 'C' },
-  { id: 'e1', subject: 'electronics', chapter: '1', type: 'example', title: '電子一' },
-  { id: 'e2', subject: 'electronics', chapter: '2', type: 'example', title: '電子二' }
+  { id: 'q3', subject: 'circuits', chapter: '3', type: 'example', title: '題三', topic: 'C', source: 'p.3', repo_path: 'docs/circuits/practice/one.md' },
+  { id: 'e1', subject: 'electronics', chapter: '1', type: 'example', title: '電子一', topic: 'D', source: 'p.4', repo_path: 'docs/electronics/practice/one.md' },
+  { id: 'e2', subject: 'electronics', chapter: '2', type: 'example', title: '電子二', topic: 'E', source: 'p.5', repo_path: 'docs/electronics/practice/one.md' }
 ]
 
 test('candidate form copies prompts, validates returned IDs and clears stale selections and preparation', async () => {
@@ -22,6 +22,30 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
   let app
   try {
     let copied = ''
+    const workerCalls = []
+    dom.window.fetch = async target => {
+      const url = new URL(target)
+      workerCalls.push(url.href)
+      const subject = url.searchParams.get('subject')
+      const chapters = url.searchParams.get('chapters').split(',').sort((a, b) => Number(a) - Number(b))
+      const types = url.searchParams.get('types').split(',')
+      const scope = catalog.filter(row => row.subject === subject && chapters.includes(row.chapter) && types.includes(row.type))
+      const limit = url.searchParams.get('candidate_limit')
+      const entries = (limit ? scope.slice(0, Number(limit)) : scope).map(row => ({
+        ...row, has_figure: false, reader_url: `https://hekprowork.github.io/learningPages/question-reader/${row.subject}/${row.id}.html`
+      }))
+      const lines = ['subject_id\tchapter\ttitle\ttype\ttopic\tsource\treader_url\thas_figure', ...entries.map(row => [
+        `${subject}:${row.id}`, row.chapter, row.title, row.type, row.topic ?? '', row.source, row.reader_url, 'false'
+      ].join('\t')), '']
+      const share = new URL('/selection.tsv', url.origin)
+      share.searchParams.set('subject', subject)
+      share.searchParams.set('ids', entries.map(row => row.id).join(','))
+      return new Response(JSON.stringify({
+        subject, version: 'ui-test-version', chapters, types, count: entries.length,
+        scope_count: scope.length, candidate_count: entries.length, figure_count: 0,
+        entries, tsv: lines.join('\n'), share_url: entries.length ? share.href : ''
+      }), { status: 200 })
+    }
     Object.defineProperty(navigator, 'clipboard', { value: { writeText: async text => { copied = text } }, configurable: true })
     const dir = resolve('docs/.vitepress/theme/components')
     const script = compileScript(parse(readFileSync(resolve(dir, 'OfflineExamPrompt.vue'), 'utf8')).descriptor, { id: 'candidate-ui-test', inlineTemplate: true }).content
@@ -48,7 +72,11 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     await change('input[type=number]', '1')
     const mode = [...document.querySelectorAll('.offline-fields select')].find(select => [...select.options].some(option => option.value === 'compact'))
     mode.value = 'compact'; mode.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
+    await new Promise(resolve => setTimeout(resolve, 150)); await settle()
+    assert.equal(workerCalls.length, 1, 'stable compact options prefetch one candidate index in the background')
+    assert.match(document.querySelector('[role=status]').textContent, /已預載 2 題候選索引/)
     document.querySelector('button[type=submit]').click(); await settle()
+    assert.equal(workerCalls.length, 1, 'preparing a prefetched request reuses its one Worker response')
     assert.match(document.querySelector('textarea[readonly]').value, /依索引選題/)
     document.querySelector('[data-action="copy-candidate-index"]').click(); await settle()
     const shared = new URL(copied)
