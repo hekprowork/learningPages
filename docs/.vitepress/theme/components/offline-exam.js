@@ -30,9 +30,9 @@ export function selectOfflineCandidates(catalog,request){
 export function prepareCandidateIndex(catalog,request){
  const {chapters,types,count,wanted,ordered}=selectOfflineCandidates(catalog,request)
  if(request.textOnly)throw new Error('只選無圖題需要完整模式確認原題。')
- const entries=ordered.slice(0,wanted)
+ const entries=ordered.slice(0,wanted).map(q=>({...q,hasFigures:q.has_figure,reader_url:q.reader_url||`${SITE}question-reader/${q.subject}/${encodeURIComponent(q.id)}.html`}))
  if(entries.length<count)throw new Error(`目前條件下只有 ${entries.length} 題候選，需要 ${count} 題；請調整章節或題型。`)
- return {entries,prompt:buildCandidatePrompt(entries,{...request,chapters,type:types.join(',')},'compact'),failures:[]}
+ return {entries,prompt:buildCandidatePrompt(entries,{...request,chapters,type:types.join(','),scopeCount:ordered.length,indexVersion:'本機題庫索引'},'compact'),failures:[],version:'本機題庫索引',scopeCount:ordered.length,candidateCount:entries.length,tsv:null}
 }
 export async function prepareOfflineExam(catalog,request,fetcher,Parser,base=SITE){
  const {chapters,types,count,wanted,ordered}=selectOfflineCandidates(catalog,request)
