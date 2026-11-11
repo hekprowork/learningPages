@@ -49,6 +49,8 @@ jobs:
 
       - name: Build with VitePress
         run: npm run docs:build
+        env:
+          VITE_CANDIDATE_INDEX_ORIGIN: ${{ vars.VITE_CANDIDATE_INDEX_ORIGIN }}
 
       - name: Validate agent prompt page
         run: npm run check:agent-prompt
