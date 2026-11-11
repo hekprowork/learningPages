@@ -28,7 +28,7 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     const result = await build({
       stdin: { contents: script + "\nexport { nextTick, createApp } from 'vue'", resolveDir: dir },
       write: false, bundle: true, format: 'esm', platform: 'browser',
-      define: { 'process.env.NODE_ENV': '"test"', __VUE_OPTIONS_API__: 'true', __VUE_PROD_DEVTOOLS__: 'false', __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false' },
+      define: { 'process.env.NODE_ENV': '"test"', 'import.meta.env': '{"VITE_CANDIDATE_INDEX_ORIGIN":"https://index.example.workers.dev"}', __VUE_OPTIONS_API__: 'true', __VUE_PROD_DEVTOOLS__: 'false', __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false' },
       plugins: [{ name: 'page-data', setup(builder) {
         builder.onLoad({ filter: /question-catalog\.data\.js$/ }, () => ({ contents: `export const data = ${JSON.stringify(catalog)}` }))
         builder.onResolve({ filter: /^vitepress$/ }, () => ({ path: 'vitepress', namespace: 'mock' }))
@@ -50,6 +50,12 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     mode.value = 'compact'; mode.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
     document.querySelector('button[type=submit]').click(); await settle()
     assert.match(document.querySelector('textarea[readonly]').value, /依索引選題/)
+    document.querySelector('[data-action="copy-candidate-index"]').click(); await settle()
+    const shared = new URL(copied)
+    assert.equal(shared.origin, 'https://index.example.workers.dev')
+    assert.equal(shared.pathname, '/selection.tsv')
+    assert.equal(shared.searchParams.get('subject'), 'circuits')
+    assert.equal(shared.searchParams.get('ids'), 'q1,q2')
     document.querySelector('[data-action="copy-candidate-prompt"]').click(); await settle()
     assert.match(copied, /篩選後 TSV/)
     const selection = '.selection-return textarea'
@@ -61,6 +67,9 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     document.querySelector('.selection-return button[type=submit]').click(); await settle()
     assert.match(document.querySelector('.selection-return [role=status]').textContent, /Google/)
     navigator.clipboard.writeText = async () => { throw Error('denied') }
+    document.querySelector('[data-action="copy-candidate-index"]').click(); await settle()
+    assert.equal(document.activeElement.value, shared.href)
+    assert.equal(document.activeElement.selectionEnd, shared.href.length)
     document.querySelector('[data-action="copy-candidate-prompt"]').click(); await settle()
     const preview = document.querySelector('textarea[readonly]')
     assert.equal(preview.selectionEnd, preview.value.length)
@@ -73,6 +82,7 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     assert.match(document.getElementById('candidate-limit-help').textContent, /全部符合條件/)
     assert.match(document.querySelector('.offline-controls').textContent, /已備妥 2 題候選/)
     await change('input[aria-describedby="candidate-limit-help"]', '1')
+    assert.equal(document.querySelector('[data-action="copy-candidate-index"]'), null)
     assert.equal(document.querySelector('.selection-return a'), null)
     assert.equal(document.querySelector('textarea[readonly]'), null)
     document.querySelector('button[type=submit]').click(); await settle()
