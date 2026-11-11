@@ -5,7 +5,7 @@
 ## 部署
 
 1. 從專案根目錄執行 `npx wrangler deploy --config workers/candidate-index/wrangler.toml`，並使用你的 Cloudflare 帳號完成登入。
-2. 在 GitHub 倉庫的 Actions variables 設定 `VITE_CANDIDATE_INDEX_ORIGIN`，值為部署顯示的 Worker origin，例如 `https://learningpages-candidate-index.example.workers.dev`。
+2. GitHub Pages 建置預設使用 `https://learningpages-candidate-index.hekote9.workers.dev`。若部署到其他網址，在 GitHub 倉庫的 Actions variables 設定 `VITE_CANDIDATE_INDEX_ORIGIN` 為部署顯示的 Worker origin。
 3. 重新執行 GitHub Pages 部署。在出題頁準備候選題後，複製索引網址並在瀏覽器開啟。將同一網址和「電路學 Chapter 4、Example／Practice、5 題、60 分鐘」交給目標 AI，再把 AI 回傳的 ID 貼回出題頁組卷。
 
 本機可用 `npx wrangler dev --config workers/candidate-index/wrangler.toml` 啟動 Worker，再以 `VITE_CANDIDATE_INDEX_ORIGIN=http://localhost:8787 npm run docs:dev` 啟動出題頁。Worker 從已發布的公開索引讀取資料。
