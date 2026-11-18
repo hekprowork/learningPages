@@ -16,8 +16,10 @@ for (const q of catalog) {
   pages.get(q.path).push(q)
 }
 for (const [path, questions] of pages) {
+  globalThis.gc?.()
   const dom = new JSDOM(readFileSync(resolve(dist, path), 'utf8'))
-  for (const q of questions) {
+  for (const [index, q] of questions.entries()) {
+    if (index % 10 === 0) { await new Promise(setImmediate); globalThis.gc?.() }
     const url = `${READER_BASE}${q.path}`
     const card = extractCardFromDocument(dom.window.document, q.id, url)
     const statementDom = new JSDOM(`<main>${card.statement}</main>`)
@@ -58,6 +60,7 @@ for (const subject of new Set(catalog.map(q => q.subject))) {
 const offlineGroups = new Map()
 for(const q of catalog){const key=`${q.subject}:${q.chapter}`;if(!offlineGroups.has(key))offlineGroups.set(key,[]);offlineGroups.get(key).push(q)}
 for(const [key,items] of offlineGroups){
+  globalThis.gc?.()
   const [subject,chapter]=key.split(':')
   const expected=catalog.filter(q=>q.subject===subject&&q.chapter===chapter)
   assert.equal(items.length,expected.length,`Offline chapter coverage mismatch: ${key}`)
@@ -65,7 +68,8 @@ for(const [key,items] of offlineGroups){
   assert.deepEqual(new Map(items.map(q=>[q.id,q.type])),new Map(expected.map(q=>[q.id,q.type])),`Offline chapter type mismatch: ${key}`)
   const title=`${subject} Chapter ${chapter}`
   const articles=[]
-  for(const q of items){
+  for(const [index,q] of items.entries()){
+    if(index % 10 === 0){ await new Promise(setImmediate); globalThis.gc?.() }
     const readerDom=new JSDOM(readFileSync(resolve(dist,readerPath(q)),'utf8'))
     const statement=readerDom.window.document.querySelector('.practice-card-statement')
     assert.ok(statement?.innerHTML.trim(),`Offline statement missing: ${q.id}`)

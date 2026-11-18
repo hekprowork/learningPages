@@ -133,6 +133,11 @@ export default defineConfig({
             { text: 'Chapter 1 Problems & Self Quiz（25 題）', link: '/solid-state/practice/0001-textbook-problems' },
             { text: 'Chapter 2 Problems & Self Quiz（19 題）', link: '/solid-state/practice/0003-chapter2-problems' },
             { text: 'Chapter 3 Problems & Self Quiz（34 題）', link: '/solid-state/practice/0004-chapter3-problems' },
+            { text: 'Chapter 4 Examples, Problems & Self Quiz（36 題）', link: '/solid-state/practice/0005-chapter4-problems' },
+            { text: 'Chapter 5 Examples, Problems & Self Quiz（62 題）', link: '/solid-state/practice/0006-chapter5-problems' },
+            { text: 'Chapter 6 Examples, Problems & Self Quiz（47 題）', link: '/solid-state/practice/0007-chapter6-problems' },
+            { text: 'Chapter 7 Examples, Problems & Self Quiz（35 題）', link: '/solid-state/practice/0008-chapter7-problems' },
+            { text: 'Chapter 8 Examples, Problems & Self Quiz（26 題）', link: '/solid-state/practice/0009-chapter8-problems' },
             { text: '第 1–3 章考前概念總檢核', link: '/solid-state/practice/0002-chapter1-3-exam-review' }
           ]
         }

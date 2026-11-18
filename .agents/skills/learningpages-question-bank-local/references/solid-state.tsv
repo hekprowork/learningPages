@@ -77,4 +77,209 @@ chapter	id	title	type	topic	source	repo_path
 3	ss-ch3-sq6	Self Quiz 6：本徵濃度、摻雜與費米能階	practice	載子濃度	PDF p.142 / 印刷 p.141	docs/solid-state/practice/0004-chapter3-problems.md
 3	ss-ch3-sq7	Self Quiz 7：態密度與有效態密度	practice	態密度	PDF p.142 / 印刷 p.141	docs/solid-state/practice/0004-chapter3-problems.md
 3	ss-ch3-sq8	Self Quiz 8：高電場遷移率與量測	practice	遷移率量測	PDF p.142 / 印刷 p.141	docs/solid-state/practice/0004-chapter3-problems.md
-
+4	ss-ch4-ex4-1	Example 4–1：GaAs 的光吸收與發光	example	光吸收	PDF pp.148–149 / 印刷 pp.147–148	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-ex4-2	Example 4–2：過量載子的復合衰減	example	復合與生命期	PDF pp.151–152 / 印刷 pp.150–151	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-ex4-3	Example 4–3：光激發與準費米能階	example	準費米能階	PDF p.156 / 印刷 p.155	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-ex4-4	Example 4–4：注入電洞與儲存電荷	example	擴散電流	PDF pp.167–168 / 印刷 pp.166–167	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-ex4-5	Example 4–5：Haynes–Shockley 實驗	example	遷移率與擴散	PDF p.171 / 印刷 p.170	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-1	Problem 4.1：矽中的雜質電荷態	exercise	陷阱與電荷態	PDF p.173 / 印刷 p.172	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-2	Problem 4.2：光激發下的導電率	exercise	過量載子	PDF p.173 / 印刷 p.172	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-3	Problem 4.3：過量載子衰減	exercise	復合與生命期	PDF p.173 / 印刷 p.172	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-4	Problem 4.4：復合係數與穩態濃度	exercise	穩態光激發	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-5	Problem 4.5：摻雜梯度與內建電場	exercise	內建電場	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-6	Problem 4.6：光照下的準費米能階	exercise	穩態光激發	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-7	Problem 4.7：關光後的少數載子	exercise	載子生命期	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-8	Problem 4.8：照光下準費米能階分離	exercise	準費米能階	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-9	Problem 4.9：摻雜矽棒的電流	exercise	漂移電流	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-10	Problem 4.10：CdS 光導體設計	exercise	光導體	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-11	Problem 4.11：雷射照射矽樣品	exercise	光吸收	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-12	Problem 4.12：線性摻雜與擴散電流	exercise	載子擴散	PDF p.174 / 印刷 p.173	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-13	Problem 4.13：穩態電洞的準費米能階	exercise	穩態擴散	PDF p.175 / 印刷 p.174	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-14	Problem 4.14：電子擴散電流	exercise	擴散電流	PDF p.175 / 印刷 p.174	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-15	Problem 4.15：表面光生電子的擴散	exercise	光生載子擴散	PDF p.175 / 印刷 p.174	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-16	Problem 4.16：光激發矽棒的擴散電流	exercise	擴散電流	PDF p.175 / 印刷 p.174	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-17	Problem 4.17：濃度梯度與電流方向	exercise	漂移與擴散	PDF p.175 / 印刷 p.174	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-18	Problem 4.18：注入電流與儲存電荷	exercise	穩態擴散	PDF p.175 / 印刷 p.174	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-19	Problem 4.19：由能帶圖判斷內建電場	exercise	摻雜梯度	PDF p.175 / 印刷 p.174	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-20	Problem 4.20：摻雜梯度電場的物理解釋	exercise	內建電場	PDF p.175–176 / 印刷 p.174–175	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-21	Problem 4.21：Haynes–Shockley 實驗	exercise	載子遷移率與擴散	PDF p.176 / 印刷 p.175	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-22	Problem 4.22：均勻摻雜棒的載子電流	exercise	漂移與速度飽和	PDF p.176 / 印刷 p.175	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-23	Problem 4.23：新半導體的能帶與電流	exercise	載子濃度與電流	PDF p.176 / 印刷 p.175	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-24	Problem 4.24：電子與電洞電流	exercise	漂移與速度飽和	PDF p.176 / 印刷 p.175	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-p4-25	Problem 4.25：偏壓下的能帶與電子動能	exercise	能帶圖與電流密度	PDF p.176–177 / 印刷 p.175–176	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-sq1	Self Quiz 1：光生載子與光功率	practice	載子產生與復合	PDF p.177 / 印刷 p.176	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-sq2	Self Quiz 2：陷阱與光吸收	practice	陷阱與吸收	PDF p.177 / 印刷 p.176	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-sq3	Self Quiz 3：平衡能帶圖與載子濃度	practice	平衡能帶圖	PDF p.178 / 印刷 p.177	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-sq4	Self Quiz 4：平衡時的漂移與擴散方向	practice	載子通量與電流	PDF p.178 / 印刷 p.177	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-sq5	Self Quiz 5：半導體元件基本方程式	practice	元件方程式	PDF p.179 / 印刷 p.178	docs/solid-state/practice/0005-chapter4-problems.md
+4	ss-ch4-sq6	Self Quiz 6：電場與濃度梯度	practice	漂移與擴散	PDF p.179 / 印刷 p.178	docs/solid-state/practice/0005-chapter4-problems.md
+5	ss-ch5-ex5-1	Example 5–1：突變接面的平衡能帶	example	接面電位	PDF p.200 / 印刷 p.199	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-ex5-2	Example 5–2：接面空乏區與電場	example	空乏區	PDF p.205 / 印刷 p.204	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-ex5-3	Example 5–3：n 區電子電流	example	接面電流	PDF p.218 / 印刷 p.217	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-ex5-4	Example 5–4：接面順向與逆向電流	example	二極體電流	PDF p.220–221 / 印刷 p.219–220	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-ex5-5	Example 5–5：反向恢復儲存延遲	example	電荷控制	PDF p.236 / 印刷 p.235	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-ex5-6	Example 5–6：逆向偏壓下空乏電容	example	接面電容	PDF p.242 / 印刷 p.241	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-ex5-7	Example 5–7：GaAs–AlGaAs 異質接面	example	異質接面	PDF p.262 / 印刷 p.261	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-1	Problem 5.1：矽的熱氧化	exercise	熱氧化	PDF p.266 / 印刷 p.265	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-2	Problem 5.2：恆定源與有限源擴散	exercise	摻雜擴散	PDF p.266–267 / 印刷 p.265–266	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-3	Problem 5.3：磷恆定源擴散	exercise	摻雜擴散	PDF p.267 / 印刷 p.266	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-4	Problem 5.4：硼離子佈植	exercise	離子佈植	PDF p.267 / 印刷 p.266	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-5	Problem 5.5：磷離子佈植分布	exercise	離子佈植	PDF p.267 / 印刷 p.266	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-6	Problem 5.6：光罩對準機光學設計	exercise	微影	PDF p.268 / 印刷 p.267	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-7	Problem 5.7：p⁺–n 接面空乏區	exercise	空乏區	PDF p.268 / 印刷 p.267	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-8	Problem 5.8：平衡能帶與電子波向量	exercise	接面能帶	PDF p.268 / 印刷 p.267	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-9	Problem 5.9：突變矽接面的空乏電荷	exercise	接面電位與空乏區	PDF p.268 / 印刷 p.267	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-10	Problem 5.10：逆向偏壓下的能帶與電子速度	exercise	逆向偏壓	PDF p.268 / 印刷 p.267	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-11	Problem 5.11：摻雜濃度與空乏電容	exercise	接面電容	PDF p.268–269 / 印刷 p.267–268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-12	Problem 5.12：比較接觸電位	exercise	接觸電位	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-13	Problem 5.13：n 區電子電流分量	exercise	漂移與擴散電流	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-14	Problem 5.14：平衡接觸電位	exercise	接面電位	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-15	Problem 5.15：突變接面的電荷與電場	exercise	空間電荷	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-16	Problem 5.16：電子擴散電流密度	exercise	少數載子擴散	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-17	Problem 5.17：n⁺–p 接面逆向電流	exercise	逆向偏壓	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-18	Problem 5.18：由空間電荷求電場	exercise	空間電荷	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-19	Problem 5.19：接面電容與崩潰前寬度	exercise	空乏區	PDF p.269 / 印刷 p.268	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-20	Problem 5.20：接面兩側空乏區深度	exercise	空乏區	PDF p.270 / 印刷 p.269	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-21	Problem 5.21：逆偏矽接面的空乏寬度與電容	exercise	空乏區與接面電容	PDF p.270 / 印刷 p.269	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-22	Problem 5.22：接面注入效率	exercise	注入效率	PDF p.270 / 印刷 p.269	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-23	Problem 5.23：順偏下的載子濃度	exercise	少數載子	PDF p.270 / 印刷 p.269	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-24	Problem 5.24：接面電位、空乏區與順向電流	exercise	接面電流	PDF p.270 / 印刷 p.269	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-25	Problem 5.25：接面崩潰逆向偏壓	exercise	崩潰	PDF p.270 / 印刷 p.269	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-26	Problem 5.26：增加逆向偏壓的影響	exercise	逆向偏壓	PDF p.270–271 / 印刷 p.269–270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-27	Problem 5.27：p–p⁺ 高低接面能帶	exercise	高低接面	PDF p.271 / 印刷 p.270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-28	Problem 5.28：接面兩側電流分布	exercise	接面電流	PDF p.271 / 印刷 p.270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-29	Problem 5.29：偏壓與摻雜改變時的接面電容	exercise	接面電容	PDF p.271 / 印刷 p.270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-30	Problem 5.30：雪崩崩潰與 n 區厚度	exercise	雪崩崩潰	PDF p.271 / 印刷 p.270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-31	Problem 5.31：鍺接面的逆偏電容	exercise	接面電容	PDF p.271 / 印刷 p.270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-32	Problem 5.32：德拜長度與空乏近似	exercise	德拜長度	PDF p.271 / 印刷 p.270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-33	Problem 5.33：反向飽和電流與順向電流	exercise	二極體電流	PDF p.271 / 印刷 p.270	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-34	Problem 5.34：短 n 區電洞分布	exercise	載子擴散	PDF p.272 / 印刷 p.271	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-35	Problem 5.35：窄基極二極體載子濃度	exercise	窄基極二極體	PDF p.272 / 印刷 p.271	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-36	Problem 5.36：逆向擴散電流密度	exercise	逆向電流	PDF p.272 / 印刷 p.271	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-37	Problem 5.37：半波整流器	exercise	整流器	PDF p.272 / 印刷 p.271	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-38	Problem 5.38：理想因子與 I–V 曲線	exercise	二極體電流	PDF p.272 / 印刷 p.271	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-39	Problem 5.39：短區域中儲存的電洞電荷	exercise	載子儲存	PDF p.272 / 印刷 p.271	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-40	Problem 5.40：窄基極二極體	exercise	窄基極二極體	PDF p.272 / 印刷 p.271	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-41	Problem 5.41：窄基極二極體的復合電流	exercise	復合電流	PDF p.273 / 印刷 p.272	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-42	Problem 5.42：漸變接面的電場與電容	exercise	漸變接面	PDF p.273 / 印刷 p.272	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-43	Problem 5.43：金屬–矽接觸	exercise	金屬半導體接觸	PDF p.273 / 印刷 p.272	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-44	Problem 5.44：GaAs 歐姆接觸設計	exercise	歐姆接觸	PDF p.273 / 印刷 p.272	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-45	Problem 5.45：蕭特基障壁能帶圖	exercise	蕭特基障壁	PDF p.273 / 印刷 p.272	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-46	Problem 5.46：雙面金屬接觸設計	exercise	金屬半導體接觸	PDF p.273 / 印刷 p.272	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-47	Problem 5.47：半導體異質接面	exercise	異質接面	PDF p.273–274 / 印刷 p.272–273	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-p5-48	Problem 5.48：同質與異質接面能帶	exercise	異質接面	PDF p.274 / 印刷 p.273	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-sq1	Self Quiz 1：二極體各電流分量	practice	接面電流	PDF p.275 / 印刷 p.274	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-sq2	Self Quiz 2：長、短二極體的電洞分布	practice	載子擴散	PDF p.275–276 / 印刷 p.274–275	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-sq3	Self Quiz 3：長短二極體電流比較	practice	二極體電流	PDF p.276 / 印刷 p.275	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-sq4	Self Quiz 4：逆偏與空乏電容	practice	接面電容	PDF p.276 / 印刷 p.275	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-sq5	Self Quiz 5：空乏與擴散電容	practice	小訊號模型	PDF p.276 / 印刷 p.275	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-sq6	Self Quiz 6：假晶異質結構	practice	異質接面	PDF p.276 / 印刷 p.275	docs/solid-state/practice/0006-chapter5-problems.md
+5	ss-ch5-sq7	Self Quiz 7：金屬–半導體接觸能帶	practice	金屬半導體接觸	PDF p.276–277 / 印刷 p.275–276	docs/solid-state/practice/0006-chapter5-problems.md
+6	ss-ch6-ex6-1	Example 6–1：MOS 電容與臨界電壓	example	MOS 電容	PDF p.312 / 印刷 p.311	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-ex6-2	Example 6–2：MOSFET 線性區與飽和區電流	example	MOSFET 汲極電流	PDF pp.325–326 / 印刷 pp.324–325	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-ex6-3	Example 6–3：硼離子佈植與臨界電壓	example	離子佈植	PDF p.334 / 印刷 p.333	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-1	Problem 6.1：JFET 夾止電壓	exercise	JFET	PDF p.358 / 印刷 p.357	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-2	Problem 6.2：JFET 飽和電流	exercise	JFET	PDF p.358 / 印刷 p.357	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-3	Problem 6.3：JFET 電流電壓曲線	exercise	JFET	PDF p.358 / 印刷 p.357	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-4	Problem 6.4：JFET 輸出特性計算	exercise	JFET 電流電壓特性	PDF p.358 / 印刷 p.357	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-5	Problem 6.5：場依賴遷移率與 JFET	exercise	JFET 遷移率	PDF pp.358–359 / 印刷 pp.357–358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-6	Problem 6.6：n 通道 JFET 轉移特性	exercise	JFET	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-7	Problem 6.7：MOS 空乏區寬度	exercise	MOS 空乏區	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-8	Problem 6.8：高介電常數 MOS 電容	exercise	MOS 電容	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-9	Problem 6.9：p 型矽 MOS 電容	exercise	MOS 電容	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-10	Problem 6.10：CMOS 電容參數	exercise	MOS 電容	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-11	Problem 6.11：p 通道 MOS 的 C–V 曲線	exercise	MOS 電容	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-12	Problem 6.12：n 通道 MOSFET 特性計算	exercise	MOSFET 電流電壓特性	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-13	Problem 6.13：基板摻雜與臨界電壓	exercise	MOS 臨界電壓	PDF p.359 / 印刷 p.358	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-14	Problem 6.14：MOS 平帶電壓	exercise	平帶電壓	PDF p.360 / 印刷 p.359	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-15	Problem 6.15：p 通道 MOS 能帶與電場	exercise	MOS 能帶圖	PDF p.360 / 印刷 p.359	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-16	Problem 6.16：高介電常數 MOS 電容	exercise	MOS 臨界電壓	PDF p.360 / 印刷 p.359	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-17	Problem 6.17：從高頻 C–V 曲線求結構參數	exercise	MOS 電容	PDF pp.360–361 / 印刷 pp.359–360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-18	Problem 6.18：從 C–V 曲線求平帶電壓	exercise	平帶電壓	PDF p.361 / 印刷 p.360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-19	Problem 6.19：固定氧化層電荷與移動離子	exercise	氧化層電荷	PDF p.361 / 印刷 p.360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-20	Problem 6.20：n 通道 MOSFET 反轉電荷與電流	exercise	MOSFET 反轉電荷	PDF p.361 / 印刷 p.360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-21	Problem 6.21：基板偏壓與 MOSFET 驅動電流	exercise	MOS 臨界電壓	PDF p.361 / 印刷 p.360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-22	Problem 6.22：MOSFET 過驅電壓與飽和電流	exercise	MOSFET 飽和電流	PDF p.361 / 印刷 p.360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-23	Problem 6.23：p 通道 MOSFET 驅動電流	exercise	MOSFET 驅動電流	PDF p.361 / 印刷 p.360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-24	Problem 6.24：長通道 nMOSFET 小訊號參數	exercise	MOSFET 小訊號	PDF p.361 / 印刷 p.360	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-25	Problem 6.25：基板偏壓與界面載子濃度	exercise	MOS 臨界電壓	PDF pp.361–362 / 印刷 pp.360–361	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-26	Problem 6.26：n⁺ 多晶矽閘極臨界電壓	exercise	MOS 臨界電壓	PDF p.362 / 印刷 p.361	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-27	Problem 6.27：線性區與飽和區電流	exercise	MOSFET 汲極電流	PDF p.362 / 印刷 p.361	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-28	Problem 6.28：由特性曲線求臨界電壓	exercise	MOSFET 特性	PDF p.362 / 印刷 p.361	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-29	Problem 6.29：由特性曲線求氧化層厚度	exercise	MOSFET 特性	PDF p.362 / 印刷 p.361	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-30	Problem 6.30：磷離子佈植與臨界電壓	exercise	離子佈植	PDF p.363 / 印刷 p.362	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-31	Problem 6.31：基板偏壓與空乏電荷	exercise	基板偏壓效應	PDF p.363 / 印刷 p.362	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-32	Problem 6.32：p 通道 MOS 電流曲線	exercise	MOSFET 特性	PDF p.363 / 印刷 p.362	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-33	Problem 6.33：MOS 截止頻率	exercise	高頻 MOSFET	PDF p.363 / 印刷 p.362	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-34	Problem 6.34：飽和後輸出電導	exercise	MOSFET 通道長度調變	PDF p.363 / 印刷 p.362	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-p6-35	Problem 6.35：短通道穿通	exercise	MOSFET 穿通	PDF p.363 / 印刷 p.362	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq1	Self Quiz 1：主動與被動元件	practice	主動元件	PDF p.364 / 印刷 p.363	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq2	Self Quiz 2：MOSFET 電容與閘極電壓	practice	MOS 電容	PDF pp.364–365 / 印刷 pp.363–364	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq3	Self Quiz 3：MOS 電容的能帶圖	practice	MOS 能帶圖	PDF p.365 / 印刷 p.364	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq4	Self Quiz 4：MOSFET 輸出特性判讀	practice	MOSFET 輸出特性	PDF p.366 / 印刷 p.365	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq5	Self Quiz 5：次臨界擺幅	practice	次臨界擺幅	PDF p.366 / 印刷 p.365	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq6	Self Quiz 6：溫度與漏電流	practice	溫度效應	PDF p.366 / 印刷 p.365	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq7	Self Quiz 7：氧化層厚度的影響	practice	MOS 電容與臨界電壓	PDF p.367 / 印刷 p.366	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq8	Self Quiz 8：MOSFET 轉導與輸出特性	practice	MOSFET 轉導	PDF p.367 / 印刷 p.366	docs/solid-state/practice/0007-chapter6-problems.md
+6	ss-ch6-sq9	Self Quiz 9：MOSFET 數據合理性	practice	次臨界擺幅	PDF p.368 / 印刷 p.367	docs/solid-state/practice/0007-chapter6-problems.md
+7	ss-ch7-ex7-1	Example 7–1：穩態基極電荷與電流增益	example	基極電荷	PDF p.376 / 印刷 p.375	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-ex7-2	Example 7–2：二極體連接的電流分配	example	電晶體電流	PDF p.384–385 / 印刷 p.383–384	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-ex7-3	Example 7–3：非理想射極注入效率	example	射極注入效率	PDF p.388 / 印刷 p.387	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-ex7-4	Example 7–4：對稱電晶體的飽和電流與增益	example	電流增益	PDF p.392–394 / 印刷 p.391–393	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-1	Problem 7.1：雙擴散電晶體的摻雜分布	exercise	摻雜分布	PDF p.424 / 印刷 p.423	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-2	Problem 7.2：集極特性與負載線	exercise	負載線	PDF p.424 / 印刷 p.423	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-3	Problem 7.3：基極少數載子分布	exercise	載子分布	PDF p.424 / 印刷 p.423	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-4	Problem 7.4：BJT 偏壓及效率	exercise	BJT 偏壓	PDF p.425 / 印刷 p.424	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-5	Problem 7.5：npn BJT 電流與能帶	exercise	BJT 電流	PDF p.425 / 印刷 p.424	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-6	Problem 7.6：npn 電晶體的電流與能帶	exercise	BJT 電流	PDF p.425 / 印刷 p.424	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-7	Problem 7.7：pnp 電晶體的增益	exercise	電流增益	PDF p.425 / 印刷 p.424	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-8	Problem 7.8：摻雜與寬度對 BJT 的影響	exercise	電流增益	PDF p.425 / 印刷 p.424	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-9	Problem 7.9：電晶體的二極體連接	exercise	二極體連接	PDF p.425 / 印刷 p.424	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-10	Problem 7.10：基極擴散方程	exercise	載子分布	PDF p.426 / 印刷 p.425	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-11	Problem 7.11：二極體連接的電流分配	exercise	電晶體電流	PDF p.426 / 印刷 p.425	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-12	Problem 7.12：電流分量與傳輸因子	exercise	電流增益	PDF p.426 / 印刷 p.425	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-13	Problem 7.13：集極接面的電場與空乏寬度	exercise	空乏區	PDF p.426 / 印刷 p.425	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-14	Problem 7.14：開路接面飽和電流	exercise	Ebers–Moll 模型	PDF p.426 / 印刷 p.425	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-15	Problem 7.15：對稱 BJT 的飽和電流	exercise	BJT 電流	PDF p.427 / 印刷 p.426	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-16	Problem 7.16：渡越時間與開啟暫態	exercise	BJT 暫態	PDF p.427 / 印刷 p.426	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-17	Problem 7.17：異質接面雙極電晶體設計	exercise	異質接面	PDF p.427 / 印刷 p.426	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-18	Problem 7.18：基極寬度及摻雜對增益的影響	exercise	電流增益	PDF p.427 / 印刷 p.426	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-19	Problem 7.19：基極儲存電荷及傳輸因子	exercise	基極電荷	PDF p.427 / 印刷 p.426	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-20	Problem 7.20：偏壓下的中性基極寬度	exercise	基極寬度	PDF p.427 / 印刷 p.426	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-21	Problem 7.21：不同偏壓下的傳輸因子與注入效率	exercise	BJT 效率	PDF p.428 / 印刷 p.427	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-22	Problem 7.22：不同偏壓下的增益與電流	exercise	BJT 電流	PDF p.428 / 印刷 p.427	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-23	Problem 7.23：兩種模型計算電流增益	exercise	電流增益	PDF p.428 / 印刷 p.427	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-24	Problem 7.24：基極儲存電荷與截止頻率	exercise	基極電荷	PDF p.428 / 印刷 p.427	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-25	Problem 7.25：渡越時間與截止頻率	exercise	高頻響應	PDF p.428 / 印刷 p.427	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-p7-26	Problem 7.26：復合與 BJT 增益	exercise	電流增益	PDF p.428 / 印刷 p.427	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-sq1	Self Quiz 1：BJT 電路與負載線	practice	負載線	PDF p.429 / 印刷 p.428	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-sq2	Self Quiz 2：平衡 BJT 能帶	practice	能帶圖	PDF p.430 / 印刷 p.429	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-sq3	Self Quiz 3：基極寬度對參數的影響	practice	BJT 參數	PDF p.430 / 印刷 p.429	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-sq4	Self Quiz 4：npn 電流分量	practice	BJT 電流	PDF p.430 / 印刷 p.429	docs/solid-state/practice/0008-chapter7-problems.md
+7	ss-ch7-sq5	Self Quiz 5：基極摻雜對參數的影響	practice	BJT 參數	PDF p.430 / 印刷 p.429	docs/solid-state/practice/0008-chapter7-problems.md
+8	ss-ch8-ex8-1	Example 8–1：均勻光照下的電洞擴散電流	example	光二極體	PDF pp.434–435 / 印刷 pp.433–434	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-ex8-2	Example 8–2：太陽能電池最大功率	example	太陽能電池	PDF p.438 / 印刷 p.437	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-ex8-3	Example 8–3：紅光材料的合金組成	example	發光材料	PDF p.450 / 印刷 p.449	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-1	Problem 8.1：PIN 光偵測器	exercise	光偵測器	PDF p.467 / 印刷 p.466	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-2	Problem 8.2：量子井發光與偵測	exercise	量子井	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-3	Problem 8.3：太陽能電池電壓	exercise	太陽能電池	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-4	Problem 8.4：光導體電流變化	exercise	光導體	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-5	Problem 8.5：太陽能電池 I–V 曲線	exercise	太陽能電池	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-6	Problem 8.6：太陽能電池效率限制	exercise	太陽能電池	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-7	Problem 8.7：串聯電阻與太陽能電池	exercise	太陽能電池	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-8	Problem 8.8：太陽能電池與光元件觀念	exercise	光電元件	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-9	Problem 8.9：短路電流與開路電壓	exercise	太陽能電池	PDF p.468 / 印刷 p.467	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-10	Problem 8.10：最大輸出功率	exercise	太陽能電池	PDF p.469 / 印刷 p.468	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-11	Problem 8.11：最大功率矩形	exercise	太陽能電池	PDF p.469 / 印刷 p.468	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-12	Problem 8.12：串聯電阻與填充因子	exercise	太陽能電池	PDF p.469 / 印刷 p.468	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-13	Problem 8.13：吸收光譜與能隙	exercise	光吸收	PDF p.469 / 印刷 p.468	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-14	Problem 8.14：發光波長與能隙	exercise	發光	PDF p.469 / 印刷 p.468	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-15	Problem 8.15：簡併佔據與雷射吸收	exercise	雷射	PDF p.469 / 印刷 p.468	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-16	Problem 8.16：Einstein 係數	exercise	雷射	PDF p.469 / 印刷 p.468	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-17	Problem 8.17：黑體輻射與 Einstein 係數	exercise	雷射	PDF p.470 / 印刷 p.469	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-18	Problem 8.18：AlGaAs 的能隙與粒子數反轉	exercise	半導體雷射	PDF p.470 / 印刷 p.469	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-p8-19	Problem 8.19：光照下的過量電洞分布	exercise	光二極體	PDF p.470 / 印刷 p.469	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-sq1	Self Quiz 1：LED 能帶圖	practice	LED	PDF p.471 / 印刷 p.470	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-sq2	Self Quiz 2：太陽能電池最大功率	practice	太陽能電池	PDF p.471 / 印刷 p.470	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-sq3	Self Quiz 3：LED 波長與光子偵測	practice	LED	PDF p.472 / 印刷 p.471	docs/solid-state/practice/0009-chapter8-problems.md
+8	ss-ch8-sq4	Self Quiz 4：太陽能電池的能源應用	practice	太陽能電池	PDF p.472 / 印刷 p.471	docs/solid-state/practice/0009-chapter8-problems.md

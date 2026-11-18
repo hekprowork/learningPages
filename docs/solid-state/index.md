@@ -8,7 +8,7 @@ import { withBase } from 'vitepress'
 <header class="hub-header">
   <div class="hub-slug-row">
     <span class="hub-slug">Solid-State Electronics // EE-PHYS-301</span>
-    <span class="hub-badge-status">Status 已上線 · 44 題教材題庫</span>
+    <span class="hub-badge-status">Status 已上線 · 284 題教材題庫</span>
   </div>
   <h1 class="hub-title">固態電子導論</h1>
   <div class="hub-subtitle">Solid-State Electronics & Semiconductor Physics</div>
@@ -48,7 +48,7 @@ import { withBase } from 'vitepress'
   </div>
   <div class="hub-stat-card">
     <span class="hub-stat-label">教材互動題卡</span>
-    <span class="hub-stat-number">44</span>
+    <span class="hub-stat-number">284</span>
     <span class="hub-stat-sub">Problems & Self Quiz</span>
   </div>
 </div>
@@ -270,9 +270,14 @@ import { withBase } from 'vitepress'
         <a :href="withBase('/solid-state/practice/0001-textbook-problems.html')">Chapter 1 Problems & Self Quiz（25 題）</a>
       </h3>
       <p class="hub-card-desc">
-        依章節整理教材 Problems 與 Self Quiz；每題提供中文與英文敘述。
+        依章節整理教材 Problems 與 Self Quiz，收錄第 1–8 章題目。
       </p>
       <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0003-chapter2-problems.html')">Chapter 2 題目（19 題）→</a>　<a :href="withBase('/solid-state/practice/0004-chapter3-problems.html')">Chapter 3 題目（34 題）→</a></p>
+      <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0005-chapter4-problems.html')">Chapter 4 題目（36 題）→</a></p>
+      <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0006-chapter5-problems.html')">Chapter 5 題目（62 題）→</a></p>
+      <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0007-chapter6-problems.html')">Chapter 6 題目（47 題）→</a></p>
+      <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0008-chapter7-problems.html')">Chapter 7 題目（35 題）→</a></p>
+      <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0009-chapter8-problems.html')">Chapter 8 題目（26 題）→</a></p>
       <p class="hub-card-desc"><a :href="withBase('/solid-state/practice/0002-chapter1-3-exam-review.html')">開啟第 1–3 章考前概念總檢核與跨章計算 →</a></p>
     </div>
     <div class="hub-card-footer" style="margin-top: 1.5rem;">

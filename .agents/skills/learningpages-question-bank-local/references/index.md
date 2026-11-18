@@ -1,8 +1,8 @@
 # 題庫路由
 
-快照：2026-11-05；基準版本 663ea0b64078670b95212cd1ac006f950fa7d434（包含 CH7–8 與工程數學 Chapter 3 題庫更新）。
+快照：2026-11-18；基準版本 c5a70e29785aea4a51abd4d54911922732bbdfe4，另包含本次固態電子 CH4–8 題庫更新。
 
-共 1,413 張唯一題卡。CH5、CH6 章末習題分別新增 93、78 張；題目與同卡圖表引用已逐卡核對。工程數學 Chapter 3 新增 18 張題卡。課本附錄 D 提供奇數題答案，本次未轉載解答；未重新驗證全題庫的所有解答。
+共 1,619 張唯一題卡。固態電子 CH4–8 新增 206 題（22 道例題、153 道章末習題與 31 道 Self Quiz），有疑義的原題條件於題卡標示。CH5、CH6 章末習題分別新增 93、78 張；題目與同卡圖表引用已逐卡核對。工程數學 Chapter 3 新增 18 張題卡。課本附錄 D 提供奇數題答案，本次未轉載解答；未重新驗證全題庫的所有解答。
 
 TSV 欄位：chapter、id、title、type、topic、source、repo_path。用 `rg` 搜尋候選題，按命中列的 `repo_path` 讀 GitHub 原始題卡；同一來源檔只讀一次。索引只用於定位，不可直接依導航文字出題。
 
@@ -42,13 +42,18 @@ TSV 欄位：chapter、id、title、type、topic、source、repo_path。用 `rg`
 - CH1：25 題
 - CH2：19 題
 - CH3：34 題
+- CH4：36 題
+- CH5：62 題
+- CH6：47 題
+- CH7：35 題
+- CH8：26 題
 
 ## 原始檔
 
 - 電路學：docs/circuits/practice/0001–0008（CH1–8）。
 - 電子學：docs/electronics/practice-source/ 是題卡，practice 工作簿整合／導向頁不重複計入；CH1 112、CH2 162、CH3 47 張。
 - 工數：docs/engineering-math/practice/0001-chapter1-examples.md、0002-chapter2-examples.md、0003-textbook-examples.md（CH1–2）、0004-chapter3-examples.md（CH3）。
-- 固態：docs/solid-state/practice/0001-textbook-problems.md（CH1）、0003-chapter2-problems.md（CH2）、0004-chapter3-problems.md（CH3）。
+- 固態：docs/solid-state/practice/0001-textbook-problems.md（CH1）、0003-chapter2-problems.md（CH2）、0004-chapter3-problems.md（CH3）、0005–0009（CH4–8）。
 
 GitHub：https://github.com/hekprowork/learningPages/blob/main/<repo_path>。
 網站路徑：移除 docs/，.md 改 .html；電子學 practice-source 改 practice，CH3 以 chapter3-workbook 為整合入口。
