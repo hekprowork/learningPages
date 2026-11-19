@@ -25,7 +25,7 @@ description: "電路學第五章運算放大器互動題庫、範例解說、詳
 :::
 
 <PracticeFilter prefix="ch5-" />
-<PracticeProgress :total="26" prefix="ch5-" />
+<PracticeProgress :total="119" prefix="ch5-" />
 
 <PracticeCard id="ch5-ex-5-1" type="example" title="非理想運算放大器等效電路與閉迴路增益分析" source="Example 5.1 · Slide P.20–24" topic="實際運算放大器模型 (Nonideal Op Amp)">
 
@@ -1240,9 +1240,6 @@ $$
 
 ## 課本章末習題：完整題庫
 收錄 Alexander & Sadiku《Fundamentals of Electric Circuits》第五章 Problems 與 Comprehensive Problems，題號 5.1–5.93，共 93 題。題幹保留英文原文，引用的圖與前題電路已放在各題卡內；本頁只收錄題目。課本附錄 D 提供奇數題答案，本頁未附解答。
-
-<PracticeFilter prefix="ch5-problem-5-" />
-<PracticeProgress :total="93" prefix="ch5-problem-5-" />
 
 <PracticeCard id="ch5-problem-5-1" type="exercise" title="Problem 5.1" source="課本 p.200" topic="運算放大器 / 章末習題">
 

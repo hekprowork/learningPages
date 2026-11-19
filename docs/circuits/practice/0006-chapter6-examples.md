@@ -36,7 +36,7 @@ description: "電路學第六章電容與電感互動題庫、範例解說、詳
 :::
 
 <PracticeFilter prefix="ch6-" />
-<PracticeProgress :total="30" prefix="ch6-" />
+<PracticeProgress :total="108" prefix="ch6-" />
 
 ---
 
@@ -1469,9 +1469,6 @@ In the circuit of Fig. 6.34, $i_1(t) = 600e^{-2t}\text{ mA}$. If $i(0) = 1.4\tex
 
 ## 課本章末習題：完整題庫
 收錄 Alexander & Sadiku《Fundamentals of Electric Circuits》第六章 Problems 與 Comprehensive Problems，題號 6.9–6.86，共 78 題。題幹保留英文原文，引用圖表已置於各題卡內；本頁只收錄題目。
-
-<PracticeFilter prefix="ch6-problem-6-" />
-<PracticeProgress :total="78" prefix="ch6-problem-6-" />
 
 <PracticeCard id="ch6-problem-6-9" type="exercise" title="Problem 6.9" source="課本 p.241" topic="電容與電感 / 章末習題">
 
