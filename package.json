@@ -14,7 +14,8 @@
     "check:selection": "node --test tests/*.test.js",
     "check:exam-render": "node --expose-gc scripts/check-exam-render.js",
     "check:public-index": "node scripts/check-public-question-index.js",
-    "check:agent-prompt": "node scripts/check-agent-prompt.js"
+    "check:agent-prompt": "node scripts/check-agent-prompt.js",
+    "check:similar-prompt-budget": "node scripts/check-similar-prompt-budget.js"
   },
   "dependencies": {
     "katex": "^0.16.21",

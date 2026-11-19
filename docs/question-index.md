@@ -41,7 +41,7 @@ with urlopen(url) as response:
 
 索引欄位：`chapter`、`id`、`title`、`type`、`topic`、`source`、`repo_path`。`repo_path` 是 GitHub Repository 內的原題檔案路徑，並非直接對應的網站網址；電子學原始題卡由工作簿整合發布。
 
-[讓我的 Agent 出模考：填寫需求並複製 Prompt](/agent-exam)
+[讓我的 Agent 找相似練習：提供錯題並複製 Prompt](/agent-exam)
 
 ## 用索引組卷
 

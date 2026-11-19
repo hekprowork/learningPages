@@ -5,6 +5,7 @@ import { JSDOM } from 'jsdom'
 import {createSourceStatementLoader,createSourceTextLoader} from './question-source-text.js'
 import {publishReaderNavigation,readerPath,publishReaderCard,READER_BASE,offlineChapterPath,offlineDocumentHtml,escapeHtml} from './question-readers.js'
 import { extractCardFromDocument } from '../docs/.vitepress/theme/components/exam-loader.js'
+import { parseAgentContext } from './agent-context.js'
 const root = process.cwd()
 const dist = resolve(root, 'docs/.vitepress/dist')
 const catalog = publishReaderNavigation(root, dist)
@@ -120,4 +121,14 @@ for(const [key,items] of offlineGroups){
   publishedDom.window.close()
 }
 assert.ok(existsSync(resolve(dist, 'exam.html')), 'Missing exam page')
+const context = parseAgentContext(readFileSync(resolve(dist, 'agent-context.txt')))
+assert.equal(context.rowCount, catalog.length, 'Context pack differs from question-reader catalog')
+for (const row of context.rows) {
+  const route = new URL(row.readerUrl).pathname.replace(/^\/learningPages\//, '')
+  assert.ok(existsSync(resolve(dist, route)), `Context pack references missing question route: ${row.subjectId}`)
+}
+for (const chapter of context.chapters) {
+  const route = new URL(chapter.offlineUrl).pathname.replace(/^\/learningPages\//, '')
+  assert.ok(existsSync(resolve(dist, route)), `Context pack references missing offline chapter: ${chapter.subject}:${chapter.chapter}`)
+}
 console.log(`Exam source validation passed: ${catalog.length} indexed questions, ${pages.size} source pages.`)

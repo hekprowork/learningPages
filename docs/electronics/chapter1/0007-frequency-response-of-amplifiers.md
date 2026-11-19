@@ -10,11 +10,13 @@
 
 為了評估放大器的頻率響應，我們必須分析包含所有電抗元件的放大器等效電路模型。在電路分析中，電感 $L$ 的阻抗 (impedance) 為 $j\omega L$，電容 $C$ 的阻抗為 $1/j\omega C$。
 
+對線性電路施加單一頻率的正弦波，穩態輸出仍是相同頻率的正弦波；改變的是振幅與相位。以不同頻率逐點測量輸出與輸入的振幅比及相位差，就能得到放大器的完整頻率響應。
+
 放大器的傳遞函數 (Transfer Function) 定義為：
 
 $$ T(\omega) = \frac{V_o(\omega)}{V_i(\omega)} $$
 
-其中 $V_i(\omega)$ 和 $V_o(\omega)$ 分別表示輸入和輸出信號。$T(\omega)$ 是一個複變函數，其大小 $\|T(\omega)\|$ 給出了放大器的大小響應 (Magnitude Response)，而它的相位則給出了相位響應 (Phase Response)。
+其中 $V_i(\omega)$ 和 $V_o(\omega)$ 分別表示輸入和輸出信號。$T(\omega)$ 是一個複變函數，其大小 $|T(\omega)|$ 給出了放大器的大小響應 (Magnitude Response)，而它的相位則給出了相位響應 (Phase Response)。工程上常用 $20\log_{10}|T(\omega)|$ 以 dB 表示大小響應。
 
 ### 複數頻率變數 $s$ (Complex Frequency Variable $s$)
 

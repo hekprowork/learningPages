@@ -4,10 +4,12 @@ import type MarkdownIt from 'markdown-it'
 import { defineConfig } from 'vitepress'
 import { publishReaderNavigation } from '../../scripts/question-readers.js'
 import { publishQuestionIndex } from '../../scripts/public-question-index.js'
+import { publishAgentContext } from '../../scripts/agent-context.js'
 
 const projectRoot = resolve(process.cwd())
 publishQuestionIndex(projectRoot)
-publishReaderNavigation(projectRoot)
+const readerCatalog = publishReaderNavigation(projectRoot)
+publishAgentContext(projectRoot, readerCatalog)
 const workbookIncludePattern = /<!--\s*workbook-include:\s*cards\s+([^>\s]+)\s*-->/g
 
 const readWorkbookCards = (relativePath: string): string => {
@@ -53,7 +55,7 @@ export default defineConfig({
     siteTitle: 'Library 學習筆記庫',
     nav: [
       { text: '首頁', link: '/' },
-      { text: '讓我的 Agent 出模考', link: '/agent-exam' },
+      { text: '讓我的 Agent 找相似練習', link: '/agent-exam' },
       {
         text: 'Library 選擇科目',
         items: [

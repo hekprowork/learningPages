@@ -1,0 +1,570 @@
+/* Hallmark · genre: editorial · macrostructure: Monograph Exam Sheet · design-system: design.md · designed-as-app
+ * pre-emit critique: P5 H5 E5 S5 R5 V4
+ * states: default · hover · focus · active · disabled · loading · error · success
+ */
+@import "../../../tokens.css";
+
+html:has(.exam-page),
+body:has(.exam-page) {
+  overflow-x: clip;
+}
+
+.exam-page .VPDoc:not(.has-sidebar) .container {
+  max-width: 960px !important;
+}
+.exam-page .VPDoc:not(.has-sidebar) .content {
+  max-width: 100% !important;
+  width: 100%;
+  padding-inline: 0 !important;
+}
+.exam-page .content-container {
+  max-width: 960px !important;
+}
+
+.exam-page :is(h1, h2, h3) {
+  font-style: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* Editorial Masthead */
+.exam-page .exam-masthead {
+  padding-bottom: var(--space-agent-md);
+  margin-bottom: var(--space-agent-md);
+  border-bottom: 2px solid var(--color-agent-ink-title);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-agent-sm) var(--space-agent-lg);
+}
+
+.exam-page .exam-masthead-main {
+  min-width: 0;
+  flex: 1 1 320px;
+}
+
+.exam-page .exam-slug {
+  font-family: var(--font-agent-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-agent-ink-tertiary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-agent-2xs);
+  margin-bottom: var(--space-agent-xs);
+}
+
+.exam-page .exam-slug::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-agent-ink-title);
+}
+
+.exam-page .vp-doc h1.exam-title,
+.exam-page h1.exam-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--color-agent-ink-title);
+}
+
+.exam-page .exam-lead {
+  margin: var(--space-agent-2xs) 0 0;
+  font-size: 0.96875rem;
+  line-height: 1.6;
+  color: var(--color-agent-ink-secondary);
+  max-width: 62ch;
+}
+
+.exam-page .exam-masthead-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-agent-2xs) var(--space-agent-sm);
+}
+
+.exam-page .exam-nav-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-agent-sm);
+  border: 1px solid var(--color-agent-rule-border);
+  border-radius: var(--radius-agent-sm);
+  background: var(--color-agent-surface);
+  color: var(--color-agent-ink-title);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color var(--dur-agent-short) var(--ease-agent-out), background-color var(--dur-agent-short) var(--ease-agent-out);
+}
+
+.exam-page .exam-nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: var(--space-agent-3xs);
+  color: var(--color-agent-ink-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-agent-control-border);
+  text-underline-offset: 4px;
+  white-space: nowrap;
+  transition: color var(--dur-agent-short) var(--ease-agent-out), text-decoration-color var(--dur-agent-short) var(--ease-agent-out);
+}
+
+/* Empty / Direct Loader State */
+.exam-page .exam-loader-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  gap: var(--space-agent-lg);
+  align-items: start;
+  margin-block: var(--space-agent-md);
+}
+
+@media (max-width: 800px) {
+  .exam-page .exam-loader-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-agent-md);
+  }
+}
+
+.exam-page .exam-loader-panel {
+  background: var(--color-agent-surface);
+  border: 1px solid var(--color-agent-rule-border);
+  border-radius: var(--radius-agent-md);
+  padding: var(--space-agent-md);
+  box-shadow: var(--shadow-agent-sm);
+  min-width: 0;
+}
+
+.exam-page .vp-doc h2.exam-panel-title,
+.exam-page h2.exam-panel-title {
+  margin: 0 0 var(--space-agent-2xs);
+  padding: 0;
+  border: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-agent-ink-title);
+}
+
+.exam-page .exam-panel-desc {
+  margin: 0 0 var(--space-agent-sm);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-agent-ink-secondary);
+}
+
+.exam-page .exam-field-label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-agent-2xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-agent-ink-title);
+}
+
+.exam-page .exam-textarea {
+  width: 100%;
+  min-height: 92px;
+  padding: var(--space-agent-2xs) var(--space-agent-xs);
+  border: 1px solid var(--color-agent-control-border);
+  border-radius: var(--radius-agent-sm);
+  background: var(--color-agent-surface);
+  color: var(--color-agent-ink-primary);
+  font-family: var(--font-agent-mono);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  resize: vertical;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+.exam-page .exam-textarea[aria-invalid="true"] {
+  border-color: var(--color-agent-danger);
+}
+
+.exam-page .exam-help {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-agent-ink-tertiary);
+  line-height: 1.45;
+  min-height: 1lh;
+}
+
+.exam-page .exam-loader-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-agent-xs);
+  margin-top: var(--space-agent-sm);
+}
+
+.exam-page .exam-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--space-agent-2xs) var(--space-agent-sm);
+  border: 1px solid var(--color-agent-accent);
+  border-radius: var(--radius-agent-sm);
+  background: var(--color-agent-accent);
+  color: var(--color-agent-accent-ink);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--dur-agent-short) var(--ease-agent-out);
+}
+
+.exam-page .exam-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--space-agent-2xs) var(--space-agent-sm);
+  border: 1px solid var(--color-agent-rule-border);
+  border-radius: var(--radius-agent-sm);
+  background: var(--color-agent-surface-muted);
+  color: var(--color-agent-ink-title);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: border-color var(--dur-agent-short) var(--ease-agent-out), background-color var(--dur-agent-short) var(--ease-agent-out);
+}
+
+.exam-page .exam-btn-primary:active:not(:disabled),
+.exam-page .exam-btn-secondary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.exam-page .exam-btn-primary:disabled,
+.exam-page .exam-btn-secondary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Guide Aside (hairline table-like list, no card-in-card) */
+.exam-page .exam-guide-aside {
+  padding-top: var(--space-agent-2xs);
+  border-top: 2px solid var(--color-agent-ink-title);
+  min-width: 0;
+}
+
+.exam-page .vp-doc h3.exam-aside-title,
+.exam-page h3.exam-aside-title {
+  margin: var(--space-agent-xs) 0 var(--space-agent-sm);
+  padding: 0;
+  border: 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-agent-ink-title);
+}
+
+.exam-page .exam-guide-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exam-page .exam-guide-list li {
+  padding-block: var(--space-agent-xs);
+  border-top: 1px solid var(--color-agent-rule-light);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-agent-ink-secondary);
+}
+
+.exam-page .exam-guide-list strong {
+  color: var(--color-agent-ink-title);
+}
+
+.exam-page .exam-sample-block {
+  margin-top: var(--space-agent-md);
+  padding-top: var(--space-agent-sm);
+  border-top: 1px solid var(--color-agent-rule-border);
+}
+
+.exam-page .exam-sample-caption {
+  margin: 0 0 var(--space-agent-2xs);
+  font-size: 0.8125rem;
+  color: var(--color-agent-ink-tertiary);
+}
+
+/* Active Exam Control Strip */
+.exam-page .exam-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-agent-sm);
+  padding: var(--space-agent-sm) var(--space-agent-md);
+  margin-bottom: var(--space-agent-md);
+  border: 1px solid var(--color-agent-rule-border);
+  border-radius: var(--radius-agent-md);
+  background: var(--color-agent-surface);
+  box-shadow: var(--shadow-agent-sm);
+}
+
+.exam-page .exam-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-agent-2xs) var(--space-agent-md);
+  font-variant-numeric: tabular-nums;
+}
+
+.exam-page .exam-stat-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--color-agent-ink-secondary);
+}
+
+.exam-page .exam-stat-item strong {
+  font-family: var(--font-agent-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-agent-ink-title);
+}
+
+.exam-page .exam-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-agent-2xs);
+}
+
+.exam-page .exam-status-line {
+  margin: 0 0 var(--space-agent-sm);
+  font-size: 0.8125rem;
+  color: var(--color-agent-ink-secondary);
+  min-height: 1lh;
+}
+
+/* Inline ID Editor Drawer */
+.exam-page .exam-editor-panel {
+  margin-bottom: var(--space-agent-md);
+  padding: var(--space-agent-md);
+  border: 1px solid var(--color-agent-rule-border);
+  border-radius: var(--radius-agent-md);
+  background: var(--color-agent-surface-muted);
+}
+
+/* Jump Index Pills */
+.exam-page .exam-jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-agent-2xs);
+  margin-bottom: var(--space-agent-md);
+  padding-bottom: var(--space-agent-sm);
+  border-bottom: 1px solid var(--color-agent-rule-light);
+}
+
+.exam-page .exam-jump-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--color-agent-rule-border);
+  border-radius: var(--radius-agent-sm);
+  background: var(--color-agent-surface);
+  color: var(--color-agent-ink-primary);
+  font-family: var(--font-agent-mono);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color var(--dur-agent-short) var(--ease-agent-out), background-color var(--dur-agent-short) var(--ease-agent-out);
+}
+
+.exam-page .exam-jump-pill.is-done {
+  background: var(--color-agent-accent);
+  border-color: var(--color-agent-accent);
+  color: var(--color-agent-accent-ink);
+}
+
+.exam-page .exam-jump-pill.is-error {
+  border-color: var(--color-agent-danger);
+  color: var(--color-agent-danger);
+}
+
+/* Loading State */
+.exam-page .exam-loading-panel {
+  padding: var(--space-agent-lg) var(--space-agent-md);
+  border: 1px solid var(--color-agent-rule-border);
+  border-radius: var(--radius-agent-md);
+  background: var(--color-agent-surface);
+  font-size: 0.9375rem;
+  color: var(--color-agent-ink-secondary);
+}
+
+/* Question Stream */
+.exam-page .exam-question {
+  padding-top: var(--space-agent-md);
+  margin-top: var(--space-agent-md);
+  border-top: 1px solid var(--color-agent-rule-border);
+  scroll-margin-top: calc(var(--vp-nav-height, 64px) + 1rem);
+}
+
+.exam-page .exam-question:first-of-type {
+  padding-top: 0;
+  margin-top: var(--space-agent-sm);
+  border-top: none;
+}
+
+.exam-page .exam-question-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-agent-2xs) var(--space-agent-sm);
+  margin-bottom: var(--space-agent-xs);
+}
+
+.exam-page .exam-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-agent-2xs);
+}
+
+.exam-page .exam-question-num {
+  font-family: var(--font-agent-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-agent-ink-title);
+}
+
+.exam-page .exam-question-id {
+  font-family: var(--font-agent-mono);
+  font-size: 0.78125rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-agent-sm);
+  background: var(--color-agent-surface-muted);
+  border: 1px solid var(--color-agent-rule-light);
+  color: var(--color-agent-ink-secondary);
+}
+
+.exam-page .exam-source-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: var(--space-agent-3xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-agent-ink-secondary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-agent-control-border);
+  text-underline-offset: 4px;
+  white-space: nowrap;
+  transition: color var(--dur-agent-short) var(--ease-agent-out), text-decoration-color var(--dur-agent-short) var(--ease-agent-out);
+}
+
+.exam-page .exam-error-box {
+  padding: var(--space-agent-sm) var(--space-agent-md);
+  border: 1px solid var(--color-agent-danger);
+  border-radius: var(--radius-agent-md);
+  background: var(--color-agent-surface);
+  color: var(--color-agent-danger);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* Focus rings — instant, high contrast */
+.exam-page :is(
+  .exam-btn-primary,
+  .exam-btn-secondary,
+  .exam-nav-chip,
+  .exam-nav-link,
+  .exam-jump-pill,
+  .exam-source-link,
+  .exam-textarea
+):focus-visible {
+  outline: 2px solid var(--color-agent-focus);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .exam-page .exam-btn-primary:hover:not(:disabled) {
+    background: var(--color-agent-ink-secondary);
+    border-color: var(--color-agent-ink-secondary);
+  }
+  .exam-page .exam-btn-secondary:hover:not(:disabled),
+  .exam-page .exam-nav-chip:hover,
+  .exam-page .exam-jump-pill:not(.is-done):hover {
+    border-color: var(--color-agent-control-border);
+    background: var(--color-agent-surface-hover);
+  }
+  .exam-page .exam-source-link:hover,
+  .exam-page .exam-nav-link:hover {
+    color: var(--color-agent-ink-title);
+    text-decoration-color: var(--color-agent-ink-title);
+  }
+}
+
+@media (max-width: 640px) {
+  .exam-page .VPDoc:not(.has-sidebar) {
+    padding-inline: 1rem !important;
+  }
+  .exam-page .exam-toolbar,
+  .exam-page .exam-loader-panel,
+  .exam-page .exam-editor-panel {
+    padding: var(--space-agent-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exam-page *,
+  .exam-page *::before,
+  .exam-page *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  .exam-page button:active {
+    transform: none !important;
+  }
+}
+
+@media print {
+  .exam-page .VPNav,
+  .exam-page .VPLocalNav,
+  .exam-page .VPSidebar,
+  .exam-page .VPFooter,
+  .exam-page .VPDocFooter,
+  .exam-page .exam-masthead-nav,
+  .exam-page .exam-toolbar,
+  .exam-page .exam-editor-panel,
+  .exam-page .exam-jump-nav,
+  .exam-page .exam-status-line,
+  .exam-page .exam-source-link,
+  .exam-page .practice-card-check {
+    display: none !important;
+  }
+  .exam-page .VPContent {
+    padding: 0 !important;
+  }
+  .exam-page,
+  body:has(.exam-page) {
+    background: var(--color-agent-print-paper) !important;
+    color: var(--color-agent-print-ink) !important;
+  }
+  .exam-page .exam-question {
+    break-inside: avoid;
+  }
+}

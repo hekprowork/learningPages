@@ -15,6 +15,7 @@ export const TYPE_OPTIONS = [
   { value: 'exam', label: '考題 Exam' }
 ]
 export const DEFAULT_TYPES = TYPE_OPTIONS.filter(option => option.defaultSelected).map(option => option.value).join(',')
+export const DEFAULT_SIMILAR_TYPES = TYPE_OPTIONS.filter(option => ['example','exercise'].includes(option.value)).map(option => option.value).join(',')
 export function parseQuestionTypes(raw) {
   const values = typeof raw === 'string' ? raw.split(',').map(value => value.trim()) : []
   if (raw === 'all') return parseQuestionTypes(TYPE_OPTIONS.map(option => option.value).join(','))

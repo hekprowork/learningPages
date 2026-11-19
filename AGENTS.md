@@ -1,49 +1,8 @@
-# 學習筆記庫 (Learning Pages) - Multi-Subject Monorepo Guidelines & Rules
+# 學習筆記庫 (Learning Pages) 專案規範
 
-Welcome to the **多科目學習筆記與課程知識庫 (Learning Pages)** project! This repository hosts multiple engineering and science course materials, chapters, interactive simulations, and documentation built with **VitePress** and deployed to **GitHub Pages**.
+本庫以 VitePress 建置多科目工程與科學教材，部署至 GitHub Pages。`docs/index.md` 是入口，`docs/.vitepress/config.mts` 管理導覽與側邊欄，`docs/adr/` 記錄架構決策。每科目位於 `docs/<subject-slug>/`，有自己的 `AGENTS.md` 與 `index.md`；現有科目為 `solid-state`、`electronics`、`circuits`、`engineering-math`。修改科目內容前，先讀取該科目的 `AGENTS.md`。
 
----
-
-## 🏗️ 多科目 Monorepo 架構 (Multi-Subject Monorepo Layout)
-
-本專案採模組化目錄分治與路徑隔離架構：
-
-```text
-docs/
-├── index.md                    # 跨學科門戶首頁 (Curriculum Portal Hub)
-├── adr/                        # 架構決策記錄 (Architecture Decision Records)
-│   ├── 0001-vitepress-github-pages-migration.md
-│   └── 0002-multi-subject-monorepo-architecture.md
-├── .vitepress/                 # 全域 VitePress 配置與主題
-│   ├── config.mts              # 導航列、多科目側邊欄路由設定
-│   └── theme/                  # 自定義主題樣式與全域 Vue 元件
-├── solid-state/                # [科目] 固態電子導論 (Solid-State Electronics)
-│   ├── AGENTS.md               # 科目專屬規則
-│   ├── index.md                # 科目導讀與章節大綱首頁
-│   ├── chapter1/               # 結晶學與材料基礎
-│   ├── chapter2/               # 觀念筆記與公式推導
-│   └── chapter3/               # 核心公式速查表
-├── electronics/                # [科目] 電子學 (Electronics)
-│   ├── AGENTS.md               # 科目專屬規則
-│   ├── index.md                # 訊號與放大器基礎
-│   ├── chapter1/ ~ chapter3/   # 課程、觀念筆記與速查表
-│   └── assets/, learning-records/, lessons/, reference/
-├── circuits/                   # [科目] 電路學 (Circuits)
-│   ├── AGENTS.md               # 科目專屬規則
-│   ├── index.md                # 電路分析與網路等效
-│   ├── chapter1/ ~ chapter3/   # 課程、觀念筆記與速查表
-│   └── assets/, practice/, learning-records/, lessons/, reference/
-├── engineering-math/           # [科目] 工程數學 (Engineering Math)
-│   ├── AGENTS.md               # 科目專屬規則
-│   ├── index.md                # 常微分方程與實戰解法
-│   ├── chapter1/ ~ chapter3/   # 課程、觀念筆記與速查表
-│   └── assets/, practice/, learning-records/, lessons/, reference/
-└── <new-subject>/              # [未來科目] 例如 comp-arch, electromagnetics
-```
-
----
-
-## 核心專案規範 (Core Project Principles)
+## 核心專案規範
 
 ### 1. 純黑白單色圖標原則 (Monochrome Icon Design)
 - 採用純黑白與單色（Black & White / Monochrome）圖標或純文字標籤，確保全站視覺排版簡約專業且風格一致。
@@ -75,29 +34,27 @@ docs/
 ### 6. 互動元件安全掛載原則 (SSR Safety for Interactive Components)
 - 互動式 3D 模擬元件（如 Three.js `<CrystalViewer />`）或其他 DOM 依賴元件確保 client-side 渲染安全性（透過 `if (typeof window !== 'undefined')` 或 Vue `onMounted` 生命週期），以防止 VitePress build 時發生 SSR 錯誤。
 
-### 7. KaTeX 數學公式自主檢查與驗證 (KaTeX Validation & Automated Check)
+### 7. KaTeX 數學公式驗證
 - **語法排版標準**：行內公式使用 `$...$`，區塊公式使用 `$$...$$`；文本中避免未轉義的孤立 `$` 符號（應使用 `\$` 或 backticks \`$\`）。
 - **VitePress 靜默盲區警示**：`npx vitepress build docs` 遇到 LaTeX 語法錯誤（如未轉義字元、未閉合括號）預設僅於 HTML 渲染錯誤節點，建置退出碼仍為 0，**絕不可單獨作為公式語法正確之判準**。
-- **強制自主驗證指令 (Fail-Fast KaTeX Check)**：
-  在任何變更驗收階段或執行 build 之前，**必須強制執行專案 KaTeX 自動化語法解析器**：
+- **強制檢查**：任何內容變更驗收或 build 前，先執行：
   ```bash
   npm run check:katex
   ```
-  該指令使用底層 `katex` 引擎對所有 Markdown 的行內與區塊公式進行語法檢驗。若有任何 LaTeX 解析錯誤，將精準輸出檔案名稱、錯誤行號與原因並中斷流程。
-- **雙重驗收門檻 (Dual Verification Gates)**：
+- **雙重驗收門檻**：
   1. `npm run check:katex` 必須回傳退出碼 0（無任何 KaTeX 語法解析錯誤）。
   2. `npx vitepress build docs` 必須回傳退出碼 0（無任何 SSR 渲染或 broken links 錯誤）。
-  僅當上述兩道檢查全數通過時，始得視為語法驗證完成。
+  兩道檢查均通過，才算語法驗證完成。
 
-### 8. 數值與推導閉環對帳原則 (Ground-Truth Reconciliation)
-- **語法通過 ≠ 內容正確**：建置指令 `npx vitepress build docs` 僅能檢核語法結構與連結，不可作為數值與物理/數學公式正確性的完成判準。防止將「建置成功」誤判為「工作完成」的早熟完成 (Premature Completion)。
+### 8. 數值與推導對帳
+- **語法通過 ≠ 內容正確**：建置只檢查語法結構與連結，不能證明數值或推導正確。
 - **雙向對帳流程 (Dual-Reconciliation SOP)**：
   1. **符號與拘束式對帳**：電路源流向、極性與邊界拘束式，必須直接對照原始 PDF 圖表逐項核定，嚴禁憑相鄰下標直覺推論。
   2. **代數回代驗算 (Back-Substitution)**：聯立方程式之解，必須全數代入原始守恆方程式（如 KCL/KVL/邊界條件）驗算，殘差必須為零（Residual = 0）。
   3. **終端數值對帳 (PDF Answer Check)**：各變數數值、正負號與量綱單位必須與教材原始 Answer 進行 1:1 窮盡對帳。
 - **完成條件 (Completion Criterion)**：僅當「拘束式方向相符」、「回代殘差為零」且「終端數值與原始教材完全一致」時，推導與題目始算完成。
 
-### 9. 題目自包含與圖表同屏顯式原則 (Self-Contained Problem & Diagram Co-Location)
+### 9. 題目自包含與圖表同屏
 - **核心理念**：每張 `<PracticeCard>` 必須是**完全自包含 (Self-Contained)** 的獨立練習單元。讀者在作答該題時，不應為了獲取已知條件而被迫跨頁滾動、跳轉或翻閱實體教材。
 - **同屏顯式規範 (Co-Location Rules)**：
   1. **圖表/表格引用顯式化**：凡題目陳述中直接提及課本圖表、電路模型或數據表格（如「如圖 1.1 所示」、「參考 Table 1.1」、「依據圖 1.25 之電路」），**必須在該題題幹中一併嵌入對應裁切圖片或電路圖**。
@@ -107,7 +64,7 @@ docs/
 
 ---
 
-## ➕ 如何匯入 / 新增新科目 (How to Import a New Subject Folder)
+## 新增科目
 
 當需要新增或匯入一門新學科時，請依照下列標準流程 (SOP)：
 
@@ -146,9 +103,7 @@ docs/
 5. **更新全域入口頁面 (`docs/index.md`)**：
    - 在首頁 features 或科目看板表格中登錄該科目的狀態與卡片連結。
 
-6. **驗證與發布**：
-   - 執行 `npm run check:katex` 確保無任何 KaTeX 語法解析錯誤。
-   - 執行 `npx vitepress build docs` 確保無 broken links 與 SSR 錯誤。
+6. **驗證**：依第 7 節執行 KaTeX 與 VitePress 雙重檢查。
 
 ---
 
