@@ -6,6 +6,7 @@ import {createSourceStatementLoader,createSourceTextLoader} from './question-sou
 import {publishReaderNavigation,readerPath,publishReaderCard,READER_BASE,offlineChapterPath,offlineDocumentHtml,escapeHtml} from './question-readers.js'
 import { extractCardFromDocument } from '../docs/.vitepress/theme/components/exam-loader.js'
 import { parseAgentContext } from './agent-context.js'
+import { createOfflineMathRenderer } from './offline-math.js'
 const root = process.cwd()
 const dist = resolve(root, 'docs/.vitepress/dist')
 const catalog = publishReaderNavigation(root, dist)
@@ -59,6 +60,7 @@ for (const subject of new Set(catalog.map(q => q.subject))) {
   }) + '\n')
 }
 const offlineGroups = new Map()
+const renderOfflineMath = await createOfflineMathRenderer(root)
 for(const q of catalog){const key=`${q.subject}:${q.chapter}`;if(!offlineGroups.has(key))offlineGroups.set(key,[]);offlineGroups.get(key).push(q)}
 for(const [key,items] of offlineGroups){
   globalThis.gc?.()
@@ -76,6 +78,7 @@ for(const [key,items] of offlineGroups){
     assert.ok(statement?.innerHTML.trim(),`Offline statement missing: ${q.id}`)
     const statementDom=new JSDOM(`<main>${statement.innerHTML}</main>`,{url:`${READER_BASE}${q.path}`})
     readerDom.window.close()
+    renderOfflineMath(statementDom.window.document.querySelector('main'))
     assert.equal(statementDom.window.document.querySelector('source[src],source[srcset],video,audio,iframe,object,embed'),null,`Unsupported media container in ${q.id}`)
     for(const img of statementDom.window.document.querySelectorAll('img')){
       const src=img.getAttribute('src')
@@ -117,6 +120,7 @@ for(const [key,items] of offlineGroups){
   assert.ok(publishedArticles.every(article=>article.querySelector('details pre')?.textContent.trim()),`Missing authored statement in offline chapter: ${key}`)
   assert.equal(published.querySelector('script,iframe,video,audio,source,object,embed,link[href]'),null,`External dependency or active content in offline chapter: ${key}`)
   assert.ok([...published.querySelectorAll('img')].every(img=>img.getAttribute('src')?.startsWith('data:')),`Non-embedded image in offline chapter: ${key}`)
+  assert.equal(published.querySelector('.katex, [data-mjx-error], [data-mml-node="merror"]'),null,`Offline math must render as self-contained SVG: ${key}`)
   assert.ok(!published.querySelector('.practice-card-solution-body'),`Solution content in offline chapter: ${key}`)
   publishedDom.window.close()
 }

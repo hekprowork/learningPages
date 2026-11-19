@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { JSDOM } from 'jsdom'
+import katex from 'katex'
 import { filterOfflineChapterHtml } from '../docs/.vitepress/theme/components/offline-chapter-download.js'
+import { createOfflineMathRenderer } from '../scripts/offline-math.js'
 
 const dom = new JSDOM('')
 const Parser = dom.window.DOMParser
@@ -38,6 +40,24 @@ test('chapter download rejects missing IDs, mismatched types, and remote assets'
   assert.throws(() => filterOfflineChapterHtml(html.replace('data:image/png;base64,AA==', 'https://example.com/figure.png'), {
     entries: [{ id: 'q1', type: 'example' }], subject: 'circuits', chapter: '4', Parser
   }), /未內嵌的資源/)
+})
+
+test('downloaded questions retain inline and display math as standalone SVG', async () => {
+  const source = new Parser().parseFromString(html, 'text/html')
+  const statement = source.querySelector('article[data-question-id="q1"] .statement')
+  statement.insertAdjacentHTML('beforeend', katex.renderToString('V=IR'))
+  statement.insertAdjacentHTML('beforeend', katex.renderToString('x^2=4', { displayMode: true }))
+
+  const renderOfflineMath = await createOfflineMathRenderer(process.cwd())
+  renderOfflineMath(statement)
+  const result = filterOfflineChapterHtml(source.documentElement.outerHTML, {
+    entries: [{ id: 'q1', type: 'example' }], subject: 'circuits', chapter: '4', Parser
+  })
+  const downloaded = new Parser().parseFromString(result.html, 'text/html')
+  assert.ok(downloaded.querySelector('mjx-container:not([display]) > svg path'))
+  assert.ok(downloaded.querySelector('mjx-container[display="true"] > svg path'))
+  assert.equal(downloaded.querySelector('.katex, link[rel="stylesheet"], svg use'), null)
+  assert.equal(downloaded.querySelectorAll('mjx-assistive-mml math').length, 2)
 })
 
 test('chapter download cannot create an empty candidate file', () => {

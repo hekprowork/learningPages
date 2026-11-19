@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import type MarkdownIt from 'markdown-it'
+import katex from 'katex'
 import { defineConfig } from 'vitepress'
 import { publishReaderNavigation } from '../../scripts/question-readers.js'
 import { publishQuestionIndex } from '../../scripts/public-question-index.js'
@@ -44,12 +45,28 @@ export default defineConfig({
   base: '/learningPages/',
   srcExclude: ['electronics/practice-source/**'],
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css' }],
     ['meta', { name: 'theme-color', content: '#3b82f6' }]
   ],
   markdown: {
     math: true,
-    config: workbookIncludePlugin
+    config(markdown) {
+      workbookIncludePlugin(markdown)
+      for (const displayMode of [false, true]) {
+        const rule = displayMode ? 'math_block' : 'math_inline'
+        const renderMathJax = markdown.renderer.rules[rule]
+        markdown.renderer.rules[rule] = (tokens, index, ...args) => {
+          try {
+            const html = katex.renderToString(tokens[index].content, { displayMode, strict: 'ignore' })
+            return displayMode
+              ? html.replace('<span class="katex-display">', '<span class="katex-display" tabindex="0" style="overflow-x:auto;padding:.2em 0">')
+              : html
+          } catch (error) {
+            if (!(error instanceof katex.ParseError) || !renderMathJax) throw error
+            return renderMathJax(tokens, index, ...args)
+          }
+        }
+      }
+    }
   },
   themeConfig: {
     siteTitle: 'Library 學習筆記庫',

@@ -1,5 +1,6 @@
 import {readFileSync,mkdirSync,writeFileSync} from 'node:fs'
 import {resolve} from 'node:path'
+import katex from 'katex'
 import {readQuestionCatalog,SUBJECTS} from './question-catalog.js'
 import {buildExamUrl} from '../docs/.vitepress/theme/components/exam-url.js'
 import {chapterReaderPath,offlineChapterPath} from '../docs/.vitepress/theme/components/question-reader-url.js'
@@ -16,7 +17,7 @@ export function readerEntries(root){
   return lines.map(line=>{const row=Object.fromEntries(line.split('\t').map((v,i)=>[fields[i],v]));return {...row,...catalog.get(`${subject}:${row.id}`)}})
  })
 }
-const documentHtml=(title,body)=>`<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"><style>body{font:16px/1.7 system-ui;margin:2rem auto;padding:0 1rem;max-width:960px;overflow-wrap:anywhere}img,svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}td,th{padding:.5rem;text-align:left;border-bottom:1px solid #ccc}details{margin:1.5rem 0}code{white-space:pre-wrap}</style></head><body><main>${body}</main></body></html>`
+const documentHtml=(title,body)=>`<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@${katex.version}/dist/katex.min.css"><style>body{font:16px/1.7 system-ui;margin:2rem auto;padding:0 1rem;max-width:960px;overflow-wrap:anywhere}img,svg{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}td,th{padding:.5rem;text-align:left;border-bottom:1px solid #ccc}details{margin:1.5rem 0}code{white-space:pre-wrap}</style></head><body><main>${body}</main></body></html>`
 export const offlineDocumentHtml=(title,body)=>`<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(title)}</title><style>body{font:16px/1.7 system-ui;margin:2rem auto;padding:0 1rem;max-width:960px;overflow-wrap:anywhere}img,svg{max-width:100%;height:auto}article{border-bottom:1px solid #aaa;padding:1rem 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}details{margin:1rem 0}</style></head><body><main>${body}</main></body></html>`
 const save=(output,path,html)=>{const file=resolve(output,path);mkdirSync(resolve(file,'..'),{recursive:true});writeFileSync(file,html)}
 export function publishReaderNavigation(root,output=resolve(root,'docs/public')){
