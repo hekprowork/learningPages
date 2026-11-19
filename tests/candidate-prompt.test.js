@@ -132,7 +132,7 @@ function sourceFetcher({ failures = 0, figures = 0 } = {}) {
 test('candidate count defaults to all in both modes and explicit limits are independent of quiz size', async () => {
   const dom = new JSDOM('')
   try {
-    for (const candidateLimit of [undefined, '', '  ', 30, '50', 500, 1000000]) {
+    for (const candidateLimit of [undefined, '', '  ', 30, '50', 500, 1000000, String(Number.MAX_SAFE_INTEGER)]) {
       const wanted = candidateLimit === undefined || String(candidateLimit).trim() === '' ? largeCatalog.length : Math.min(Number(candidateLimit), largeCatalog.length)
       const options = { ...largeRequest, candidateLimit }
       for (const result of [prepareCandidateIndex(largeCatalog, options), await prepareOfflineExam(largeCatalog, options, sourceFetcher(), dom.window.DOMParser)]) {
@@ -141,7 +141,7 @@ test('candidate count defaults to all in both modes and explicit limits are inde
         assert.ok(!result.prompt.includes('並非整章全部題目'))
       }
     }
-    for (const candidateLimit of [0, -1, 1.5, 'bad', 2, null, false, Infinity]) {
+    for (const candidateLimit of [0, -1, 1.5, 'bad', 2, null, false, Infinity, String(Number.MAX_SAFE_INTEGER + 1)]) {
       const options = { ...largeRequest, candidateLimit }
       assert.throws(() => prepareCandidateIndex(largeCatalog, options), /候選題數/)
       await assert.rejects(prepareOfflineExam(largeCatalog, options, sourceFetcher(), dom.window.DOMParser), /候選題數/)

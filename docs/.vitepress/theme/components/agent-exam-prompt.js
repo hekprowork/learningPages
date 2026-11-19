@@ -1,4 +1,7 @@
 import { examUrlInstructions } from './exam-url.js'
+import { TYPE_OPTIONS } from '../../../../shared/candidate-selection.js'
+
+export { TYPE_OPTIONS }
 export const AGENT_GUIDE_URL = 'https://hekprowork.github.io/learningPages/agent-guide.txt'
 export const SUBJECT_OPTIONS = [
   { value: 'circuits', label: '電路學' },
@@ -6,13 +9,6 @@ export const SUBJECT_OPTIONS = [
   { value: 'engineering-math', label: '工程數學' },
   { value: 'solid-state', label: '固態電子導論' },
   { value: 'mixed', label: '跨科（在範圍中指定）' }
-]
-export const TYPE_OPTIONS = [
-  { value: 'example', label: '範例 Example', defaultSelected: true },
-  { value: 'practice', label: '練習 Practice', defaultSelected: true },
-  { value: 'exercise', label: '習題 Exercise' },
-  { value: 'homework', label: '作業 Homework' },
-  { value: 'exam', label: '考題 Exam' }
 ]
 export const DEFAULT_TYPES = TYPE_OPTIONS.filter(option => option.defaultSelected).map(option => option.value).join(',')
 export const DEFAULT_SIMILAR_TYPES = TYPE_OPTIONS.filter(option => ['example','exercise'].includes(option.value)).map(option => option.value).join(',')

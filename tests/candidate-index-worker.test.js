@@ -3,14 +3,14 @@ import { readQuestionCatalog } from '../scripts/question-catalog.js'
 import test from 'node:test'
 import worker from '../workers/candidate-index/index.js'
 import { candidateIndexUrl } from '../docs/.vitepress/theme/components/candidate-index-url.js'
-import { selectOfflineCandidates } from '../docs/.vitepress/theme/components/offline-exam.js'
+import { prepareCandidateIndex } from '../docs/.vitepress/theme/components/offline-exam.js'
 
 const endpoint = 'https://index.example.workers.dev'
 const site = 'https://hekprowork.github.io/learningPages/'
 const catalog = readQuestionCatalog(process.cwd())
-const circuits = catalog.filter(row => row.subject === 'circuits').map(row => ({
+const circuits = catalog.filter(row => row.subject === 'circuits').map(({ subject, ...row }) => ({
   ...row,
-  reader_url: `${site}question-reader/${row.subject}/${encodeURIComponent(row.id)}.html`
+  reader_url: `${site}question-reader/${subject}/${encodeURIComponent(row.id)}.html`
 }))
 const index = { subject: 'circuits', version: 'test-version-9', count: circuits.length, entries: circuits }
 
@@ -45,9 +45,9 @@ test('prepare returns the exact filtered 429 candidates, figure flags, version a
   assert.deepEqual(Object.fromEntries(['1', '2', '3', '4'].map(chapter => [chapter, data.entries.filter(row => row.chapter === chapter).length])), {
     '1': 59, '2': 117, '3': 119, '4': 134
   })
-  const expected = selectOfflineCandidates(catalog, {
+  const expected = prepareCandidateIndex(catalog, {
     subject: 'circuits', chapters: ['1', '2', '3', '4'], type: 'example,practice,exercise', count: '5', minutes: '60', candidateLimit: ''
-  }).ordered.map(row => row.id)
+  }).entries.map(row => row.id)
   assert.deepEqual(data.entries.map(row => row.id), expected)
   assert.equal(data.tsv.trimEnd().split('\n').length, 430)
   assert.match(data.tsv.split('\n')[0], /reader_url\thas_figure$/)
@@ -84,6 +84,32 @@ test('prepare applies candidate limits after deterministic topic round-robin and
   assert.equal(emptyData.share_url, '')
 })
 
+test('Worker and browser preserve index order within topics and group missing topics by type', async t => {
+  const entries = [
+    { id: 'a1', type: 'example', topic: 'A' },
+    { id: 'a2', type: 'practice', topic: 'A' },
+    { id: 'example1', type: 'example', topic: '' },
+    { id: 'b1', type: 'practice', topic: 'B' },
+    { id: 'example2', type: 'example', topic: '' },
+  ].map(row => ({
+    ...row, chapter: '4', title: row.id, source: 'p.1', has_figure: false,
+    reader_url: `${site}question-reader/circuits/${row.id}.html`,
+  }))
+  await withIndex(t, { ...index, count: entries.length, entries })
+  const url = `${endpoint}/prepare?subject=circuits&chapters=4&types=practice,example&count=2&minutes=30&candidate_limit=4`
+  const reply = await worker.fetch(new Request(url))
+  assert.equal(reply.status, 200)
+  const remote = await reply.json()
+  const local = prepareCandidateIndex(entries.map(row => ({ ...row, subject: 'circuits' })), {
+    subject: 'circuits', chapters: ['4'], type: 'practice,example', count: 2, minutes: 30, candidateLimit: 4,
+  })
+  for (const result of [remote, local]) {
+    assert.deepEqual(result.entries.map(row => row.id), ['a1', 'example1', 'b1', 'a2'])
+  }
+  assert.equal(remote.scope_count, 5)
+  assert.equal(local.scopeCount, 5)
+})
+
 test('invalid or duplicate options fail before fetching and missing IDs are explicit', async t => {
   const fetch = t.mock.method(globalThis, 'fetch', async () => new Response(JSON.stringify(index)))
   for (const query of [
@@ -93,6 +119,7 @@ test('invalid or duplicate options fail before fetching and missing IDs are expl
     '?subject=circuits&chapters=4&types=example,invalid&count=1&minutes=30',
     '?subject=circuits&chapters=4&types=example&count=0&minutes=30',
     '?subject=circuits&chapters=4&types=example&count=2&minutes=30&candidate_limit=1',
+    `?subject=circuits&chapters=4&types=example&count=1&minutes=30&candidate_limit=${Number.MAX_SAFE_INTEGER + 1}`,
     '?subject=circuits&chapters=4&types=example&count=1&minutes=30&candidate_limit=1&candidate_limit=2',
     '?subject=circuits&chapters=4&chapters=3&types=example&count=1&minutes=30'
   ]) {

@@ -22,6 +22,7 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
   let app
   try {
     let copied = ''
+    let workerEntryLimit = Infinity
     const workerCalls = []
     dom.window.fetch = async target => {
       const url = new URL(target)
@@ -31,7 +32,7 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
       const types = url.searchParams.get('types').split(',')
       const scope = catalog.filter(row => row.subject === subject && chapters.includes(row.chapter) && types.includes(row.type))
       const limit = url.searchParams.get('candidate_limit')
-      const entries = (limit ? scope.slice(0, Number(limit)) : scope).map(row => ({
+      const entries = scope.slice(0, Math.min(limit ? Number(limit) : Infinity, workerEntryLimit)).map(row => ({
         ...row, has_figure: false, reader_url: `https://hekprowork.github.io/learningPages/question-reader/${row.subject}/${row.id}.html`
       }))
       const lines = ['subject_id\tchapter\ttitle\ttype\ttopic\tsource\treader_url\thas_figure', ...entries.map(row => [
@@ -118,6 +119,13 @@ test('candidate form copies prompts, validates returned IDs and clears stale sel
     await change('input[aria-describedby="candidate-limit-help"]', '')
     document.querySelector('button[type=submit]').click(); await settle()
     assert.match(document.querySelector('.offline-controls').textContent, /已備妥 2 題候選/)
+    workerEntryLimit = 1
+    await change('input[type=number]', '2')
+    document.querySelector('button[type=submit]').click(); await settle()
+    assert.match(document.querySelector('.offline-controls').textContent, /已備妥 2 題候選/)
+    assert.match(document.querySelector('[role=status]').textContent, /只有 1 題候選.*目前使用本機題庫/)
+    workerEntryLimit = Infinity
+    await change('input[type=number]', '1')
     const practice = document.querySelector('fieldset[aria-describedby="offline-type-help"] input[value=practice]')
     practice.checked = false; practice.dispatchEvent(new dom.window.Event('change', { bubbles: true })); await mod.nextTick()
     assert.equal(document.querySelector('.selection-return a'), null)

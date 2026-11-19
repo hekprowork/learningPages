@@ -1,6 +1,8 @@
+import { parseCandidateLimit, selectCandidates, TYPE_OPTIONS } from '../../shared/candidate-selection.js'
+
 const site = 'https://hekprowork.github.io/learningPages/'
 const subjects = new Set(['circuits', 'electronics', 'engineering-math', 'solid-state'])
-const types = ['example', 'practice', 'exercise', 'homework', 'exam']
+const types = TYPE_OPTIONS.map(option => option.value)
 const selectionHeader = 'subject_id\tchapter\ttitle\ttype\ttopic\tsource\treader_url\thas_figure'
 
 function response(body, status, contentType = 'text/plain', headers = {}) {
@@ -61,17 +63,11 @@ function parsePrepareOptions(url) {
   if (!Number.isSafeInteger(count) || count < 1 || count > 10) throw new Error('模考題數必須是 1–10 的整數。')
   if (!Number.isSafeInteger(minutes) || minutes < 1 || minutes > 480) throw new Error('作答時間必須是 1–480 分鐘的整數。')
   if (rawLimit === null) throw new Error('候選題數選項不得重複。')
-  const candidateLimit = rawLimit.trim() === '' ? null : Number(rawLimit)
-  if (candidateLimit !== null && (!Number.isSafeInteger(candidateLimit) || candidateLimit < count)) {
-    throw new Error(`候選題數請留空使用全部，或填入至少 ${count} 題的整數。`)
-  }
   return {
     subject,
-    chapters: chapters.sort((a, b) => Number(a) - Number(b) || a.localeCompare(b)),
+    chapters,
     types: types.filter(type => selectedTypes.includes(type)),
-    count,
-    minutes,
-    candidateLimit,
+    candidateLimit: parseCandidateLimit(rawLimit, count),
   }
 }
 
@@ -93,21 +89,7 @@ async function loadCandidateIndex(subject) {
     ids.add(row.id)
   }
   if (data.count !== data.entries.length) throw new Error('Published candidate count mismatch')
-  return data
-}
-
-function roundRobin(entries) {
-  const groups = new Map()
-  for (const row of entries) {
-    const key = row.topic || row.type
-    if (!groups.has(key)) groups.set(key, [])
-    groups.get(key).push(row)
-  }
-  const ordered = []
-  while ([...groups.values()].some(group => group.length)) {
-    for (const group of groups.values()) if (group.length) ordered.push(group.shift())
-  }
-  return ordered
+  return { ...data, entries: data.entries.map(row => ({ ...row, subject })) }
 }
 
 function shareUrl(requestUrl, subject, entries) {
@@ -126,19 +108,19 @@ async function prepare(url) {
   try { index = await loadCandidateIndex(options.subject) }
   catch { return json({ error: '公開題庫索引暫時無法讀取，請稍後再試或改用頁面內的本機候選清單。' }, 502) }
 
-  const availableChapters = new Set(index.entries.map(row => row.chapter))
-  if (options.chapters.some(chapter => !availableChapters.has(chapter))) return json({ error: '章節選項不屬於此科目。' }, 400)
-  const matching = index.entries.filter(row => options.chapters.includes(row.chapter) && options.types.includes(row.type))
-  const ordered = roundRobin(matching)
-  const entries = ordered.slice(0, options.candidateLimit ?? ordered.length).map(row => ({ ...row, subject: options.subject }))
+  let candidates
+  try { candidates = selectCandidates(index.entries, options, options.candidateLimit) }
+  catch { return json({ error: '章節選項不屬於此科目。' }, 400) }
+  const { chapters, types: selectedTypes, ordered, wanted } = candidates
+  const entries = ordered.slice(0, wanted)
   const tsv = asTsv(entries)
   return json({
     subject: options.subject,
     version: index.version,
-    chapters: options.chapters,
-    types: options.types,
+    chapters,
+    types: selectedTypes,
     count: entries.length,
-    scope_count: matching.length,
+    scope_count: ordered.length,
     candidate_count: entries.length,
     figure_count: entries.filter(row => row.has_figure).length,
     entries,
@@ -161,7 +143,7 @@ async function selection(url) {
   const rowsById = new Map(index.entries.map(row => [row.id, row]))
   const missing = ids.filter(id => !rowsById.has(id))
   if (missing.length) return response('題庫中找不到候選題 ID：' + missing.join(', '), 404)
-  const rows = ids.map(id => ({ ...rowsById.get(id), subject }))
+  const rows = ids.map(id => rowsById.get(id))
   return response(asTsv(rows), 200, 'text/tab-separated-values', {
     'Content-Disposition': `attachment; filename="learningPages-${subject}-candidate-index.tsv"`,
     'X-Index-Version': index.version,
