@@ -320,4 +320,140 @@ chapter	id	title	type	topic	source	repo_path
 3	elec-ch3-problem-3-29	平行板觀點推導接面電容	exercise	接面電容	Problem 3.29 · Textbook P173	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
 3	elec-ch3-problem-3-30	擴散電容與電流的比例	exercise	擴散電容	Problem 3.30 · Textbook P173	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
 3	elec-ch3-problem-3-31	短基極二極體與擴散電容	exercise	擴散電容	Problem 3.31 · Textbook P173	docs/electronics/practice-source/0019-chapter3-problems-3-18-3-31.md
-
+4	elec-ch4-exercise-4-1	半波整流器的轉移特性	exercise	理想二極體	Exercise 4.1 · PDF p. 208 / 書頁 178	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-2	半波整流器的二極體電壓波形	exercise	理想二極體	Exercise 4.2 · PDF p. 208 / 書頁 178	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-3	半波整流器的峰值電流與直流輸出	exercise	理想二極體	Exercise 4.3 · PDF p. 209 / 書頁 179	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-4	理想二極體電路的電流與電壓	exercise	理想二極體	Exercise 4.4 · PDF p. 213 / 書頁 183	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-5	半波整流式交流電壓表	exercise	理想二極體	Exercise 4.5 · PDF p. 213 / 書頁 183	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-6	限制二極體峰值電流的電阻	exercise	理想二極體	Exercise 4.6 · PDF p. 214 / 書頁 184	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-7	二極體電流變化造成的電壓變化	exercise	二極體方程式	Exercise 4.7 · PDF p. 219 / 書頁 189	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-8	矽二極體於不同電流下的順向壓降	exercise	二極體方程式	Exercise 4.8 · PDF p. 219 / 書頁 189	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-9	鍺二極體的尺度電流	exercise	二極體方程式	Exercise 4.9 · PDF p. 219 / 書頁 189	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-10	矽二極體尺度電流的溫度變化	exercise	溫度效應	Exercise 4.10 · PDF p. 219 / 書頁 189	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-11	反向漏電流的溫度效應	exercise	溫度效應	Exercise 4.11 · PDF p. 220 / 書頁 190	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-12	指數模型與定壓降模型分析	exercise	定壓降模型	Exercise 4.12 · PDF p. 225 / 書頁 195	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-13	設計二極體串接電阻以產生輸出電壓	exercise	設計題	Exercise 4.13 · PDF p. 225 / 書頁 195	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-14	定壓降模型下的六組二極體電路	exercise	定壓降模型	Exercise 4.14 · PDF p. 225 / 書頁 195	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-15	反向峰值電壓額定值限制	exercise	二極體額定值	Exercise 4.15 · PDF p. 227 / 書頁 197	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-16	齊納二極體工作電壓與最大電流	exercise	齊納二極體	Exercise 4.16 · PDF p. 228 / 書頁 198	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-17	不同偏壓電流下的二極體小訊號電阻	exercise	小訊號模型	Exercise 4.17 · PDF p. 234 / 書頁 204	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-18	小訊號與指數模型的電流變化比較	exercise	小訊號模型	Exercise 4.18 · PDF p. 234 / 書頁 204	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-19	設計穩壓電路的輸出與負載調整率	exercise	設計題	Exercise 4.19 · PDF p. 234 / 書頁 204	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-20	齊納模型參數與電流變化	exercise	齊納二極體	Exercise 4.20 · PDF p. 237 / 書頁 207	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-21	半波整流器的導通角、平均值與 PIV	exercise	半波整流	Exercise 4.21 · PDF p. 240 / 書頁 210	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-22	全波整流器的輸出與二極體額定值	exercise	全波整流	Exercise 4.22 · PDF p. 242 / 書頁 212	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-23	橋式整流器的平均輸出與 PIV	exercise	橋式整流	Exercise 4.23 · PDF p. 244 / 書頁 214	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-24	推導全波峰值整流器的漣波與二極體電流式	exercise	峰值整流	Exercise 4.24 · PDF p. 250 / 書頁 220	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-25	橋式峰值整流器的電容與二極體規格	exercise	峰值整流	Exercise 4.25 · PDF p. 250 / 書頁 220	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-26	運算放大器精密半波整流器	exercise	精密整流	Exercise 4.26 · PDF p. 252 / 書頁 222	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-27	反向接二極體的精密整流器	exercise	精密整流	Exercise 4.27 · PDF p. 252 / 書頁 222	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-28	反向二極體的直流恢復器	exercise	直流恢復	Exercise 4.28 · PDF p. 255 / 書頁 225	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-29	自舉電路的電容電壓與 PIV	exercise	自舉電路	Exercise 4.29 · PDF p. 255 / 書頁 225	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-30	變容二極體的電容變化	exercise	變容二極體	Exercise 4.30 · PDF p. 255 / 書頁 225	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-31	光二極體的光電流與暗電流	exercise	光二極體	Exercise 4.31 · PDF p. 258 / 書頁 228	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-32	光二極體感測器的面積與接面電容	exercise	光二極體	Exercise 4.32 · PDF p. 258 / 書頁 228	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-33	串接紅色 LED 的限流電阻	exercise	LED	Exercise 4.33 · PDF p. 258 / 書頁 228	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-exercise-4-34	串接綠色 LED 的限流電阻	exercise	LED	Exercise 4.34 · PDF p. 258 / 書頁 228	docs/electronics/practice-source/0020-chapter4-exercises.md
+4	elec-ch4-problem-4-1	Problem 4.1｜理想二極體與電池	exercise	理想二極體	Sedra/Smith 8e p.230 (PDF 260), Problem 4.1	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-2	Problem 4.2｜理想二極體電路	exercise	理想二極體	Sedra/Smith 8e p.230 (PDF 260), Problem 4.2	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-3	Problem 4.3｜理想二極體電路	exercise	理想二極體	Sedra/Smith 8e p.230–231 (PDF 260–261), Problem 4.3	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-4	Problem 4.4｜理想二極體輸出波形	exercise	理想二極體	Sedra/Smith 8e p.230–232 (PDF 260–262), Problem 4.4	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-5	Problem 4.5｜電池充電器	exercise	整流與電池充電	Sedra/Smith 8e p.232 (PDF 262), Problem 4.5	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-6	Problem 4.6｜二極體邏輯閘	exercise	二極體邏輯	Sedra/Smith 8e p.232 (PDF 262), Problem 4.6	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-7	Problem 4.7｜理想二極體電路	exercise	理想二極體	Sedra/Smith 8e p.232 (PDF 262), Problem 4.7	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-8	Problem 4.8｜戴維寧等效與理想二極體	exercise	戴維寧定理	Sedra/Smith 8e p.233 (PDF 263), Problem 4.8	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-9	Problem 4.9｜半波整流器設計	exercise	整流器	Sedra/Smith 8e p.233 (PDF 263), Problem 4.9	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-10	Problem 4.10｜方波輸入整流器	exercise	整流器	Sedra/Smith 8e p.233 (PDF 263), Problem 4.10	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-11	Problem 4.11｜非對稱方波整流器	exercise	整流器	Sedra/Smith 8e p.233 (PDF 263), Problem 4.11	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-12	Problem 4.12｜二極體限流設計	exercise	電路設計	Sedra/Smith 8e p.233 (PDF 263), Problem 4.12	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-13	Problem 4.13｜電池充電器設計	exercise	電路設計	Sedra/Smith 8e p.233 (PDF 263), Problem 4.13	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-14	Problem 4.14｜二極體訊號系統	exercise	二極體應用	Sedra/Smith 8e p.233 (PDF 263), Problem 4.14	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-15	Problem 4.15｜限幅器安全輸入範圍	exercise	限幅與保護	Sedra/Smith 8e p.233 (PDF 263), Problem 4.15	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-16	Problem 4.16｜限幅器電流特性	exercise	限幅與保護	Sedra/Smith 8e p.233 (PDF 263), Problem 4.16	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-17	Problem 4.17｜突波下二極體額定值	exercise	限幅與保護	Sedra/Smith 8e p.233 (PDF 263), Problem 4.17	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-18	Problem 4.18｜熱電壓與溫度	exercise	接面二極體特性	Sedra/Smith 8e p.233 (PDF 263), Problem 4.18	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-19	Problem 4.19｜二極體方程式	exercise	接面二極體特性	Sedra/Smith 8e p.233 (PDF 263), Problem 4.19	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-20	Problem 4.20｜二極體電流估算	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.20	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-21	Problem 4.21｜電壓微變與電流	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.21	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-22	Problem 4.22｜由量測估計飽和電流	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.22	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-23	Problem 4.23｜由量測估計二極體電流	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.23	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-24	Problem 4.24｜三顆串聯二極體	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.24	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-25	Problem 4.25｜並聯二極體	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.25	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-26	Problem 4.26｜不同飽和電流二極體並聯	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.26	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-27	Problem 4.27｜二極體面積比	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.27	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-28	Problem 4.28｜二極體與電阻	exercise	接面二極體特性	Sedra/Smith 8e p.234 (PDF 264), Problem 4.28	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-29	Problem 4.29｜溫度對二極體電壓的影響	exercise	溫度效應	Sedra/Smith 8e p.234–235 (PDF 264–265), Problem 4.29	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-30	Problem 4.30｜不同面積二極體的溫度效應	exercise	溫度效應	Sedra/Smith 8e p.235 (PDF 265), Problem 4.30	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-31	Problem 4.31｜二極體熱阻	exercise	熱效應	Sedra/Smith 8e p.235 (PDF 265), Problem 4.31	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-32	Problem 4.32｜功率二極體的參考電壓	exercise	溫度效應	Sedra/Smith 8e p.235 (PDF 265), Problem 4.32	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-33	Problem 4.33｜電流鏡與二極體電壓差	exercise	電流鏡	Sedra/Smith 8e p.235 (PDF 265), Problem 4.33	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-34	Problem 4.34｜串聯電阻的二極體	exercise	接面二極體特性	Sedra/Smith 8e p.235 (PDF 265), Problem 4.34	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-35	Problem 4.35｜二極體圖解分析	exercise	二極體模型	Sedra/Smith 8e p.235 (PDF 265), Problem 4.35	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-36	Problem 4.36｜二極體迭代分析	exercise	二極體模型	Sedra/Smith 8e p.235 (PDF 265), Problem 4.36	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-37	Problem 4.37｜1 mA 二極體的迭代分析	exercise	二極體模型	Sedra/Smith 8e p.235 (PDF 265), Problem 4.37	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-38	Problem 4.38｜限壓模型與指數模型	exercise	二極體模型	Sedra/Smith 8e p.235 (PDF 265), Problem 4.38	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-39	Problem 4.39｜二極體參考電壓設計	exercise	電路設計	Sedra/Smith 8e p.235 (PDF 265), Problem 4.39	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-40	Problem 4.40｜定壓降模型限幅器	exercise	二極體模型	Sedra/Smith 8e p.236 (PDF 266), Problem 4.40	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-41	Problem 4.41｜定壓降模型電路分析	exercise	二極體模型	Sedra/Smith 8e p.236 (PDF 266), Problem 4.41	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-42	Problem 4.42｜定壓降模型電路分析	exercise	二極體模型	Sedra/Smith 8e p.236 (PDF 266), Problem 4.42	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-43	Problem 4.43｜定壓降模型電路分析	exercise	二極體模型	Sedra/Smith 8e p.236 (PDF 266), Problem 4.43	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-44	Problem 4.44｜戴維寧等效與定壓降模型	exercise	戴維寧定理	Sedra/Smith 8e p.236 (PDF 266), Problem 4.44	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-45	Problem 4.45｜定壓降模型整流器設計	exercise	整流器	Sedra/Smith 8e p.236 (PDF 266), Problem 4.45	docs/electronics/practice-source/0021-chapter4-problems-4-1-4-45.md
+4	elec-ch4-problem-4-46	Problem 4.46｜齊納二極體規格表	exercise	齊納二極體	Sedra/Smith 8e · p.236 · Problem 4.46	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-47	Problem 4.47｜齊納功率限制	exercise	齊納二極體	Sedra/Smith 8e · p.236 · Problem 4.47	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-48	Problem 4.48｜串聯二極體溫度係數	exercise	溫度係數	Sedra/Smith 8e · p.236 · Problem 4.48	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-49	Problem 4.49｜小訊號模型適用範圍	exercise	小訊號模型	Sedra/Smith 8e · p.236 · Problem 4.49	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-50	Problem 4.50｜並聯二極體與串聯電阻	exercise	小訊號電阻	Sedra/Smith 8e · p.236 · Problem 4.50	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-51	Problem 4.51｜電容耦合二極體衰減器	exercise	小訊號模型	Sedra/Smith 8e · pp.236–237 · Problem 4.51	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-52	Problem 4.52｜設定衰減量與訊號限制	exercise	小訊號模型	Sedra/Smith 8e · p.237 · Problem 4.52	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-53	Problem 4.53｜直流控制的二極體衰減器	exercise	小訊號模型	Sedra/Smith 8e · p.237 · Problem 4.53	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-54	Problem 4.54｜四二極體訊號傳輸電路	exercise	小訊號模型	Sedra/Smith 8e · p.237 · Problem 4.54	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-55	Problem 4.55｜四二極體電壓轉移特性	exercise	二極體指數特性	Sedra/Smith 8e · p.237 · Problem 4.55	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-56	Problem 4.56｜二極體相移電路	exercise	小訊號模型	Sedra/Smith 8e · p.238 · Problem 4.56	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-57	Problem 4.57｜二極體電壓調節器線路調節率	exercise	電壓調節器	Sedra/Smith 8e · p.238 · Problem 4.57	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-58	Problem 4.58｜二極體調節器負載調節率	exercise	電壓調節器	Sedra/Smith 8e · p.238 · Problem 4.58	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-59	Problem 4.59｜設計二極體電壓調節器	exercise	電壓調節器	Sedra/Smith 8e · p.238 · Problem 4.59	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-60	Problem 4.60｜以二極體串聯替代電池	exercise	電壓調節器	Sedra/Smith 8e · p.239 · Problem 4.60	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-61	Problem 4.61｜齊納串聯組合的負載調節	exercise	齊納調節器	Sedra/Smith 8e · p.239 · Problem 4.61	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-62	Problem 4.62｜齊納並聯調節器線路變化	exercise	齊納調節器	Sedra/Smith 8e · p.239 · Problem 4.62	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-63	Problem 4.63｜設計 7.5 V 齊納調節器	exercise	齊納調節器	Sedra/Smith 8e · p.239 · Problem 4.63	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-64	Problem 4.64｜設計 10 V 齊納並聯調節器	exercise	齊納調節器	Sedra/Smith 8e · pp.239–240 · Problem 4.64	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-65	Problem 4.65｜反向二極體半波整流器	exercise	半波整流	Sedra/Smith 8e · p.239 · Problem 4.65	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-66	Problem 4.66｜半波整流器指數特性	exercise	半波整流	Sedra/Smith 8e · p.239 · Problem 4.66	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-67	Problem 4.67｜三角波半波整流平均值	exercise	半波整流	Sedra/Smith 8e · p.239 · Problem 4.67	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-68	Problem 4.68｜半波整流器交流電源規格	exercise	整流器	Sedra/Smith 8e · pp.239–240 · Problem 4.68	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-69	Problem 4.69｜中心抽頭全波整流器	exercise	全波整流	Sedra/Smith 8e · pp.239–240 · Problem 4.69	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-70	Problem 4.70｜橋式全波整流器	exercise	全波整流	Sedra/Smith 8e · p.240 · Problem 4.70	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-71	Problem 4.71｜設計中心抽頭全波整流器	exercise	全波整流	Sedra/Smith 8e · p.240 · Problem 4.71	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-72	Problem 4.72｜設計橋式全波整流器	exercise	全波整流	Sedra/Smith 8e · p.240 · Problem 4.72	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-73	Problem 4.73｜全波整流二極體 PIV	exercise	全波整流	Sedra/Smith 8e · p.240 · Problem 4.73	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-74	Problem 4.74｜互補輸出整流器	exercise	整流器	Sedra/Smith 8e · p.240 · Problem 4.74	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-75	Problem 4.75｜半波峰值整流與濾波電容	exercise	峰值整流	Sedra/Smith 8e · p.240 · Problem 4.75	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-76	Problem 4.76｜中心抽頭全波峰值整流與濾波	exercise	峰值整流	Sedra/Smith 8e · p.240 · Problem 4.76	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-77	Problem 4.77｜橋式峰值整流與濾波電容	exercise	峰值整流	Sedra/Smith 8e · p.240 · Problem 4.77	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-78	Problem 4.78｜半波峰值整流電源設計	exercise	峰值整流	Sedra/Smith 8e · p.240 · Problem 4.78	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-79	Problem 4.79｜中心抽頭全波峰值整流電源	exercise	峰值整流	Sedra/Smith 8e · p.241 · Problem 4.79	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-80	Problem 4.80｜橋式峰值整流電源設計	exercise	峰值整流	Sedra/Smith 8e · p.241 · Problem 4.80	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-81	Problem 4.81｜三角波輸入峰值整流器	exercise	峰值整流	Sedra/Smith 8e · p.241 · Problem 4.81	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-82	Problem 4.82｜互補輸出整流器雙電源設計	exercise	整流器設計	Sedra/Smith 8e · p.241 · Problem 4.82	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-83	Problem 4.83｜精密整流器工作狀態	exercise	精密整流器	Sedra/Smith 8e · pp.241–242 · Problem 4.83	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-84	Problem 4.84｜精密整流器工作狀態（二）	exercise	精密整流器	Sedra/Smith 8e · p.241 · Problem 4.84	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-85	Problem 4.85｜精密整流器的 AM 訊號	exercise	精密整流器	Sedra/Smith 8e · p.241 · Problem 4.85	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-86	Problem 4.86｜理想二極體箝位電容	exercise	箝位電路	Sedra/Smith 8e · p.242 · Problem 4.86	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-87	Problem 4.87｜有負載的箝位電容	exercise	箝位電路	Sedra/Smith 8e · p.242 · Problem 4.87	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-88	Problem 4.88｜理想二極體箝位電路組	exercise	箝位電路	Sedra/Smith 8e · p.242 · Problem 4.88	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-89	Problem 4.89｜變容二極體偏壓範圍	exercise	變容二極體	Sedra/Smith 8e · p.242 · Problem 4.89	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-90	Problem 4.90｜光二極體跨阻放大器	exercise	光二極體	Sedra/Smith 8e · pp.242–243 · Problem 4.90	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-problem-4-91	Problem 4.91｜LED 限流電阻	exercise	LED	Sedra/Smith 8e · p.243 · Problem 4.91	docs/electronics/practice-source/0022-chapter4-problems-4-46-4-91.md
+4	elec-ch4-example-4-1	理想二極體電池充電	example	理想二極體	Example 4.1 · Textbook P179	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-example-4-2	雙向理想限幅器	example	限幅電路	Example 4.2 · Textbook P180–P182	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-example-4-3	二極體尺度電流	example	二極體指數特性	Example 4.3 · Textbook P187–P188	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-example-4-4	指數模型迭代分析	example	二極體模型	Example 4.4 · Textbook P192–P193	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-example-4-5	電源漣波的小訊號分析	example	小訊號模型	Example 4.5 · Textbook P201–P202	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-example-4-6	三二極體電壓調節	example	電壓調節	Example 4.6 · Textbook P203–P204	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-example-4-7	齊納二極體並聯調節器	example	齊納穩壓	Example 4.7 · Textbook P205–P207	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-example-4-8	半波峰值整流器	example	峰值整流	Example 4.8 · Textbook P218	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-video-example-4-1	理想二極體電路分析	example	理想二極體	Video Example 4.1 · Textbook P182	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-video-example-4-2	不同接面面積的指數模型	example	二極體指數特性	Video Example 4.2 · Textbook P188	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-video-example-4-3	固定壓降模型分析	example	二極體模型	Video Example 4.3 · Textbook P195	docs/electronics/practice-source/0023-chapter4-examples.md
+4	elec-ch4-video-example-4-4	中心抽頭全波整流器	example	全波整流	Video Example 4.4 · Textbook P212	docs/electronics/practice-source/0023-chapter4-examples.md
