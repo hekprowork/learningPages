@@ -30,7 +30,7 @@ $$x(t)=x(\infty)+\bigl[x(0^+)-x(\infty)\bigr]e^{-t/\tau},\qquad t>0$$
 
 <PracticeCard id="ch7-ex1" type="example" title="Example 7.1" source="課本 p.256" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-In Fig. 7.5, let vC (0) = 15 V . Find vC, vx, and ix for t > 0 .
+In Fig. 7.5, let $v_C(0) = 15\,\mathrm{V}$ . Find $v_C$, $v_x$, and $i_x$ for $t > 0$ .
 
 ![Figure 7.5 cited in Example 7.1](../assets/images/ch7-ex1_figure_7_5.png)
 
@@ -58,7 +58,7 @@ $$
 
 <PracticeCard id="ch7-pr1" type="practice" title="Practice Problem 7.1" source="課本 p.256" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Refer to the circuit in Fig. 7.7. Let vC (0) = 60 V . Determine vC, vx, and io for t ≥ 0 .
+Refer to the circuit in Fig. 7.7. Let $v_C(0) = 60\,\mathrm{V}$ . Determine $v_C$, $v_x$, and $i_o$ for $t \ge  0$ .
 
 ![Figure 7.7 cited in Practice Problem 7.1](../assets/images/ch7-pr1_figure_7_7.png)
 
@@ -76,7 +76,7 @@ Refer to the circuit in Fig. 7.7. Let vC (0) = 60 V . Determine vC, vx, and io f
 
 <PracticeCard id="ch7-ex2" type="example" title="Example 7.2" source="課本 p.256" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The switch in the circuit in Fig. 7.8 has been closed for a long time, and it is opened at t = 0 . Find v(t) for t ≥ 0 . Calculate the initial energy stored in the capacitor.
+The switch in the circuit in Fig. 7.8 has been closed for a long time, and it is opened at $t = 0$ . Find $v(t)$ for $t \ge  0$ . Calculate the initial energy stored in the capacitor.
 
 ![Figure 7.8 cited in Example 7.2](../assets/images/ch7-ex2_figure_7_8.png)
 
@@ -104,7 +104,7 @@ $$
 
 <PracticeCard id="ch7-pr2" type="practice" title="Practice Problem 7.2" source="課本 p.257" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-If the switch in Fig. 7.10 opens at t = 0 , find v(t) for t ≥ 0 and wC (0) .
+If the switch in Fig. 7.10 opens at $t = 0$ , find $v(t)$ for $t \ge  0$ and $w_C(0)$ .
 
 ![Figure 7.10 cited in Practice Problem 7.2](../assets/images/ch7-pr2_figure_7_10.png)
 
@@ -122,7 +122,7 @@ If the switch in Fig. 7.10 opens at t = 0 , find v(t) for t ≥ 0 and wC (0) .
 
 <PracticeCard id="ch7-ex3" type="example" title="Example 7.3" source="課本 p.259" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Assuming that i(0) = 10 A , calculate i(t) and ix(t) in the circuit of Fig. 7.13, for t > 0 .
+Assuming that $i(0) = 10\,\mathrm{A}$ , calculate $i(t)$ and $i_x(t)$ in the circuit of Fig. 7.13, for $t > 0$ .
 
 ![Figure 7.13 cited in Example 7.3](../assets/images/ch7-ex3_figure_7_13.png)
 
@@ -152,7 +152,7 @@ $$
 
 <PracticeCard id="ch7-pr3" type="practice" title="Practice Problem 7.3" source="課本 p.261" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Find i and vx in the circuit of Fig. 7.15, for t > 0 . Let i(0) = 12 A .
+Find $i$ and $v_x$ in the circuit of Fig. 7.15, for $t > 0$ . Let $i(0) = 12\,\mathrm{A}$ .
 
 ![Figure 7.15 cited in Practice Problem 7.3](../assets/images/ch7-pr3_figure_7_15.png)
 
@@ -170,7 +170,7 @@ Find i and vx in the circuit of Fig. 7.15, for t > 0 . Let i(0) = 12 A .
 
 <PracticeCard id="ch7-ex4" type="example" title="Example 7.4" source="課本 p.261" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The switch in the circuit of Fig. 7.16 has been closed for a long time. At t = 0 , the switch is opened. Calculate i(t) for t > 0 .
+The switch in the circuit of Fig. 7.16 has been closed for a long time. At $t = 0$ , the switch is opened. Calculate $i(t)$ for $t > 0$ .
 
 ![Figure 7.16 cited in Example 7.4](../assets/images/ch7-ex4_figure_7_16.png)
 
@@ -198,7 +198,7 @@ $$
 
 <PracticeCard id="ch7-pr4" type="practice" title="Practice Problem 7.4" source="課本 p.262" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-For the circuit in Fig. 7.18, find i(t) for t > 0 .
+For the circuit in Fig. 7.18, find $i(t)$ for $t > 0$ .
 
 ![Figure 7.18 cited in Practice Problem 7.4](../assets/images/ch7-pr4_figure_7_18.png)
 
@@ -216,7 +216,7 @@ For the circuit in Fig. 7.18, find i(t) for t > 0 .
 
 <PracticeCard id="ch7-ex5" type="example" title="Example 7.5" source="課本 p.262" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-In the circuit shown in Fig. 7.19, find io, vo, and i for all time, assuming that the switch was open for a long time.
+In the circuit shown in Fig. 7.19, find $i_o$, $v_o$, and $i$ for all time, assuming that the switch was open for a long time.
 
 ![Figure 7.19 cited in Example 7.5](../assets/images/ch7-ex5_figure_7_19.png)
 
@@ -242,7 +242,7 @@ $$
 
 <PracticeCard id="ch7-pr5" type="practice" title="Practice Problem 7.5" source="課本 p.263" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Determine i, io, and vo for all t in the circuit shown in Fig. 7.22. Assume that the switch was closed for a long time. It should be noted that opening a switch in series with an ideal current source creates an infinite voltage at the current source terminals. Clearly this is impossible. For the purposes of problem solving, we can place a shunt resistor in parallel with the source (which now makes it a voltage source in series with a resistor). In more practical circuits, devices that act like current sources are, for the most part, electronic circuits. These circuits will allow the source to act like an ideal current source over its operating range but voltage-limit it when the load resistor becomes too large (as in an open circuit).
+Determine $i$, $i_o$, and $v_o$ for all $t$ in the circuit shown in Fig. 7.22. Assume that the switch was closed for a long time. It should be noted that opening a switch in series with an ideal current source creates an infinite voltage at the current source terminals. Clearly this is impossible. For the purposes of problem solving, we can place a shunt resistor in parallel with the source (which now makes it a voltage source in series with a resistor). In more practical circuits, devices that act like current sources are, for the most part, electronic circuits. These circuits will allow the source to act like an ideal current source over its operating range but voltage-limit it when the load resistor becomes too large (as in an open circuit).
 
 ![Figure 7.22 cited in Practice Problem 7.5](../assets/images/ch7-pr5_figure_7_22.png)
 
@@ -332,7 +332,7 @@ $$
 
 <PracticeCard id="ch7-pr7" type="practice" title="Practice Problem 7.7" source="課本 p.270" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Refer to Fig. 7.39. Express i(t) in terms of singularity functions.
+Refer to Fig. 7.39. Express $i(t)$ in terms of singularity functions.
 
 ![Figure 7.39 cited in Practice Problem 7.7](../assets/images/ch7-pr7_figure_7_39.png)
 
@@ -438,7 +438,7 @@ Evaluate the following integrals: $\int_{-\infty}^{\infty}(t^3+5t^2+10)\delta(t+
 
 <PracticeCard id="ch7-ex10" type="example" title="Example 7.10" source="課本 p.275" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The switch in Fig. 7.43 has been in position A for a long time. At t = 0 , the switch moves to B . Determine v(t) for t > 0 and calculate its value at t = 1 and 4 s .
+The switch in Fig. 7.43 has been in position A for a long time. At $t = 0$ , the switch moves to B . Determine $v(t)$ for $t > 0$ and calculate its value at $t = 1$ and $4\,\mathrm{s}$ .
 
 ![Figure 7.43 cited in Example 7.10](../assets/images/ch7-ex10_figure_7_43.png)
 
@@ -466,7 +466,7 @@ $$
 
 <PracticeCard id="ch7-pr10" type="practice" title="Practice Problem 7.10" source="課本 p.276" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Find v(t) for t > 0 in the circuit of Fig. 7.44. Assume the switch has been open for a long time and is closed at t = 0 . Calculate v(t) at t = 0.5 .
+Find $v(t)$ for $t > 0$ in the circuit of Fig. 7.44. Assume the switch has been open for a long time and is closed at $t = 0$ . Calculate $v(t)$ at $t = 0.5$ .
 
 ![Figure 7.44 cited in Practice Problem 7.10](../assets/images/ch7-pr10_figure_7_44.png)
 
@@ -476,7 +476,7 @@ Find v(t) for t > 0 in the circuit of Fig. 7.44. Assume the switch has been open
 
 老師 Chapter 7 投影片第 98 頁列出答案，未提供逐步解法。
 
-(9.375 + 5.625 $e^{-2t}$ ) V for all t > 0, 11.444 V .
+(9.375 + 5.625 $e^{-2t}$ ) V for all $t$ > 0, 11.444 V .
 
 </template>
 
@@ -484,7 +484,7 @@ Find v(t) for t > 0 in the circuit of Fig. 7.44. Assume the switch has been open
 
 <PracticeCard id="ch7-ex11" type="example" title="Example 7.11" source="課本 p.276" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-In Fig. 7.45, the switch has been closed for a long time and is opened at t = 0 . Find i and v for all time.
+In Fig. 7.45, the switch has been closed for a long time and is opened at $t = 0$ . Find $i$ and $v$ for all time.
 
 ![Figure 7.45 cited in Example 7.11](../assets/images/ch7-ex11_figure_7_45.png)
 
@@ -512,7 +512,7 @@ $$
 
 <PracticeCard id="ch7-pr11" type="practice" title="Practice Problem 7.11" source="課本 p.277" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The switch in Fig. 7.47 is closed at t = 0 . Find i(t) and v(t) for all time. Note that u(−t) = 1 for t < 0 and 0 for t > 0 . Also, u(−t) = 1 − u(t) .
+The switch in Fig. 7.47 is closed at $t = 0$ . Find $i(t)$ and $v(t)$ for all time. Note that $u(-t) = 1$ for $t < 0$ and 0 for $t > 0$ . Also, $u(-t) = 1 - u(t)$ .
 
 ![Figure 7.47 cited in Practice Problem 7.11](../assets/images/ch7-pr11_figure_7_47.png)
 
@@ -530,7 +530,7 @@ i(t)=0 for t<0 and i(t)=−2(1+$e^{-1.5t}$) A for t>0; v=20 V for t<0 and v=10(1
 
 <PracticeCard id="ch7-ex12" type="example" title="Example 7.12" source="課本 p.280" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Find i(t) in the circuit of Fig. 7.51 for t > 0 . Assume that the switch has been closed for a long time.
+Find $i(t)$ in the circuit of Fig. 7.51 for $t > 0$ . Assume that the switch has been closed for a long time.
 
 ![Figure 7.51 cited in Example 7.12](../assets/images/ch7-ex12_figure_7_51.png)
 
@@ -554,7 +554,7 @@ $$
 
 <PracticeCard id="ch7-pr12" type="practice" title="Practice Problem 7.12" source="課本 p.280" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The switch in Fig. 7.52 has been closed for a long time. It opens at t = 0 . Find i(t) for t > 0 .
+The switch in Fig. 7.52 has been closed for a long time. It opens at $t = 0$ . Find $i(t)$ for $t > 0$ .
 
 ![Figure 7.52 cited in Practice Problem 7.12](../assets/images/ch7-pr12_figure_7_52.png)
 
@@ -564,7 +564,7 @@ The switch in Fig. 7.52 has been closed for a long time. It opens at t = 0 . Fin
 
 老師 Chapter 7 投影片第 119 頁列出答案，未提供逐步解法。
 
-(4 + 2 $e^{-10t}$ ) A for all t > 0 .
+(4 + 2 $e^{-10t}$ ) A for all $t$ > 0 .
 
 </template>
 
@@ -572,7 +572,7 @@ The switch in Fig. 7.52 has been closed for a long time. It opens at t = 0 . Fin
 
 <PracticeCard id="ch7-ex13" type="example" title="Example 7.13" source="課本 p.281" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-At t = 0 , switch 1 in Fig. 7.53 is closed, and switch 2 is closed 4 s later. Find i(t) for t > 0 . Calculate i for t = 2 s and t = 5 s .
+At $t = 0$ , switch 1 in Fig. 7.53 is closed, and switch 2 is closed $4\,\mathrm{s}$ later. Find $i(t)$ for $t > 0$ . Calculate $i$ for $t = 2\,\mathrm{s}$ and $t = 5\,\mathrm{s}$ .
 
 ![Figure 7.53 cited in Example 7.13](../assets/images/ch7-ex13_figure_7_53.png)
 
@@ -608,7 +608,7 @@ $i(2)\approx3.93\,\mathrm A$，$i(5)\approx3.02\,\mathrm A$。講義第 116 頁�
 
 <PracticeCard id="ch7-pr13" type="practice" title="Practice Problem 7.13" source="課本 p.282" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Switch S1 in Fig. 7.54 is closed at t = 0 , and switch S2 is closed at t = 2s . Calculate i(t) for all t . Find i (1) and i (3).
+Switch $S_1$ in Fig. 7.54 is closed at $t = 0$ , and switch $S_2$ is closed at $t = 2\,\mathrm{s}$ . Calculate $i(t)$ for all $t$ . Find $i(1)$ and $i(3)$.
 
 ![Figure 7.54 cited in Practice Problem 7.13](../assets/images/ch7-pr13_figure_7_54.png)
 
@@ -636,7 +636,7 @@ $i(1)\approx1.9998\,\mathrm A$，$i(3)\approx3.5892\,\mathrm A$。第 120 頁將
 
 <PracticeCard id="ch7-ex14" type="example" title="Example 7.14" source="課本 p.283" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-For the op amp circuit in Fig. 7.55(a), find vo for t > 0 , given that v(0) = 3 V. Let Rf = 80 kΩ, R1 = 20 kΩ , and C = 5 μF .
+For the op amp circuit in Fig. 7.55(a), find $v_o$ for $t > 0$ , given that $v(0) = 3\,\mathrm{V}$. Let $R_f = 80\,\mathrm{k\Omega}$, $R_1 = 20\,\mathrm{k\Omega}$ , and $C = 5\,\mathrm{\mu F}$ .
 
 ![Figure 7.55 cited in Example 7.14](../assets/images/ch7-ex14_figure_7_55.png)
 
@@ -664,7 +664,7 @@ $$
 
 <PracticeCard id="ch7-pr14" type="practice" title="Practice Problem 7.14" source="課本 p.284" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-For the op amp circuit in Fig. 7.56, find vo for t > 0 if v(0) = 4 V . Assume that Rf = 50 kΩ, R1 = 10 kΩ , and C = 10 μF .
+For the op amp circuit in Fig. 7.56, find $v_o$ for $t > 0$ if $v(0) = 4\,\mathrm{V}$ . Assume that $R_f = 50\,\mathrm{k\Omega}$, $R_1 = 10\,\mathrm{k\Omega}$ , and $C = 10\,\mathrm{\mu F}$ .
 
 ![Figure 7.56 cited in Practice Problem 7.14](../assets/images/ch7-pr14_figure_7_56.png)
 
@@ -682,7 +682,7 @@ For the op amp circuit in Fig. 7.56, find vo for t > 0 if v(0) = 4 V . Assume th
 
 <PracticeCard id="ch7-ex15" type="example" title="Example 7.15" source="課本 p.284" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Determine v(t) and vo(t) in the circuit of Fig. 7.57.
+Determine $v(t)$ and $v_o(t)$ in the circuit of Fig. 7.57.
 
 ![Figure 7.57 cited in Example 7.15](../assets/images/ch7-ex15_figure_7_57.png)
 
@@ -710,7 +710,7 @@ $$
 
 <PracticeCard id="ch7-pr15" type="practice" title="Practice Problem 7.15" source="課本 p.285" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Find v(t) and vo(t) in the op amp circuit of Fig. 7.58.
+Find $v(t)$ and $v_o(t)$ in the op amp circuit of Fig. 7.58.
 
 ![Figure 7.58 cited in Practice Problem 7.15](../assets/images/ch7-pr15_figure_7_58.png)
 
@@ -728,7 +728,7 @@ v(t)=40(1−$e^{-10t}$)u(t) mV; vo(t)=40($e^{-10t}$−1)u(t) mV.
 
 <PracticeCard id="ch7-ex16" type="example" title="Example 7.16" source="課本 p.286" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Find the step response vo(t) for t > 0 in the op amp circuit of Fig. 7.59. Let vi = 2u(t) V, R1 = 20 kΩ, Rf = 50 kΩ, R2 = R3 = 10 kΩ, C = 2 μF .
+Find the step response $v_o(t)$ for $t > 0$ in the op amp circuit of Fig. 7.59. Let $v_i = 2u(t)\,\mathrm{V}$, $R_1 = 20\,\mathrm{k\Omega}$, $R_f = 50\,\mathrm{k\Omega}$, $R_2 = R_3 = 10\,\mathrm{k\Omega}$, $C = 2\,\mathrm{\mu F}$ .
 
 ![Figure 7.59 cited in Example 7.16](../assets/images/ch7-ex16_figure_7_59.png)
 
@@ -756,7 +756,7 @@ $$
 
 <PracticeCard id="ch7-pr16" type="practice" title="Practice Problem 7.16" source="課本 p.287" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Obtain the step response vo(t) for the circuit in Fig. 7.62. Let vi = 4.5u(t) V, R1 = 20 kΩ, Rf = 40 kΩ, R2 = R3 = 10 kΩ, C = 2 μF .
+Obtain the step response $v_o(t)$ for the circuit in Fig. 7.62. Let $v_i = 4.5u(t)\,\mathrm{V}$, $R_1 = 20\,\mathrm{k\Omega}$, $R_f = 40\,\mathrm{k\Omega}$, $R_2 = R_3 = 10\,\mathrm{k\Omega}$, $C = 2\,\mathrm{\mu F}$ .
 
 ![Figure 7.62 cited in Practice Problem 7.16](../assets/images/ch7-pr16_figure_7_62.png)
 
@@ -774,7 +774,7 @@ Obtain the step response vo(t) for the circuit in Fig. 7.62. Let vi = 4.5u(t) V,
 
 <PracticeCard id="ch7-ex17" type="example" title="Example 7.17" source="課本 p.287" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Use PSpice to find the response i(t) for t > 0 in the circuit of Fig. 7.63.
+Use PSpice to find the response $i(t)$ for $t > 0$ in the circuit of Fig. 7.63.
 
 ![Figure 7.63 cited in Example 7.17](../assets/images/ch7-ex17_figure_7_63.png)
 
@@ -794,7 +794,7 @@ Solving this problem by hand gives i (0) = 0, i(∞) = 2A, R Th = 6, τ = 3/6 = 
 
 <PracticeCard id="ch7-pr17" type="practice" title="Practice Problem 7.17" source="課本 p.288" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-For the circuit in Fig. 7.66, use Pspice to find v(t) for t > 0 .
+For the circuit in Fig. 7.66, use Pspice to find $v(t)$ for $t > 0$ .
 
 ![Figure 7.66 cited in Practice Problem 7.17](../assets/images/ch7-pr17_figure_7_66.png)
 
@@ -810,7 +810,7 @@ v(t) = 8(1 − $e^{-t}$) V, t > 0 .
 
 <PracticeCard id="ch7-ex18" type="example" title="Example 7.18" source="課本 p.288" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-In the circuit of Fig. 7.67(a), determine the response v(t) .
+In the circuit of Fig. 7.67(a), determine the response $v(t)$ .
 
 ![Figure 7.67 cited in Example 7.18](../assets/images/ch7-ex18_figure_7_67.png)
 
@@ -832,7 +832,7 @@ In the circuit of Fig. 7.67(a), determine the response v(t) .
 
 <PracticeCard id="ch7-pr18" type="practice" title="Practice Problem 7.18" source="課本 p.291" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The switch in Fig. 7.71 was open for a long time but closed at t = 0 . If i(0) = 10A , find i(t) for t > 0 by hand and also by PSpice.
+The switch in Fig. 7.71 was open for a long time but closed at $t = 0$ . If $i(0) = 10\,\mathrm{A}$ , find $i(t)$ for $t > 0$ by hand and also by PSpice.
 
 ![Figure 7.71 cited in Practice Problem 7.18](../assets/images/ch7-pr18_figure_7_71.png)
 
@@ -848,7 +848,7 @@ i(t) = 6 + 4 $e^{-5t}$ A .
 
 <PracticeCard id="ch7-ex19" type="example" title="Example 7.19" source="課本 p.292" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-Consider the circuit in Fig. 7.73, and assume that R1 = 1.5 MΩ, 0 < R2 < 2.5 MΩ . (a) Calculate the extreme limits of the time constant of the circuit. (b) How long does it take for the lamp to glow for the first time after the switch is closed? Let R2 assume its largest value.
+Consider the circuit in Fig. 7.73, and assume that $R_1 = 1.5\,\mathrm{M\Omega}$, $0<R_2<2.5\,\mathrm{M\Omega}$ . (a) Calculate the extreme limits of the time constant of the circuit. (b) How long does it take for the lamp to glow for the first time after the switch is closed? Let $R_2$ assume its largest value.
 
 ![Figure 7.73 cited in Example 7.19](../assets/images/ch7-ex19_figure_7_73.png)
 
@@ -864,7 +864,7 @@ Consider the circuit in Fig. 7.73, and assume that R1 = 1.5 MΩ, 0 < R2 < 2.5 M�
 
 <PracticeCard id="ch7-pr19" type="practice" title="Practice Problem 7.19" source="課本 p.293" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The RC circuit in Fig. 7.74 is designed to operate an alarm which activates when the current through it exceeds 120 μA . If 0 ≤ R ≤ 6 kΩ , find the range of the time delay that the variable resistor can create.
+The RC circuit in Fig. 7.74 is designed to operate an alarm which activates when the current through it exceeds $120\,\mathrm{\mu A}$ . If $0\le R\le 6\,\mathrm{k\Omega}$ , find the range of the time delay that the variable resistor can create.
 
 ![Figure 7.74 cited in Practice Problem 7.19](../assets/images/ch7-pr19_figure_7_74.png)
 
@@ -880,7 +880,7 @@ Between 47.23 and 124 ms.
 
 <PracticeCard id="ch7-ex20" type="example" title="Example 7.20" source="課本 p.294" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-An electronic flashgun has a current-limiting 6-kΩ resistor and 2,000-μF electrolytic capacitor charged to 240 V . If the lamp resistance is 12 Ω , find: (a) the peak charging current, (b) the time required for the capacitor to fully charge, (c) the peak discharging current, (d) the total energy stored in the capacitor, and the average power dissipated by the lamp.
+An electronic flashgun has a current-limiting $6\text{-}\mathrm{k\Omega}$ resistor and $2{,}000\text{-}\mu\mathrm{F}$ electrolytic capacitor charged to $240\,\mathrm{V}$ . If the lamp resistance is $12\,\mathrm{\Omega}$ , find: (a) the peak charging current, (b) the time required for the capacitor to fully charge, (c) the peak discharging current, (d) the total energy stored in the capacitor, and the average power dissipated by the lamp.
 
 <template #solution>
 
@@ -908,7 +908,7 @@ The flash unit of a camera has a $2\text{-mF}$ capacitor charged to $80\text{ V}
 
 <PracticeCard id="ch7-ex21" type="example" title="Example 7.21" source="課本 p.295" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The coil of a certain relay is operated by a 12-V battery. If the coil has a resistance of 150 Ω and an inductance of 30 mH and the current needed to pull in is 50 mA , calculate the relay delay time.
+The coil of a certain relay is operated by a $12\text{-V}$ battery. If the coil has a resistance of $150\,\mathrm{\Omega}$ and an inductance of $30\,\mathrm{mH}$ and the current needed to pull in is $50\,\mathrm{mA}$ , calculate the relay delay time.
 
 <template #solution>
 
@@ -922,7 +922,7 @@ The current through the coil is given by i(t) = i(∞) + [i(0) − i(∞)] $e^{-
 
 <PracticeCard id="ch7-pr21" type="practice" title="Practice Problem 7.21" source="課本 p.296" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-A relay has a resistance of 200 Ω and an inductance of 500 mH . The relay contacts close when the current through the coil reaches 350 mA . What time elapses between the application of 110 V to the coil and contact closure?
+A relay has a resistance of $200\,\mathrm{\Omega}$ and an inductance of $500\,\mathrm{mH}$ . The relay contacts close when the current through the coil reaches $350\,\mathrm{mA}$ . What time elapses between the application of $110\,\mathrm{V}$ to the coil and contact closure?
 
 <template #solution>
 
@@ -936,7 +936,7 @@ A relay has a resistance of 200 Ω and an inductance of 500 mH . The relay conta
 
 <PracticeCard id="ch7-ex22" type="example" title="Example 7.22" source="課本 p.297" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-A solenoid with resistance 4 Ω and inductance 6 mH is used in an automobile ignition circuit similar to that in Fig. 7.78. If the battery supplies 12 V , determine: the final current through the solenoid when the switch is closed, the energy stored in the coil, and the voltage across the air gap, assuming that the switch takes 1 μs to open.
+A solenoid with resistance $4\,\mathrm{\Omega}$ and inductance $6\,\mathrm{mH}$ is used in an automobile ignition circuit similar to that in Fig. 7.78. If the battery supplies $12\,\mathrm{V}$ , determine: the final current through the solenoid when the switch is closed, the energy stored in the coil, and the voltage across the air gap, assuming that the switch takes $1\,\mathrm{\mu s}$ to open.
 
 ![Figure 7.78 cited in Example 7.22](../assets/images/ch7-ex22_figure_7_78.png)
 
@@ -952,7 +952,7 @@ The final current through the coil is I = $\frac{V_{s}}{R}$ = $\frac{12}{4}$ = 3
 
 <PracticeCard id="ch7-pr22" type="practice" title="Practice Problem 7.22" source="課本 p.297" topic="一階電路與暫態響應 (First-Order Circuits)">
 
-The spark coil of an automobile ignition system has a 20-mH inductance and a 5-Ω resistance. With a supply voltage of 12 V , calculate: the time needed for the coil to fully charge, the energy stored in the coil, and the voltage developed at the spark gap if the switch opens in 2 μs .
+The spark coil of an automobile ignition system has a $20\text{-mH}$ inductance and a $5\text{-}\Omega$ resistance. With a supply voltage of $12\,\mathrm{V}$ , calculate: the time needed for the coil to fully charge, the energy stored in the coil, and the voltage developed at the spark gap if the switch opens in $2\,\mathrm{\mu s}$ .
 
 <template #solution>
 
@@ -970,7 +970,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-01" type="exercise" title="課本習題 7.1" source="課本 Chapter 7 · Problem 7.1 · 印刷頁 299" topic="RC 自然響應與時間常數">
 
-**原題：** In the circuit shown in Fig. 7.81, v(t) = 56e^(−200t) V, t &gt; 0; i(t) = 8e^(−200t) mA, t &gt; 0. (a) Find R and C. (b) Calculate the time constant τ. (c) Determine the time required for the voltage to decay to half its initial value at t = 0.
+**原題：** In the circuit shown in Fig. 7.81, $v(t)=56e^{-200t}\,\mathrm{V}$, $t>0$; $i(t)=8e^{-200t}\,\mathrm{mA}$, $t>0$. (a) Find $R$ and $C$. (b) Calculate the time constant $\tau$. (c) Determine the time required for the voltage to decay to half its initial value at $t=0$.
 
 
 ![課本 Chapter 7 Problem 7.1，Figure 7.81](../assets/images/ch7-problem-01_figure_7.81.png)
@@ -1018,7 +1018,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-04" type="exercise" title="課本習題 7.4" source="課本 Chapter 7 · Problem 7.4 · 印刷頁 300" topic="RC 自然響應與時間常數">
 
-**原題：** The switch in Fig. 7.84 has been in position A for a long time. Assume the switch moves instantaneously from A to B at t = 0. Find v for t &gt; 0.
+**原題：** The switch in Fig. 7.84 has been in position A for a long time. Assume the switch moves instantaneously from A to B at $t = 0$. Find $v$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.4，Figure 7.84](../assets/images/ch7-problem-04_figure_7.84.png)
@@ -1047,7 +1047,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-06" type="exercise" title="課本習題 7.6" source="課本 Chapter 7 · Problem 7.6 · 印刷頁 300" topic="RC 自然響應與時間常數">
 
-**原題：** The switch in Fig. 7.86 has been closed for a long time, and it opens at t = 0. Find v(t) for t &gt; 0.
+**原題：** The switch in Fig. 7.86 has been closed for a long time, and it opens at $t = 0$. Find $v(t)$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.6，Figure 7.86](../assets/images/ch7-problem-06_figure_7.86.png)
@@ -1057,7 +1057,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-07" type="exercise" title="課本習題 7.7" source="課本 Chapter 7 · Problem 7.7 · 印刷頁 300" topic="RC 自然響應與時間常數">
 
-**原題：** Assume that the switch in Fig. 7.87 has been in position A for a long time and is moved to position B at t = 0. Then, at t = 1 s, the switch moves from B to C. Find v_C(t) for t &gt; 0.
+**原題：** Assume that the switch in Fig. 7.87 has been in position A for a long time and is moved to position B at $t = 0$. Then, at $t = 1\,\mathrm{s}$, the switch moves from B to C. Find $v_C(t)$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.7，Figure 7.87](../assets/images/ch7-problem-07_figure_7.87.png)
@@ -1076,7 +1076,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-08" type="exercise" title="課本習題 7.8" source="課本 Chapter 7 · Problem 7.8 · 印刷頁 300" topic="RC 自然響應與時間常數">
 
-**原題：** For the circuit in Fig. 7.88, if v = 10 e −4t V and i = 0.2 e −4t A, t &gt; 0 (a) Find R and C. (b) Determine the time constant. (c) Calculate the initial energy in the capacitor. (d) Obtain the time it takes to dissipate 50 percent of the initial energy.
+**原題：** For the circuit in Fig. 7.88, if $v=10e^{-4t}\,\mathrm{V}$ and $i=0.2e^{-4t}\,\mathrm{A}$, $t>0$: (a) Find $R$ and $C$. (b) Determine the time constant. (c) Calculate the initial energy in the capacitor. (d) Obtain the time it takes to dissipate 50 percent of the initial energy.
 
 
 ![課本 Chapter 7 Problem 7.8，Figure 7.88](../assets/images/ch7-problem-08_figure_7.88.png)
@@ -1086,7 +1086,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-09" type="exercise" title="課本習題 7.9" source="課本 Chapter 7 · Problem 7.9 · 印刷頁 300" topic="RC 自然響應與時間常數">
 
-**原題：** The switch in Fig. 7.89 opens at t = 0. Find vo for t &gt; 0.
+**原題：** The switch in Fig. 7.89 opens at $t = 0$. Find $v_o$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.9，Figure 7.89](../assets/images/ch7-problem-09_figure_7.89.png)
@@ -1105,7 +1105,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-10" type="exercise" title="課本習題 7.10" source="課本 Chapter 7 · Problem 7.10 · 印刷頁 300" topic="RC 自然響應與時間常數">
 
-**原題：** For the circuit in Fig. 7.90, find vo(t) for t &gt; 0. Determine the time necessary for the capacitor voltage to decay to one-third of its value at t = 0.
+**原題：** For the circuit in Fig. 7.90, find $v_o(t)$ for $t > 0$. Determine the time necessary for the capacitor voltage to decay to one-third of its value at $t = 0$.
 
 
 ![課本 Chapter 7 Problem 7.10，Figure 7.90](../assets/images/ch7-problem-10_figure_7.90.png)
@@ -1115,7 +1115,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-11" type="exercise" title="課本習題 7.11" source="課本 Chapter 7 · Problem 7.11 · 印刷頁 300" topic="RC 自然響應與時間常數">
 
-**原題：** For the circuit in Fig. 7.91, find io for t &gt; 0.
+**原題：** For the circuit in Fig. 7.91, find $i_o$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.11，Figure 7.91](../assets/images/ch7-problem-11_figure_7.91.png)
@@ -1144,7 +1144,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-13" type="exercise" title="課本習題 7.13" source="課本 Chapter 7 · Problem 7.13 · 印刷頁 301" topic="RL 自然響應與時間常數">
 
-**原題：** In the circuit of Fig. 7.93, v(t) = 80e^(−10^3t) V, t &gt; 0, and i(t) = 5e^(−10^3t) mA, t &gt; 0. (a) Find R, L, and τ. (b) Calculate the energy dissipated in the resistance for 0 &lt; t &lt; 0.5 ms.
+**原題：** In the circuit of Fig. 7.93, $v(t)=80e^{-10^3t}\,\mathrm{V}$, $t>0$, and $i(t)=5e^{-10^3t}\,\mathrm{mA}$, $t>0$. (a) Find $R$, $L$, and $\tau$. (b) Calculate the energy dissipated in the resistance for $0<t<0.5\,\mathrm{ms}$.
 
 
 ![課本 Chapter 7 Problem 7.13，Figure 7.93](../assets/images/ch7-problem-13_figure_7.93.png)
@@ -1202,7 +1202,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-17" type="exercise" title="課本習題 7.17" source="課本 Chapter 7 · Problem 7.17 · 印刷頁 301" topic="RL 自然響應與時間常數">
 
-**原題：** Consider the circuit of Fig. 7.97. Find vo(t) if i(0) = 6 A and v(t) = 0.
+**原題：** Consider the circuit of Fig. 7.97. Find $v_o(t)$ if $i(0) = 6\,\mathrm{A}$ and $v(t) = 0$.
 
 
 ![課本 Chapter 7 Problem 7.17，Figure 7.97](../assets/images/ch7-problem-17_figure_7.97.png)
@@ -1211,7 +1211,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 <template #solution>
 
 
-**課本附錄 D 標準答案：** <code>[−6e^(−16t)u(t)] V for all t &gt; 0.</code>
+**課本附錄 D 標準答案：** <code>[−6e^(−16t)u(t)] V for all $t$ &gt; 0.</code>
 
 
 </template>
@@ -1221,7 +1221,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-18" type="exercise" title="課本習題 7.18" source="課本 Chapter 7 · Problem 7.18 · 印刷頁 301" topic="RL 自然響應與時間常數">
 
-**原題：** For the circuit in Fig. 7.98, determine vo(t) when i(0) = 5 A and v(t) = 0.
+**原題：** For the circuit in Fig. 7.98, determine $v_o(t)$ when $i(0) = 5\,\mathrm{A}$ and $v(t) = 0$.
 
 
 ![課本 Chapter 7 Problem 7.18，Figure 7.98](../assets/images/ch7-problem-18_figure_7.98.png)
@@ -1231,7 +1231,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-19" type="exercise" title="課本習題 7.19" source="課本 Chapter 7 · Problem 7.19 · 印刷頁 301" topic="RL 自然響應與時間常數">
 
-**原題：** In the circuit of Fig. 7.99, find i(t) for t &gt; 0 if i(0) = 6 A.
+**原題：** In the circuit of Fig. 7.99, find $i(t)$ for $t > 0$ if $i(0) = 6\,\mathrm{A}$.
 
 
 ![課本 Chapter 7 Problem 7.19，Figure 7.99](../assets/images/ch7-problem-19_figure_7.99.png)
@@ -1250,7 +1250,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-20" type="exercise" title="課本習題 7.20" source="課本 Chapter 7 · Problem 7.20 · 印刷頁 302" topic="RL 自然響應與時間常數">
 
-**原題：** For the circuit in Fig. 7.100, v = 90e^(−50t) V and i = 30e^(−50t) A, t &gt; 0. (a) Find L and R. (b) Determine the time constant. (c) Calculate the initial energy in the inductor. (d) What fraction of the initial energy is dissipated in 10 ms?
+**原題：** For the circuit in Fig. 7.100, $v=90e^{-50t}\,\mathrm{V}$ and $i=30e^{-50t}\,\mathrm{A}$, $t>0$. (a) Find $L$ and $R$. (b) Determine the time constant. (c) Calculate the initial energy in the inductor. (d) What fraction of the initial energy is dissipated in $10\,\mathrm{ms}$?
 
 
 ![課本 Chapter 7 Problem 7.20，Figure 7.100](../assets/images/ch7-problem-20_figure_7.100.png)
@@ -1260,7 +1260,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-21" type="exercise" title="課本習題 7.21" source="課本 Chapter 7 · Problem 7.21 · 印刷頁 302" topic="RL 自然響應與時間常數">
 
-**原題：** In the circuit of Fig. 7.101, find the value of R for which the steady-state energy stored in the inductor will be 1 J.
+**原題：** In the circuit of Fig. 7.101, find the value of $R$ for which the steady-state energy stored in the inductor will be $1\,\mathrm{J}$.
 
 
 ![課本 Chapter 7 Problem 7.21，Figure 7.101](../assets/images/ch7-problem-21_figure_7.101.png)
@@ -1279,7 +1279,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-22" type="exercise" title="課本習題 7.22" source="課本 Chapter 7 · Problem 7.22 · 印刷頁 302" topic="RL 自然響應與時間常數">
 
-**原題：** Find i(t) and v(t) for t &gt; 0 in the circuit of Fig. 7.102 if i(0) = 10 A.
+**原題：** Find $i(t)$ and $v(t)$ for $t > 0$ in the circuit of Fig. 7.102 if $i(0) = 10\,\mathrm{A}$.
 
 
 ![課本 Chapter 7 Problem 7.22，Figure 7.102](../assets/images/ch7-problem-22_figure_7.102.png)
@@ -1289,7 +1289,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-23" type="exercise" title="課本習題 7.23" source="課本 Chapter 7 · Problem 7.23 · 印刷頁 302" topic="RL 自然響應與時間常數">
 
-**原題：** Consider the circuit in Fig. 7.103. Given that vo(0) = 10 V, find vo and vx for t &gt; 0.
+**原題：** Consider the circuit in Fig. 7.103. Given that $v_o(0) = 10\,\mathrm{V}$, find $v_o$ and $v_x$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.23，Figure 7.103](../assets/images/ch7-problem-23_figure_7.103.png)
@@ -1308,7 +1308,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-24" type="exercise" title="課本習題 7.24" source="課本 Chapter 7 · Problem 7.24 · 印刷頁 302" topic="奇異函數與脈衝響應">
 
-**原題：** Express the following signals in terms of singularity functions: (a) v(t) = 0 for t &lt; 0, −5 for t &gt; 0; (b) i(t) = 0 for t &lt; 1, −10 for 1 &lt; t &lt; 3, 10 for 3 &lt; t &lt; 5, 0 for t &gt; 5; (c) x(t) = t − 1 for 1 &lt; t &lt; 2, 1 for 2 &lt; t &lt; 3, 4 − t for 3 &lt; t &lt; 4, 0 otherwise; (d) y(t) = 2 for t &lt; 0, −5 for 0 &lt; t &lt; 1, 0 for t &gt; 1.
+**原題：** Express the following signals in terms of singularity functions: (a) $v(t)=0$ for $t<0$, $-5$ for $t>0$; (b) $i(t)=0$ for $t<1$, $-10$ for $1<t<3$, $10$ for $3<t<5$, $0$ for $t>5$; (c) $x(t)=t-1$ for $1<t<2$, $1$ for $2<t<3$, $4-t$ for $3<t<4$, $0$ otherwise; (d) $y(t)=2$ for $t<0$, $-5$ for $0<t<1$, $0$ for $t>1$.
 
 </PracticeCard>
 
@@ -1341,7 +1341,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-27" type="exercise" title="課本習題 7.27" source="課本 Chapter 7 · Problem 7.27 · 印刷頁 302" topic="奇異函數與脈衝響應">
 
-**原題：** Express v(t) in Fig. 7.105 in terms of step functions.
+**原題：** Express $v(t)$ in Fig. 7.105 in terms of step functions.
 
 
 ![課本 Chapter 7 Problem 7.27，Figure 7.105](../assets/images/ch7-problem-27_figure_7.105.png)
@@ -1360,14 +1360,14 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-28" type="exercise" title="課本習題 7.28" source="課本 Chapter 7 · Problem 7.28 · 印刷頁 303" topic="奇異函數與脈衝響應">
 
-**原題：** Sketch the waveform represented by i(t) = r(t) − r(t − 1) − u(t − 2) − r(t − 2)
+**原題：** Sketch the waveform represented by $i(t)=r(t)-r(t-1)-u(t-2)-r(t-2)$.
 
 </PracticeCard>
 
 
 <PracticeCard id="ch7-problem-29" type="exercise" title="課本習題 7.29" source="課本 Chapter 7 · Problem 7.29 · 印刷頁 303" topic="奇異函數與脈衝響應">
 
-**原題：** Sketch the following functions: (a) x(t) = 10e^(−t)u(t − 1), (b) y(t) = 10e^(−(t − 1))u(t), (c) z(t) = cos(4t)δ(t − 1).
+**原題：** Sketch the following functions: (a) $x(t)=10e^{-t}u(t-1)$, (b) $y(t)=10e^{-(t-1)}u(t)$, (c) $z(t)=\cos(4t)\delta(t-1)$.
 
 
 <template #solution>
@@ -1388,14 +1388,14 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-30" type="exercise" title="課本習題 7.30" source="課本 Chapter 7 · Problem 7.30 · 印刷頁 303" topic="奇異函數與脈衝響應">
 
-**原題：** Evaluate the following integrals involving the impulse function: (a) ∫ from −∞ to ∞ 4t²δ(t − 1) dt; (b) ∫ from −∞ to ∞ 4t² cos(2πt)δ(t − 0.5) dt.
+**原題：** Evaluate the following integrals involving the impulse function: (a) $\int_{-\infty}^{\infty}4t^2\delta(t-1)\,dt$; (b) $\int_{-\infty}^{\infty}4t^2\cos(2\pi t)\delta(t-0.5)\,dt$.
 
 </PracticeCard>
 
 
 <PracticeCard id="ch7-problem-31" type="exercise" title="課本習題 7.31" source="課本 Chapter 7 · Problem 7.31 · 印刷頁 303" topic="奇異函數與脈衝響應">
 
-**原題：** Evaluate the following integrals: (a) ∫ from −∞ to ∞ e^(−4t²)δ(t − 2) dt; (b) ∫ from −∞ to ∞ [5δ(t) + e^(−t)δ(t) + cos(2πt)δ(t)] dt.
+**原題：** Evaluate the following integrals: (a) $\int_{-\infty}^{\infty}e^{-4t^2}\delta(t-2)\,dt$; (b) $\int_{-\infty}^{\infty}[5\delta(t)+e^{-t}\delta(t)+\cos(2\pi t)\delta(t)]\,dt$.
 
 
 <template #solution>
@@ -1411,14 +1411,14 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-32" type="exercise" title="課本習題 7.32" source="課本 Chapter 7 · Problem 7.32 · 印刷頁 303" topic="奇異函數與脈衝響應">
 
-**原題：** Evaluate the following integrals: (a) ∫ from 1 to t u(λ) dλ; (b) ∫ from 0 to 4 r(t − 1) dt; (c) ∫ from 1 to 5 (t − 6)²δ(t − 2) dt.
+**原題：** Evaluate the following integrals: (a) $\int_1^t u(\lambda)\,d\lambda$; (b) $\int_0^4 r(t-1)\,dt$; (c) $\int_1^5(t-6)^2\delta(t-2)\,dt$.
 
 </PracticeCard>
 
 
 <PracticeCard id="ch7-problem-33" type="exercise" title="課本習題 7.33" source="課本 Chapter 7 · Problem 7.33 · 印刷頁 303" topic="奇異函數與脈衝響應">
 
-**原題：** The voltage across a 10-mH inductor is 15δ(t − 2) mV. Find the inductor current, assuming the inductor is initially uncharged.
+**原題：** The voltage across a $10\text{-mH}$ inductor is $15\delta(t-2)\,\mathrm{mV}$. Find the inductor current, assuming the inductor is initially uncharged.
 
 
 <template #solution>
@@ -1434,14 +1434,14 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-34" type="exercise" title="課本習題 7.34" source="課本 Chapter 7 · Problem 7.34 · 印刷頁 303" topic="奇異函數與脈衝響應">
 
-**原題：** Evaluate the following derivatives: (a) d/dt [u(t − 1)u(t + 1)]; (b) d/dt [r(t − 6)u(t − 2)]; (c) d/dt [sin(4t)u(t − 3)].
+**原題：** Evaluate the following derivatives: (a) $\frac{d}{dt}[u(t-1)u(t+1)]$; (b) $\frac{d}{dt}[r(t-6)u(t-2)]$; (c) $\frac{d}{dt}[\sin(4t)u(t-3)]$.
 
 </PracticeCard>
 
 
 <PracticeCard id="ch7-problem-35" type="exercise" title="課本習題 7.35" source="課本 Chapter 7 · Problem 7.35 · 印刷頁 303" topic="一階微分方程">
 
-**原題：** Find the solution to the following differential equations: (a) dv/dt + 2v = 0, v(0) = −1 V (b) 2 di/dt − 3i = 0, i(0) = 2
+**原題：** Find the solution to the following differential equations: (a) $\frac{dv}{dt}+2v=0$, $v(0)=-1\,\mathrm{V}$ (b) $2\frac{di}{dt}-3i=0$, $i(0)=2$.
 
 
 <template #solution>
@@ -1457,14 +1457,14 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-36" type="exercise" title="課本習題 7.36" source="課本 Chapter 7 · Problem 7.36 · 印刷頁 303" topic="一階微分方程">
 
-**原題：** Solve for v in the following differential equations, subject to the stated initial condition. (a) dv/dt + v = u(t), v(0) = 0 (b) 2 dv/dt − v = 3u(t), v(0) = −6
+**原題：** Solve for $v$ in the following differential equations, subject to the stated initial condition. (a) $\frac{dv}{dt}+v=u(t)$, $v(0)=0$ (b) $2\frac{dv}{dt}-v=3u(t)$, $v(0)=-6$.
 
 </PracticeCard>
 
 
 <PracticeCard id="ch7-problem-37" type="exercise" title="課本習題 7.37" source="課本 Chapter 7 · Problem 7.37 · 印刷頁 303" topic="一階微分方程">
 
-**原題：** A circuit is described by 4 dv/dt + v = 10 (a) What is the time constant of the circuit? (b) What is v(∞), the final value of v ? (c) If v(0) = 2, find v(t) for t ≥ 0.
+**原題：** A circuit is described by $4\frac{dv}{dt}+v=10$. (a) What is the time constant of the circuit? (b) What is $v(\infty)$, the final value of $v$? (c) If $v(0)=2$, find $v(t)$ for $t\ge 0$.
 
 
 <template #solution>
@@ -1480,14 +1480,14 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-38" type="exercise" title="課本習題 7.38" source="課本 Chapter 7 · Problem 7.38 · 印刷頁 303" topic="一階微分方程">
 
-**原題：** A circuit is described by di/dt + 3i = 2u(t) Find i(t) for t &gt; 0 given that i(0) = 0.
+**原題：** A circuit is described by $\frac{di}{dt}+3i=2u(t)$. Find $i(t)$ for $t>0$ given that $i(0)=0$.
 
 </PracticeCard>
 
 
 <PracticeCard id="ch7-problem-39" type="exercise" title="課本習題 7.39" source="課本 Chapter 7 · Problem 7.39 · 印刷頁 303" topic="RC 階躍響應">
 
-**原題：** Calculate the capacitor voltage for t &lt; 0 and t &gt; 0 for each of the circuits in Fig. 7.106.
+**原題：** Calculate the capacitor voltage for $t < 0$ and $t > 0$ for each of the circuits in Fig. 7.106.
 
 
 ![課本 Chapter 7 Problem 7.39，Figure 7.106](../assets/images/ch7-problem-39_figure_7.106.png)
@@ -1506,7 +1506,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-40" type="exercise" title="課本習題 7.40" source="課本 Chapter 7 · Problem 7.40 · 印刷頁 303" topic="RC 階躍響應">
 
-**原題：** Find the capacitor voltage for t &lt; 0 and t &gt; 0 for each of the circuits in Fig. 7.107.
+**原題：** Find the capacitor voltage for $t < 0$ and $t > 0$ for each of the circuits in Fig. 7.107.
 
 
 ![課本 Chapter 7 Problem 7.40，Figure 7.107](../assets/images/ch7-problem-40_figure_7.107.png)
@@ -1535,7 +1535,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-42" type="exercise" title="課本習題 7.42" source="課本 Chapter 7 · Problem 7.42 · 印刷頁 304" topic="RC 階躍響應">
 
-**原題：** (a) If the switch in Fig. 7.109 has been open for a long time and is closed at t = 0, find vo(t). (b) Suppose that the switch has been closed for a long time and is opened at t = 0. Find vo(t).
+**原題：** (a) If the switch in Fig. 7.109 has been open for a long time and is closed at $t = 0$, find $v_o(t)$. (b) Suppose that the switch has been closed for a long time and is opened at $t = 0$. Find $v_o(t)$.
 
 
 ![課本 Chapter 7 Problem 7.42，Figure 7.109](../assets/images/ch7-problem-42_figure_7.109.png)
@@ -1545,7 +1545,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-43" type="exercise" title="課本習題 7.43" source="課本 Chapter 7 · Problem 7.43 · 印刷頁 304" topic="RC 階躍響應">
 
-**原題：** Consider the circuit in Fig. 7.110. Find i(t) for t &lt; 0 and t &gt; 0.
+**原題：** Consider the circuit in Fig. 7.110. Find $i(t)$ for $t < 0$ and $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.43，Figure 7.110](../assets/images/ch7-problem-43_figure_7.110.png)
@@ -1564,7 +1564,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-44" type="exercise" title="課本習題 7.44" source="課本 Chapter 7 · Problem 7.44 · 印刷頁 304" topic="RC 階躍響應">
 
-**原題：** The switch in Fig. 7.111 has been in position a for a long time. At t = 0, it moves to position b. Calculate i(t) for all t &gt; 0.
+**原題：** The switch in Fig. 7.111 has been in position a for a long time. At $t = 0$, it moves to position b. Calculate $i(t)$ for all $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.44，Figure 7.111](../assets/images/ch7-problem-44_figure_7.111.png)
@@ -1574,7 +1574,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-45" type="exercise" title="課本習題 7.45" source="課本 Chapter 7 · Problem 7.45 · 印刷頁 304" topic="RC 階躍響應">
 
-**原題：** Find v_o in the circuit of Fig. 7.112 when v_s = 30u(t) V. Assume that v_o(0) = 5 V.
+**原題：** Find $v_o$ in the circuit of Fig. 7.112 when $v_s = 30u(t)\,\mathrm{V}$. Assume that $v_o(0) = 5\,\mathrm{V}$.
 
 
 ![課本 Chapter 7 Problem 7.45，Figure 7.112](../assets/images/ch7-problem-45_figure_7.112.png)
@@ -1593,7 +1593,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-46" type="exercise" title="課本習題 7.46" source="課本 Chapter 7 · Problem 7.46 · 印刷頁 304" topic="RC 階躍響應">
 
-**原題：** For the circuit in Fig. 7.113, is(t) = 5u(t). Find v(t).
+**原題：** For the circuit in Fig. 7.113, $i_s(t) = 5u(t)$. Find $v(t)$.
 
 
 ![課本 Chapter 7 Problem 7.46，Figure 7.113](../assets/images/ch7-problem-46_figure_7.113.png)
@@ -1603,7 +1603,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-47" type="exercise" title="課本習題 7.47" source="課本 Chapter 7 · Problem 7.47 · 印刷頁 304" topic="RC 階躍響應">
 
-**原題：** Determine v(t) for t &gt; 0 in the circuit of Fig. 7.114 if v(0) = 0.
+**原題：** Determine $v(t)$ for $t > 0$ in the circuit of Fig. 7.114 if $v(0) = 0$.
 
 
 ![課本 Chapter 7 Problem 7.47，Figure 7.114](../assets/images/ch7-problem-47_figure_7.114.png)
@@ -1622,7 +1622,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-48" type="exercise" title="課本習題 7.48" source="課本 Chapter 7 · Problem 7.48 · 印刷頁 305" topic="RC 階躍響應">
 
-**原題：** Find v(t) and i(t) in the circuit of Fig. 7.115.
+**原題：** Find $v(t)$ and $i(t)$ in the circuit of Fig. 7.115.
 
 
 ![課本 Chapter 7 Problem 7.48，Figure 7.115](../assets/images/ch7-problem-48_figure_7.115.png)
@@ -1632,7 +1632,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-49" type="exercise" title="課本習題 7.49" source="課本 Chapter 7 · Problem 7.49 · 印刷頁 305" topic="RC 階躍響應">
 
-**原題：** If the waveform in Fig. 7.116(a) is applied to the circuit of Fig. 7.116(b), find v(t). Assume v(0) = 0. (a) (b)
+**原題：** If the waveform in Fig. 7.116(a) is applied to the circuit of Fig. 7.116(b), find $v(t)$. Assume $v(0) = 0$. (a) (b)
 
 
 ![課本 Chapter 7 Problem 7.49，Figure 7.116(a)](../assets/images/ch7-problem-49_figure_7.116-a.png)
@@ -1654,7 +1654,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-50" type="exercise" title="課本習題 7.50" source="課本 Chapter 7 · Problem 7.50 · 印刷頁 305" topic="RC 階躍響應">
 
-**原題：** In the circuit of Fig. 7.117, find i_x for t &gt; 0. Let R_1 = R_2 = 1 kΩ, R_3 = 2 kΩ, and C = 0.25 mF. At time t = 0, the switch moves from position a to b.
+**原題：** In the circuit of Fig. 7.117, find $i_x$ for $t > 0$. Let $R_1 = R_2 = 1\,\mathrm{k\Omega}$, $R_3 = 2\,\mathrm{k\Omega}$, and $C = 0.25\,\mathrm{mF}$. At time $t = 0$, the switch moves from position a to b.
 
 
 ![課本 Chapter 7 Problem 7.50，Figure 7.117](../assets/images/ch7-problem-50_figure_7.117.png)
@@ -1690,7 +1690,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-53" type="exercise" title="課本習題 7.53" source="課本 Chapter 7 · Problem 7.53 · 印刷頁 305" topic="RL 階躍響應">
 
-**原題：** Determine the inductor current i(t) for both t &lt; 0 and t &gt; 0 for each of the circuits in Fig. 7.119. (a) (b)
+**原題：** Determine the inductor current $i(t)$ for both $t < 0$ and $t > 0$ for each of the circuits in Fig. 7.119. (a) (b)
 
 
 ![課本 Chapter 7 Problem 7.53，Figure 7.119](../assets/images/ch7-problem-53_figure_7.119.png)
@@ -1709,7 +1709,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-54" type="exercise" title="課本習題 7.54" source="課本 Chapter 7 · Problem 7.54 · 印刷頁 305" topic="RL 階躍響應">
 
-**原題：** Obtain the inductor current for both t &lt; 0 and t &gt; 0 in each of the circuits in Fig. 7.120. (a) (b)
+**原題：** Obtain the inductor current for both $t < 0$ and $t > 0$ in each of the circuits in Fig. 7.120. (a) (b)
 
 
 ![課本 Chapter 7 Problem 7.54，Figure 7.120](../assets/images/ch7-problem-54_figure_7.120.png)
@@ -1719,7 +1719,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-55" type="exercise" title="課本習題 7.55" source="課本 Chapter 7 · Problem 7.55 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** Find v(t) for t &lt; 0 and t &gt; 0 in the circuit of Fig. 7.121.
+**原題：** Find $v(t)$ for $t < 0$ and $t > 0$ in the circuit of Fig. 7.121.
 
 
 ![課本 Chapter 7 Problem 7.55，Figure 7.121](../assets/images/ch7-problem-55_figure_7.121.png)
@@ -1738,7 +1738,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-56" type="exercise" title="課本習題 7.56" source="課本 Chapter 7 · Problem 7.56 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** For the network shown in Fig. 7.122, find v(t) for t &gt; 0.
+**原題：** For the network shown in Fig. 7.122, find $v(t)$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.56，Figure 7.122](../assets/images/ch7-problem-56_figure_7.122.png)
@@ -1748,7 +1748,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-57" type="exercise" title="課本習題 7.57" source="課本 Chapter 7 · Problem 7.57 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** Find i1(t) and i2(t) for t &gt; 0 in the circuit of Fig. 7.123.
+**原題：** Find $i_1(t)$ and $i_2(t)$ for $t > 0$ in the circuit of Fig. 7.123.
 
 
 ![課本 Chapter 7 Problem 7.57，Figure 7.123](../assets/images/ch7-problem-57_figure_7.123.png)
@@ -1767,7 +1767,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-58" type="exercise" title="課本習題 7.58" source="課本 Chapter 7 · Problem 7.58 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** Rework Prob. 7.17 if i(0) = 10 A and v(t) = 20u(t) V.
+**原題：** Rework Prob. 7.17 if $i(0) = 10\,\mathrm{A}$ and $v(t) = 20u(t)\,\mathrm{V}$.
 
 
 ![課本 Chapter 7 Problem 7.58，Figure 7.97](../assets/images/ch7-problem-58_figure_7.97.png)
@@ -1777,7 +1777,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-59" type="exercise" title="課本習題 7.59" source="課本 Chapter 7 · Problem 7.59 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** Determine the step response vo(t) to vs = 18 u(t) V in the circuit of Fig. 7.124.
+**原題：** Determine the step response $v_o(t)$ to $v_s = 18 u(t)\,\mathrm{V}$ in the circuit of Fig. 7.124.
 
 
 ![課本 Chapter 7 Problem 7.59，Figure 7.124](../assets/images/ch7-problem-59_figure_7.124.png)
@@ -1796,7 +1796,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-60" type="exercise" title="課本習題 7.60" source="課本 Chapter 7 · Problem 7.60 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** Find v(t) for t &gt; 0 in the circuit of Fig. 7.125 if the initial current in the inductor is zero.
+**原題：** Find $v(t)$ for $t > 0$ in the circuit of Fig. 7.125 if the initial current in the inductor is zero.
 
 
 ![課本 Chapter 7 Problem 7.60，Figure 7.125](../assets/images/ch7-problem-60_figure_7.125.png)
@@ -1806,7 +1806,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-61" type="exercise" title="課本習題 7.61" source="課本 Chapter 7 · Problem 7.61 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** In the circuit in Fig. 7.126, is changes from 5 A to 10 A at t = 0; that is, is = 5u(−t) + 10u(t). Find v and i.
+**原題：** In the circuit in Fig. 7.126, $i_s$ changes from $5\,\mathrm{A}$ to $10\,\mathrm{A}$ at $t=0$; that is, $i_s=5u(-t)+10u(t)$. Find $v$ and $i$.
 
 
 ![課本 Chapter 7 Problem 7.61，Figure 7.126](../assets/images/ch7-problem-61_figure_7.126.png)
@@ -1825,7 +1825,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-62" type="exercise" title="課本習題 7.62" source="課本 Chapter 7 · Problem 7.62 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** For the circuit in Fig. 7.127, calculate i(t) if i(0) = 0.
+**原題：** For the circuit in Fig. 7.127, calculate $i(t)$ if $i(0) = 0$.
 
 
 ![課本 Chapter 7 Problem 7.62，Figure 7.127](../assets/images/ch7-problem-62_figure_7.127.png)
@@ -1835,7 +1835,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-63" type="exercise" title="課本習題 7.63" source="課本 Chapter 7 · Problem 7.63 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** Obtain v(t) and i(t) in the circuit of Fig. 7.128.
+**原題：** Obtain $v(t)$ and $i(t)$ in the circuit of Fig. 7.128.
 
 
 ![課本 Chapter 7 Problem 7.63，Figure 7.128](../assets/images/ch7-problem-63_figure_7.128.png)
@@ -1854,7 +1854,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-64" type="exercise" title="課本習題 7.64" source="課本 Chapter 7 · Problem 7.64 · 印刷頁 306" topic="RL 階躍響應">
 
-**原題：** Determine the value of iL(t) and the total energy dissipated by the circuit from t = 0 sec to t = ∞ sec. The value of vin(t) is equal to [40 – 40u(t)] volts.
+**原題：** Determine the value of $i_L(t)$ and the total energy dissipated by the circuit from $t=0\,\mathrm{s}$ to $t=\infty$. The value of $v_{\mathrm{in}}(t)$ is equal to $[40-40u(t)]\,\mathrm{V}$.
 
 
 ![課本 Chapter 7 Problem 7.64，Figure 7.129](../assets/images/ch7-problem-64_figure_7.129.png)
@@ -1864,7 +1864,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-65" type="exercise" title="課本習題 7.65" source="課本 Chapter 7 · Problem 7.65 · 印刷頁 307" topic="一階運算放大器電路">
 
-**原題：** If the input pulse in Fig. 7.130(a) is applied to the circuit in Fig. 7.130(b), determine the response i(t). (b) (a)
+**原題：** If the input pulse in Fig. 7.130(a) is applied to the circuit in Fig. 7.130(b), determine the response $i(t)$. (b) (a)
 
 
 ![課本 Chapter 7 Problem 7.65，Figure 7.130(a)](../assets/images/ch7-problem-65_figure_7.130-a.png)
@@ -1899,7 +1899,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-67" type="exercise" title="課本習題 7.67" source="課本 Chapter 7 · Problem 7.67 · 印刷頁 307" topic="一階運算放大器電路">
 
-**原題：** If v(0) = 5 V, find v_o(t) for t &gt; 0 in the op amp circuit in Fig. 7.132. Let R = 10 kΩ and C = 1 μF.
+**原題：** If $v(0) = 5\,\mathrm{V}$, find $v_o(t)$ for $t > 0$ in the op amp circuit in Fig. 7.132. Let $R = 10\,\mathrm{k\Omega}$ and $C = 1\,\mathrm{\mu F}$.
 
 
 ![課本 Chapter 7 Problem 7.67，Figure 7.132](../assets/images/ch7-problem-67_figure_7.132.png)
@@ -1918,7 +1918,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-68" type="exercise" title="課本習題 7.68" source="課本 Chapter 7 · Problem 7.68 · 印刷頁 307" topic="一階運算放大器電路">
 
-**原題：** Obtain vo for t &gt; 0 in the circuit of Fig. 7.133.
+**原題：** Obtain $v_o$ for $t > 0$ in the circuit of Fig. 7.133.
 
 
 ![課本 Chapter 7 Problem 7.68，Figure 7.133](../assets/images/ch7-problem-68_figure_7.133.png)
@@ -1928,7 +1928,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-69" type="exercise" title="課本習題 7.69" source="課本 Chapter 7 · Problem 7.69 · 印刷頁 307" topic="一階運算放大器電路">
 
-**原題：** For the op amp circuit in Fig. 7.134, find vo(t) for t &gt; 0.
+**原題：** For the op amp circuit in Fig. 7.134, find $v_o(t)$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.69，Figure 7.134](../assets/images/ch7-problem-69_figure_7.134.png)
@@ -1947,7 +1947,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-70" type="exercise" title="課本習題 7.70" source="課本 Chapter 7 · Problem 7.70 · 印刷頁 307" topic="一階運算放大器電路">
 
-**原題：** Determine vo for t &gt; 0 when vs = 20 mV in the op amp circuit of Fig. 7.135.
+**原題：** Determine $v_o$ for $t > 0$ when $v_s = 20\,\mathrm{mV}$ in the op amp circuit of Fig. 7.135.
 
 
 ![課本 Chapter 7 Problem 7.70，Figure 7.135](../assets/images/ch7-problem-70_figure_7.135.png)
@@ -1957,7 +1957,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-71" type="exercise" title="課本習題 7.71" source="課本 Chapter 7 · Problem 7.71 · 印刷頁 307" topic="一階運算放大器電路">
 
-**原題：** For the op amp circuit in Fig. 7.136, suppose v(0) = 0 and vs = 3V. Find v(t) for t &gt; 0.
+**原題：** For the op amp circuit in Fig. 7.136, suppose $v(0) = 0$ and $v_s = 3\,\mathrm{V}$. Find $v(t)$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.71，Figure 7.136](../assets/images/ch7-problem-71_figure_7.136.png)
@@ -1976,7 +1976,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-72" type="exercise" title="課本習題 7.72" source="課本 Chapter 7 · Problem 7.72 · 印刷頁 308" topic="一階運算放大器電路">
 
-**原題：** Find i_o in the op amp circuit in Fig. 7.137. Assume that v(0) = −2 V, R = 10 kΩ, and C = 10 μF.
+**原題：** Find $i_o$ in the op amp circuit in Fig. 7.137. Assume that $v(0) = -2\,\mathrm{V}$, $R = 10\,\mathrm{k\Omega}$, and $C = 10\,\mathrm{\mu F}$.
 
 
 ![課本 Chapter 7 Problem 7.72，Figure 7.137](../assets/images/ch7-problem-72_figure_7.137.png)
@@ -1986,7 +1986,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-73" type="exercise" title="課本習題 7.73" source="課本 Chapter 7 · Problem 7.73 · 印刷頁 308" topic="一階運算放大器電路">
 
-**原題：** For the op amp circuit of Fig. 7.138, let R_1 = 10 kΩ, R_f = 20 kΩ, C = 20 μF, and v(0) = 1 V. Find v_o.
+**原題：** For the op amp circuit of Fig. 7.138, let $R_1 = 10\,\mathrm{k\Omega}$, $R_f = 20\,\mathrm{k\Omega}$, $C = 20\,\mathrm{\mu F}$, and $v(0) = 1\,\mathrm{V}$. Find $v_o$.
 
 
 ![課本 Chapter 7 Problem 7.73，Figure 7.138](../assets/images/ch7-problem-73_figure_7.138.png)
@@ -2005,7 +2005,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-74" type="exercise" title="課本習題 7.74" source="課本 Chapter 7 · Problem 7.74 · 印刷頁 308" topic="一階運算放大器電路">
 
-**原題：** Determine v_o(t) for t &gt; 0 in the circuit of Fig. 7.139. Let i_s = 10u(t) μA and assume that the capacitor is initially uncharged.
+**原題：** Determine $v_o(t)$ for $t > 0$ in the circuit of Fig. 7.139. Let $i_s = 10u(t)\,\mathrm{\mu A}$ and assume that the capacitor is initially uncharged.
 
 
 ![課本 Chapter 7 Problem 7.74，Figure 7.139](../assets/images/ch7-problem-74_figure_7.139.png)
@@ -2015,7 +2015,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-75" type="exercise" title="課本習題 7.75" source="課本 Chapter 7 · Problem 7.75 · 印刷頁 308" topic="一階運算放大器電路">
 
-**原題：** In the circuit of Fig. 7.140, find vo and io, given that vs = 4 u(t) V and v(0) = 1 V.
+**原題：** In the circuit of Fig. 7.140, find $v_o$ and $i_o$, given that $v_s = 4 u(t)\,\mathrm{V}$ and $v(0) = 1\,\mathrm{V}$.
 
 
 ![課本 Chapter 7 Problem 7.75，Figure 7.140](../assets/images/ch7-problem-75_figure_7.140.png)
@@ -2047,7 +2047,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-77" type="exercise" title="課本習題 7.77" source="課本 Chapter 7 · Problem 7.77 · 印刷頁 308" topic="PSpice 與 MultiSim 模擬">
 
-**原題：** The switch in Fig. 7.141 opens at t = 0. Use PSpice or MultiSim to determine v(t) for t &gt; 0.
+**原題：** The switch in Fig. 7.141 opens at $t = 0$. Use PSpice or MultiSim to determine $v(t)$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.77，Figure 7.141](../assets/images/ch7-problem-77_figure_7.141.png)
@@ -2068,7 +2068,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-78" type="exercise" title="課本習題 7.78" source="課本 Chapter 7 · Problem 7.78 · 印刷頁 308" topic="PSpice 與 MultiSim 模擬">
 
-**原題：** The switch in Fig. 7.142 moves from position a to b at t = 0. Use PSpice or MultiSim to find i(t) for t &gt; 0.
+**原題：** The switch in Fig. 7.142 moves from position a to b at $t = 0$. Use PSpice or MultiSim to find $i(t)$ for $t > 0$.
 
 
 ![課本 Chapter 7 Problem 7.78，Figure 7.142](../assets/images/ch7-problem-78_figure_7.142.png)
@@ -2078,7 +2078,7 @@ The spark coil of an automobile ignition system has a 20-mH inductance and a 5-�
 
 <PracticeCard id="ch7-problem-79" type="exercise" title="課本習題 7.79" source="課本 Chapter 7 · Problem 7.79 · 印刷頁 308" topic="PSpice 與 MultiSim 模擬">
 
-**原題：** In the circuit in Fig. 7.143, the switch has been in position a for a long time but moves instantaneously to position b at t = 0. Determine io(t).
+**原題：** In the circuit in Fig. 7.143, the switch has been in position a for a long time but moves instantaneously to position b at $t = 0$. Determine $i_o(t)$.
 
 
 ![課本 Chapter 7 Problem 7.79，Figure 7.143](../assets/images/ch7-problem-79_figure_7.143.png)
