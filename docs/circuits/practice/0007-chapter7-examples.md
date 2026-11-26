@@ -5,7 +5,7 @@ description: "電路學第七章一階電路題庫：22 個例題、22 個練習
 
 # 互動式範例與練習題庫：Chapter 7 一階電路 (First-Order Circuits)
 
-本頁收錄課本第七章全部 **22 個 Example**、**22 個 Practice Problem** 與 **79 道章末 Problems**。題卡保留原題英文敘述，並將題目引用圖表放在同一卡片內；課本有列答案或解答時，也一併附上來源內容。
+本頁收錄課本第七章全部 **22 個 Example**、**22 個 Practice Problem** 與 **79 道章末 Problems**。題卡保留原題英文敘述與引用圖表。Example 7.1–7.16 依老師 Chapter 7 投影片重整解法；Practice Problem 7.1–7.16 對照投影片答案，其中 7.13 另有講義推導。投影片未涵蓋的 Example 與 Practice 保留課本內容。
 
 ::: details Chapter 7 核心公式與解題要點
 
@@ -36,13 +36,21 @@ In Fig. 7.5, let vC (0) = 15 V . Find vC, vx, and ix for t > 0 .
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-We first need to make the circuit in Fig. 7.5 conform with the standard RC circuit in Fig. 7.1. We find the equivalent resistance or the Thevenin resistance at the capacitor terminals. Our objective is always to first obtain capacitor voltage vC . From this, we can determine vx and ix . The 8-Ω and 12-Ω resistors in series can be combined to give a 20-Ω resistor. This 20-Ω resistor in parallel with the 5-Ω resistor can be combined so that the equivalent resistance is Req = $\frac{20 \times  5}{20 + 5}$ = 4 Ω Hence, the equivalent circuit is as shown in Fig. 7.6, which is analogous to Fig. 7.1. The time constant is τ = ReqC = 4(0.1) = 0.4 s v = v(0) $e^{-t/τ}$ = 15 $e^{-t/0.4}$ V, vC = v = 15 $e^{-2.5t}$ V From Fig. 7.5, we can use voltage division to get vx ; so vx = $\frac{12}{12 + 8}$ v = 0.6(15$e^{-2.5t}$) = 9$e^{-2.5t}$ V Finally, ix = $\frac{vx}{12}$ = 0.75$e^{-2.5t}$ A
+依 Chapter 7 投影片第 11–13 頁。
 
-![Figure 7.1 used in the textbook solution](../assets/images/ch7-ex1_solution_figure_7_1.png)
+先從電容端求等效電阻，再求時間常數與分壓：
 
-![Figure 7.6 used in the textbook solution](../assets/images/ch7-ex1_solution_figure_7_6.png)
+$$
+R_{\mathrm{eq}}=(8+12)\parallel5=4\,\Omega,\qquad \tau=R_{\mathrm{eq}}C=4(0.1)=0.4\,\mathrm{s}.
+$$
+
+$$
+v_C(t)=15e^{-2.5t}\,\mathrm V,\quad v_x(t)=\frac{12}{8+12}v_C(t)=9e^{-2.5t}\,\mathrm V,\quad i_x(t)=\frac{v_x(t)}{12}=0.75e^{-2.5t}\,\mathrm A.
+$$
+
+講義第 13 頁將 $0.6\times15$ 誤寫為 $90$；依分壓計算與課本答案應為 $9$。
 
 </template>
 
@@ -56,7 +64,9 @@ Refer to the circuit in Fig. 7.7. Let vC (0) = 60 V . Determine vC, vx, and io f
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 17 頁列出答案，未提供逐步解法。
 
 60$e^{-0.25t}$ V, 20$e^{-0.25t}$ V, −5$e^{-0.25t}$ A .
 
@@ -72,11 +82,21 @@ The switch in the circuit in Fig. 7.8 has been closed for a long time, and it is
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-For t < 0 , the switch is closed; the capacitor is an open circuit to dc, as represented in Fig. 7.9(a). Using voltage division vC (t) = $\frac{9}{9 + 3}$ (20) = 15 V, t < 0 Since the voltage across a capacitor cannot change instantaneously, the voltage across the capacitor at t = 0− is the same at t = 0 , or vC (0) = V0 = 15 V For t > 0 , the switch is opened, and we have the RC circuit shown in Fig. 7.9(b). [Notice that the RC circuit in Fig. 7.9(b) is source free; the independent source in Fig. 7.8 is needed to provide V0 or the initial energy in the capacitor.] The 1-Ω and 9-Ω resistors in series give Req = 1 + 9 = 10 Ω The time constant is τ = ReqC = 10 × 20 × $10^{-3}$ = 0.2 s Thus, the voltage across the capacitor for t ≥ 0 is v(t) = vC (0)$e^{-t/\tau}$ = 15$e^{-t/0.2}$ V v(t) = 15$e^{-5t}$ V The initial energy stored in the capacitor is $w_C(0)=\frac{1}{2}Cv_C^2(0)=\frac{1}{2}\times20\times10^{-3}\times15^2=2.25\text{ J}$
+依 Chapter 7 投影片第 14–16 頁。
 
-![Figure 7.9 used in the textbook solution](../assets/images/ch7-ex2_solution_figure_7_9.png)
+開關閉合已久，電容為開路；由分壓及電容電壓連續性，
+
+$$
+v_C(0^+)=v_C(0^-)=\frac{9}{3+9}(20)=15\,\mathrm V.
+$$
+
+開關打開後 $R_{\mathrm{eq}}=1+9=10\,\Omega$，因此 $\tau=10(20\times10^{-3})=0.2\,\mathrm s$。代入自然響應及儲能公式：
+
+$$
+v(t)=15e^{-5t}\,\mathrm V,\qquad w_C(0)=\frac12(20\times10^{-3})(15)^2=2.25\,\mathrm J.
+$$
 
 </template>
 
@@ -90,7 +110,9 @@ If the switch in Fig. 7.10 opens at t = 0 , find v(t) for t ≥ 0 and wC (0) .
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 17 頁列出答案，未提供逐步解法。
 
 8$e^{-2t}$ V, 5.333 J.
 
@@ -106,13 +128,23 @@ Assuming that i(0) = 10 A , calculate i(t) and ix(t) in the circuit of Fig. 7.13
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-There are two ways we can solve this problem. One way is to obtain the equivalent resistance at the inductor terminals and then use Eq. (7.20). The other way is to start from scratch by using Kirchhoff’s voltage law. Whichever approach is taken, it is always better to first obtain the inductor current. **Method 1.** The equivalent resistance is the same as the Thevenin resistance at the inductor terminals. Because of the dependent source, we insert a voltage source with vo = 1 V at the inductor terminals a-b , as in Fig. 7.14(a). (We could also insert a 1-A current source at the terminals.) Applying KVL to the two loops gives $2(i_1-i_2)+1=0$, so $i_1-i_2=-\frac{1}{2}$ (7.3.1), and $6i_2-2i_1-3i_1=0$, so $i_2=\frac{5}{6}i_1$ (7.3.2). Substituting Eq. (7.3.2) into Eq. (7.3.1) gives $i_1=-3\text{ A},\quad i_o=3\text{ A}$. Then $R_{eq}=\frac{v_o}{i_o}=\frac{1}{3}\,\Omega$. The time constant is $\tau=\frac{L}{R_{\mathrm{eq}}}=\frac{1/2}{1/3}=\frac{3}{2}\text{ s}$ Thus, the current through the inductor is $i(t)=i(0)e^{-t/\tau}=10e^{-2t/3}\text{ A},\quad t>0$ **Method 2.** We may directly apply KVL to the circuit as in Fig. 7.14(b). For loop 1, $\frac{1}{2}\frac{di_1}{dt}+2(i_1-i_2)=0$ $\frac{di_1}{dt}+4i_1-4i_2=0$ (7.3.3) For loop 2, $6i_2-2i_1-3i_1=0$, so $i_2=\frac{5}{6}i_1$ (7.3.4). Substituting Eq. (7.3.4) into Eq. (7.3.3) gives $\frac{di_1}{dt}+\frac{2}{3}i_1=0$ Rearranging terms, $\frac{di_1}{i_1}=-\frac{2}{3}\,dt$ Since $i_1=i$, replace $i_1$ by $i$ and integrate:
+依 Chapter 7 投影片第 24–28 頁。
 
-$\ln\left(\frac{i(t)}{i(0)}\right)=-\frac{2}{3}t$ Taking the powers of e , we finally obtain i(t) = i(0) $e^{-2t/3}$ = 10 $e^{-2t/3}$ A, t > 0 which is the same as by Method 1. The voltage across the inductor is v = L $\frac{di}{dt}$ = 0.5(10) ($\frac{- 2}{3}$ ) $e^{-2t/3}$ = $\frac{- 10}{3}$ $e^{-2t/3}$ V Since the inductor and the 2-Ω resistor are in parallel, they have the same voltage v . Thus, ix(t) = $\frac{v}{2}$ = −1.6667 $e^{-2t/3}$ A, t > 0
+依講義的直接微分方程法，對兩個網孔列 KVL：
 
-![Figure 7.14 used in the textbook solution](../assets/images/ch7-ex3_solution_figure_7_14.png)
+$$
+0.5\frac{di_1}{dt}+2(i_1-i_2)=0,\qquad 6i_2-5i_1=0.
+$$
+
+由 $i_2=5i_1/6$ 得 $di_1/dt+2i_1/3=0$。代入 $i_1(0)=10\,\mathrm A$，並以電感電壓求平行的 $2\,\Omega$ 電阻電流：
+
+$$
+i(t)=10e^{-2t/3}\,\mathrm A,\qquad v_L=0.5\frac{di}{dt}=-\frac{10}{3}e^{-2t/3}\,\mathrm V,\qquad i_x=\frac{v_L}{2}=-\frac53e^{-2t/3}\,\mathrm A.
+$$
+
+回代兩條 KVL 均為零。
 
 </template>
 
@@ -126,7 +158,9 @@ Find i and vx in the circuit of Fig. 7.15, for t > 0 . Let i(0) = 12 A .
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 39 頁列出答案，未提供逐步解法。
 
 12 $e^{-2t}$ A, −12 $e^{-2t}$ V, t > 0 .
 
@@ -142,11 +176,21 @@ The switch in the circuit of Fig. 7.16 has been closed for a long time. At t = 0
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-When t < 0 , the switch is closed, and the inductor acts as a short circuit to dc. The 16-Ω resistor is short-circuited; the resulting circuit is shown in Fig. 7.17(a). To get i1 in Fig. 7.17(a), we combine the 4-Ω and 12-Ω resistors in parallel to get $\frac{4 \times  12}{4 + 12}$ = 3 Ω i1 = $\frac{40}{2 + 3}$ = 8 A We obtain i(t) from i1 in Fig. 7.17(a) using current division, i(t) = $\frac{12}{12 + 4}$ i1 = 6 A, t < 0 Since the current through an inductor cannot change instantaneously, i(0) = i(0−) = 6 A When t > 0 , the switch is open and the voltage source is disconnected. We now have the source-free RL circuit in Fig. 7.17(b). Combining the resistors, we have $R_{\mathrm{eq}}=(12+4)\parallel16=8\,\Omega$ The time constant is τ = $\frac{L}{R_{\mathrm{eq}}}$ = $\frac{2}{8}$ = $\frac{1}{4}$ s i(t) = i(0) $e^{-t/τ}$ = 6 $e^{-4t}$ A
+依 Chapter 7 投影片第 29–32 頁。
 
-![Figure 7.17 used in the textbook solution](../assets/images/ch7-ex4_solution_figure_7_17.png)
+切換前以電感短路及分流求初值：
+
+$$
+i_1(0^-)=\frac{40}{2+(12\parallel4)}=8\,\mathrm A,\qquad i_L(0^+)=i_L(0^-)=\frac{12}{12+4}(8)=6\,\mathrm A.
+$$
+
+切換後 $R_{\mathrm{eq}}=(4+12)\parallel16=8\,\Omega$，$\tau=L/R_{\mathrm{eq}}=2/8=0.25\,\mathrm s$，所以
+
+$$
+i(t)=6e^{-4t}\,\mathrm A,\qquad t>0.
+$$
 
 </template>
 
@@ -160,7 +204,9 @@ For the circuit in Fig. 7.18, find i(t) for t > 0 .
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 39 頁列出答案，未提供逐步解法。
 
 5 $e^{-2t}$ A, t > 0 .
 
@@ -176,17 +222,19 @@ In the circuit shown in Fig. 7.19, find io, vo, and i for all time, assuming tha
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-It is better to first find the inductor current i and then obtain other quantities from it. For t < 0 , the switch is open. Since the inductor acts like a short circuit to dc, the 6-Ω resistor is short-circuited, so that we have the circuit shown in Fig. 7.20(a). Hence, io = 0 , and i(t) = $\frac{10}{2 + 3}$ = 2 A, t < 0 vo(t) = 3i(t) = 6 V, t < 0 Thus, i(0) = 2 . For t > 0 , the switch is closed, so that the voltage source is shortcircuited. We now have a source-free RL circuit as shown in Fig. 7.20(b). At the inductor terminals, $R_{\mathrm{Th}}=3\parallel6=2\,\Omega$ so that the time constant is τ = $\frac{L}{R_{\mathrm{Th}}}$ = 1 s i(t) = i(0) $e^{-t/τ}$ = 2$e^{-t}$A, t > 0 Because the inductor is in parallel with the 6- and 3-Ω resistors, vo(t) = −vL = −L $\frac{di}{dt}$ = −2(−2$e^{-t}$) = 4$e^{-t}$ V, t > 0 io(t) = $\frac{v_{L}}{6}$ = $\frac{- 2}{3}$ $e^{-t}$ A, t > 0 Thus, for all time:
+依 Chapter 7 投影片第 33–38 頁。
 
-$$i_o(t)=\begin{cases}0\text{ A},&t<0\\-\frac{2}{3}e^{-t}\text{ A},&t>0\end{cases},\quad v_o(t)=\begin{cases}6\text{ V},&t<0\\4e^{-t}\text{ V},&t>0\end{cases},\quad i(t)=\begin{cases}2\text{ A},&t<0\\2e^{-t}\text{ A},&t>0\end{cases}$$
+切換前電感在直流穩態為短路，故 $i=10/(2+3)=2\,\mathrm A$、$v_o=3i=6\,\mathrm V$、$i_o=0$。切換後由電感端看入 $R_{\mathrm{eq}}=3\parallel6=2\,\Omega$，$\tau=2/2=1\,\mathrm s$。
 
-We notice that the inductor current is continuous at t = 0 , while the current through the 6-Ω resistor drops from 0 to −2/3 at t = 0 , and the voltage across the 3-Ω resistor drops from 6 to 4 at t = 0 . We also notice that the time constant is the same regardless of what the output is defined to be. Figure 7.21 plots $i(t)$ and $i_o(t)$.
+由電流連續性及圖示參考方向，
 
-![Figure 7.20 used in the textbook solution](../assets/images/ch7-ex5_solution_figure_7_20.png)
+$$
+i(t)=\begin{cases}2,&t<0\\2e^{-t},&t>0\end{cases}\mathrm A,\quad v_o(t)=\begin{cases}6,&t<0\\4e^{-t},&t>0\end{cases}\mathrm V,\quad i_o(t)=\begin{cases}0,&t<0\\-\frac23e^{-t},&t>0\end{cases}\mathrm A.
+$$
 
-![Figure 7.21 used in the textbook solution](../assets/images/ch7-ex5_solution_figure_7_21.png)
+其中 $v_o=-L\,di/dt$，而 $i_o=-v_o/6$。
 
 </template>
 
@@ -200,9 +248,13 @@ Determine i, io, and vo for all t in the circuit shown in Fig. 7.22. Assume that
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 40 頁列出答案，未提供逐步解法。
 
 i=16 A for t<0 and i=16$e^{-2t}$ A for t>0; io=8 A for t<0 and io=−5.333$e^{-2t}$ A for t>0.
+
+講義另列 $v_o=32\,\mathrm V$（$t<0$），$v_o=\frac{32}{3}e^{-2t}\,\mathrm V$（$t>0$）。
 
 </template>
 
@@ -216,11 +268,17 @@ Express the voltage pulse in Fig. 7.31 in terms of the unit step. Calculate its 
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-The type of pulse in Fig. 7.31 is called the gate function. It may be regarded as a step function that switches on at one value of t and switches off at another value of t . The gate function shown in Fig. 7.31 switches on at t = 2 s and switches off at t = 5 s . It consists of the sum of two unit step functions as shown in Fig. 7.32(a). From the figure, it is evident that v(t) = 10u (t − 2) − 10u (t − 5) = 10[u (t − 2) − u (t − 5)] Taking the derivative of this gives $\frac{dv}{dt}$ = 10[δ (t − 2) − δ (t − 5)] which is shown in Fig. 7.32(b). We can obtain Fig. 7.32(b) directly from Fig. 7.31 by simply observing that there is a sudden increase by 10 V at t = 2 s leading to 10δ (t − 2) . At t = 5 s , there is a sudden decrease by 10 V leading to −10V δ (t − 5) . 10u(t ‒ 2) ‒10u(t ‒ 5) 3 4 5 t 1 2 0
+依 Chapter 7 投影片第 56–58 頁。
 
-![Figure 7.32 used in the textbook solution](../assets/images/ch7-ex6_solution_figure_7_32.png)
+投影片將脈波分解為在 $t=2$ 上升與 $t=5$ 下降的兩個階躍：
+
+$$
+v(t)=10[u(t-2)-u(t-5)]\,\mathrm V,\qquad \frac{dv}{dt}=10[\delta(t-2)-\delta(t-5)].
+$$
+
+因此導數圖在 $t=2$ 與 $t=5$ 分別有強度 $+10$、$-10$ 的衝激。
 
 </template>
 
@@ -234,7 +292,9 @@ Express the current pulse in Fig. 7.33 in terms of the unit step. Find its integ
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 70 頁列出答案，未提供逐步解法。
 
 10[u (t) − 2u (t − 2) + u (t − 4)] A, 10[r (t) − 2r (t − 2) + r (t − 4)] amp-sec .
 
@@ -250,15 +310,21 @@ Express the sawtooth function shown in Fig. 7.35 in terms of singularity functio
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-There are three ways of solving this problem. The first method is by mere observation of the given function, while the other methods involve some graphical manipulations of the function. **Method 1.** By looking at the sketch of v(t) in Fig. 7.35, it is not hard to notice that the given function v(t) is a combination of singularity functions. So we let v(t) = v1(t) + v2(t) + ⋯ (7.7.1) The function v1(t) is the ramp function of slope 5, shown in Fig. 7.36(a); that is, v1(t) = 5r (t) (7.7.2) Since v1(t) goes to infinity, we need another function at t = 2s in order to get v(t) . We let this function be v2 , which is a ramp function of slope −5 , as shown in Fig. 7.36(b); that is, v2(t) = −5r(t − 2) (7.7.3) Adding v1 and v2 gives us the signal in Fig. 7.36(c). Obviously, this is not the same as v(t) in Fig. 7.35. But the difference is simply a constant 10 units for t > 2 s . By adding a third signal v3 , where v3 = −10u(t − 2) (7.7.4) we get v(t) , as shown in Fig. 7.37. Substituting Eqs. (7.7.2) through (7.7.4) into Eq. (7.7.1) gives v(t) = 5r(t) − 5r(t − 2) − 10u(t − 2) **Method 2.** A close observation of Fig. 7.35 reveals that v(t) is a multiplication of two functions: a ramp function and a gate function. Thus, v(t) = 5t[u(t) − u(t − 2)] = 5tu(t) − 5tu(t − 2) = 5r(t) − 5(t − 2 + 2)u(t − 2) = 5r(t) − 5(t − 2)u(t − 2) − 10u(t − 2) = 5r(t) − 5r(t − 2) − 10u(t − 2) the same as before. **Method 3.** This method is similar to Method 2. We observe from Fig. 7.35 that v(t) is a multiplication of a ramp function and a unit step function, as shown in Fig. 7.38. Thus, v(t) = 5r(t)u(−t + 2) If we replace u(−t) by 1 − u(t) , then we can replace u(−t + 2) by 1 − u(t − 2) . Hence, v(t) = 5r(t)[1 − u(t − 2)] which can be simplified as in Method 2 to get the same result. u(‒t + 2)
+依 Chapter 7 投影片第 59–64 頁。
 
-![Figure 7.36 used in the textbook solution](../assets/images/ch7-ex7_solution_figure_7_36.png)
+講義先將斜率為 5 的斜坡限制在 $0<t<2$ 的時間窗，再展開為奇異函數。令 $r(t)=tu(t)$：
 
-![Figure 7.37 used in the textbook solution](../assets/images/ch7-ex7_solution_figure_7_37.png)
+$$
+\begin{aligned}
+v(t)&=5t[u(t)-u(t-2)]\\
+&=5r(t)-5(t-2)u(t-2)-10u(t-2)\\
+&=5r(t)-5r(t-2)-10u(t-2).
+\end{aligned}
+$$
 
-![Figure 7.38 used in the textbook solution](../assets/images/ch7-ex7_solution_figure_7_38.png)
+代入各區間可得 $t<0$ 時為 0、$0<t<2$ 時為 $5t$、$t>2$ 時回到 0。
 
 </template>
 
@@ -272,7 +338,9 @@ Refer to Fig. 7.39. Express i(t) in terms of singularity functions.
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 71 頁列出答案，未提供逐步解法。
 
 2u (t) − 2r (t) + 4r (t − 2) − 2r (t − 3) A .
 
@@ -286,9 +354,21 @@ Given the signal $g(t)=\begin{cases}3,&t<0\\-2,&0<t<1\\2t-4,&t>1\end{cases}$, ex
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-The signal g(t) may be regarded as the sum of three functions specified within the three intervals t < 0, 0 < t < 1, and t > 1 . For t < 0, g(t) may be regarded as 3 multiplied by u(−t) , where u(−t) = 1 for t < 0 and 0 for t > 0 . Within the time interval 0 < t < 1 , the function may be considered as −2 multiplied by a gated function [u(t) − u(t − 1)] . For t > 1 , the function may be regarded as 2t − 4 multiplied by the unit step function u(t − 1) . Thus, g(t) = 3u(−t) − 2[u(t) − u(t − 1)] + (2t − 4)u(t − 1) = 3u(−t) − 2u(t) + (2t − 4 + 2)u(t − 1) = 3u(−t) − 2u(t) + 2(t − 1)u(t − 1) = 3u(−t) − 2u(t) + 2r(t −1) One may avoid the trouble of using u(−t) by replacing it with 1 − u(t) . Then g(t) = 3[1 − u(t)] − 2u(t) + 2r(t − 1) = 3 − 5u(t) + 2r(t − 1) Alternatively, we may plot g(t) and apply Method 1 from Example 7.7.
+依 Chapter 7 投影片第 65–67 頁。
+
+依講義將三個時間區間各自乘上時間窗，令 $r(t)=tu(t)$：
+
+$$
+\begin{aligned}
+g(t)&=3u(-t)-2[u(t)-u(t-1)]+(2t-4)u(t-1)\\
+&=3u(-t)-2u(t)+2r(t-1)\\
+&=3-5u(t)+2r(t-1).
+\end{aligned}
+$$
+
+三個區間分別得到 $3$、$-2$ 與 $2t-4$。
 
 </template>
 
@@ -300,7 +380,9 @@ If $h(t)=\begin{cases}0,&t<0\\-4,&0<t<2\\3t-8,&2<t<6\\0,&t>6\end{cases}$, expres
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 72 頁列出答案，未提供逐步解法。
 
 −4u(t) + 2u(t − 2) + 3r (t − 2) − 10u(t − 6) − 3r(t − 6) .
 
@@ -314,9 +396,25 @@ Evaluate the following integrals involving the impulse function: $\int_0^{10}(t^
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-For the first integral, we apply the sifting property in Eq. (7.32). (t2 + 4t − 2)δ (t − 2) dt = (t2 + 4t −2)+t=2 = 4 + 8 − 2 = 10 Similarly, for the second integral, [δ (t −1) $e^{-t}$ cos t + δ (t + 1) $e^{-t}$ sin t] dt = $e^{-t}$ cos t+t=1 + $e^{-t}$ sin t+t= −1 −1 cos 1 + e1sin (−1) = 0.1988 − 2.2873 = −2.0885
+依 Chapter 7 投影片第 68–69 頁。
+
+依講義的衝激取樣性質，在每個衝激位置代入其餘函數：
+
+$$
+\int_0^{10}(t^2+4t-2)\delta(t-2)\,dt=2^2+4(2)-2=10.
+$$
+
+$$
+\begin{aligned}
+\int_{-\infty}^{\infty}[\delta(t-1)e^{-t}\cos t+\delta(t+1)e^{-t}\sin t]dt
+&=e^{-1}\cos1+e\sin(-1)\\
+&\approx-2.0886.
+\end{aligned}
+$$
+
+角度以弧度計算。講義列約 $-2.0885$；由完整數值四捨五入至小數第四位為 $-2.0886$。
 
 </template>
 
@@ -328,7 +426,9 @@ Evaluate the following integrals: $\int_{-\infty}^{\infty}(t^3+5t^2+10)\delta(t+
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 72 頁列出答案，未提供逐步解法。
 
 28, −1 .
 
@@ -344,9 +444,21 @@ The switch in Fig. 7.43 has been in position A for a long time. At t = 0 , the s
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-For t < 0 , the switch is at position A . The capacitor acts like an open circuit to dc, but v is the same as the voltage across the 5-kΩ resistor. Hence, the voltage across the capacitor just before t = 0 is obtained by voltage division as v(0−) = $\frac{5}{5 + 3}$ (24) = 15 V Using the fact that the capacitor voltage cannot change instantaneously, v(0) = v(0−) = v( 0 + ) = 15 V For t > 0 , the switch is in position B . The Thevenin resistance connected to the capacitor is R Th = 4 kΩ , and the time constant is $\tau=R_{Th}C=4\times10^3\times0.5\times10^{-3}=2\text{ s}$ Since the capacitor acts like an open circuit to dc at steady state, v(∞) = 30 V . Thus, v(t) = v(∞) + [v(0) − v(∞)] $e^{-t/τ}$ = 30 + (15 − 30) $e^{-t/2}$ = (30 − 15 $e^{-0.5t}$ ) V At t = 1 , v(1) = 30 − 15 $e^{-0.5}$ = 20.9 V At t = 4 , $v(4)=30-15e^{-2}=27.97\text{ V}$.
+依 Chapter 7 投影片第 89–92 頁。
+
+依講義先求初值、終值與時間常數：
+
+$$
+v(0^+)=v(0^-)=\frac5{3+5}(24)=15\,\mathrm V,\qquad v(\infty)=30\,\mathrm V.
+$$
+
+$$
+\tau=R_{\mathrm{eq}}C=(4\times10^3)(0.5\times10^{-3})=2\,\mathrm s.
+$$
+
+故 $v(t)=30+(15-30)e^{-t/2}=30-15e^{-0.5t}\,\mathrm V$；$v(1)\approx20.9\,\mathrm V$，$v(4)\approx27.97\,\mathrm V$。
 
 </template>
 
@@ -360,7 +472,9 @@ Find v(t) for t > 0 in the circuit of Fig. 7.44. Assume the switch has been open
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 98 頁列出答案，未提供逐步解法。
 
 (9.375 + 5.625 $e^{-2t}$ ) V for all t > 0, 11.444 V .
 
@@ -376,11 +490,21 @@ In Fig. 7.45, the switch has been closed for a long time and is opened at t = 0 
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-The resistor current i can be discontinuous at t = 0 , while the capacitor voltage v cannot. Hence, it is always better to find v and then obtain i from v . By definition of the unit step function, 30u(t) = { 0, 30, t < 0 t > 0 For t < 0 , the switch is closed and 30u(t) = 0 , so that the 30u(t) voltage source is replaced by a short circuit and should be regarded as contributing nothing to v . Since the switch has been closed for a long time, the capacitor voltage has reached steady state and the capacitor acts like an open circuit. Hence, the circuit becomes that shown in Fig. 7.46(a) for t < 0 . From this circuit we obtain v = 10 V, i = $\frac{- v}{10}$ = −1 A Since the capacitor voltage cannott change instantaneously, v(0) = v(0−) = 10 V For t > 0 , the switch is opened and the 10-V voltage source is disconnected from the circuit. The 30u(t) voltage source is now operative, so the circuit becomes that shown in Fig. 7.46(b). After a long time, the circuit reaches steady state and the capacitor acts like an open circuit again. We obtain v(∞) by using voltage division, writing The Thevenin resistance at the capacitor terminals is R Th = 10∥20 = $\frac{10 \times  20}{30}$ = $\frac{20}{3}$ Ω and the time constant is τ = R Th C = $\frac{20}{3}$ ⋅ $\frac{1}{4}$ = $\frac{5}{3}$ s v(t) = v(∞) + [ v(0) − v(∞) ] $e^{-t/τ}$ = 20 + (10 − 20) $e^{-3t/5}$ = (20 − 10 $e^{-0.6t}$ ) V To obtain i , we notice from Fig. 7.46(b) that i is the sum of the currents through the 20-Ω resistor and the capacitor; that is, i = $\frac{v}{20}+C\frac{dv}{dt}$ = 1 − 0.5 $e^{-0.6t}$ + 0.25(−0.6)(−10) $e^{-0.6t}$ = (1 + $e^{-0.6t}$ ) A Notice from Fig. 7.46(b) that v + 10i = 30 is satisfied, as expected. Hence, v = { 10 V, (20 − 10 $e^{-0.6t}$ ) V, t < 0 t > 0 i = { −1 A, (1 + $e^{-0.6t}$ ) A, t < 0 t > 0 Notice that the capacitor voltage is continuous while the resistor current is not.
+依 Chapter 7 投影片第 93–97 頁。
 
-![Figure 7.46 used in the textbook solution](../assets/images/ch7-ex11_solution_figure_7_46.png)
+切換前 $v(0^-)=10\,\mathrm V$，由電容電壓連續性 $v(0^+)=10\,\mathrm V$。切換後以分壓求終值，並將獨立源歸零求等效電阻：
+
+$$
+v(\infty)=\frac{20}{10+20}(30)=20\,\mathrm V,\qquad R_{\mathrm{eq}}=10\parallel20=\frac{20}{3}\,\Omega,\qquad \tau=\frac{20}{3}\cdot\frac14=\frac53\,\mathrm s.
+$$
+
+$$
+v(t)=\begin{cases}10,&t<0\\20-10e^{-0.6t},&t>0\end{cases}\mathrm V,\qquad i(t)=\begin{cases}-1,&t<0\\1+e^{-0.6t},&t>0\end{cases}\mathrm A.
+$$
+
+切換後回代 $30=10i+v$，等式兩側均為 $30\,\mathrm V$。
 
 </template>
 
@@ -394,7 +518,9 @@ The switch in Fig. 7.47 is closed at t = 0 . Find i(t) and v(t) for all time. No
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 99 頁列出答案，未提供逐步解法。
 
 i(t)=0 for t<0 and i(t)=−2(1+$e^{-1.5t}$) A for t>0; v=20 V for t<0 and v=10(1+$e^{-1.5t}$) V for t>0.
 
@@ -410,9 +536,17 @@ Find i(t) in the circuit of Fig. 7.51 for t > 0 . Assume that the switch has bee
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-When t < 0 , the 3-Ω resistor is short-circuited, and the inductor acts like a short circuit. The current through the inductor at t = 0− (i.e., just before t = 0 ) is i(0−) = $\frac{10}{2}$ = 5 A Because the inductor current cannot change instantaneously, i(0) = i( 0 + ) = i(0−) = 5 A When t > 0 , the switch is open. The 2- and 3-Ω resistors are in series, so that i(∞) = $\frac{10}{2 + 3}$ = 2 A The Thevenin resistance across the inductor terminals is R Th = 2 + 3 = 5 Ω For the time constant, τ = $\frac{L}{R_{\mathrm{Th}}}$ =  /  5 = $\frac{1}{15}$ s i(t) = i(∞) + [i(0) − i(∞)] $e^{-t/τ}$ = 2 + (5 − 2) $e^{-15t}$ = 2 + 3 $e^{-15t}$ A, t > 0 Check: In Fig. 7.51, for t > 0 , KVL must be satisfied; that is, 10 = 5i + L $\frac{di}{dt}$ 5i + L $\frac{di}{dt}$ = [10 + 15 $e^{-15t}$ ] + [ $\frac{1}{3}$ (3)(−15) $e^{-15t}$ ] = 10 This confirms the result.
+依 Chapter 7 投影片第 108–111 頁。
+
+切換前電感短路，$i(0^+)=i(0^-)=10/2=5\,\mathrm A$。切換後 $i(\infty)=10/(2+3)=2\,\mathrm A$、$R_{\mathrm{eq}}=5\,\Omega$、$\tau=(1/3)/5=1/15\,\mathrm s$。
+
+$$
+i(t)=2+(5-2)e^{-15t}=2+3e^{-15t}\,\mathrm A,\qquad t>0.
+$$
+
+回代切換後 KVL：$5i+\frac13di/dt=10\,\mathrm V$。
 
 </template>
 
@@ -426,7 +560,9 @@ The switch in Fig. 7.52 has been closed for a long time. It opens at t = 0 . Fin
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 119 頁列出答案，未提供逐步解法。
 
 (4 + 2 $e^{-10t}$ ) A for all t > 0 .
 
@@ -442,9 +578,29 @@ At t = 0 , switch 1 in Fig. 7.53 is closed, and switch 2 is closed 4 s later. Fi
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-We need to consider the three time intervals t < 0, 0 < t < 4 , and t > 4 separately. For t < 0 , switches S1 and S2 are open so that i = 0 . Since the inductor current cannot change instantly, i(0−) = i(0) = i( 0 + ) = 0 For 0 < t < 4, S1 is closed so that the 4- and 6-Ω resistors are in series. (Remember, at this time, S2 is still open.) Hence, assuming for now that S1 is closed forever, i(∞) = $\frac{40}{4 + 6}$ = 4 A, R Th = 4 + 6 = 10 Ω τ = $\frac{L}{R_{\mathrm{Th}}}$ = $\frac{5}{10}$ = $\frac{1}{2}$ s i(t) = i(∞) + [i(0) − i(∞)] $e^{-t/τ}$ = 4 + (0 − 4) $e^{-2t}$ = 4(1 − $e^{-2t}$ ) A, 0 < t < 4 For t > 4, S2 is closed; the 10-V voltage source is connected, and the circuit changes. This sudden change does not affect the inductor current because the current cannot change abruptly. Thus, the initial current is i(4) = i(4−) = 4(1 − $e^{-8}$) ≃ 4 A To find i(∞) , let v be the voltage at node P in Fig. 7.53. Using KCL, $\frac{40-v}{4}+\frac{10-v}{2}=\frac{v}{6}$, which gives $v=\frac{180}{11}$ V i(∞) = $\frac{v}{6}$ = $\frac{30}{11}$ = 2.727 A The Thevenin resistance at the inductor terminals is R Th = 4∥2 + 6 = $\frac{4 \times  2}{6 + 6}$ = $\frac{22}{3}$ Ω $\tau=\frac{L}{R_{Th}}=\frac{5}{22/3}=\frac{15}{22}\text{ s}$ i(t) = i(∞) + [i(4) − i(∞)] $e^{-(t-4)/\tau}$ , t > 4 We need (t − 4) in the exponential because of the time delay. Thus, i(t) = 2.727 + (4 − 2.727) $e^{-(t-4)/\tau}$ , τ = $\frac{15}{22}$ = 2.727 + 1.273 $e^{-1.4667(t-4)}$ , t > 4 Putting all this together, i(t) = { 4(1 − $e^{-2t}$ ), 2.727 + 1.273 $e^{-1.4667(t-4)}$ , 0 < t < 4 t > 4 At t = 2 , i(2) = 4(1 − $e^{-4}$) = 3.93 A At t = 5 , i(5) = 2.727 + 1.273 $e^{-1.4667}$ = 3.02 A
+依 Chapter 7 投影片第 112–118 頁。
+
+依講義分兩次切換求解。$t<0$ 時兩開關皆開，故 $i(0^+)=0$。第一階段 $0<t<4$ 的終值與時間常數為
+
+$$
+i_{\infty,1}=\frac{40}{4+6}=4\,\mathrm A,\quad \tau_1=\frac5{4+6}=0.5\,\mathrm s,\quad i(t)=4(1-e^{-2t})\,\mathrm A.
+$$
+
+第二階段以節點 $P$ 的 KCL 求終值：
+
+$$
+\frac{v_P-40}{4}+\frac{v_P-10}{2}+\frac{v_P}{6}=0,\quad v_P=\frac{180}{11}\,\mathrm V,\quad i_{\infty,2}=\frac{30}{11}\,\mathrm A.
+$$
+
+此時 $R_{\mathrm{eq}}=4\parallel2+6=22/3\,\Omega$，$\tau_2=15/22\,\mathrm s$。電流在第二次切換時連續，故保留精確初值：
+
+$$
+i(t)=\frac{30}{11}+\left[4(1-e^{-8})-\frac{30}{11}\right]e^{-\frac{22}{15}(t-4)}\,\mathrm A,\qquad t\ge4.
+$$
+
+$i(2)\approx3.93\,\mathrm A$，$i(5)\approx3.02\,\mathrm A$。講義第 116 頁初值行誤寫 $5\,\mathrm A$；依切換前開路及同頁後續計算應為 0。講義以 $i(4)\approx4\,\mathrm A$ 計算，以上保留精確值。
 
 </template>
 
@@ -458,9 +614,21 @@ Switch S1 in Fig. 7.54 is closed at t = 0 , and switch S2 is closed at t = 2s . 
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-i(t)=0 for t<0; i(t)=2(1−$e^{-9t}$) A for 0<t<2; i(t)=3.6−1.6e^(−5(t−2)) A for t>2.
+依 Chapter 7 投影片第 120 頁，分兩個切換階段求電感電流。$t<0$ 時 $i=0$。在 $0<t<2$，$R_{\mathrm{eq}}=15+10+20=45\,\Omega$，$\tau=5/45=1/9\,\mathrm s$，終值為 $6(15/45)=2\,\mathrm A$，所以
+
+$$
+i(t)=2(1-e^{-9t})\,\mathrm A.
+$$
+
+$t>2$ 時 $R_{\mathrm{eq}}=15+10=25\,\Omega$，$\tau=5/25=1/5\,\mathrm s$，終值為 $6(15/25)=3.6\,\mathrm A$。保留第二次切換的精確初值 $i(2)=2(1-e^{-18})$，得到
+
+$$
+i(t)=3.6+\bigl[2(1-e^{-18})-3.6\bigr]e^{-5(t-2)}\,\mathrm A.
+$$
+
+$i(1)\approx1.9998\,\mathrm A$，$i(3)\approx3.5892\,\mathrm A$。第 120 頁將 $i(2)$ 近似為 $2\,\mathrm A$，得到 $3.6-1.6e^{-5(t-2)}$；第 119 頁另列的係數 $4$、$7.2$、$3.2$ 與電路及第 120 頁不符。
 
 </template>
 
@@ -474,9 +642,21 @@ For the op amp circuit in Fig. 7.55(a), find vo for t > 0 , given that v(0) = 3 
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-This problem can be solved in two ways: **Method 1.** Consider the circuit in Fig. 7.55(a). Let us derive the appropriate differential equation using nodal analysis. If v1 is the voltage at node 1, at that node, KCL gives $\frac{0 - v1}{R_{1}}$ = C $\frac{dv}{dt}$ (7.14.1) Because nodes 2 and 3 must be at the same potential, the potential at node 2 is zero. Thus, v1 − 0 = v or v1 = v and Eq. (7.14.1) becomes $\frac{dv}{dt}+\frac{v}{CR_1}=0$ (7.14.2) This is similar to Eq. (7.4b) so that the solution is obtained the same way as in Section 7.2, that is, v(t) = V0 $e^{-t/τ}$ , τ = R1C (7.14.3) where V0 is the initial voltage across the capacitor. But v(0) = 3 = V0 and τ = 20 × $10^3$ × 5 × $10^{-6}$ = 0.1 s. Hence, v(t) = 3 $e^{-10t}$ (7.14.4) Applying KCL at node 2 gives $C\frac{dv}{dt}=\frac{0-v_o}{R_f}$, hence $v_o=-R_fC\frac{dv}{dt}$ (7.14.5) Now we can find v0 as vo = −80 × $10^3$ × 5 × $10^{-6}$(−30 $e^{-10t}$ ) = 12 $e^{-10t}$ V, t > 0 **Method 2.** Let us apply the shortcut method from Eq. (7.53). We need to find $v_o(0^+)$, $v_o(\infty)$, and $\tau$. Since v( 0 + ) = $v(0^-)=3\text{ V}$ , we apply KCL at node 2 in the circuit of Fig. 7.55(b) to obtain $\frac{3}{20{,}000}+\frac{0-v_o(0^+)}{80{,}000}=0$ or vo( 0 + ) = 12 V . Since the circuit is source free, v(∞) = 0 V . To find − , we need the equivalent resistance Req across the capacitor terminals. If we remove the capacitor and replace it by a 1-A current source, we have the circuit shown in Fig. 7.55(c). Applying KVL to the input loop yields 20,000(1) − v = 0 + v = 20 kV Req = $\frac{v}{1}$ = 20 kΩ and τ = ReqC = 0.1 . Thus, vo(t) = vo(∞) + [vo(0) − vo(∞)] $e^{-t/τ}$ = 0 + (12 − 0) $e^{-10t}$ = 12 $e^{-10t}$ V, t > 0 as before.
+依 Chapter 7 投影片第 121–128 頁。
+
+講義以理想運算放大器虛短及 KCL 建立方程：
+
+$$
+-\frac{v}{R_1}=C\frac{dv}{dt},\qquad \frac{dv}{dt}+\frac{v}{R_1C}=0.
+$$
+
+$\tau=R_1C=(20\times10^3)(5\times10^{-6})=0.1\,\mathrm s$，由 $v(0)=3\,\mathrm V$ 得 $v(t)=3e^{-10t}\,\mathrm V$。再由輸出端 KCL：
+
+$$
+v_o=-R_fC\frac{dv}{dt}=12e^{-10t}\,\mathrm V,\qquad t>0.
+$$
 
 </template>
 
@@ -490,7 +670,9 @@ For the op amp circuit in Fig. 7.56, find vo for t > 0 if v(0) = 4 V . Assume th
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 139 頁列出答案，未提供逐步解法。
 
 −4 $e^{-2t}$ V, t > 0 .
 
@@ -506,9 +688,21 @@ Determine v(t) and vo(t) in the circuit of Fig. 7.57.
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-This problem can be solved in two ways, just like the previous example. However, we will apply only the second method. Since what we are looking for is the step response, we can apply Eq. (7.53) and write v(t) = v(∞) + [v(0) − v(∞)] $e^{-t/τ}$ , t > 0 (7.15.1) 20 kΩ 20 kΩ t = 0 10 kΩ where we need only find the time constant τ , the initial value v(0) , and the final value v(∞) . Notice that this applies strictly to the capacitor voltage due a step input. Since no current enters the input terminals of the op amp, the elements on the feedback loop of the op amp constitute an RC circuit, with τ = RC = 50 × $10^3$ × $10^{-6}$ = 0.05 s (7.15.2) For t < 0 , the switch is open and there is no voltage across the capacitor. Hence, v(0) = 0 . For t > 0 , we obtain the voltage at node 1 by voltage division as v1 = $\frac{20}{20 + 10}$ 3 = 2 V (7.15.3) Since there is no storage element in the input loop, v1 remains constant for all t. At steady state, the capacitor acts like an open circuit so that the op amp circuit is a noninverting amplifier. Thus, $v_o(\infty)=\left(1+\frac{50}{20}\right)v_1=3.5\times2=7\text{ V}$ (7.15.4) v1 − vo = v (7.15.5) v(∞) = 2 − 7 = −5 V Substituting −, v(0) , and v(∞) into Eq. (7.15.1) gives v(t) = −5 + [0 − (−5)] $e^{-20t}$ = 5( $e^{-20t}$ − 1) V, t > 0 (7.15.6) From Eqs. (7.15.3), (7.15.5), and (7.15.6), we obtain vo(t) = v1(t) − v(t) = 7 − 5 $e^{-20t}$ V, t > 0 (7.15.7)
+依 Chapter 7 投影片第 129–132 頁。
+
+依講義先求電容電壓的初值與終值。$v(0^+)=0$；切換後正輸入端電壓 $v_1=20(3)/(20+10)=2\,\mathrm V$。直流穩態下：
+
+$$
+v_o(\infty)=\left(1+\frac{50}{20}\right)(2)=7\,\mathrm V,\qquad v(\infty)=v_1-v_o(\infty)=-5\,\mathrm V.
+$$
+
+$\tau=RC=(50\times10^3)(1\times10^{-6})=0.05\,\mathrm s$，因此
+
+$$
+v(t)=5(e^{-20t}-1)\,\mathrm V,\qquad v_o(t)=v_1-v(t)=7-5e^{-20t}\,\mathrm V,\quad t>0.
+$$
 
 </template>
 
@@ -522,7 +716,9 @@ Find v(t) and vo(t) in the op amp circuit of Fig. 7.58.
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 140 頁列出答案，未提供逐步解法。
 
 v(t)=40(1−$e^{-10t}$)u(t) mV; vo(t)=40($e^{-10t}$−1)u(t) mV.
 
@@ -538,15 +734,21 @@ Find the step response vo(t) for t > 0 in the op amp circuit of Fig. 7.59. Let v
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 老師講義解法
 
-To obtain R Th , consider the circuit in Fig. 7.60(b), where Ro is the output resistance of the op amp. Since we are assuming an ideal op amp, Ro = 0 , and R Th = R2 ∥ R3 = $\frac{R2R3}{R_{2} + R_{3}}$ Substituting the given numerical values, $V_{Th}=-\frac{10}{20}\frac{50}{20}2u(t)=-2.5u(t)$ R Th = $\frac{R2R3}{R_{2} + R_{3}}$ = 5kΩ The Thevenin equivalent circuit is shown in Fig. 7.61, which is similar to Fig. 7.40. Hence, the solution is similar to that in Eq. (7.48); that is, vo(t) = −2.5(1 − $e^{-t/τ}$ )u(t) where τ = R Th C = 5 × $10^3$ × 2 × $10^{-6}$ = 0.01 . Thus, the step response for t > 0 is vo(t) = 2.5( $e^{-100t}$ − 1)u(t) V Notice that the capacitor in Example 7.14 is located in the input loop, while the capacitor in Example 7.15 is located in the feedback loop. In this example, the capacitor is located in the output of the op amp. Again, we can solve this problem directly using nodal analysis. However, using the Thevenin equivalent circuit may simplify the problem. We temporarily remove the capacitor and find the Thevenin equivalent at its terminals. To obtain V Th , consider the circuit in Fig. 7.60(a). Since the circuit is an inverting amplifier, Vab = $\frac{- Rf}{R_{1}}$ vi By voltage division, V Th = $\frac{R_{3}}{R_{2} + R_{3}}$ Vab = $\frac{- R_{3}}{R_{2} + R_{3}}$ $\frac{Rf}{R_{1}}$ vi
+依 Chapter 7 投影片第 133–138 頁。
 
-![Figure 7.40 used in the textbook solution](../assets/images/ch7-ex16_solution_figure_7_40.png)
+依講義移除電容，先求其端點的戴維寧等效。理想反相放大器輸出為 $v_{ab}=-(R_f/R_1)v_i$，再由分壓得
 
-![Figure 7.60 used in the textbook solution](../assets/images/ch7-ex16_solution_figure_7_60.png)
+$$
+V_{\mathrm{Th}}=-\frac{R_3}{R_2+R_3}\frac{R_f}{R_1}v_i=-2.5u(t)\,\mathrm V,\qquad R_{\mathrm{Th}}=R_2\parallel R_3=5\,\mathrm{k}\Omega.
+$$
 
-![Figure 7.61 used in the textbook solution](../assets/images/ch7-ex16_solution_figure_7_61.png)
+$\tau=R_{\mathrm{Th}}C=0.01\,\mathrm s$，故
+
+$$
+v_o(t)=-2.5(1-e^{-100t})u(t)\,\mathrm V.
+$$
 
 </template>
 
@@ -560,7 +762,9 @@ Obtain the step response vo(t) for the circuit in Fig. 7.62. Let vi = 4.5u(t) V,
 
 <template #solution>
 
-### 課本解析與答案 (Textbook Solution)
+### 講義答案
+
+老師 Chapter 7 投影片第 141 頁列出答案，未提供逐步解法。
 
 13.5(1 − $e^{-50t}$ )u(t) V .
 
